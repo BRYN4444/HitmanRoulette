@@ -405,7 +405,7 @@ input[type="checkbox"] + label.last:hover {
 #method-alt {
 	display:block;
     font-size: 15px;
-    line-height: 0.7;
+    line-height: 0.8;
     overflow: hidden;
 	height:16px;
 }
