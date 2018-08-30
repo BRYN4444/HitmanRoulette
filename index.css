@@ -354,7 +354,7 @@ input[type="checkbox"] + label.last:hover {
 	background:rgba(0,0,0,0.3) url("./img/loading.gif") no-repeat center center / 35px;
 	width:693px;
 }
-#place.default { background-image: url('./img/Default1.png'); }
+#place.default { background-image: url('./img/default1.png'); }
 #place {
 	background-color:transparent;
 	background-repeat:no-repeat;
@@ -413,8 +413,8 @@ input[type="checkbox"] + label.last:hover {
 	background:transparent;
 	width:346px;
 }
-#entry.default { background-image: url('./img/Default2.png'); }
-#exit.default { background-image: url('./img/Default3.png'); }
+#entry.default { background-image: url('./img/default2.png'); }
+#exit.default { background-image: url('./img/default3.png'); }
 #entry, #exit {
 	background-color:transparent;
 	background-repeat:no-repeat;
