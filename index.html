@@ -1,235 +1,393 @@
 <!DOCTYPE html>
-<html>
+<html class="">
 	<head lang="en">
 		<title>Hitman Roulette</title>
 		<link rel="icon" href="./hrfavicon.png" type="image/png" />
-		<link rel="stylesheet" href="index.css" type="text/css" id="theme_css" />
+		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+		<link rel="stylesheet" href="./index.css" type="text/css" />
+		<link rel="stylesheet" href="./jquery.scrollbar.css"  type="text/css" />
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+		<script type="text/javascript" src="./js/jquery.scrollbar.js"></script>
 		<meta charset="utf-8">
 	</head>
-	
+
 	<body>
-		<div id="overlay" style="display:none;">
-			<div id="about-box">
-				<div id="about">
-					<div id="about-title">About</div>
-					<div id="about-body">
-						<p class="top">Hitman Roulette is a tool that aims to give new ideas on how to complete missions in Hitman (2016) by giving a set of random guidelines to follow when playing. Currently it randomizes things such as entry/exit point, kill method and worn disguise, as well as a set of extra variables, some of which are generic and some mission specific.</p>
-						<p>The <a href="https://thekotti.github.io/about.html" target="_blank">original tool</a> (created by <a href="https://twitter.com/TheKotti" target="_blank">Kotti</a>) works with both Hitman (2016) and Hitman: Blood Money, along with having easier control, and less images and code to load.</p>
-						<h2>Differences offered here:</h2>
-						<ul>
-							<li>Themed to look like the launch menus of Hitman (2016). Because the old menus looked better.</li>
-							<ul>
-								<li>Uses images for each mission, location, target, objective, and complication. (In-game or hand-taken).</li>
-								<li>Click on a target or objective to mark it as eliminated or completed.</li>
-								<li>If an entry/exit point or person's name is too long, hover over it auto-scroll.</li>
-							</ul>
-							<li>Use Shift+Click or Ctrl+Click to select the pool of levels to pull from. "Random" is default.</li>
-							<ul>
-								<li>Added "Freeform Training" and "The Final Test" even though they're not fully compatible.</li>
-								<li>Also added the PS4 exclusive targets "The Sarajevo Six" for variety and those that own them.</li>
-							</ul>
-							<li>When generating targets for "Contract Mode", intel is shown for their general location.</li>
-							<li>Lowered the default complications randomized from 6 to 3, but allow the limit to be set back manually.</li>
-							<ul>
-								<li>Reworded these complications to fit in game examples as well as add more.</li>
-							</ul>
-							<li>Added extra variable toggles for more granularity and challenge:</li>
-							<ul>
-								<li>"Extra Objectives" adds a random mission specific task to complete.</li>
-								<li>"Restricted Mechanics" picks an in game option to disable. Usually HUD restricting.</li>
-								<li>"Challenge Run" picks a single or mix of Silent Assassin, Professional Difficulty, or a time limit.</li>
-							</ul>
-						</ul>
-						<h1>Compatibility</h1>
-						<p class="top">This was a project I worked on during my free time to brush up on my simple javascript, jQuery, and CSS knowledge. I've only tested this with Firefox and Chrome, and I'm sure my additions to the existing code, as well as my own work could use cleaning up here and there.<span style="float:right;">- <a href="http://BRYN.info" target="_blank">BRYN</a></span></p>
-						<h1>Special Thanks</h1>
-						<ul>
-							<li>Kotti, for his original Hitman Roulette that inspired this spin-off.</li>
-							<li>Winterbird's <a href="http://hitmanmaps.com/" target="_blank">Hitman Interactive Maps</a> for being a good tool. Update, please!</li>
-							<li><a href="https://www.ioi.dk/" target="_blank">IO Interactive</a> for making a game I keep coming back to even though I've 100%'ed it. Congratulations for going independent and I'm looking forward to the sequel! (Psst: Please put a feature like this in the game, thanks.)</li>
-						</ul>
-					</div>
-					<div id="return">
-						Return
-					</div>
-				</div>
+		<div id="header">
+			<div id="undo">
+				<button id="undo_nappi" class="historybtn" type="button" disabled="true" onclick="history_undo()">Undo</button>
+			</div><div id="map">
+				<p id="map_place"></p>
+				<p id="map_name"></p>
+			</div><div id="redo">
+				<button id="redo_nappi" class="historybtn" type="button" disabled="true" onclick="history_redo()">Redo</button>
 			</div>
 		</div>
-		<div id="history">
-			<button id="undo_nappi" class="historybtn" type="button" disabled="true" onclick="history_undo()">Undo</button>
-			<button id="redo_nappi" class="historybtn" type="button" disabled="true" onclick="history_redo()">Redo</button>
-		</div>
-		<div id="strip">
-			<div class="styled-select mode">
-				<select id="modeselect">
-					<option value="MAIN" selected>Main Mission</option>
-					<option value="CONTRACTS">Contracts Mode</option>
-					<option value="ELUSIVE">Elusive Target</option>
-				</select>
-			</div>
-			<div class="styled-select maps">
-				<button type="button" id="missionbutton">Select Mission(s)</button>
-				<div id="dropdown1">
-					<select id="missionselect" multiple>
-						<optgroup label="Any Mission">
-							<option value="RANDOM" selected>Random</option>
-							<option value="RANDOMPS4">Random (PS4)</option>
-						</optgroup>
-						<optgroup class="tip" label="Select with Shift/Ctrl+Click"></optgroup>
-						<optgroup label="Main Campaign (Season 1)">
-							<option value="FFT">Freeform Training</option>
-							<option value="TFT">The Final Test</option>
-							<option value="TSS">The Showstopper</option>
-							<option value="WOT">World of Tomorrow</option>
-							<option value="AGC">A Gilded Cage</option>
-							<option value="C27">Club 27</option>
-							<option value="FF">Freedom Fighters</option>
-							<option value="SI">Situs Inversus</option>
-						</optgroup>
-						<optgroup label="Bonus Episodes">
-							<option value="ICON">The Icon</option>
-							<option value="AHBOS">A House Built on Sand</option>
-							<option value="HH">Holiday Hoarders</option>
-							<option value="LS">Landslide</option>
-						</optgroup>
-						<optgroup label="Patient Zero">
-							<option value="TS">The Source</option>
-							<option value="TA">The Author</option>
-							<option value="PZ">Patient Zero</option>
-						</optgroup>
-						<optgroup label="The Sarajevo Six (PS4)">
-							<option value="DIR">The Director</option>
-							<option value="ENF">The Enforcer</option>
-							<option value="EXT">The Extracter</option>
-							<option value="VET">The Veteran</option>
-							<option value="MER">The Mercenary</option>
-							<option value="CON">The Controller</option>
-						</optgroup>
-					</select>
-				</div>
-			</div>
-			<div class="styled-select filter">
-				<button id="filterbutton" type="button">Difficulty Options</button>
-				<div id="dropdown2">
-					<div id="tooltip">
-						<input type="checkbox" id="disguise" value="true" checked>
-						<label for="disguise" class="first">Specific Disguises</label>
-						<span id="tooltext">Adds a random disguise requirement for each kill.</span>
-					</div>
-					<div id="tooltip">
-						<input type="checkbox" id="melee" value="true" checked>
-						<label for="melee">Specific Melee Weapons</label>
-						<span id="tooltext">Melee weapons can appear as kill methods.</span>
-					</div>
-					<div id="tooltip">
-						<input type="checkbox" id="firearm" value="true" checked>
-						<label for="firearm">Specific Firearms</label>
-						<span id="tooltext">Different firearm types can appear as kill methods.</span>
-					</div>
-					<div id="tooltip">
-						<input type="checkbox" id="accident" value="true" checked>
-						<label for="accident">Specific Accidents</label>
-						<span id="tooltext">Specific accidents can appear as kill methods.</span>
-					</div>
-					<div id="tooltip">
-						<input type="checkbox" id="generic" value="true" checked>
-						<label for="generic">Generic Kills</label>
-						<span id="tooltext">Non-specific kills can appear as kill methods.</span>
-					</div>
-					<div id="tooltip">
-						<input type="checkbox" id="wildcard" value="true">
-						<label for="wildcard">Extra Objective</label>
-						<span id="tooltext">Set one or multiple time, rating, or difficulty rules.</span>
-					</div>
-					<div id="tooltip">
-						<input type="checkbox" id="mechanics" value="true">
-						<label for="mechanics">Restricted Mechanics</label>
-						<span id="tooltext">Picks a mechanic to disable in the game's options.</span>
-					</div>
-					<div id="tooltip">
-						<input type="checkbox" id="challenge" value="true">
-						<label for="challenge">Challenge Run</label>
-						<span id="tooltext">Experts only. Sets a time, rating, or difficulty rule.</span>
-					</div>
-					<div id="tooltip" class="last">
-						<input type="checkbox" id="restrictions" value="true">
-						<label for="restrictions" class="last">Allow Complications</label>
-						<span id="tooltext" class="last">Occasionally adds playstyle restrictions or challenges.<br />Adjust the slider to set the amount that could appear.</span>
-						<input type="range" min="1" max="6" value="3" class="slider" id="compSlider"><div id="max">Limit:&nbsp;<span id="strict"></span></div>
-					</div>
-				</div>
-			</div>
-			<button id="targetbutton" type="button" onclick="button_MakeItGo()">Issue Target(s)</button>
-		</div>
-		<div id="scroll">
-			<div id="scrollfiller"></div>
+		<div id="menus">
+			<button id="roulette" class="on" type="button">Hitman Roulette</button><!--
+			//--><button id="missions" type="button">Select Missions</button><!--
+			//--><button id="options" type="button">Difficulty Options</button><!--
+			//--><button id="about" type="button">About</button>
 		</div>
 		<div id="contract">
-			<div id="leftbound" class="column-side">
-				<div id="boundwrap">
-					<img src="./img/left.png" width="70px" />
+			<div id="empty" class="side"></div><!--
+			//--><div id="contract_submenu" class="column">
+				<div id="submenu_obj" class="on">Objectives</div>
+				<div id="submenu_comp">Complications</div>
+				<div id="submenu_chal">Challenges</div>
+				<div id="submenu_issue" onclick="button_MakeItGo()">
+					<p id="subtitle">Reissue for Mission/Option Changes</p>
+					<p id="title">Issue Contract</p>
 				</div>
-			</div>
-			<div id="location" class="column">
-				<div id="place" class="default">
-					<div id="mission" class="default">
-						<p id="chosenlocation"></p>
-						<p id="chosenmission"></p>
+			</div><div id="travel" class="column"></div><!--
+			//--><div id="target1" class="column"></div><!--
+			//--><div id="target2" class="column"></div><!--
+			//--><div id="target3" class="column"></div><!--
+			//--><div id="target4" class="column"></div><!--
+			//--><div id="target5" class="column"></div><!--
+			//--><div id="objective" class="column"></div><!--
+			//--><div id="objectivex" class="column"></div><!--
+			//--><div id="complication1" class="column" style="display:none;"></div><!--
+			//--><div id="complication2" class="column" style="display:none;"></div><!--
+			//--><div id="complication3" class="column" style="display:none;"></div><!--
+			//--><div id="complication4" class="column" style="display:none;"></div><!--
+			//--><div id="complication5" class="column" style="display:none;"></div><!--
+			//--><div id="complication6" class="column" style="display:none;"></div><!--
+			//--><div id="complicationi" class="column" style="display:none;"></div><!--
+			//--><div id="restriction" class="column" style="display:none;"></div><!--
+			//--><div id="timelimit" class="column" style="display:none;"></div><!--
+			//--><div id="ratingget" class="column" style="display:none;"></div><!--
+			//--><div id="diffget" class="column" style="display:none;"></div><!--
+			//--><div id="challengesi" class="column" style="display:none;"></div><!--
+			//--><div id="intro" class="column">
+				<div id="logo" class="welcome">
+					<div id="nameplate">
+						<p id="title">Good evening, 47.</p>
+						<p id="subtitle">"Issue Contract" to Begin</p>
 					</div>
 				</div>
-			</div>
-			<div id="passage" class="column">
-				<div id="infiltration">
-					<div id="entry" class="default">
-						<div id="approach" class="default">
-							<p id="start-title">Starting Location</p>
-							<p id="start"></p>
-						</div>
+			</div><div id="empty" class="side"></div>
+		</div>
+		<div id="maps" style="display:none;">
+			<div id="empty" class="side"></div><!--
+			//--><div id="maps_submenu" class="column">
+				<div id="submenu_random" class="on">Random</div>
+				<div id="submenu_h1">Hitman™ & Prologue</div>
+				<div id="submenu_h1dlc">Hitman™ Expansions</div>
+				<div id="submenu_h2">Hitman™2</div>
+				<div id="submenu_h2dlc" class="off">Hitman™2 Expansions</div>
+			</div><label id="rand-all" class="column" for="RANDOM">
+				<div id="nameplate">
+					<input id="RANDOM" type="checkbox" value="true" checked />
+					<p id="title">Toggle</p>
+					<p id="subtitle">All Missions (Default)</p>
+				</div>
+			</label><div id="rand-h1h2" class="column">
+				<label for="RANDOMH1"><div id="top" class="rand-h1">
+					<div id="nameplate">
+						<input id="RANDOMH1" class="" type="checkbox" value="true" checked />
+						<p id="title">Toggle</p>
+						<p id="subtitle">Hitman™ Campaign</p>
+					</div>
+				</div></label><label for="RANDOMH2"><div id="bottom" class="rand-h2">
+					<div id="nameplate">
+						<input id="RANDOMH2" class="" type="checkbox" value="true" checked />
+						<p id="title">Toggle</p>
+						<p id="subtitle">Hitman™2 Campaign</p>
+					</div></label>
+				</div>
+			</div><label id="rand-h1bm" class="column" for="RANDOMH1BM">
+				<div id="nameplate">
+					<input id="RANDOMH1BM" type="checkbox" value="true" checked />
+					<p id="title">Toggle</p>
+					<p id="subtitle">Hitman™ Bonus Missions</p>
+				</div>
+			</label><label id="rand-h1pz" class="column" for="RANDOMH1PZ">
+				<div id="nameplate">
+					<input id="RANDOMH1PZ" type="checkbox" value="true" checked />
+					<p id="title">Toggle</p>
+					<p id="subtitle">Patient Zero Campaign</p>
+				</div>
+			</label><div id="h1" class="column" style="display:none;">
+				<label for="FFT"><div id="top" class="m0-3">
+					<div id="nameplate">
+						<input id="FFT" class="lvl h1" type="checkbox" value="true" checked />
+						<p id="title">Toggle / Prologue</p>
+						<p id="subtitle">Freeform Training</p>
+					</div>
+				</div></label><label for="TFT"><div id="bottom" class="m0-4">
+					<div id="nameplate">
+						<input id="TFT" class="lvl h1" type="checkbox" value="true" checked />
+						<p id="title">Toggle / Prologue</p>
+						<p id="subtitle">The Final Test</p>
+					</div></label>
+				</div>
+			</div><div id="h1" class="column" style="display:none;">
+				<label for="TSS"><div id="top" class="m1-1">
+					<div id="nameplate">
+						<input id="TSS" class="lvl h1" type="checkbox" value="true" checked />
+						<p id="title">Toggle / Mission</p>
+						<p id="subtitle">The Showstopper</p>
+					</div>
+				</div></label><label for="WOT"><div id="bottom" class="m2-1">
+					<div id="nameplate">
+						<input id="WOT" class="lvl h1" type="checkbox" value="true" checked />
+						<p id="title">Toggle / Mission</p>
+						<p id="subtitle">World of Tomorrow</p>
+					</div></label>
+				</div>
+			</div><div id="h1" class="column" style="display:none;">
+				<label for="AGC"><div id="top" class="m3-1">
+					<div id="nameplate">
+						<input id="AGC" class="lvl h1" type="checkbox" value="true" checked />
+						<p id="title">Toggle / Mission</p>
+						<p id="subtitle">A Gilded Cage</p>
+					</div>
+				</div></label><label for="C27"><div id="bottom" class="m4-1">
+					<div id="nameplate">
+						<input id="C27" class="lvl h1" type="checkbox" value="true" checked />
+						<p id="title">Toggle / Mission</p>
+						<p id="subtitle">Club 27</p>
+					</div></label>
+				</div>
+			</div><div id="h1" class="column" style="display:none;">
+				<label for="FF"><div id="top" class="m5-1">
+					<div id="nameplate">
+						<input id="FF" class="lvl h1" type="checkbox" value="true" checked />
+						<p id="title">Toggle / Mission</p>
+						<p id="subtitle">Freedom Fighters</p>
+					</div>
+				</div></label><label for="SI"><div id="bottom" class="m6-1">
+					<div id="nameplate">
+						<input id="SI" class="lvl h1" type="checkbox" value="true" checked />
+						<p id="title">Toggle / Mission</p>
+						<p id="subtitle">Situs Inversus</p>
+					</div></label>
+				</div>
+			</div><div id="h1dlc" class="column" style="display:none;">
+				<label for="ICON"><div id="top" class="m2-2">
+					<div id="nameplate">
+						<input id="ICON" class="lvl h1bm" type="checkbox" value="true" checked />
+						<p id="title">Toggle / Bonus Mission</p>
+						<p id="subtitle">The Icon</p>
+					</div>
+				</div></label><label for="AHBOS"><div id="bottom" class="m3-2">
+					<div id="nameplate">
+						<input id="AHBOS" class="lvl h1bm" type="checkbox" value="true" checked />
+						<p id="title">Toggle / Bonus Mission</p>
+						<p id="subtitle">A House Built on Sand</p>
+					</div></label>
+				</div>
+			</div><div id="h1dlc" class="column" style="display:none;">
+				<label for="LS"><div id="top" class="m2-3">
+					<div id="nameplate">
+						<input id="LS" class="lvl h1bm" type="checkbox" value="true" checked />
+						<p id="title">Toggle / Bonus Mission</p>
+						<p id="subtitle">Landslide</p>
+					</div>
+				</div></label><label for="TS"><div id="bottom" class="m4-2">
+					<div id="nameplate">
+						<input id="TS" class="lvl h1pz" type="checkbox" value="true" checked />
+						<p id="title">Toggle / Patient Zero</p>
+						<p id="subtitle">The Source</p>
+					</div></label>
+				</div>
+			</div><div id="h1dlc" class="column" style="display:none;">
+				<label for="TA"><div id="top" class="m2-4">
+					<div id="nameplate">
+						<input id="TA" class="lvl h1pz" type="checkbox" value="true" checked />
+						<p id="title">Toggle / Patient Zero</p>
+						<p id="subtitle">The Author</p>
+					</div>
+				</div></label><label for="PZ"><div id="bottom" class="m6-2">
+					<div id="nameplate">
+						<input id="PZ" class="lvl h1pz" type="checkbox" value="true" checked />
+						<p id="title">Toggle / Patient Zero</p>
+						<p id="subtitle">Patient Zero</p>
+					</div></label>
+				</div>
+			</div><div id="h2" class="column" style="display:none;">
+				<label for="NC"><div id="top" class="m7-1">
+					<div id="nameplate">
+						<input id="NC" class="lvl h2" type="checkbox" value="true" checked />
+						<p id="title">Toggle / Mission</p>
+						<p id="subtitle">Nightcall</p>
+					</div>
+				</div></label><label for="TFL"><div id="bottom" class="m8-1">
+					<div id="nameplate">
+						<input id="TFL" class="lvl h2" type="checkbox" value="true" checked />
+						<p id="title">Toggle / Mission</p>
+						<p id="subtitle">The Finish Line</p>
+					</div></label>
+				</div>
+			</div><div id="h2" class="column" style="display:none;">
+				<label for="THS"><div id="top" class="m9-1">
+					<div id="nameplate">
+						<input id="THS" class="lvl h2" type="checkbox" value="true" checked />
+						<p id="title">Toggle / Mission</p>
+						<p id="subtitle">Three-Headed Serpent</p>
+					</div>
+				</div></label><label for="CAG"><div id="bottom" class="m10-1">
+					<div id="nameplate">
+						<input id="CAG" class="lvl h2" type="checkbox" value="true" checked />
+						<p id="title">Toggle / Mission</p>
+						<p id="subtitle">Chasing a Ghost</p>
+					</div></label>
+				</div>
+			</div><div id="h2" class="column" style="display:none;">
+				<label for="AL"><div id="top" class="m11-1">
+					<div id="nameplate">
+						<input id="AL" class="lvl h2" type="checkbox" value="true" checked />
+						<p id="title">Toggle / Mission</p>
+						<p id="subtitle">Another Life</p>
+					</div>
+				</div></label><label for="TAS"><div id="bottom" class="m12-1">
+					<div id="nameplate">
+						<input id="TAS" class="lvl h2" type="checkbox" value="true" checked />
+						<p id="title">Toggle / Mission</p>
+						<p id="subtitle">The Ark Society</p>
+					</div></label>
+				</div>
+			</div><div id="empty" class="side"></div>
+		</div>
+		<div id="settings" style="display:none;">
+			<div id="empty" class="side"></div><!--
+			//--><div id="settings_submenu" class="column">
+				<div id="submenu_roulette">Roulette Setting</div>
+				<div id="submenu_kills">Kill Requirements</div>
+				<div id="submenu_extras">Extra Requirements</div>
+				<div id="submenu_challenges">Gameplay Challenges</div>
+			</div><!--
+			//--><div id="settings_subsubmenu" class="column">
+				<label id="mode_mission" class="on" style="display:none;" data-hover="Targets and main objectives are pulled from the level's mission. This is the default option.">
+					<b>Mission Mode</b><span>[On]</span>
+				</label>
+				<label id="mode_con" style="display:none;" data-hover="<b>[Contract Targets are only shown on Hitman (2016) maps currently.]</b><br /><br />Targets are pulled from a selection of people within the level. Do these roulettes by starting your own contract within the game's contracts mode. Maybe even publish your successful roulette.<br /><br />Intel: A brief description of the target's last known whereabouts are listed.<br /><br />Hunt: No target location information is given. Identify targets in contracts mode before eliminating them.<br /><br />Not every mission is available in the game's contracts mode. As such, only the normal mission's targets will be selected.">
+					<b>Contracts Mode</b><span>[Off]</span>
+				</label>
+				<label id="mode_et" style="display:none;" data-hover="Make the difficult task of eliminating elusive targets even harder. Set the number of targets there are (making sure to select the appropriate mission) and issue the roulette.<br /><br />Target names are not listed here, so assigning what conditions to whom is player choice. Just don't cross your kill conditions amongst multiple targets.">
+					<b>Elusive Targets</b>
+					<span><input id="etslider" type="range" min="0" max="3" value="0" />
+					[<span id="etamount">0</span>]</span>
+				</label>				
+				<label id="kill_disguise" for="disguise" style="display:none;" data-hover="On: Adds a random disguise requirement for each elimination.<br /><br />Off: Any disguise can be worn during eliminations.">
+					<input type="checkbox" id="disguise" value="true" checked />
+					<b>Specific Disguises</b><span>[On]</span>
+				</label>
+				<label id="kill_melee" for="melee" style="display:none;" data-hover="On: Melee weapons can appear as elimination methods.<br /><br />Off: Melee weapons do not appear as elimination methods.">
+					<input type="checkbox" id="melee" value="true" checked />
+					<b>Specific Melee Weapons</b><span>[On]</span>
+				</label>
+				<label id="kill_firearm" for="firearm" style="display:none;" data-hover="On: Different firearm types can appear as elimination methods.<br /><br />Off: Different firearm types do not appear as elimination methods.">
+					<input type="checkbox" id="firearm" value="true" checked />
+					<b>Specific Firearms</b><span>[On]</span>
+				</label>
+				<label id="kill_accident" for="accident" style="display:none;" data-hover="On: Specific accidents can appear as elimination methods.<br /><br />Off: Specific accidents do not appear as elimination methods.">
+					<input type="checkbox" id="accident" value="true" checked />
+					<b>Specific Accidents</b><span>[On]</span>
+				</label>
+				<label id="kill_generic" for="generic" style="display:none;" data-hover="On: Non-specific kills can appear as elimination methods.<br /><br />Off: Non-specific kills do not appear as elimination methods.">
+					<input type="checkbox" id="generic" value="true" checked />
+					<b>Generic Kills</b><span>[On]</span>
+				</label>
+				<label id="extra_starex" class="on" style="display:none;" data-hover="On: You must start in and exit at the specific points of the level listed.<br /><br />Secret: You must start in and exit at the specific points of the level listed. Some exits listed will require actions to make appear.<br /><br />Off: No starting or exit points will be specified.">
+					<b>Force Start & Exit</b><span>[On]</span>
+				</label>
+				<label id="extra_obj" for="exobj" style="display:none;" data-hover="On: Adds one extra mission specific task to complete. For example, most of these tasks are in-game Challenges.<br /><br />Off: Only lists mandatory objectives to complete if there are any needed for the mission.">
+					<input type="checkbox" id="exobj" value="true" />
+					<b>Extra Objective</b><span>[Off]</span>
+				</label>
+				<label id="extra_comp" style="display:none;" data-hover="Adds playstyle constraints or requirements. Some of these are used in the game's Contracts Mode.<br /><br />Slider: Adjust to set the maximum amount that could appear. The amount is random every time.">
+					<b>Allow Complications</b>
+					<span><input id="compslider" type="range" min="0" max="6" value="0" />
+					[Max: <span id="compamount">0</span>]</span>
+				</label>
+				<label id="game_mech" for="mechanics" style="display:none;" data-hover="On: Lists a game mechanic that must be avoided or one to disable though the game's Options menu.<br /><br />Off: Use any game mechanic freely.">
+					<input type="checkbox" id="mechanics" value="true" />
+					<b>Restricted Mechanics</b><span>[Off]</span>
+				</label>
+				<label id="game_time" for="time" style="display:none;" data-hover="On: Complete the roulette within the time listed. For accuracy, enable the Mission Timer through the game's Options menu under Gameplay.<br /><br />Off: Complete the roulette at your own speed.">
+					<input type="checkbox" id="time" value="true" />
+					<b>Time Limit</b><span>[Off]</span>
+				</label>
+				<label id="game_rate" for="rating" style="display:none;" data-hover="On: Complete the roulette and achieve the rating listed, or better.<br /><br />Off: Complete the roulette with whatever rating you get.">
+					<input type="checkbox" id="rating" value="true" />
+					<b>Achieve Rating</b><span>[Off]</span>
+				</label>
+				<label id="game_diff" for="difficulty" style="display:none;" data-hover="On: Before attempting the roulette, select the difficulty listed when starting the mission. Note that only campaign missions have alternate difficulties.<br /><br />Off: Complete the roulette on whatever difficulty to want.">
+					<input type="checkbox" id="difficulty" value="true" />
+					<b>Force Difficulty</b><span>[Off]</span>
+				</label>				
+				<select id="modeselect" style="display:none;">
+					<option value="MAIN" selected>Main Mission</option>
+					<option value="CONEASY">Contracts Mode: Intel</option>
+					<option value="CONHARD">Contracts Mode: Hunt</option>
+					<option value="ELUSIVE">Elusive Target</option>
+				</select>
+				<select id="startexit" style="display:none;">
+					<option value="ON" selected>Force Start/Exit</option>
+					<option value="SECRET">Secret Start/Exit</option>
+					<option value="OFF">Choose Start/Exit</option>
+				</select>
+			</div><!--
+			//--><div id="settings_descriptions" class="column">
+				<h1></h1><p></p>
+			</div><div id="empty" class="side"></div>
+		</div>
+		<div id="credits" style="display:none;">
+			<div id="empty" class="side"></div><!--
+			//--><div id="credits_submenu" class="column">
+				<div class="credits_scroll">
+					<p>Hitman Roulette is a tool that aims to give new ideas on how to complete missions in Hitman 2 (2018) by giving a set of random guidelines to follow when playing. Currently it randomizes things such as entry/exit point, kill method and worn disguise, as well as a set of extra variables, some of which are generic and some mission specific.</p>
+					<p>The <a href="https://thekotti.github.io/about.html" target="_blank">original tool</a> (created by <a href="https://twitter.com/TheKotti" target="_blank">TheKotti</a>) works with Hitman (2016), Hitman 2 (2018) and Hitman: Blood Money, along with having simpler controls, and less stuff to load.</p>
+					<h1>Special Thanks & External Resources</h1>
+					<ul>
+						<li>TheKotti, for his original Hitman Roulette that inspired this spin-off.</li>
+						<li><a href="http://hitmanmaps.com/" target="_blank">Hitman Interactive Maps</a> by Winterbirds & <a href="https://www.hitman2maps.com/" target="_blank">Hitman 2 Maps</a> by mkoch227 for being great tools!</li>
+						<li>The tools <a href="https://github.com/gromo/jquery.scrollbar" target="_target">jQuery CSS Customizable Scrollbar</a> by gromo & <a href="https://www.dte.web.id/2013/02/event-mouse-wheel.html" target="_blank">Event Mouse Wheel</a> by Taufik Nurrohman.</li>
+						<li><a href="https://ioi.dk/" target="_blank">IO Interactive</a> for making a great game and constantly supporting it with new stuff! Maybe one day Hitman Roulette could become an actual game mode.</li>
+					</ul>
+					<h1>Compatibility</h1>
+					<p>This was a project I worked on during my free time to brush up on my simple javascript, jQuery, and CSS knowledge. I've only tested this with Firefox & Chrome and I'm sure my additions to the existing code, as well as my own work, could use cleaning up here and there. If you find any issues, <a href="https://github.com/BRYN4444/HitmanRoulette/issues" target="_blank">let me know via GitHub</a>. <span id="sig">- <a href="http://bryn.info/" target="_blank">BRYN</a><span></p>
+					<h2>To-Do List / Wishlist:</h2>
+					<ul>
+						<li>Proper formatting on mobile devices; attempt at adaptive design.</li>
+						<li>Copy the roulette as a text string to save locally. (I would love a way to seed this, but that's beyond my abilities)</li>
+						<li>Replace image file format to webp to decrease filesize and get everything loading quicker.</li>
+						<li>Proper images for Targets in Contracts Mode. None of these carry over from Hitman so they have to be retaken.</li>
+						<li>Need Targets (and Intel) for Contracts Mode on the Hitman 2 maps. Also, since the Hitman 1 list was carried over, those will need to be double checked.</li>
+						<li>More Extra Objectives for late-campaign Hitman 2.</li>
+					</ul>
+				</div>
+				<div class="external-scroll_y">
+					<div class="scroll-element_outer">
+						<div class="scroll-element_size"></div>
+						<div class="scroll-element_track"></div>
+						<div class="scroll-bar"></div>
 					</div>
 				</div>
-				<div id="exfiltration">
-					<div id="exit" class="default">
-						<div id="escape" class="default">
-							<p id="end-title">Exit Location <span id='end-alt'></span></p>
-							<p id="end"></p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div id="target1" class="column"></div>
-			<div id="target2" class="column"></div>
-			<div id="target3" class="column"></div>
-			<div id="target4" class="column"></div>
-			<div id="target5" class="column"></div>
-			<div id="objective" class="column"></div>
-			<div id="objectivex" class="column"></div>
-			<div id="disable" class="column"></div>
-			<div id="challengerun" class="column"></div>
-			<div id="complication1" class="column"></div>
-			<div id="complication2" class="column"></div>
-			<div id="complication3" class="column"></div>
-			<div id="complication4" class="column"></div>
-			<div id="complication5" class="column"></div>
-			<div id="complication6" class="column"></div>
-			<div id="rightbound" class="column-side">
-				<div id="boundwrap">
-					<img src="./img/right.png" width="70px" />
-				</div>
+			</div><!--
+			//--><div id="empty" class="side"></div>
+		</div>
+		<div class="external-scroll_x1">
+			<div class="scroll-element_outer">
+				<div class="scroll-element_size"></div>
+				<div class="scroll-element_track"></div>
+				<div class="scroll-bar"></div>
 			</div>
 		</div>
-		<footer>
-			<div id="info">
-				<img src="./img/info.png" />
-				<span id="info-text">Hitman™, Hitman™ logo, images & text are the property of IO Interactive.</span>
+		<div class="external-scroll_x2">
+			<div class="scroll-element_outer">
+				<div class="scroll-element_size"></div>
+				<div class="scroll-element_track"></div>
+				<div class="scroll-bar"></div>
 			</div>
-			<div id="more">
-				<!--<img id="hitman2-button" src="./img/buttons/h2.png" /> Let's be real, I'll probably do this for HITMAN 2 as well//-->
-				<div id="divider">
-					<img id="about-button" src="./img/buttons/about.png" />
-				</div>
-			</div>
-		</footer>
+		</div>
+
+		<div id="footer">
+			<img src="./img/general/info.png" />
+			<p id="links">Official Websites: <a href="https://hitman.com/" target="_blank">Hitman.com</a> / <a href="https://ioi.dk/" target="_blank">ioi.dk</a></p>
+			<p id="ioi">Hitman™, Hitman™2, the Hitman™ logo,<br />images, and text are the property of IO Interactive A/S.</p>
+		</div>
 		
 		<script src="./js/Code.js"></script>
 		<script src="./js/Data.js"></script>
