@@ -1,4 +1,18 @@
+//Enjoy looking at the ametuer code work I've done.
 $(document).ready(function() {
+	
+	/******Roulette Greeting******/
+	var currenttime = new Date().getHours();
+	var greeting;
+	var morning = ('Good morning, 47.');
+	var afternoon = ('Good afternoon, 47.');
+	var evening = ('Good evening, 47.');
+
+	if (currenttime >= 5 && currenttime < 12) {	greeting = morning; }
+	else if (currenttime >= 12 && currenttime < 17) { greeting = afternoon;	}
+	else { greeting = evening; }
+
+	$('.welcome #title').text(greeting);	   
 	   
 	/******Top Menu Buttons******/
 	$( "#roulette" ).click(function() {
@@ -21,6 +35,12 @@ $(document).ready(function() {
 		$( "#contract, #settings, #credits" ).hide();
 		$( "#maps" ).show();
 		$( "html" ).addClass( "hide" );
+		
+		if($("#mode_con").hasClass("intel") || $("#mode_con").hasClass("hunt")) {
+			$("input.noncon").prop('checked', false).prop('disabled', true).parent().parent().addClass("lock");
+			$("span.noncon").hide();
+			$("b.noncon").show();
+		};
 	});
 	$( "#options" ).click(function() {
 		$( this ).addClass( "on" );
@@ -69,26 +89,32 @@ $(document).ready(function() {
 	/******Map Select Submenu Buttons******/
 	$( "#submenu_random" ).click(function() {
 		$( this ).addClass( "on" );
-		$( "label[id^='rand'], #rand-h1h2" ).show();
-		$( "div#h1, div#h1dlc, div#h2" ).hide();
+		$( "label[id^='rand'], div[id^='rand']" ).show();
+		$( "div#h1, div#h1dlc, div#h2, div#h2dlc" ).hide();
 		$( this ).siblings().removeClass( "on" );
 	});
 	$( "#submenu_h1" ).click(function() {
 		$( this ).addClass( "on" );
 		$( "div#h1" ).show();
-		$( "label[id^='rand'], #rand-h1h2, div#h1dlc, div#h2" ).hide();
+		$( "label[id^='rand'], div[id^='rand'], div#h1dlc, div#h2, div#h2dlc" ).hide();
 		$( this ).siblings().removeClass( "on" );
 	});
 	$( "#submenu_h1dlc" ).click(function() {
 		$( this ).addClass( "on" );
 		$( "div#h1dlc" ).show();
-		$( "label[id^='rand'], #rand-h1h2, div#h1, div#h2" ).hide();
+		$( "label[id^='rand'], div[id^='rand'], div#h1, div#h2, div#h2dlc" ).hide();
 		$( this ).siblings().removeClass( "on" );
 	});
 	$( "#submenu_h2" ).click(function() {
 		$( this ).addClass( "on" );
 		$( "div#h2" ).show();
-		$( "label[id^='rand'], #rand-h1h2, div#h1, div#h1dlc" ).hide();
+		$( "label[id^='rand'], div[id^='rand'], div#h1, div#h1dlc, div#h2dlc" ).hide();
+		$( this ).siblings().removeClass( "on" );
+	});
+	$( "#submenu_h2dlc" ).click(function() {
+		$( this ).addClass( "on" );
+		$( "div#h2dlc" ).show();
+		$( "label[id^='rand'], div[id^='rand'], div#h1, div#h1dlc, div#h2" ).hide();
 		$( this ).siblings().removeClass( "on" );
 	});
 		
@@ -105,11 +131,14 @@ $(document).ready(function() {
 		};
 		
 		//Toggle Random All if every level is selected or not
-		if($(this).is("#RANDOM:checked")) {
-			$( "input[id^='RANDOM'], input.h1, input.h1bm, input.h1pz, input.h2, input.h2dlc" ).prop('checked', true).parent().addClass("on");
+		if($(this).is("#RANDOM:checked") && ($("#mode_con").hasClass("intel") || $("#mode_con").hasClass("hunt")) ) {
+			$( "input[id^='RANDOM'], input.h1, input.h1bm, input#TS, input.h2, input.h2ex" ).prop('checked', true).parent().addClass("on");
+		}
+		else if($(this).is("#RANDOM:checked") && !($("#mode_con").hasClass("intel") || $("#mode_con").hasClass("hunt")) ) {
+			$( "input[id^='RANDOM'], input.h1, input.h1bm, input.h1pz, input.h1sc, input.h2, input.h2ex, input.h2sa" ).prop('checked', true).parent().addClass("on");
 		}
 		else if($(this).is("#RANDOM:not(:checked)")) {
-			$( "input[id^='RANDOM'], input.h1, input.h1bm, input.h1pz, input.h2, input.h2dlc" ).prop('checked', false).parent().removeClass("on");
+			$( "input[id^='RANDOM'], input.h1, input.h1bm, input.h1pz, input.h1sc, input.h2, input.h2ex, input.h2sa" ).prop('checked', false).parent().removeClass("on");
 		}
 		else if($(this).is("#RANDOMH1:checked")) {
 			$( "input.h1" ).prop('checked', true).parent().addClass("on");
@@ -138,6 +167,15 @@ $(document).ready(function() {
 		else if($(this).is("#RANDOMH1PZ:not(:checked)")) {
 			$( "input.h1pz, input#RANDOM" ).prop('checked', false).parent().removeClass("on");
 		}
+		else if($(this).is("#RANDOMH1SC:checked")) {
+			$( "input.h1sc" ).prop('checked', true).parent().addClass("on");
+			if($(".lvl:checked").length == $(".lvl").length) {
+				$("input#RANDOM").prop('checked', true).parent().addClass("on");
+			};
+		}
+		else if($(this).is("#RANDOMH1SC:not(:checked)")) {
+			$( "input.h1sc, input#RANDOM" ).prop('checked', false).parent().removeClass("on");
+		}
 		else if($(this).is("#RANDOMH2:checked")) {
 			$( "input.h2" ).prop('checked', true).parent().addClass("on");
 			if($(".lvl:checked").length == $(".lvl").length) {
@@ -147,10 +185,85 @@ $(document).ready(function() {
 		else if($(this).is("#RANDOMH2:not(:checked)")) {
 			$( "input.h2, input#RANDOM" ).prop('checked', false).parent().removeClass("on");
 		}
+		else if($(this).is("#RANDOMH2EX:checked")) {
+			$( "input.h2ex" ).prop('checked', true).parent().addClass("on");
+			if($(".lvl:checked").length == $(".lvl").length) {
+				$("input#RANDOM").prop('checked', true).parent().addClass("on");
+			};
+		}
+		else if($(this).is("#RANDOMH2EX:not(:checked)")) {
+			$( "input.h2ex, input#RANDOM" ).prop('checked', false).parent().removeClass("on");
+		}
+		else if($(this).is("#RANDOMH2SA:checked")) {
+			$( "input.h2sa" ).prop('checked', true).parent().addClass("on");
+			if($(".lvl:checked").length == $(".lvl").length) {
+				$("input#RANDOM").prop('checked', true).parent().addClass("on");
+			};
+		}
+		else if($(this).is("#RANDOMH2SA:not(:checked)")) {
+			$( "input.h2sa, input#RANDOM" ).prop('checked', false).parent().removeClass("on");
+		}
 		else if($(".lvl:checked").length == $(".lvl").length) {
 			$("input#RANDOM").prop('checked', true).parent().addClass("on");
-		} else {
+		}
+		else {
 			$("input#RANDOM").prop('checked', false).parent().removeClass("on");
+		};
+		
+		//Toggle Random Hitman 1 if H1 levels are selected or not
+		if($(".h1:checked").length == $(".h1").length) {
+			$("input#RANDOMH1").prop('checked', true).parent().addClass("on");
+		}
+		else {
+			$("input#RANDOMH1").prop('checked', false).parent().removeClass("on");
+		};
+	
+		//Toggle Random Bonus Missions if H1BM levels are selected or not
+		if($(".h1bm:checked").length == $(".h1bm").length) {
+			$("input#RANDOMH1BM").prop('checked', true).parent().addClass("on");
+		}
+		else {
+			$("input#RANDOMH1BM").prop('checked', false).parent().removeClass("on");
+		};
+		
+		//Toggle Random Patient Zero Missions if H1PZ levels are selected or not
+		if($(".h1pz:checked").length == $(".h1pz").length) {
+			$("input#RANDOMH1PZ").prop('checked', true).parent().addClass("on");
+		}
+		else {
+			$("input#RANDOMH1PZ").prop('checked', false).parent().removeClass("on");
+		};
+	
+		//Toggle Random Seasonal Content if H1SC levels are selected or not
+		if($(".h1sc:checked").length == $(".h1sc").length) {
+			$("input#RANDOMH1SC").prop('checked', true).parent().addClass("on");
+		}
+		else {
+			$("input#RANDOMH1SC").prop('checked', false).parent().removeClass("on");
+		};
+	
+		//Toggle Random Hitman 2 if H2 levels are selected or not
+		if($(".h2:checked").length == $(".h2").length) {
+			$("input#RANDOMH2").prop('checked', true).parent().addClass("on");
+		}
+		else {
+			$("input#RANDOMH2").prop('checked', false).parent().removeClass("on");
+		};
+		
+		//Toggle Hitman 2 Expansions if H2EX levels are selected or not
+		if($(".h2ex:checked").length == $(".h2ex").length) {
+			$("input#RANDOMH2EX").prop('checked', true).parent().addClass("on");
+		}
+		else {
+			$("input#RANDOMH2EX").prop('checked', false).parent().removeClass("on");
+		};
+		
+		//Toggle Hitman 2 Special Assignments if H2SA levels are selected or not
+		if($(".h2sa:checked").length == $(".h2sa").length) {
+			$("input#RANDOMH2SA").prop('checked', true).parent().addClass("on");
+		}
+		else {
+			$("input#RANDOMH2SA").prop('checked', false).parent().removeClass("on");
 		};
 	});
 
@@ -214,6 +327,16 @@ $(document).ready(function() {
 		$("#etslider").val(0);
 		$("#etamount").html("0");		
 	}
+	function lockMaps() {
+		$("input.noncon").prop('checked', false).prop('disabled', true).parent().parent().addClass("lock");
+		$("span.noncon").hide();
+		$("b.noncon").show();
+	}
+	function unlockMaps() {
+		$("input.noncon").prop('disabled', false).parent().parent().removeClass("lock");
+		$("span.noncon").show();
+		$("b.noncon").hide();
+	}
 	
 	$("#mode_mission").click(function() {
 		if( !$(this).hasClass("on") ) {
@@ -231,12 +354,14 @@ $(document).ready(function() {
 		else if( $(this).hasClass("hunt") ) {
 			$(this).removeClass("hunt").find("span").text("[Off]");
 			makeItMain();
+			unlockMaps();
 		}
 		else {
 			$(this).addClass("intel").find("span").text("[Intel]");
 			$("#modeselect").val("CONEASY");
 			stopItMain();
 			stopItElusive();
+			lockMaps();
 		}
 	});
 	
