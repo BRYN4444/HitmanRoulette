@@ -64,7 +64,7 @@ function createExtrasList(exit, eexit) {
 		extras.push("Do Not Get Spotted|Avoid anyone seeing you performing any illegal action.");
 
 	if (Math.random() < 0.20 && !koExits.includes(exit, eexit) && document.getElementById("exobj").checked == 0)
-		extras.push("No Pacifications|Do not pacify or subdue anyone in any way, including via melee, or using thrown items.");
+		extras.push("No Pacifications|Do not pacify or subdue anyone in any way. This includes using items via melee or throwing.");
 
 	if (Math.random() < 0.20)
 		extras.push("Headshots Only|Any shots fired at NPCs must be headshots.");
