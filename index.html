@@ -25,7 +25,7 @@
 		<div id="menus">
 			<button id="roulette" class="on" type="button">Hitman Roulette</button><!--
 			//--><button id="missions" type="button">Select Missions</button><!--
-			//--><button id="options" type="button">Difficulty Options</button><!--
+			//--><button id="options" type="button">Roulette Settings</button><!--
 			//--><button id="about" type="button">About</button>
 		</div>
 		<div id="contract">
@@ -35,7 +35,7 @@
 				<div id="submenu_comp">Complications</div>
 				<div id="submenu_chal">Challenges</div>
 				<div id="submenu_issue" onclick="button_MakeItGo()">
-					<p id="subtitle">Reissue for Mission/Option Changes</p>
+					<p id="subtitle">Reissue for Mission/Setting Changes</p>
 					<p id="title">Issue Contract</p>
 				</div>
 			</div><div id="travel" class="column"></div><!--
@@ -70,16 +70,16 @@
 		<div id="maps" style="display:none;">
 			<div id="empty" class="side"></div><!--
 			//--><div id="maps_submenu" class="column">
-				<div id="submenu_random" class="on">Random</div>
+				<div id="submenu_random" class="on">Mission Groupings</div>
 				<div id="submenu_h1">Hitman™ & Prologue</div>
-				<div id="submenu_h1dlc">Hitman™ Expansions</div>
-				<div id="submenu_h2">Hitman™2</div>
-				<div id="submenu_h2dlc" class="off">Hitman™2 Expansions</div>
+				<div id="submenu_h1dlc">Hitman™ Extras</div>
+				<div id="submenu_h2">Hitman™2 & Expansions</div>
+				<div id="submenu_h2dlc">Hitman™2 Extras</div>
 			</div><label id="rand-all" class="column" for="RANDOM">
 				<div id="nameplate">
 					<input id="RANDOM" type="checkbox" value="true" checked />
-					<p id="title">Toggle</p>
-					<p id="subtitle">All Missions (Default)</p>
+					<p id="title">Toggle / Default</p>
+					<p id="subtitle">All Locations</p>
 				</div>
 			</label><div id="rand-h1h2" class="column">
 				<label for="RANDOMH1"><div id="top" class="rand-h1">
@@ -95,19 +95,43 @@
 						<p id="subtitle">Hitman™2 Campaign</p>
 					</div></label>
 				</div>
-			</div><label id="rand-h1bm" class="column" for="RANDOMH1BM">
-				<div id="nameplate">
-					<input id="RANDOMH1BM" type="checkbox" value="true" checked />
-					<p id="title">Toggle</p>
-					<p id="subtitle">Hitman™ Bonus Missions</p>
+			</div><div id="rand-bmex" class="column">
+				<label for="RANDOMH1BM"><div id="top" class="rand-h1bm">
+					<div id="nameplate">
+						<input id="RANDOMH1BM" class="" type="checkbox" value="true" checked />
+						<p id="title">Toggle</p>
+						<p id="subtitle">Hitman™ Bonus Missions</p>
+					</div>
+				</div></label><label for="RANDOMH2EX"><div id="bottom" class="rand-h2ex">
+					<div id="nameplate">
+						<input id="RANDOMH2EX" class="" type="checkbox" value="true" checked />
+						<p id="title">Toggle</p>
+						<p id="subtitle">Hitman™2 Expansions</p>
+					</div></label>
 				</div>
-			</label><label id="rand-h1pz" class="column" for="RANDOMH1PZ">
-				<div id="nameplate">
-					<input id="RANDOMH1PZ" type="checkbox" value="true" checked />
-					<p id="title">Toggle</p>
-					<p id="subtitle">Patient Zero Campaign</p>
+			</div><div id="rand-pzsa" class="column">
+				<label for="RANDOMH1PZ"><div id="top" class="rand-h1pz">
+					<div id="nameplate">
+						<input id="RANDOMH1PZ" class="noncon" type="checkbox" value="true" checked />
+						<p id="title"><span class="noncon">Toggle</span><b class="noncon">Unavailable for Contracts Mode</b></p>
+						<p id="subtitle">Patient Zero Campaign</p>
+					</div>
+				</div></label><label for="RANDOMH2SA"><div id="bottom" class="rand-h2sa">
+					<div id="nameplate">
+						<input id="RANDOMH2SA" class="noncon" type="checkbox" value="true" checked />
+						<p id="title"><span class="noncon">Toggle</span><b class="noncon">Unavailable for Contracts Mode</b></p>
+						<p id="subtitle">Special Assignments</p>
+					</div></label>
 				</div>
-			</label><div id="h1" class="column" style="display:none;">
+			</div><div id="rand-h1sc" class="column">
+				<label for="RANDOMH1SC"><div id="top" class="rand-h1sc">
+					<div id="nameplate">
+						<input id="RANDOMH1SC" class="noncon" type="checkbox" value="true" checked />
+						<p id="title"><span class="noncon">Toggle</span><b class="noncon">Unavailable for Contracts Mode</b></p>
+						<p id="subtitle">Seasonal Content</p>
+					</div>
+				</div></label>
+			</div><div id="h1" class="column" style="display:none;">
 				<label for="FFT"><div id="top" class="m0-3">
 					<div id="nameplate">
 						<input id="FFT" class="lvl h1" type="checkbox" value="true" checked />
@@ -194,15 +218,29 @@
 			</div><div id="h1dlc" class="column" style="display:none;">
 				<label for="TA"><div id="top" class="m2-4">
 					<div id="nameplate">
-						<input id="TA" class="lvl h1pz" type="checkbox" value="true" checked />
-						<p id="title">Toggle / Patient Zero</p>
+						<input id="TA" class="lvl h1pz noncon" type="checkbox" value="true" checked />
+						<p id="title"><span class="noncon">Toggle / Patient Zero</span><b class="noncon">Unavailable for Contracts Mode</b></p>
 						<p id="subtitle">The Author</p>
 					</div>
 				</div></label><label for="PZ"><div id="bottom" class="m6-2">
 					<div id="nameplate">
-						<input id="PZ" class="lvl h1pz" type="checkbox" value="true" checked />
-						<p id="title">Toggle / Patient Zero</p>
+						<input id="PZ" class="lvl h1pz noncon" type="checkbox" value="true" checked />
+						<p id="title"><span class="noncon">Toggle / Patient Zero</span><b class="noncon">Unavailable for Contracts Mode</b></p>
 						<p id="subtitle">Patient Zero</p>
+					</div></label>
+				</div>
+			</div><div id="h1dlc" class="column" style="display:none;">
+				<label for="HH"><div id="top" class="m1-2">
+					<div id="nameplate">
+						<input id="HH" class="lvl h1sc noncon" type="checkbox" value="true" checked />
+						<p id="title"><span class="noncon">Toggle / Seasonal Content</span><b class="noncon">Unavailable for Contracts Mode</b></p>
+						<p id="subtitle">Holiday Hoarders</p>
+					</div>
+				</div></label><label for="SF"><div id="bottom" class="m6-3">
+					<div id="nameplate">
+						<input id="SF" class="lvl h1sc noncon" type="checkbox" value="true" checked />
+						<p id="title"><span class="noncon">Toggle / Seasonal Content</span><b class="noncon">Unavailable for Contracts Mode</b></p>
+						<p id="subtitle">Hokkaido Snow Festival</p>
 					</div></label>
 				</div>
 			</div><div id="h2" class="column" style="display:none;">
@@ -247,49 +285,91 @@
 						<p id="subtitle">The Ark Society</p>
 					</div></label>
 				</div>
+			</div><div id="h2" class="column" style="display:none;">
+				<label for="GH"><div id="top" class="m13-1">
+					<div id="nameplate">
+						<input id="GH" class="lvl h2ex" type="checkbox" value="true" checked />
+						<p id="title">Toggle / Mission</p>
+						<p id="subtitle">Golden Handshake</p>
+					</div>
+				</div></label><label for="LR"><div id="bottom" class="m14-1">
+					<div id="nameplate">
+						<input id="LR" class="lvl h2ex" type="checkbox" value="true" checked />
+						<p id="title">Toggle / Mission</p>
+						<p id="subtitle">The Last Resort</p>
+					</div></label>
+				</div>
+			</div><div id="h2dlc" class="column" style="display:none;">
+				<label for="IOG"><div id="top" class="m10-2">
+					<div id="nameplate">
+						<input id="IOG" class="lvl h2sa noncon" type="checkbox" value="true" checked />
+						<p id="title"><span class="noncon">Toggle / Special Assignment</span><b class="noncon">Unavailable for Contracts Mode</b></p>
+						<p id="subtitle">Illusions of Grandeur</p>
+					</div>
+				</div></label><label for="EOTS"><div id="bottom" class="m9-2">
+					<div id="nameplate">
+						<input id="EOTS" class="lvl h2sa noncon" type="checkbox" value="true" checked />
+						<p id="title"><span class="noncon">Toggle / Special Assignment</span><b class="noncon">Unavailable for Contracts Mode</b></p>
+						<p id="subtitle">Embrace of the Serpent</p>
+					</div></label>
+				</div>
+			</div><div id="h2dlc" class="column" style="display:none;">
+				<label for="AST"><div id="top" class="m8-2">
+					<div id="nameplate">
+						<input id="AST" class="lvl h2sa noncon" type="checkbox" value="true" checked />
+						<p id="title"><span class="noncon">Toggle / Special Assignment</span><b class="noncon">Unavailable for Contracts Mode</b></p>
+						<p id="subtitle">A Silver Tongue</p>
+					</div>
+				</div></label><label for="ABP"><div id="bottom" class="m11-2">
+					<div id="nameplate">
+						<input id="ABP" class="lvl h2sa noncon" type="checkbox" value="true" checked />
+						<p id="title"><span class="noncon">Toggle / Special Assignment</span><b class="noncon">Unavailable for Contracts Mode</b></p>
+						<p id="subtitle">A Bitter Pill</p>
+					</div></label>
+				</div>
 			</div><div id="empty" class="side"></div>
 		</div>
 		<div id="settings" style="display:none;">
 			<div id="empty" class="side"></div><!--
 			//--><div id="settings_submenu" class="column">
-				<div id="submenu_roulette">Roulette Setting</div>
+				<div id="submenu_roulette">Roulette Mode</div>
 				<div id="submenu_kills">Kill Requirements</div>
 				<div id="submenu_extras">Extra Requirements</div>
 				<div id="submenu_challenges">Gameplay Challenges</div>
 			</div><!--
 			//--><div id="settings_subsubmenu" class="column">
-				<label id="mode_mission" class="on" style="display:none;" data-hover="Targets and main objectives are pulled from the level's mission. This is the default option.">
-					<b>Mission Mode</b><span>[On]</span>
+				<label id="mode_mission" class="on" style="display:none;" data-hover="Targets and any main objectives are pulled from the standard mission.<br />This is the default option.">
+					<b>Mission Mode Roulette</b><span>[On]</span>
 				</label>
-				<label id="mode_con" style="display:none;" data-hover="<b>[Contract Targets are only shown on Hitman (2016) maps currently.]</b><br /><br />Targets are pulled from a selection of people within the level. Do these roulettes by starting your own contract within the game's contracts mode. Maybe even publish your successful roulette.<br /><br />Intel: A brief description of the target's last known whereabouts are listed.<br /><br />Hunt: No target location information is given. Identify targets in contracts mode before eliminating them.<br /><br />Not every mission is available in the game's contracts mode. As such, only the normal mission's targets will be selected.">
-					<b>Contracts Mode</b><span>[Off]</span>
+				<label id="mode_con" style="display:none;" data-hover="Targets are pulled from a selection of NPCs within the level. Do these roulettes by starting your own contract within the game's contracts mode. Maybe even publish your successful roulette.<br /><br /><b>[Missions unavailable for contracts mode will be toggled off and locked while Contracts Mode Roulette is enabled. Reselect missions when enabling Mission Mode Roulette.]</b><br /><br />Intel: A brief description of the target's last known whereabouts are listed. This may include in-game cardinal directions or area text listed on the Map screen.<br /><br />Hunt: No target location information is given. Confirm target identities before eliminating them.">
+					<b>Contracts Mode Roulette</b><span>[Off]</span>
 				</label>
 				<label id="mode_et" style="display:none;" data-hover="Make the difficult task of eliminating elusive targets even harder. Set the number of targets there are (making sure to select the appropriate mission) and issue the roulette.<br /><br />Target names are not listed here, so assigning what conditions to whom is player choice. Just don't cross your kill conditions amongst multiple targets.">
-					<b>Elusive Targets</b>
+					<b>Elusive Targets Roulette</b>
 					<span><input id="etslider" type="range" min="0" max="3" value="0" />
 					[<span id="etamount">0</span>]</span>
 				</label>				
-				<label id="kill_disguise" for="disguise" style="display:none;" data-hover="On: Adds a random disguise requirement for each elimination.<br /><br />Off: Any disguise can be worn during eliminations.">
+				<label id="kill_disguise" for="disguise" style="display:none;" data-hover="On: Adds a random mission specific disguise requirement for each elimination. These are not shared between targets.<br /><br />Off: Any disguise can be worn during eliminations.">
 					<input type="checkbox" id="disguise" value="true" checked />
 					<b>Specific Disguises</b><span>[On]</span>
 				</label>
-				<label id="kill_melee" for="melee" style="display:none;" data-hover="On: Melee weapons can appear as elimination methods.<br /><br />Off: Melee weapons do not appear as elimination methods.">
+				<label id="kill_melee" for="melee" style="display:none;" data-hover="On: Mission specific melee weapons can appear as elimination methods, including distinctions between up close and thrown. Pulls from the mission's available lethal weaponry, including hard to find ones.<br /><br />Off: Melee weapons do not appear as elimination methods.">
 					<input type="checkbox" id="melee" value="true" checked />
 					<b>Specific Melee Weapons</b><span>[On]</span>
 				</label>
-				<label id="kill_firearm" for="firearm" style="display:none;" data-hover="On: Different firearm types can appear as elimination methods.<br /><br />Off: Different firearm types do not appear as elimination methods.">
+				<label id="kill_firearm" for="firearm" style="display:none;" data-hover="On: Different firearm types can appear as elimination methods, including sniper rifles and explosives (even though they're not actually firearms).<br /><br />Off: Different firearm types do not appear as elimination methods.">
 					<input type="checkbox" id="firearm" value="true" checked />
 					<b>Specific Firearms</b><span>[On]</span>
 				</label>
-				<label id="kill_accident" for="accident" style="display:none;" data-hover="On: Specific accidents can appear as elimination methods.<br /><br />Off: Specific accidents do not appear as elimination methods.">
+				<label id="kill_accident" for="accident" style="display:none;" data-hover="On: Specific accidents can appear as elimination methods, including fire and explosion. These can be very tricky to accomplish.<br /><br />Off: Specific accidents do not appear as elimination methods.">
 					<input type="checkbox" id="accident" value="true" checked />
 					<b>Specific Accidents</b><span>[On]</span>
 				</label>
-				<label id="kill_generic" for="generic" style="display:none;" data-hover="On: Non-specific kills can appear as elimination methods.<br /><br />Off: Non-specific kills do not appear as elimination methods.">
+				<label id="kill_generic" for="generic" style="display:none;" data-hover="On: Non-specific kills can appear as elimination methods. There are the broadest choices, perfect to roulette newcomers.<br /><br />Off: Non-specific kills do not appear as elimination methods.">
 					<input type="checkbox" id="generic" value="true" checked />
 					<b>Generic Kills</b><span>[On]</span>
 				</label>
-				<label id="extra_starex" class="on" style="display:none;" data-hover="On: You must start in and exit at the specific points of the level listed.<br /><br />Secret: You must start in and exit at the specific points of the level listed. Some exits listed will require actions to make appear.<br /><br />Off: No starting or exit points will be specified.">
+				<label id="extra_starex" class="on" style="display:none;" data-hover="On: You must start in and exit at the specific points of the level listed.<br /><br />Secret: You must start in and exit at the specific points of the level listed. Some exits listed will require actions to make appear. These only appear for Mission Mode Roulettes.<br /><br />Off: No starting or exit points will be specified.">
 					<b>Force Start & Exit</b><span>[On]</span>
 				</label>
 				<label id="extra_obj" for="exobj" style="display:none;" data-hover="On: Adds one extra mission specific task to complete. For example, most of these tasks are in-game Challenges.<br /><br />Off: Only lists mandatory objectives to complete if there are any needed for the mission.">
@@ -309,7 +389,7 @@
 					<input type="checkbox" id="time" value="true" />
 					<b>Time Limit</b><span>[Off]</span>
 				</label>
-				<label id="game_rate" for="rating" style="display:none;" data-hover="On: Complete the roulette and achieve the rating listed, or better.<br /><br />Off: Complete the roulette with whatever rating you get.">
+				<label id="game_rate" for="rating" style="display:none;" data-hover="On: Complete the roulette and achieve the rating listed, or better. Depending on other Roulette Settings, achieving the best rating of Silent Assassin could be tough for even skilled players.<br /><br />Off: Complete the roulette with whatever rating you get.">
 					<input type="checkbox" id="rating" value="true" />
 					<b>Achieve Rating</b><span>[Off]</span>
 				</label>
@@ -338,24 +418,28 @@
 			//--><div id="credits_submenu" class="column">
 				<div class="credits_scroll">
 					<p>Hitman Roulette is a tool that aims to give new ideas on how to complete missions in Hitman 2 (2018) by giving a set of random guidelines to follow when playing. Currently it randomizes things such as entry/exit point, kill method and worn disguise, as well as a set of extra variables, some of which are generic and some mission specific.</p>
-					<p>The <a href="https://thekotti.github.io/about.html" target="_blank">original tool</a> (created by <a href="https://twitter.com/TheKotti" target="_blank">TheKotti</a>) works with Hitman (2016), Hitman 2 (2018) and Hitman: Blood Money, along with having simpler controls, and less stuff to load.</p>
+					<p><a href="https://thekotti.github.io/about.html" target="_blank">The original Hitman Roulette</a> (created by <a href="https://twitter.com/TheKotti" target="_blank">TheKotti</a>) also works with Hitman: Blood Money. It has simpler controls and way less imagery to load.</p>
+					<h1>How To Use</h1>
+					<p>First, select the pool of missions the roulette will choose from. All missions are selected by default, so untoggle the missions you are missing. Or just untoggle the missions you don't like.<br />
+					The next choice should be the mode you'd like the roulette to be in, which will determine what targets you get. Just like within the game, you can get more than the regular targets (Mission Mode Roulette) by choosing Contract Mode Roulette.<br />
+					After that, your last set of picks will dial in the difficulty. Test and experiment to find the settings you like. Toggle: Kill Requirements like disguises or weapons you'll need to wear or use, Extra Requirements like one more objective or sets of complications, and Gameplay Challenges that force you to change how you play.</p>
+					
 					<h1>Special Thanks & External Resources</h1>
 					<ul>
-						<li>TheKotti, for his original Hitman Roulette that inspired this spin-off.</li>
-						<li><a href="http://hitmanmaps.com/" target="_blank">Hitman Interactive Maps</a> by Winterbirds & <a href="https://www.hitman2maps.com/" target="_blank">Hitman 2 Maps</a> by mkoch227 for being great tools!</li>
-						<li>The tools <a href="https://github.com/gromo/jquery.scrollbar" target="_target">jQuery CSS Customizable Scrollbar</a> by gromo & <a href="https://www.dte.web.id/2013/02/event-mouse-wheel.html" target="_blank">Event Mouse Wheel</a> by Taufik Nurrohman.</li>
+						<li>TheKotti, for his <a href="https://thekotti.github.io/about.html" target="_blank">original Hitman Roulette</a> that was the code base and inspiration for this spin-off.</li>
+						<li><a href="http://hitmanmaps.com/" target="_blank">Hitman Interactive Maps</a> by Winterbirds & <a href="https://www.hitmaps.com/" target="_blank">Hitmaps</a> (formerly Hitman 2 Maps) by mkoch227 for being great tools that aided in my data collection.</li>
+						<li><a href="https://github.com/gromo/jquery.scrollbar" target="_target">jQuery CSS Customizable Scrollbar</a> by gromo & <a href="https://www.dte.web.id/2013/02/event-mouse-wheel.html" target="_blank">Event Mouse Wheel</a> by Taufik Nurrohman which I used for style and navigation.</li>
 						<li><a href="https://ioi.dk/" target="_blank">IO Interactive</a> for making a great game and constantly supporting it with new stuff! Maybe one day Hitman Roulette could become an actual game mode.</li>
 					</ul>
 					<h1>Compatibility</h1>
-					<p>This was a project I worked on during my free time to brush up on my simple javascript, jQuery, and CSS knowledge. I've only tested this with Firefox & Chrome and I'm sure my additions to the existing code, as well as my own work, could use cleaning up here and there. If you find any issues, <a href="https://github.com/BRYN4444/HitmanRoulette/issues" target="_blank">let me know via GitHub</a>. <span id="sig">- <a href="http://bryn.info/" target="_blank">BRYN</a><span></p>
+					<p>This was a hobby project I started in 2016/17 and have worked on during my free time as a way to brush up on my simple javascript, jQuery, and CSS knowledge as well as giving me more reason to play these new Hitman games well after unlocking everything. As such, I've only tested this using Firefox and Chrome on a pretty old PC. I'm sure my additions to the existing code, as well as my own work, could use cleaning up here and there. If you find any issues or glaring conflicts with roulette results, <a href="https://github.com/BRYN4444/HitmanRoulette/issues" target="_blank">let me know via GitHub</a> and I'll try and address it when I get the chance. <span id="sig">- <a href="http://bryn.info/" target="_blank">BRYN</a><span></p>
 					<h2>To-Do List / Wishlist:</h2>
 					<ul>
+						<li>More "Extra Objectives" for late-campaign Hitman 2.</li>
+						<li>Allow Entrance Only and/or Exit Only roulette settings.</li>
 						<li>Proper formatting on mobile devices; attempt at adaptive design.</li>
-						<li>Copy the roulette as a text string to save locally. (I would love a way to seed this, but that's beyond my abilities)</li>
-						<li>Replace image file format to webp to decrease filesize and get everything loading quicker.</li>
-						<li>Proper images for Targets in Contracts Mode. None of these carry over from Hitman so they have to be retaken.</li>
-						<li>Need Targets (and Intel) for Contracts Mode on the Hitman 2 maps. Also, since the Hitman 1 list was carried over, those will need to be double checked.</li>
-						<li>More Extra Objectives for late-campaign Hitman 2.</li>
+						<li>Copy the roulette as a text string to save locally.</li>
+						<li>I'm guessing this would take a complete overhaul, but being able to link roulettes to others would be cool.</li>
 					</ul>
 				</div>
 				<div class="external-scroll_y">
