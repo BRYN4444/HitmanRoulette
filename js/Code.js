@@ -1,3 +1,5 @@
+//Enjoy looking at the ametuer hack job I've done to this code.
+
 //Creates the object that will be used as a source for the mission objectives
 function createContainerObject() {
 	container = {};
@@ -10,7 +12,7 @@ function createContainerObject() {
 		}
 	}
 	var mission_name = missionSelection[Math.floor(Math.random() * missionSelection.length)];
-	var failsafe = [fft,ica,showstopper,wot,icon,landslide,author,agc,ahbos,c27,source,ff,si,patientzero,nc,tfl,ths,cag,al,tas];
+	var failsafe = [fft,ica,showstopper,wot,icon,landslide,agc,ahbos,c27,source,ff,si,nc,tfl,ths,cag,al,tas,gh,lr];
 	
 	for (var prop in generic)
 		if (generic.hasOwnProperty(prop))
@@ -169,9 +171,9 @@ function containerToResult(container) {
 	var exitModeIndex = document.getElementById("startexit");
 	var exitMode = exitModeIndex.options[exitModeIndex.selectedIndex].value;
 	
-	if (result.missionCode == "ark" && mode != "MAIN" && exitMode == "SECRET") //Hides Easter Egg Exit for Contracts Mode on Isle of Sgàil
-		result.exit = container.exit[Math.floor(Math.random()*container.exit.length)];
-	else if (exitMode == "SECRET")
+	if (result.missionCode == "beach" && (mode == "CONEASY" || mode == "CONHARD")) //Hides exit requirement for Contracts Mode on Nightcall
+		result.exit = "Boat";
+	else if (exitMode == "SECRET" && mode == "MAIN") //Hides Easter Egg Exits for Contracts Mode
 		result.exit = container.eexit[Math.floor(Math.random()*container.eexit.length)];
 	else
 		result.exit = container.exit[Math.floor(Math.random()*container.exit.length)];
@@ -184,10 +186,18 @@ function containerToResult(container) {
 		result.missionobjective = "<div id='obj-image' class='ProjectProposal'><div id='instruction'><img id='list' src='./img/general/list.png'><p id='wording'>Aquire documents.</p></div><div id='nameplate'><p id='title'>Objective</p><p id='subtitle'>Project Proposal</p></div></div>";
 	else if (mode == "MAIN" && result.missionCode == "spread")
 		result.missionobjective = "<div id='obj-image' class='AnyInfected'><div id='instruction'><img id='list' src='./img/general/list.png'><p id='wording'>Eliminate anyone who becomes infected. Since the virus spreads through proximity contact, avoid becoming infected yourself. If you become contaminated, find an antidote for yourself within 5 minutes.</p></div><div id='nameplate'><p id='title'>Objective</p><p id='subtitle'>Eliminate Any Infected</p></div></div>";
+	else if (mode == "MAIN" && result.missionCode == "biggame")
+		result.missionobjective = "<div id='obj-image' class='TheBlackBook'><div id='instruction'><img id='list' src='./img/general/list.png'><p id='wording'>Retrieve Reddington's Black Book.</p></div><div id='nameplate'><p id='title'>Objective</p><p id='subtitle'>The Black Book</p></div></div>";
+	else if (mode == "CONEASY" && result.missionCode == "biggame")
+		result.missionobjective = "<div id='obj-image' class='TheBlackBook'><div id='instruction'><img id='list' src='./img/general/list.png'><p id='wording'>Retrieve Reddington's Black Book.</p></div><div id='nameplate'><p id='title'>Objective</p><p id='subtitle'>The Black Book</p></div></div>";
+	else if (mode == "CONHARD" && result.missionCode == "biggame")
+		result.missionobjective = "<div id='obj-image' class='TheBlackBook'><div id='instruction'><img id='list' src='./img/general/list.png'><p id='wording'>Retrieve Reddington's Black Book.</p></div><div id='nameplate'><p id='title'>Objective</p><p id='subtitle'>The Black Book</p></div></div>";
 	else if (mode == "MAIN" && result.missionCode == "suburbs")
 		result.missionobjective = "<div id='obj-image' class='FindClues'><div id='instruction'><img id='list' src='./img/general/list.png'><p id='wording'>Find clues in and around Whittleton Creek to uncover the connection between Janus and Providence.</p></div><div id='nameplate'><p id='title'>Objective</p><p id='subtitle'>Find Clues</p></div></div>";
 	else if (mode == "MAIN" && result.missionCode == "ark")
 		result.missionobjective = "<div id='obj-image' class='ObjConstant'><div id='instruction'><img id='list' src='./img/general/list.png'><p id='wording'>Do not eliminate The Constant.</p></div><div id='nameplate'><p id='title'>Objective</p><p id='subtitle'>The Constant</p></div></div>";
+	else if (mode == "MAIN" && result.missionCode == "bank")
+		result.missionobjective = "<div id='obj-image' class='ObtainData'><div id='instruction'><img id='list' src='./img/general/list.png'><p id='wording'>Retrieve the data and exit the bank.</p></div><div id='nameplate'><p id='title'>Objective</p><p id='subtitle'>Obtain Data</p></div></div>";
 	else
 		result.missionobjective = "";
 	
@@ -233,7 +243,7 @@ function writeEverything(result) {
 	for(var i = 0; i < MAX_TARGETS; ++i){ // targets
 		if(i < result.targets.length) {
 			document.getElementById("target" + (i+1)).innerHTML =
-				"<div id='photo' class='" + result.targets[i].split('|')[0].replace(/\s|,|'|“|”|-|\./g, "") +
+				"<div id='photo' class='" + result.targets[i].split('|')[0].replace(/\s|,|'|“|”|-|\./g, "") + "-" + result.missionCode +
 				"'><div id='subplate' class='method'><p id='title'>Eliminate using:</p><p id='subtitle" + (i+1) + "'></p><p id='subtitle-alt" + (i+1) +
 				"'></p></div><div id='subplate' class='disguise'><p id='title'>Wear disguise:</p><p id='subtitle'>" + result.disguises[i] +
 				"</p></div><div id='subplate" + (i+1) + "' class='intel'><p id='title'>Intel:</p><p id='wording'>" + result.targets[i].split('|')[1] +
