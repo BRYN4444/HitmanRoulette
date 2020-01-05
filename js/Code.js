@@ -293,7 +293,7 @@ function writeEverything(result) {
 			"<div id='comp-image' class='NoRecordings'><div id='instruction'><img id='list' src='./img/general/list.png'><p id='wording'>Do not get recorded by a security camera. If you are recorded, you must destroy the evidence.</p></div><div id='nameplate'><p id='title'>Complications</p><p id='subtitle'>No Recordings</p></div></div>";
 	else if(compcheck.length == 0) // prompt to try complications if toggled off
 		document.getElementById("complicationi").innerHTML =
-			"<div id='comp-image' class='compinfo'><div id='instruction'><img id='list' src='./img/general/list.png'><p id='wording'>Change up your playstyle by allowing complications through the Difficulty Options menu above.</p></div><div id='nameplate'><p id='title'>Complications</p><p id='subtitle'>None Enabled</p></div></div>";
+			"<div id='comp-image' class='compinfo'><div id='instruction'><img id='list' src='./img/general/list.png'><p id='wording'>Change up your playstyle with complications. Find the option by selecting Roulette Settings in the top menu, followed by Extra Requirements.</p></div><div id='nameplate'><p id='title'>Complications</p><p id='subtitle'>None Enabled</p></div></div>";
 	else
 		document.getElementById("complicationi").innerHTML = "";
 	
@@ -338,7 +338,7 @@ function writeEverything(result) {
 	var diffcheck = document.getElementById("diffget").innerHTML;
 	if(mechcheck.length == 0 && timecheck.length == 0 && ratingcheck.length == 0 && diffcheck.length == 0) // prompt to try challenges
 		document.getElementById("challengesi").innerHTML =
-			"<div id='chall-image' class='challinfo'><div id='instruction'><img id='list' src='./img/general/list.png'><p id='wording'>Test your skills by enabling gameplay challenges through the Difficulty Options menu above.</p></div><div id='nameplate'><p id='title'>Challenges</p><p id='subtitle'>None Enabled</p></div></div>";
+			"<div id='chall-image' class='challinfo'><div id='instruction'><img id='list' src='./img/general/list.png'><p id='wording'>Test your skills by enabling Gameplay Challenges through the Roulette Settings top menu.</p></div><div id='nameplate'><p id='title'>Challenges</p><p id='subtitle'>None Enabled</p></div></div>";
 	else
 		document.getElementById("challengesi").innerHTML = "";
 	
