@@ -2,10 +2,24 @@
 var history_past = []
 var redo_stack = []
 
-var suitStarts = ["Weapons Building","Crouched behind a Truck","Red Carpet","Palace Garden","Pile-Driver Barge","Attic","Undercover at IAGO Auction","Main Square","ICA Safe House","Harbor","Sapienza Ruins","Main Square Tower","Church Morgue","City Gates","Promenade","Bazaar Entrance","Lamp Store Rooftop","School Alley","Consulate Parking Garage","Consulate Plaza","Riverside Landing","Agent 47's Suite","West Bridge","Old Orchard","Southern Farm Perimeter","Water Tower","Infiltrating Along the Mountain Path","Hotel Front Terrace","Portico","Infiltrating below the Helipad","Boat","Office","Beach","Event Entrance","Dolphin Fountain","Marina","Stands","Village Bus Stop","Village Hostel","Shaman's Hut","Village Bar","Main Street","Train","Skywalk","Taxi","Chawls","Whittleton Creek","Chapel","Keep"];
-var disguiseExits = ["Ambulance|(Medic Only)","Nest|(Secret)","Pale Rider|(Secret)","Trash Truck|(Garbage Man Only)","Swan Dive|(Secret)"];
-var koExits = ["Pink Car|(Needs Key)","Rico's Supercar|(Needs Key)","Local's Car|(Needs Key)","Roadwork Gate|(Needs Key)"];
-var proOnly = ["training","test","movie","election","handoff","construction","cult","spread"];
+var suitStarts = ["Weapons Building","Crouched behind a Truck",
+"Red Carpet","Palace Garden","Pile-Driver Barge","Attic","Undercover at IAGO Auction",
+"Main Square","ICA Safe House","Harbor","Sapienza Ruins","Main Square Tower","Church Morgue","City Gates","Promenade","Portico",
+"Bazaar Entrance","Lamp Store Rooftop","School Alley","Consulate Parking Garage","Consulate Plaza",
+"Riverside Landing","Agent 47's Suite","Hotel Front Terrace",
+"West Bridge","Old Orchard","Southern Farm Perimeter","Water Tower",
+"Infiltrating Along the Mountain Path","Infiltrating below the Helipad",
+"Boat","Office","Beach",
+"Event Entrance","Dolphin Fountain","Marina","Stands",
+"Village Bus Stop","Village Hostel","Shaman's Hut","Village Bar","Steel Bridge",
+"Main Street","Train","Skywalk","Taxi","Chawls","Outside Chawl",
+"Whittleton Creek",
+"Chapel","Keep",
+"Bank Entrance",
+"Resort Pier","Resort Pool Area","Shark Hut"];
+var disguiseExits = ["Ambulance|(Medic Only)","Nest|(Secret)","Pale Rider|(Secret)","Trash Truck|(Garbage Man Only)","Swan Dive|(Secret)","Chimney|(Santa 47 Only)","Window|(Secret)","Snorkel|(Instructor Only)"];
+var koExits = ["Pink Car|(Needs Key)","Nest|(Secret)","Rico's Supercar|(Needs Key)","Local's Car|(Needs Key)","Roadwork Gate|(Needs Key)","Chimney|(Santa 47 Only)","Window|(Secret)","Snorkel|(Instructor Only)"];
+var proOnly = ["training","test","xmas","movie","election","handoff","construction","cult","spread","festival"];
 
 var mechList = ["Instinct|Turn off Instinct in the game's Options menu under Gameplay.",
 				"Mini Map|Turn off the Mini Map in the game's Options menu under Gameplay.",
