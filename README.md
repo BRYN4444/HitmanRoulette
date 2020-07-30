@@ -1,3 +1,5 @@
+Hitman™, Hitman™2, the Hitman™ logo, images, and text are the property of IO Interactive A/S.
+
 # ABOUT
 
 Hitman Roulette is a tool that aims to give new ideas on how to complete missions in Hitman 2 (2018) by giving a set of random guidelines to follow when playing. Currently it randomizes things such as entry/exit point, kill method and worn disguise, as well as a set of extra variables, some of which are generic and some mission specific.
@@ -21,8 +23,8 @@ After that, your last set of picks will dial in the difficulty. Test and experim
 This was a hobby project I started in 2016/17 and have worked on during my free time as a way to brush up on my simple javascript, jQuery, and CSS knowledge as well as giving me more reason to play these new Hitman games well after unlocking everything. As such, I've only tested this using Firefox and Chrome on a pretty old PC. I'm sure my additions to the existing code, as well as my own work, could use cleaning up here and there. If you find any issues or glaring conflicts with roulette results,  [let me know via GitHub](https://github.com/BRYN4444/HitmanRoulette/issues) and I'll try and address it when I get the chance. - [BRYN](http://bryn.info/)
 
 ### To-Do List / Wishlist:
+* The Hitman 3 campaign (and additional mechanics) will be supported not too long after the game's release in 2021. This Roulette's menus will likely be restylized after Hitman 3 as well.
 * More "Extra Objectives" for late-campaign Hitman 2.
 * Allow Entrance Only and/or Exit Only roulette settings.
-* Proper formatting on mobile devices; attempt at adaptive design.
-* Generate the roulette as text in a way it can be save locally.
-* This would take a complete overhaul, but being able to link roulettes to others would be cool.
+* Proper formatting on mobile devices; attempt at adaptive design. This is being worked on, but is on hold till after Hitman 3's additions to the Roulette.
+* This would take a complete overhaul (so it's our of MY league), but being able to link Roulettes to others would be cool.
