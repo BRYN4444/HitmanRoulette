@@ -16,12 +16,26 @@
 		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
 		<link rel="stylesheet" href="./index.css" type="text/css" />
 		<link rel="stylesheet" href="./jquery.scrollbar.css"  type="text/css" />
-		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/smoothness/jquery-ui.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
 		<script type="text/javascript" src="./js/jquery.scrollbar.js"></script>
 		<meta charset="utf-8">
 	</head>
 
 	<body>
+		<div id="shadow" class="hidden">
+			<div id="popwrap">
+				<div id="popup">
+					<h1>Save Roulette</h1>
+					<p>Below is the generated Roulette. Copy it, or select SAVE AS TEXTFILE to save it for yourself.</p>
+					<textarea id="roulettetext">Eliminate TARGET NAME with WEAPON NAME (MELEE) while disguised as DISGUISE NAME.</textarea>
+					<p>You can modify the formatting above before selecting SAVE AS TEXTFILE.</p>
+				</div>
+				<button id="save">SAVE AS TEXTFILE</button>
+				<button id="close">CLOSE</button>
+			</div>
+		</div>
 		<div id="header">
 			<div id="undo">
 				<button id="undo_nappi" class="historybtn" type="button" disabled="true" onclick="history_undo()">Undo</button>
@@ -38,15 +52,25 @@
 			//--><button id="options" type="button">Roulette Settings</button><!--
 			//--><button id="about" type="button">About</button>
 		</div>
+		<div id="header_mobile">
+			<div id="undo">
+				<button id="undo_nappi2" class="historybtn" type="button" disabled="true" onclick="history_undo()"></button>
+			</div><div id="map2"><!--
+				//--><p id="map_place2"></p><!--
+				//--><p id="map_name2"></p>
+			</div><div id="redo">
+				<button id="redo_nappi2" class="historybtn" type="button" disabled="true" onclick="history_redo()"></button>
+			</div>
+		</div>
 		<div id="contract">
 			<div id="empty" class="side"></div><!--
-			//--><div id="contract_submenu" class="column">
-				<div id="submenu_obj" class="on">Objectives</div>
+			//--><div id="contract_submenu" class="column hidemobile">
+				<div id="submenu_obj">Objectives</div>
 				<div id="submenu_comp">Complications</div>
 				<div id="submenu_chal">Challenges</div>
 				<div id="submenu_issue" onclick="button_MakeItGo()">
 					<p id="subtitle">Reissue for Mission/Setting Changes</p>
-					<p id="title">Issue Contract</p>
+					<p id="title">Issue Roulette</p>
 				</div>
 			</div><div id="travel" class="column"></div><!--
 			//--><div id="target1" class="column"></div><!--
@@ -69,13 +93,76 @@
 			//--><div id="diffget" class="column" style="display:none;"></div><!--
 			//--><div id="challengesi" class="column" style="display:none;"></div><!--
 			//--><div id="intro" class="column">
-				<div id="logo" class="welcome">
+				<div id="logo" class="welcome hidemobile">
 					<div id="nameplate">
 						<p id="title">Good evening, 47.</p>
-						<p id="subtitle">"Issue Contract" to Begin</p>
+						<p id="subtitle">"Issue Roulette" to Begin</p>
+					</div>
+				</div>
+				<div id="logothin" class="welcome mobile">
+					<div id="nameplate">
+						<p id="title">Good evening, 47.</p>
+						<p id="subtitle">"Issue Roulette" to Begin</p>
 					</div>
 				</div>
 			</div><div id="empty" class="side"></div>
+			
+			<form class="clearme"><!--Hidden textareas to fill out master textarea to save a roulette.-->
+				<textarea id="input_contract" class="clearme"></textarea>
+				
+				<textarea id="input_entry" class="clearme"></textarea>
+				<textarea id="input_exit" class="clearme"></textarea>
+				<textarea id="input_exitreq" class="clearme"></textarea>
+				
+				<textarea id="input_target1" class="clearme"></textarea>
+				<textarea id="input_weapon1" class="clearme"></textarea>
+				<textarea id="input_weaponsub1" class="clearme"></textarea>
+				<textarea id="input_disguise1" class="clearme"></textarea>
+				<textarea id="input_targetintel1" class="clearme"></textarea>
+				
+				<textarea id="input_target2" class="clearme"></textarea>
+				<textarea id="input_weapon2" class="clearme"></textarea>
+				<textarea id="input_weaponsub2" class="clearme"></textarea>
+				<textarea id="input_disguise2" class="clearme"></textarea>
+				<textarea id="input_targetintel2" class="clearme"></textarea>
+				
+				<textarea id="input_target3" class="clearme"></textarea>
+				<textarea id="input_weapon3" class="clearme"></textarea>
+				<textarea id="input_weaponsub3" class="clearme"></textarea>
+				<textarea id="input_disguise3" class="clearme"></textarea>
+				<textarea id="input_targetintel3" class="clearme"></textarea>
+				
+				<textarea id="input_target4" class="clearme"></textarea>
+				<textarea id="input_weapon4" class="clearme"></textarea>
+				<textarea id="input_weaponsub4" class="clearme"></textarea>
+				<textarea id="input_disguise4" class="clearme"></textarea>
+				<textarea id="input_targetintel4" class="clearme"></textarea>
+				
+				<textarea id="input_target5" class="clearme"></textarea>
+				<textarea id="input_weapon5" class="clearme"></textarea>
+				<textarea id="input_weaponsub5" class="clearme"></textarea>
+				<textarea id="input_disguise5" class="clearme"></textarea>
+				<textarea id="input_targetintel5" class="clearme"></textarea>
+				
+				<textarea id="input_objective" class="clearme"></textarea>
+				<textarea id="input_extraobjective" class="clearme"></textarea>
+				
+				<textarea id="input_complicationt" class="clearme"></textarea>
+				<textarea id="input_complicationi" class="clearme"></textarea>
+				<textarea id="input_complication1" class="clearme"></textarea>
+				<textarea id="input_complication2" class="clearme"></textarea>
+				<textarea id="input_complication3" class="clearme"></textarea>
+				<textarea id="input_complication4" class="clearme"></textarea>
+				<textarea id="input_complication5" class="clearme"></textarea>
+				<textarea id="input_complication6" class="clearme"></textarea>
+				
+				<textarea id="input_challengest" class="clearme"></textarea>
+				<textarea id="input_restriction" class="clearme"></textarea>
+				<textarea id="input_timelimit" class="clearme"></textarea>
+				<textarea id="input_rating" class="clearme"></textarea>
+				<textarea id="input_difficulty" class="clearme"></textarea>
+			</form>
+			
 		</div>
 		<div id="maps" style="display:none;">
 			<div id="empty" class="side"></div><!--
@@ -379,7 +466,7 @@
 					<input type="checkbox" id="generic" value="true" checked />
 					<b>Generic Kills</b><span>[On]</span>
 				</label>
-				<label id="extra_starex" class="on" style="display:none;" data-hover="On: You must start in and exit at the specific points of the level listed.<br /><br />Secret: You must start in and exit at the specific points of the level listed. Some exits listed will require actions to make appear. These only appear for Mission Mode Roulettes.<br /><br />Off: No starting or exit points will be specified.">
+				<label id="extra_starex" class="on" style="display:none;" data-hover="On: You must start in and exit at the specific points of the level listed. In the mission FREEDOM FIGHTERS, extra exits are available after your first playthough.<br /><br />Secret: You must start in and exit at the specific points of the level listed. Some exits listed will require actions to make appear. These only appear for Mission Mode Roulettes.<br /><br />Off: No starting or exit points will be specified.">
 					<b>Force Start & Exit</b><span>[On]</span>
 				</label>
 				<label id="extra_obj" for="exobj" style="display:none;" data-hover="On: Adds one extra mission specific task to complete. For example, most of these tasks are in-game Challenges.<br /><br />Off: Only lists mandatory objectives to complete if there are any needed for the mission.">
@@ -445,11 +532,11 @@
 					<p>This was a hobby project I started in 2016/17 and have worked on during my free time as a way to brush up on my simple javascript, jQuery, and CSS knowledge as well as giving me more reason to play these new Hitman games well after unlocking everything. As such, I've only tested this using Firefox and Chrome on a pretty old PC. I'm sure my additions to the existing code, as well as my own work, could use cleaning up here and there. If you find any issues or glaring conflicts with roulette results, <a href="https://github.com/BRYN4444/HitmanRoulette/issues" target="_blank">let me know via GitHub</a> and I'll try and address it when I get the chance. <span id="sig">- <a href="http://bryn.info/" target="_blank">BRYN</a><span></p>
 					<h2>To-Do List / Wishlist:</h2>
 					<ul>
+						<li>The Hitman 3 campaign (and additional mechanics) will be supported not too long after the game's release in 2021. This Roulette's menus will likely be restylized after Hitman 3 as well.</li>
 						<li>More "Extra Objectives" for late-campaign Hitman 2.</li>
 						<li>Allow Entrance Only and/or Exit Only roulette settings.</li>
-						<li>Proper formatting on mobile devices; attempt at adaptive design.</li>
-						<li>Generate the roulette as text in a way it can be save locally.</li>
-						<li>This would take a complete overhaul, but being able to link roulettes to others would be cool.</li>
+						<li>Proper formatting on mobile devices; attempt at adaptive design. This is being worked on, but is on hold till after Hitman 3's additions to the Roulette.</li>
+						<li>This would take a complete overhaul (so it's our of MY league), but being able to link Roulettes to others would be cool.</li>
 					</ul>
 				</div>
 				<div class="external-scroll_y">
@@ -477,11 +564,34 @@
 			</div>
 		</div>
 
+		<div id="hovermenu" class="mobile">
+			<div class="short">
+				<button id="submenu_obj">Objectives</button>
+			</div>
+			<div class="short">
+				<button id="submenu_comp">Complications</button>
+			</div>
+			<div class="short">
+				<button id="submenu_chal">Challenges</button>
+			</div>
+			<div class="tall">
+				<button id="submenu_issue">Issue<br />Roulette</button>
+			</div>
+			<div class="tall">
+				<button id="submenu_save" disabled="true">Save<br />Roulette</button>
+			</div>
+		</div>
+
 		<div id="footer">
 			<img src="./img/general/info.png" />
 			<p id="links">Official Websites: <a href="https://hitman.com/" target="_blank">Hitman.com</a> / <a href="https://ioi.dk/" target="_blank">ioi.dk</a></p>
 			<p id="ioi">Hitman™, Hitman™2, the Hitman™ logo,<br />images, and text are the property of IO Interactive A/S.</p>
 		</div>
+		<div id="footer_cling">
+			<a href="https://hitman.com/" target="_blank" style="width:48px;"><img src="./img/general/info.png" /></a>
+			<p>Hitman™, Hitman™2, the <a href="https://hitman.com/" target="_blank">Hitman</a>™ logo, images, and text are the property of <a href="https://ioi.dk/" target="_blank">IO Interactive A/S</a>.</p>
+		</div>
+		<button id="saveroulette" class="hidemobile" disabled="true">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Save Roulette</button>
 		
 		<script src="./js/Code.js"></script>
 		<script src="./js/Data.js"></script>

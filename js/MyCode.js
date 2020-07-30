@@ -1,6 +1,11 @@
 //Enjoy looking at the ametuer code work I've done.
 $(document).ready(function() {
 	
+	/******Hide History & Contract Save Buttons on Refresh******/
+	$('.historybtn').prop('disabled',true);
+	$( "#saveroulette" ).prop('disabled', true);
+	$( ".clearme" ).val("");
+	
 	/******Roulette Greeting******/
 	var currenttime = new Date().getHours();
 	var greeting;
@@ -26,6 +31,7 @@ $(document).ready(function() {
 			$( "#maps, #settings, #credits" ).hide();
 			$( "#contract" ).show();
 			$( "html" ).removeClass( "hide" );
+			$( "#saveroulette" ).show('slide',{ direction: 'right' }, 500);
 		};	
 	});
 	$( "#missions" ).click(function() {
@@ -35,6 +41,7 @@ $(document).ready(function() {
 		$( "#contract, #settings, #credits" ).hide();
 		$( "#maps" ).show();
 		$( "html" ).addClass( "hide" );
+		$( "#saveroulette" ).hide('slide',{ direction: 'right' }, 500);
 		
 		if($("#mode_con").hasClass("intel") || $("#mode_con").hasClass("hunt")) {
 			$("input.noncon").prop('checked', false).prop('disabled', true).parent().parent().addClass("lock");
@@ -49,6 +56,7 @@ $(document).ready(function() {
 		$( "#contract, #maps, #credits" ).hide();
 		$( "#settings" ).show();
 		$( "html" ).addClass( "hide" );
+		$( "#saveroulette" ).hide('slide',{ direction: 'right' }, 500);
 	});
 	$( "#about" ).click(function() {
 		$( this ).addClass( "on" );
@@ -57,6 +65,7 @@ $(document).ready(function() {
 		$( "#contract, #maps, #settings" ).hide();
 		$( "#credits" ).show();
 		$( "html" ).addClass( "hide" );
+		$( "#saveroulette" ).hide('slide',{ direction: 'right' }, 500);
 	});
 	
 	/******Roulette Submenu Buttons******/
@@ -437,13 +446,12 @@ $(document).ready(function() {
 	});
 	
 	/******Scroll wheel for horizontal bar******/
-	//
 	function scrollHorizontally(e) {
 		e = window.event || e;
 		var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
 		document.documentElement.scrollLeft -= (delta*40); // Multiplied by 40
 		document.getElementById("contract").scrollLeft -= (delta*40); // Multiplied by 40
-		document.getElementById("maps").scrollLeft -= (delta*40); // Multiplied by 40	
+		document.getElementById("maps").scrollLeft -= (delta*40); // Multiplied by 40
 		//e.preventDefault();
 	};
 	if (window.addEventListener) {
@@ -456,4 +464,41 @@ $(document).ready(function() {
 		window.attachEvent("onmousewheel", scrollHorizontally);
 	};
 	
+	/******Save contract as TXT from a textarea******/	
+	$("#saveroulette").click(function(){
+		$("#shadow").removeClass("hidden");
+	});
+	
+	function saveTextAsFile() {
+		var textToWrite = document.getElementById("roulettetext").value;
+		textToWrite = textToWrite.replace(/\n/g, "\r\n"); //retain line breaks
+		var textFileAsBlob = new Blob([textToWrite], { type: 'text/plain' });
+		var fileNameToSaveAs = "HitmanRoulette.txt";
+
+		var downloadLink = document.createElement("a");
+		downloadLink.download = fileNameToSaveAs;
+		downloadLink.innerHTML = "RouletteContract"; //hidden link text
+
+		// webkit & Gecko based browsers without the need for a if / else block.
+		window.URL = window.URL || window.webkitURL;
+
+		downloadLink.href = window.URL.createObjectURL(textFileAsBlob);
+		downloadLink.onclick = destroyClickedElement;
+		downloadLink.style.display = "none";
+		document.body.appendChild(downloadLink);
+		downloadLink.click();
+	}
+
+	function destroyClickedElement(event) {
+		// remove the link from the DOM
+		document.body.removeChild(event.target);
+	}
+	
+	$("#save").click(function (e) {
+		e.preventDefault();
+		saveTextAsFile();
+	});
+	$("#close").click(function(){
+		$("#shadow").addClass("hidden");
+	});
 });

@@ -126,3 +126,15 @@
 }
 .external-scroll_y .scroll-bar {
     height: 100px;
+}
+
+
+@media only screen and (max-width: 960px) {
+	.external-scroll_x.scroll-scrollx_visible, div[class^='external-scroll_x'].scroll-scrollx_visible {
+		height: 15px;
+		left: 10px;
+		right: 10px;
+		top: auto;
+		bottom: 177px;
+	}
+}
