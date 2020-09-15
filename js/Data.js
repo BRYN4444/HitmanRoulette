@@ -19,7 +19,7 @@ var suitStarts = ["Weapons Building","Crouched behind a Truck",
 "Resort Pier","Resort Pool Area","Shark Hut"];
 var disguiseExits = ["Ambulance|(Medic Only)","Nest|(Secret)","Pale Rider|(Secret)","Trash Truck|(Garbage Man Only)","Swan Dive|(Secret)","Chimney|(Santa 47 Only)","Window|(Secret)","Snorkel|(Instructor Only)"];
 var koExits = ["Pink Car|(Needs Key)","Nest|(Secret)","Rico's Supercar|(Needs Key)","Local's Car|(Needs Key)","Roadwork Gate|(Needs Key)","Chimney|(Santa 47 Only)","Window|(Secret)","Snorkel|(Instructor Only)"];
-var proOnly = ["training","test","xmas","movie","election","handoff","construction","cult","spread","festival"];
+var proOnly = ["training","test","xmas","director","movie","election","handoff","enforcer","construction","extractor","cult","veteran","mercenary","spread","festival","controller"];
 
 var mechList = ["Instinct|Turn off Instinct in the game's Options menu under Gameplay.",
 				"Mini Map|Turn off the Mini Map in the game's Options menu under Gameplay.",
@@ -207,6 +207,39 @@ var hh = {
 	"Wet Bandits Recruit|Overflow 5 sinks in the Palais De Walewska.",
 	"Wet Bandits Veteran|Overflow 8 sinks in the Palais De Walewska."]
 };
+var thedirector = {
+	missionTitle: "The Director",
+	missionLocation: "Paris",
+	missionCode: "director",
+	melee: ["Fiber Wire",
+	"Battle Axe|Melee","Battle Axe|Thrown Weapon",
+	"Cleaver|Melee","Cleaver|Thrown Weapon",
+	"Fire Axe|Melee","Fire Axe|Thrown Weapon",
+	"Hatchet|Melee","Hatchet|Thrown Weapon",
+	"Kitchen Knife|Melee","Kitchen Knife|Thrown Weapon",
+	"Letter Opener|Melee","Letter Opener|Thrown Weapon",
+	"Saber|Melee","Saber|Thrown Weapon",
+	"Scissors|Melee","Scissors|Thrown Weapon",
+	"Screwdriver|Melee","Screwdriver|Thrown Weapon"],
+	targetList: ["Scott Sarno"],
+	contractTargets: ["Scott Sarno|This is an exclusive target for the PS4 version of Hitman (2016)."],
+	entry: ["Red Carpet","Palace Garden","Pile-Driver Barge","Attic","Undercover in Kitchen","Undercover in Locker Room","Undercover at IAGO Auction","Undercover in AV Center","Undercover in Dressing Area"],
+	exit: ["Front Gates (Red Carpet)","Front Gates (VIP)","Front Gates (Parking Area)","Basement Catacombs","Helicopter","Baron Larin's Speedboat|(Needs Key)"],
+	eexit: ["Front Gates (Red Carpet)","Front Gates (VIP)","Front Gates (Parking Area)","Basement Catacombs","Helicopter","Baron Larin's Speedboat|(Needs Key)"],
+	disguises: ["Any Suit","Auction Staff","Chef","CICADA Bodyguard","Tech Crew","Palace Staff","Security Guard","Stylist","Helmut Kruger","Sheikh","Vampire Magician"],
+	wild: ["Piano Forty Seven|Knock someone out with the piano.",
+	"Bull in a China Shop|Break the asian antique vase in the first floor storage room.",
+	"Bare Knuckle Boxer|Mix a Bare Knuckle Boxer cocktail.",
+	"Fifteen Seconds of Fame|Take to the catwalk as Helmut Kruger.",
+	"Salut Too Soon|Trigger the fireworks ahead of schedule by finding the remote.",
+	"Enter the IAGO Auction|Join the auction with an invitation or dressed as the Sheikh."],
+	contractWild: ["Piano Forty Seven|Knock someone out with the piano.",
+	"Bull in a China Shop|Break the asian antique vase in the first floor storage room.",
+	"Bare Knuckle Boxer|Mix a Bare Knuckle Boxer cocktail.",
+	"Fifteen Seconds of Fame|Take to the catwalk as Helmut Kruger.",
+	"Salut Too Soon|Trigger the fireworks ahead of schedule by finding the remote.",
+	"Enter the IAGO Auction|Join the auction with an invitation or dressed as the Sheikh."]
+};
 
 var wot = {
 	missionTitle: "World of Tomorrow",
@@ -392,6 +425,49 @@ var author = {
 	"Too Much Ambiance|Pollute the smoke machine being used for the promotional photoshoot.",
 	"No, it's “Cheese”|Get your picture taken with Craig Black during the promotional photoshoot."]
 };
+var theenforcer = {
+	missionTitle: "The Enforcer",
+	missionLocation: "Sapienza",
+	missionCode: "enforcer",
+	melee: ["Fiber Wire",
+	"Amputation Knife|Melee","Amputation Knife|Thrown Weapon",
+	"Battle Axe|Melee","Battle Axe|Thrown Weapon",
+	"Circumcision Knife|Melee","Circumcision Knife|Thrown Weapon",
+	"Cleaver|Melee","Cleaver|Thrown Weapon",
+	"Combat Knife|Melee","Combat Knife|Thrown Weapon",
+	"Fire Axe|Melee","Fire Axe|Thrown Weapon",
+	"Folding Knife|Melee","Folding Knife|Thrown Weapon",
+	"Hatchet|Melee","Hatchet|Thrown Weapon",
+	"Katana|Melee","Katana|Thrown Weapon",
+	"Kitchen Knife|Melee","Kitchen Knife|Thrown Weapon",
+	"Letter Opener|Melee","Letter Opener|Thrown Weapon",
+	"Old Axe|Melee","Old Axe|Thrown Weapon",
+	"Saber|Melee","Saber|Thrown Weapon",
+	"Scissors|Melee","Scissors|Thrown Weapon",
+	"Screwdriver|Melee","Screwdriver|Thrown Weapon"],
+	targetList: ["Gary Lunn"],
+	contractTargets: ["Gary Lunn|This is an exclusive target for the PS4 version of Hitman (2016)."],
+	entry: ["Main Square","ICA Safe House","Harbor","Sapienza Ruins","Main Square Tower","Church Morgue","Undercover in Mansion Kitchen","Undercover in Field Lab","Undercover in Mansion Garden","Undercover as Security Staff"],
+	exit: ["Car","Speedboat (Harbor)","Seaplane","Speedboat (Ruins)"],
+	eexit: ["Car","Speedboat (Harbor)","Seaplane","Speedboat (Ruins)"],
+	disguises: ["Any Suit","Biolab Security","Bodyguard","Bohemian","Butler","Church Staff","Cyclist","Delivery Man","Dr. Oscar Lafayette","Gardener","Green Plumber","Hazmat Suit","Housekeeper","Kitchen Assistant","Lab Technician","Mansion Chef","Mansion Security","Mansion Staff","Plague Doctor","Priest","Private Detective","Red Plumber","Roberto Vargas","Store Clerk","Street Performer","Waiter"],
+	wild: ["Back Door|Only enter Villa Caruso through the biolab.",
+	"Safehouse Bugged|The ICA Safehouse is off limits from entering and receiving Agency pickups.<br /><br />If this is your starting location, disregard it and choose your own.",
+	"Agent 427|Retrieve a cannabis joint.",
+	"Share One With Diana|Retrieve two cannabis joints.",
+	"First Day on the Job|Attempt to cook Isabella Caruso's spaghetti bolognese and ring the dinner bell.",
+	"The Good Son|Place flowers on Isabella Caruso's Grave while disguised as a delivery man.",
+	"Green Thumb|Find all 6 flower bouquets hidden around Sapienza.",
+	"For Whom the Bell Tolls|Drop the church bell."],
+	contractWild: ["Back Door|Only enter Villa Caruso through the biolab.",
+	"Safehouse Bugged|The ICA Safehouse is off limits from entering and receiving Agency pickups.<br /><br />If this is your starting location, disregard it and choose your own.",
+	"Agent 427|Retrieve a cannabis joint.",
+	"Share One With Diana|Retrieve two cannabis joints.",
+	"First Day on the Job|Attempt to cook Isabella Caruso's spaghetti bolognese and ring the dinner bell.",
+	"The Good Son|Place flowers on Isabella Caruso's Grave while disguised as a delivery man.",
+	"Green Thumb|Find all 6 flower bouquets hidden around Sapienza.",
+	"For Whom the Bell Tolls|Drop the church bell."]
+};
 
 var agc = {
 	missionTitle: "A Gilded Cage",
@@ -479,6 +555,32 @@ var ahbos = {
 	"Keys to the City|Find all 6 keys scattered around: Truck Keys, Maintenance Room Key, Shisha Cafe Key, and the Antiques, Carpet, and unnamed Shop Keys.",
 	"Litter Picker-Upper|Collect 10 soda cans, located in the area around the Shisha Cafe.",
 	"The Future Foretold|Read Matthieu Mendola’s fortune as the fortune teller."]
+};
+var theextractor = {
+	missionTitle: "The Extractor",
+	missionLocation: "Marrakesh",
+	missionCode: "extractor",
+	melee: ["Fiber Wire",
+	"Battle Axe|Melee","Battle Axe|Thrown Weapon",
+	"Cleaver|Melee","Cleaver|Thrown Weapon",
+	"Fire Axe|Melee","Fire Axe|Thrown Weapon",
+	"Kitchen Knife|Melee","Kitchen Knife|Thrown Weapon",
+	"Letter Opener|Melee","Letter Opener|Thrown Weapon",
+	"Saber|Melee","Saber|Thrown Weapon",
+	"Scissors|Melee","Scissors|Thrown Weapon",
+	"Screwdriver|Melee","Screwdriver|Thrown Weapon"],
+	targetList: ["Walter Menard"],
+	contractTargets: ["Walter Menard|This is an exclusive target for the PS4 version of Hitman (2016)."],
+	entry: ["Bazaar Entrance","Undercover at the Snail Stand","Undercover on the West Bazaar Rooftop","Undercover in the Courtyard Club","Undercover in Zaydan's Compound","Lamp Store Rooftop","Undercover in the Consulate","School Alley","Consulate Parking Garage"],
+	exit: ["Marketplace Gates","Bazaar Gates","Armored Vehicle|(Needs Key)","Car in the Garage|(Needs Key)"],
+	eexit: ["Marketplace Gates","Bazaar Gates","Armored Vehicle|(Needs Key)","Car in the Garage|(Needs Key)"],
+	disguises: ["Any Suit","Bodyguard","Cameraman","Consulate Intern","Consulate Janitor","Consulate Security","Elite Soldier","Food Vendor","Fortune Teller","Handyman","Headmaster","Local Printing Crew","Masseur","Military Officer","Military Soldier","Prisoner","Shopkeeper","Waiter"],
+	wild: ["Training Cancelled|Trigger the APC turret in the school courtyard.",
+	"Bathroom Break|Drop the broken toilet bowl in the school bathroom.",
+	"Freedom|Drag Zaydan’s prisoner, Sayid Laham, outdoors."],
+	contractWild: ["Training Cancelled|Trigger the APC turret in the school courtyard.",
+	"Bathroom Break|Drop the broken toilet bowl in the school bathroom.",
+	"Freedom|Drag Zaydan’s prisoner, Sayid Laham, outdoors."]
 };
 
 var c27 = {
@@ -583,6 +685,34 @@ var source = {
 	contractWild: ["Something For Later|Find and collect the 92 Proof Vodka. Do not use it during the contract.",
 	"Inner Circle|Attend the private ceremony as a cult member."]
 };
+var theveteran = {
+	missionTitle: "The Veteran",
+	missionLocation: "Bangkok",
+	missionCode: "veteran",
+	melee: ["Fiber Wire",
+	"Cleaver|Melee","Cleaver|Thrown Weapon",
+	"Fire Axe|Melee","Fire Axe|Thrown Weapon",
+	"Hatchet|Melee","Hatchet|Thrown Weapon",
+	"Katana|Melee","Katana|Thrown Weapon",
+	"Kitchen Knife|Melee","Kitchen Knife|Thrown Weapon",
+	"Letter Opener|Melee","Letter Opener|Thrown Weapon",
+	"Sapper's Axe|Melee","Sapper's Axe|Thrown Weapon",
+	"Screwdriver|Melee","Screwdriver|Thrown Weapon"],
+	targetList: ["John Stubbs"],
+	contractTargets: ["John Stubbs|This is an exclusive target for the PS4 version of Hitman (2016)."],
+	entry: ["Riverside Landing","Agent 47's Suite","Undercover in the Restaurant Kitchen","Undercover in the Linen Room","Undercover by the Security Shed","Undercover at the Himmapan Bar","Undercover in the Side Garden","Undercover in the 2nd Floor Hallway"],
+	exit: ["Speedboat","Tuk-tuk|(Needs Repair)","Tunnel"],
+	eexit: ["Speedboat","Tuk-tuk|(Needs Repair)","Tunnel"],
+	disguises: ["Any Suit","Abel de Silva","Exterminator","Groundskeeper","Hotel Security","Hotel Staff","Jordan Cross' Bodyguard","Kitchen Staff","Morgan's Bodyguard","Recording Crew","Stalker","Waiter"],
+	wild: ["Tik Tuk|Repair the Tuk-Tuk located behind the hotel.",
+	"Keep a Souvenir|Retrieve the Branson MD-2 vocal mic.",
+	"Put the Lime in the Coconut|Acquire 6 coconuts.",
+	"Don't Breathe This|Pollute the ventilation system of the hotel lobby."],
+	contractWild: ["Tik Tuk|Repair the Tuk-Tuk located behind the hotel.",
+	"Keep a Souvenir|Retrieve the Branson MD-2 vocal mic.",
+	"Put the Lime in the Coconut|Acquire 6 coconuts.",
+	"Don't Breathe This|Pollute the ventilation system of the hotel lobby."]
+};
 
 var ff = {
 	missionTitle: "Freedom Fighters",
@@ -636,6 +766,32 @@ var ff = {
 	"Better Safe Than Sorry|Find and collect both the hacker’s phone and the explosive watch battery.",
 	"The Good Stuff|Find and collect the hallucinogenic drugs.",
 	"Perfect Forgery|Find and collect the interpol badge.",
+	"Handle With Care|Acquire 5 bottles of Nitroglycerin.",
+	"Not Exactly Ulcer Pills|Play the video game console.",
+	"Apricot Hunter|Find and collect 10 apricots.",
+	"Apricot Hoarder|Find and collect 20 apricots."]
+};
+var themercenary = {
+	missionTitle: "The Mercenary",
+	missionLocation: "Colorado",
+	missionCode: "mercenary",
+	melee: ["Fiber Wire",
+	"Cleaver|Melee","Cleaver|Thrown Weapon",
+	"Kitchen Knife|Melee","Kitchen Knife|Thrown Weapon",
+	"Old Axe|Melee","Old Axe|Thrown Weapon",
+	"Screwdriver|Melee","Screwdriver|Thrown Weapon"],
+	targetList: ["Patrick Morgan"],
+	contractTargets: ["Patrick Morgan|This is an exclusive target for the PS4 version of Hitman (2016)."],
+	entry: ["Undercover in the Garage","West Bridge","Undercover by the Greenhouse","Undercover on the Demolition Range","Old Orchard","Southern Farm Perimeter","Undercover in the Farmhouse","Water Tower"],
+	exit: ["Tornado Shelter|(Needs Face Scan)"],
+	eexit: ["Tornado Shelter|(Needs Face Scan)"],
+	disguises: ["Any Suit","Explosives Specialist","Hacker","Militia Cook","Militia Elite","Militia Soldier","Militia Spec Ops","Militia Technician","Point Man","Scarecrow"],
+	wild: ["The Good Stuff|Find and collect the hallucinogenic drugs.",
+	"Handle With Care|Acquire 5 bottles of Nitroglycerin.",
+	"Not Exactly Ulcer Pills|Play the video game console.",
+	"Apricot Hunter|Find and collect 10 apricots.",
+	"Apricot Hoarder|Find and collect 20 apricots."],
+	contractWild: ["The Good Stuff|Find and collect the hallucinogenic drugs.",
 	"Handle With Care|Acquire 5 bottles of Nitroglycerin.",
 	"Not Exactly Ulcer Pills|Play the video game console.",
 	"Apricot Hunter|Find and collect 10 apricots.",
@@ -771,6 +927,33 @@ var sf = {
 	"Cold as Ice|Collect 4 icicles.",
 	"Ice Ice Baby|Collect 4 icicles and shoot down 4 giant icicles.",
 	"Let It Snow|Collect 30 Snowballs. How you use them afterwards is up to you."]
+};
+var thecontroller = {
+	missionTitle: "The Controller",
+	missionLocation: "Hokkaido",
+	missionCode: "controller",
+	melee: ["Fiber Wire",
+	"Cleaver|Melee","Cleaver|Thrown Weapon",
+	"Fire Axe|Melee","Fire Axe|Thrown Weapon",
+	"Katana|Melee","Katana|Thrown Weapon",
+	"Kitchen Knife|Melee","Kitchen Knife|Thrown Weapon",
+	"Scalpel|Melee","Scalpel|Thrown Weapon",
+	"Scissors|Melee","Scissors|Thrown Weapon",
+	"Screwdriver|Melee","Screwdriver|Thrown Weapon"],
+	targetList: ["Taheiji Koyama"],
+	contractTargets: ["Taheiji Koyama|This is an exclusive target for the PS4 version of Hitman (2016)."],
+	entry: ["Tobias Rieper's Suite","Spa","Infiltrating Along the Mountain Path","Restaurant","Undercover in the Staff Quarters","Undercover in the Kitchen","Undercover in the Garden","Morgue","Undercover in the Operating Theater"],
+	exit: ["Helicopter","Snowmobile","Hiking Route","Cable Car"],
+	eexit: ["Helicopter","Snowmobile","Hiking Route","Cable Car"],
+	disguises: ["Any Suit / Ninja","Baseball Player","Bodyguard","Chef","Chief Surgeon","Doctor","Handyman","Helicopter Pilot","Hospital Director","Morgue Doctor","Motorcyclist","Patient","Resort Security","Resort Staff","Surgeon","VIP Patient","VIP Patient (Dexter)","VIP Patient (Portman)","Yoga Instructor"],
+	wild: ["Ghost in the Machine|Sabotage GAMA’s artificial intelligence mainframe KAI.",
+	"Smell Something Fishy?|Cut the fugu fish to collect it’s poison.",
+	"Smoking Kills|Find and collect 3 packs of cigarettes.<br />Note: you will need to keep track of the amount on your own.",
+	"New Career Path|Prepare and serve 3 different people unpoisoned sushi."],
+	contractWild: ["Ghost in the Machine|Sabotage GAMA’s artificial intelligence mainframe KAI.",
+	"Smell Something Fishy?|Cut the fugu fish to collect it’s poison.",
+	"Smoking Kills|Find and collect 3 packs of cigarettes.<br />Note: you will need to keep track of the amount on your own.",
+	"New Career Path|Prepare and serve 3 different people unpoisoned sushi."]
 };
 
 var nc = {
@@ -1743,17 +1926,23 @@ var mission_names_map = {
 	"TFT" : ica,
 	"TSS" : showstopper,
 	"HH": hh,
+	"TD": thedirector,
 	"WOT": wot,
 	"ICON": icon,
 	"LS": landslide,
 	"TA": author,
+	"TE": theenforcer,
 	"AGC": agc,
 	"AHBOS": ahbos,
+	"TX": theextractor,
 	"C27": c27,
 	"TS": source,
+	"TV": theveteran,
 	"FF": ff,
+	"TM": themercenary,
 	"SI": si,
 	"PZ": patientzero,
+	"TC": thecontroller,
 	"SF": sf,
 	"NC": nc,
 	"TFL": tfl,
