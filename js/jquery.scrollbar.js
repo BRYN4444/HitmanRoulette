@@ -172,7 +172,7 @@
                 }
 
                 cw.addClass('scroll-content').css({
-                    "height": "0px",
+                    "height": "",
                     "margin-bottom": browser.scroll.height * -1 + 'px',
                     "margin-right": browser.scroll.width * -1 + 'px',
                     "max-height": ""
