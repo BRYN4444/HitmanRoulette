@@ -1,0 +1,1642 @@
+html, body {
+	height:100%;
+	width:100%;
+	margin:0;
+	overflow:hidden;
+}
+html.h1theme { /* Variables for Hitman 1 Styled Theme & Images */
+	/* Background */
+	--regularbg:url("../img/general/h1/background.webp");
+	--regularbggradient:linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 15%, rgba(0,0,0,0) 71%, rgba(0,0,0,0) 100%);
+	--regularbgcolor:#220307;
+	--missionbgfilter:sepia(1) brightness(0.4) hue-rotate(300deg) saturate(3) contrast(3);
+	--missionbggradient:linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 15%, rgba(0,0,0,0) 71%, rgba(0,0,0,0) 100%);
+	--missionbgopacity:0.5;
+	/* Regular Styling */ --normalshadow:none; --normalcolor:#ffffff; --uppercase:none;
+	/* Link Styling */	--linkcolor:#ff0000; --linkhover:#ffffff; --linkshadow:none; --linkhovershadow:none;
+	/* Input Range Styling */ --rangebase:#000000; --rangefill:#424242; --rangepip:#d4d4d4;
+	/* Mission Location Styling */ --missionlocationborder:none; --missionlocationcolor:#ffffff;
+	/* Menu Bar Styling */ --menustrip:#3b0d10; --menustripborder:transparent; --menucolor:#b1b1b1; --menushadow:none; --menustriphover:#bdbdbd; --menucolorhover:#2c2c2c; --menushadowhover:none;
+	/* Menu Button Styling */ --buttonbg:rgba(61, 72, 73, 0.3); --buttoncolor:#ffffff; --buttonbghover:#ffffff; --buttoncolorhover:#2c2c2c; --buttonbgon:#bcbdbf; --buttoncoloron:#2c2c2c; --buttonbgoff:rgba(0, 0, 0, 0.3); --buttoncoloroff:#a4a4a4;
+	/* Menu Box Styling */ --imagebasebg:rgba(0, 0, 0, 0.2); --targetbasebgsize:auto 52%; --targetreqsbg:#bdbdbd; --targetreqsbg:#bdbdbd; --targetreqscolor:#404040; --objbg:#bdbdbd; --objcolor:#292929;
+							--targetreqsshadow:none; --targetintelshadow:none;
+	/* Nameplate Styling */ --nameplatebg:#404040; --nameplatesmallcolor:#ffffff; --nameplatebigcolor:#ffffff; --nameplatebghover:transparent; --nameplatecolorhover:#ffffff; --lockbg:#662428; --lockcolor:#ffffff;
+							--welcomenameplatebg:transparent; --welcomenameplatecolor:#ffffff; --welcomenameplateshadow:0 0 6px #000000, 0 0 2px #000000, 0 0 2px #000000, 0 0 1px #000000, 0 0 1px #000000, 0 0 1px #000000;
+							--mapnameplatebg:transparent; --mapnameplatesmallcolor:#ffffff; --mapnameplatebigcolor:#ffffff; --mapnameplateshadow:0 0 6px #000000, 0 0 2px #000000, 0 0 2px #000000, 0 0 1px #000000, 0 0 1px #000000, 0 0 1px #000000;
+	/* Settings Styling */ --settingbg:rgba(255, 255, 255, 0.2); --settingcolor:#ffffff; --settingshadow:none; --settingbghover:#ffffff; --settingcolorhover:#2c2c2c; --settingshadowhover:none; --settingbgon:#bdbdbd; --settingcoloron:#2c2c2c; --settingshadowon:none; --settingdesccolor:#ffffff; --settingdescshadow:none;
+	/* Scrollbar Styling */ --scrollbase:#590c12; --scrollpip:#df0c12; --scrollcolor:#000000;
+	/* Footer Styling */ --footercolor:#ffffff; --footershadow:0 0 3px #000000; --footermobilebg:#000000;
+	/* Popup Styling */ --shadowbg:rgba(0,0,0,0.7); --popupheaderbg:#580d12; --popupheadercolor:#ffffff; --popupbg:#d2d2d2; --popupcolor:#2c2c2c; --popupbuttonbg:#777777; --popupbuttoncolor:#ffffff; --popupbuttonbghover:#ebebeb; --popupbuttoncolorhover:#2c2c2c; --textareaborder:1px dashed #2c2c2c; --textareabg:#d2d2d2; --textareacolor:#2c2c2c;
+	/* Save Button */ --savebuttonbg:rgba(61, 72, 73, 0.3); --savebuttoncolor:#ffffff; --savebuttonbghover:#ffffff; --savebuttoncolorhover:#2c2c2c; --savebuttonbgoff:rgba(0, 0, 0, 0.3); --savebuttoncoloroff:#a4a4a4;
+	/* Images */
+	--mission:url("../img/general/h1/mission-frame.png");
+	--arrowleft:url("../img/general/h1/arrow-left.png");
+	--arrowright:url("../img/general/h1/arrow-right.png");
+	--roulette:url("../img/general/h1/roulette-frame.png");
+	--roulettehover:url("../img/general/h1/roulette-full.png");
+	--location:url("../img/general/h1/locations-frame.png");
+	--locationhover:url("../img/general/h1/locations-full.png");
+	--options:url("../img/general/h1/settings-frame.png");
+	--optionshover:url("../img/general/h1/settings-full.png");
+	--about:url("../img/general/h1/about-frame.png");
+	--abouthover:url("../img/general/h1/about-full.png");
+	--dotlight:url("../img/general/h1/dot-light.png");
+	--dotdark:url("../img/general/h1/dot-dark.png");
+	--dotmid:url("../img/general/h1/dot-mid.png");
+	--objective:url("../img/general/h1/objective-frame.png");
+	--objectivehover:url("../img/general/h1/objective-full.png");
+	--objectiveon:url("../img/general/h1/objective-full.png");
+	--objectiveoff:url("../img/general/h1/objective-lframe.png");
+	--complication:url("../img/general/h1/complication-frame.png");
+	--complicationhover:url("../img/general/h1/complication-full.png");
+	--complicationon:url("../img/general/h1/complication-full.png");
+	--complicationoff:url("../img/general/h1/complication-lframe.png");
+	--challenge:url("../img/general/h1/challenge-frame.png");
+	--challengehover:url("../img/general/h1/challenge-full.png");
+	--challengeon:url("../img/general/h1/challenge-full.png");
+	--challengeoff:url("../img/general/h1/challenge-lframe.png");
+	--issue:url("../img/general/h1/target-frame.png");
+	--issuehover:url("../img/general/h1/target-full.png");
+	--list:url("../img/general/h1/arrow-right-dfull.png");
+	--arrowleftnameplate:url("../img/general/h1/arrow-left-frame.png");
+	--arrowdownrightnameplate:url("../img/general/h1/arrow-downright-frame.png");
+	--entry:url("../img/general/h1/entry-frame.png");
+	--exit:url("../img/general/h1/exit-frame.png");
+	--method:url("../img/general/h1/method-dfull.png");
+	--disguise:url("../img/general/h1/disguise-dfull.png");
+	--intel:url("../img/general/h1/intel-dfull.png");
+	--target:url("../img/general/h1/target-frame.png");
+	--objectiveex:url("../img/general/h1/objective-frame.png");
+	--complicationex:url("../img/general/h1/complication-frame.png");
+	--restriction:url("../img/general/h1/restriction-frame.png");
+	--time:url("../img/general/h1/time-frame.png");
+	--rating:url("../img/general/h1/rating-frame.png");
+	--casual:url("../img/general/h1/difficulty-1-frame.png");
+	--pro:url("../img/general/h1/difficulty-2-frame.png");
+	--master:url("../img/general/h1/difficulty-3-frame.png");
+	--xed:url("../img/general/h1/xed-frame.png");
+	--xedhover:url("../img/general/h1/xed-full.png");
+	--checked:url("../img/general/h1/checked-frame.png");
+	--checkedhover:url("../img/general/h1/checked-full.png");
+	--randomall:url("../img/general/h1/caution-frame.png");
+	--randomallhover:url("../img/general/h1/caution-full.png");
+	--randomallon:url("../img/general/h1/caution-full.png");
+	--h1:url("../img/general/h1/h1-frame.png");
+	--h1hover:url("../img/general/h1/h1-full.png");
+	--h1on:url("../img/general/h1/h1-full.png");
+	--h1dlc:url("../img/general/h1/h1p-frame.png");
+	--h1dlchover:url("../img/general/h1/h1p-full.png");
+	--h1dlcon:url("../img/general/h1/h1p-full.png");
+	--h2:url("../img/general/h1/h2-frame.png");
+	--h2hover:url("../img/general/h1/h2-full.png");
+	--h2on:url("../img/general/h1/h2-full.png");
+	--h2dlc:url("../img/general/h1/h2p-frame.png");
+	--h2dlchover:url("../img/general/h1/h2p-full.png");
+	--h2dlcon:url("../img/general/h1/h2p-full.png");
+	--h3:url("../img/general/h1/h3-frame.png");
+	--h3hover:url("../img/general/h1/h3-full.png");
+	--h3on:url("../img/general/h1/h3-full.png");
+	--h3off:url("../img/general/h1/h3-lframe.png");
+	--h3dlc:url("../img/general/h1/h3p-frame.png");
+	--h3dlchover:url("../img/general/h1/h3p-full.png");
+	--h3dlcon:url("../img/general/h1/h3p-full.png");
+	--h3dlcoff:url("../img/general/h1/h3p-lframe.png");
+	--lock:url("../img/general/h1/lock-frame.png");
+	--lockstripes:url("../img/general/h1/stripes.png");
+	--settingtheme:url("../img/general/h1/disguise-frame.png");
+	--settingthemehover:url("../img/general/h1/disguise-full.png");
+	--settingthemeon:url("../img/general/h1/disguise-full.png");
+	--settingroulette:url("../img/general/h1/roulette-frame.png");
+	--settingroulettehover:url("../img/general/h1/roulette-full.png");
+	--settingrouletteon:url("../img/general/h1/roulette-full.png");
+	--settingkills:url("../img/general/h1/assassination-frame.png");
+	--settingkillshover:url("../img/general/h1/assassination-full.png");
+	--settingkillson:url("../img/general/h1/assassination-full.png");
+	--settingextra:url("../img/general/h1/fold-frame.png");
+	--settingextrahover:url("../img/general/h1/fold-full.png");
+	--settingextraon:url("../img/general/h1/fold-full.png");
+	--settingchallenges:url("../img/general/h1/challenge-frame.png");
+	--settingchallengeshover:url("../img/general/h1/challenge-full.png");
+	--settingchallengeson:url("../img/general/h1/challenge-full.png");
+	--info:url("../img/general/h1/info-zframe.png");
+	--infomobile:url("../img/general/h1/info-frame.png");
+	--save:url("../img/general/h1/save-full.png");
+	--savehover:url("../img/general/h1/save-dfull.png");
+	--saveoff:url("../img/general/h1/save-lframe.png");
+	--buttonsave:url("../img/general/h1/arrow-right-frame.png");
+	--buttonsaveon:url("../img/general/h1/arrow-right-full.png");
+	--buttonclose:url("../img/general/h1/xed-frame.png");
+	--buttoncloseon:url("../img/general/h1/xed-dfull.png");
+}
+html.h1gotytheme { /* Variables for Hitman 1 GOTY Styled Theme & Images */
+	/* Background */
+	--regularbg:url("../img/general/h1goty/background.webp");
+	--regularbggradient:linear-gradient(to bottom, rgba(210,210,210,1) 0%, rgba(210,210,210,0.8) 30%, rgba(210,210,210,0.4) 100%);
+	--regularbgcolor:#aaaaaa;
+	--missionbgfilter: grayscale(1) contrast(0.33) brightness(1.3);
+	--missionbggradient:linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(210,210,210,0.4) 30%, rgba(210,210,210,0) 100%);
+	--missionbgopacity:1;
+	/* Regular Styling */ --normalshadow:none; --normalcolor:#2c2c2c; --uppercase:none;
+	/* Link Styling */	--linkcolor:#ffffff; --linkhover:#2c2c2c; --linkshadow:none; --linkhovershadow:none;
+	/* Input Range Styling */ --rangebase:#000000; --rangefill:#424242; --rangepip:#d4d4d4;
+	/* Mission Location Styling */ --missionlocationborder:2px dotted #464646; --missionlocationcolor:#929292;
+	/* Menu Bar Styling */ --menustripbg:transparent; --menustripborder:1px solid #464646; --menucolor:#464646; --menushadow:none; --menustriphover:#464646; --menucolorhover:#d2d2d2; --menushadowhover:none;
+	/* Menu Button Styling */ --buttonbg:#464646; --buttoncolor:#d2d2d2; --buttonbghover:#ffffff; --buttoncolorhover:#464646; --buttonbgon:#d2d2d2; --buttoncoloron:#464646; --buttonbgoff:rgba(0, 0, 0, 0.3); --buttoncoloroff:#a4a4a4;
+	/* Menu Box Styling */ --imagebasebg:rgba(0, 0, 0, 0.2); --targetbasebgsize:auto 52%; --targetreqsbg:#bdbdbd; --targetreqscolor:#404040; --objbg:#bdbdbd; --objcolor:#292929;
+							--targetreqsshadow:none; --targetintelshadow:none;
+	/* Nameplate Styling */ --nameplatebg:#464646; --nameplatesmallcolor:#d2d2d2; --nameplatebigcolor:#d2d2d2; --nameplatebghover:transparent; --nameplatecolorhover:#ffffff; --lockbg:#e3e3e3; --lockcolor:#a4a4a4;
+							--welcomenameplatebg:transparent; --welcomenameplatecolor:#ffffff; --welcomenameplateshadow:0 0 6px #000000, 0 0 2px #000000, 0 0 2px #000000, 0 0 1px #000000, 0 0 1px #000000, 0 0 1px #000000;
+							--mapnameplatebg:transparent; --mapnameplatesmallcolor:#ffffff; --mapnameplatebigcolor:#ffffff; --mapnameplateshadow:0 0 6px #000000, 0 0 2px #000000, 0 0 2px #000000, 0 0 1px #000000, 0 0 1px #000000, 0 0 1px #000000;
+	/* Settings Styling */ --settingbg:transparent; --settingcolor:#464646; --settingshadow:none; --settingbghover:#464646; --settingcolorhover:#d2d2d2; --settingshadowhover:none; --settingbgon:rgba(0, 0, 0, 0.2); --settingcoloron:#d2d2d2; --settingshadowon:none; --settingdesccolor:#464646; --settingdescshadow:none;
+	/* Scrollbar Styling */ --scrollbase:#464646; --scrollpip:#ffffff; --scrollcolor:#000000;
+	/* Footer Styling */ --footercolor:#464646; --footershadow:none; --footermobilebg:#aaaaaa;
+	/* Popup Styling */ --shadowbg:rgba(0,0,0,0.7); --popupheaderbg:#d2d2d2; --popupheadercolor:#464646; --popupbg:#d2d2d2; --popupcolor:#464646; --popupbuttonbg:#464646; --popupbuttoncolor:#d2d2d2; --popupbuttonbghover:#d2d2d2; --popupbuttoncolorhover:#464646; --textareaborder:1px solid #464646; --textareabg:#d2d2d2; --textareacolor:#464646;
+	/* Save Button */ --savebuttonbg:#464646; --savebuttoncolor:#d2d2d2; --savebuttonbghover:#ffffff; --savebuttoncolorhover:#464646; --savebuttonbgoff:rgba(0, 0, 0, 0.3); --savebuttoncoloroff:#aaaaaa;
+	/* Images */
+	--mission:url("../img/general/h1goty/mission-dfull.png");
+	--arrowleft:url("../img/general/h1goty/arrow-left.png");
+	--arrowright:url("../img/general/h1goty/arrow-right.png");
+	--roulette:url("../img/general/h1goty/roulette-dframe.png");
+	--roulettehover:url("../img/general/h1goty/roulette-lfull.png");
+	--location:url("../img/general/h1goty/locations-dframe.png");
+	--locationhover:url("../img/general/h1goty/locations-lfull.png");
+	--options:url("../img/general/h1goty/settings-dframe.png");
+	--optionshover:url("../img/general/h1goty/settings-lfull.png");
+	--about:url("../img/general/h1goty/about-dframe.png");
+	--abouthover:url("../img/general/h1goty/about-lfull.png");
+	--dotlight:url("../img/general/h1goty/dot-light.png");
+	--dotdark:url("../img/general/h1goty/dot-dark.png");
+	--dotmid:url("../img/general/h1goty/dot-mid.png");
+	--objective:url("../img/general/h1goty/objective-lfull.png");
+	--objectivehover:url("../img/general/h1goty/objective-dframe.png");
+	--objectiveon:url("../img/general/h1goty/objective-dframe.png");
+	--objectiveoff:url("../img/general/h1goty/objective-lframe.png");
+	--complication:url("../img/general/h1goty/complication-lfull.png");
+	--complicationhover:url("../img/general/h1goty/complication-dframe.png");
+	--complicationon:url("../img/general/h1goty/complication-dframe.png");
+	--complicationoff:url("../img/general/h1goty/complication-lframe.png");
+	--challenge:url("../img/general/h1goty/challenge-lfull.png");
+	--challengehover:url("../img/general/h1goty/challenge-dframe.png");
+	--challengeon:url("../img/general/h1goty/challenge-dframe.png");
+	--challengeoff:url("../img/general/h1goty/challenge-lframe.png");
+	--issue:url("../img/general/h1goty/target-lfull.png");
+	--issuehover:url("../img/general/h1goty/target-dframe.png");
+	--list:url("../img/general/h1goty/arrow-right-dfull.png");
+	--arrowleftnameplate:url("../img/general/h1goty/arrow-left-frame.png");
+	--arrowdownrightnameplate:url("../img/general/h1goty/arrow-downright-frame.png");
+	--entry:url("../img/general/h1goty/entry-lframe.png");
+	--exit:url("../img/general/h1goty/exit-lframe.png");
+	--method:url("../img/general/h1goty/method-dfull.png");
+	--disguise:url("../img/general/h1goty/disguise-dfull.png");
+	--intel:url("../img/general/h1goty/intel-dfull.png");
+	--target:url("../img/general/h1goty/target-lframe.png");
+	--objectiveex:url("../img/general/h1goty/objective-frame.png");
+	--complicationex:url("../img/general/h1goty/complication-frame.png");
+	--restriction:url("../img/general/h1goty/restriction-lframe.png");
+	--time:url("../img/general/h1goty/time-lframe.png");
+	--rating:url("../img/general/h1goty/rating-lframe.png");
+	--casual:url("../img/general/h1goty/difficulty-1-lframe.png");
+	--pro:url("../img/general/h1goty/difficulty-2-lframe.png");
+	--master:url("../img/general/h1goty/difficulty-3-lframe.png");
+	--xed:url("../img/general/h1goty/xed-frame.png");
+	--xedhover:url("../img/general/h1goty/xed-full.png");
+	--checked:url("../img/general/h1goty/checked-frame.png");
+	--checkedhover:url("../img/general/h1goty/checked-full.png");
+	--randomall:url("../img/general/h1goty/caution-lfull.png");
+	--randomallhover:url("../img/general/h1goty/caution-dframe.png");
+	--randomallon:url("../img/general/h1goty/caution-dframe.png");
+	--h1:url("../img/general/h1goty/h1-lfull.png");
+	--h1hover:url("../img/general/h1goty/h1-dframe.png");
+	--h1on:url("../img/general/h1goty/h1-dframe.png");
+	--h1dlc:url("../img/general/h1goty/h1p-lfull.png");
+	--h1dlchover:url("../img/general/h1goty/h1p-dframe.png");
+	--h1dlcon:url("../img/general/h1goty/h1p-dframe.png");
+	--h2:url("../img/general/h1goty/h2-lfull.png");
+	--h2hover:url("../img/general/h1goty/h2-dframe.png");
+	--h2on:url("../img/general/h1goty/h2-dframe.png");
+	--h2dlc:url("../img/general/h1goty/h2p-lfull.png");
+	--h2dlchover:url("../img/general/h1goty/h2p-dframe.png");
+	--h2dlcon:url("../img/general/h1goty/h2p-dframe.png");
+	--h3:url("../img/general/h1goty/h3-lfull.png");
+	--h3hover:url("../img/general/h1goty/h3-dframe.png");
+	--h3on:url("../img/general/h1goty/h3-dframe.png");
+	--h3off:url("../img/general/h1goty/h3-lframe.png");/**/
+	--h3dlc:url("../img/general/h1goty/h3p-lfull.png");
+	--h3dlchover:url("../img/general/h1goty/h3p-dframe.png");
+	--h3dlcon:url("../img/general/h1goty/h3p-dframe.png");
+	--h3dlcoff:url("../img/general/h1goty/h3p-lframe.png"); /**/
+	--lock:url("../img/general/h1goty/lock-lframe.png");
+	--lockstripes:url("../img/general/h1goty/stripes.png");
+	--settingtheme:url("../img/general/h1goty/disguise-dframe.png");
+	--settingthemehover:url("../img/general/h1goty/disguise-lfull.png");
+	--settingthemeon:url("../img/general/h1goty/disguise-lfull.png");
+	--settingroulette:url("../img/general/h1goty/roulette-dframe.png");
+	--settingroulettehover:url("../img/general/h1goty/roulette-lfull.png");
+	--settingrouletteon:url("../img/general/h1goty/roulette-lfull.png");
+	--settingkills:url("../img/general/h1goty/assassination-dframe.png");
+	--settingkillshover:url("../img/general/h1goty/assassination-lfull.png");
+	--settingkillson:url("../img/general/h1goty/assassination-lfull.png");
+	--settingextra:url("../img/general/h1goty/fold-dframe.png");
+	--settingextrahover:url("../img/general/h1goty/fold-lfull.png");
+	--settingextraon:url("../img/general/h1goty/fold-lfull.png");
+	--settingchallenges:url("../img/general/h1goty/challenge-dframe.png");
+	--settingchallengeshover:url("../img/general/h1goty/challenge-lfull.png");
+	--settingchallengeson:url("../img/general/h1goty/challenge-lfull.png");
+	--info:url("../img/general/h1goty/info-zdframe.png");
+	--infomobile:url("../img/general/h1goty/info-dframe.png");
+	--save:url("../img/general/h1goty/save-lfull.png");
+	--savehover:url("../img/general/h1goty/save-dframe.png");
+	--saveoff:url("../img/general/h1goty/save-lframe.png");
+	--buttonsave:url("../img/general/h1goty/arrow-right-lfull.png");
+	--buttonsaveon:url("../img/general/h1goty/arrow-right-dframe.png");
+	--buttonclose:url("../img/general/h1goty/xed-lfull.png");
+	--buttoncloseon:url("../img/general/h1goty/xed-dframe.png");
+}
+html.h2theme, html { /* Variables for Hitman 2 Styled Theme & Images */
+	/* Background */
+	--regularbg:url("../img/general/h2/background.webp");
+	--regularbggradient:linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 15%, rgba(0,0,0,0) 71%, rgba(0,0,0,0.4) 100%);
+	--regularbgcolor:#667077;
+	--missionbgfilter:none;
+	--missionbggradient:linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 15%, rgba(0,0,0,0) 71%, rgba(0,0,0,0.4) 100%);
+	--missionbgopacity:1;
+	/* Regular Styling */ --normalshadow:0 0 3px #000000; --normalcolor:#ffffff; --uppercase:uppercase;
+	/* Link Styling */	--linkcolor:#ff0044; --linkhover:#ffffff; --linkshadow:0 0 3px #000, 0 0 3px #000; --linkhovershadow:none;
+	/* Mission Location Styling */ --missionlocationborder:none; --missionlocationcolor:#ffffff;
+	/* Input Range Styling */ --rangebase:#000000; --rangefill:#424242; --rangepip:#d4d4d4;
+	/* Menu Bar Styling */ --menustrip:transparent; --menustripborder:transparent; --menucolor:#ffffff; --menushadow:0 0 3px #000000; --menustriphover:#ff0044; --menucolorhover:#ffffff; --menushadowhover:none;
+	/* Menu Button Styling */ --buttonbg:#ffffff; --buttoncolor:#292929; --buttonbghover:#ff0044; --buttoncolorhover:#ffffff; --buttonbgon:#9a9a9a; --buttoncoloron:#d4d4d4; --buttonbgoff:#e3e3e3; --buttoncoloroff:#a4a4a4;
+	/* Menu Box Styling */ --imagebasebg:rgba(0, 0, 0, 0.2); --targetbasebgsize:auto 100%; --targetreqsbg:transparent; --targetreqscolor:#ffffff; --objbg:#eeeced; --objcolor:#292929;
+							--targetreqsshadow:0 0 6px #000000, 0 0 2px #000000, 0 0 1px #000000, 0 0 1px #000000, 0 0 1px #000000; --targetintelshadow:0 0 6px #000000, 0 0 2px #000000, 0 0 2px #000000, 0 0 1px #000000, 0 0 1px #000000, 0 0 1px #000000;
+	/* Nameplate Styling */ --nameplatebg:#ffffff; --nameplatesmallcolor:#ff0044; --nameplatebigcolor:#292929; --nameplatebghover:#ff0044; --nameplatecolorhover:#ffffff; --lockbg:#e3e3e3; --lockcolor:#a4a4a4;
+							--welcomenameplatebg:#ffffff; --welcomenameplatecolor:inherit; --welcomenameplateshadow:none;
+							--mapnameplatebg:#ffffff; --mapnameplatesmallcolor:#ff0044; --mapnameplatebigcolor:#292929; --mapnameplateshadow:none;
+	/* Settings Styling */ --settingbg:transparent; --settingcolor:#ffffff; --settingshadow:0 0 3px #000000; --settingbghover:#ff0044; --settingcolorhover:#ffffff; --settingshadowhover:none; --settingbgon:#9a9a9a; --settingcoloron:#d4d4d4; --settingshadowon:none; --settingdesccolor:#ffffff; --settingdescshadow:0 0 3px #000000;
+	/* Scrollbar Styling */ --scrollbase:#ffffff; --scrollpip:#ff0044; --scrollcolor:#000000;
+	/* Footer Styling */ --footercolor:#ffffff; --footershadow:0 0 3px #000000; --footermobilebg:#000000;
+	/* Popup Styling */ --shadowbg:rgba(0,0,0,0.7); --popupheaderbg:#ffffff; --popupheadercolor:#000000; --popupbg:#ffffff; --popupcolor:#000000; --popupbuttonbg:#ffffff; --popupbuttoncolor:#000000; --popupbuttonbghover:#ff0044; --popupbuttoncolorhover:#ffffff; --textareaborder:1px solid #AAAAAA; --textareabg:#ffffff; --textareacolor:#000000;
+	/* Save Button */ --savebuttonbg:#ffffff; --savebuttoncolor:#000000; --savebuttonbghover:#ff0044; --savebuttoncolorhover:#ffffff; --savebuttonbgoff:#e3e3e3; --savebuttoncoloroff:#a4a4a4;
+	/* Images */
+	--mission:url("../img/general/h2/mission-szframe.png");
+	--arrowleft:url("../img/general/h2/arrow-left.png");
+	--arrowright:url("../img/general/h2/arrow-right.png");
+	--roulette:url("../img/general/h2/roulette-szframe.png");
+	--roulettehover:url("../img/general/h2/roulette-zfull.png");
+	--location:url("../img/general/h2/locations-szframe.png");
+	--locationhover:url("../img/general/h2/locations-zfull.png");
+	--options:url("../img/general/h2/settings-szframe.png");
+	--optionshover:url("../img/general/h2/settings-zfull.png");
+	--about:url("../img/general/h2/about-szframe.png");
+	--abouthover:url("../img/general/h2/about-zfull.png");
+	--dotlight:none; --dotdark:none; --dotmid:none;
+	--objective:url("../img/general/h2/objective-dframe.png");
+	--objectivehover:url("../img/general/h2/objective-full.png");
+	--objectiveon:url("../img/general/h2/objective-dfull.png");
+	--objectiveoff:url("../img/general/h2/objective-lframe.png");
+	--complication:url("../img/general/h2/complication-dframe.png");
+	--complicationhover:url("../img/general/h2/complication-full.png");
+	--complicationon:url("../img/general/h2/complication-dfull.png");
+	--complicationoff:url("../img/general/h2/complication-lframe.png");
+	--challenge:url("../img/general/h2/challenge-dframe.png");
+	--challengehover:url("../img/general/h2/challenge-full.png");
+	--challengeon:url("../img/general/h2/challenge-dfull.png");
+	--challengeoff:url("../img/general/h2/challenge-lframe.png");
+	--issue:url("../img/general/h2/target-dframe.png");
+	--issuehover:url("../img/general/h2/target-full.png");
+	--list:url("../img/general/h2/arrow-right-dframe.png");
+	--arrowleftnameplate:url("../img/general/h2/arrow-left-dframe.png");
+	--arrowdownrightnameplate:url("../img/general/h2/arrow-downright-dframe.png");
+	--entry:url("../img/general/h2/entry-dframe.png");
+	--exit:url("../img/general/h2/exit-dframe.png");
+	--method:url("../img/general/h2/method-sfull.png");
+	--disguise:url("../img/general/h2/disguise-sfull.png");
+	--intel:url("../img/general/h2/intel-sfull.png");
+	--target:url("../img/general/h2/target-dframe.png");
+	--objectiveex:url("../img/general/h2/objective-dframe.png");
+	--complicationex:url("../img/general/h2/complication-dframe.png");
+	--restriction:url("../img/general/h2/restriction-dframe.png");
+	--time:url("../img/general/h2/time-dframe.png");
+	--rating:url("../img/general/h2/rating-dframe.png");
+	--casual:url("../img/general/h2/difficulty-1-dframe.png");
+	--pro:url("../img/general/h2/difficulty-2-dframe.png");
+	--master:url("../img/general/h2/difficulty-3-dframe.png");
+	--xed:url("../img/general/h2/xed-dframe.png");
+	--xedhover:url("../img/general/h2/xed-full.png");
+	--checked:url("../img/general/h2/checked-dframe.png");
+	--checkedhover:url("../img/general/h2/checked-full.png");
+	--randomall:url("../img/general/h2/caution-dframe.png");
+	--randomallhover:url("../img/general/h2/caution-full.png");
+	--randomallon:url("../img/general/h2/caution-dfull.png");
+	--h1:url("../img/general/h2/h1-dframe.png");
+	--h1hover:url("../img/general/h2/h1-full.png");
+	--h1on:url("../img/general/h2/h1-dfull.png");
+	--h1dlc:url("../img/general/h2/h1p-dframe.png");
+	--h1dlchover:url("../img/general/h2/h1p-full.png");
+	--h1dlcon:url("../img/general/h2/h1p-dfull.png");
+	--h2:url("../img/general/h2/h2-dframe.png");
+	--h2hover:url("../img/general/h2/h2-full.png");
+	--h2on:url("../img/general/h2/h2-dfull.png");
+	--h2dlc:url("../img/general/h2/h2p-dframe.png");
+	--h2dlchover:url("../img/general/h2/h2p-full.png");
+	--h2dlcon:url("../img/general/h2/h2p-dfull.png");
+	--h3:url("../img/general/h2/h3-dframe.png");
+	--h3hover:url("../img/general/h2/h3-full.png");
+	--h3on:url("../img/general/h2/h3-dfull.png");
+	--h3off:url("../img/general/h2/h3-lframe.png");
+	--h3dlc:url("../img/general/h2/h3p-dframe.png");
+	--h3dlchover:url("../img/general/h2/h3p-full.png");
+	--h3dlcon:url("../img/general/h2/h3p-dfull.png");
+	--h3dlcoff:url("../img/general/h2/h3p-lframe.png");
+	--lock:url("../img/general/h2/lock-lframe.png");
+	--lockstripes:url("../img/general/h2/stripes.png");
+	--settingtheme:url("../img/general/h2/disguise-frame.png");
+	--settingthemehover:url("../img/general/h2/disguise-full.png");
+	--settingthemeon:url("../img/general/h2/disguise-dfull.png");
+	--settingroulette:url("../img/general/h2/roulette-frame.png");
+	--settingroulettehover:url("../img/general/h2/roulette-full.png");
+	--settingrouletteon:url("../img/general/h2/roulette-dfull.png");
+	--settingkills:url("../img/general/h2/assassination-frame.png");
+	--settingkillshover:url("../img/general/h2/assassination-full.png");
+	--settingkillson:url("../img/general/h2/assassination-dfull.png");
+	--settingextra:url("../img/general/h2/fold-frame.png");
+	--settingextrahover:url("../img/general/h2/fold-full.png");
+	--settingextraon:url("../img/general/h2/fold-dfull.png");
+	--settingchallenges:url("../img/general/h2/challenge-frame.png");
+	--settingchallengeshover:url("../img/general/h2/challenge-full.png");
+	--settingchallengeson:url("../img/general/h2/challenge-dfull.png");
+	--info:url("../img/general/h2/info-sfull.png");
+	--infomobile:url("../img/general/h2/info-full.png");
+	--save:url("../img/general/h2/save-dfull.png");
+	--savehover:url("../img/general/h2/save-full.png");
+	--saveoff:url("../img/general/h2/save-lframe.png");
+	--buttonsave:url("../img/general/h2/arrow-right-dframe.png");
+	--buttonsaveon:url("../img/general/h2/arrow-right-full.png");
+	--buttonclose:url("../img/general/h2/xed-dframe.png");
+	--buttoncloseon:url("../img/general/h2/xed-full.png");
+}
+
+body {
+	background:var(--regularbggradient), var(--regularbg);
+	background-color:var(--regularbgcolor);
+	background-repeat:no-repeat;
+	background-position:center top;
+	background-size:100% 100%;
+	-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;-o-user-select:none;user-select:none;
+	display: flex;
+	flex-direction: column;
+}
+body.hide { background-image:none !important; }
+#background {
+	position:absolute;
+	top:0; right:0; bottom:0; left:0;
+	z-index:-47;
+	background-color:transparent;
+	background-repeat:no-repeat;
+	background-position:center top;
+	background-size:100% 100%;
+	opacity:var(--missionbgopacity);
+}
+#background.hide {
+	 background-image:none !important;
+}
+@media only screen and (max-width: 808px) {	body, #background { background-image:none !important; } }
+/*@media only screen and (max-width: 808px) {	body { background-image:none !important; } }*/
+* {	font-family:'Roboto',helvetica,arial,sans-serif; }
+a {
+	color:var(--linkcolor);
+	font-weight:900;
+	text-decoration:none;
+	text-shadow:var(--linkshadow);
+}
+a:hover {
+	color:var(--linkhover);
+	text-shadow:var(--linkhovershadow);
+}
+p { margin:0px; }
+button { cursor:pointer; border:none; padding:0; }
+button:active, button:focus, select:active, select:focus { outline:0; }
+button::-moz-focus-inner { border: 0; }
+input[type="checkbox"] { position: absolute; left: 0; opacity: 0; display: none; }
+input[type=range] {
+	background-color: transparent;
+	-webkit-appearance: none;
+	cursor: pointer;
+	width: 100px;
+}
+input[type=range]:focus { outline: none; }
+input[type=range]::-webkit-slider-runnable-track {
+	height: 10px;
+	background: var(--rangefill);
+	border-radius: 10px;
+	border: 1px solid var(--rangebase);
+}
+input[type=range]::-webkit-slider-thumb {
+	border: 1px solid var(--rangebase);
+	height: 10px;
+	width: 10px;
+	border-radius: 10px;
+	background: var(--rangepip);
+	-webkit-appearance: none;
+	margin-top: -1px;
+}
+input[type=range]::-moz-range-progress {
+	background: var(--rangefill);
+	height:10px;
+	border-radius: 10px;
+}
+input[type=range]::-moz-range-track {
+	height: 10px;
+	background: var(--rangebase);
+	border-radius: 10px;
+	border: 1px solid var(--rangebase);
+}
+input[type=range]::-moz-range-thumb {
+	border: 1px solid var(--rangebase);
+	height: 10px;
+	width: 10px;
+	border-radius: 10px;
+	background: var(--rangepip);
+}
+input[type=range]::-ms-track {
+	height: 10px;
+	background: transparent;
+	border-color: transparent;
+	color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+	background: var(--rangefill);
+	border: 1px solid var(--rangebase);
+	border-radius: 20px;
+}
+input[type=range]::-ms-fill-upper {
+	background: var(--rangebase);
+	border: 1px solid var(--rangebase);
+	border-radius: 20px;
+}
+input[type=range]::-ms-thumb {
+	border: 1px solid var(--rangebase);
+	width: 10px;
+	border-radius: 10px;
+	background: var(--rangepip);
+	height: 10px;
+}
+
+#header {
+	height:9vh; max-height:97px; min-height:55px;
+	display:flex;
+	text-shadow:var(--normalshadow);
+}
+@media only screen and (max-width: 808px) {
+	#header { display:none; }
+}
+#undo, #map, #redo {
+	padding-bottom:10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+}
+@media only screen and (max-height: 700px) {
+	#undo, #map, #redo { padding-bottom:5px; }
+}
+#header.off { opacity:0; }
+#map {
+	min-width:266px;
+	color:var(--missionlocationcolor);
+	padding:0 10px 10px 70px;
+}
+#map.on {
+	border-left:var(--missionlocationborder);
+	border-right:var(--missionlocationborder);
+}
+@media only screen and (max-width: 1470px) {
+	#map.on { border:none !important; }
+}
+#map.on, #map2.on { background:transparent var(--mission) no-repeat left 13px bottom 10px / 46px; }
+#map_name { margin-bottom:2px; }
+#map_place, #map_place2 {
+	font-size:15px;
+	font-weight:400;
+	line-height:1;
+	cursor: default;
+	text-transform:var(--uppercase);
+}
+#map_name, #map_name2 {
+	font-size:24px;
+	font-weight:700;
+	line-height:1;
+	cursor:default;
+	text-transform:var(--uppercase);
+}
+.historybtn {
+	display:inline;
+	font-size:15px;
+    text-shadow:var(--normalshadow);
+	padding:0;
+	border:none;
+	color:var(--missionlocationcolor);
+}
+.historybtn[disabled] { opacity:0; }
+#undo, #redo { width:70px; }
+#undobtn, #undobtn2 {
+	background:transparent var(--arrowleft) no-repeat left center / 22px; 
+	padding-left:25px;
+	margin-left:5px;
+}
+#redo, #redo2 {	text-align:right; }
+#redobtn, #redobtn2 {
+	background:transparent var(--arrowright) no-repeat right center / 22px;
+	padding-right:25px;
+	margin-right:5px;
+}
+#headermobile, #headermobile.off { display:none; }
+@media only screen and (max-width: 808px) {
+	#headermobile {
+		height:7vh;
+		min-height:39px;
+		display:flex;
+		text-shadow:var(--normalshadow);
+		white-space:nowrap;
+	}
+	#headermobile.off {
+		display:flex;
+		height:1vh;
+		min-height:1vh;
+		opacity:0;
+	}
+	#undo2, #map2, #redo2 {
+		align-self: stretch;
+		color:var(--normalcolor);
+	}
+	#undo2, #redo2 { width:55px; }
+	#undo2 button, #redo2 button {
+		width:80%;
+		height:7vh;
+		min-height:39px;
+		background-size:35px;
+	}
+	#headermobile.off div { display:none; } 
+	#map2 {
+		display:flex;
+		flex-direction:column;
+		justify-content:center;
+		flex-wrap:wrap;
+		flex-grow:1;
+	}
+}
+
+#menu {
+	height:14.5vh; max-height:157px; min-height:65px;
+}
+#menustrip {
+	width:100%;
+	background-color:var(--menustrip);
+	border-bottom:var(--menustripborder);
+	padding:0 70px;
+	display:flex;
+	flex-wrap:nowrap;
+}
+@media only screen and (max-width: 1470px) {
+	#menustrip { padding-left:0; }
+}
+#menu button {
+	width:350px;
+	height:65px;
+	color:var(--menucolor);
+	text-align:left;
+	text-transform:var(--uppercase);
+	font-size:20px;
+	font-weight:700;
+	padding-left:70px;
+	text-shadow:var(--menushadow);
+	background-color:transparent;
+	background-repeat:no-repeat;
+	background-position:left 18px center;
+	background-size:34px;
+
+}
+#menu button.on, #menu button:hover { 
+	text-shadow:var(--menushadowhover);
+	background-color:var(--menustriphover);
+	color:var(--menucolorhover);
+}
+@media only screen and (max-width: 808px) {
+	#menu { height:5vh; min-height:40px; }
+	#menu button {
+		width:12vw;
+		height:5vh; min-height:40px;
+		padding-left:0px;
+		background-position:center center;
+		color:transparent !important;
+		text-shadow:none !important;
+		line-height:0.9;
+		overflow:hidden;
+	}
+	#menu button.on {
+		width:64vw;
+		padding-left:50px;
+		background-position:left 10px center;
+		color:var(--menucolorhover) !important;
+	}
+}
+
+#roulette {	background-image:var(--roulette); }
+#roulette.on, button#roulette:hover { background-image:var(--roulettehover); }
+#missions { background-image:var(--location); }
+#missions.on, button#missions:hover { background-image:var(--locationhover); }
+#options { background-image:var(--options); }
+#options.on, button#options:hover { background-image:var(--optionshover); }
+#about { background-image:var(--about); }
+#about.on, button#about:hover { background-image:var(--abouthover); }
+
+#content {
+	height:61.5vh;
+	display:flex;
+	flex-direction:column;
+	align-items:stretch;
+	justify-content:flex-end;
+}
+@media only screen and (max-width: 808px) {
+	#content.med { height:67.5vh; }
+	#content.tall { height:89vh; }
+}
+#contract, #maps {
+	overflow-x:hidden;
+	scrollbar-color:transparent transparent;
+	height:525px !important;
+	display: grid;
+	grid-template-columns: repeat(25, 1fr);
+	grid-template-rows: 1fr;
+	grid-column-gap: 3px;
+	white-space:nowrap;
+}
+@-moz-document url-prefix() { 
+	#contract, #maps {
+		height:542px !important; /*525 + 17*/
+	}
+}
+.column, .column label {
+	width:350px;
+	height:100%;
+	display:flex;
+	flex-direction:column;
+	justify-content:flex-end;
+	align-items:stretch;
+}
+.side, .sidescroll { width:70px; }
+#intro.column { width: auto; }
+#travel:empty, div[id^='target']:empty, div[id^='target'][style='display: inline-block;']:empty, div[id^='objective']:empty, div[id^='complication']:empty, #restriction:empty, #timelimit:empty, #ratingget:empty, #diffget:empty, #challengesi:empty {
+	display:none !important;
+}
+#contract_submenu, #maps_submenu {
+	display:grid;
+	grid-template-columns:1fr;
+	grid-template-rows:repeat(4, 1fr);
+	grid-row-gap:3px;
+}
+@media only screen and (max-width: 808px) {
+	#contract_submenu, #maps_submenu { display:none; }
+}
+#contract_submenu #subtitle, #maps_submenu #subtitle {
+    font-size:14px;
+    font-weight:400;
+    line-height:1;
+}
+#contract_submenu button, #contract_submenu #submenu_issue:active, #maps_submenu div {
+	background-color:var(--buttonbg);
+	background-repeat:no-repeat, repeat-y;
+	background-position:left 15px bottom 13px, left 60px center;
+	background-size:40px, 2px;
+	display:flex;
+	flex-direction:column;
+	justify-content:flex-end;
+	color:var(--buttoncolor);
+	font-size:20px;
+	font-weight:700;
+	text-transform:var(--uppercase);
+	text-align:left;
+	cursor:pointer;
+}
+#contract_submenu button:hover, #maps_submenu div:hover {
+	background-color:var(--buttonbghover);
+	color:var(--buttoncolorhover);
+}
+#contract_submenu button.on, #maps_submenu div.on {
+	background-color:var(--buttonbgon);
+	color:var(--buttoncoloron);
+	cursor:default;
+}
+#contract_submenu button[disabled], #maps_submenu div.off {
+	background-color:var(--buttonbgoff) !important;
+	color:var(--buttoncoloroff) !important;
+	cursor:default;
+}
+#contract_submenu button span { margin:28px 0 13px 65px; }
+#contract_submenu #submenu_issue span { margin-top:14px !important; }
+#submenu_obj, #subsubmenu_obj { background-image:var(--objective), var(--dotlight); }
+#submenu_obj:hover, #subsubmenu_obj:hover { background-image:var(--objectivehover), var(--dotdark); }
+#submenu_obj.on, #subsubmenu_obj.on { background-image:var(--objectiveon), var(--dotdark); }
+#submenu_obj[disabled], #subsubmenu_obj[disabled] { background-image:var(--objectiveoff), var(--dotmid); }
+#submenu_comp, #subsubmenu_comp { background-image:var(--complication), var(--dotlight); }
+#submenu_comp:hover, #subsubmenu_comp:hover { background-image:var(--complicationhover), var(--dotdark); }
+#submenu_comp.on, #subsubmenu_comp.on { background-image:var(--complicationon), var(--dotdark); }
+#submenu_comp[disabled], #subsubmenu_comp[disabled] { background-image:var(--complicationoff), var(--dotmid); }
+#submenu_chal, #subsubmenu_chal { background-image:var(--challenge), var(--dotlight); }
+#submenu_chal:hover, #subsubmenu_chal:hover { background-image:var(--challengehover), var(--dotdark); }
+#submenu_chal.on, #subsubmenu_chal.on { background-image:var(--challengeon), var(--dotdark); }
+#submenu_chal[disabled], #subsubmenu_chal[disabled] { background-image:var(--challengeoff), var(--dotmid); }
+#submenu_issue, #submenu_issue:active, #subsubmenu_issue, #subsubmenu_issue:active { background-image:var(--issue), var(--dotlight); }
+#submenu_issue:hover, #subsubmenu_issue:hover { background-image:var(--issuehover), var(--dotdark); }
+#logo, #logothin, #entry, #exit, #photo, #obj-image, #comp-image, #res-image, #time-image, #rating-image, div[id^="diff-image-"], #chall-image, #rand-all, #top, #bottom {
+    background-color:var(--imagebasebg);
+    background-repeat:no-repeat;
+    background-position:top center;
+    background-size:102%;
+	height:100%;
+	display:flex;
+	flex-direction:column;
+	justify-content:flex-end;
+	align-items:stretch;
+}
+#photo { background-size:var(--targetbasebgsize); }
+#photo.contarget { background-size:auto 100% !important; }
+#logo { width:700px; }
+#logothin { width:350px; display:none; }
+@media only screen and (max-width: 1130px) {
+	#logo, .side { display:none; }
+	#logothin { display:flex; }
+}
+#entry, #top { margin-bottom:3px; }
+#subplate.method, #subplate.disguise, div[id^="subplate"].intel {
+	background-color:var(--targetreqsbg);
+	background-repeat:no-repeat;
+	background-position:left 12px center;
+	background-size:46px;
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	color:var(--targetreqscolor);
+}
+#photo.contarget #subplate.method, #photo.contarget #subplate.disguise, #photo.contarget div[id^="subplate"].intel {
+	background-color:transparent;
+	background-repeat:no-repeat;
+	background-position:left 12px center;
+	background-size:46px;
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	color:#ffffff;
+}
+#subplate.method { height:65px; }
+#subplate.disguise { height:56px; }
+div[id^="subplate"].intel { height:74px; }
+#subplate.method span, #subplate.disguise span, div[id^="subplate"].intel span {
+	margin:0 5px 0 65px;
+}
+#subplate.method span p, #subplate.disguise span p {
+	text-shadow:var(--targetreqsshadow);
+}
+div[id^="subplate"].intel span p {
+	text-shadow:var(--targetintelshadow);
+}
+#photo.contarget #subplate.method span p, #photo.contarget #subplate.disguise span p {
+	text-shadow:0 0 6px #000000, 0 0 2px #000000, 0 0 1px #000000, 0 0 1px #000000, 0 0 1px #000000;	
+}
+#photo.contarget div[id^="subplate"].intel span p {
+	text-shadow:0 0 6px #000000, 0 0 2px #000000, 0 0 2px #000000, 0 0 1px #000000, 0 0 1px #000000, 0 0 1px #000000;
+}
+#subplate #title, div[id^='subplate'] #title {
+	font-size:14px;
+	font-weight:400;
+	line-height:1;
+	cursor: default;
+}
+#subplate #subtitle, #subplate p[id^='subtitle'] {
+	font-size:21px;
+	font-weight:700;
+	line-height:1;
+	cursor: default;
+}
+#subplate #subtitle-alt, #subplate p[id^='subtitle-alt'] {
+	font-size:14px;
+	font-weight:700;
+}
+#subplate #wording, div[id^='subplate'] #wording {
+	font-size:15px;
+	font-weight:400;
+	line-height:1;
+	white-space:normal;
+}
+#list {
+	width:40px;
+    height:40px;
+    float:left;
+    margin:12px 10px 0 15px;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	background-image:var(--list);
+	background-repeat:no-repeat;
+	background-position:center;
+	background-size:100%;
+}
+#instruction {
+	background:var(--objbg);
+	height:195px;
+}
+#instruction #wording {
+	font-size:18px;
+	color:var(--objcolor);
+	line-height:1.3;
+	white-space:normal;
+	padding:0 10px;
+	margin-top:10px;
+}
+#nameplate { 
+	background-color:var(--nameplatebg);
+	background-repeat:no-repeat;
+	background-position:left 15px bottom 13px;
+	background-size:40px;
+	display:flex;
+	flex-direction:column;
+	justify-content:flex-end;
+	color:var(--nameplatebigcolor);
+	height:66px;
+}
+#nameplate span {
+	margin:0 0 13px 65px;
+}
+#nameplate span span {
+	margin:0;
+}
+#nameplate #title, #nameplate #title-alt, #exitreq {
+	color:var(--nameplatesmallcolor);
+	font-size:14px;
+	font-weight:400;
+	line-height:1;
+	text-transform:var(--uppercase);
+	cursor:default;
+}
+#nameplate #title b {
+	display:none;
+	font-weight:normal;
+}
+#nameplate #subtitle {
+	font-size:21px;
+	font-weight:700;
+	line-height:1;
+	text-transform:var(--uppercase);
+	overflow:hidden;
+	text-overflow:ellipsis;
+	cursor:default;
+}
+#logo.welcome { background-image:url("../img/general/HRwelcome.jpg"); }
+#logothin.welcome { 
+	background-image:url("../img/general/logo.png"), url("../img/general/HRwelcome_thin.jpg");
+	background-repeat: no-repeat, no-repeat;
+	background-position: bottom 77px center, top center;
+	background-size: 315px, 102%;
+	}
+#logo #nameplate, #logothin #nameplate { 
+	background-color:var(--welcomenameplatebg);
+	background-image:var(--arrowleftnameplate);
+	color:var(--welcomenameplatecolor);
+	text-shadow:var(--welcomenameplateshadow);
+}
+@media only screen and (max-width: 808px) {
+	#logothin #nameplate { background-image:var(--arrowdownrightnameplate); }
+}
+#rand-all, #top, #bottom { background-size:auto 100%; }
+#entry #nameplate { background-image:var(--entry); }
+#exit #nameplate { background-image:var(--exit); }
+#subplate.method { background-image:var(--method); }
+#subplate.disguise { background-image:var(--disguise); }
+div[id^="subplate"].intel { background-image:var(--intel); }
+#photo.contarget #subplate.method { background-image:url("../img/general/h2/method-sfull.png"); }
+#photo.contarget #subplate.disguise { background-image:url("../img/general/h2/disguise-sfull.png"); }
+#photo.contarget div[id^="subplate"].intel { background-image:url("../img/general/h2/intel-sfull.png"); }
+#photo #nameplate { background-image:var(--target); }
+#obj-image #nameplate { background-image:var(--objectiveex); }
+#comp-image #nameplate { background-image:var(--complicationex); }
+#res-image #nameplate { background-image:var(--restriction); }
+#time-image #nameplate { background-image:var(--time); }
+#rating-image #nameplate { background-image:var(--rating); }
+#diff-image-Casual #nameplate { background-image:var(--casual); }
+#diff-image-Professional #nameplate { background-image:var(--pro); }
+#diff-image-Master #nameplate { background-image:var(--master); }
+#chall-image #nameplate { background-image:var(--challenge); }
+
+#maps_submenu {
+	grid-template-rows:repeat(6, 1fr); /*Change 6 to 7 when H3dlc drops*/
+}
+#maps_submenu div span { margin:0 0 13px 65px; }
+@media only screen and (max-height: 700px) {
+	div[id^='submenu_'] span  { margin:6px 0 3px 65px !important; }
+	#maps_submenu div { background-position:left 15px center !important; }
+}
+#maps #nameplate span span { margin:0px !important; }
+label#blank { cursor:default; }
+label, #top #nameplate, #top #nameplate p, #bottom #nameplate, #bottom #nameplate p { cursor:pointer; }
+label #nameplate {
+	background-color:var(--mapnameplatebg);
+	background-image:var(--xed);
+	text-shadow:var(--mapnameplateshadow);
+}
+label #nameplate #title { color:var(--mapnameplatesmallcolor); }
+label #nameplate { color:var(--mapnameplatebigcolor); }
+label:hover #nameplate #title, label:hover #nameplate #subtitle { color:var(--nameplatecolorhover); }
+label:hover #nameplate, label:hover #nameplate.on { background-color:var(--nameplatebghover); }
+label:hover #nameplate { background-image:var(--xedhover); }
+label #nameplate.on { background-image:var(--checked); }
+label:hover #nameplate.on { background-image:var(--checkedhover); }
+#submenu_random, #subsubmenu_random { background-image:var(--randomall); }
+#submenu_random:hover, #ssububmenu_random:hover { background-image:var(--randomallhover); }
+#submenu_random.on, #subsubmenu_random.on { background-image:var(--randomallon); }
+#submenu_h1, #subsubmenu_h1 { background-image:var(--h1); }
+#submenu_h1:hover, #subsubmenu_h1:hover { background-image:var(--h1hover); }
+#submenu_h1.on, #subsubmenu_h1.on { background-image:var(--h1on); }
+#submenu_h1dlc, #subsubmenu_h1dlc { background-image:var(--h1dlc); }
+#submenu_h1dlc:hover, #subsubmenu_h1dlc:hover { background-image:var(--h1dlchover); }
+#submenu_h1dlc.on, #subsubmenu_h1dlc.on { background-image:var(--h1dlcon); }
+#submenu_h2, #subsubmenu_h2 { background-image:var(--h2); }
+#submenu_h2:hover, #subsubmenu_h2:hover { background-image:var(--h2hover); }
+#submenu_h2.on, #subsubmenu_h2.on { background-image:var(--h2on); }
+#submenu_h2dlc, #subsubmenu_h2dlc { background-image:var(--h2dlc); }
+#submenu_h2dlc:hover, #subsubmenu_h2dlc:hover { background-image:var(--h2dlchover); }
+#submenu_h2dlc.on, #subsubmenu_h2dlc.on { background-image:var(--h2dlcon); }
+#submenu_h3, #subsubmenu_h3 { background-image:var(--h3); }
+#submenu_h3:hover, #subsubmenu_h3:hover { background-image:var(--h3hover); }
+#submenu_h3.on, #subsubmenu_h3.on { background-image:var(--h3on); }
+#submenu_h3.off, #subsubmenu_h3.off { background-image:var(--h3off); }
+#submenu_h3dlc, #subsubmenu_h3dlc { background-image:var(--h3dlc); }
+#submenu_h3dlc:hover, #subsubmenu_h3dlc:hover { background-image:var(--h3dlchover); }
+#submenu_h3dlc.on, #subsubmenu_h3dlc.on { background-image:var(--h3dlcon); }
+#submenu_h3dlc.off, #subsubmenu_h3dlc.off { background-image:var(--h3dlcoff); }
+.lock { 
+	background:var(--lockbg) !important;
+	background-image:var(--lockstripes) !important;
+}
+.lock, .lock #nameplate, .lock #nameplate p {	
+	cursor:not-allowed !important;
+}
+.lock #nameplate, .lock:hover #nameplate, .lock #nameplate #title, .lock #nameplate #subtitle {
+	background-color:var(--lockbg) !important;
+	color:var(--lockcolor) !important;
+	text-shadow:none;
+}
+.lock #nameplate { background-image:var(--lock) !important; }
+
+#settings {
+	height:525px;
+	display: grid;
+	grid-template-columns: 70px 350px 1fr 1fr 70px;
+	grid-template-rows: repeat(5, 62px) 1fr;
+	grid-column-gap: 3px;
+	grid-row-gap: 3px;
+}
+#settings .side { width:auto; }
+#settings .side.one {  grid-area: 1 / 1 / 7 / 2; }
+#settings .side.two {  grid-area: 1 / 5 / 7 / 6; }
+#settings_theme, #settings_roulette, #settings_kills, #settings_extras, #settings_challenges {
+    background-color:var(--settingbg);
+	color:var(--settingcolor);
+    cursor:pointer;
+    font-size:23px;
+    font-weight:500;
+    text-transform:var(--uppercase);
+    background-repeat:no-repeat;
+    background-position:left 15px center;
+    background-size:40px;
+    padding:23px 0 0 65px;
+    text-shadow:var(--settingshadow);
+}
+#settings_theme:hover, #settings_roulette:hover, #settings_kills:hover, #settings_extras:hover, #settings_challenges:hover, #settings_subsubmenu label:hover {
+    background-color:var(--settingbghover);
+    color:var(--settingcolorhover);
+    text-shadow:var(--settingshadowhover);
+}
+#settings_theme.on, #settings_roulette.on, #settings_kills.on, #settings_extras.on, #settings_challenges.on {
+	background-color:var(--settingbgon);
+	color:var(--settingcoloron);
+	text-shadow:var(--settingshadowon);
+	cursor:default;
+}
+#settings_theme { grid-area: 1 / 2 / 2 / 3; }
+#settings_roulette { grid-area: 2 / 2 / 3 / 3; }
+#settings_kills { grid-area: 3 / 2 / 4 / 3; }
+#settings_extras { grid-area: 4 / 2 / 5 / 3; }
+#settings_challenges { grid-area: 5 / 2 / 6 / 3; }
+#settings_subsubmenu {
+	grid-area: 1 / 3 / 7 / 4;
+	grid-row-gap: 3px;
+	margin:0 47px;
+}
+#settings_descriptions { grid-area: 1 / 4 / 7 / 5; }
+
+#settings_subsubmenu {
+	display:grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: repeat(5, min-content);
+	justify-content: flex-start;
+    align-items: stretch;
+}
+#settings_subsubmenu label {
+    height: 62px;
+	background-color:var(--settingbg);
+    color:var(--settingcolor);
+    cursor: pointer;
+    font-size: 23px;
+    font-weight: 500;
+    text-transform: var(--uppercase);
+    padding: 0 15px;
+    text-shadow:var(--settingshadow);
+	display:flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	line-height: 0.9;
+}
+#settings_subsubmenu b { font-weight: 500; }
+#settings_subsubmenu i { font-style: normal; }
+label#theme_cookies { height: auto !important; }
+label#theme_cookies:hover {
+	cursor:default;
+	color:var(--settingcolor);
+	background-color:var(--settingbg) !important;
+	text-shadow:var(--settingshadow) !important;
+}
+label#theme_cookies p { font-size: 13px; }
+#settings_descriptions {
+	color:var(--settingdesccolor);
+	text-shadow:var(--settingdescshadow);
+	padding:3px 15px 0;
+}
+#settings_descriptions h1 {	font-size:25px; margin:0 0 17px 0; }
+#settings_descriptions p { white-space: normal; }
+#settings_descriptions p b {
+	display: inline-block;
+	margin-bottom: 15px;
+}
+span#range {
+	text-align:right;
+	white-space:nowrap;
+}
+#settings_kills br { display:none; }
+@media only screen and (max-width: 1390px) {
+	#settings { grid-template-columns: 0 1fr 1fr 1fr 0 !important; }
+	#settings_subsubmenu { margin:0px; }
+	#settings_theme, #settings_kills, #settings_extras, #settings_challenges { padding:23px 0 0 65px; }
+	#settings_roulette { padding:23px 0 0 65px; }
+}
+@media only screen and (max-width: 1170px) {
+	#settings { grid-template-columns: 0 265px 1fr 1fr 0 !important; }
+	#settings_theme, #settings_kills, #settings_extras, #settings_challenges { padding:3px 0 0 65px; }
+	#settings_kills br { display:block; }
+}
+@media only screen and (max-width: 1000px) {
+	#settings_subsubmenu label { font-size: 16px; }
+	@media only screen and (max-height: 800px) {
+		#settings_descriptions p b { display:none; }
+	}
+}
+@media only screen and (max-width: 808px) {
+	#settings { 
+		height:100%;
+		grid-template-columns: 0 100% repeat(3, 0) !important;
+		grid-template-rows: repeat(5, 62px) min-content min-content;
+		grid-column-gap: 0px;
+	}
+	#settings_subsubmenu label { font-size: 23px; }
+	#settings_theme, #settings_roulette, #settings_kills, #settings_extras, #settings_challenges { padding:23px 0 0 65px; }
+	#settings_theme { grid-area: 1 / 2 / 2 / 3; }
+	#settings_roulette { grid-area: 2 / 2 / 3 / 3; }
+	#settings_kills { grid-area: 3 / 2 / 4 / 3; }
+	#settings_kills br { display:none; }
+	#settings_extras { grid-area: 4 / 2 / 5 / 3; }
+	#settings_challenges { grid-area: 5 / 2 / 6 / 3; }
+	#settings_subsubmenu { grid-area: 6 / 2 / 7 / 3; }
+	#settings_descriptions { grid-area: 7 / 2 / 8 / 3; }
+	#settings_subsubmenu label { height: 30px; }
+	@media only screen and (max-height: 770px) {
+		#settings { grid-template-rows: repeat(5, 40px) min-content min-content; }
+		#settings_subsubmenu label {
+			font-size: 16px;
+			padding:0 5px;
+		}
+		#settings_theme, #settings_roulette, #settings_kills, #settings_extras, #settings_challenges {
+			background-position:left 10px center;
+			background-size:30px;
+			padding:6px 0 0 50px;
+		}
+		#settings_descriptions { padding: 0 5px; }
+		#settings_descriptions h1 { display:none; }
+		#settings_descriptions p { font-size:14px; }
+	}
+}
+@media only screen and (max-width: 500px) {
+	#settings { grid-template-rows: repeat(5, 40px) min-content min-content; }
+	#settings_subsubmenu label {
+		font-size: 16px;
+		padding:0 5px;
+	}
+	#settings_theme, #settings_roulette, #settings_kills, #settings_extras, #settings_challenges {
+		background-position:left 10px center;
+		background-size:30px;
+		padding:6px 0 0 50px;
+	}
+	#settings_descriptions { padding: 0 5px; }
+	#settings_descriptions h1 { display:none; }
+	#settings_descriptions p { font-size:14px; }
+	@media only screen and (max-height: 740px) {
+		#settings_descriptions p b { display:none; }
+	}
+}
+#settings_theme { background-image:var(--settingtheme); }
+#settings_theme:hover { background-image:var(--settingthemehover); }
+#settings_theme.on { background-image:var(--settingthemeon); }
+#settings_roulette { background-image:var(--settingroulette); }
+#settings_roulette:hover { background-image:var(--settingroulettehover); }
+#settings_roulette.on { background-image:var(--settingrouletteon); }
+#settings_kills { background-image:var(--settingkills); }
+#settings_kills:hover { background-image:var(--settingkillshover); }
+#settings_kills.on { background-image:var(--settingkillson); }
+#settings_extras { background-image:var(--settingextra); }
+#settings_extras:hover { background-image:var(--settingextrahover); }
+#settings_extras.on { background-image:var(--settingextraon); }
+#settings_challenges { background-image:var(--settingchallenges); }
+#settings_challenges:hover { background-image:var(--settingchallengeshover); }
+#settings_challenges.on { background-image:var(--settingchallengeson); }
+
+#credits { 
+	scrollbar-color:transparent transparent;
+	height:100%;
+	max-height: 85.5vh;
+	display: grid;
+	grid-template-columns: 70px calc(100vw - 140px) 70px;
+}
+#credits_submenu { padding:0 10px 0; }
+@media only screen and (max-width: 1130px) {
+	#credits { grid-template-columns: calc(100vw - 70px) 70px; }
+	#credits_submenu { padding:0 10px; }
+}
+@media only screen and (max-width: 900px) {
+	#credits { grid-template-columns: calc(100vw - 30px) 30px; }
+}
+@media only screen and (max-width: 500px) {
+	#credits { grid-template-columns: calc(100vw - 20px) 20px; }
+}
+#credits_submenu p, #credits_submenu ul {
+	color:var(--normalcolor);
+	text-shadow:var(--normalshadow);
+	white-space:normal;
+	font-size:18px;
+	margin:0 0 15px 0;
+}
+#credits_submenu ul { padding-left:18px; }
+#credits_submenu ul ul { margin:0; }
+#credits_submenu h1 {
+	color:var(--normalcolor);
+	text-shadow:var(--normalshadow);
+	font-size:30px;
+	margin: 5px 0 10px 0;
+	text-transform:var(--uppercase);
+}
+#credits_submenu h2 {
+	color:var(--normalcolor);
+	text-shadow:var(--normalshadow);
+	font-size:20px;
+	margin:0 0 5px 0;
+	text-transform:var(--uppercase);
+}
+#sig {
+	float:right;
+	padding-right:10px;
+}
+
+#submenumobile, #submenumobile.off { display:none; }
+@media only screen and (max-width: 808px) {
+	#submenumobile {
+		height:21.5vh;
+		display: grid;
+	}
+}
+#submenumobile {
+	grid-template-columns: repeat(2, 50vw);
+	grid-template-rows: 1fr;
+	grid-column-gap: 3px;
+}
+#submenumobile #left.submenumobile_mission {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: repeat(3, 1fr);
+	grid-row-gap: 3px;
+}	
+#submenumobile #right.submenumobile_mission {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: repeat(2, 1fr);
+	grid-row-gap: 3px;
+}
+#submenumobile #left.submenumobile_map {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: repeat(3, 1fr);
+	grid-row-gap: 3px;
+}	
+#submenumobile #right.submenumobile_map {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: repeat(3, 1fr); /* Change to 4 when H3dlc drops */
+	grid-row-gap: 3px;
+}
+
+#submenumobile button, #submenumobile div div {
+	position: static;
+	width:100%; height:100%;
+	background-color:var(--buttonbg);
+	background-repeat:no-repeat, repeat-y;
+	background-position:left 10px center, left 54px center;
+	background-size:40px, 2px;
+	display:grid;
+	color:var(--buttoncolor);
+	font-size:20px;
+	font-weight:700;
+	text-transform:var(--uppercase);
+	text-align:left;
+	cursor:pointer;
+}
+#submenumobile button:hover, #submenumobile div div:hover {
+	background-color:var(--buttonbghover);
+	color:var(--buttoncolorhover);
+}
+#submenumobile button.on, #submenumobile div div.on {
+	background-color:var(--buttonbgon);
+	color:var(--buttoncoloron);
+	cursor:default;
+}
+#submenumobile button[disabled], #submenumobile div div.off {
+	background-color:var(--buttonbgoff) !important;
+	color:var(--buttoncoloroff) !important;
+	cursor:default;
+}
+#submenumobile #left button span, #submenumobile #left div span { margin:10px 5px 13px 60px; align-self: end; }
+#submenumobile #right button span { margin:0 5px 0 60px; align-self: center; }
+#submenumobile div#subsubmenu_random span { margin:0 5px 13px 60px; align-self: flex-end; }
+#submenumobile #right div span, #submenumobile div#subsubmenu_h3 span, #submenumobile div#subsubmenu_h3dlc span { margin:0 5px 13px 60px; align-self: flex-end; }
+#submenumobile #subtitle {
+    font-size:12px;
+    font-weight:400;
+    line-height:1;
+}
+@media only screen and (max-height: 845px) {
+	#submenumobile #left button span, #submenumobile div span { margin-bottom:8px; }
+}
+@media only screen and (max-height: 820px) {
+	#submenumobile div.submenumobile_map div { background-size:30px; }
+	#submenumobile div.submenumobile_map div span {
+		margin: 0 5px 0px 48px !important;
+		align-self: center !important;
+	}
+}
+@media only screen and (max-height: 720px) {
+	#submenumobile div.submenumobile_map div span p#subtitle { display:none; }
+}
+@media only screen and (max-height: 700px) {
+	#submenumobile button, 	#submenumobile div div {
+		background-position:left 10px center, left 43px center;
+		background-size:30px, 2px;
+	}
+	#submenumobile button span, #submenumobile div div span { margin-left:48px !important; }
+}
+@media only screen and (max-height: 666px) {
+	#submenumobile div.submenumobile_map div { 
+		background-position:left 5px center;
+		background-size:25px;
+	}
+	#submenumobile div.submenumobile_map div span {	margin: 0 5px 0px 34px !important; }
+	#submenumobile div.submenumobile_map div span { font-size:15px; }
+}
+@media only screen and (max-width: 630px) {
+	#submenumobile div.submenumobile_map div span p#subtitle { font-size:60%; }
+	#submenumobile div.submenumobile_map div span { font-size:15px; }
+}
+@media only screen and (max-width: 460px) {
+	#submenumobile button, #submenumobile div div { font-size:15px; }
+	#submenumobile #subtitle { font-size: 10px;	}
+}
+@media only screen and (max-width: 420px) {
+	#submenumobile div.submenumobile_map div span p#subtitle { display:none; }
+}
+@media only screen and (max-width: 380px) {
+	#submenumobile button, #submenumobile div div { font-size:12px; }
+}
+
+#footer {
+	height:15vh;
+	padding:0 305px 0 70px;
+	color:var(--footercolor);
+	font-weight:bold;
+	text-transform:var(--uppercase);
+	text-shadow:var(--footershadow);
+	line-height:1;
+}
+#footer img {
+	float:left;
+	width:86px;
+	margin-right:10px;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	background-image:var(--info);
+	background-repeat:no-repeat;
+	background-position:center;
+	background-size:100%;	
+}
+p#links {
+	font-size:20px;
+	margin-top:5px;
+}
+p#ioi { font-size:30px; }
+@media only screen and (max-width: 1370px) {
+	#footer { padding:0 305px 0 10px; }
+	#footer br { display:none; }
+	@media only screen and (max-height: 750px) {
+		p#links { font-size:15px; }
+		p#ioi { font-size:20px; }
+	}
+}
+@media only screen and (max-width: 980px) {
+	p#links { font-size:15px; }
+	p#ioi { font-size:20px; }
+}
+#footermobile {
+	display:none;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: center;
+	background-color:var(--footermobilebg);
+	color:var(--footercolor);
+	font-weight:bold;
+	text-transform:var(--uppercase);
+	line-height:1;
+}
+#footermobile img {
+	float:left;
+	height:calc(5vh - 10px);
+	margin:0 5px;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	background-image:var(--infomobile);
+	background-repeat:no-repeat;
+	background-position:center;
+	background-size:100%;	
+}
+#footermobile a { text-shadow:none; }
+#footermobile p { font-size:20px; }
+#footermobile p.condensed { display:none; }
+@media only screen and (max-width: 808px) {
+	#footer { display:none; }
+	#footermobile {
+		height:5vh;
+		display:flex;
+	}
+}
+@media only screen and (max-width: 500px) {
+	#footermobile p { font-size:15px; }
+}
+@media only screen and (max-width: 390px) {
+	#footermobile p { font-size:12px !important; }
+}
+@media only screen and (max-height: 800px) {
+	#footermobile p { font-size:15px; }
+}
+@media only screen and (max-height: 690px) {
+	#footermobile {	padding:2px; }
+	#footermobile p { display:none; }
+	#footermobile p.condensed {
+		display:inline;
+		font-size:15px;
+	}
+}
+
+@keyframes sliding {
+    from {text-indent:20%;}
+    to {text-indent:-80%;}
+}
+.slide:hover {
+	cursor: help !important;
+	text-overflow: clip !important;
+    animation: sliding 4s linear infinite;
+}
+#shadow {
+	position:absolute;
+	left:0; right:0; top:0; bottom:0;
+	z-index: 100;
+	background:var(--shadowbg);
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	align-items:center;
+}
+#shadow.hidden { display:none; }
+#popwrap { width:50%; }
+@media only screen and (max-width: 1470px) {
+	#popwrap { width:75%; }
+}
+@media only screen and (max-width: 1000px) {
+	#popwrap { width:85%; }
+}
+@media only screen and (max-width: 808px) {
+	#popwrap { width:95%; }
+}
+#popwrap button {
+	width:100%;
+	margin-top:10px;
+	padding-left:70px;
+	text-align: left;
+	font-size:25px;
+	font-weight:bold;
+	height:70px;
+	border:none;
+	color:var(--popupbuttoncolor);
+	background-color:var(--popupbuttonbg);
+	background-size:45px;
+	background-repeat:no-repeat;
+	background-position:left 15px center;
+}
+#popwrap button:hover {
+	color:var(--popupbuttoncolorhover);
+	background-color:var(--popupbuttonbghover);
+}
+button#save { background-image:var(--buttonsave); }
+button#save:hover { background-image:var(--buttonsaveon); }
+button#close { background-image:var(--buttonclose); }
+button#close:hover { background-image:var(--buttoncloseon); }
+#popup {
+	background:var(--popupbg);
+	color:var(--popupcolor);
+	padding:0 0 10px;
+	text-align:center;
+}
+#popup h1 {
+	background-color:var(--popupheaderbg);
+	color:var(--popupheadercolor);
+	font-size:47px;
+	text-transform:var(--uppercase);
+	text-align:left;
+	padding:20px 10px 10px;
+	margin:0 0 10px;
+}
+#popup p {
+	text-align:left;
+	font-weight: 300;
+	margin:0 10px;
+}
+#popup textarea {
+	border:var(--textareaborder);
+	background:var(--textareabg);
+	color:var(--textareacolor);
+	height:300px;
+	resize: none;
+	width:97.5%;
+	margin:5px auto 10px;
+}
+@media only screen and (max-height: 800px) {
+	#popwrap button { height:7vh; }
+}
+@media only screen and (max-height: 800px) {
+	#popwrap button {
+		background-position:left 8px center;
+		background-size:35px;
+		padding-left:50px;
+	}
+}
+textarea.clearme { display:none; }
+#saveroulette {
+	position: absolute;
+	right:0px;
+	bottom:6.5vh;
+	width:300px;
+	height:50px;
+	border:none;
+	font-size:20px;
+	font-weight:bold;
+	text-transform:var(--uppercase);
+	text-align: left;
+	color:var(--savebuttoncolor);
+	background-color:var(--savebuttonbg);
+	background-repeat:no-repeat;
+	background-position:left 7px center;
+	background-size:35px;
+	padding:0;
+}
+#subsaveroulette {
+	background-repeat:no-repeat, repeat-y;
+	background-position:left 7px center, left 54px center;
+	background-size:35px, 2px;
+}
+@media only screen and (max-width: 808px) {
+	#saveroulette {	display:none !important; }
+}
+#saveroulette.hidden{ right:-300px; }
+#saveroulette:hover {
+	background-color:var(--savebuttonbghover);
+	color:var(--savebuttoncolorhover);
+}
+#saveroulette[disabled], #saveroulette[disabled]:hover {
+	background-color:var(--savebuttonbgoff);
+	color:var(--savebuttoncoloroff);
+	cursor:default;
+}
+#saveroulette {	background-image:var(--save); }
+#subsaveroulette { background-image:var(--save), var(--dotlight); }
+#saveroulette:hover { background-image:var(--savehover); }
+#subsaveroulette:hover { background-image:var(--savehover), var(--dotdark); }
+#saveroulette[disabled] { background-image:var(--saveoff); }
+#subsaveroulette[disabled] { background-image:var(--saveoff), var(--dotmid); }
+
+#scrollbar {
+	min-height:3.5vh;
+	max-height:8.85vh;
+	flex-grow:1;
+}
+@media only screen and (max-width: 500px) {
+	.scroll-bar span { display:none; }
+}
+.scroll-wrapper {
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: relative;
+}
+.scroll-wrapper > .scroll-content {
+    border: none !important;
+    box-sizing: content-box !important;
+    height: auto;
+    left: 0;
+    margin: 0;
+    max-height: none;
+    max-width: none !important;
+    overflow: scroll !important;
+    padding: 0;
+    position: relative !important;
+    top: 0;
+    width: auto !important;
+}
+.scroll-wrapper > .scroll-content::-webkit-scrollbar {
+    height: 0;
+    width: 0;
+}
+.scroll-element { display: none; }
+.scroll-element, .scroll-element div { box-sizing: content-box; }
+.scroll-element.scroll-x.scroll-scrollx_visible, .scroll-element.scroll-y.scroll-scrolly_visible { display: block; }
+.scroll-element .scroll-bar, .scroll-element .scroll-arrow { cursor: default; }
+/* Seperate styling needed for textareas, should that be a concern later. */
+.external-scroll_x, div[class^='external-scroll_x'], .external-scroll_y {
+    background:var(--scrollbase);
+    cursor: pointer;
+    display: none;
+    position: relative;
+}
+.external-scroll_x.scroll-scrollx_visible, div[class^='external-scroll_x'].scroll-scrollx_visible {
+    display: block;
+    height: 4px;
+	margin: 30px 73px 0;
+	font-size:0px;
+}
+.external-scroll_y.scroll-scrolly_visible {
+    display: block;
+	width: 4px;
+	height:100%;
+	font-size:0px;
+}
+.external-scroll_x div, div[class^='external-scroll_x'] div, .external-scroll_y div {
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    width: 100%;
+}
+.external-scroll_x .scroll-bar, div[class^='external-scroll_x'] .scroll-bar, .external-scroll_y .scroll-bar {
+    background:var(--scrollpip);
+	color:var(--scrollcolor);
+    z-index: 12;
+}
+.external-scroll_x .scroll-bar div[class^='external-scroll_x'] .scroll-bar { width: 80%; }
+.external-scroll_y .scroll-bar { height: 100px; }
+@media only screen and (max-width: 808px) {
+	.external-scroll_x.scroll-scrollx_visible, div[class^='external-scroll_x'].scroll-scrollx_visible {
+		height: 15px;
+		margin:3px 0 0 0;
+		font-size:13px;
+		font-weight:bold;
+		text-align:right;
+	}
+}
+@media only screen and (max-width: 900px) {
+	.external-scroll_y.scroll-scrolly_visible {
+		width:14px;
+		font-size:13px;
+		font-weight:bold;
+		text-align:center;
+	}
+	.external-scroll_y.scroll-y.scroll-scrolly_visible .scroll-element_outer .scroll-bar { padding-right:1px; }
+}
+
