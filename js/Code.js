@@ -196,6 +196,8 @@ function containerToResult(container) {
 		result.missionobjective = "Project Proposal|Aquire documents.";
 	else if (mode == "MAIN" && result.missionCode == "spread")
 		result.missionobjective = "Eliminate Any Infected|Eliminate anyone who becomes infected. Since the virus spreads through proximity contact, avoid becoming infected yourself. If you become contaminated, find an antidote for yourself within 5 minutes.";
+	else if (mode == "MAIN" && result.missionCode == "controller")
+		result.missionobjective = "Sigma Operations Files|Retrieve Sigma operations files without getting spotted.";
 	else if (mode != "ELUSIVE" && result.missionCode == "biggame")
 		result.missionobjective = "The Black Book|Retrieve Reddington's Black Book.";
 	else if (mode == "MAIN" && result.missionCode == "suburbs")
@@ -224,7 +226,9 @@ function containerToResult(container) {
 function writeEverything(result) {
 	
 	//Location, Mission name, and background image
-	document.documentElement.className = result.missionCode;
+	//document.documentElement.className = result.missionCode;
+	document.body.className = "hide"
+	document.getElementById("background").className = result.missionCode;
 	document.getElementById("map_place").innerHTML = result.missionLocation;
 	document.getElementById("map_place2").innerHTML = result.missionLocation;
 	document.getElementById("map_name").innerHTML = result.missionTitle;
@@ -235,7 +239,7 @@ function writeEverything(result) {
 	var exitMode = exitModeIndex.options[exitModeIndex.selectedIndex].value;
 	if (exitMode != "OFF") {
 		document.getElementById("travel").innerHTML =
-			"<div id='entry' class='" + result.missionCode + "-start-" + result.entry.replace(/\s|'|\.|-|\(|\)/g, "") + "'><div id='nameplate'><p id='title'>Starting Location</p><p id='subtitle'>" + result.entry + "</p></div></div><div id='exit' class='" + result.missionCode + "-exit-" + result.exit.split('|')[0].replace(/\s|'|\.|-|\||\(|\)/g, "") + "'><div id='nameplate'><p id='title'>Exit Location <span id='exitreq'></span></p><p id='subtitle'>" + result.exit.split('|')[0] + "</p></div></div>";
+			"<div id='entry' class='" + result.missionCode + "-start-" + result.entry.replace(/\s|'|\.|-|\(|\)/g, "") + "'><div id='nameplate'><span><p id='title'>Starting Location</p><p id='subtitle'>" + result.entry + "</p></span></div></div><div id='exit' class='" + result.missionCode + "-exit-" + result.exit.split('|')[0].replace(/\s|'|\.|-|\||\(|\)/g, "") + "'><div id='nameplate'><span><p id='title'>Exit Location <span id='exitreq'></span></p><p id='subtitle'>" + result.exit.split('|')[0] + "</p></span></div></div>";
 		document.getElementById("input_entry").value = "\nStart: " + result.entry;
 		document.getElementById("input_exit").value = "\nExit: " + result.exit.split('|')[0];
 		if(result.exit.split('|')[1] != null) {
@@ -253,17 +257,20 @@ function writeEverything(result) {
 	var modeIndex = document.getElementById("modeselect");
 	var mode = modeIndex.options[modeIndex.selectedIndex].value;
 	
+	if (mode == "CONEASY" || mode == "CONHARD") { var contractmode = " contarget" }
+	else { var contractmode = "" }
+	
 	// Write to the HTML elements from the results object
 	var MAX_TARGETS = 5, MAX_EXTRAS = document.getElementById("compslider").value;
 	
 	for(var i = 0; i < MAX_TARGETS; ++i){ // targets, disguise, and intel
 		if(i < result.targets.length) {
 			document.getElementById("target" + (i+1)).innerHTML =
-				"<div id='photo' class='" + result.targets[i].split('|')[0].replace(/\s|,|'|“|”|-|\./g, "") + "-" + result.missionCode +
-				"'><div id='subplate' class='method'><p id='title'>Eliminate using:</p><p id='subtitle" + (i+1) + "'></p><p id='subtitle-alt" + (i+1) +
-				"'></p></div><div id='subplate' class='disguise'><p id='title'>Wear disguise:</p><p id='subtitle'>" + result.disguises[i] +
-				"</p></div><div id='subplate" + (i+1) + "' class='intel'><p id='title'>Intel:</p><p id='wording'>" + result.targets[i].split('|')[1] +
-				"</p></div><div id='nameplate'><p id='title'>Target</p><p id='subtitle'>" + result.targets[i].split('|')[0] + "</p></div></div>";
+				"<div id='photo' class='" + result.targets[i].split('|')[0].replace(/\s|,|'|“|”|-|\./g, "") + "-" + result.missionCode + contractmode +
+				"'><div id='subplate' class='method'><span><p id='title'>Eliminate using:</p><p id='subtitle" + (i+1) + "'></p><p id='subtitle-alt" + (i+1) +
+				"'></p></span></div><div id='subplate' class='disguise'><span><p id='title'>Wear disguise:</p><p id='subtitle'>" + result.disguises[i] +
+				"</p></span></div><div id='subplate" + (i+1) + "' class='intel'><span id='inteltoggle" + (i+1) + "'><p id='title'>Intel:</p><p id='wording'>" + result.targets[i].split('|')[1] +
+				"</p></span></div><div id='nameplate'><span><p id='title'>Target</p><p id='subtitle'>" + result.targets[i].split('|')[0] + "</p></span></div></div>";
 			document.getElementById("input_target" + (i+1)).value = "\nEliminate " + result.targets[i].split('|')[0];
 			document.getElementById("input_disguise" + (i+1)).value = ", while disguised as: " + result.disguises[i];
 			document.getElementById("input_targetintel" + (i+1)).value = "\n └ Intel: " + result.targets[i].split('|')[1];
@@ -292,7 +299,8 @@ function writeEverything(result) {
 				}
 			}
 			if(result.targets[i].split('|')[1] == null || mode == "CONHARD") { // target intel off
-				document.getElementById("subplate" + (i+1)).style.setProperty("display", "none", "important");
+				document.getElementById("subplate" + (i+1)).style.setProperty("background-image", "none", "important");//display none goes here if tall pics required
+				document.getElementById("inteltoggle" + (i+1)).style.setProperty("display", "none", "important");//also remove inteltoggle in target generation
 				document.getElementById("input_targetintel" + (i+1)).value = "";
 				document.getElementById("input_contract").value = "";
 			}
@@ -312,8 +320,8 @@ function writeEverything(result) {
 	if(result.missionobjective.length) { // campaign mission objectives
 		document.getElementById("objective").innerHTML = 
 			"<div id='obj-image' class='" + result.missionobjective.split('|')[0].replace(/\s/g, '') +
-			"'><div id='instruction'><img id='list' src='./img/general/list.png'><p id='wording'>" + result.missionobjective.split('|')[1] +
-			"</p></div><div id='nameplate'><p id='title'>Objective</p><p id='subtitle'>" + result.missionobjective.split('|')[0] + "</p></div></div>";
+			"'><div id='instruction'><img id='list' src='./img/general/blank.png'><p id='wording'>" + result.missionobjective.split('|')[1] +
+			"</p></div><div id='nameplate'><span><p id='title'>Objective</p><p id='subtitle'>" + result.missionobjective.split('|')[0] + "</p></span></div></div>";
 		document.getElementById("input_objective").value = "\nObjective: " + result.missionobjective.split('|')[0] + " - " + result.missionobjective.split('|')[1];
 	}
 	else {
@@ -324,8 +332,8 @@ function writeEverything(result) {
 	if(document.getElementById("exobj").checked == 1) { // extra mission objectives
 		document.getElementById("objectivex").innerHTML = 
 			"<div id='obj-image' class='" + result.objectives.split('|')[0].replace(/\s|,|'|“|”|-|\?|\!|\(|\)|\./g, "") +
-			"'><div id='instruction'><img id='list' src='./img/general/list.png'><p id='wording'>"  + result.objectives.split('|')[1] +
-			"</p></div><div id='nameplate'><p id='title'>Extra Objective</p><p id='subtitle'>"  + result.objectives.split('|')[0] + "</p></div></div>";
+			"'><div id='instruction'><img id='list' src='./img/general/blank.png'><p id='wording'>"  + result.objectives.split('|')[1] +
+			"</p></div><div id='nameplate'><span><p id='title'>Extra Objective</p><p id='subtitle'>"  + result.objectives.split('|')[0] + "</p></span></div></div>";
 		document.getElementById("input_extraobjective").value = "\nExtra Objective: " + result.objectives.split('|')[0] + " - " + result.objectives.split('|')[1];
 	}
 	else {
@@ -337,8 +345,8 @@ function writeEverything(result) {
 		if(i < result.extras.length) {
 			document.getElementById("complication" + (i+1)).innerHTML = 
 				"<div id='comp-image' class='" + result.extras[i].split('|')[0].replace(/\s/g, "") +
-				"'><div id='instruction'><img id='list' src='./img/general/list.png'><p id='wording'>" + result.extras[i].split('|')[1] +
-				"</p></div><div id='nameplate'><p id='title'>Complication</p><p id='subtitle'>" + result.extras[i].split('|')[0] + "</p></div></div>";
+				"'><div id='instruction'><img id='list' src='./img/general/blank.png'><p id='wording'>" + result.extras[i].split('|')[1] +
+				"</p></div><div id='nameplate'><span><p id='title'>Complication</p><p id='subtitle'>" + result.extras[i].split('|')[0] + "</p></span></div></div>";
 			document.getElementById("input_complicationt").value = "\n\nComplications:";
 			document.getElementById("input_complication" + (i+1)).value = "\n● " + result.extras[i].split('|')[0] + " - " + result.extras[i].split('|')[1];
 		}
@@ -349,14 +357,18 @@ function writeEverything(result) {
 	}
 	var compcheck = document.getElementById("complication1").innerHTML;
 	if(compcheck.length == 0 && document.getElementById("compslider").value > 0) { // failsafe if no complications generated
+		document.getElementById("submenu_comp").disabled = false;
+		document.getElementById("subsubmenu_comp").disabled = false;
 		document.getElementById("complicationi").innerHTML =
-			"<div id='comp-image' class='NoRecordings'><div id='instruction'><img id='list' src='./img/general/list.png'><p id='wording'>Do not get recorded by a security camera. If you are recorded, you must destroy the evidence.</p></div><div id='nameplate'><p id='title'>Complications</p><p id='subtitle'>No Recordings</p></div></div>";
+			"<div id='comp-image' class='NoRecordings'><div id='instruction'><img id='list' src='./img/general/blank.png'><p id='wording'>Do not get recorded by a security camera. If you are recorded, you must destroy the evidence.</p></div><div id='nameplate'><span><p id='title'>Complications</p><p id='subtitle'>No Recordings</p></span></div></div>";
 		document.getElementById("input_complicationt").value = "\n\nComplications:";
 		document.getElementById("input_complicationi").value = "\n● No Recordings - Do not get recorded by a security camera. If you are recorded, you must destroy the evidence.";
 	}
-	else if(compcheck.length != 0 && document.getElementById("compslider").value == 0) { // prompt to try complications if toggled off & clears pre-generated complications
-		document.getElementById("complicationi").innerHTML =
-			"<div id='comp-image' class='compinfo'><div id='instruction'><img id='list' src='./img/general/list.png'><p id='wording'>Change up your playstyle with complications. Find the option by selecting Roulette Settings in the top menu, followed by Extra Requirements.</p></div><div id='nameplate'><p id='title'>Complications</p><p id='subtitle'>None Enabled</p></div></div>";
+	else if(compcheck.length != 0 && document.getElementById("compslider").value == 0) { // clears pre-generated complications
+		document.getElementById("submenu_comp").disabled = true;
+		document.getElementById("subsubmenu_comp").disabled = true;
+		/*document.getElementById("complicationi").innerHTML = // prompt to try complications if toggled off
+			"<div id='comp-image' class='compinfo'><div id='instruction'><img id='list' src='./img/general/blank.png'><p id='wording'>Change up your playstyle with complications. Find the option by selecting Roulette Settings in the top menu, followed by Extra Requirements.</p></div><div id='nameplate'><span><p id='title'>Complications</p><p id='subtitle'>None Enabled</p></span></div></div>";*/
 		document.getElementById("complication1").innerHTML = "";
 		document.getElementById("complication2").innerHTML = "";
 		document.getElementById("complication3").innerHTML = "";
@@ -372,12 +384,16 @@ function writeEverything(result) {
 		document.getElementById("input_complication5").value = "";
 		document.getElementById("input_complication6").value = "";
 	}
-	else if(compcheck.length == 0){ // prompt to try complications if toggled off & no pre-generated complications remain
-		document.getElementById("complicationi").innerHTML =
-			"<div id='comp-image' class='compinfo'><div id='instruction'><img id='list' src='./img/general/list.png'><p id='wording'>Change up your playstyle with complications. Find the option by selecting Roulette Settings in the top menu, followed by Extra Requirements.</p></div><div id='nameplate'><p id='title'>Complications</p><p id='subtitle'>None Enabled</p></div></div>";
+	else if(compcheck.length == 0){ // no complications
+		document.getElementById("submenu_comp").disabled = true;
+		document.getElementById("subsubmenu_comp").disabled = true;
+		/*document.getElementById("complicationi").innerHTML =
+			"<div id='comp-image' class='compinfo'><div id='instruction'><img id='list' src='./img/general/blank.png'><p id='wording'>Change up your playstyle with complications. Find the option by selecting Roulette Settings in the top menu, followed by Extra Requirements.</p></div><div id='nameplate'><span><p id='title'>Complications</p><p id='subtitle'>None Enabled</p></span></div></div>";*/
 	}
-	else { // hides prompt to try complications if complications are generated
-		document.getElementById("complicationi").innerHTML = "";
+	else { // complications are generated
+		document.getElementById("submenu_comp").disabled = false;
+		document.getElementById("subsubmenu_comp").disabled = false;
+		/*document.getElementById("complicationi").innerHTML = "";*/
 		document.getElementById("input_complicationi").value = "";
 	}
 	
@@ -385,8 +401,8 @@ function writeEverything(result) {
 	if(document.getElementById("mechanics").checked == 1) { // restricted mechanics
 		document.getElementById("restriction").innerHTML = 
 			"<div id='res-image' class='" + result.mechanics.split('|')[0].replace(/\s|\&/g, "") +
-			"'><div id='instruction'><img id='list' src='./img/general/list.png'><p id='wording'>" + result.mechanics.split('|')[1] +
-			"</p></div><div id='nameplate'><p id='title'>Restriction</p><p id='subtitle'>" + result.mechanics.split('|')[0] + "</p></div></div>";
+			"'><div id='instruction'><img id='list' src='./img/general/blank.png'><p id='wording'>" + result.mechanics.split('|')[1] +
+			"</p></div><div id='nameplate'><span><p id='title'>Restriction</p><p id='subtitle'>" + result.mechanics.split('|')[0] + "</p></span></div></div>";
 		document.getElementById("input_restriction").value = "\n● " + result.mechanics.split('|')[1];
 	}
 	else {
@@ -396,8 +412,8 @@ function writeEverything(result) {
 	
 	if(document.getElementById("time").checked == 1) { // time limit
 		document.getElementById("timelimit").innerHTML = 
-			"<div id='time-image' class=''><div id='instruction'><img id='list' src='./img/general/list.png'><p id='wording'>Complete the roulette in under " + result.time +
-			" minutes. For accuracy, enable the Mission Timer through the game's Options menu under Gameplay.</p></div><div id='nameplate'><p id='title'>Time Limit</p><p id='subtitle'>" + result.time + " Minutes</p></div></div>";
+			"<div id='time-image' class=''><div id='instruction'><img id='list' src='./img/general/blank.png'><p id='wording'>Complete the roulette in under " + result.time +
+			" minutes. For accuracy, enable the Mission Timer through the game's Options menu under Gameplay.</p></div><div id='nameplate'><span><p id='title'>Time Limit</p><p id='subtitle'>" + result.time + " Minutes</p></span></div></div>";
 		document.getElementById("input_timelimit").value = "\n● Complete the roulette in under " + result.time + " minutes. For accuracy, enable the Mission Timer through the game's Options menu under Gameplay.";
 	}
 	else {
@@ -407,8 +423,8 @@ function writeEverything(result) {
 	
 	if(document.getElementById("rating").checked == 1) { // rating requirement
 		document.getElementById("ratingget").innerHTML = 
-			"<div id='rating-image' class='" + result.rating.split('|')[0].replace(/\s/g, "") + "'><div id='instruction'><img id='list' src='./img/general/list.png'><p id='wording'>" + result.rating.split('|')[1] +
-			"</p></div><div id='nameplate'><p id='title'>Rating</p><p id='subtitle'>" + result.rating.split('|')[0] + "</p></div></div>";
+			"<div id='rating-image' class='" + result.rating.split('|')[0].replace(/\s/g, "") + "'><div id='instruction'><img id='list' src='./img/general/blank.png'><p id='wording'>" + result.rating.split('|')[1] +
+			"</p></div><div id='nameplate'><span><p id='title'>Rating</p><p id='subtitle'>" + result.rating.split('|')[0] + "</p></span></div></div>";
 		document.getElementById("input_rating").value = "\n● " + result.rating.split('|')[1];
 	}
 	else {
@@ -418,18 +434,18 @@ function writeEverything(result) {
 	
 	if(document.getElementById("difficulty").checked == 1 && !proOnly.includes(result.missionCode) && mode == "MAIN") { // force difficulty for campaign missions
 		document.getElementById("diffget").innerHTML = 
-			"<div id='diff-image-" + result.difficulty + "' class=''><div id='instruction'><img id='list' src='./img/general/list.png'><p id='wording'>Complete the roulette with the mission's difficulty set to " + result.difficulty +
-			".</p></div><div id='nameplate'><p id='title'>Difficulty</p><p id='subtitle'>" + result.difficulty + "</p></div></div>";
+			"<div id='diff-image-" + result.difficulty + "' class=''><div id='instruction'><img id='list' src='./img/general/blank.png'><p id='wording'>Complete the roulette with the mission's difficulty set to " + result.difficulty +
+			".</p></div><div id='nameplate'><span><p id='title'>Difficulty</p><p id='subtitle'>" + result.difficulty + "</p></span></div></div>";
 		document.getElementById("input_difficulty").value = "\n● Complete the roulette with the mission's difficulty set to " + result.difficulty + ".";
 	}
 	else if(document.getElementById("difficulty").checked == 1 && proOnly.includes(result.missionCode) && mode == "MAIN") { // difficulty is pro for tutorial, bonus, and pz
 		document.getElementById("diffget").innerHTML = 
-			"<div id='diff-image-Professional' class=''><div id='instruction'><img id='list' src='./img/general/list.png'><p id='wording'>Complete the roulette with this mission's only difficulty of Professional.</p></div><div id='nameplate'><p id='title'>Difficulty</p><p id='subtitle'>Professional</p></div></div>";
+			"<div id='diff-image-Professional' class=''><div id='instruction'><img id='list' src='./img/general/blank.png'><p id='wording'>Complete the roulette with this mission's only difficulty of Professional.</p></div><div id='nameplate'><span><p id='title'>Difficulty</p><p id='subtitle'>Professional</p></span></div></div>";
 		document.getElementById("input_difficulty").value = "\n● Complete the roulette with this mission's only difficulty of Professional.";
 	}
 	else if(document.getElementById("difficulty").checked == 1 && mode != "MAIN") { // difficulty is pro in contracts mode and for elusive targets
 		document.getElementById("diffget").innerHTML = 
-			"<div id='diff-image-Professional' class=''><div id='instruction'><img id='list' src='./img/general/list.png'><p id='wording'>Complete the roulette with this mission's only difficulty of Professional.</p></div><div id='nameplate'><p id='title'>Difficulty</p><p id='subtitle'>Professional</p></div></div>";
+			"<div id='diff-image-Professional' class=''><div id='instruction'><img id='list' src='./img/general/blank.png'><p id='wording'>Complete the roulette with this mission's only difficulty of Professional.</p></div><div id='nameplate'><span><p id='title'>Difficulty</p><p id='subtitle'>Professional</p></span></div></div>";
 		document.getElementById("input_difficulty").value = "\n● Complete the roulette with this mission's only difficulty of Professional.";
 	}
 	else {
@@ -441,15 +457,18 @@ function writeEverything(result) {
 	var timecheck = document.getElementById("timelimit").innerHTML;
 	var ratingcheck = document.getElementById("ratingget").innerHTML;
 	var diffcheck = document.getElementById("diffget").innerHTML;
-	if(mechcheck.length == 0 && timecheck.length == 0 && ratingcheck.length == 0 && diffcheck.length == 0) { // prompt to try challenges
-		document.getElementById("challengesi").innerHTML =
-			"<div id='chall-image' class='challinfo'><div id='instruction'><img id='list' src='./img/general/list.png'><p id='wording'>Test your skills by enabling Gameplay Challenges through the Roulette Settings top menu.</p></div><div id='nameplate'><p id='title'>Challenges</p><p id='subtitle'>None Enabled</p></div></div>";
+	if(mechcheck.length == 0 && timecheck.length == 0 && ratingcheck.length == 0 && diffcheck.length == 0) { // enable/disable challenge menu
+		document.getElementById("submenu_chal").disabled = true;
+		document.getElementById("subsubmenu_chal").disabled = true;
+		/*document.getElementById("challengesi").innerHTML = // prompt to try challenges
+			"<div id='chall-image' class='challinfo'><div id='instruction'><img id='list' src='./img/general/blank.png'><p id='wording'>Test your skills by enabling Gameplay Challenges through the Roulette Settings top menu.</p></div><div id='nameplate'><span><p id='title'>Challenges</p><p id='subtitle'>None Enabled</p></span></div></div>";*/
 	}
 	else {	
-		document.getElementById("challengesi").innerHTML = "";
+		document.getElementById("submenu_chal").disabled = false;
+		document.getElementById("subsubmenu_chal").disabled = false;
+		//document.getElementById("challengesi").innerHTML = "";
 		document.getElementById("input_challengest").value = "\n\nChallenges:";
 	}
-	
 	
 	/*Variabble Wall used to fill in textarea used to save a roulette*/
 	var contracttext = document.getElementById("input_contract").value;
@@ -536,6 +555,7 @@ function writeEverything(result) {
 		+ difficultytext;
 	
 	document.getElementById("saveroulette").disabled = false;
+	document.getElementById("subsaveroulette").disabled = false;
 };
 
 function generate_result() {
@@ -581,13 +601,13 @@ function history_push(x){
 	if(history_past.length > 20)
 		history_past.shift();
 	
-	//history exists, enable undo_nappi
+	//history exists, enable undobtn
 	if(history_past.length > 1) {
-		document.getElementById("undo_nappi").disabled = false;
-		document.getElementById("undo_nappi2").disabled = false;
+		document.getElementById("undobtn").disabled = false;
+		document.getElementById("undobtn2").disabled = false;
 	}
-	// disable redo_nappi
-	document.getElementById("redo_nappi").disabled = true; document.getElementById("redo_nappi2").disabled = true;
+	// disable redobtn
+	document.getElementById("redobtn").disabled = true; document.getElementById("redobtn2").disabled = true;
 }
 
 
@@ -601,13 +621,13 @@ function history_undo(){
 	var previous = history_past[history_past.length - 1];
 	writeEverything(previous);
 	
-	// enable redo_nappi
-	document.getElementById("redo_nappi").disabled = false;
-	document.getElementById("redo_nappi2").disabled = false;
-	//history exists, enable undo_nappi
+	// enable redobtn
+	document.getElementById("redobtn").disabled = false;
+	document.getElementById("redobtn2").disabled = false;
+	//history exists, enable undobtn
 	if(history_past.length < 2) {
-		document.getElementById("undo_nappi").disabled = true;
-		document.getElementById("undo_nappi2").disabled = true;
+		document.getElementById("undobtn").disabled = true;
+		document.getElementById("undobtn2").disabled = true;
 	}
 	
 	//Hover to scroll long nameplate names
@@ -634,15 +654,15 @@ function history_redo(){
 	writeEverything(previous);
 	
 	
-	//history exists, enable undo_nappi
+	//history exists, enable undobtn
 	if(history_past.length > 1) {
-		document.getElementById("undo_nappi").disabled = false;
-		document.getElementById("undo_nappi2").disabled = false;
+		document.getElementById("undobtn").disabled = false;
+		document.getElementById("undobtn2").disabled = false;
 	}
-	// disable redo_nappi
+	// disable redobtn
 	if(redo_stack.length < 1) {
-		document.getElementById("redo_nappi").disabled = true;
-		document.getElementById("redo_nappi2").disabled = true;
+		document.getElementById("redobtn").disabled = true;
+		document.getElementById("redobtn2").disabled = true;
 	}
 	
 	//Hover to scroll long nameplate names

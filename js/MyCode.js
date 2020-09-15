@@ -1,9 +1,46 @@
 //Enjoy looking at the ametuer code work I've done.
 $(document).ready(function() {
 	
+	/******Theme Cookie******/
+	if(document.cookie == "theme=H1") {
+		document.documentElement.className = "h1theme";
+		$("#theme_h1old span").text("[On]");
+		$("#theme_h1goty, #theme_h2, #theme_h3").find("span").text("[Off]");
+    }
+	else if(document.cookie == "theme=H1goty") {
+		document.documentElement.className = "h1gotytheme";
+		$("#theme_h1goty span").text("[On]");
+		$("#theme_h1old, #theme_h2, #theme_h3").find("span").text("[Off]");
+	}
+	else if(document.cookie == "theme=H2") {
+		document.documentElement.className = "h2theme";
+		$("#theme_h2 span").text("[On]");
+		$("#theme_h1old, #theme_h1goty, #theme_h3").find("span").text("[Off]");
+	}
+	else if(document.cookie == "theme=H3") {
+		document.documentElement.className = "h3theme";
+		$("#theme_h3 span").text("[On]");
+		$("#theme_h1old, #theme_h1goty, #theme_h2").find("span").text("[Off]");
+	}
+	else {
+		document.documentElement.className = "h2theme"; //change to h3 once it's done.
+		$("#theme_h2 span").text("[On]");
+		$("#theme_h1old, #theme_h1goty, #theme_h3").find("span").text("[Off]");
+	};
+	
+	/******Scrollbar******/
+	$('#contract').scrollbar({
+		"scrollx": $('.external-scroll_x1')
+	});
+	$('#maps').scrollbar({
+		"scrollx": $('.external-scroll_x2')
+	});
+	$('#credits_submenu').scrollbar({
+		"scrolly": $('.external-scroll_y')
+	});
+
 	/******Hide History & Contract Save Buttons on Refresh******/
-	$('.historybtn').prop('disabled',true);
-	$( "#saveroulette" ).prop('disabled', true);
+	$( ".historybtn, #submenu_obj, #submenu_comp, #submenu_chal, #subsubmenu_obj, #subsubmenu_comp, #subsubmenu_chal, #saveroulette, #subsaveroulette" ).prop('disabled', true);
 	$( ".clearme" ).val("");
 	
 	/******Roulette Greeting******/
@@ -27,24 +64,31 @@ $(document).ready(function() {
 		else {
 			$( this ).addClass( "on" );
 			$( this ).siblings().removeClass( "on" );
-			$( "#header" ).removeClass( "off" );
-			$( "#maps, #settings, #credits" ).hide();
-			$( "#contract" ).show();
-			$( "html" ).removeClass( "hide" );
+			$( "#header, #headermobile, #submenumobile" ).removeClass( "off" );
+			$( "#content" ).removeClass( "tall" );
+			$( "#content" ).removeClass( "med" );
+			$( "#maps, #settings, #credits, .submenumobile_map" ).hide();
+			$( "#contract, .submenumobile_mission" ).show();
+			if($("#background").hasClass()) { $( "body" ).addClass( "hide" ); };
+			$( "#background" ).removeClass( "hide" );
 			$( "#saveroulette" ).show('slide',{ direction: 'right' }, 500);
-		};	
+		};
 	});
 	$( "#missions" ).click(function() {
 		$( this ).addClass( "on" );
 		$( this ).siblings().removeClass( "on" );
-		$( "#header" ).addClass( "off" );
-		$( "#contract, #settings, #credits" ).hide();
-		$( "#maps" ).show();
-		$( "html" ).addClass( "hide" );
+		$( "#header, #headermobile" ).addClass( "off" );
+		$( "#submenumobile" ).removeClass( "off" );
+		$( "#content" ).removeClass( "tall" );
+		$( "#content" ).addClass( "med" );
+		$( "#contract, #settings, #credits, .submenumobile_mission" ).hide();
+		$( "#maps, .submenumobile_map" ).show();
+		$( "body" ).removeClass( "hide" );
+		$( "#background" ).addClass( "hide" );
 		$( "#saveroulette" ).hide('slide',{ direction: 'right' }, 500);
 		
 		if($("#mode_con").hasClass("intel") || $("#mode_con").hasClass("hunt")) {
-			$("input.noncon").prop('checked', false).prop('disabled', true).parent().parent().addClass("lock");
+			$("input.noncon").prop('checked', false).prop('disabled', true).parent().parent().parent().addClass("lock");
 			$("span.noncon").hide();
 			$("b.noncon").show();
 		};
@@ -52,46 +96,90 @@ $(document).ready(function() {
 	$( "#options" ).click(function() {
 		$( this ).addClass( "on" );
 		$( this ).siblings().removeClass( "on" );
-		$( "#header" ).addClass( "off" );
+		$( "#header, #headermobile, #submenumobile" ).addClass( "off" );
+		$( "#content" ).addClass( "tall" );
+		$( "#content" ).removeClass( "med" );
 		$( "#contract, #maps, #credits" ).hide();
 		$( "#settings" ).show();
-		$( "html" ).addClass( "hide" );
+		$( "body" ).removeClass( "hide" );
+		$( "#background" ).addClass( "hide" );
 		$( "#saveroulette" ).hide('slide',{ direction: 'right' }, 500);
 	});
 	$( "#about" ).click(function() {
 		$( this ).addClass( "on" );
 		$( this ).siblings().removeClass( "on" );
-		$( "#header" ).addClass( "off" );
+		$( "#header, #headermobile, #submenumobile" ).addClass( "off" );
+		$( "#content" ).addClass( "tall" );
+		$( "#content" ).removeClass( "med" );
 		$( "#contract, #maps, #settings" ).hide();
 		$( "#credits" ).show();
-		$( "html" ).addClass( "hide" );
+		$( "body" ).removeClass( "hide" );
+		$( "#background" ).addClass( "hide" );
 		$( "#saveroulette" ).hide('slide',{ direction: 'right' }, 500);
 	});
 	
 	/******Roulette Submenu Buttons******/
 	$( "#submenu_obj" ).click(function() {
 		$( this ).addClass( "on" );
+		$( "#subsubmenu_obj" ).addClass( "on" );
 		$( "#travel, div[id^='target'], div[id^='objective']" ).show();
 		$( "div[id^='complication'], #restriction, #timelimit, #ratingget, #diffget, #challengesi" ).hide();
 		$( this ).siblings().removeClass( "on" );
+		$( "#subsubmenu_comp, #subsubmenu_chal" ).removeClass( "on" );
 	});
 	$( "#submenu_comp" ).click(function() {
 		$( this ).addClass( "on" );
+		$( "#subsubmenu_comp" ).addClass( "on" );
 		$( "div[id^='complication']" ).show();
 		$( "#travel, div[id^='target'], div[id^='objective'], #restriction, #timelimit, #ratingget, #diffget, #challengesi" ).hide();
 		$( this ).siblings().removeClass( "on" );
+		$( "#subsubmenu_obj, #subsubmenu_chal" ).removeClass( "on" );
 	});
 	$( "#submenu_chal" ).click(function() {
 		$( this ).addClass( "on" );
+		$( "#subsubmenu_chal" ).addClass( "on" );
 		$( "#restriction, #timelimit, #ratingget, #diffget, #challengesi" ).show();
 		$( "#travel, div[id^='target'], div[id^='objective'], div[id^='complication']" ).hide();
 		$( this ).siblings().removeClass( "on" );
+		$( "#subsubmenu_obj, #subsubmenu_comp" ).removeClass( "on" );
 	});
 	$( "#submenu_issue" ).click(function() {
 		$( "#map" ).addClass( "on" );
-		$( "#submenu_obj" ).addClass( "on" );
+		$( "#submenu_obj, #subsubmenu_obj" ).addClass( "on" ).prop('disabled', false);
 		$( "#travel, div[id^='target'], div[id^='objective']" ).show();
 		$( "div[id^='complication'], div[id^='restriction'], #timelimit, #ratingget, #diffget, #challengesi" ).hide();
+		$( "#submenu_obj" ).siblings().removeClass( "on" );
+		$( "#subsubmenu_comp, #subsubmenu_chal" ).removeClass( "on" );
+	});
+	
+	/******Roulette Submenu Submenu Buttons******/
+	$( "#subsubmenu_obj" ).click(function() {
+		$( this ).addClass( "on" );
+		$( "#submenu_obj" ).addClass( "on" ).siblings().removeClass( "on" );
+		$( "#travel, div[id^='target'], div[id^='objective']" ).show();
+		$( "div[id^='complication'], #restriction, #timelimit, #ratingget, #diffget, #challengesi" ).hide();
+		$( "#subsubmenu_comp, #subsubmenu_chal, #subsubmenu_issue" ).removeClass( "on" );
+	});
+	$( "#subsubmenu_comp" ).click(function() {
+		$( this ).addClass( "on" );
+		$( "#submenu_comp" ).addClass( "on" ).siblings().removeClass( "on" );
+		$( "div[id^='complication']" ).show();
+		$( "#travel, div[id^='target'], div[id^='objective'], #restriction, #timelimit, #ratingget, #diffget, #challengesi" ).hide();
+		$( "#subsubmenu_obj, #subsubmenu_chal, #subsubmenu_issue" ).removeClass( "on" );
+	});
+	$( "#subsubmenu_chal" ).click(function() {
+		$( this ).addClass( "on" );
+		$( "#submenu_chal" ).addClass( "on" ).siblings().removeClass( "on" );
+		$( "#restriction, #timelimit, #ratingget, #diffget, #challengesi" ).show();
+		$( "#travel, div[id^='target'], div[id^='objective'], div[id^='complication']" ).hide();
+		$( "#subsubmenu_comp, #subsubmenu_obj, #subsubmenu_issue" ).removeClass( "on" );
+	});
+	$( "#subsubmenu_issue" ).click(function() {
+		$( "#map" ).addClass( "on" );
+		$( "#subsubmenu_obj, #submenu_obj" ).addClass( "on" ).prop('disabled', false);
+		$( "#travel, div[id^='target'], div[id^='objective']" ).show();
+		$( "div[id^='complication'], div[id^='restriction'], #timelimit, #ratingget, #diffget, #challengesi" ).hide();
+		$( "#subsubmenu_comp, #subsubmenu_chal, #subsubmenu_issue" ).removeClass( "on" );
 		$( "#submenu_obj" ).siblings().removeClass( "on" );
 	});	
 	
@@ -126,202 +214,284 @@ $(document).ready(function() {
 		$( "label[id^='rand'], div[id^='rand'], div#h1, div#h1dlc, div#h2" ).hide();
 		$( this ).siblings().removeClass( "on" );
 	});
-		
+	
+	/******Map Select Subsmenu Submenu Buttons******/
+	$( "#subsubmenu_random" ).click(function() {
+		$( this ).addClass( "on" );
+		$( "label[id^='rand'], div[id^='rand']" ).show();
+		$( "div#h1, div#h1dlc, div#h2, div#h2dlc" ).hide();
+		$( "#subsubmenu_h1, #subsubmenu_h1dlc, #subsubmenu_h2, #subsubmenu_h2dlc, #subsubmenu_h3, #subsubmenu_h3dlc" ).removeClass( "on" );
+	});
+	$( "#subsubmenu_h1" ).click(function() {
+		$( this ).addClass( "on" );
+		$( "div#h1" ).show();
+		$( "label[id^='rand'], div[id^='rand'], div#h1dlc, div#h2, div#h2dlc" ).hide();
+		$( "#subsubmenu_random, #subsubmenu_h1dlc, #subsubmenu_h2, #subsubmenu_h2dlc, #subsubmenu_h3, #subsubmenu_h3dlc" ).removeClass( "on" );
+	});
+	$( "#subsubmenu_h1dlc" ).click(function() {
+		$( this ).addClass( "on" );
+		$( "div#h1dlc" ).show();
+		$( "label[id^='rand'], div[id^='rand'], div#h1, div#h2, div#h2dlc" ).hide();
+		$( "#subsubmenu_random, #subsubmenu_h1, #subsubmenu_h2, #subsubmenu_h2dlc, #subsubmenu_h3, #subsubmenu_h3dlc" ).removeClass( "on" );
+	});
+	$( "#subsubmenu_h2" ).click(function() {
+		$( this ).addClass( "on" );
+		$( "div#h2" ).show();
+		$( "label[id^='rand'], div[id^='rand'], div#h1, div#h1dlc, div#h2dlc" ).hide();
+		$( "#subsubmenu_random, #subsubmenu_h1, #subsubmenu_h1dlc, #subsubmenu_h2dlc, #subsubmenu_h3, #subsubmenu_h3dlc" ).removeClass( "on" );
+	});
+	$( "#subsubmenu_h2dlc" ).click(function() {
+		$( this ).addClass( "on" );
+		$( "div#h2dlc" ).show();
+		$( "label[id^='rand'], div[id^='rand'], div#h1, div#h1dlc, div#h2" ).hide();
+		$( "#subsubmenu_random, #subsubmenu_h1, #subsubmenu_h1dlc, #subsubmenu_h2, #subsubmenu_h3, #subsubmenu_h3dlc" ).removeClass( "on" );
+	});
+	
 	/******Map Select Checkbox Logic******/
 	//Style nameplate if checkbox "on"
-	$("#maps input:checked").parent().addClass("on");
+	$("#maps input:checked").parent().parent().addClass("on");
 	
 	$("#maps input:checkbox").change(function(){
 		//Toggle nameplate style "on" when location selected
 		if($(this).is(":checked")) {
-			$(this).parent().addClass("on");
+			$(this).parent().parent().addClass("on");
 		} else {
-			$(this).parent().removeClass("on");
+			$(this).parent().parent().removeClass("on");
 		};
 		
 		//Toggle Random All if every level is selected or not
 		if($(this).is("#RANDOM:checked") && ($("#mode_con").hasClass("intel") || $("#mode_con").hasClass("hunt")) ) {
-			$( "input[id^='RANDOM'], input.h1, input.h1bm, input#TS, input.h2, input.h2ex" ).prop('checked', true).parent().addClass("on");
+			$( "input[id^='RANDOM'], input.h1, input.h1bm, input#TS, input.h2, input.h2ex" ).prop('checked', true).parent().parent().addClass("on");
 		}
 		else if($(this).is("#RANDOM:checked") && !($("#mode_con").hasClass("intel") || $("#mode_con").hasClass("hunt")) ) {
-			$( "input[id^='RANDOM'], input.h1, input.h1bm, input.h1pz, input.h1sc, input.h2, input.h2ex, input.h2sa" ).prop('checked', true).parent().addClass("on");
+			$( "input[id^='RANDOM'], input.h1, input.h1bm, input.h1pz, input.h1sc, input.h2, input.h2ex, input.h2sa" ).prop('checked', true).parent().parent().addClass("on");
 		}
 		else if($(this).is("#RANDOM:not(:checked)")) {
-			$( "input[id^='RANDOM'], input.h1, input.h1bm, input.h1pz, input.h1sc, input.h2, input.h2ex, input.h2sa" ).prop('checked', false).parent().removeClass("on");
+			$( "input[id^='RANDOM'], input.h1, input.h1bm, input.h1pz, input.h1sc, input.h2, input.h2ex, input.h2sa" ).prop('checked', false).parent().parent().removeClass("on");
 		}
 		else if($(this).is("#RANDOMH1:checked")) {
-			$( "input.h1" ).prop('checked', true).parent().addClass("on");
-			if($(".lvl:checked").length == $(".lvl").length) {
-				$("input#RANDOM").prop('checked', true).parent().addClass("on");
+			$( "input.h1" ).prop('checked', true).parent().parent().addClass("on");
+			if($(".lvl:checked").not(".h1s6").length == $(".lvl").not(".h1s6").length) {
+				$("input#RANDOM").prop('checked', true).parent().parent().addClass("on");
 			};
 		}
 		else if($(this).is("#RANDOMH1:not(:checked)")) {
-			$( "input.h1, input#RANDOM" ).prop('checked', false).parent().removeClass("on");
+			$( "input.h1, input#RANDOM" ).prop('checked', false).parent().parent().removeClass("on");
 		}
 		else if($(this).is("#RANDOMH1BM:checked")) {
-			$( "input.h1bm" ).prop('checked', true).parent().addClass("on");
-			if($(".lvl:checked").length == $(".lvl").length) {
-				$("input#RANDOM").prop('checked', true).parent().addClass("on");
+			$( "input.h1bm" ).prop('checked', true).parent().parent().addClass("on");
+			if($(".lvl:checked").not(".h1s6").length == $(".lvl").not(".h1s6").length) {
+				$("input#RANDOM").prop('checked', true).parent().parent().addClass("on");
 			};
 		}
 		else if($(this).is("#RANDOMH1BM:not(:checked)")) {
-			$( "input.h1bm, input#RANDOM" ).prop('checked', false).parent().removeClass("on");
+			$( "input.h1bm, input#RANDOM" ).prop('checked', false).parent().parent().removeClass("on");
 		}
 		else if($(this).is("#RANDOMH1PZ:checked")) {
-			$( "input.h1pz" ).prop('checked', true).parent().addClass("on");
-			if($(".lvl:checked").length == $(".lvl").length) {
-				$("input#RANDOM").prop('checked', true).parent().addClass("on");
+			$( "input.h1pz" ).prop('checked', true).parent().parent().addClass("on");
+			if($(".lvl:checked").not(".h1s6").length == $(".lvl").not(".h1s6").length) {
+				$("input#RANDOM").prop('checked', true).parent().parent().addClass("on");
 			};
 		}
 		else if($(this).is("#RANDOMH1PZ:not(:checked)")) {
-			$( "input.h1pz, input#RANDOM" ).prop('checked', false).parent().removeClass("on");
+			$( "input.h1pz, input#RANDOM" ).prop('checked', false).parent().parent().removeClass("on");
 		}
 		else if($(this).is("#RANDOMH1SC:checked")) {
-			$( "input.h1sc" ).prop('checked', true).parent().addClass("on");
-			if($(".lvl:checked").length == $(".lvl").length) {
-				$("input#RANDOM").prop('checked', true).parent().addClass("on");
+			$( "input.h1sc" ).prop('checked', true).parent().parent().addClass("on");
+			if($(".lvl:checked").not(".h1s6").length == $(".lvl").not(".h1s6").length) {
+				$("input#RANDOM").prop('checked', true).parent().parent().addClass("on");
 			};
 		}
 		else if($(this).is("#RANDOMH1SC:not(:checked)")) {
-			$( "input.h1sc, input#RANDOM" ).prop('checked', false).parent().removeClass("on");
+			$( "input.h1sc, input#RANDOM" ).prop('checked', false).parent().parent().removeClass("on");
+		}
+		else if($(this).is("#RANDOMH1S6:checked")) { //Sarajevo Six Omitted from Random All
+			$( "input.h1s6" ).prop('checked', true).parent().parent().addClass("on");
+		}
+		else if($(this).is("#RANDOMH1S6:not(:checked)")) { //Sarajevo Six Omitted from Random All
+			$( "input.h1s6" ).prop('checked', false).parent().parent().removeClass("on");
 		}
 		else if($(this).is("#RANDOMH2:checked")) {
-			$( "input.h2" ).prop('checked', true).parent().addClass("on");
-			if($(".lvl:checked").length == $(".lvl").length) {
-				$("input#RANDOM").prop('checked', true).parent().addClass("on");
+			$( "input.h2" ).prop('checked', true).parent().parent().addClass("on");
+			if($(".lvl:checked").not(".h1s6").length == $(".lvl").not(".h1s6").length) {
+				$("input#RANDOM").prop('checked', true).parent().parent().addClass("on");
 			};
 		}
 		else if($(this).is("#RANDOMH2:not(:checked)")) {
-			$( "input.h2, input#RANDOM" ).prop('checked', false).parent().removeClass("on");
+			$( "input.h2, input#RANDOM" ).prop('checked', false).parent().parent().removeClass("on");
 		}
 		else if($(this).is("#RANDOMH2EX:checked")) {
-			$( "input.h2ex" ).prop('checked', true).parent().addClass("on");
-			if($(".lvl:checked").length == $(".lvl").length) {
-				$("input#RANDOM").prop('checked', true).parent().addClass("on");
+			$( "input.h2ex" ).prop('checked', true).parent().parent().addClass("on");
+			if($(".lvl:checked").not(".h1s6").length == $(".lvl").not(".h1s6").length) {
+				$("input#RANDOM").prop('checked', true).parent().parent().addClass("on");
 			};
 		}
 		else if($(this).is("#RANDOMH2EX:not(:checked)")) {
-			$( "input.h2ex, input#RANDOM" ).prop('checked', false).parent().removeClass("on");
+			$( "input.h2ex, input#RANDOM" ).prop('checked', false).parent().parent().removeClass("on");
 		}
 		else if($(this).is("#RANDOMH2SA:checked")) {
-			$( "input.h2sa" ).prop('checked', true).parent().addClass("on");
-			if($(".lvl:checked").length == $(".lvl").length) {
-				$("input#RANDOM").prop('checked', true).parent().addClass("on");
+			$( "input.h2sa" ).prop('checked', true).parent().parent().addClass("on");
+			if($(".lvl:checked").not(".h1s6").length == $(".lvl").not(".h1s6").length) {
+				$("input#RANDOM").prop('checked', true).parent().parent().addClass("on");
 			};
 		}
 		else if($(this).is("#RANDOMH2SA:not(:checked)")) {
-			$( "input.h2sa, input#RANDOM" ).prop('checked', false).parent().removeClass("on");
+			$( "input.h2sa, input#RANDOM" ).prop('checked', false).parent().parent().removeClass("on");
 		}
-		else if($(".lvl:checked").length == $(".lvl").length) {
-			$("input#RANDOM").prop('checked', true).parent().addClass("on");
+		else if($(".lvl:checked").not(".h1s6").length == $(".lvl").not(".h1s6").length) {
+			$("input#RANDOM").prop('checked', true).parent().parent().addClass("on");
 		}
 		else {
-			$("input#RANDOM").prop('checked', false).parent().removeClass("on");
+			$("input#RANDOM").prop('checked', false).parent().parent().removeClass("on");
 		};
 		
 		//Toggle Random Hitman 1 if H1 levels are selected or not
 		if($(".h1:checked").length == $(".h1").length) {
-			$("input#RANDOMH1").prop('checked', true).parent().addClass("on");
+			$("input#RANDOMH1").prop('checked', true).parent().parent().addClass("on");
 		}
 		else {
-			$("input#RANDOMH1").prop('checked', false).parent().removeClass("on");
+			$("input#RANDOMH1").prop('checked', false).parent().parent().removeClass("on");
 		};
 	
 		//Toggle Random Bonus Missions if H1BM levels are selected or not
 		if($(".h1bm:checked").length == $(".h1bm").length) {
-			$("input#RANDOMH1BM").prop('checked', true).parent().addClass("on");
+			$("input#RANDOMH1BM").prop('checked', true).parent().parent().addClass("on");
 		}
 		else {
-			$("input#RANDOMH1BM").prop('checked', false).parent().removeClass("on");
+			$("input#RANDOMH1BM").prop('checked', false).parent().parent().removeClass("on");
 		};
 		
 		//Toggle Random Patient Zero Missions if H1PZ levels are selected or not
 		if($(".h1pz:checked").length == $(".h1pz").length) {
-			$("input#RANDOMH1PZ").prop('checked', true).parent().addClass("on");
+			$("input#RANDOMH1PZ").prop('checked', true).parent().parent().addClass("on");
 		}
 		else {
-			$("input#RANDOMH1PZ").prop('checked', false).parent().removeClass("on");
+			$("input#RANDOMH1PZ").prop('checked', false).parent().parent().removeClass("on");
 		};
 	
 		//Toggle Random Seasonal Content if H1SC levels are selected or not
 		if($(".h1sc:checked").length == $(".h1sc").length) {
-			$("input#RANDOMH1SC").prop('checked', true).parent().addClass("on");
+			$("input#RANDOMH1SC").prop('checked', true).parent().parent().addClass("on");
 		}
 		else {
-			$("input#RANDOMH1SC").prop('checked', false).parent().removeClass("on");
+			$("input#RANDOMH1SC").prop('checked', false).parent().parent().removeClass("on");
+		};
+		
+		//Toggle Random Sarajevo Six Content if H1S6 levels are selected or not
+		if($(".h1s6:checked").length == $(".h1s6").length) {
+			$("input#RANDOMH1S6").prop('checked', true).parent().parent().addClass("on");
+		}
+		else {
+			$("input#RANDOMH1S6").prop('checked', false).parent().parent().removeClass("on");
 		};
 	
 		//Toggle Random Hitman 2 if H2 levels are selected or not
 		if($(".h2:checked").length == $(".h2").length) {
-			$("input#RANDOMH2").prop('checked', true).parent().addClass("on");
+			$("input#RANDOMH2").prop('checked', true).parent().parent().addClass("on");
 		}
 		else {
-			$("input#RANDOMH2").prop('checked', false).parent().removeClass("on");
+			$("input#RANDOMH2").prop('checked', false).parent().parent().removeClass("on");
 		};
 		
 		//Toggle Hitman 2 Expansions if H2EX levels are selected or not
 		if($(".h2ex:checked").length == $(".h2ex").length) {
-			$("input#RANDOMH2EX").prop('checked', true).parent().addClass("on");
+			$("input#RANDOMH2EX").prop('checked', true).parent().parent().addClass("on");
 		}
 		else {
-			$("input#RANDOMH2EX").prop('checked', false).parent().removeClass("on");
+			$("input#RANDOMH2EX").prop('checked', false).parent().parent().removeClass("on");
 		};
 		
 		//Toggle Hitman 2 Special Assignments if H2SA levels are selected or not
 		if($(".h2sa:checked").length == $(".h2sa").length) {
-			$("input#RANDOMH2SA").prop('checked', true).parent().addClass("on");
+			$("input#RANDOMH2SA").prop('checked', true).parent().parent().addClass("on");
 		}
 		else {
-			$("input#RANDOMH2SA").prop('checked', false).parent().removeClass("on");
+			$("input#RANDOMH2SA").prop('checked', false).parent().parent().removeClass("on");
 		};
 	});
-
 	/******Options Select Submenu Buttons******/
-	$( "#submenu_roulette" ).click(function() {
+	$( "#settings_theme" ).click(function() {
+		$( this ).addClass( "on" );
+		$( "label[id^='theme_']" ).show();
+		$( "label[id^='mode_'], label[id^='kill_'], label[id^='extra_'], label[id^='game_']" ).hide();
+		$( this ).siblings().removeClass( "on" );
+	});
+	$( "#settings_roulette" ).click(function() {
 		$( this ).addClass( "on" );
 		$( "label[id^='mode_']" ).show();
-		$( "label[id^='kill_'], label[id^='extra_'], label[id^='game_']" ).hide();
+		$( "label[id^='theme_'], label[id^='kill_'], label[id^='extra_'], label[id^='game_']" ).hide();
 		$( this ).siblings().removeClass( "on" );
 	});
-	$( "#submenu_kills" ).click(function() {
+	$( "#settings_kills" ).click(function() {
 		$( this ).addClass( "on" );
 		$( "label[id^='kill_']" ).show();
-		$( "label[id^='mode_'], label[id^='extra_'], label[id^='game_']" ).hide();
+		$( "label[id^='theme_'], label[id^='mode_'], label[id^='extra_'], label[id^='game_']" ).hide();
 		$( this ).siblings().removeClass( "on" );
 	});
-		$( "#submenu_extras" ).click(function() {
+	$( "#settings_extras" ).click(function() {
 		$( this ).addClass( "on" );
 		$( "label[id^='extra_']" ).show();
-		$( "label[id^='mode_'], label[id^='kill_'], label[id^='game_']" ).hide();
+		$( "label[id^='theme_'], label[id^='mode_'], label[id^='kill_'], label[id^='game_']" ).hide();
 		$( this ).siblings().removeClass( "on" );
 	});
-		$( "#submenu_challenges" ).click(function() {
+	$( "#settings_challenges" ).click(function() {
 		$( this ).addClass( "on" );
 		$( "label[id^='game_']" ).show();
-		$( "label[id^='mode_'], label[id^='extra_'], label[id^='kill_']" ).hide();
+		$( "label[id^='theme_'], label[id^='mode_'], label[id^='extra_'], label[id^='kill_']" ).hide();
 		$( this ).siblings().removeClass( "on" );
 	});
 	
-	/******Range Values Displayed******/
-	/*$(document).on('input', '#etslider', function() {
-		$('#etamount').html( $(this).val() );
-	});*/
-	$(document).on('input', '#compslider', function() {
+	/******Range Value Displayed for Complications Slider******/
+		$(document).on('input', '#compslider', function() {
 		$('#compamount').html( $(this).val() );
 	});
 	
 	/******Options Select Submenu Descriptions******/
-	$( "#settings_subsubmenu label" ).hover(function() {
-		var title = $(this).children("b").text();
-		var desc =  $(this).attr("data-hover");
-		$( "#settings_descriptions h1" ).text(title);
-		$( "#settings_descriptions p" ).html(desc);
-	}, function() {
-		$( "#settings_descriptions h1" ).text("");
-		$( "#settings_descriptions p" ).html("");
-	});
+	if(jQuery.browser.mobile) {
+	   	$( "#settings_subsubmenu" ).css("grid-template-columns","min-content 1fr");
+		$( "#settings_subsubmenu label:not(.mobile)" ).css("padding-left","5px");
+		$( "#settings_subsubmenu label.mobile" ).css("padding-right","5px");
+		$( "#theme_cookies" ).css("grid-column","1 / span 2");
+		$( "#settings_subsubmenu label.mobile" ).click(function() {
+			var desc =  $(this).attr("data-hover");
+			$( "#settings_descriptions p" ).html(desc);
+		});
+	}
+	else {
+		$( "label.mobile" ).remove();
+	   	$( "#settings_subsubmenu label:not(.mobile)" ).hover(function() {
+			var title = $(this).children("b").text();
+			var desc =  $(this).attr("data-hover");
+			$( "#settings_descriptions h1" ).text(title);
+			$( "#settings_descriptions p" ).html(desc);
+		}, function() {
+			$( "#settings_descriptions h1" ).text("");
+			$( "#settings_descriptions p" ).html("");
+		});
+	}
 	
 	/******Options Select Submenu Logic******/
+	$("#theme_h1old").click(function() {
+		$(this).find("span").text("[On]");
+		document.documentElement.className = "h1theme";
+		$("#theme_h1goty, #theme_h2, #theme_h3").find("span").text("[Off]");
+	});
+	$("#theme_h1goty").click(function() {
+		$(this).find("span").text("[On]");
+		document.documentElement.className = "h1gotytheme";
+		$("#theme_h1old, #theme_h2, #theme_h3").find("span").text("[Off]");
+	});	
+	$("#theme_h2").click(function() {
+		$(this).find("span").text("[On]");
+		document.documentElement.className = "h2theme";
+		$("#theme_h1old, #theme_h1goty, #theme_h3").find("span").text("[Off]");
+	});	
+	$("#theme_h3").click(function() {
+		$(this).find("span").text("[On]");
+		document.documentElement.className = "h3theme";
+		$("#theme_h1old, #theme_h1goty, #theme_h2").find("span").text("[Off]");
+	});	
+		
 	function makeItMain() {
 		$("#mode_mission").addClass("on").find("span").text("[On]");
 		$("#modeselect").val("MAIN");
@@ -337,12 +507,12 @@ $(document).ready(function() {
 		$("#etamount").html("0");		
 	}
 	function lockMaps() {
-		$("input.noncon").prop('checked', false).prop('disabled', true).parent().parent().addClass("lock");
+		$("input.noncon").prop('checked', false).prop('disabled', true).parent().parent().parent().addClass("lock");
 		$("span.noncon").hide();
 		$("b.noncon").show();
 	}
 	function unlockMaps() {
-		$("input.noncon").prop('disabled', false).parent().parent().removeClass("lock");
+		$("input.noncon").prop('disabled', false).parent().parent().parent().removeClass("lock");
 		$("span.noncon").show();
 		$("b.noncon").hide();
 	}
@@ -432,19 +602,6 @@ $(document).ready(function() {
 		
 	};
 	
-	/******Scrollbar******/
-	$(document).ready(function(){
-		$('#contract').scrollbar({
-			"scrollx": $('.external-scroll_x1')
-		});
-		$('#maps').scrollbar({
-			"scrollx": $('.external-scroll_x2')
-		});
-		$('.credits_scroll').scrollbar({
-			"scrolly": $('.external-scroll_y')
-		});	
-	});
-	
 	/******Scroll wheel for horizontal bar******/
 	function scrollHorizontally(e) {
 		e = window.event || e;
@@ -465,7 +622,8 @@ $(document).ready(function() {
 	};
 	
 	/******Save contract as TXT from a textarea******/	
-	$("#saveroulette").click(function(){
+	
+	$("#saveroulette, #subsaveroulette").click(function(){
 		$("#shadow").removeClass("hidden");
 	});
 	
@@ -501,4 +659,5 @@ $(document).ready(function() {
 	$("#close").click(function(){
 		$("#shadow").addClass("hidden");
 	});
+	
 });
