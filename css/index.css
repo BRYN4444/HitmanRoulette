@@ -907,7 +907,7 @@ div[id^="subplate"].intel span p {
 @media only screen and (max-width: 808px) {
 	#logothin #nameplate { background-image:var(--arrowdownrightnameplate); }
 }
-#rand-all, #top, #bottom { background-size:auto 100%; }
+#rand-all, #top, #bottom { background-size:100% auto; }
 #entry #nameplate { background-image:var(--entry); }
 #exit #nameplate { background-image:var(--exit); }
 #subplate.method { background-image:var(--method); }

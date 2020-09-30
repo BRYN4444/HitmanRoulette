@@ -1,13 +1,13 @@
 #rand-all { background-image:url("../img/general/hx.jpg"); }
-.rand-h1 { background-image:url("../img/general/h1.webp");background-repeat:no-repeat;background-position:top center;background-size:100%; }
-.rand-h2 { background-image:url("../img/general/h2.webp");background-repeat:no-repeat;background-position:top center;background-size:100%; }
-.rand-h3 { background-image:url("../img/general/h3.webp");background-repeat:no-repeat;background-position:top center;background-size:100%; }
-.rand-h1bm { background-image:url("../img/general/h1bm.jpg");background-repeat:no-repeat;background-position:top center;background-size:100%; }
-.rand-h1pz { background-image:url("../img/general/h1pz.jpg");background-repeat:no-repeat;background-position:top center;background-size:100%; }
-.rand-h1sc { background-image:url("../img/general/h1sc.jpg");background-repeat:no-repeat;background-position:top center;background-size:100%; }
-.rand-h1s6 { background-image:url("../img/general/h1s6.jpg");background-repeat:no-repeat;background-position:top center;background-size:100%; }
-.rand-h2ex { background-image:url("../img/general/h2ex.jpg");background-repeat:no-repeat;background-position:top center;background-size:100%; }
-.rand-h2sa { background-image:url("../img/general/h2sa.jpg");background-repeat:no-repeat;background-position:top center;background-size:100%; }
+.rand-h1 { background-image:url("../img/general/h1.webp");background-repeat:no-repeat;background-position:top center; background-size:auto 100% !important; }
+.rand-h2 { background-image:url("../img/general/h2.webp");background-repeat:no-repeat;background-position:top center; background-size:auto 100% !important; }
+.rand-h3 { background-image:url("../img/general/h3.webp");background-repeat:no-repeat;background-position:top center; background-size:auto 100% !important; }
+.rand-h1bm { background-image:url("../img/general/h1bm.jpg");background-repeat:no-repeat;background-position:top center; }
+.rand-h1pz { background-image:url("../img/general/h1pz.jpg");background-repeat:no-repeat;background-position:top center; }
+.rand-h1sc { background-image:url("../img/general/h1sc.jpg");background-repeat:no-repeat;background-position:top center; }
+.rand-h1s6 { background-image:url("../img/general/h1s6.jpg");background-repeat:no-repeat;background-position:top center; }
+.rand-h2ex { background-image:url("../img/general/h2ex.jpg");background-repeat:no-repeat;background-position:top center; }
+.rand-h2sa { background-image:url("../img/general/h2sa.jpg");background-repeat:no-repeat;background-position:top center; }
 .m0-3 { background:#292929 url("../img/missions/0-3.png") no-repeat center top / 350px; }
 .m0-4 { background:#292929 url("../img/missions/0-4.png") no-repeat center top / 350px; }
 .m1-1 { background:#292929 url("../img/missions/1-1.png") no-repeat center top / 350px; }
