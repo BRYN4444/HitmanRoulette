@@ -889,6 +889,8 @@ div[id^="subplate"].intel span p {
 	text-overflow:ellipsis;
 	cursor:default;
 }
+#hint a { text-shadow:none; }
+#hint a:hover { color:#000000; }
 #logo.welcome { background-image:url("../img/general/HRwelcome.jpg"); }
 #logothin.welcome { 
 	background-image:url("../img/general/logo.png"), url("../img/general/HRwelcome_thin.jpg");

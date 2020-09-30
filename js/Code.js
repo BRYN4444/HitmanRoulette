@@ -289,7 +289,11 @@ function writeEverything(result) {
 			else { // elimination method
 				document.getElementById("subtitle" + (i+1)).innerHTML = result.weapons[i].split('|')[0];
 				document.getElementById("input_weapon" + (i+1)).value = ", using: " + result.weapons[i].split('|')[0];
-				if(result.weapons[i].split('|')[1] != null) { // method subtype
+				if(result.weapons[i].split('|')[2] != null) { // method subtype hint
+					document.getElementById("subtitle-alt" + (i+1)).innerHTML = result.weapons[i].split('|')[1] + " (<a target='_blank' href='./img/general/" + result.weapons[i].split('|')[2] + "'>Hint</a>)";
+					document.getElementById("input_weaponsub" + (i+1)).value = " (" + result.weapons[i].split('|')[1] + ")";
+				}
+				else if(result.weapons[i].split('|')[1] != null) { // method subtype
 					document.getElementById("subtitle-alt" + (i+1)).innerHTML = result.weapons[i].split('|')[1];
 					document.getElementById("input_weaponsub" + (i+1)).value = " (" + result.weapons[i].split('|')[1] + ")";
 				}
@@ -317,7 +321,7 @@ function writeEverything(result) {
 		}
 	}
 	
-	if(result.missionobjective.length) { // campaign mission objectives
+	if(result.missionobjective.length) { // campaign mission objective
 		document.getElementById("objective").innerHTML = 
 			"<div id='obj-image' class='" + result.missionobjective.split('|')[0].replace(/\s/g, '') +
 			"'><div id='instruction'><img id='list' src='./img/general/blank.png'><p id='wording'>" + result.missionobjective.split('|')[1] +
@@ -329,12 +333,15 @@ function writeEverything(result) {
 		document.getElementById("input_objective").value = "";
 	}
 	
-	if(document.getElementById("exobj").checked == 1) { // extra mission objectives
+	if(document.getElementById("exobj").checked == 1) { // extra mission objective
 		document.getElementById("objectivex").innerHTML = 
 			"<div id='obj-image' class='" + result.objectives.split('|')[0].replace(/\s|,|'|“|”|-|\?|\!|\(|\)|\./g, "") +
 			"'><div id='instruction'><img id='list' src='./img/general/blank.png'><p id='wording'>"  + result.objectives.split('|')[1] +
-			"</p></div><div id='nameplate'><span><p id='title'>Extra Objective</p><p id='subtitle'>"  + result.objectives.split('|')[0] + "</p></span></div></div>";
+			"</p></div><div id='nameplate'><span><p id='title'>Extra Objective <span id='hint'></span></p><p id='subtitle'>"  + result.objectives.split('|')[0] + "</p></span></div></div>";
 		document.getElementById("input_extraobjective").value = "\nExtra Objective: " + result.objectives.split('|')[0] + " - " + result.objectives.split('|')[1];
+		if(result.objectives.split('|')[2] != null) { // extra objective hint
+			document.getElementById("hint").innerHTML = "(<a target='_blank' href='./img/general/" + result.objectives.split('|')[2] + "'>Hint</a>)";
+		}
 	}
 	else {
 		document.getElementById("objectivex").innerHTML = "";
