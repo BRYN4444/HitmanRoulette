@@ -442,7 +442,7 @@ $(document).ready(function() {
 	});
 	
 	/******Range Value Displayed for Complications Slider******/
-		$(document).on('input', '#compslider', function() {
+	$(document).on('input', '#compslider', function() {
 		$('#compamount').html( $(this).val() );
 	});
 	
@@ -468,7 +468,7 @@ $(document).ready(function() {
 			$( "#settings_descriptions h1" ).text("");
 			$( "#settings_descriptions p" ).html("");
 		});
-	}
+	};
 	
 	/******Options Select Submenu Logic******/
 	$("#theme_h1old").click(function() {
@@ -501,21 +501,21 @@ $(document).ready(function() {
 	};
 	function stopItContracts() {
 		$("#mode_con").removeClass("intel hunt").find("span").text("[Off]");
-	}
+	};
 	function stopItElusive() {
 		$("#etslider").val(0);
 		$("#etamount").html("0");		
-	}
+	};
 	function lockMaps() {
 		$("input.noncon").prop('checked', false).prop('disabled', true).parent().parent().parent().addClass("lock");
 		$("span.noncon").hide();
 		$("b.noncon").show();
-	}
+	};
 	function unlockMaps() {
 		$("input.noncon").prop('disabled', false).parent().parent().parent().removeClass("lock");
 		$("span.noncon").show();
 		$("b.noncon").hide();
-	}
+	};
 	
 	$("#mode_mission").click(function() {
 		if( !$(this).hasClass("on") ) {
@@ -541,7 +541,7 @@ $(document).ready(function() {
 			stopItMain();
 			stopItElusive();
 			lockMaps();
-		}
+		};
 	});
 	
 	$('#etamount').html( $('#etslider').val() );
@@ -554,7 +554,7 @@ $(document).ready(function() {
 		}
 		else {
 			makeItMain();
-		}
+		};
 	});
 	
 	if($("#modeselect").val() == "CONEASY") {
@@ -570,7 +570,7 @@ $(document).ready(function() {
 		stopItContracts();
 	};
 	
-	$("#settings input:checkbox:not(:checked)").parent().find("span").text("[Off]")
+	$("#settings input:checkbox:not(:checked)").parent().find("span").text("[Off]");
 	$("#settings input:checkbox").change(function(){
 		if($(this).is(":checked")) {
 			$(this).parent().find("span").text("[On]");
@@ -591,7 +591,7 @@ $(document).ready(function() {
 		else if( $(this).hasClass("off") ) {
 			$(this).removeClass("off").addClass("on").find("span").text("[On]");
 			$("#startexit").val("ON");
-		}
+		};
 	});
 	
 	if($("#startexit").val() == "OFF") {
@@ -645,12 +645,12 @@ $(document).ready(function() {
 		downloadLink.style.display = "none";
 		document.body.appendChild(downloadLink);
 		downloadLink.click();
-	}
+	};
 
 	function destroyClickedElement(event) {
 		// remove the link from the DOM
 		document.body.removeChild(event.target);
-	}
+	};
 	
 	$("#save").click(function (e) {
 		e.preventDefault();
