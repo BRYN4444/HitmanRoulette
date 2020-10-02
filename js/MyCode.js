@@ -28,6 +28,14 @@ $(document).ready(function() {
 		$("#theme_h1old, #theme_h1goty, #theme_h3").find("span").text("[Off]");
 	};
 	
+	/******Height Calc on Mobile******/
+	let vh = window.innerHeight * 0.01;
+	document.documentElement.style.setProperty('--vh', `${vh}px`);
+	window.addEventListener('resize', () => {
+	  let vh = window.innerHeight * 0.01;
+	  document.documentElement.style.setProperty('--vh', `${vh}px`);
+	});
+	
 	/******Scrollbar******/
 	$('#contract').scrollbar({
 		"scrollx": $('.external-scroll_x1')

@@ -1,6 +1,8 @@
 html, body {
-	max-height:100vh;
-	height:100%;
+	/*max-height:100vh;
+	max-height:100%;*/
+	height:100vh;
+	height:calc( var(--vh, 1vh) * 100);
 	width:100%;
 	margin:0;
 	overflow:hidden;
@@ -553,6 +555,7 @@ input[type=range]::-ms-thumb {
 @media only screen and (max-width: 808px) {
 	#headermobile {
 		height:7vh;
+		height:calc( var(--vh, 1vh) * 7);
 		min-height:39px;
 		display:flex;
 		text-shadow:var(--normalshadow);
@@ -571,7 +574,7 @@ input[type=range]::-ms-thumb {
 	#undo2, #redo2 { width:55px; }
 	#undo2 button, #redo2 button {
 		width:80%;
-		height:7vh;
+		height:100%;
 		min-height:39px;
 		background-size:35px;
 	}
@@ -586,7 +589,9 @@ input[type=range]::-ms-thumb {
 }
 
 #menu {
-	height:14.5vh; max-height:157px; min-height:65px;
+	height:14.5vh;
+	max-height:157px;
+	min-height:65px;
 }
 #menustrip {
 	width:100%;
@@ -621,10 +626,17 @@ input[type=range]::-ms-thumb {
 	color:var(--menucolorhover);
 }
 @media only screen and (max-width: 808px) {
-	#menu { height:5vh; min-height:40px; }
+	#menu {
+		/*height:5vh;*/
+		height:40px;
+		height:calc( var(--vh, 1vh) * 5);
+		min-height:40px;
+	}
 	#menu button {
 		width:12vw;
-		height:5vh; min-height:40px;
+		/*height:5vh;*/
+		height:40px;
+		min-height:40px;
 		padding-left:0px;
 		background-position:center center;
 		color:transparent !important;
@@ -651,14 +663,21 @@ input[type=range]::-ms-thumb {
 
 #content {
 	height:61.5vh;
+	height:calc( var(--vh, 1vh) * 61.5);
 	display:flex;
 	flex-direction:column;
 	align-items:stretch;
 	justify-content:flex-end;
 }
 @media only screen and (max-width: 808px) {
-	#content.med { height:67.5vh; }
-	#content.tall { height:89vh; }
+	#content.med { 
+		height:67.5vh;
+		height:calc( var(--vh, 1vh) * 67.5);
+	}
+	#content.tall {
+		height:87.8vh; /*was 89*/
+		height:calc( var(--vh, 1vh) * 87.8);
+	}
 }
 #contract, #maps {
 	overflow-x:hidden;
@@ -1172,6 +1191,7 @@ span#range {
 	scrollbar-color:transparent transparent;
 	height:100%;
 	max-height: 85.5vh;
+	max-height:calc( var(--vh, 1vh) * 85.5);
 	display: grid;
 	grid-template-columns: 70px calc(100vw - 140px) 70px;
 }
@@ -1218,6 +1238,7 @@ span#range {
 @media only screen and (max-width: 808px) {
 	#submenumobile {
 		height:21.5vh;
+		height:calc( var(--vh, 1vh) * 21.5);
 		display: grid;
 	}
 }
@@ -1399,6 +1420,7 @@ p#ioi { font-size:30px; }
 	#footer { display:none; }
 	#footermobile {
 		height:5vh;
+		min-height:25px;
 		display:flex;
 	}
 }
