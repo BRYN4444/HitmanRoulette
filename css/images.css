@@ -312,6 +312,7 @@ div[class^="ElusiveTarget"] { background-image: url('../img/targetcon/NPC.jpg');
 /** ICA Facility **/
 /* Freeform Training */
 .KalvinRitter-training { background-image: url('../img/target/KalvinRitter.jpg'); }
+.KalvinRitter-training.contarget { background-size: auto 100% !important; }
 
 .TerryNorfolk-training { background-image: url('../img/targetcon/TerryNorfolk.jpg'); }
 .ThomasCross-training { background-image: url('../img/targetcon/ThomasCross.jpg'); }
@@ -323,6 +324,7 @@ div[class^="ElusiveTarget"] { background-image: url('../img/targetcon/NPC.jpg');
 
 /* The Final Test */
 .JasperKnight-test { background-image: url('../img/target/JasperKnight.jpg'); }
+.JasperKnight-test.contarget { background-size: auto 100% !important; }
 
 .CilasNetzke-test { background-image: url('../img/targetcon/CilasNetzke.jpg'); }
 .KellyREdwards-test { background-image: url('../img/targetcon/KellyREdwards.jpg'); }
@@ -335,7 +337,9 @@ div[class^="ElusiveTarget"] { background-image: url('../img/targetcon/NPC.jpg');
 /** Paris **/
 /* Showstopper */
 .ViktorNovikov-fashion { background-image: url('../img/target/ViktorNovikov.jpg'); }
+.ViktorNovikov-fashion.contarget { background-size: auto 100% !important; }
 .DaliaMargolis-fashion { background-image: url('../img/target/DaliaMargolis.jpg'); }
+.DaliaMargolis-fashion.contarget { background-size: auto 100% !important; }
 
 .SebastianSato-fashion { background-image: url('../img/targetcon/SebastianSato.jpg'); }
 .HelmutKruger-fashion { background-image: url('../img/targetcon/HelmutKruger.jpg'); }
@@ -359,15 +363,20 @@ div[class^="ElusiveTarget"] { background-image: url('../img/targetcon/NPC.jpg');
 
 /* Holiday Hoarders */
 .HarrySmokeyBagnato-xmas { background-image: url('../img/target/HarrySmokeyBagnato.jpg'); }
+.HarrySmokeyBagnato-xmas.contarget { background-size: auto 100% !important; }
 .MarvSlickGonif-xmas { background-image: url('../img/target/MarvSlickGonif.jpg'); }
+.MarvSlickGonif-xmas.contarget { background-size: auto 100% !important; }
 
 /* The Director */
 .ScottSarno-director { background-image: url('../img/target/ScottSarno.jpg'); }
+.ScottSarno-director.contarget { background-size: auto 100% !important; }
 
 /** Sapienza **/
 /* World of Tomorrow */
 .SilvioCaruso-virus { background-image: url('../img/target/SilvioCaruso.jpg'); }
+.SilvioCaruso-virus.contarget { background-size: auto 100% !important; }
 .FrancescaDeSantis-virus { background-image: url('../img/target/FrancescaDeSantis.jpg'); }
+.FrancescaDeSantis-virus.contarget { background-size: auto 100% !important; }
 
 .TerenzioEndrizzi-virus { background-image: url('../img/targetcon/TerenzioEndrizzi.jpg'); }
 .RobertoVargas-virus { background-image: url('../img/targetcon/RobertoVargas.jpg'); }
@@ -385,6 +394,7 @@ div[class^="ElusiveTarget"] { background-image: url('../img/targetcon/NPC.jpg');
 
 /* The Icon */
 .DinoBosco-movie { background-image: url('../img/target/DinoBosco.jpg'); }
+.DinoBosco-movie.contarget { background-size: auto 100% !important; }
 
 .PalmiroRusso-movie { background-image: url('../img/targetcon/PalmiroRusso.jpg'); }
 .EnricoNucci-movie { background-image: url('../img/targetcon/EnricoNucci.jpg'); }
@@ -396,6 +406,7 @@ div[class^="ElusiveTarget"] { background-image: url('../img/targetcon/NPC.jpg');
 
 /* Landslide */
 .MarcoAbiatti-election { background-image: url('../img/target/MarcoAbiatti.jpg'); }
+.MarcoAbiatti-election.contarget { background-size: auto 100% !important; }
 
 .DavideBattistelli-election { background-image: url('../img/targetcon/DavideBattistelli.jpg'); }
 .MarcelloFolliero-election { background-image: url('../img/targetcon/MarcelloFolliero.jpg'); }
@@ -418,15 +429,20 @@ div[class^="ElusiveTarget"] { background-image: url('../img/targetcon/NPC.jpg');
 
 /* The Author */
 .CraigBlack-handoff { background-image: url('../img/target/CraigBlack.jpg'); }
+.CraigBlack-handoff.contarget { background-size: auto 100% !important; }
 .BrotherAkram-handoff { background-image: url('../img/target/BrotherAkram.jpg'); }
+.BrotherAkram-handoff.contarget { background-size: auto 100% !important; }
 
 /* The Enforcer */
 .GaryLunn-enforcer { background-image: url('../img/target/GaryLunn.jpg'); }
+.GaryLunn-enforcer.contarget { background-size: auto 100% !important; }
 
 /** Marrakesh **/
 /* A Gilded Cage */
 .RezaZaydan-tension { background-image: url('../img/target/RezaZaydan.jpg'); }
+.RezaZaydan-tension.contarget { background-size: auto 100% !important; }
 .ClausHugoStrandberg-tension { background-image: url('../img/target/ClausHugoStrandberg.jpg'); }
+.ClausHugoStrandberg-tension.contarget { background-size: auto 100% !important; }
 
 .AshrafRaghibMustafa-tension { background-image: url('../img/targetcon/AshrafRaghibMustafa.jpg'); }
 .PamelaKingsley-tension { background-image: url('../img/targetcon/PamelaKingsley.jpg'); }
@@ -445,7 +461,9 @@ div[class^="ElusiveTarget"] { background-image: url('../img/targetcon/NPC.jpg');
 
 /* A House Built on Sand */
 .KongTuoKwang-construction { background-image: url('../img/target/KongTuoKwang.jpg'); }
+.KongTuoKwang-construction.contarget { background-size: auto 100% !important; }
 .MatthieuMendola-construction { background-image: url('../img/target/MatthieuMendola.jpg'); }
+.MatthieuMendola-construction.contarget { background-size: auto 100% !important; }
 
 .ZakiDiab-construction { background-image: url('../img/targetcon/ZakiDiab.jpg'); }
 .YousefShitrit-construction { background-image: url('../img/targetcon/YousefShitrit.jpg'); }
@@ -457,11 +475,14 @@ div[class^="ElusiveTarget"] { background-image: url('../img/targetcon/NPC.jpg');
 
 /* The Extractor */
 .WalterMenard-extractor { background-image: url('../img/target/WalterMenard.jpg'); }
+.WalterMenard-extractor.contarget { background-size: auto 100% !important; }
 
 /** Bangkok **/
 /* Club 27 */
 .JordanCross-birthday { background-image: url('../img/target/JordanCross.jpg'); }
+.JordanCross-birthday.contarget { background-size: auto 100% !important; }
 .KenMorgan-birthday { background-image: url('../img/target/KenMorgan.jpg'); }
+.KenMorgan-birthday.contarget { background-size: auto 100% !important; }
 
 .DexyBarat-birthday { background-image: url('../img/targetcon/DexyBarat.jpg'); }
 .WesListon-birthday { background-image: url('../img/targetcon/WesListon.jpg'); }
@@ -480,7 +501,9 @@ div[class^="ElusiveTarget"] { background-image: url('../img/targetcon/NPC.jpg');
 
 /* The Source */
 .OybekNabazov-cult { background-image: url('../img/target/OybekNabazov.jpg'); }
+.OybekNabazov-cult.contarget { background-size: auto 100% !important; }
 .SisterYulduz-cult { background-image: url('../img/target/SisterYulduz.jpg'); }
+.SisterYulduz-cult.contarget { background-size: auto 100% !important; }
 
 .Jeff-cult { background-image: url('../img/targetcon/Jeff.jpg'); }
 .Rebecca-cult { background-image: url('../img/targetcon/Rebecca.jpg'); }
@@ -504,13 +527,18 @@ div[class^="ElusiveTarget"] { background-image: url('../img/targetcon/NPC.jpg');
 
 /* The Veteran */
 .JohnStubbs-veteran { background-image: url('../img/target/JohnStubbs.jpg'); }
+.JohnStubbs-veteran.contarget { background-size: auto 100% !important; }
 
 /** Colorado **/
 /* Freedom Fighters */
 .SeanRose-terrorists { background-image: url('../img/target/SeanRose.jpg'); }
+.SeanRose-terrorists.contarget { background-size: auto 100% !important; }
 .PenelopeGraves-terrorists { background-image: url('../img/target/PenelopeGraves.jpg'); }
+.PenelopeGraves-terrorists.contarget { background-size: auto 100% !important; }
 .EzraBerg-terrorists { background-image: url('../img/target/EzraBerg.jpg'); }
+.EzraBerg-terrorists.contarget { background-size: auto 100% !important; }
 .MayaParvati-terrorists { background-image: url('../img/target/MayaParvati.jpg'); }
+.MayaParvati-terrorists.contarget { background-size: auto 100% !important; }
 
 .QuinceElliott-terrorists { background-image: url('../img/targetcon/QuinceElliott.jpg'); }
 .RobertPowell-terrorists { background-image: url('../img/targetcon/RobertPowell.jpg'); }
@@ -529,11 +557,14 @@ div[class^="ElusiveTarget"] { background-image: url('../img/targetcon/NPC.jpg');
 
 /* The Mercenary */
 .PatrickMorgan-mercenary { background-image: url('../img/target/PatrickMorgan.jpg'); }
+.PatrickMorgan-mercenary.contarget { background-size: auto 100% !important; }
 
 /** Hokkaido **/
 /* Situs Inversus */
 .ErichSoders-heart { background-image: url('../img/target/ErichSoders.jpg'); }
+.ErichSoders-heart.contarget { background-size: auto 100% !important; }
 .YukiYamazaki-heart { background-image: url('../img/target/YukiYamazaki.jpg'); }
+.YukiYamazaki-heart.contarget { background-size: auto 100% !important; }
 
 .LowellAucoin-heart { background-image: url('../img/targetcon/LowellAucoin.jpg'); }
 .EricSandānoashiSjövold-heart { background-image: url("../img/targetcon/Eric'Sandānoashi'Sjövold.jpg"); }
@@ -551,17 +582,22 @@ div[class^="ElusiveTarget"] { background-image: url('../img/targetcon/NPC.jpg');
 
 /* Patient Zero */
 .OwenCage-spread { background-image: url('../img/target/OwenCage.jpg'); }
+.OwenCage-spread.contarget { background-size: auto 100% !important; }
 .KlausLiebleid-spread { background-image: url('../img/target/KlausLiebleid.jpg'); }
+.KlausLiebleid-spread.contarget { background-size: auto 100% !important; }
 
 /* Snow Festival */
 .DmitriFedorov-festival { background-image: url('../img/target/DmitriFedorov.jpg'); }
+.DmitriFedorov-festival.contarget { background-size: auto 100% !important; }
 
 /* The Controller */
-.TaheijiKoyama-controller{ background-image: url('../img/target/TaheijiKoyama.jpg'); }
+.TaheijiKoyama-controller { background-image: url('../img/target/TaheijiKoyama.jpg'); }
+.TaheijiKoyama-controller.contarget { background-size: auto 100% !important; }
 
 /** New Zealand **/
 /* Nightcall */
 .AlmaReynard-beach { background-image: url('../img/target/AlmaReynard.jpg'); }
+.AlmaReynard-beach.contarget { background-size: auto 100% !important; }
 
 .OrsonMills-beach { background-image: url('../img/targetcon/OrsonMills.jpg'); }
 .GerardMann-beach { background-image: url('../img/targetcon/GerardMann.jpg'); }
@@ -574,7 +610,9 @@ div[class^="ElusiveTarget"] { background-image: url('../img/targetcon/NPC.jpg');
 /** Miami **/
 /* The Finish Line */
 .SierraKnox-speedway { background-image: url('../img/target/SierraKnox.jpg'); }
+.SierraKnox-speedway.contarget { background-size: auto 100% !important; }
 .RobertKnox-speedway { background-image: url('../img/target/RobertKnox.jpg'); }
+.RobertKnox-speedway.contarget { background-size: auto 100% !important; }
 
 .JohnattanKindane-speedway { background-image: url('../img/targetcon/JohnattanKindane.jpg'); }
 .EdwardTedMendez-speedway { background-image: url('../img/targetcon/EdwardTedMendez.jpg'); }
@@ -650,12 +688,16 @@ div[class^="ElusiveTarget"] { background-image: url('../img/targetcon/NPC.jpg');
 
 /* A Silver Tongue */
 .AjitAJKrish-water { background-image: url('../img/target/AjitAJKrish.jpg'); }
+.AjitAJKrish-water.contarget { background-size: auto 100% !important; }
 
 /** Columbia **/
 /* Three-Headed Serpant */
 .RicoDelgado-cartel { background-image: url('../img/target/RicoDelgado.jpg'); }
+.RicoDelgado-cartel.contarget { background-size: auto 100% !important; }
 .JorgeFranco-cartel { background-image: url('../img/target/JorgeFranco.jpg'); }
+.JorgeFranco-cartel.contarget { background-size: auto 100% !important; }
 .AndreaMartinez-cartel { background-image: url('../img/target/AndreaMartinez.jpg'); }
+.AndreaMartinez-cartel.contarget { background-size: auto 100% !important; }
 
 .CatalinaDelgado-cartel { background-image: url('../img/targetcon/CatalinaDelgado.jpg'); }
 .HèctorDelgado-cartel { background-image: url('../img/targetcon/HèctorDelgado.jpg'); }
@@ -690,12 +732,16 @@ div[class^="ElusiveTarget"] { background-image: url('../img/targetcon/NPC.jpg');
 
 /* Embrace of the Serpant*/
 .BlairReddington-biggame { background-image: url('../img/target/BlairReddington.jpg'); }
+.BlairReddington-biggame.contarget { background-size: auto 100% !important; }
 
 /** India **/
 /* Chasing a Ghost */
 .TheMaelstrom-ghost { background-image: url('../img/target/TheMaelstrom.jpg'); }
+.TheMaelstrom-ghost.contarget { background-size: auto 100% !important; }
 .VanyaShah-ghost { background-image: url('../img/target/VanyaShah.jpg'); }
+.VanyaShah-ghost.contarget { background-size: auto 100% !important; }
 .DawoodRangan-ghost { background-image: url('../img/target/DawoodRangan.jpg'); }
+.DawoodRangan-ghost.contarget { background-size: auto 100% !important; }
 
 .TheKashmirian-ghost { background-image: url('../img/targetcon/TheKashmirian.jpg'); }
 .TrishnaPravina-ghost { background-image: url('../img/targetcon/TrishnaPravina.jpg'); }
@@ -723,11 +769,14 @@ div[class^="ElusiveTarget"] { background-image: url('../img/targetcon/NPC.jpg');
 
 /* Illusions of Grandeur */
 .BasilCarnaby-magic { background-image: url('../img/target/BasilCarnaby.jpg'); }
+.BasilCarnaby-magic.contarget { background-size: auto 100% !important; }
 
 /** Whittleton Creek **/
 /* Another Life */
 .Janus-suburbs { background-image: url('../img/target/Janus.jpg'); }
+.Janus-suburbs.contarget { background-size: auto 100% !important; }
 .NolanCassidy-suburbs { background-image: url('../img/target/NolanCassidy.jpg'); }
+.NolanCassidy-suburbs.contarget { background-size: auto 100% !important; }
 
 .CharlesBlakeIII-suburbs { background-image: url('../img/targetcon/CharlesBlakeIII.jpg'); }
 .AidenKelly-suburbs { background-image: url('../img/targetcon/AidenKelly.jpg'); }
@@ -770,11 +819,14 @@ div[class^="ElusiveTarget"] { background-image: url('../img/targetcon/NPC.jpg');
 
 /* A Bitter Pill */
 .GalenVholes-pill { background-image: url('../img/target/GalenVholes.jpg'); }
+.GalenVholes-pill.contarget { background-size: auto 100% !important; }
 
 /** North Atlantic **/
 /* The Ark Society */
 .ZoeWashington-ark { background-image: url('../img/target/ZoeWashington.jpg'); }
+.ZoeWashington-ark.contarget { background-size: auto 100% !important; }
 .SophiaWashington-ark { background-image: url('../img/target/SophiaWashington.jpg'); }
+.SophiaWashington-ark.contarget { background-size: auto 100% !important; }
 
 .TheConstant-ark { background-image: url('../img/targetcon/TheConstant.jpg'); }
 .ThaddeusHartwell-ark, .DeclanBarton-ark { background-image: url('../img/targetcon/ThaddeusHartwell.jpg'); }
@@ -826,6 +878,7 @@ div[class^="ElusiveTarget"] { background-image: url('../img/targetcon/NPC.jpg');
 /** New Youk **/
 /* Golden Handshake */
 .AthenaSavalas-bank { background-image: url('../img/target/AthenaSavalas.jpg'); }
+.AthenaSavalas-bank.contarget { background-size: auto 100% !important; }
 
 .FrankWinkelman-bank { background-image: url('../img/targetcon/FrankWinkelman.jpg'); }
 .HadynHolme-bank { background-image: url('../img/targetcon/HadynHolme.jpg'); }
@@ -863,8 +916,11 @@ div[class^="ElusiveTarget"] { background-image: url('../img/targetcon/NPC.jpg');
 /** Haven Island **/
 /* The Last Resort */
 .TysonWilliams-resort { background-image: url('../img/target/TysonWilliams.jpg'); }
+.TysonWilliams-resort.contarget { background-size: auto 100% !important; }
 .StevenBradley-resort { background-image: url('../img/target/StevenBradley.jpg'); }
+.StevenBradley-resort.contarget { background-size: auto 100% !important; }
 .LjudmilaVetrova-resort { background-image: url('../img/target/LjudmilaVetrova.jpg'); }
+.LjudmilaVetrova-resort.contarget { background-size: auto 100% !important; }
 
 .DrSingh-resort { background-image: url('../img/targetcon/DrSingh.jpg'); }
 .HildeSorbetto-resort { background-image: url('../img/targetcon/HildeSorbetto.jpg'); }
