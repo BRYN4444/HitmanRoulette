@@ -1,6 +1,4 @@
 html, body {
-	/*max-height:100vh;
-	max-height:100%;*/
 	height:100vh;
 	height:calc( var(--vh, 1vh) * 100);
 	width:100%;
@@ -675,8 +673,8 @@ input[type=range]::-ms-thumb {
 		height:calc( var(--vh, 1vh) * 67.5);
 	}
 	#content.tall {
-		height:87.8vh; /*was 89*/
-		height:calc( var(--vh, 1vh) * 87.8);
+		height:88vh; /*was 89*/
+		height:calc( var(--vh, 1vh) * 88);
 	}
 }
 #contract, #maps {
@@ -1190,8 +1188,8 @@ span#range {
 #credits { 
 	scrollbar-color:transparent transparent;
 	height:100%;
-	max-height: 85.5vh;
-	max-height:calc( var(--vh, 1vh) * 85.5);
+	max-height: 84.5vh;
+	max-height:calc( var(--vh, 1vh) * 84.5);
 	display: grid;
 	grid-template-columns: 70px calc(100vw - 140px) 70px;
 }
