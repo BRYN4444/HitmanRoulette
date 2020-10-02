@@ -423,30 +423,35 @@ $(document).ready(function() {
 		$( "label[id^='theme_']" ).show();
 		$( "label[id^='mode_'], label[id^='kill_'], label[id^='extra_'], label[id^='game_']" ).hide();
 		$( this ).siblings().removeClass( "on" );
+		$( "#settings_descriptions p" ).html("");
 	});
 	$( "#settings_roulette" ).click(function() {
 		$( this ).addClass( "on" );
 		$( "label[id^='mode_']" ).show();
 		$( "label[id^='theme_'], label[id^='kill_'], label[id^='extra_'], label[id^='game_']" ).hide();
 		$( this ).siblings().removeClass( "on" );
+		$( "#settings_descriptions p" ).html("");
 	});
 	$( "#settings_kills" ).click(function() {
 		$( this ).addClass( "on" );
 		$( "label[id^='kill_']" ).show();
 		$( "label[id^='theme_'], label[id^='mode_'], label[id^='extra_'], label[id^='game_']" ).hide();
 		$( this ).siblings().removeClass( "on" );
+		$( "#settings_descriptions p" ).html("");
 	});
 	$( "#settings_extras" ).click(function() {
 		$( this ).addClass( "on" );
 		$( "label[id^='extra_']" ).show();
 		$( "label[id^='theme_'], label[id^='mode_'], label[id^='kill_'], label[id^='game_']" ).hide();
 		$( this ).siblings().removeClass( "on" );
+		$( "#settings_descriptions p" ).html("");
 	});
 	$( "#settings_challenges" ).click(function() {
 		$( this ).addClass( "on" );
 		$( "label[id^='game_']" ).show();
 		$( "label[id^='theme_'], label[id^='mode_'], label[id^='extra_'], label[id^='kill_']" ).hide();
 		$( this ).siblings().removeClass( "on" );
+		$( "#settings_descriptions p" ).html("");
 	});
 	
 	/******Range Value Displayed for Complications Slider******/
