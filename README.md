@@ -32,8 +32,8 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 * Allow Entrance Only and/or Exit Only roulette settings.
 * This would take a complete overhaul, so it's probably out of MY league, but being able to link Roulettes to others would be cool. If you have knowledge on how to do this easily, leave me a message on [Github](https://github.com/BRYN4444/HitmanRoulette/issues).
 
-### Latest Update (Sept. 14, 2020)
-* **Sarajevo Six Missions reimplememted.** I removed these when revamping the Roulette for Hitman 2. I added them back, but they do not fall under the "All Locations" toggle, nor are they selected by default. They have to be manually chosen each time due to their platform and game exclusiveness.
+### Latest Update (Oct. 1, 2020)
+* **Mobile Friendly / Low Resolution Browsing.** After a few issues, you can now run the Roulette off your phone. While tabbing between sections isn't as smooth as desktop, and imagery will be squished for targets/objectives, I'm happy with this working at all! If your mobile browser is lacking functionality compared to the desktop version, please let me know, and I'll try and look into it.
+* **Sarajevo Six Missions reimplememted.** I removed these when initially revamping the Roulette for Hitman 2 back in 2019. I re-added them, but they do not fall under the "All Locations" toggle, nor are they selected by default. They have to be manually chosen each time due to their platform and game exclusiveness.
 * **Hitman 1 and Hitman GOTY styles added.** I always loved the menu colors from the launch of Hitman that were done away with for the Game of the Year update. I added both as optional themes that can be turned on in Roulette Settings.
-* **Preperations underway for Hitman III additions.** Some visible buttons and backend code added as a sort of commitment from me that Hitman III stuff will be added AFTER I playthrough the game myself. 
-* **Mobile Friendly / Low Resolution Browsing is being worked on.** There are hiccups with display issues across browsers and functions not working at all in some cases. That being said, just being able to navigate on mobile is way better than before, which was not at all.
+* **Preperations underway for Hitman III additions.** Some visible buttons and backend code added as a sort of commitment from me that Hitman III stuff will be added AFTER I playthrough the game myself.
