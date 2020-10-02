@@ -19,7 +19,7 @@ html.h1theme { /* Variables for Hitman 1 Styled Theme & Images */
 	/* Mission Location Styling */ --missionlocationborder:none; --missionlocationcolor:#ffffff;
 	/* Menu Bar Styling */ --menustrip:#3b0d10; --menustripborder:transparent; --menucolor:#b1b1b1; --menushadow:none; --menustriphover:#bdbdbd; --menucolorhover:#2c2c2c; --menushadowhover:none;
 	/* Menu Button Styling */ --buttonbg:rgba(61, 72, 73, 0.3); --buttoncolor:#ffffff; --buttonbghover:#ffffff; --buttoncolorhover:#2c2c2c; --buttonbgon:#bcbdbf; --buttoncoloron:#2c2c2c; --buttonbgoff:rgba(0, 0, 0, 0.3); --buttoncoloroff:#a4a4a4;
-	/* Menu Box Styling */ --imagebasebg:rgba(0, 0, 0, 0.2); --targetbasebgsize:auto 52%; --targetreqsbg:#bdbdbd; --targetreqsbg:#bdbdbd; --targetreqscolor:#404040; --objbg:#bdbdbd; --objcolor:#292929;
+	/* Menu Box Styling */ --imagebasebg:rgba(0, 0, 0, 0.2); --targetbasebgsize:102% auto; --targetreqsbg:#bdbdbd; --targetreqscolor:#404040; --objbg:#bdbdbd; --objcolor:#292929;
 							--targetreqsshadow:none; --targetintelshadow:none;
 	/* Nameplate Styling */ --nameplatebg:#404040; --nameplatesmallcolor:#ffffff; --nameplatebigcolor:#ffffff; --nameplatebghover:transparent; --nameplatecolorhover:#ffffff; --lockbg:#662428; --lockcolor:#ffffff;
 							--welcomenameplatebg:transparent; --welcomenameplatecolor:#ffffff; --welcomenameplateshadow:0 0 6px #000000, 0 0 2px #000000, 0 0 2px #000000, 0 0 1px #000000, 0 0 1px #000000, 0 0 1px #000000;
@@ -143,7 +143,7 @@ html.h1gotytheme { /* Variables for Hitman 1 GOTY Styled Theme & Images */
 	/* Mission Location Styling */ --missionlocationborder:2px dotted #464646; --missionlocationcolor:#929292;
 	/* Menu Bar Styling */ --menustripbg:transparent; --menustripborder:1px solid #464646; --menucolor:#464646; --menushadow:none; --menustriphover:#464646; --menucolorhover:#d2d2d2; --menushadowhover:none;
 	/* Menu Button Styling */ --buttonbg:#464646; --buttoncolor:#d2d2d2; --buttonbghover:#ffffff; --buttoncolorhover:#464646; --buttonbgon:#d2d2d2; --buttoncoloron:#464646; --buttonbgoff:rgba(0, 0, 0, 0.3); --buttoncoloroff:#a4a4a4;
-	/* Menu Box Styling */ --imagebasebg:rgba(0, 0, 0, 0.2); --targetbasebgsize:auto 52%; --targetreqsbg:#bdbdbd; --targetreqscolor:#404040; --objbg:#bdbdbd; --objcolor:#292929;
+	/* Menu Box Styling */ --imagebasebg:rgba(0, 0, 0, 0.2); --targetbasebgsize:102% auto; --targetreqsbg:#bdbdbd; --targetreqscolor:#404040; --objbg:#bdbdbd; --objcolor:#292929;
 							--targetreqsshadow:none; --targetintelshadow:none;
 	/* Nameplate Styling */ --nameplatebg:#464646; --nameplatesmallcolor:#d2d2d2; --nameplatebigcolor:#d2d2d2; --nameplatebghover:transparent; --nameplatecolorhover:#ffffff; --lockbg:#e3e3e3; --lockcolor:#a4a4a4;
 							--welcomenameplatebg:transparent; --welcomenameplatecolor:#ffffff; --welcomenameplateshadow:0 0 6px #000000, 0 0 2px #000000, 0 0 2px #000000, 0 0 1px #000000, 0 0 1px #000000, 0 0 1px #000000;
@@ -776,7 +776,8 @@ input[type=range]::-ms-thumb {
 	align-items:stretch;
 }
 #photo { background-size:var(--targetbasebgsize); }
-#photo.contarget { background-size:auto 100% !important; }
+#photo.contarget { background-size:100% auto; }
+html.h1theme #photo[class^="ElusiveTarget"], html.h1gotytheme #photo[class^="ElusiveTarget"] { background-size:100% auto !important; }
 #logo { width:700px; }
 #logothin { width:350px; display:none; }
 @media only screen and (max-width: 1130px) {
@@ -1098,7 +1099,10 @@ label#theme_cookies p { font-size: 13px; }
 span#range {
 	text-align:right;
 	white-space:nowrap;
+	display:flex;
+	align-items:center;
 }
+span#range input { margin-right:10px; }
 #settings_kills br { display:none; }
 @media only screen and (max-width: 1390px) {
 	#settings { grid-template-columns: 0 1fr 1fr 1fr 0 !important; }
