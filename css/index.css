@@ -784,6 +784,7 @@ html.h1theme #photo[class^="ElusiveTarget"], html.h1gotytheme #photo[class^="Elu
 	#logo, .side { display:none; }
 	#logothin { display:flex; }
 }
+#entry, #exit { height:261px; }
 #entry, #top { margin-bottom:3px; }
 #subplate.method, #subplate.disguise, div[id^="subplate"].intel {
 	background-color:var(--targetreqsbg);
@@ -940,9 +941,9 @@ div[id^="subplate"].intel { background-image:var(--intel); }
 #res-image #nameplate { background-image:var(--restriction); }
 #time-image #nameplate { background-image:var(--time); }
 #rating-image #nameplate { background-image:var(--rating); }
-#diff-image-Casual #nameplate { background-image:var(--casual); }
+#diff-image-Casual #nameplate, #diff-image-Normal #nameplate { background-image:var(--casual); }
 #diff-image-Professional #nameplate { background-image:var(--pro); }
-#diff-image-Master #nameplate { background-image:var(--master); }
+#diff-image-Master #nameplate, #diff-image-ProfessionalH1 #nameplate { background-image:var(--master); }
 #chall-image #nameplate { background-image:var(--challenge); }
 
 #maps_submenu {
