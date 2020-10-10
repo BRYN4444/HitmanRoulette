@@ -23,7 +23,7 @@ To quickly return the Roulette Settings back to default, preform a hard refresh 
 
 ## Compatibility & Issues
 
-Currently, the Roulette works best with **Hitman 2 Gold Edition** and the **GOTY Legacy Pack**, though you can deselect any locations you do not own. However, you may have to ignore any conflicting gameplay traits, like difficuty, that changed between game releases.
+Currently, the Roulette works best with **Hitman 2 Gold Edition** and the **GOTY Legacy Pack**, though you can deselect any locations you do not own. However, you may have to ignore any conflicting gameplay traits, like difficulty, that changed between game releases.
 This was a hobby project I started in 2016/17 and have worked on during my free time as a way to brush up on my simple javascript, jQuery, and CSS knowledge as well as giving me more reason to play these new Hitman games well after unlocking everything. As such, I've only tested this at about a 1080p resolution using the browsers I frequent: Firefox and Chrome. Also I'm sure my additions to the existing code, as well as my own work, could use cleaning up here and there. If you find any issues or glaring conflicts with roulette results, [let me know via GitHub](https://github.com/BRYN4444/HitmanRoulette/issues) and I'll try and address it when I get the chance. - [BRYN](http://bryn.info/)
 
 ### To-Do List / Wishlist:
@@ -32,8 +32,12 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 * Allow Entrance Only and/or Exit Only roulette settings.
 * This would take a complete overhaul, so it's probably out of MY league, but being able to link Roulettes to others would be cool. If you have knowledge on how to do this easily, leave me a message on [Github](https://github.com/BRYN4444/HitmanRoulette/issues).
 
-### Latest Update (Oct. 1, 2020)
+### Latest Update (Oct. 9, 2020)
 * **Mobile Friendly / Low Resolution Browsing.** After a few issues, you can now run the Roulette off your phone. While tabbing between sections isn't as smooth as desktop, and imagery will be squished for targets/objectives, I'm happy with this working at all! If your mobile browser is lacking functionality compared to the desktop version, please let me know, and I'll try and look into it.
-* **Sarajevo Six Missions reimplememted.** I removed these when initially revamping the Roulette for Hitman 2 back in 2019. I re-added them, but they do not fall under the "All Locations" toggle, nor are they selected by default. They have to be manually chosen each time due to their platform and game exclusiveness.
+* **Force Start/Exit Options added.** By default, the roulette selects a start and exit for you to use. You can now have only a Start or an Exit generate for you. For those times you don't want to run across the map just to end the mission.
+* **Improved Hitman 1 support.** The roulette can be used with both Hitman 1 and 2, but some of Hitman 1's unique quirks were lost as Hitman 2 features overrode them. After a small reworking, the following was updated:
+  * **Restricted Mechanics:** If you select "H1", you won't get Hitman 2's Picture In Picture or Limited Vision Area as mechanics to restrict, as they're not in Hitman 1; wasting a roll of the roulette.
+  * **Force Difficulty:** Hitman 1's hardest difficulty is Professional instead of Master. After a rework, selecting "H1" will give you Normal or Pro on the main missions that allow difficulty changes. For "H1" and "H2", no alternate difficulties will be offered for missions locked to one difficulty.
+* **Sarajevo Six Missions reimplemented.** I removed these when initially revamping the Roulette for Hitman 2 back in 2019. I re-added them, but they do not fall under the "All Locations" toggle, nor are they selected by default. They have to be manually chosen each time due to their platform and game exclusiveness.
 * **Hitman 1 and Hitman GOTY styles added.** I always loved the menu colors from the launch of Hitman that were done away with for the Game of the Year update. I added both as optional themes that can be turned on in Roulette Settings.
-* **Preperations underway for Hitman III additions.** Some visible buttons and backend code added as a sort of commitment from me that Hitman III stuff will be added AFTER I playthrough the game myself.
+* **Preparations underway for Hitman III additions.** Some visible buttons and backend code added as a sort of commitment from me that Hitman III stuff will be added AFTER I playthrough the game myself.
