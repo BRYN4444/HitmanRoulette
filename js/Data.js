@@ -2,6 +2,9 @@
 var history_past = []
 var redo_stack = []
 
+var h1 = ["training","test","fashion","xmas","director","virus","movie","election","handoff","enforcer","tension","construction","extractor","birthday","cult","veteran","terrorists","mercenary","heart","spread","controller"];
+var h2 = ["training","test","fashion","xmas","virus","movie","election","handoff","tension","construction","birthday","cult","terrorists","heart","spread","festival","beach","speedway","water","cartel","biggame","ghost","magic","suburbs","pill","ark","bank","resort"];
+
 var suitStarts = ["Weapons Building","Crouched behind a Truck",
 "Red Carpet","Palace Garden","Pile-Driver Barge","Attic","Undercover at IAGO Auction",
 "Main Square","ICA Safe House","Harbor","Sapienza Ruins","Main Square Tower","Church Morgue","City Gates","Promenade","Portico",
@@ -21,7 +24,14 @@ var disguiseExits = ["Ambulance|(Medic Only)","Nest|(Secret)","Pale Rider|(Secre
 var koExits = ["Pink Car|(Needs Key)","Nest|(Secret)","Rico's Supercar|(Needs Key)","Local's Car|(Needs Key)","Roadwork Gate|(Needs Key)","Chimney|(Santa 47 Only)","Window|(Secret)","Snorkel|(Instructor Only)"];
 var proOnly = ["training","test","xmas","director","movie","election","handoff","enforcer","construction","extractor","cult","veteran","mercenary","spread","festival","controller"];
 
-var mechList = ["Instinct|Turn off Instinct in the game's Options menu under Gameplay.",
+var mechListH1 = ["Instinct|Turn off Instinct in the game's Options menu under Gameplay.",
+				"Mini Map|Turn off the Mini Map in the game's Options menu under Gameplay.",
+				"Attention Alert|Turn off Attention Alert in the game's Options menu under Gameplay.",
+				"NPC Icons|Turn off NPC Icons in the game's Options menu under Gameplay.",
+				"Weapon HUD|Turn off Weapon HUD in the game's Options menu under Gameplay.",
+				"No Agility|Do not vault, hang, scale, or climb down.",
+				"No Crouching|Do not crouch."];
+var mechListH2 = ["Instinct|Turn off Instinct in the game's Options menu under Gameplay.",
 				"Mini Map|Turn off the Mini Map in the game's Options menu under Gameplay.",
 				"Attention Alert|Turn off Attention Alert in the game's Options menu under Gameplay.",
 				"NPC Icons|Turn off NPC Icons in the game's Options menu under Gameplay.",
@@ -40,7 +50,7 @@ var difficultyList = ["Casual","Professional","Master"];
 
 var generic = {
 	kills: ["Any Firearm","Any Small Melee Weapon","Any Large Melee Weapon","Accident","Explosion","Lethal Poison","Unarmed"],
-	firearms: ["Pistol","Sniper Rifle","Explosive Weapon","Assault Rifle","SMG","Shotgun","Pistol Elimination"],
+	firearms: ["Any Pistol","Any Sniper Rifle","Explosive Weapon","Any Assault Rifle","Any SMG","Any Shotgun","Pistol Elimination"],
 	accidents: ["Drowning|Accident","Falling Object|Accident","Fall|Accident","Fire|Accident","Electricity|Accident","Explosion|Accident"]
 };
 

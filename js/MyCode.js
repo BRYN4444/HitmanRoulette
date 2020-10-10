@@ -593,8 +593,16 @@ $(document).ready(function() {
 	});
 	
 	$("#extra_starex").click(function() {
-		if( $(this).hasClass("on") ) {
-			$(this).removeClass("on").addClass("secret").find("span").text("[Secret]");
+		if( $(this).hasClass("both") ) {
+			$(this).removeClass("both").addClass("start").find("span").text("[Start Only]");
+			$("#startexit").val("START");
+		}
+		else if( $(this).hasClass("start") ) {
+			$(this).removeClass("start").addClass("exit").find("span").text("[Exit Only]");
+			$("#startexit").val("EXIT");
+		}
+		else if( $(this).hasClass("exit") ) {
+			$(this).removeClass("exit").addClass("secret").find("span").text("[Secret]");
 			$("#startexit").val("SECRET");
 		}
 		else if( $(this).hasClass("secret") ) {
@@ -602,16 +610,68 @@ $(document).ready(function() {
 			$("#startexit").val("OFF");
 		}
 		else if( $(this).hasClass("off") ) {
-			$(this).removeClass("off").addClass("on").find("span").text("[On]");
-			$("#startexit").val("ON");
+			$(this).removeClass("off").addClass("both").find("span").text("[Both]");
+			$("#startexit").val("BOTH");
 		};
 	});
 	
 	if($("#startexit").val() == "OFF") {
-		$("#extra_starex").removeClass("on").addClass("off").find("span").text("[Off]");
+		$("#extra_starex").removeClass("both").addClass("off").find("span").text("[Off]");
 	} else if ($("#startexit").val() == "SECRET") {
-		$("#extra_starex").removeClass("on").addClass("secret").find("span").text("[Secret]");
-	} else if ($("#startexit").val() == "ON") {
+		$("#extra_starex").removeClass("both").addClass("secret").find("span").text("[Secret]");
+	} else if ($("#startexit").val() == "EXIT") {
+		$("#extra_starex").removeClass("both").addClass("exit").find("span").text("[Exit Only]");
+	} else if ($("#startexit").val() == "START") {
+		$("#extra_starex").removeClass("both").addClass("start").find("span").text("[Start Only]");
+	} else if ($("#startexit").val() == "BOTH") {
+		
+	};
+	
+	
+	$("#game_mech").click(function() {
+		if( $(this).hasClass("off") ) {
+			$(this).removeClass("off").addClass("h2").find("span").text("[H2]");
+			$("#mechanics").val("H2");
+		}
+		else if( $(this).hasClass("h2") ) {
+			$(this).removeClass("h2").addClass("h1").find("span").text("[H1]");
+			$("#mechanics").val("H1");
+		}
+		else if( $(this).hasClass("h1") ) {
+			$(this).removeClass("h1").addClass("off").find("span").text("[Off]");
+			$("#mechanics").val("OFF");
+		};
+	});
+	
+	if($("#mechanics").val() == "H2") {
+		$("#game_mech").removeClass("off").addClass("h2").find("span").text("[H2]");
+	} else if ($("#mechanics").val() == "H1") {
+		$("#game_mech").removeClass("off").addClass("h1").find("span").text("[H1]");
+	} else if ($("#mechanics").val() == "OFF") {
+		
+	};
+	
+	
+	$("#game_diff").click(function() {
+		if( $(this).hasClass("off") ) {
+			$(this).removeClass("off").addClass("h2").find("span").text("[H2]");
+			$("#difficulty").val("H2");
+		}
+		else if( $(this).hasClass("h2") ) {
+			$(this).removeClass("h2").addClass("h1").find("span").text("[H1]");
+			$("#difficulty").val("H1");
+		}
+		else if( $(this).hasClass("h1") ) {
+			$(this).removeClass("h1").addClass("off").find("span").text("[Off]");
+			$("#difficulty").val("OFF");
+		};
+	});
+	
+	if($("#difficulty").val() == "H2") {
+		$("#game_diff").removeClass("off").addClass("h2").find("span").text("[H2]");
+	} else if ($("#difficulty").val() == "H1") {
+		$("#game_diff").removeClass("off").addClass("h1").find("span").text("[H1]");
+	} else if ($("#difficulty").val() == "OFF") {
 		
 	};
 	

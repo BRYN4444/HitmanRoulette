@@ -828,9 +828,9 @@
 						<input type="checkbox" id="generic" value="true" checked />
 						<b>Generic Kills</b><span>[On]</span>
 					</label>
-					<label id="extra_m" class="mobile" style="display:none;" data-hover="On: You must start in and exit at the specific points of the level listed. In the mission FREEDOM FIGHTERS, extra exits are available after your first playthough.<br /><br />Secret: You must start in and exit at the specific points of the level listed. Some exits listed will require actions to make appear. These only appear for Mission Mode Roulettes.<br /><br />Off: No starting or exit points will be specified.">[INFO]:</label>
-					<label id="extra_starex" class="on" style="display:none;" data-hover="On: You must start in and exit at the specific points of the level listed. In the mission FREEDOM FIGHTERS, extra exits are available after your first playthough.<br /><br />Secret: You must start in and exit at the specific points of the level listed. Some exits listed will require actions to make appear. These only appear for Mission Mode Roulettes.<br /><br />Off: No starting or exit points will be specified.">
-						<b>Force Start & Exit</b><span>[On]</span>
+					<label id="extra_m" class="mobile" style="display:none;" data-hover="The roulette will choose start/exit points you must use.<br /><br /><b>[The mission FREEDOM FIGHTERS gains extra exits after the first playthough in Hitman 2.]<br /></b>Both: Start and exit points are both listed.<br />Start Only: Find your own exit location.<br />Exit Only: Select your own starting location.<br />Secret: Select your own starting location. The listed exit may require secret actions to make appear.<br />Off: You choose your own start or exit points.">[INFO]:</label>
+					<label id="extra_starex" class="both" style="display:none;" data-hover="The roulette will choose start/exit points you must use.<br /><br /><b>[The mission FREEDOM FIGHTERS gains extra exits after the first playthough in Hitman 2.]<br /></b>Both: Start and exit points are both listed.<br />Start Only: Find your own exit location.<br />Exit Only: Select your own starting location.<br />Secret: Select your own starting location. The listed exit may require secret actions to make appear.<br />Off: You choose your own start or exit points.">
+						<b>Force Start/Exit</b><span>[Both]</span>
 					</label>
 					<label id="extra_m" class="mobile" style="display:none;" data-hover="On: Adds one extra mission specific task to complete. For example, most of these tasks are in-game Challenges.<br /><br />Off: Only lists mandatory objectives to complete if there are any needed for the mission.">[INFO]:</label>
 					<label id="extra_obj" for="exobj" style="display:none;" data-hover="On: Adds one extra mission specific task to complete. For example, most of these tasks are in-game Challenges.<br /><br />Off: Only lists mandatory objectives to complete if there are any needed for the mission.">
@@ -843,9 +843,8 @@
 						<span id="range"><input id="compslider" type="range" min="0" max="6" value="0" />
 						[Max: <span id="compamount">0</span>]</span>
 					</label>
-					<label id="game_m" class="mobile" style="display:none;" data-hover="On: Lists a game mechanic that must be avoided or one to disable though the game's Options menu.<br /><br />Off: Use any game mechanic freely.">[INFO]:</label>
-					<label id="game_mech" for="mechanics" style="display:none;" data-hover="On: Lists a game mechanic that must be avoided or one to disable though the game's Options menu.<br /><br />Off: Use any game mechanic freely.">
-						<input type="checkbox" id="mechanics" value="true" />
+					<label id="game_m" class="mobile" style="display:none;" data-hover="Lists a game mechanic that must be avoided or one to disable though the game's Options menu.<br /><br />H2: Pulls from the available mechanics from Hitman 2.<br />H1: Pulls from the available mechanics from Hitman.<br />Off: Use any game mechanic freely.">[INFO]:</label>
+					<label id="game_mech" class="off" style="display:none;" data-hover="Lists a game mechanic that must be avoided or one to disable though the game's Options menu.<br /><br />H2: Pulls from the available mechanics from Hitman 2.<br />H1: Pulls from the available mechanics from Hitman.<br />Off: Use any game mechanic freely.">
 						<b>Restricted Mechanics</b><span>[Off]</span>
 					</label>
 					<label id="game_m" class="mobile" style="display:none;" data-hover="On: Complete the roulette within the time listed. For accuracy, enable the Mission Timer through the game's Options menu under Gameplay.<br /><br />Off: Complete the roulette at your own speed.">[INFO]:</label>
@@ -858,9 +857,8 @@
 						<input type="checkbox" id="rating" value="true" />
 						<b>Achieve Rating</b><span>[Off]</span>
 					</label>
-					<label id="game_m" class="mobile" style="display:none;" data-hover="On: Before attempting the roulette, select the difficulty listed when starting the mission. Note that only campaign missions have alternate difficulties.<br /><br />Off: Complete the roulette on whatever difficulty to want.">[INFO]:</label>
-					<label id="game_diff" for="difficulty" style="display:none;" data-hover="On: Before attempting the roulette, select the difficulty listed when starting the mission. Note that only campaign missions have alternate difficulties.<br /><br />Off: Complete the roulette on whatever difficulty to want.">
-						<input type="checkbox" id="difficulty" value="true" />
+					<label id="game_m" class="mobile" style="display:none;" data-hover="Before attempting the roulette, select the difficulty chosen by the roulette before starting the mission. Note that only campaign missions have alternate difficulties.<br /><br />H2: Casual, Professional, and Master are the difficulties available.<br />H1: Normal and Professional are the difficulties available (Hitman missions only).<br />Off: Complete the roulette on whatever difficulty to want.">[INFO]:</label>
+					<label id="game_diff" class="off" style="display:none;" data-hover="Before attempting the roulette, select the difficulty chosen by the roulette before starting the mission. Note that only campaign missions have alternate difficulties.<br /><br />H2: Casual, Professional, and Master are the difficulties available.<br />H1: Normal and Professional are the difficulties available (Hitman missions only).<br />Off: Complete the roulette on whatever difficulty to want.">
 						<b>Force Difficulty</b><span>[Off]</span>
 					</label>				
 					<select id="modeselect" style="display:none;">
@@ -870,9 +868,21 @@
 						<option value="ELUSIVE">Elusive Target</option>
 					</select>
 					<select id="startexit" style="display:none;">
-						<option value="ON" selected>Force Start/Exit</option>
-						<option value="SECRET">Secret Start/Exit</option>
+						<option value="BOTH" selected>Both Start/Exit</option>
+						<option value="START">Start Only</option>
+						<option value="EXIT">Exit Only</option>
+						<option value="SECRET">Exit Only with Secrets</option>
 						<option value="OFF">Choose Start/Exit</option>
+					</select>
+					<select id="mechanics" style="display:none;">
+						<option value="OFF" selected>Off</option>
+						<option value="H2">Hitman 2</option>
+						<option value="H1">Hitman</option>
+					</select>
+					<select id="difficulty" style="display:none;">
+						<option value="OFF" selected>OFF</option>
+						<option value="H2">Hitman 2</option>
+						<option value="H1">Hitman</option>
 					</select>
 				</div>
 				<div id="settings_descriptions">
@@ -899,7 +909,7 @@
 						<li><a href="https://ioi.dk/" target="_blank">IO Interactive</a> for making a great game and constantly supporting it with new stuff! Maybe one day Hitman Roulette could become an actual game mode.</li>
 					</ul>
 					<h1>Compatibility & Issues</h1>
-					<p>Currently, the Roulette works best with <b>Hitman 2 Gold Edition</b> and the <b>GOTY Legacy Pack</b>, though you can deselect any locations you do not own. However, you may have to ignore any conflicting gameplay traits, like difficuty, that changed between game releases.</p>
+					<p>Currently, the Roulette works best with <b>Hitman 2 Gold Edition</b> and the <b>GOTY Legacy Pack</b>, though you can deselect any locations you do not own. However, you may have to ignore any conflicting gameplay traits, like difficulty, that changed between game releases.</p>
 					<p>This was a hobby project I started in 2016/17 and have worked on during my free time as a way to brush up on my simple javascript, jQuery, and CSS knowledge as well as giving me more reason to play these new Hitman games well after unlocking everything. As such, I've only tested this at about a 1080p resolution using the browsers I frequent: Firefox and Chrome. Also I'm sure my additions to the existing code, as well as my own work, could use cleaning up here and there. If you find any issues or glaring conflicts with roulette results, <a href="https://github.com/BRYN4444/HitmanRoulette/issues" target="_blank">let me know via GitHub</a> and I'll try and address it when I get the chance. <span id="sig">- <a href="http://bryn.info/" target="_blank">BRYN</a><span></p>
 					<h2>To-Do List / Wishlist:</h2>
 					<ul>

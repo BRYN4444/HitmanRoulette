@@ -73,6 +73,7 @@
 .resort { background-image:var(--missionbggradient), url('../img/missions/haven-island.webp'); filter:var(--missionbgfilter); -webkit-filter:var(--missionbgfilter); -moz-filter:var(--missionbgfilter); }
 
 /***** Starting Locations *****/
+.any-start { background-image: url('../img/entry/Any.png'); }
 .training-start-WeaponsBuilding { background-image: url('../img/entry/Weapons%20Building.png'); }
 .test-start-CrouchedbehindaTruck { background-image: url('../img/entry/Crouched%20behind%20a%20Truck.png'); }
 .fashion-start-RedCarpet, .director-start-RedCarpet { background-image: url('../img/entry/Red%20Carpet.png'); }
@@ -204,6 +205,7 @@
 .resort-start-PrivateVillaPier { background-image: url('../img/entry/Private%20Villa%20Pier.png'); }
 
 /***** Exit Locations *****/
+.any-exit { background-image: url('../img/exit/Any.png'); }
 .training-exit-ButtonbytheRedCar { background-image: url('../img/exit/Button%20by%20the%20Red%20Car.png'); }
 .training-exit-ButtonbytheSpeedboat { background-image: url('../img/exit/Button%20by%20the%20Speedboat.png'); }
 .training-exit-ButtonbytheHelicopter { background-image: url('../img/exit/Button%20by%20the%20Helicopter.png'); }
@@ -1281,16 +1283,21 @@ div[class^="ElusiveTarget"] { background-image: url('../img/targetcon/NPC.jpg');
 
 /***** Gameplay Challenges *****/
 /*** Restrictions ***/
-.challinfo { background-image: url('../img/gpc/none.png'); }
-.Instinct { background-image: url('../img/gpc/Instinct.png'); }
-.MiniMap { background-image: url('../img/gpc/MiniMap.png'); }
-.AttentionAlert { background-image: url('../img/gpc/AttentionAlert.png'); } /* RETAKE THIS IMAGE */
-.NPCIcons { background-image: url('../img/gpc/NPCIcons.png'); }
-.WeaponHUD { background-image: url('../img/gpc/WeaponHUD.png'); }
-.PictureInPicture { background-image: url('../img/gpc/PictureInPicture.png'); }
-.LimitedVisionArea { background-image: url('../img/gpc/LimitedVisionArea.png'); }
-.NoAgility { background-image: url('../img/gpc/NoAgility.png'); }
-.NoCrouching { background-image: url('../img/gpc/NoCrouching.png'); }
+.h2-challinfo, .h1-challinfo { background-image: url('../img/gpc/none.png'); }
+.h2-Instinct { background-image: url('../img/gpc/Instinct.png'); }
+.h1-Instinct { background-image: url('../img/gpc/InstinctH1.png'); }
+.h2-MiniMap { background-image: url('../img/gpc/MiniMap.png'); }
+.h1-MiniMap { background-image: url('../img/gpc/MiniMapH1.png'); }
+.h2-AttentionAlert { background-image: url('../img/gpc/AttentionAlert.png'); }
+.h1-AttentionAlert { background-image: url('../img/gpc/AttentionAlertH1.png'); }
+.h2-NPCIcons { background-image: url('../img/gpc/NPCIcons.png'); }
+.h1-NPCIcons { background-image: url('../img/gpc/NPCIconsH1.png'); }
+.h2-WeaponHUD { background-image: url('../img/gpc/WeaponHUD.png'); }
+.h1-WeaponHUD { background-image: url('../img/gpc/WeaponHUDH1.png'); }
+.h2-PictureInPicture { background-image: url('../img/gpc/PictureInPicture.png'); }
+.h2-LimitedVisionArea { background-image: url('../img/gpc/LimitedVisionArea.png'); }
+.h2-NoAgility, .h1-NoAgility { background-image: url('../img/gpc/NoAgility.png'); }
+.h2-NoCrouching, .h1-NoCrouching { background-image: url('../img/gpc/NoCrouching.png'); }
 
 /*** Time, Rating, and Difficulty ***/
 #time-image { background-image: url('../img/gpc/TimeLimit.png'); }
@@ -1299,6 +1306,7 @@ div[class^="ElusiveTarget"] { background-image: url('../img/targetcon/NPC.jpg');
 .MissingKiller { background-image: url('../img/gpc/3star.png'); }
 .QuietHitman { background-image: url('../img/gpc/4star.png'); }
 .SilentAssassin { background-image: url('../img/gpc/5star.png'); }
-#diff-image-Casual { background-image: url('../img/gpc/Casual.png'); }
+#diff-image-ProfessionalH1 { background-image: url('../img/gpc/ProfessionalH1.png'); }
+#diff-image-Normal, #diff-image-Casual { background-image: url('../img/gpc/Casual.png'); }
 #diff-image-Professional { background-image: url('../img/gpc/Professional.png'); }
 #diff-image-Master { background-image: url('../img/gpc/Master.png'); }

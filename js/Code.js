@@ -214,7 +214,8 @@ function containerToResult(container) {
 	else
 		result.objectives = container.wild[Math.floor(Math.random()*container.wild.length)];
 	
-	result.mechanics = mechList[Math.floor(Math.random()*mechList.length)];
+	result.mechanicsH1 = mechListH1[Math.floor(Math.random()*mechListH1.length)];
+	result.mechanicsH2 = mechListH2[Math.floor(Math.random()*mechListH2.length)];
 	result.time = timeList[Math.floor(Math.random()*timeList.length)];
 	result.rating = ratingList[Math.floor(Math.random()*ratingList.length)];
 	result.difficulty = difficultyList[Math.floor(Math.random()*difficultyList.length)];
@@ -237,7 +238,7 @@ function writeEverything(result) {
 	//Start and Exit
 	var exitModeIndex = document.getElementById("startexit");
 	var exitMode = exitModeIndex.options[exitModeIndex.selectedIndex].value;
-	if (exitMode != "OFF") {
+	if (exitMode == "BOTH") {
 		document.getElementById("travel").innerHTML =
 			"<div id='entry' class='" + result.missionCode + "-start-" + result.entry.replace(/\s|'|\.|-|\(|\)/g, "") + "'><div id='nameplate'><span><p id='title'>Starting Location</p><p id='subtitle'>" + result.entry + "</p></span></div></div><div id='exit' class='" + result.missionCode + "-exit-" + result.exit.split('|')[0].replace(/\s|'|\.|-|\||\(|\)/g, "") + "'><div id='nameplate'><span><p id='title'>Exit Location <span id='exitreq'></span></p><p id='subtitle'>" + result.exit.split('|')[0] + "</p></span></div></div>";
 		document.getElementById("input_entry").value = "\nStart: " + result.entry;
@@ -245,24 +246,40 @@ function writeEverything(result) {
 		if(result.exit.split('|')[1] != null) {
 			document.getElementById("exitreq").innerHTML = result.exit.split('|')[1];
 			document.getElementById("input_exitreq").value = " " + result.exit.split('|')[1];			
-		}
+		};
+	}
+	else if (exitMode == "START") {
+		document.getElementById("travel").innerHTML =
+			"<div id='entry' class='" + result.missionCode + "-start-" + result.entry.replace(/\s|'|\.|-|\(|\)/g, "") + "'><div id='nameplate'><span><p id='title'>Starting Location</p><p id='subtitle'>" + result.entry + "</p></span></div></div><div id='exit' class='any-exit'><div id='nameplate'><span><p id='title'>Exit Location <span id='exitreq'></span></p><p id='subtitle'>Any Exit</p></span></div></div>";
+		document.getElementById("input_entry").value = "\nStart: " + result.entry;
+		document.getElementById("input_exit").value = "";
+		document.getElementById("exitreq").innerHTML = "";
+		document.getElementById("input_exitreq").value = "";			
+	}
+	else if (exitMode == "EXIT" || exitMode == "SECRET" ) {
+		document.getElementById("travel").innerHTML =
+			"<div id='entry' class='any-start'><div id='nameplate'><span><p id='title'>Starting Location</p><p id='subtitle'>Any Entrance</p></span></div></div><div id='exit' class='" + result.missionCode + "-exit-" + result.exit.split('|')[0].replace(/\s|'|\.|-|\||\(|\)/g, "") + "'><div id='nameplate'><span><p id='title'>Exit Location <span id='exitreq'></span></p><p id='subtitle'>" + result.exit.split('|')[0] + "</p></span></div></div>";
+		document.getElementById("input_entry").value = "";
+		document.getElementById("input_exit").value = "\nExit: " + result.exit.split('|')[0];
+		if(result.exit.split('|')[1] != null) {
+			document.getElementById("exitreq").innerHTML = result.exit.split('|')[1];
+			document.getElementById("input_exitreq").value = " " + result.exit.split('|')[1];			
+		};			
 	}
 	else {
 		document.getElementById("travel").innerHTML = "";
 		document.getElementById("input_entry").value = "";
 		document.getElementById("input_exit").value = "";
 		document.getElementById("input_exitreq").value = "";
-	}
+	};
 	
 	var modeIndex = document.getElementById("modeselect");
 	var mode = modeIndex.options[modeIndex.selectedIndex].value;
-	
 	if (mode == "CONEASY" || mode == "CONHARD") { var contractmode = " contarget" }
 	else { var contractmode = "" }
 	
 	// Write to the HTML elements from the results object
 	var MAX_TARGETS = 5, MAX_EXTRAS = document.getElementById("compslider").value;
-	
 	for(var i = 0; i < MAX_TARGETS; ++i){ // targets, disguise, and intel
 		if(i < result.targets.length) {
 			document.getElementById("target" + (i+1)).innerHTML =
@@ -300,8 +317,8 @@ function writeEverything(result) {
 				else { // no method subtype
 					document.getElementById("subtitle-alt" + (i+1)).innerHTML = "";
 					document.getElementById("input_weaponsub" + (i+1)).value = "";
-				}
-			}
+				};
+			};
 			if(result.targets[i].split('|')[1] == null || mode == "CONHARD") { // target intel off
 				document.getElementById("subplate" + (i+1)).style.setProperty("background-image", "none", "important");//display none goes here if tall pics required
 				document.getElementById("inteltoggle" + (i+1)).style.setProperty("display", "none", "important");//also remove inteltoggle in target generation
@@ -310,7 +327,7 @@ function writeEverything(result) {
 			}
 			else {
 				document.getElementById("input_contract").value = " (Contracts Mode)";
-			}
+			};
 		}
 		else { // no more targets
 			document.getElementById("target" + (i+1)).innerHTML = "";
@@ -318,8 +335,8 @@ function writeEverything(result) {
 			document.getElementById("input_disguise" + (i+1)).value = "";
 			document.getElementById("input_weapon" + (i+1)).value = "";
 			document.getElementById("input_targetintel" + (i+1)).value = "";
-		}
-	}
+		};
+	};
 	
 	if(result.missionobjective.length) { // campaign mission objective
 		document.getElementById("objective").innerHTML = 
@@ -331,7 +348,7 @@ function writeEverything(result) {
 	else {
 		document.getElementById("objective").innerHTML = "";
 		document.getElementById("input_objective").value = "";
-	}
+	};
 	
 	if(document.getElementById("exobj").checked == 1) { // extra mission objective
 		document.getElementById("objectivex").innerHTML = 
@@ -341,12 +358,12 @@ function writeEverything(result) {
 		document.getElementById("input_extraobjective").value = "\nExtra Objective: " + result.objectives.split('|')[0] + " - " + result.objectives.split('|')[1];
 		if(result.objectives.split('|')[2] != null) { // extra objective hint
 			document.getElementById("hint").innerHTML = "(<a target='_blank' href='./img/general/" + result.objectives.split('|')[2] + "'>Hint</a>)";
-		}
+		};
 	}
 	else {
 		document.getElementById("objectivex").innerHTML = "";
 		document.getElementById("input_extraobjective").value = "";
-	}
+	};
 	
 	for(var i = 0; i < MAX_EXTRAS; ++i){ // complications
 		if(i < result.extras.length) {
@@ -360,8 +377,8 @@ function writeEverything(result) {
 		else {
 			document.getElementById("complication" + (i+1)).innerHTML = "";
 			document.getElementById("input_complication" + (i+1)).value = "";
-		}
-	}
+		};
+	};
 	var compcheck = document.getElementById("complication1").innerHTML;
 	if(compcheck.length == 0 && document.getElementById("compslider").value > 0) { // failsafe if no complications generated
 		document.getElementById("submenu_comp").disabled = false;
@@ -402,20 +419,28 @@ function writeEverything(result) {
 		document.getElementById("subsubmenu_comp").disabled = false;
 		/*document.getElementById("complicationi").innerHTML = "";*/
 		document.getElementById("input_complicationi").value = "";
+	};
+	
+	var mechanicsModeIndex = document.getElementById("mechanics");
+	var mechanicsMode = mechanicsModeIndex.options[mechanicsModeIndex.selectedIndex].value;
+	if(mechanicsMode == "H2") {
+		document.getElementById("restriction").innerHTML =
+			"<div id='res-image' class='h2-" + result.mechanicsH2.split('|')[0].replace(/\s|\&/g, "") +
+			"'><div id='instruction'><img id='list' src='./img/general/blank.png'><p id='wording'>" + result.mechanicsH2.split('|')[1] +
+			"</p></div><div id='nameplate'><span><p id='title'>Restriction</p><p id='subtitle'>" + result.mechanicsH2.split('|')[0] + "</p></span></div></div>";
+		document.getElementById("input_restriction").value = "\n● " + result.mechanicsH2.split('|')[1];
 	}
-	
-	
-	if(document.getElementById("mechanics").checked == 1) { // restricted mechanics
-		document.getElementById("restriction").innerHTML = 
-			"<div id='res-image' class='" + result.mechanics.split('|')[0].replace(/\s|\&/g, "") +
-			"'><div id='instruction'><img id='list' src='./img/general/blank.png'><p id='wording'>" + result.mechanics.split('|')[1] +
-			"</p></div><div id='nameplate'><span><p id='title'>Restriction</p><p id='subtitle'>" + result.mechanics.split('|')[0] + "</p></span></div></div>";
-		document.getElementById("input_restriction").value = "\n● " + result.mechanics.split('|')[1];
+	else if(mechanicsMode == "H1") {
+		document.getElementById("restriction").innerHTML =
+			"<div id='res-image' class='h1-" + result.mechanicsH1.split('|')[0].replace(/\s|\&/g, "") +
+			"'><div id='instruction'><img id='list' src='./img/general/blank.png'><p id='wording'>" + result.mechanicsH1.split('|')[1] +
+			"</p></div><div id='nameplate'><span><p id='title'>Restriction</p><p id='subtitle'>" + result.mechanicsH1.split('|')[0] + "</p></span></div></div>";
+		document.getElementById("input_restriction").value = "\n● " + result.mechanicsH1.split('|')[1];
 	}
 	else {
 		document.getElementById("restriction").innerHTML = "";
 		document.getElementById("input_restriction").value = "";
-	}
+	};
 	
 	if(document.getElementById("time").checked == 1) { // time limit
 		document.getElementById("timelimit").innerHTML = 
@@ -426,7 +451,7 @@ function writeEverything(result) {
 	else {
 		document.getElementById("timelimit").innerHTML = "";
 		document.getElementById("input_timelimit").value = "";
-	}
+	};
 	
 	if(document.getElementById("rating").checked == 1) { // rating requirement
 		document.getElementById("ratingget").innerHTML = 
@@ -437,28 +462,33 @@ function writeEverything(result) {
 	else {
 		document.getElementById("ratingget").innerHTML = "";
 		document.getElementById("input_rating").value = "";
-	}
+	};
 	
-	if(document.getElementById("difficulty").checked == 1 && !proOnly.includes(result.missionCode) && mode == "MAIN") { // force difficulty for campaign missions
+	var difficultyModeIndex = document.getElementById("difficulty");
+	var difficultyMode = difficultyModeIndex.options[difficultyModeIndex.selectedIndex].value;
+	if(mode != "MAIN") { // no alternate difficulty in contracts mode or elusive targets
+		document.getElementById("diffget").innerHTML = "";
+		document.getElementById("input_difficulty").value = "";
+	}
+	else if(difficultyMode == "H2" && !proOnly.includes(result.missionCode)) { // H2 difficulty on maps where available
 		document.getElementById("diffget").innerHTML = 
 			"<div id='diff-image-" + result.difficulty + "' class=''><div id='instruction'><img id='list' src='./img/general/blank.png'><p id='wording'>Complete the roulette with the mission's difficulty set to " + result.difficulty +
 			".</p></div><div id='nameplate'><span><p id='title'>Difficulty</p><p id='subtitle'>" + result.difficulty + "</p></span></div></div>";
 		document.getElementById("input_difficulty").value = "\n● Complete the roulette with the mission's difficulty set to " + result.difficulty + ".";
 	}
-	else if(document.getElementById("difficulty").checked == 1 && proOnly.includes(result.missionCode) && mode == "MAIN") { // difficulty is pro for tutorial, bonus, and pz
-		document.getElementById("diffget").innerHTML = 
-			"<div id='diff-image-Professional' class=''><div id='instruction'><img id='list' src='./img/general/blank.png'><p id='wording'>Complete the roulette with this mission's only difficulty of Professional.</p></div><div id='nameplate'><span><p id='title'>Difficulty</p><p id='subtitle'>Professional</p></span></div></div>";
-		document.getElementById("input_difficulty").value = "\n● Complete the roulette with this mission's only difficulty of Professional.";
+	else if(difficultyMode == "H1" && !proOnly.includes(result.missionCode) && !h1.includes(result.missionCode)) { // H1 difficulty not available for H1 maps
+		document.getElementById("diffget").innerHTML = "";
+		document.getElementById("input_difficulty").value = "";
 	}
-	else if(document.getElementById("difficulty").checked == 1 && mode != "MAIN") { // difficulty is pro in contracts mode and for elusive targets
+	else if(difficultyMode == "H1" && !proOnly.includes(result.missionCode) && result.difficulty == "Master") { // H1 difficulty on maps where available
 		document.getElementById("diffget").innerHTML = 
-			"<div id='diff-image-Professional' class=''><div id='instruction'><img id='list' src='./img/general/blank.png'><p id='wording'>Complete the roulette with this mission's only difficulty of Professional.</p></div><div id='nameplate'><span><p id='title'>Difficulty</p><p id='subtitle'>Professional</p></span></div></div>";
-		document.getElementById("input_difficulty").value = "\n● Complete the roulette with this mission's only difficulty of Professional.";
+			"<div id='diff-image-ProfessionalH1' class=''><div id='instruction'><img id='list' src='./img/general/blank.png'><p id='wording'>Complete the roulette with the mission's difficulty set to Professional.</p></div><div id='nameplate'><span><p id='title'>Difficulty</p><p id='subtitle'>Professional</p></span></div></div>";
+		document.getElementById("input_difficulty").value = "\n● Complete the roulette with the mission's difficulty set to Professional.";
 	}
 	else {
 		document.getElementById("diffget").innerHTML = "";
 		document.getElementById("input_difficulty").value = "";
-	}
+	};
 	
 	var mechcheck = document.getElementById("restriction").innerHTML;
 	var timecheck = document.getElementById("timelimit").innerHTML;
@@ -469,13 +499,14 @@ function writeEverything(result) {
 		document.getElementById("subsubmenu_chal").disabled = true;
 		/*document.getElementById("challengesi").innerHTML = // prompt to try challenges
 			"<div id='chall-image' class='challinfo'><div id='instruction'><img id='list' src='./img/general/blank.png'><p id='wording'>Test your skills by enabling Gameplay Challenges through the Roulette Settings top menu.</p></div><div id='nameplate'><span><p id='title'>Challenges</p><p id='subtitle'>None Enabled</p></span></div></div>";*/
+		document.getElementById("input_challengest").value = "";
 	}
 	else {	
 		document.getElementById("submenu_chal").disabled = false;
 		document.getElementById("subsubmenu_chal").disabled = false;
 		//document.getElementById("challengesi").innerHTML = "";
 		document.getElementById("input_challengest").value = "\n\nChallenges:";
-	}
+	};
 	
 	/*Variabble Wall used to fill in textarea used to save a roulette*/
 	var contracttext = document.getElementById("input_contract").value;
