@@ -784,7 +784,7 @@ html.h1theme #photo[class^="ElusiveTarget"], html.h1gotytheme #photo[class^="Elu
 	#logo, .side { display:none; }
 	#logothin { display:flex; }
 }
-#entry, #exit { height:261px; }
+/*#entry, #exit { height:261px; } was causing errors on mobile */
 #entry, #top { margin-bottom:3px; }
 #subplate.method, #subplate.disguise, div[id^="subplate"].intel {
 	background-color:var(--targetreqsbg);
