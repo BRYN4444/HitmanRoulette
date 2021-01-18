@@ -291,16 +291,20 @@ function writeEverything(result) {
 			document.getElementById("input_target" + (i+1)).value = "\nEliminate " + result.targets[i].split('|')[0];
 			document.getElementById("input_disguise" + (i+1)).value = ", while disguised as: " + result.disguises[i];
 			document.getElementById("input_targetintel" + (i+1)).value = "\n └ Intel: " + result.targets[i].split('|')[1];
+			document.getElementById("overlay-target-intel" + (i+1)).innerHTML = result.targets[i].split('|')[1];
 			if(result.missionCode == "training" && (mode == "MAIN" || mode == "ELUSIVE") && fftfailsafe.includes(result.weapons[i]) ) {
 				document.getElementById("subtitle" + (i+1)).innerHTML = "Any Method";
+				document.getElementById("subtitle-alt" + (i+1)).innerHTML = "";
 				document.getElementById("input_weapon" + (i+1)).value = ", using: Any Method";
 			}
 			else if(result.missionCode == "training" && (mode == "CONEASY" || mode == "CONHARD") && fftfailsafeContract.includes(result.weapons[i]) ) {
 				document.getElementById("subtitle" + (i+1)).innerHTML = "Any Method";
+				document.getElementById("subtitle-alt" + (i+1)).innerHTML = "";
 				document.getElementById("input_weapon" + (i+1)).value = ", using: Any Method";
 			}
 			else if(result.missionCode == "test" && icafailsafe.includes(result.weapons[i]) ) {
 				document.getElementById("subtitle" + (i+1)).innerHTML = "Any Method";
+				document.getElementById("subtitle-alt" + (i+1)).innerHTML = "";
 				document.getElementById("input_weapon" + (i+1)).value = ", using: Any Method";
 			}
 			else { // elimination method
@@ -323,6 +327,7 @@ function writeEverything(result) {
 				document.getElementById("subplate" + (i+1)).style.setProperty("background-image", "none", "important");//display none goes here if tall pics required
 				document.getElementById("inteltoggle" + (i+1)).style.setProperty("display", "none", "important");//also remove inteltoggle in target generation
 				document.getElementById("input_targetintel" + (i+1)).value = "";
+				document.getElementById("overlay-target-intel" + (i+1)).innerHTML = "";
 				document.getElementById("input_contract").value = "";
 			}
 			else {
@@ -335,6 +340,7 @@ function writeEverything(result) {
 			document.getElementById("input_disguise" + (i+1)).value = "";
 			document.getElementById("input_weapon" + (i+1)).value = "";
 			document.getElementById("input_targetintel" + (i+1)).value = "";
+			document.getElementById("overlay-target-intel" + (i+1)).innerHTML = "";
 		};
 	};
 	
@@ -373,10 +379,12 @@ function writeEverything(result) {
 				"</p></div><div id='nameplate'><span><p id='title'>Complication</p><p id='subtitle'>" + result.extras[i].split('|')[0] + "</p></span></div></div>";
 			document.getElementById("input_complicationt").value = "\n\nComplications:";
 			document.getElementById("input_complication" + (i+1)).value = "\n● " + result.extras[i].split('|')[0] + " - " + result.extras[i].split('|')[1];
+			document.getElementById("overlay-complication" + (i+1)).innerHTML = result.extras[i].split('|')[0];
 		}
 		else {
 			document.getElementById("complication" + (i+1)).innerHTML = "";
 			document.getElementById("input_complication" + (i+1)).value = "";
+			document.getElementById("overlay-complication" + (i+1)).innerHTML = "";
 		};
 	};
 	var compcheck = document.getElementById("complication1").innerHTML;
@@ -387,12 +395,12 @@ function writeEverything(result) {
 			"<div id='comp-image' class='NoRecordings'><div id='instruction'><img id='list' src='./img/general/blank.png'><p id='wording'>Do not get recorded by a security camera. If you are recorded, you must destroy the evidence.</p></div><div id='nameplate'><span><p id='title'>Complications</p><p id='subtitle'>No Recordings</p></span></div></div>";
 		document.getElementById("input_complicationt").value = "\n\nComplications:";
 		document.getElementById("input_complicationi").value = "\n● No Recordings - Do not get recorded by a security camera. If you are recorded, you must destroy the evidence.";
+		document.getElementById("overlay-complicationi").innerHTML = "No Recordings";
 	}
 	else if(compcheck.length != 0 && document.getElementById("compslider").value == 0) { // clears pre-generated complications
 		document.getElementById("submenu_comp").disabled = true;
 		document.getElementById("subsubmenu_comp").disabled = true;
-		/*document.getElementById("complicationi").innerHTML = // prompt to try complications if toggled off
-			"<div id='comp-image' class='compinfo'><div id='instruction'><img id='list' src='./img/general/blank.png'><p id='wording'>Change up your playstyle with complications. Find the option by selecting Roulette Settings in the top menu, followed by Extra Requirements.</p></div><div id='nameplate'><span><p id='title'>Complications</p><p id='subtitle'>None Enabled</p></span></div></div>";*/
+		document.getElementById("complicationi").innerHTML = "";
 		document.getElementById("complication1").innerHTML = "";
 		document.getElementById("complication2").innerHTML = "";
 		document.getElementById("complication3").innerHTML = "";
@@ -407,18 +415,29 @@ function writeEverything(result) {
 		document.getElementById("input_complication4").value = "";
 		document.getElementById("input_complication5").value = "";
 		document.getElementById("input_complication6").value = "";
+		document.getElementById("overlay-complicationi").innerHTML = "";
+		document.getElementById("overlay-complication1").innerHTML = "";
+		document.getElementById("overlay-complication2").innerHTML = "";
+		document.getElementById("overlay-complication3").innerHTML = "";
+		document.getElementById("overlay-complication4").innerHTML = "";
+		document.getElementById("overlay-complication5").innerHTML = "";
+		document.getElementById("overlay-complication6").innerHTML = "";
 	}
 	else if(compcheck.length == 0){ // no complications
 		document.getElementById("submenu_comp").disabled = true;
 		document.getElementById("subsubmenu_comp").disabled = true;
-		/*document.getElementById("complicationi").innerHTML =
-			"<div id='comp-image' class='compinfo'><div id='instruction'><img id='list' src='./img/general/blank.png'><p id='wording'>Change up your playstyle with complications. Find the option by selecting Roulette Settings in the top menu, followed by Extra Requirements.</p></div><div id='nameplate'><span><p id='title'>Complications</p><p id='subtitle'>None Enabled</p></span></div></div>";*/
+		document.getElementById("complicationi").innerHTML = "";
+		document.getElementById("input_complicationt").value = "";
+		document.getElementById("input_complicationi").value = "";
+		document.getElementById("overlay-complicationi").innerHTML = "";
 	}
 	else { // complications are generated
 		document.getElementById("submenu_comp").disabled = false;
 		document.getElementById("subsubmenu_comp").disabled = false;
-		/*document.getElementById("complicationi").innerHTML = "";*/
+		document.getElementById("complicationi").innerHTML = "";
+		document.getElementById("input_complicationt").value = "";
 		document.getElementById("input_complicationi").value = "";
+		document.getElementById("overlay-complicationi").innerHTML = "";
 	};
 	
 	var mechanicsModeIndex = document.getElementById("mechanics");
@@ -594,6 +613,27 @@ function writeEverything(result) {
 	
 	document.getElementById("saveroulette").disabled = false;
 	document.getElementById("subsaveroulette").disabled = false;
+	
+	
+	document.getElementById('overlay-target1').innerHTML = target1text + weapon1text + weaponsub1text + disguise1text;
+	document.getElementById('overlay-target2').innerHTML = target2text + weapon2text + weaponsub2text + disguise2text;
+	document.getElementById('overlay-target3').innerHTML = target3text + weapon3text + weaponsub3text + disguise3text;
+	document.getElementById('overlay-target4').innerHTML = target4text + weapon4text + weaponsub4text + disguise4text;
+	document.getElementById('overlay-target5').innerHTML = target5text + weapon5text + weaponsub5text + disguise5text;
+	//document.getElementById('overlay-objective').innerHTML = objectivetext;
+	//document.getElementById('overlay-objectivex').innerHTML = extraobjectivetext;
+	document.getElementById('overlay-exit').innerHTML = exittext + exitreqtext;
+	//document.getElementById('overlay-complicationi').innerHTML = complicationitext;
+	//document.getElementById('overlay-complication1').innerHTML = complication1text;
+	//document.getElementById('overlay-complication2').innerHTML = complication2text;
+	//document.getElementById('overlay-complication3').innerHTML = complication3text;
+	//document.getElementById('overlay-complication4').innerHTML = complication4text;
+	//document.getElementById('overlay-complication5').innerHTML = complication5text;
+	//document.getElementById('overlay-complication6').innerHTML = complication6text;
+	document.getElementById('overlay-challenge_restriction').innerHTML = restrictiontext;
+	document.getElementById('overlay-challenge_timelimit').innerHTML = timelimittext;
+	document.getElementById('overlay-challenge_rating').innerHTML = ratingtext;
+	
 };
 
 function generate_result() {
