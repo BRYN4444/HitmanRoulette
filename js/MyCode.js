@@ -729,8 +729,44 @@ $(document).ready(function() {
 		e.preventDefault();
 		saveTextAsFile();
 	});
+	$("#save-return").click(function(){
+		$( this ).addClass( "hidden" );
+		$("#overlay-help").removeClass( "hidden" );
+		$("#popup-overlay").addClass( "hidden" );
+		$("#popup-save").removeClass( "hidden" );
+		$("button#save").prop('disabled', false);
+	});
+	$("#overlay-help").click(function(){
+		$( this ).addClass( "hidden" );
+		$("#save-return").removeClass( "hidden" );
+		$("#popup-overlay").removeClass( "hidden" );
+		$("#popup-save").addClass( "hidden" );
+		$("button#save").prop('disabled', true);
+	});
 	$("#close").click(function(){
 		$("#shadow").addClass("hidden");
+	});
+	
+	/******Stream Overlay Option & Controls******/
+	$("#overlay").click(function(){
+		$("#overlay-toggle").addClass( "hidden" );
+		$("#overlay-mode").removeClass( "hidden" );
+		$("body").addClass( "overlay-hide" );
+		$("#shadow").addClass("hidden");
+		$("#overlay-message").show().delay(3000).fadeOut(3000);
+		$("#overlay-box").removeClass( "hidden" );
+	});
+	$("#overlay-box-close").click(function(){
+		$("#overlay-box").addClass( "hidden" );
+	});
+	$("#overlay-close").click(function(){
+		$("#overlay-toggle").removeClass( "hidden" );
+		$("#overlay-mode").addClass( "hidden" );
+		$("body").removeClass( "overlay-hide" );
+	});
+	$("#overlay-mode div.click").click(function() {
+		$( this ).toggleClass( "complete" );
+		$( this ).next("div[id^=overlay-target-intel]").toggleClass( "complete" );
 	});
 	
 });
