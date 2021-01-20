@@ -23,16 +23,16 @@ To quickly return the Roulette Settings back to default, preform a hard refresh 
 
 ## Compatibility & Issues
 
-Currently, the Roulette works best with **Hitman 2 Gold Edition** and the **GOTY Legacy Pack**, though you can deselect any locations you do not own. However, you may have to ignore any conflicting gameplay traits, like difficulty, that changed between game releases.
+Currently, the Roulette works best with **Hitman 2 Gold Edition** and the **GOTY Legacy Pack**, though you can deselect any locations you do not own. However, there may be the odd conflicting trait that changed between game releases.
 This was a hobby project I started in 2016/17 and have worked on during my free time as a way to brush up on my simple javascript, jQuery, and CSS knowledge as well as giving me more reason to play these new Hitman games well after unlocking everything. As such, I've only tested this at about a 1080p resolution using the browsers I frequent: Firefox and Chrome. Also I'm sure my additions to the existing code, as well as my own work, could use cleaning up here and there. If you find any issues or glaring conflicts with roulette results, [let me know via GitHub](https://github.com/BRYN4444/HitmanRoulette/issues) and I'll try and address it when I get the chance. - [BRYN](http://bryn.info/)
 
 ### To-Do List / Wishlist:
-* The Hitman 3 campaign (and additional mechanics) will be supported not too long after the game's release in 2021. With it will likely come a Hitman III style as the default appearance for the Roulette.
+* The Hitman 3 campaign (and additional mechanics) will be supported not too long after the game's release. With it will likely come a Hitman III style as the default appearance for the Roulette.
 * More "Extra Objectives" for late-campaign Hitman 2.
-* Allow Entrance Only and/or Exit Only roulette settings.
+* Stream Overlay mode; A method for streamers to show Objectives and more over the gameplay.
 * This would take a complete overhaul, so it's probably out of MY league, but being able to link Roulettes to others would be cool. If you have knowledge on how to do this easily, leave me a message on [Github](https://github.com/BRYN4444/HitmanRoulette/issues).
 
-### Latest Update (Oct. 9, 2020)
+### Latest Major Update (Oct. 9, 2020)
 * **Mobile Friendly / Low Resolution Browsing.** After a few issues, you can now run the Roulette off your phone. While tabbing between sections isn't as smooth as desktop, and imagery will be squished for targets/objectives, I'm happy with this working at all! If your mobile browser is lacking functionality compared to the desktop version, please let me know, and I'll try and look into it.
 * **Force Start/Exit Options added.** By default, the roulette selects a start and exit for you to use. You can now have only a Start or an Exit generate for you. For those times you don't want to run across the map just to end the mission.
 * **Improved Hitman 1 support.** The roulette can be used with both Hitman 1 and 2, but some of Hitman 1's unique quirks were lost as Hitman 2 features overrode them. After a small reworking, the following was updated:
