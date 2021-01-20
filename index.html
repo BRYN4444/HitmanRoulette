@@ -180,6 +180,34 @@
 							</div>
 						</div>
 					</div>
+					
+					<div id="features" class="column">
+						<div id="wrapper">
+							<div id="notes">
+								<p id="wording">
+									All locations can appear in the Roulette by default. You can set it by mission, game, and/or DLC by choosing "Select Missions" above.
+									<br /><br />
+									The following options and more can be set using "Roulette Settings", also above:
+								</p>
+								<ul>
+									<li>Support for Contracts Mode! Eliminate more than the default targets.</li>
+									<li>Enable a mission unique Extra Objective to throw a potential curveball in your approach.</li>
+									<li>Enable Complications for playstyle constraints or requirements.</li>
+								</ul>
+								<img id="list" src="./img/general/blank.png">
+								<p id="wording">
+									<b>Hitman III</b> implementation will be coming soon!
+								</p>
+							</div>
+							<div id="nameplate">
+								<span>
+									<p id="title">Last Updated: January 19th, 2021</p>
+									<p id="subtitle">Roulette Features</p>
+								</span>
+							</div>
+						</div>
+					</div>
+					
 					<div id="empty" class="side"></div>
 					<form class="clearme"><!--Hidden textareas to fill out master textarea to save a roulette.-->
 						<textarea id="input_contract" class="clearme"></textarea>
@@ -839,7 +867,7 @@
 						</label>
 						<!--<label id="mode_m" class="mobile" style="display:none;" data-hover="Limits the missions and potential random options for the game chosen.<br />By default, this is set to Hitman III.">[INFO]:</label>
 						<label id="mode_game" style="display:none;" data-hover="Limits the missions and potential random options for the game chosen.<br />By default, this is set to Hitman III.">
-							<b>Compatability Mode</b><span>[Hitman III]</span>
+							<b>Compatibility Mode</b><span>[Hitman III]</span>
 						</label> Potential option that may or may not be added. //-->
 						<label id="mode_m" class="mobile" style="display:none;" data-hover="Targets and any main objectives are pulled from the standard mission.<br />This is the default option.<br /><br /><b>[If you were previously using Contracts Mode Roulette, you may need to reselect missions when enabling Mission Mode Roulette.]</b>">[INFO]:</label>
 						<label id="mode_mission" class="on" style="display:none;" data-hover="Targets and any main objectives are pulled from the standard mission.<br />This is the default option.<br /><br /><b>[If you were previously using Contracts Mode Roulette, you may need to reselect missions when enabling Mission Mode Roulette.]</b>">
@@ -880,8 +908,8 @@
 							<input type="checkbox" id="generic" value="true" checked />
 							<b>Generic Kills</b><span>[On]</span>
 						</label>
-						<label id="extra_m" class="mobile" style="display:none;" data-hover="The roulette will choose start/exit points you must use.<br /><br /><b>[The mission FREEDOM FIGHTERS gains extra exits after the first playthough in Hitman 2.]<br /></b>Both: Start and exit points are both listed.<br />Start Only: Find your own exit location.<br />Exit Only: Select your own starting location.<br />Secret: Select your own starting location. The listed exit may require secret actions to make appear.<br />Off: You choose your own start or exit points.">[INFO]:</label>
-						<label id="extra_starex" class="both" style="display:none;" data-hover="The roulette will choose start/exit points you must use.<br /><br /><b>[The mission FREEDOM FIGHTERS gains extra exits after the first playthough in Hitman 2.]<br /></b>Both: Start and exit points are both listed.<br />Start Only: Find your own exit location.<br />Exit Only: Select your own starting location.<br />Secret: Select your own starting location. The listed exit may require secret actions to make appear.<br />Off: You choose your own start or exit points.">
+						<label id="extra_m" class="mobile" style="display:none;" data-hover="The roulette will choose start/exit points you must use.<br /><br /><b>[FREEDOM FIGHTERS gains extra exits after the first playthough in Hitman 2.]<br /></b>Both: Start and exit points are both listed.<br />Start Only: Find your own exit location.<br />Exit Only: Select your own starting location.<br />Secret: Select your own starting location. The listed exit may require secret actions to make appear.<br />Off: You choose your own start or exit points.">[INFO]:</label>
+						<label id="extra_starex" class="both" style="display:none;" data-hover="The roulette will choose start/exit points you must use.<br /><br /><b>[FREEDOM FIGHTERS gains extra exits after the first playthough in Hitman 2.]<br /></b>Both: Start and exit points are both listed.<br />Start Only: Find your own exit location.<br />Exit Only: Select your own starting location.<br />Secret: Select your own starting location. The listed exit may require secret actions to make appear.<br />Off: You choose your own start or exit points.">
 							<b>Force Start/Exit</b><span>[Both]</span>
 						</label>
 						<label id="extra_m" class="mobile" style="display:none;" data-hover="On: Adds one extra mission specific task to complete. For example, most of these tasks are in-game Challenges.<br /><br />Off: Only lists mandatory objectives to complete if there are any needed for the mission.">[INFO]:</label>
@@ -961,13 +989,13 @@
 							<li><a href="https://ioi.dk/" target="_blank">IO Interactive</a> for making a great game and constantly supporting it with new stuff! Maybe one day Hitman Roulette could become an actual game mode.</li>
 						</ul>
 						<h1>Compatibility & Issues</h1>
-						<p>Currently, the Roulette works best with <b>Hitman 2 Gold Edition</b> and the <b>GOTY Legacy Pack</b>, though you can deselect any locations you do not own. However, you may have to ignore any conflicting gameplay traits, like difficulty, that changed between game releases.</p>
+						<p>Currently, the Roulette works best with <b>Hitman 2 Gold Edition</b> and the <b>GOTY Legacy Pack</b>, though you can deselect any locations you do not own. However, there may be the odd conflicting trait that changed between game releases.</p>
 						<p>This was a hobby project I started in 2016/17 and have worked on during my free time as a way to brush up on my simple javascript, jQuery, and CSS knowledge as well as giving me more reason to play these new Hitman games well after unlocking everything. As such, I've only tested this at about a 1080p resolution using the browsers I frequent: Firefox and Chrome. Also I'm sure my additions to the existing code, as well as my own work, could use cleaning up here and there. If you find any issues or glaring conflicts with roulette results, <a href="https://github.com/BRYN4444/HitmanRoulette/issues" target="_blank">let me know via GitHub</a> and I'll try and address it when I get the chance. <span id="sig">- <a href="http://bryn.info/" target="_blank">BRYN</a><span></p>
 						<h2>To-Do List / Wishlist:</h2>
 						<ul>
-							<li>The Hitman 3 campaign (and any additional mechanics) will be supported not too long after the game's release in 2021. With it will likely come a Hitman III style as the default appearance for the Roulette.</li>
+							<li>The Hitman 3 campaign (and any additional mechanics) will be supported not too long after the game's release. With it will likely come a Hitman III style as the default appearance for the Roulette.</li>
 							<li>More "Extra Objectives" for late-campaign Hitman 2.</li>
-							<li>Allow Entrance Only and/or Exit Only roulette settings.</li>
+							<li>Stream Overlay mode; A method for streamers to show Objectives and more over the gameplay.</li>
 							<li>This would take a complete overhaul, so it's probably out of MY league, but being able to link Roulettes to others would be cool. If you have knowledge on how to do this easily, leave me a message on <a href="https://github.com/BRYN4444/HitmanRoulette/issues" target="_blank">GitHub</a>.</li>
 						</ul>
 					</div>

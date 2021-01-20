@@ -656,6 +656,7 @@ function button_MakeItGo(){
 	
 	//Hide the intro screen
 	document.getElementById("intro").style.setProperty("display", "none", "important");
+	document.getElementById("features").style.setProperty("display", "none", "important");
 	
 	//Hover to scroll long nameplate names
 	$(function() {
