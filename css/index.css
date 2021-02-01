@@ -391,7 +391,6 @@ html.h2theme { /* Variables for Hitman 2 Styled Theme & Images */
 	--buttonclose:url("../img/general/h2theme/xed-dframe.png");
 	--buttoncloseon:url("../img/general/h2theme/xed-full.png");
 }
-
 html.h3theme, html { /* Variables for Hitman 2 Styled Theme & Images */
 	/* Background */
 	--regularbg:url("../img/general/h3theme/background.webp");
@@ -413,7 +412,7 @@ html.h3theme, html { /* Variables for Hitman 2 Styled Theme & Images */
 							--travelnameplatesize:40px; --travelnameplateposition:left 15px bottom 13px;
 							--mapnameplatebg:rgba(40, 49, 58, 0.6); --mapnameplatesmallcolor:#ffffff; --mapnameplatebigcolor:#ffffff; --mapnameplateshadow:none;
 	/* Settings Styling */ --settingbg:transparent; --settingcolor:#ffffff; --settingshadow:0 0 3px #000000; --settingbghover:#fb000f; --settingcolorhover:#ffffff; --settingshadowhover:none; --settingbgon:transparent; --settingcoloron:#bdbdbd; --settingshadowon:none; --settingdesccolor:#ffffff; --settingdescshadow:0 0 3px #000000;
-	/* Scrollbar Styling */ --scrollbase:rgb(44, 47, 54); --scrollpip:#ff0044; --scrollcolor:#000000;
+	/* Scrollbar Styling */ --scrollbase:rgb(44, 47, 54); --scrollpip:#fb000f; --scrollcolor:#000000;
 	/* Footer Styling */ --footercolor:#ffffff; --footershadow:0 0 3px #000000; --footermobilebg:#000000;
 	/* Popup Styling */ --shadowbg:rgba(0,0,0,0.7); --popupheaderbg:#2c2f36; --popupheadercolor:#ffffff; --popupbg:#2c2f36; --popupcolor:#ffffff; --popupbuttonbg:#2c2f36; --popupbuttoncolor:#ffffff; --popupbuttonbghover:#fb000f; --popupbuttoncolorhover:#ffffff; --textareaborder:1px solid #a4a4a4; --textareabg:#2c2f36; --textareacolor:#ffffff;
 	/* Save Button */ --savebuttonbg:#2c2f36; --savebuttoncolor:#bdbdbd; --savebuttonbghover:#fb000f; --savebuttoncolorhover:#ffffff; --savebuttonbgoff:#2f3541; --savebuttoncoloroff:#bdbdbd; --savebuttonoffopacity:0.5;
