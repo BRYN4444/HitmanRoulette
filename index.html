@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="h2theme">
+<html class="h3theme">
 	<head lang="en">
 		<title>Hitman Roulette</title>
 		<meta charset="UTF-8">
@@ -15,7 +15,7 @@
 		<meta name="twitter:description" content="This randomizer aims to give new ideas for completing missions in the latest Hitman™ trilogy." />
 		<meta name="twitter:image" content="https://hitmanroulette.com/img/general/meta-twit.png" /> 
 		<meta name="keywords" content="Hitman Roulette, Hitman, Hitman 2016, Hitman 2, Hitman 2018, Hitman III, Hitman 3, Hitman 2021, Hitman Trilogy, Agent 47, Enter a World of Assassination, Make the World Your Weapon, Death Awaits, Contracts Mode">
-		<meta name="theme-color" content="#FF0044">
+		<meta name="theme-color" content="#FB000F">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="icon" href="./hrfavicon.png" type="image/png" />
 		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
@@ -184,24 +184,28 @@
 					<div id="features" class="column">
 						<div id="wrapper">
 							<div id="notes">
+								<img id="notice" class="shrink" src="./img/general/blank.png">
 								<p id="wording">
-									All locations can appear in the Roulette by default. You can set it by mission, game, and/or DLC by choosing "Select Missions" above.
+									<b>Contains spoilers</b> for the entire HITMAN trilogy.
+								</p>
+								<p id="wording">
+									By default, all locations could appear. Use "Select Missions" above to specify by mission, game, and/or DLC instead.
 									<br /><br />
 									The following options and more can be set using "Roulette Settings", also above:
 								</p>
 								<ul>
 									<li>Support for Contracts Mode! Eliminate more than the default targets.</li>
-									<li>Enable a mission unique Extra Objective to throw a potential curveball in your approach.</li>
+									<li>Enable a mission unique Extra Objective for a potential curveball in approach.</li>
 									<li>Enable Complications for playstyle constraints or requirements.</li>
 								</ul>
-								<img id="list" src="./img/general/blank.png">
+								<img id="list" class="shrink" src="./img/general/blank.png">
 								<p id="wording">
-									<b>Hitman III</b> implementation will be coming soon!
+									<b>Hitman III</b> added! Support for Extra Objective & Contracts soon.
 								</p>
 							</div>
 							<div id="nameplate">
 								<span>
-									<p id="title">Last Updated: January 19th, 2021</p>
+									<p id="title">Last Updated: February 1st, 2021</p>
 									<p id="subtitle">Roulette Features</p>
 								</span>
 							</div>
@@ -286,11 +290,8 @@
 						<div id="submenu_h2dlc">
 							<span>Hitman™2 Extras</span>
 						</div>
-						<div id="submenu_h3" class="off">
-							<span>
-								<p id="subtitle">Coming Soon After Release</p>
-								<p id="title">Hitman™III</p>
-							</span>
+						<div id="submenu_h3">
+							<span>Hitman™III</span>
 						</div>
 						<!--<div id="submenu_h3dlc" class="off">
 							<span>
@@ -358,11 +359,11 @@
 					</div>
 					<div id="rand-col" class="column">
 						<label for="RANDOMH3">
-							<div id="top" class="rand-h3 lock">
+							<div id="top" class="rand-h3">
 								<div id="nameplate">
 									<span>
 										<input id="RANDOMH3" class="" type="checkbox" value="true" checked />
-										<p id="title">Coming Soon After Release</p>
+										<p id="title">Toggle</p>
 										<p id="subtitle">Hitman™III Campaign</p>
 									</span>
 								</div>
@@ -826,6 +827,68 @@
 							</div>
 						</label>
 					</div>
+					<div id="h3" class="column" style="display:none;">
+						<label for="OTOTW">
+							<div id="top" class="m15-1">
+								<div id="nameplate">
+									<span>
+										<input id="OTOTW" class="lvl h3" type="checkbox" value="true" checked />
+										<p id="title">Toggle / Mission</p>
+										<p id="subtitle">On Top Of The World</p>
+									</span>
+								</div>
+							</div>
+						</label>
+						<label for="DITF">
+							<div id="bottom" class="m16-1">
+								<div id="nameplate">
+									<span>
+										<input id="DITF" class="lvl h3" type="checkbox" value="true" checked />
+										<p id="title">Toggle / Mission</p>
+										<p id="subtitle">Death In The Family</p>
+									</span>
+								</div>
+							</div>
+						</label>
+					</div>
+					<div id="h3" class="column" style="display:none;">
+						<label for="AP">
+							<div id="top" class="m17-1">
+								<div id="nameplate">
+									<span>
+										<input id="AP" class="lvl h3" type="checkbox" value="true" checked />
+										<p id="title">Toggle / Mission</p>
+										<p id="subtitle">Apex Predator</p>
+									</span>
+								</div>
+							</div>
+						</label>
+						<label for="EOAE">
+							<div id="bottom" class="m18-1">
+								<div id="nameplate">
+									<span>
+										<input id="EOAE" class="lvl h3" type="checkbox" value="true" checked />
+										<p id="title">Toggle / Mission</p>
+										<p id="subtitle">End Of An Era</p>
+									</span>
+								</div>
+							</div>
+						</label>
+					</div>
+					<div id="h3" class="column" style="display:none;">
+						<label for="TF">
+							<div id="top" class="m19-1">
+								<div id="nameplate">
+									<span>
+										<input id="TF" class="lvl h3" type="checkbox" value="true" checked />
+										<p id="title">Toggle / Mission</p>
+										<p id="subtitle">The Farewell</p>
+									</span>
+								</div>
+							</div>
+						</label>
+						<label id="blank"></label>
+					</div>					
 					<div id="empty" class="side"></div>
 				</div>
 				<div id="settings" style="display:none;">
@@ -855,13 +918,13 @@
 							<b>Hitman GOTY White</b><span>[Off]</span>
 						</label>
 						<label id="theme_m" class="mobile" style="display:none;" data-hover="The Roulette takes on the appearance of Hitman 2's menu.<br />This is the default appearance.">[INFO]:</label>
-						<label id="theme_h2" class="on" style="display:none;" data-hover="The Roulette takes on the appearance of Hitman 2's menu.<br />This is the default appearance." onClick="document.cookie = 'theme=H2; max-age=' + 30*24*60*60;">
-							<b>Hitman 2 "Hot Magenta"</b><span>[On]</span>
+						<label id="theme_h2" class="on" style="display:none;" data-hover="The Roulette takes on the appearance of Hitman 2's menu." onClick="document.cookie = 'theme=H2; max-age=' + 30*24*60*60;">
+							<b>Hitman 2 "Hot Magenta"</b><span>[Off]</span>
 						</label>
-						<!--<label id="theme_m" class="mobile" style="display:none;" data-hover="The Roulette takes on the appearance of Hitman 3's menu.<br />This is the default appearance.">[INFO]:</label>
-						<label id="theme_h3" class="on" style="display:none;" data-hover="The Roulette takes on the appearance of Hitman 3's menu.<br />This is the default appearance." onClick="document.cookie = 'theme=H3; max-age=' + 30*24*60*60;">
-							<b>Hitman 2 "Hot Magenta"</b><span>[On]</span>
-						</label> Default Theme once implemented. Remove on from How Magenta above! //-->
+						<label id="theme_m" class="mobile" style="display:none;" data-hover="The Roulette takes on the appearance of Hitman III's menu.<br />This is the default appearance.">[INFO]:</label>
+						<label id="theme_h3" class="on" style="display:none;" data-hover="The Roulette takes on the appearance of Hitman III's menu.<br />This is the default appearance." onClick="document.cookie = 'theme=H3; max-age=' + 30*24*60*60;">
+							<b>Hitman III Dark</b><span>[On]</span>
+						</label>
 						<label id="theme_cookies" style="display:none;">
 							<p>This site uses a single <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies" target="_blank">Cookie</a> to remember your selected theme appearance above. By selecting any of those options, you consent to the use of this cookie, which expires in 30 days.</p>
 						</label>
@@ -908,8 +971,8 @@
 							<input type="checkbox" id="generic" value="true" checked />
 							<b>Generic Kills</b><span>[On]</span>
 						</label>
-						<label id="extra_m" class="mobile" style="display:none;" data-hover="The roulette will choose start/exit points you must use.<br /><br /><b>[FREEDOM FIGHTERS gains extra exits after the first playthough in Hitman 2.]<br /></b>Both: Start and exit points are both listed.<br />Start Only: Find your own exit location.<br />Exit Only: Select your own starting location.<br />Secret: Select your own starting location. The listed exit may require secret actions to make appear.<br />Off: You choose your own start or exit points.">[INFO]:</label>
-						<label id="extra_starex" class="both" style="display:none;" data-hover="The roulette will choose start/exit points you must use.<br /><br /><b>[FREEDOM FIGHTERS gains extra exits after the first playthough in Hitman 2.]<br /></b>Both: Start and exit points are both listed.<br />Start Only: Find your own exit location.<br />Exit Only: Select your own starting location.<br />Secret: Select your own starting location. The listed exit may require secret actions to make appear.<br />Off: You choose your own start or exit points.">
+						<label id="extra_m" class="mobile" style="display:none;" data-hover="The roulette will choose start/exit points you must use.<br /><br /><b>[Note: Some Missions gain additional exits after their first playthrough.]<br /></b>Both: Start and exit points are both listed.<br />Start Only: Find your own exit location.<br />Exit Only: Select your own starting location.<br />Secret: Select your own starting location. The listed exit may require secret actions to make appear.<br />Off: You choose your own start or exit points.">[INFO]:</label>
+						<label id="extra_starex" class="both" style="display:none;" data-hover="The roulette will choose start/exit points you must use.<br /><br /><b>[Note: Some Missions gain additional exits after their first playthrough.]<br /></b>Both: Start and exit points are both listed.<br />Start Only: Find your own exit location.<br />Exit Only: Select your own starting location.<br />Secret: Select your own starting location. The listed exit may require secret actions to make appear.<br />Off: You choose your own start or exit points.">
 							<b>Force Start/Exit</b><span>[Both]</span>
 						</label>
 						<label id="extra_m" class="mobile" style="display:none;" data-hover="On: Adds one extra mission specific task to complete. For example, most of these tasks are in-game Challenges.<br /><br />Off: Only lists mandatory objectives to complete if there are any needed for the mission.">[INFO]:</label>
@@ -923,8 +986,8 @@
 							<span id="range"><input id="compslider" type="range" min="0" max="6" value="0" />
 							[Max: <span id="compamount">0</span>]</span>
 						</label>
-						<label id="game_m" class="mobile" style="display:none;" data-hover="Lists a game mechanic that must be avoided or one to disable though the game's Options menu.<br /><br />H2: Pulls from the available mechanics from Hitman 2.<br />H1: Pulls from the available mechanics from Hitman.<br />Off: Use any game mechanic freely.">[INFO]:</label>
-						<label id="game_mech" class="off" style="display:none;" data-hover="Lists a game mechanic that must be avoided or one to disable though the game's Options menu.<br /><br />H2: Pulls from the available mechanics from Hitman 2.<br />H1: Pulls from the available mechanics from Hitman.<br />Off: Use any game mechanic freely.">
+						<label id="game_m" class="mobile" style="display:none;" data-hover="Lists a game mechanic that must be avoided or one to disable though the game's Options menu.<br /><br />H2: Pulls from the available mechanics from HITMAN 2.<br />H1: Pulls from the available mechanics from HITMAN.<br />Off: Use any game mechanic freely.">[INFO]:</label>
+						<label id="game_mech" class="off" style="display:none;" data-hover="Lists a game mechanic that must be avoided or one to disable though the game's Options menu.<br /><br />H2/3: Pulls from the available mechanics from HITMAN 2 and III.<br />H1: Pulls from the available mechanics from HITMAN.<br />Off: Use any game mechanic freely.">
 							<b>Restricted Mechanics</b><span>[Off]</span>
 						</label>
 						<label id="game_m" class="mobile" style="display:none;" data-hover="On: Complete the roulette within the time listed. For accuracy, enable the Mission Timer through the game's Options menu under Gameplay.<br /><br />Off: Complete the roulette at your own speed.">[INFO]:</label>
@@ -937,8 +1000,8 @@
 							<input type="checkbox" id="rating" value="true" />
 							<b>Achieve Rating</b><span>[Off]</span>
 						</label>
-						<label id="game_m" class="mobile" style="display:none;" data-hover="Before attempting the roulette, select the difficulty chosen by the roulette before starting the mission. Note that only campaign missions have alternate difficulties.<br /><br />H2: Casual, Professional, and Master are the difficulties available.<br />H1: Normal and Professional are the difficulties available (Hitman missions only).<br />Off: Complete the roulette on whatever difficulty to want.">[INFO]:</label>
-						<label id="game_diff" class="off" style="display:none;" data-hover="Before attempting the roulette, select the difficulty chosen by the roulette before starting the mission. Note that only campaign missions have alternate difficulties.<br /><br />H2: Casual, Professional, and Master are the difficulties available.<br />H1: Normal and Professional are the difficulties available (Hitman missions only).<br />Off: Complete the roulette on whatever difficulty to want.">
+						<label id="game_m" class="mobile" style="display:none;" data-hover="Before attempting the roulette, select the difficulty chosen by the roulette before starting the mission. Note that only campaign missions have alternate difficulties.<br /><br />H2/H3: Casual, Professional, and Master are the difficulties available.<br />H1: Normal and Professional are the difficulties available (HITMAN missions only).<br />Off: Complete the roulette on whatever difficulty to want.">[INFO]:</label>
+						<label id="game_diff" class="off" style="display:none;" data-hover="Before attempting the roulette, select the difficulty chosen by the roulette before starting the mission. Note that only campaign missions have alternate difficulties.<br /><br />H2/H3: Casual, Professional, and Master are the difficulties available.<br />H1: Normal and Professional are the difficulties available (HITMAN missions only).<br />Off: Complete the roulette on whatever difficulty to want.">
 							<b>Force Difficulty</b><span>[Off]</span>
 						</label>				
 						<select id="modeselect" style="display:none;">
@@ -974,11 +1037,12 @@
 				<div id="credits" style="display:none;">
 					<div id="empty" class="side"></div>
 					<div id="credits_submenu" class="wide">
-						<p>Hitman Roulette is a tool that aims to give new ideas on how to complete missions in the latest Hitman trilogy of games by giving a set of random guidelines to follow when playing. It randomizes things such as mission entry and exit points, elimination method and worn disguise, generic and mission specific variables, and even targets for Contracts Mode.</p>
+						<p>Hitman Roulette is a tool that aims to give new ideas on how to complete missions in the latest HITMAN trilogy of games by giving a set of random guidelines to follow when playing. It randomizes things such as mission entry and exit points, elimination method and worn disguise, generic and mission specific variables, and even targets for Contracts Mode.</p>
 						<p><a href="https://thekotti.github.io/about.html" target="_blank">The original Hitman Roulette</a> (created by <a href="https://twitter.com/TheKotti" target="_blank">TheKotti</a>) is a more straight forward version that also works with Hitman: Blood Money.</p>
 						<h1>How To Use</h1>
-						<p>All missions from the trilogy are pulled into the Roulette by default, so go to Select Missions above to untoggle any missions you're missing or just the ones you don't like.<br />
-						After that, the options under Roulette Settings allow you to alter what the Roulette surfaces. You can get more than the regular targets (Mission Mode Roulette) by choosing Contract Mode Roulette. Dial in the difficulty by toggling Kill Requirements like disguises or weapons you'll need to wear or use, Extra Requirements like one more objective or sets of complications, and Gameplay Challenges that force you to change how you play.</p>
+						<p>To initiate a roll of the Roulette, select "Issue Roulette" on the main page. Use the Undo or Redo buttons that appear at the top of that page to move between generated Roulettes. Save your Roulette as a Textfile using the "Export Roulette" option, again on this page, but in the bottom right corner.</p>
+						<p>All missions from the trilogy are pulled into the Roulette by default, so go to "Select Missions" above to untoggle any missions you're missing or just the ones you don't like.<br />
+						After that, the options under "Roulette Settings" allow you to alter what the Roulette surfaces. You can get more than the regular targets ("Mission Mode Roulette") by choosing "Contract Mode Roulette". Dial in the difficulty by toggling "Kill Requirements" like disguises or weapons you'll need to wear or use, "Extra Requirements" like one more objective or sets of complications, and "Gameplay Challenges" that force you to change how you play.</p>
 						<p>To quickly return the Roulette Settings back to default, preform a hard refresh of the page or <a href="#" onClick="window.location.href=window.location.href">click here</a>.</p>
 						<h1>Special Thanks & External Resources</h1>
 						<ul>
@@ -986,14 +1050,14 @@
 							<li><a href="http://hitmanmaps.com/" target="_blank">Hitman Interactive Maps</a> by Winterbirds & <a href="https://www.hitmaps.com/" target="_blank">Hitmaps</a> (formerly Hitman 2 Maps) by mkoch227 for being great tools that aided in my data collection.</li>
 							<li><a href="https://github.com/gromo/jquery.scrollbar" target="_target">jQuery CSS Customizable Scrollbar</a> by gromo & <a href="https://www.dte.web.id/2013/02/event-mouse-wheel.html" target="_blank">Event Mouse Wheel</a> by Taufik Nurrohman which I used for style and navigation.</li>
 							<li><a href="http://detectmobilebrowsers.com/" target="_target">Detect Mobile Browsers</a> by Chad Smith, which helped in allowing settings descriptions viewable for mobile via touch.</li>
-							<li><a href="https://ioi.dk/" target="_blank">IO Interactive</a> for making a great game and constantly supporting it with new stuff! Maybe one day Hitman Roulette could become an actual game mode.</li>
+							<li><a href="https://ioi.dk/" target="_blank">IO Interactive</a> for making a great game and constantly supporting it with new stuff!</li>
 						</ul>
 						<h1>Compatibility & Issues</h1>
-						<p>Currently, the Roulette works best with <b>Hitman 2 Gold Edition</b> and the <b>GOTY Legacy Pack</b>, though you can deselect any locations you do not own. However, there may be the odd conflicting trait that changed between game releases.</p>
+						<p>You can deselect any locations you do not own, but by default the Roulette works best with any edition of <b>HITMAN III</b> plus the <b>Access Pass: HITMAN 1 GOTY Edition</b> and <b>Access Pass: HITMAN 2 Gold</b>. However, there may be the odd conflicting trait that changed between game releases.</p>
 						<p>This was a hobby project I started in 2016/17 and have worked on during my free time as a way to brush up on my simple javascript, jQuery, and CSS knowledge as well as giving me more reason to play these new Hitman games well after unlocking everything. As such, I've only tested this at about a 1080p resolution using the browsers I frequent: Firefox and Chrome. Also I'm sure my additions to the existing code, as well as my own work, could use cleaning up here and there. If you find any issues or glaring conflicts with roulette results, <a href="https://github.com/BRYN4444/HitmanRoulette/issues" target="_blank">let me know via GitHub</a> and I'll try and address it when I get the chance. <span id="sig">- <a href="http://bryn.info/" target="_blank">BRYN</a><span></p>
 						<h2>To-Do List / Wishlist:</h2>
 						<ul>
-							<li>The Hitman 3 campaign (and any additional mechanics) will be supported not too long after the game's release. With it will likely come a Hitman III style as the default appearance for the Roulette.</li>
+							<li>The Hitman III campaign (and any additional mechanics) will be supported not too long after the game's release. With it will likely come a Hitman III style as the default appearance for the Roulette.</li>
 							<li>More "Extra Objectives" for late-campaign Hitman 2.</li>
 							<li>Stream Overlay mode; A method for streamers to show Objectives and more over the gameplay.</li>
 							<li>This would take a complete overhaul, so it's probably out of MY league, but being able to link Roulettes to others would be cool. If you have knowledge on how to do this easily, leave me a message on <a href="https://github.com/BRYN4444/HitmanRoulette/issues" target="_blank">GitHub</a>.</li>
@@ -1076,10 +1140,7 @@
 						<span>Hitman™2 Extras</span>
 					</div>
 					<div id="subsubmenu_h3" class="off">
-						<span>
-							<p id="subtitle">Coming Soon After Release</p>
-							<p id="title">Hitman™III</p>
-						</span>
+						<span>Hitman™III</span>
 					</div>
 					<!--<div id="subsubmenu_h3dlc" class="off">
 						<span>

@@ -17,18 +17,19 @@ html.h1theme { /* Variables for Hitman 1 Styled Theme & Images */
 	/* Link Styling */	--linkcolor:#ff0000; --linkhover:#ffffff; --linkshadow:none; --linkhovershadow:none;
 	/* Input Range Styling */ --rangebase:#000000; --rangefill:#424242; --rangepip:#d4d4d4;
 	/* Mission Location Styling */ --missionlocationborder:none; --missionlocationcolor:#ffffff;
-	/* Menu Bar Styling */ --menustrip:#3b0d10; --menustripborder:transparent; --menucolor:#b1b1b1; --menushadow:none; --menustriphover:#bdbdbd; --menucolorhover:#2c2c2c; --menushadowhover:none;
+	/* Menu Bar Styling */ --menustripbg:#3b0d10; --menustripborder:transparent; --menucolor:#b1b1b1; --menushadow:none; --menustriphover:#bdbdbd; --menucolorhover:#2c2c2c; --menushadowhover:none;
 	/* Menu Button Styling */ --buttonbg:rgba(61, 72, 73, 0.3); --buttoncolor:#ffffff; --buttonbghover:#ffffff; --buttoncolorhover:#2c2c2c; --buttonbgon:#bcbdbf; --buttoncoloron:#2c2c2c; --buttonbgoff:rgba(0, 0, 0, 0.3); --buttoncoloroff:#a4a4a4;
 	/* Menu Box Styling */ --imagebasebg:rgba(0, 0, 0, 0.2); --targetbasebgsize:102% auto; --targetreqsbg:#bdbdbd; --targetreqscolor:#404040; --objbg:#bdbdbd; --objcolor:#292929;
 							--targetreqsshadow:none; --targetintelshadow:none;
-	/* Nameplate Styling */ --nameplatebg:#404040; --nameplatesmallcolor:#ffffff; --nameplatebigcolor:#ffffff; --nameplatebghover:transparent; --nameplatecolorhover:#ffffff; --lockbg:#662428; --lockcolor:#ffffff;
+	/* Nameplate Styling */ --nameplatebg:#404040; --nameplatetargetbg:#404040; --nameplatesmallcolor:#ffffff; --nameplatebigcolor:#ffffff; --nameplatebghover:transparent; --nameplatecolorhover:#ffffff; --nameplatelockbg:#662428; --lockbg:#662428; --lockbgposition:center; --lockcolor:#ffffff;
 							--welcomenameplatebg:transparent; --welcomenameplatecolor:#ffffff; --welcomenameplateshadow:0 0 6px #000000, 0 0 2px #000000, 0 0 2px #000000, 0 0 1px #000000, 0 0 1px #000000, 0 0 1px #000000;
+							--travelnameplatesize:46px; --travelnameplateposition:left 12px bottom 10px;
 							--mapnameplatebg:transparent; --mapnameplatesmallcolor:#ffffff; --mapnameplatebigcolor:#ffffff; --mapnameplateshadow:0 0 6px #000000, 0 0 2px #000000, 0 0 2px #000000, 0 0 1px #000000, 0 0 1px #000000, 0 0 1px #000000;
 	/* Settings Styling */ --settingbg:rgba(255, 255, 255, 0.2); --settingcolor:#ffffff; --settingshadow:none; --settingbghover:#ffffff; --settingcolorhover:#2c2c2c; --settingshadowhover:none; --settingbgon:#bdbdbd; --settingcoloron:#2c2c2c; --settingshadowon:none; --settingdesccolor:#ffffff; --settingdescshadow:none;
 	/* Scrollbar Styling */ --scrollbase:#590c12; --scrollpip:#df0c12; --scrollcolor:#000000;
 	/* Footer Styling */ --footercolor:#ffffff; --footershadow:0 0 3px #000000; --footermobilebg:#000000;
 	/* Popup Styling */ --shadowbg:rgba(0,0,0,0.7); --popupheaderbg:#580d12; --popupheadercolor:#ffffff; --popupbg:#d2d2d2; --popupcolor:#2c2c2c; --popupbuttonbg:#777777; --popupbuttoncolor:#ffffff; --popupbuttonbghover:#ebebeb; --popupbuttoncolorhover:#2c2c2c; --textareaborder:1px dashed #2c2c2c; --textareabg:#d2d2d2; --textareacolor:#2c2c2c;
-	/* Save Button */ --savebuttonbg:rgba(61, 72, 73, 0.3); --savebuttoncolor:#ffffff; --savebuttonbghover:#ffffff; --savebuttoncolorhover:#2c2c2c; --savebuttonbgoff:rgba(0, 0, 0, 0.3); --savebuttoncoloroff:#a4a4a4;
+	/* Save Button */ --savebuttonbg:rgba(61, 72, 73, 0.3); --savebuttoncolor:#ffffff; --savebuttonbghover:#ffffff; --savebuttoncolorhover:#2c2c2c; --savebuttonbgoff:rgba(0, 0, 0, 0.3); --savebuttoncoloroff:#a4a4a4; --savebuttonoffopacity:1;
 	/* Images */
 	--mission:url("../img/general/h1theme/mission-frame.png");
 	--arrowleft:url("../img/general/h1theme/arrow-left.png");
@@ -59,11 +60,12 @@ html.h1theme { /* Variables for Hitman 1 Styled Theme & Images */
 	--issue:url("../img/general/h1theme/target-frame.png");
 	--issuehover:url("../img/general/h1theme/target-full.png");
 	--list:url("../img/general/h1theme/arrow-right-dfull.png");
+	--notice:url("../img/general/h1theme/exclaimation-dfull.png");
 	--arrowleftnameplate:url("../img/general/h1theme/arrow-left-frame.png");
 	--arrowdownrightnameplate:url("../img/general/h1theme/arrow-downright-frame.png");
 	--featuresnameplate:url("../img/general/h1theme/features-frame.png");
-	--entry:url("../img/general/h1theme/entry-frame.png");
-	--exit:url("../img/general/h1theme/exit-frame.png");
+	--entry:url("../img/general/h1theme/entry-szframe.png");
+	--exit:url("../img/general/h1theme/exit-szframe.png");
 	--method:url("../img/general/h1theme/method-dfull.png");
 	--disguise:url("../img/general/h1theme/disguise-dfull.png");
 	--intel:url("../img/general/h1theme/intel-dfull.png");
@@ -142,18 +144,19 @@ html.h1gotytheme { /* Variables for Hitman 1 GOTY Styled Theme & Images */
 	/* Link Styling */	--linkcolor:#ffffff; --linkhover:#2c2c2c; --linkshadow:none; --linkhovershadow:none;
 	/* Input Range Styling */ --rangebase:#000000; --rangefill:#424242; --rangepip:#d4d4d4;
 	/* Mission Location Styling */ --missionlocationborder:2px dotted #464646; --missionlocationcolor:#929292;
-	/* Menu Bar Styling */ --menustripbg:transparent; --menustripborder:1px solid #464646; --menucolor:#464646; --menushadow:none; --menustriphover:#464646; --menucolorhover:#d2d2d2; --menushadowhover:none;
+	/* Menu Bar Styling */ --menustripbg:transparent !important; --menustripborder:1px solid #464646; --menucolor:#464646; --menushadow:none; --menustriphover:#464646; --menucolorhover:#d2d2d2; --menushadowhover:none;
 	/* Menu Button Styling */ --buttonbg:#464646; --buttoncolor:#d2d2d2; --buttonbghover:#ffffff; --buttoncolorhover:#464646; --buttonbgon:#d2d2d2; --buttoncoloron:#464646; --buttonbgoff:rgba(0, 0, 0, 0.3); --buttoncoloroff:#a4a4a4;
 	/* Menu Box Styling */ --imagebasebg:rgba(0, 0, 0, 0.2); --targetbasebgsize:102% auto; --targetreqsbg:#bdbdbd; --targetreqscolor:#404040; --objbg:#bdbdbd; --objcolor:#292929;
 							--targetreqsshadow:none; --targetintelshadow:none;
-	/* Nameplate Styling */ --nameplatebg:#464646; --nameplatesmallcolor:#d2d2d2; --nameplatebigcolor:#d2d2d2; --nameplatebghover:transparent; --nameplatecolorhover:#ffffff; --lockbg:#e3e3e3; --lockcolor:#a4a4a4;
+	/* Nameplate Styling */ --nameplatebg:#464646; --nameplatetargetbg:#464646; --nameplatesmallcolor:#d2d2d2; --nameplatebigcolor:#d2d2d2; --nameplatebghover:transparent; --nameplatecolorhover:#ffffff; --nameplatelockbg:#e3e3e3; --lockbg:#e3e3e3; --lockbgposition:center; --lockcolor:#a4a4a4;
 							--welcomenameplatebg:transparent; --welcomenameplatecolor:#ffffff; --welcomenameplateshadow:0 0 6px #000000, 0 0 2px #000000, 0 0 2px #000000, 0 0 1px #000000, 0 0 1px #000000, 0 0 1px #000000;
+							--travelnameplatesize:46px; --travelnameplateposition:left 12px bottom 10px;
 							--mapnameplatebg:transparent; --mapnameplatesmallcolor:#ffffff; --mapnameplatebigcolor:#ffffff; --mapnameplateshadow:0 0 6px #000000, 0 0 2px #000000, 0 0 2px #000000, 0 0 1px #000000, 0 0 1px #000000, 0 0 1px #000000;
 	/* Settings Styling */ --settingbg:transparent; --settingcolor:#464646; --settingshadow:none; --settingbghover:#464646; --settingcolorhover:#d2d2d2; --settingshadowhover:none; --settingbgon:rgba(0, 0, 0, 0.2); --settingcoloron:#d2d2d2; --settingshadowon:none; --settingdesccolor:#464646; --settingdescshadow:none;
 	/* Scrollbar Styling */ --scrollbase:#464646; --scrollpip:#ffffff; --scrollcolor:#000000;
 	/* Footer Styling */ --footercolor:#464646; --footershadow:none; --footermobilebg:#aaaaaa;
 	/* Popup Styling */ --shadowbg:rgba(0,0,0,0.7); --popupheaderbg:#d2d2d2; --popupheadercolor:#464646; --popupbg:#d2d2d2; --popupcolor:#464646; --popupbuttonbg:#464646; --popupbuttoncolor:#d2d2d2; --popupbuttonbghover:#d2d2d2; --popupbuttoncolorhover:#464646; --textareaborder:1px solid #464646; --textareabg:#d2d2d2; --textareacolor:#464646;
-	/* Save Button */ --savebuttonbg:#464646; --savebuttoncolor:#d2d2d2; --savebuttonbghover:#ffffff; --savebuttoncolorhover:#464646; --savebuttonbgoff:rgba(0, 0, 0, 0.3); --savebuttoncoloroff:#aaaaaa;
+	/* Save Button */ --savebuttonbg:#464646; --savebuttoncolor:#d2d2d2; --savebuttonbghover:#ffffff; --savebuttoncolorhover:#464646; --savebuttonbgoff:rgba(0, 0, 0, 0.3); --savebuttoncoloroff:#aaaaaa; --savebuttonoffopacity:1;
 	/* Images */
 	--mission:url("../img/general/h1gotytheme/mission-dfull.png");
 	--arrowleft:url("../img/general/h1gotytheme/arrow-left.png");
@@ -184,11 +187,12 @@ html.h1gotytheme { /* Variables for Hitman 1 GOTY Styled Theme & Images */
 	--issue:url("../img/general/h1gotytheme/target-lfull.png");
 	--issuehover:url("../img/general/h1gotytheme/target-dframe.png");
 	--list:url("../img/general/h1gotytheme/arrow-right-dfull.png");
+	--notice:url("../img/general/h1gotytheme/exclaimation-dfull.png");
 	--arrowleftnameplate:url("../img/general/h1gotytheme/arrow-left-frame.png");
 	--arrowdownrightnameplate:url("../img/general/h1gotytheme/arrow-downright-frame.png");
 	--featuresnameplate:url("../img/general/h1gotytheme/features-frame.png");
-	--entry:url("../img/general/h1gotytheme/entry-lframe.png");
-	--exit:url("../img/general/h1gotytheme/exit-lframe.png");
+	--entry:url("../img/general/h1gotytheme/entry-szframe.png");
+	--exit:url("../img/general/h1gotytheme/exit-szframe.png");
 	--method:url("../img/general/h1gotytheme/method-dfull.png");
 	--disguise:url("../img/general/h1gotytheme/disguise-dfull.png");
 	--intel:url("../img/general/h1gotytheme/intel-dfull.png");
@@ -255,7 +259,7 @@ html.h1gotytheme { /* Variables for Hitman 1 GOTY Styled Theme & Images */
 	--buttonclose:url("../img/general/h1gotytheme/xed-lfull.png");
 	--buttoncloseon:url("../img/general/h1gotytheme/xed-dframe.png");
 }
-html.h2theme, html { /* Variables for Hitman 2 Styled Theme & Images */
+html.h2theme { /* Variables for Hitman 2 Styled Theme & Images */
 	/* Background */
 	--regularbg:url("../img/general/h2theme/background.webp");
 	--regularbggradient:linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 15%, rgba(0,0,0,0) 71%, rgba(0,0,0,0.4) 100%);
@@ -267,18 +271,19 @@ html.h2theme, html { /* Variables for Hitman 2 Styled Theme & Images */
 	/* Link Styling */	--linkcolor:#ff0044; --linkhover:#ffffff; --linkshadow:0 0 3px #000, 0 0 3px #000; --linkhovershadow:none;
 	/* Mission Location Styling */ --missionlocationborder:none; --missionlocationcolor:#ffffff;
 	/* Input Range Styling */ --rangebase:#000000; --rangefill:#424242; --rangepip:#d4d4d4;
-	/* Menu Bar Styling */ --menustrip:transparent; --menustripborder:transparent; --menucolor:#ffffff; --menushadow:0 0 3px #000000; --menustriphover:#ff0044; --menucolorhover:#ffffff; --menushadowhover:none;
+	/* Menu Bar Styling */ --menustripbg:transparent; --menustripborder:transparent; --menucolor:#ffffff; --menushadow:0 0 3px #000000; --menustriphover:#ff0044; --menucolorhover:#ffffff; --menushadowhover:none;
 	/* Menu Button Styling */ --buttonbg:#ffffff; --buttoncolor:#292929; --buttonbghover:#ff0044; --buttoncolorhover:#ffffff; --buttonbgon:#9a9a9a; --buttoncoloron:#d4d4d4; --buttonbgoff:#e3e3e3; --buttoncoloroff:#a4a4a4;
 	/* Menu Box Styling */ --imagebasebg:rgba(0, 0, 0, 0.2); --targetbasebgsize:auto 100%; --targetreqsbg:transparent; --targetreqscolor:#ffffff; --objbg:#eeeced; --objcolor:#292929;
 							--targetreqsshadow:0 0 6px #000000, 0 0 2px #000000, 0 0 1px #000000, 0 0 1px #000000, 0 0 1px #000000; --targetintelshadow:0 0 6px #000000, 0 0 2px #000000, 0 0 2px #000000, 0 0 1px #000000, 0 0 1px #000000, 0 0 1px #000000;
-	/* Nameplate Styling */ --nameplatebg:#ffffff; --nameplatesmallcolor:#ff0044; --nameplatebigcolor:#292929; --nameplatebghover:#ff0044; --nameplatecolorhover:#ffffff; --lockbg:#e3e3e3; --lockcolor:#a4a4a4;
+	/* Nameplate Styling */ --nameplatebg:#ffffff; --nameplatetargetbg:#ffffff; --nameplatesmallcolor:#ff0044; --nameplatebigcolor:#292929; --nameplatebghover:#ff0044; --nameplatecolorhover:#ffffff; --nameplatelockbg:#e3e3e3; --lockbg:#e3e3e3; --lockbgposition:center; --lockcolor:#a4a4a4;
 							--welcomenameplatebg:#ffffff; --welcomenameplatecolor:inherit; --welcomenameplateshadow:none;
+							--travelnameplatesize:40px; --travelnameplateposition:left 15px bottom 13px;
 							--mapnameplatebg:#ffffff; --mapnameplatesmallcolor:#ff0044; --mapnameplatebigcolor:#292929; --mapnameplateshadow:none;
 	/* Settings Styling */ --settingbg:transparent; --settingcolor:#ffffff; --settingshadow:0 0 3px #000000; --settingbghover:#ff0044; --settingcolorhover:#ffffff; --settingshadowhover:none; --settingbgon:#9a9a9a; --settingcoloron:#d4d4d4; --settingshadowon:none; --settingdesccolor:#ffffff; --settingdescshadow:0 0 3px #000000;
 	/* Scrollbar Styling */ --scrollbase:#ffffff; --scrollpip:#ff0044; --scrollcolor:#000000;
 	/* Footer Styling */ --footercolor:#ffffff; --footershadow:0 0 3px #000000; --footermobilebg:#000000;
 	/* Popup Styling */ --shadowbg:rgba(0,0,0,0.7); --popupheaderbg:#ffffff; --popupheadercolor:#000000; --popupbg:#ffffff; --popupcolor:#000000; --popupbuttonbg:#ffffff; --popupbuttoncolor:#000000; --popupbuttonbghover:#ff0044; --popupbuttoncolorhover:#ffffff; --textareaborder:1px solid #AAAAAA; --textareabg:#ffffff; --textareacolor:#000000;
-	/* Save Button */ --savebuttonbg:#ffffff; --savebuttoncolor:#000000; --savebuttonbghover:#ff0044; --savebuttoncolorhover:#ffffff; --savebuttonbgoff:#e3e3e3; --savebuttoncoloroff:#a4a4a4;
+	/* Save Button */ --savebuttonbg:#ffffff; --savebuttoncolor:#000000; --savebuttonbghover:#ff0044; --savebuttoncolorhover:#ffffff; --savebuttonbgoff:#e3e3e3; --savebuttoncoloroff:#a4a4a4; --savebuttonoffopacity:1;
 	/* Images */
 	--mission:url("../img/general/h2theme/mission-szframe.png");
 	--arrowleft:url("../img/general/h2theme/arrow-left.png");
@@ -307,6 +312,7 @@ html.h2theme, html { /* Variables for Hitman 2 Styled Theme & Images */
 	--issue:url("../img/general/h2theme/target-dframe.png");
 	--issuehover:url("../img/general/h2theme/target-full.png");
 	--list:url("../img/general/h2theme/arrow-right-dframe.png");
+	--notice:url("../img/general/h2theme/exclaimation-dframe.png");
 	--arrowleftnameplate:url("../img/general/h2theme/arrow-left-dframe.png");
 	--arrowdownrightnameplate:url("../img/general/h2theme/arrow-downright-dframe.png");
 	--featuresnameplate:url("../img/general/h2theme/features-dframe.png");
@@ -384,6 +390,142 @@ html.h2theme, html { /* Variables for Hitman 2 Styled Theme & Images */
 	--buttonsavereturnon:url("../img/general/h2theme/arrow-right-full.png");
 	--buttonclose:url("../img/general/h2theme/xed-dframe.png");
 	--buttoncloseon:url("../img/general/h2theme/xed-full.png");
+}
+
+html.h3theme, html { /* Variables for Hitman 2 Styled Theme & Images */
+	/* Background */
+	--regularbg:url("../img/general/h3theme/background.webp");
+	--regularbggradient:linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 15%, rgba(0,0,0,0) 71%, rgba(0,0,0,0.4) 100%);
+	--regularbgcolor:#091018;
+	--missionbgfilter:none;
+	--missionbggradient:linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 15%, rgba(0,0,0,0) 71%, rgba(0,0,0,0.4) 100%);
+	--missionbgopacity:1;
+	/* Regular Styling */ --normalshadow:0 0 3px #000000; --normalcolor:#ffffff; --uppercase:uppercase;
+	/* Link Styling */	--linkcolor:#fb000f; --linkhover:#ffffff; --linkshadow:0 0 3px #000, 0 0 3px #000; --linkhovershadow:none;
+	/* Mission Location Styling */ --missionlocationborder:none; --missionlocationcolor:#ffffff;
+	/* Input Range Styling */ --rangebase:#464646; --rangefill:#949494; --rangepip:#ffffff;
+	/* Menu Bar Styling */ --menustripbg:rgba(44, 47, 54, 0.6); --menustripborder:transparent; --menucolor:#ffffff; --menushadow:0 0 3px #000000; --menustriphover:#fb000f; --menucolorhover:#ffffff; --menushadowhover:none;
+	/* Menu Button Styling */ --buttonbg:#11161c; --buttoncolor:#ffffff; --buttonbghover:#fb000f; --buttoncolorhover:#ffffff; --buttonbgon:#2c2f36; --buttoncoloron:#bdbdbd; --buttonbgoff:#2f3541; --buttoncoloroff:#bdbdbd;
+	/* Menu Box Styling */ --imagebasebg:rgba(0, 0, 0, 0.2); --targetbasebgsize:auto 100%; --targetreqsbg:transparent; --targetreqscolor:#ffffff; --objbg:#2c2f36; --objcolor:#ffffff;
+							--targetreqsshadow:0 0 6px #000000, 0 0 2px #000000, 0 0 1px #000000, 0 0 1px #000000, 0 0 1px #000000; --targetintelshadow:0 0 6px #000000, 0 0 2px #000000, 0 0 2px #000000, 0 0 1px #000000, 0 0 1px #000000, 0 0 1px #000000;
+	/* Nameplate Styling */ --nameplatebg:rgb(40, 49, 58); --nameplatetargetbg:rgba(40, 49, 58, 0.6); --nameplatesmallcolor:#ffffff; --nameplatebigcolor:#ffffff; --nameplatebghover:#fb000f; --nameplatecolorhover:#ffffff; --nameplatelockbg:#2f3541; --lockbg:#3e4148; --lockbgposition:center -20px; --lockcolor:#bdbdbd;
+							--welcomenameplatebg:rgba(40, 49, 58, 0.6); --welcomenameplatecolor:#ffffff; --welcomenameplateshadow:none;
+							--travelnameplatesize:40px; --travelnameplateposition:left 15px bottom 13px;
+							--mapnameplatebg:rgba(40, 49, 58, 0.6); --mapnameplatesmallcolor:#ffffff; --mapnameplatebigcolor:#ffffff; --mapnameplateshadow:none;
+	/* Settings Styling */ --settingbg:transparent; --settingcolor:#ffffff; --settingshadow:0 0 3px #000000; --settingbghover:#fb000f; --settingcolorhover:#ffffff; --settingshadowhover:none; --settingbgon:transparent; --settingcoloron:#bdbdbd; --settingshadowon:none; --settingdesccolor:#ffffff; --settingdescshadow:0 0 3px #000000;
+	/* Scrollbar Styling */ --scrollbase:rgb(44, 47, 54); --scrollpip:#ff0044; --scrollcolor:#000000;
+	/* Footer Styling */ --footercolor:#ffffff; --footershadow:0 0 3px #000000; --footermobilebg:#000000;
+	/* Popup Styling */ --shadowbg:rgba(0,0,0,0.7); --popupheaderbg:#2c2f36; --popupheadercolor:#ffffff; --popupbg:#2c2f36; --popupcolor:#ffffff; --popupbuttonbg:#2c2f36; --popupbuttoncolor:#ffffff; --popupbuttonbghover:#fb000f; --popupbuttoncolorhover:#ffffff; --textareaborder:1px solid #a4a4a4; --textareabg:#2c2f36; --textareacolor:#ffffff;
+	/* Save Button */ --savebuttonbg:#2c2f36; --savebuttoncolor:#bdbdbd; --savebuttonbghover:#fb000f; --savebuttoncolorhover:#ffffff; --savebuttonbgoff:#2f3541; --savebuttoncoloroff:#bdbdbd; --savebuttonoffopacity:0.5;
+	/* Images */
+	--mission:url("../img/general/h3theme/mission-szframe.png");
+	--arrowleft:url("../img/general/h3theme/arrow-left.png");
+	--arrowright:url("../img/general/h3theme/arrow-right.png");
+	--roulette:url("../img/general/h3theme/roulette-szframe.png");
+	--roulettehover:url("../img/general/h3theme/roulette-zfull.png");
+	--location:url("../img/general/h3theme/locations-szframe.png");
+	--locationhover:url("../img/general/h3theme/locations-zfull.png");
+	--options:url("../img/general/h3theme/settings-szframe.png");
+	--optionshover:url("../img/general/h3theme/settings-zfull.png");
+	--about:url("../img/general/h3theme/about-szframe.png");
+	--abouthover:url("../img/general/h3theme/about-zfull.png");
+	--dotlight:none; --dotdark:none; --dotmid:none;
+	--objective:url("../img/general/h3theme/objective-full.png");
+	--objectivehover:url("../img/general/h3theme/objective-full.png");
+	--objectiveon:url("../img/general/h3theme/objective-lfull.png");
+	--objectiveoff:url("../img/general/h3theme/objective-lframe.png");
+	--complication:url("../img/general/h3theme/complication-full.png");
+	--complicationhover:url("../img/general/h3theme/complication-full.png");
+	--complicationon:url("../img/general/h3theme/complication-lfull.png");
+	--complicationoff:url("../img/general/h3theme/complication-lframe.png");
+	--challenge:url("../img/general/h3theme/challenge-full.png");
+	--challengehover:url("../img/general/h3theme/challenge-full.png");
+	--challengeon:url("../img/general/h3theme/challenge-lfull.png");
+	--challengeoff:url("../img/general/h3theme/challenge-lframe.png");
+	--issue:url("../img/general/h3theme/target-full.png");
+	--issuehover:url("../img/general/h3theme/target-full.png");
+	--list:url("../img/general/h3theme/arrow-right-frame.png");
+	--notice:url("../img/general/h3theme/exclaimation-frame.png");
+	--arrowleftnameplate:url("../img/general/h3theme/arrow-left-frame.png");
+	--arrowdownrightnameplate:url("../img/general/h3theme/arrow-downright-frame.png");
+	--featuresnameplate:url("../img/general/h3theme/features-frame.png");
+	--entry:url("../img/general/h3theme/entry-frame.png");
+	--exit:url("../img/general/h3theme/exit-frame.png");
+	--method:url("../img/general/h3theme/method-sfull.png");
+	--disguise:url("../img/general/h3theme/disguise-sfull.png");
+	--intel:url("../img/general/h3theme/intel-sfull.png");
+	--target:url("../img/general/h3theme/target-frame.png");
+	--objectiveex:url("../img/general/h3theme/objective-frame.png");
+	--complicationex:url("../img/general/h3theme/complication-frame.png");
+	--restriction:url("../img/general/h3theme/restriction-frame.png");
+	--time:url("../img/general/h3theme/time-frame.png");
+	--rating:url("../img/general/h3theme/rating-frame.png");
+	--casual:url("../img/general/h3theme/difficulty-1-frame.png");
+	--pro:url("../img/general/h3theme/difficulty-2-frame.png");
+	--master:url("../img/general/h3theme/difficulty-3-frame.png");
+	--xed:url("../img/general/h3theme/xed-frame.png");
+	--xedhover:url("../img/general/h3theme/xed-full.png");
+	--checked:url("../img/general/h3theme/checked-frame.png");
+	--checkedhover:url("../img/general/h3theme/checked-full.png");
+	--randomall:url("../img/general/h3theme/caution-full.png");
+	--randomallhover:url("../img/general/h3theme/caution-full.png");
+	--randomallon:url("../img/general/h3theme/caution-lfull.png");
+	--h1:url("../img/general/h3theme/h1-full.png");
+	--h1hover:url("../img/general/h3theme/h1-full.png");
+	--h1on:url("../img/general/h3theme/h1-lfull.png");
+	--h1dlc:url("../img/general/h3theme/h1p-full.png");
+	--h1dlchover:url("../img/general/h3theme/h1p-full.png");
+	--h1dlcon:url("../img/general/h3theme/h1p-lfull.png");
+	--h2:url("../img/general/h3theme/h2-full.png");
+	--h2hover:url("../img/general/h3theme/h2-full.png");
+	--h2on:url("../img/general/h3theme/h2-lfull.png");
+	--h2dlc:url("../img/general/h3theme/h2p-full.png");
+	--h2dlchover:url("../img/general/h3theme/h2p-full.png");
+	--h2dlcon:url("../img/general/h3theme/h2p-lfull.png");
+	--h3:url("../img/general/h3theme/h3-full.png");
+	--h3hover:url("../img/general/h3theme/h3-full.png");
+	--h3on:url("../img/general/h3theme/h3-lfull.png");
+	--h3off:url("../img/general/h3theme/h3-lframe.png");
+	--h3dlc:url("../img/general/h3theme/h3p-full.png");
+	--h3dlchover:url("../img/general/h3theme/h3p-full.png");
+	--h3dlcon:url("../img/general/h3theme/h3p-lfull.png");
+	--h3dlcoff:url("../img/general/h3theme/h3p-lframe.png");
+	--lock:url("../img/general/h3theme/lock-lframe.png");
+	--lockstripes:url("../img/general/h3theme/stripes.png");
+	--settingtheme:url("../img/general/h3theme/disguise-full.png");
+	--settingthemehover:url("../img/general/h3theme/disguise-full.png");
+	--settingthemeon:url("../img/general/h3theme/disguise-lfull.png");
+	--settingroulette:url("../img/general/h3theme/roulette-full.png");
+	--settingroulettehover:url("../img/general/h3theme/roulette-full.png");
+	--settingrouletteon:url("../img/general/h3theme/roulette-lfull.png");
+	--settingkills:url("../img/general/h3theme/assassination-full.png");
+	--settingkillshover:url("../img/general/h3theme/assassination-full.png");
+	--settingkillson:url("../img/general/h3theme/assassination-lfull.png");
+	--settingextra:url("../img/general/h3theme/fold-full.png");
+	--settingextrahover:url("../img/general/h3theme/fold-full.png");
+	--settingextraon:url("../img/general/h3theme/fold-lfull.png");
+	--settingchallenges:url("../img/general/h3theme/challenge-full.png");
+	--settingchallengeshover:url("../img/general/h3theme/challenge-full.png");
+	--settingchallengeson:url("../img/general/h3theme/challenge-lfull.png");
+	--info:url("../img/general/h3theme/info-sfull.png");
+	--infomobile:url("../img/general/h3theme/info-full.png");
+	--save:url("../img/general/h3theme/save-lfull.png");
+	--savehover:url("../img/general/h3theme/save-full.png");
+	--saveoff:url("../img/general/h3theme/save-lframe.png");
+	--buttonsave:url("../img/general/h3theme/save-full.png");
+	--buttonsaveon:url("../img/general/h3theme/save-full.png");
+	--buttonsavedisabled:url("../img/general/h3theme/save-lframe.png");
+	--buttonoverlay:url("../img/general/h3theme/overlay-full.png");
+	--buttonoverlayon:url("../img/general/h3theme/overlay-full.png");
+	--buttonoverlayhelp:url("../img/general/h3theme/about-full.png");
+	--buttonoverlayhelpon:url("../img/general/h3theme/about-full.png");
+	--buttonsavereturn:url("../img/general/h3theme/arrow-right-full.png");
+	--buttonsavereturnon:url("../img/general/h3theme/arrow-right-full.png");
+	--buttonclose:url("../img/general/h3theme/xed-full.png");
+	--buttoncloseon:url("../img/general/h3theme/xed-full.png");
+	
+	
+	
 	--overlaytarget:url("../img/general/h2theme/overlay-target.png");
 	--overlayintel:url("../img/general/h2theme/overlay-intel.png");
 	--overlayobjective:url("../img/general/h2theme/overlay-objective.png");
@@ -394,6 +536,8 @@ html.h2theme, html { /* Variables for Hitman 2 Styled Theme & Images */
 	--overlaycheck:url("../img/general/h2theme/overlay-check.png");
 	--overlayx:url("../img/general/h2theme/overlay-x.png");
 }
+
+
 
 body {
 	background:var(--regularbggradient), var(--regularbg);
@@ -613,7 +757,7 @@ input[type=range]::-ms-thumb {
 }
 #menustrip {
 	width:100%;
-	background-color:var(--menustrip);
+	background-color:var(--menustripbg);
 	border-bottom:var(--menustripborder);
 	padding:0 70px;
 	display:flex;
@@ -866,7 +1010,7 @@ div[id^="subplate"].intel span p {
 	line-height:1;
 	white-space:normal;
 }
-#list {
+#list, #notice {
 	width:40px;
     height:40px;
     float:left;
@@ -878,6 +1022,8 @@ div[id^="subplate"].intel span p {
 	background-position:center;
 	background-size:100%;
 }
+#list {	background-image:var(--list); }
+#notice {	background-image:var(--notice); }
 #instruction {
 	background:var(--objbg);
 	height:195px;
@@ -902,12 +1048,6 @@ div[id^="subplate"].intel span p {
 	padding:0 10px;
 	margin-top:10px;
 }
-@media only screen and (max-height: 940px) {
-	#notes #wording, #notes ul li { font-size:15px !important; }
-}
-@media only screen and (max-height: 715px) {
-	#notes #wording, #notes ul li { font-size:12px !important; }
-}
 #notes ul {
 	margin:0px;
 	padding-left:25px;
@@ -918,6 +1058,23 @@ div[id^="subplate"].intel span p {
 	line-height:1.3;
 	white-space:normal;
 }
+@media only screen and (max-height: 940px) {
+	#notes #wording, #notes ul li { font-size:15px !important; }
+	#notice.shrink, #list.shrink {
+		width:35px;
+		height:35px;
+		margin:12px 10px 0 15px;
+	}
+}
+@media only screen and (max-height: 715px) {
+	#notes #wording, #notes ul li { font-size:12px !important; }
+	#notice.shrink, #list.shrink {
+		width:20px;
+		height:20px;
+		margin:8px 6px 0 10px;
+	}
+	#notes ul {	padding-left:20px; }
+}
 #nameplate { 
 	background-color:var(--nameplatebg);
 	background-repeat:no-repeat;
@@ -925,12 +1082,14 @@ div[id^="subplate"].intel span p {
 	background-size:40px;
 	display:flex;
 	flex-direction:column;
-	justify-content:flex-end;
+	/*justify-content:flex-end;*/
+	justify-content:center;
 	color:var(--nameplatebigcolor);
 	height:66px;
 }
 #nameplate span {
-	margin:0 0 13px 65px;
+	/*margin:0 0 13px 65px;*/
+	margin:3px 0 0 62px;
 }
 #nameplate span span {
 	margin:0;
@@ -943,6 +1102,9 @@ div[id^="subplate"].intel span p {
 	text-transform:var(--uppercase);
 	cursor:default;
 }
+#nameplate #title {
+	text-indent: 3px;
+}
 #nameplate #title b {
 	display:none;
 	font-weight:normal;
@@ -950,7 +1112,9 @@ div[id^="subplate"].intel span p {
 #nameplate #subtitle {
 	font-size:21px;
 	font-weight:700;
-	line-height:1;
+	/*line-height:1;*/
+	line-height:1.1;
+	text-indent: 3px;
 	text-transform:var(--uppercase);
 	overflow:hidden;
 	text-overflow:ellipsis;
@@ -965,11 +1129,15 @@ div[id^="subplate"].intel span p {
 	background-position: bottom 77px center, top center;
 	background-size: 315px, 102%;
 	}
-#logo #nameplate, #logothin #nameplate { 
+#logo #nameplate, #logothin #nameplate, #travel #nameplate { 
 	background-color:var(--welcomenameplatebg);
 	background-image:var(--arrowleftnameplate);
 	color:var(--welcomenameplatecolor);
 	text-shadow:var(--welcomenameplateshadow);
+}
+#travel #nameplate {
+	background-size:var(--travelnameplatesize);
+	background-position:var(--travelnameplateposition);
 }
 #features #nameplate { 
 	background-color:var(--nameplatebg);
@@ -988,7 +1156,8 @@ div[id^="subplate"].intel { background-image:var(--intel); }
 #photo.contarget #subplate.method { background-image:url("../img/general/h2theme/method-sfull.png"); }
 #photo.contarget #subplate.disguise { background-image:url("../img/general/h2theme/disguise-sfull.png"); }
 #photo.contarget div[id^="subplate"].intel { background-image:url("../img/general/h2theme/intel-sfull.png"); }
-#photo #nameplate { background-image:var(--target); }
+#photo #nameplate { background-image:var(--target); background-color:var(--nameplatetargetbg); }
+#photo.contarget #nameplate { background-color:var(--nameplatebg); }
 #obj-image #nameplate { background-image:var(--objectiveex); }
 #comp-image #nameplate { background-image:var(--complicationex); }
 #res-image #nameplate { background-image:var(--restriction); }
@@ -1046,14 +1215,15 @@ label:hover #nameplate.on { background-image:var(--checkedhover); }
 #submenu_h3dlc.on, #subsubmenu_h3dlc.on { background-image:var(--h3dlcon); }
 #submenu_h3dlc.off, #subsubmenu_h3dlc.off { background-image:var(--h3dlcoff); }
 .lock { 
-	background:var(--lockbg) !important;
+	background-color:var(--lockbg) !important;
 	background-image:var(--lockstripes) !important;
+	background-position:var(--lockbgposition) !important;
 }
 .lock, .lock #nameplate, .lock #nameplate p {	
 	cursor:not-allowed !important;
 }
 .lock #nameplate, .lock:hover #nameplate, .lock #nameplate #title, .lock #nameplate #subtitle {
-	background-color:var(--lockbg) !important;
+	background-color:var(--nameplatelockbg) !important;
 	color:var(--lockcolor) !important;
 	text-shadow:none;
 }
@@ -1664,6 +1834,7 @@ textarea.clearme { display:none; }
 	background-color:var(--savebuttonbgoff);
 	color:var(--savebuttoncoloroff);
 	cursor:default;
+	opacity:var(--savebuttonoffopacity);
 }
 #saveroulette {	background-image:var(--save); }
 #subsaveroulette { background-image:var(--save), var(--dotlight); }

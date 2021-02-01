@@ -23,9 +23,9 @@ $(document).ready(function() {
 		$("#theme_h1old, #theme_h1goty, #theme_h2").find("span").text("[Off]");
 	}
 	else {
-		document.documentElement.className = "h2theme"; //change to h3 once it's done.
-		$("#theme_h2 span").text("[On]");
-		$("#theme_h1old, #theme_h1goty, #theme_h3").find("span").text("[Off]");
+		document.documentElement.className = "h3theme";
+		$("#theme_h3 span").text("[On]");
+		$("#theme_h1old, #theme_h1goty, #theme_h2").find("span").text("[Off]");
 	};
 	
 	/******Height Calc on Mobile******/
@@ -195,31 +195,37 @@ $(document).ready(function() {
 	$( "#submenu_random" ).click(function() {
 		$( this ).addClass( "on" );
 		$( "label[id^='rand'], div[id^='rand']" ).show();
-		$( "div#h1, div#h1dlc, div#h2, div#h2dlc" ).hide();
+		$( "div#h1, div#h1dlc, div#h2, div#h2dlc, div#h3" ).hide();
 		$( this ).siblings().removeClass( "on" );
 	});
 	$( "#submenu_h1" ).click(function() {
 		$( this ).addClass( "on" );
 		$( "div#h1" ).show();
-		$( "label[id^='rand'], div[id^='rand'], div#h1dlc, div#h2, div#h2dlc" ).hide();
+		$( "label[id^='rand'], div[id^='rand'], div#h1dlc, div#h2, div#h2dlc, div#h3" ).hide();
 		$( this ).siblings().removeClass( "on" );
 	});
 	$( "#submenu_h1dlc" ).click(function() {
 		$( this ).addClass( "on" );
 		$( "div#h1dlc" ).show();
-		$( "label[id^='rand'], div[id^='rand'], div#h1, div#h2, div#h2dlc" ).hide();
+		$( "label[id^='rand'], div[id^='rand'], div#h1, div#h2, div#h2dlc, div#h3" ).hide();
 		$( this ).siblings().removeClass( "on" );
 	});
 	$( "#submenu_h2" ).click(function() {
 		$( this ).addClass( "on" );
 		$( "div#h2" ).show();
-		$( "label[id^='rand'], div[id^='rand'], div#h1, div#h1dlc, div#h2dlc" ).hide();
+		$( "label[id^='rand'], div[id^='rand'], div#h1, div#h1dlc, div#h2dlc, div#h3" ).hide();
 		$( this ).siblings().removeClass( "on" );
 	});
 	$( "#submenu_h2dlc" ).click(function() {
 		$( this ).addClass( "on" );
 		$( "div#h2dlc" ).show();
-		$( "label[id^='rand'], div[id^='rand'], div#h1, div#h1dlc, div#h2" ).hide();
+		$( "label[id^='rand'], div[id^='rand'], div#h1, div#h1dlc, div#h2, div#h3" ).hide();
+		$( this ).siblings().removeClass( "on" );
+	});
+	$( "#submenu_h3" ).click(function() {
+		$( this ).addClass( "on" );
+		$( "div#h3" ).show();
+		$( "label[id^='rand'], div[id^='rand'], div#h1, div#h1dlc, div#h2, div#h2dlc" ).hide();
 		$( this ).siblings().removeClass( "on" );
 	});
 	
@@ -227,32 +233,38 @@ $(document).ready(function() {
 	$( "#subsubmenu_random" ).click(function() {
 		$( this ).addClass( "on" );
 		$( "label[id^='rand'], div[id^='rand']" ).show();
-		$( "div#h1, div#h1dlc, div#h2, div#h2dlc" ).hide();
+		$( "div#h1, div#h1dlc, div#h2, div#h2dlc, div#h3, div#h3dlc" ).hide();
 		$( "#subsubmenu_h1, #subsubmenu_h1dlc, #subsubmenu_h2, #subsubmenu_h2dlc, #subsubmenu_h3, #subsubmenu_h3dlc" ).removeClass( "on" );
 	});
 	$( "#subsubmenu_h1" ).click(function() {
 		$( this ).addClass( "on" );
 		$( "div#h1" ).show();
-		$( "label[id^='rand'], div[id^='rand'], div#h1dlc, div#h2, div#h2dlc" ).hide();
+		$( "label[id^='rand'], div[id^='rand'], div#h1dlc, div#h2, div#h2dlc, div#h3, div#h3dlc" ).hide();
 		$( "#subsubmenu_random, #subsubmenu_h1dlc, #subsubmenu_h2, #subsubmenu_h2dlc, #subsubmenu_h3, #subsubmenu_h3dlc" ).removeClass( "on" );
 	});
 	$( "#subsubmenu_h1dlc" ).click(function() {
 		$( this ).addClass( "on" );
 		$( "div#h1dlc" ).show();
-		$( "label[id^='rand'], div[id^='rand'], div#h1, div#h2, div#h2dlc" ).hide();
+		$( "label[id^='rand'], div[id^='rand'], div#h1, div#h2, div#h2dlc, div#h3, div#h3dlc" ).hide();
 		$( "#subsubmenu_random, #subsubmenu_h1, #subsubmenu_h2, #subsubmenu_h2dlc, #subsubmenu_h3, #subsubmenu_h3dlc" ).removeClass( "on" );
 	});
 	$( "#subsubmenu_h2" ).click(function() {
 		$( this ).addClass( "on" );
 		$( "div#h2" ).show();
-		$( "label[id^='rand'], div[id^='rand'], div#h1, div#h1dlc, div#h2dlc" ).hide();
+		$( "label[id^='rand'], div[id^='rand'], div#h1, div#h1dlc, div#h2dlc, div#h3, div#h3dlc" ).hide();
 		$( "#subsubmenu_random, #subsubmenu_h1, #subsubmenu_h1dlc, #subsubmenu_h2dlc, #subsubmenu_h3, #subsubmenu_h3dlc" ).removeClass( "on" );
 	});
 	$( "#subsubmenu_h2dlc" ).click(function() {
 		$( this ).addClass( "on" );
 		$( "div#h2dlc" ).show();
-		$( "label[id^='rand'], div[id^='rand'], div#h1, div#h1dlc, div#h2" ).hide();
+		$( "label[id^='rand'], div[id^='rand'], div#h1, div#h1dlc, div#h2, div#h3, div#h3dlc" ).hide();
 		$( "#subsubmenu_random, #subsubmenu_h1, #subsubmenu_h1dlc, #subsubmenu_h2, #subsubmenu_h3, #subsubmenu_h3dlc" ).removeClass( "on" );
+	});
+	$( "#subsubmenu_h3" ).click(function() {
+		$( this ).addClass( "on" );
+		$( "div#h3" ).show();
+		$( "label[id^='rand'], div[id^='rand'], div#h1, div#h1dlc, div#h2, div#h2dlc, div#h3dlc" ).hide();
+		$( "#subsubmenu_random, #subsubmenu_h1, #subsubmenu_h1dlc, #subsubmenu_h2, #subsubmenu_h2dlc, #subsubmenu_h3dlc" ).removeClass( "on" );
 	});
 	
 	/******Map Select Checkbox Logic******/
@@ -269,13 +281,13 @@ $(document).ready(function() {
 		
 		//Toggle Random All if every level is selected or not
 		if($(this).is("#RANDOM:checked") && ($("#mode_con").hasClass("intel") || $("#mode_con").hasClass("hunt")) ) {
-			$( "input[id^='RANDOM'], input.h1, input.h1bm, input#TS, input.h2, input.h2ex" ).prop('checked', true).parent().parent().addClass("on");
+			$( "input[id^='RANDOM'], input.h1, input.h1bm, input#TS, input.h2, input.h2ex, input.h3" ).prop('checked', true).parent().parent().addClass("on");
 		}
 		else if($(this).is("#RANDOM:checked") && !($("#mode_con").hasClass("intel") || $("#mode_con").hasClass("hunt")) ) {
-			$( "input[id^='RANDOM'], input.h1, input.h1bm, input.h1pz, input.h1sc, input.h2, input.h2ex, input.h2sa" ).prop('checked', true).parent().parent().addClass("on");
+			$( "input[id^='RANDOM'], input.h1, input.h1bm, input.h1pz, input.h1sc, input.h2, input.h2ex, input.h2sa, input.h3" ).prop('checked', true).parent().parent().addClass("on");
 		}
 		else if($(this).is("#RANDOM:not(:checked)")) {
-			$( "input[id^='RANDOM'], input.h1, input.h1bm, input.h1pz, input.h1sc, input.h2, input.h2ex, input.h2sa" ).prop('checked', false).parent().parent().removeClass("on");
+			$( "input[id^='RANDOM'], input.h1, input.h1bm, input.h1pz, input.h1sc, input.h2, input.h2ex, input.h2sa, input.h3" ).prop('checked', false).parent().parent().removeClass("on");
 		}
 		else if($(this).is("#RANDOMH1:checked")) {
 			$( "input.h1" ).prop('checked', true).parent().parent().addClass("on");
@@ -346,6 +358,15 @@ $(document).ready(function() {
 		else if($(this).is("#RANDOMH2SA:not(:checked)")) {
 			$( "input.h2sa, input#RANDOM" ).prop('checked', false).parent().parent().removeClass("on");
 		}
+		else if($(this).is("#RANDOMH3:checked")) {
+			$( "input.h3" ).prop('checked', true).parent().parent().addClass("on");
+			if($(".lvl:checked").not(".h1s6").length == $(".lvl").not(".h1s6").length) {
+				$("input#RANDOM").prop('checked', true).parent().parent().addClass("on");
+			};
+		}
+		else if($(this).is("#RANDOMH3:not(:checked)")) {
+			$( "input.h3, input#RANDOM" ).prop('checked', false).parent().parent().removeClass("on");
+		}
 		else if($(".lvl:checked").not(".h1s6").length == $(".lvl").not(".h1s6").length) {
 			$("input#RANDOM").prop('checked', true).parent().parent().addClass("on");
 		}
@@ -415,6 +436,14 @@ $(document).ready(function() {
 		}
 		else {
 			$("input#RANDOMH2SA").prop('checked', false).parent().parent().removeClass("on");
+		};
+		
+		//Toggle Random Hitman 3 if H3 levels are selected or not
+		if($(".h3:checked").length == $(".h3").length) {
+			$("input#RANDOMH3").prop('checked', true).parent().parent().addClass("on");
+		}
+		else {
+			$("input#RANDOMH3").prop('checked', false).parent().parent().removeClass("on");
 		};
 	});
 	/******Options Select Submenu Buttons******/
@@ -630,7 +659,7 @@ $(document).ready(function() {
 	
 	$("#game_mech").click(function() {
 		if( $(this).hasClass("off") ) {
-			$(this).removeClass("off").addClass("h2").find("span").text("[H2]");
+			$(this).removeClass("off").addClass("h2").find("span").text("[H2/H3]");
 			$("#mechanics").val("H2");
 		}
 		else if( $(this).hasClass("h2") ) {
@@ -644,7 +673,7 @@ $(document).ready(function() {
 	});
 	
 	if($("#mechanics").val() == "H2") {
-		$("#game_mech").removeClass("off").addClass("h2").find("span").text("[H2]");
+		$("#game_mech").removeClass("off").addClass("h2").find("span").text("[H2/H3]");
 	} else if ($("#mechanics").val() == "H1") {
 		$("#game_mech").removeClass("off").addClass("h1").find("span").text("[H1]");
 	} else if ($("#mechanics").val() == "OFF") {
@@ -654,7 +683,7 @@ $(document).ready(function() {
 	
 	$("#game_diff").click(function() {
 		if( $(this).hasClass("off") ) {
-			$(this).removeClass("off").addClass("h2").find("span").text("[H2]");
+			$(this).removeClass("off").addClass("h2").find("span").text("[H2/H3]");
 			$("#difficulty").val("H2");
 		}
 		else if( $(this).hasClass("h2") ) {
@@ -667,8 +696,8 @@ $(document).ready(function() {
 		};
 	});
 	
-	if($("#difficulty").val() == "H2") {
-		$("#game_diff").removeClass("off").addClass("h2").find("span").text("[H2]");
+	if($("#difficulty").val() == "H2/H3") {
+		$("#game_diff").removeClass("off").addClass("h2").find("span").text("[H2/H3]");
 	} else if ($("#difficulty").val() == "H1") {
 		$("#game_diff").removeClass("off").addClass("h1").find("span").text("[H1]");
 	} else if ($("#difficulty").val() == "OFF") {

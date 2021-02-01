@@ -42,6 +42,11 @@
 .m12-1 { background:#292929 url("../img/missions/12-1.png") no-repeat center top / 350px; }
 .m13-1 { background:#292929 url("../img/missions/13-1.png") no-repeat center top / 350px; }
 .m14-1 { background:#292929 url("../img/missions/14-1.png") no-repeat center top / 350px; }
+.m15-1 { background:#292929 url("../img/missions/15-1.png") no-repeat center top / 350px; }
+.m16-1 { background:#292929 url("../img/missions/16-1.png") no-repeat center top / 350px; }
+.m17-1 { background:#292929 url("../img/missions/17-1.png") no-repeat center top / 350px; }
+.m18-1 { background:#292929 url("../img/missions/18-1.png") no-repeat center top / 350px; }
+.m19-1 { background:#292929 url("../img/missions/19-1.png") no-repeat center top / 350px; }
 
 /*** Backgrounds ***/
 .training, .test { background-image:var(--missionbggradient), url('../img/missions/ica-facility.webp'); filter:var(--missionbgfilter); -webkit-filter:var(--missionbgfilter); -moz-filter:var(--missionbgfilter); }
@@ -71,6 +76,11 @@
 .ark { background-image:var(--missionbggradient), url('../img/missions/isle-of-sgail.webp'); filter:var(--missionbgfilter); -webkit-filter:var(--missionbgfilter); -moz-filter:var(--missionbgfilter); }
 .bank { background-image:var(--missionbggradient), url('../img/missions/new-york.webp'); filter:var(--missionbgfilter); -webkit-filter:var(--missionbgfilter); -moz-filter:var(--missionbgfilter); }
 .resort { background-image:var(--missionbggradient), url('../img/missions/haven-island.webp'); filter:var(--missionbgfilter); -webkit-filter:var(--missionbgfilter); -moz-filter:var(--missionbgfilter); }
+.tower { background-image:var(--missionbggradient), url('../img/missions/dubai.webp'); filter:var(--missionbgfilter); -webkit-filter:var(--missionbgfilter); -moz-filter:var(--missionbgfilter); }
+.clue { background-image:var(--missionbggradient), url('../img/missions/dartmoor.webp'); filter:var(--missionbgfilter); -webkit-filter:var(--missionbgfilter); -moz-filter:var(--missionbgfilter); }
+.club { background-image:var(--missionbggradient), url('../img/missions/berlin.webp'); filter:var(--missionbgfilter); -webkit-filter:var(--missionbgfilter); -moz-filter:var(--missionbgfilter); }
+.archive { background-image:var(--missionbggradient), url('../img/missions/chongqing.webp'); filter:var(--missionbgfilter); -webkit-filter:var(--missionbgfilter); -moz-filter:var(--missionbgfilter); }
+.vineyard { background-image:var(--missionbggradient), url('../img/missions/mendoza.webp'); filter:var(--missionbgfilter); -webkit-filter:var(--missionbgfilter); -moz-filter:var(--missionbgfilter); }
 
 /***** Starting Locations *****/
 .any-start { background-image: url('../img/entry/Any.png'); }
@@ -203,6 +213,41 @@
 .resort-start-SharkHut { background-image: url('../img/entry/Shark%20Hut.png'); }
 .resort-start-ResortGym { background-image: url('../img/entry/Resort%20Gym.png'); }
 .resort-start-PrivateVillaPier { background-image: url('../img/entry/Private%20Villa%20Pier.png'); }
+.tower-start-BurjalGhazaliExterior { background-image: url('../img/entry/BurjalGhazaliExterior.png'); }
+.tower-start-AtriumLobby { background-image: url('../img/entry/AtriumLobby.png'); }
+.tower-start-MeetingRoom { background-image: url('../img/entry/MeetingRoom.png'); }
+.tower-start-ArtInstallation { background-image: url('../img/entry/ArtInstallation.png'); }
+.tower-start-GuardRoom { background-image: url('../img/entry/GuardRoom.png'); }
+.tower-start-Penthouse { background-image: url('../img/entry/Penthouse.png'); }
+.clue-start-MainRoad { background-image: url('../img/entry/MainRoad.png'); }
+.clue-start-MainRoadGathering { background-image: url('../img/entry/MainRoadGathering.png'); }
+.clue-start-Garden { background-image: url('../img/entry/Garden.png'); }
+.clue-start-StaffRoom { background-image: url('../img/entry/StaffRoom.png'); }
+.clue-start-BehindMansion { background-image: url('../img/entry/BehindMansion.png'); }
+.clue-start-BehindMansionGathering { background-image: url('../img/entry/BehindMansionGathering.png'); }
+.clue-start-Library { background-image: url('../img/entry/Library.png'); }
+.clue-start-ZacharysBedroom { background-image: url('../img/entry/ZacharysBedroom.png'); }
+.club-start-BusStop { background-image: url('../img/entry/BusStop.png'); }
+.club-start-ClubEntrance { background-image: url('../img/entry/ClubEntrance.png'); }
+.club-start-ProjectionBar { background-image: url('../img/entry/ProjectionBar.png'); }
+.club-start-RadioTower { background-image: url('../img/entry/RadioTower.png'); }
+.club-start-ChillOut { background-image: url('../img/entry/ChillOut.png'); }
+.club-start-DJBooth { background-image: url('../img/entry/DJBooth.png'); }
+.club-start-BikerHangout { background-image: url('../img/entry/BikerHangout.png'); }
+.archive-start-TrainStation { background-image: url('../img/entry/TrainStation.png'); }
+.archive-start-FacilityRooftop { background-image: url('../img/entry/FacilityRooftop.png'); }
+.archive-start-Balcony { background-image: url('../img/entry/Balcony.png'); }
+.archive-start-TheBlock { background-image: url('../img/entry/TheBlock.png'); }
+.archive-start-RestaurantKitchen { background-image: url('../img/entry/RestaurantKitchen.png'); }
+.archive-start-RiverSideWalkway { background-image: url('../img/entry/RiverSideWalkway.png'); }
+.archive-start-FacilityLockerRoom { background-image: url('../img/entry/FacilityLockerRoom.png'); }
+.vineyard-start-WineryViewpoint { background-image: url('../img/entry/WineryViewpoint.png'); }
+.vineyard-start-ParkingLot { background-image: url('../img/entry/Penthouse.png'); }
+.vineyard-start-Vineyard { background-image: url('../img/entry/Vineyard.png'); }
+.vineyard-start-TastingRoom { background-image: url('../img/entry/TastingRoom.png'); }
+.vineyard-start-SniperSpot { background-image: url('../img/entry/SniperSpot.png'); }
+.vineyard-start-Shrine { background-image: url('../img/entry/Shrine.png'); }
+.vineyard-start-DiningArea { background-image: url('../img/entry/DiningArea.png'); }
 
 /***** Exit Locations *****/
 .any-exit { background-image: url('../img/exit/Any.png'); }
@@ -263,7 +308,7 @@
 .beach-exit-Boat { background-image: url('../img/exit/Boat-Nightcall.png'); }
 .speedway-exit-Helicopter, .water-exit-Helicopter { background-image: url('../img/exit/Helicopter-TheFinishLine.png'); }
 .speedway-exit-MainEntrance, .water-exit-MainEntrance { background-image: url('../img/exit/MainEntrance.png'); }
-.speedway-exit-Sewer, .water-exit-Sewer { background-image: url('../img/exit/Sewer-TheFinishLine.png'); }
+.speedway-exit-Sewer, .water-exit-Sewer { background-image: url('../img/exit/Sewer.png'); }
 .speedway-exit-Speedboat, .water-exit-Speedboat { background-image: url('../img/exit/Speedboat-TheFinishLine.png'); }
 .speedway-exit-Ambulance, .water-exit-Ambulance { background-image: url('../img/exit/Ambulance.png'); }
 .speedway-exit-Nest, .water-exit-Nest { background-image: url('../img/exit/Nest.png'); }
@@ -273,7 +318,7 @@
 .cartel-exit-Helicopter, .biggame-exit-Helicopter { background-image: url('../img/exit/Helicopter-ThreeheadedSerpent.png'); }
 .cartel-exit-Speedboat, .biggame-exit-Speedboat { background-image: url('../img/exit/Speedboat-ThreeheadedSerpent.png'); }
 .cartel-exit-LocalsCar, .biggame-exit-LocalsCar { background-image: url('../img/exit/LocalsCar.png'); }
-.cartel-exit-Scooter, .biggame-exit-Scooter { background-image: url('../img/exit/Scooter.png'); }
+.cartel-exit-Scooter, .biggame-exit-Scooter { background-image: url('../img/exit/Scooter-ThreeheadedSerpent.png'); }
 .cartel-exit-Boat, .biggame-exit-Boat { background-image: url('../img/exit/Boat-ThreeheadedSerpent.png'); }
 .cartel-exit-VillageBusStop, .biggame-exit-VillageBusStop { background-image: url('../img/exit/VillageBusStop.png'); }
 .ghost-exit-Boat, .magic-exit-Boat { background-image: url('../img/exit/Boat-ChasingAGhost.png'); }
@@ -285,7 +330,7 @@
 .suburbs-exit-BusStop, .pill-exit-BusStop { background-image: url('../img/exit/BusStop.png'); }
 .suburbs-exit-Bridge, .pill-exit-Bridge { background-image: url('../img/exit/Bridge-AnotherLife.png'); }
 .suburbs-exit-Raft, .pill-exit-Raft { background-image: url('../img/exit/Raft.png'); }
-.suburbs-exit-Sewer, .pill-exit-Sewer { background-image: url('../img/exit/Sewer-AnotherLife.png'); }
+.suburbs-exit-Manhole, .pill-exit-Manhole { background-image: url('../img/exit/Manhole-AnotherLife.png'); }
 .suburbs-exit-ConstructionVan, .pill-exit-ConstructionVan { background-image: url('../img/exit/ConstructionVan.png'); }
 .suburbs-exit-TrashTruck, .pill-exit-TrashTruck { background-image: url('../img/exit/TrashTruck.png'); }
 .suburbs-exit-RoadworkGate, .pill-exit-RoadworkGate { background-image: url('../img/exit/RoadworkGate.png'); }
@@ -307,6 +352,32 @@
 .resort-exit-WaterScooter { background-image: url('../img/exit/Water%20Scooter.png'); }
 .resort-exit-PrivateVillaSpeedboat { background-image: url('../img/exit/Private%20Villa%20Speedboat.png'); }
 .resort-exit-Dundee { background-image: url('../img/exit/Dundee.png'); }
+.tower-exit-ParachuteLevel2 { background-image: url('../img/exit/ParachuteLevel2.png'); }
+.tower-exit-ParachuteLevel4 { background-image: url('../img/exit/ParachuteLevel4.png'); }
+.tower-exit-AtriumElevator { background-image: url('../img/exit/AtriumElevator.png'); }
+.tower-exit-PenthouseElevator { background-image: url('../img/exit/PenthouseElevator.png'); }
+.tower-exit-StaffElevator { background-image: url('../img/exit/StaffElevator.png'); }
+.tower-exit-Helicopter { background-image: url('../img/exit/Helicopter-TopOfWorld.png'); }
+.clue-exit-Motorcycle { background-image: url('../img/exit/Motorcycle-DeathInTheFamily.png'); }
+.clue-exit-Hearse { background-image: url('../img/exit/Hearse.png'); }
+.clue-exit-RiverBridge { background-image: url('../img/exit/RiverBridge.png'); }
+.clue-exit-Boat { background-image: url('../img/exit/Boat-DeathInTheFamily.png'); }
+.club-exit-IntoTheForrest { background-image: url('../img/exit/IntoTheForrest.png'); }
+.club-exit-Bicycle { background-image: url('../img/exit/Bicycle.png'); }
+.club-exit-EmergencyExit { background-image: url('../img/exit/EmergencyExit.png'); }
+.club-exit-Manhole { background-image: url('../img/exit/Manhole-ApexPredator.png'); }
+.club-exit-DeliveryScooter { background-image: url('../img/exit/DeliveryScooter.png'); }
+.club-exit-Motorcycle { background-image: url('../img/exit/Motorcycle-ApexPredator.png'); }
+.archive-exit-ApartmentSafeHouse { background-image: url('../img/exit/ApartmentSafeHouse.png'); }
+.archive-exit-Scooter { background-image: url('../img/exit/Scooter-EndOfAnEra.png'); }
+.archive-exit-Manhole { background-image: url('../img/exit/Manhole-EndOfAnEra.png'); }
+.archive-exit-TrainStation { background-image: url('../img/exit/TrainStation.png'); }
+.archive-exit-FacilityEmergencyExit { background-image: url('../img/exit/FacilityEmergencyExit.png'); }
+.vineyard-exit-TangoWithDiana { background-image: url('../img/exit/TangoWithDiana.png'); }
+.vineyard-exit-ThroughTheGrapefields { background-image: url('../img/exit/ThroughTheGrapefields.png'); }
+.vineyard-exit-Boat { background-image: url('../img/exit/Boat-TheFarewell.png'); }
+.vineyard-exit-UndergroundCaveSystem { background-image: url('../img/exit/UndergroundCaveSystem.png'); }
+.vineyard-exit-DonYatesCar { background-image: url('../img/exit/DonYatesCar.png'); }
 
 /*** Mission & Contract Targets ***/
 div[class^="ElusiveTarget"] { background-image: url('../img/targetcon/NPC.jpg'); }
@@ -974,6 +1045,45 @@ div[class^="ElusiveTarget"] { background-image: url('../img/targetcon/NPC.jpg');
 .JimMurphy-resort { background-image: url('../img/targetcon/JimMurphy.jpg'); }
 .AdamCrest-resort { background-image: url('../img/targetcon/AdamCrest.jpg'); }
 
+/** Dubai **/
+/* On Top Of The World */
+.CarlIngram-tower { background-image: url('../img/target/CarlIngram.jpg'); }
+.CarlIngram-tower.contarget { background-size: auto 100% !important; }
+.MarcusStuyvesant-tower { background-image: url('../img/target/MarcusStuyvesant.jpg'); }
+.MarcusStuyvesant-tower.contarget { background-size: auto 100% !important; }
+
+/** Dartmoor **/
+/* Death In The Family */
+.AlexaCarlisle-clue { background-image: url('../img/target/AlexaCarlisle.jpg'); }
+.AlexaCarlisle-clue.contarget { background-size: auto 100% !important; }
+
+/** Berlin **/
+/* Apex Predator */
+.AgentRhodes-club { background-image: url('../img/target/AgentRhodes.jpg'); }
+.AgentSwan-club { background-image: url('../img/target/AgentSwan.jpg'); }
+.AgentBanner-club { background-image: url('../img/target/AgentBanner.jpg'); }
+.AgentTremaine-club { background-image: url('../img/target/AgentTremaine.jpg'); }
+.AgentGreen-club { background-image: url('../img/target/AgentGreen.jpg'); }
+.AgentThames-club { background-image: url('../img/target/AgentThames.jpg'); }
+.AgentChamberlin-club { background-image: url('../img/target/AgentChamberlin.jpg'); }
+.AgentMontgomery-club { background-image: url('../img/target/AgentMontgomery.jpg'); }
+.AgentLowenthal-club { background-image: url('../img/target/AgentLowenthal.jpg'); }
+.AgentDavenport-club { background-image: url('../img/target/AgentDavenport.jpg'); }
+
+/** Chongqing **/
+/* End Of An Era */
+.Hush-archive { background-image: url('../img/target/Hush.jpg'); }
+.Hush-archive.contarget { background-size: auto 100% !important; }
+.ImogenRoyce-archive { background-image: url('../img/target/ImogenRoyce.jpg'); }
+.ImogenRoyce-archive.contarget { background-size: auto 100% !important; }
+
+/** Mendoza **/
+/* The Farewell */
+.DonArchibaldYates-vineyard { background-image: url('../img/target/DonArchibaldYates.jpg'); }
+.DonArchibaldYates-vineyard.contarget { background-size: auto 100% !important; }
+.TamaraVidal-vineyard { background-image: url('../img/target/TamaraVidal.jpg'); }
+.TamaraVidal-vineyard.contarget { background-size: auto 100% !important; }
+
 /***** Objectives *****/
 /*** Mission Objectives ***/
 .DNASpecificVirus { background-image: url('../img/obj/DNA%20Specific%20Virus.png'); }
@@ -983,6 +1093,9 @@ div[class^="ElusiveTarget"] { background-image: url('../img/targetcon/NPC.jpg');
 .SigmaOperationsFiles { background-image: url('../img/obj/Sigma%20Operations%20Files.png'); }
 .FindClues { background-image: url('../img/obj/FindClues.png'); }
 .TheConstant { background-image: url('../img/obj/ObjConstant.png'); }
+.FindTheCaseFile { background-image: url('../img/obj/FindTheCaseFile.png'); }
+.HackDataCore, .HackDataCoreOptional { background-image: url('../img/obj/HackDataCore.png'); }
+.DoNotEliminateDianaBurnwood { background-image: url('../img/obj/ObjDiana.png'); }
 
 /*** Extra Objectives ***/
 /** ICA Facility **/
@@ -1298,6 +1411,7 @@ div[class^="ElusiveTarget"] { background-image: url('../img/targetcon/NPC.jpg');
 .h2-LimitedVisionArea { background-image: url('../img/gpc/LimitedVisionArea.png'); }
 .h2-NoAgility, .h1-NoAgility { background-image: url('../img/gpc/NoAgility.png'); }
 .h2-NoCrouching, .h1-NoCrouching { background-image: url('../img/gpc/NoCrouching.png'); }
+.h2-CameraGrid { background-image: url('../img/gpc/CameraGrid.png'); }
 
 /*** Time, Rating, and Difficulty ***/
 #time-image { background-image: url('../img/gpc/TimeLimit.png'); }

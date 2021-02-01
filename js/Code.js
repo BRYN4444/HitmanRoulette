@@ -12,7 +12,7 @@ function createContainerObject() {
 		}
 	}
 	var mission_name = missionSelection[Math.floor(Math.random() * missionSelection.length)];
-	var failsafe = [fft,ica,showstopper,wot,icon,landslide,agc,ahbos,c27,source,ff,si,nc,tfl,ths,cag,al,tas,gh,lr];
+	var failsafe = [fft,ica,showstopper,wot,agc,c27,ff,si,nc,tfl,ths,cag,al,tas,gh,lr,ototw,ditf,ap,eoae,tf];
 	
 	for (var prop in generic)
 		if (generic.hasOwnProperty(prop))
@@ -143,7 +143,7 @@ function createTargetList(container) {
 	
 	var modeIndex = document.getElementById("modeselect");
 	var mode = modeIndex.options[modeIndex.selectedIndex].value;
-	if (mode == "CONEASY" || mode == "CONHARD") {
+	if (mode == "CONEASY" || mode == "CONHARD") { // Contracts Mode
 		var targetAmountCheck = Math.random();
 		var num_targets = 5;
 		if (targetAmountCheck < 0.84) num_targets--;
@@ -154,19 +154,30 @@ function createTargetList(container) {
 		shuffle(container.contractTargets);
 		targets = container.contractTargets.slice(0, num_targets);
 	}
-	else if (mode == "ELUSIVE" && document.getElementById("etslider").value == 1)
+	else if (mode == "ELUSIVE" && document.getElementById("etslider").value == 1) //One Elusive Target
 		targets = ["Elusive Target"];
-	else if (mode == "ELUSIVE" && document.getElementById("etslider").value == 2)
+	else if (mode == "ELUSIVE" && document.getElementById("etslider").value == 2) //Two Elusive Targets
 		targets = ["Elusive Target A","Elusive Target B"];
-	else if (mode == "ELUSIVE" && document.getElementById("etslider").value == 3)
+	else if (mode == "ELUSIVE" && document.getElementById("etslider").value == 3) //Three Elusive Targets
 		targets = ["Elusive Target A","Elusive Target B","Elusive Target C"];
+	else if (mode == "MAIN" && container.missionTitle === "Apex Predator") //Shuffle Targets for Apex Predator
+		targets = shuffle(container.targetList);
 	else {
-		// Copy the missions' target list
-		targets = container.targetList.slice();
-	}
-	
+		targets = container.targetList.slice(); //Default (Unshuffled) Targets 
+	};
+
 	return targets;
 };
+
+//Chooses ICA targets for Apex Predator
+//function createAgentList(container) {
+//	var agents = [];
+//	
+//	shuffle(container.icaList);
+//	agents = container.icaList.slice(0,5);
+//	
+//	return agents;
+//};
 
 //Adds properties from the container object to the result object
 function containerToResult(container) {
@@ -206,6 +217,14 @@ function containerToResult(container) {
 		result.missionobjective = "The Constant|Do not eliminate The Constant.";
 	else if (mode == "MAIN" && result.missionCode == "bank")
 		result.missionobjective = "Obtain Data|Retrieve the data and exit the bank.";
+	else if (mode == "MAIN" && result.missionCode == "clue")
+		result.missionobjective = "Find The Case File|Find The Case File.";
+	else if (mode == "MAIN" && result.missionCode == "archive" && result.entry == "Train Station" )
+		result.missionobjective = "Hack Data Core|Eliminate Hush and Imogen Royce to be able to access the files inside the ICA data core.";
+	else if (mode == "MAIN" && result.missionCode == "archive" && result.entry != "Train Station" )
+		result.missionobjective = "Hack Data Core [Optional]|Eliminate Hush and Imogen Royce to be able to access the files inside the ICA data core.";
+	else if (mode == "MAIN" && result.missionCode == "vineyard")
+		result.missionobjective = "Do Not Eliminate Diana Burnwood|Do Not Eliminate Diana Burnwood.";
 	else
 		result.missionobjective = "";
 	
@@ -239,13 +258,27 @@ function writeEverything(result) {
 	var exitModeIndex = document.getElementById("startexit");
 	var exitMode = exitModeIndex.options[exitModeIndex.selectedIndex].value;
 	if (exitMode == "BOTH") {
-		document.getElementById("travel").innerHTML =
-			"<div id='entry' class='" + result.missionCode + "-start-" + result.entry.replace(/\s|'|\.|-|\(|\)/g, "") + "'><div id='nameplate'><span><p id='title'>Starting Location</p><p id='subtitle'>" + result.entry + "</p></span></div></div><div id='exit' class='" + result.missionCode + "-exit-" + result.exit.split('|')[0].replace(/\s|'|\.|-|\||\(|\)/g, "") + "'><div id='nameplate'><span><p id='title'>Exit Location <span id='exitreq'></span></p><p id='subtitle'>" + result.exit.split('|')[0] + "</p></span></div></div>";
-		document.getElementById("input_entry").value = "\nStart: " + result.entry;
-		document.getElementById("input_exit").value = "\nExit: " + result.exit.split('|')[0];
-		if(result.exit.split('|')[1] != null) {
-			document.getElementById("exitreq").innerHTML = result.exit.split('|')[1];
-			document.getElementById("input_exitreq").value = " " + result.exit.split('|')[1];			
+		if (result.missionCode == "club" && result.entry == "Bus Stop") {
+			document.getElementById("travel").innerHTML =
+				"<div id='entry' class='club-start-BusStop'><div id='nameplate'><span><p id='title'>Starting Location</p><p id='subtitle'>Bus Stop</p></span></div></div><div id='exit' class='club-exit-IntoTheForrest'><div id='nameplate'><span><p id='title'>Exit Location <span id='exitreq'></span></p><p id='subtitle'>Into The Forrest</p></span></div></div>";
+			document.getElementById("input_entry").value = "\nStart: Bus Stop";
+			document.getElementById("input_exit").value = "\nExit: Into The Forrest";
+			document.getElementById("exitreq").innerHTML = "";
+			document.getElementById("input_exitreq").value = "";
+		}
+		else {		
+			document.getElementById("travel").innerHTML =
+				"<div id='entry' class='" + result.missionCode + "-start-" + result.entry.replace(/\s|'|\.|-|\(|\)/g, "") + "'><div id='nameplate'><span><p id='title'>Starting Location</p><p id='subtitle'>" + result.entry + "</p></span></div></div><div id='exit' class='" + result.missionCode + "-exit-" + result.exit.split('|')[0].replace(/\s|'|\.|-|\||\(|\)/g, "") + "'><div id='nameplate'><span><p id='title'>Exit Location <span id='exitreq'></span></p><p id='subtitle'>" + result.exit.split('|')[0] + "</p></span></div></div>";
+			document.getElementById("input_entry").value = "\nStart: " + result.entry;
+			document.getElementById("input_exit").value = "\nExit: " + result.exit.split('|')[0];
+			if(result.exit.split('|')[1] != null) {
+				document.getElementById("exitreq").innerHTML = result.exit.split('|')[1];
+				document.getElementById("input_exitreq").value = " " + result.exit.split('|')[1];			
+			}
+			else {
+				document.getElementById("exitreq").innerHTML = "";
+				document.getElementById("input_exitreq").value = "";	
+			};
 		};
 	}
 	else if (exitMode == "START") {
@@ -264,6 +297,10 @@ function writeEverything(result) {
 		if(result.exit.split('|')[1] != null) {
 			document.getElementById("exitreq").innerHTML = result.exit.split('|')[1];
 			document.getElementById("input_exitreq").value = " " + result.exit.split('|')[1];			
+		}
+		else {
+			document.getElementById("exitreq").innerHTML = "";
+			document.getElementById("input_exitreq").value = "";	
 		};			
 	}
 	else {
@@ -276,6 +313,7 @@ function writeEverything(result) {
 	var modeIndex = document.getElementById("modeselect");
 	var mode = modeIndex.options[modeIndex.selectedIndex].value;
 	if (mode == "CONEASY" || mode == "CONHARD") { var contractmode = " contarget" }
+	else if (mode == "MAIN" && result.missionTitle == "Apex Predator") { var contractmode = " contarget" }
 	else { var contractmode = "" }
 	
 	// Write to the HTML elements from the results object
@@ -346,7 +384,7 @@ function writeEverything(result) {
 	
 	if(result.missionobjective.length) { // campaign mission objective
 		document.getElementById("objective").innerHTML = 
-			"<div id='obj-image' class='" + result.missionobjective.split('|')[0].replace(/\s/g, '') +
+			"<div id='obj-image' class='" + result.missionobjective.split('|')[0].replace(/\s|,|'|“|”|-|\?|\!|\(|\)|\[|\]|\./g, '') +
 			"'><div id='instruction'><img id='list' src='./img/general/blank.png'><p id='wording'>" + result.missionobjective.split('|')[1] +
 			"</p></div><div id='nameplate'><span><p id='title'>Objective</p><p id='subtitle'>" + result.missionobjective.split('|')[0] + "</p></span></div></div>";
 		document.getElementById("input_objective").value = "\nObjective: " + result.missionobjective.split('|')[0] + " - " + result.missionobjective.split('|')[1];
@@ -642,6 +680,7 @@ function generate_result() {
 	var roulette = containerToResult(current_mission);
 	roulette.extras = createExtrasList(roulette.exit);
 	roulette.targets = createTargetList(current_mission);
+	//roulette.agents = createAgentList(current_mission);
 	roulette.weapons = createWeaponList(current_mission);
 	roulette.disguises = createDisguiseList(current_mission, roulette);
 	

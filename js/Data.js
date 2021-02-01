@@ -4,6 +4,7 @@ var redo_stack = []
 
 var h1 = ["training","test","fashion","xmas","director","virus","movie","election","handoff","enforcer","tension","construction","extractor","birthday","cult","veteran","terrorists","mercenary","heart","spread","controller"];
 var h2 = ["training","test","fashion","xmas","virus","movie","election","handoff","tension","construction","birthday","cult","terrorists","heart","spread","festival","beach","speedway","water","cartel","biggame","ghost","magic","suburbs","pill","ark","bank","resort"];
+var h3 = ["training","test","fashion","virus","movie","election","handoff","tension","construction","birthday","cult","terrorists","heart","spread","beach","speedway","water","cartel","biggame","ghost","magic","suburbs","pill","ark","bank","resort","tower","clue","club","archive","vineyard"];
 
 var suitStarts = ["Weapons Building","Crouched behind a Truck",
 "Red Carpet","Palace Garden","Pile-Driver Barge","Attic","Undercover at IAGO Auction",
@@ -19,9 +20,14 @@ var suitStarts = ["Weapons Building","Crouched behind a Truck",
 "Whittleton Creek",
 "Chapel","Keep",
 "Bank Entrance",
-"Resort Pier","Resort Pool Area","Shark Hut"];
-var disguiseExits = ["Ambulance|(Medic Only)","Nest|(Secret)","Pale Rider|(Secret)","Trash Truck|(Garbage Man Only)","Swan Dive|(Secret)","Chimney|(Santa 47 Only)","Window|(Secret)","Snorkel|(Instructor Only)"];
-var koExits = ["Pink Car|(Needs Key)","Nest|(Secret)","Rico's Supercar|(Needs Key)","Local's Car|(Needs Key)","Roadwork Gate|(Needs Key)","Chimney|(Santa 47 Only)","Window|(Secret)","Snorkel|(Instructor Only)"];
+"Resort Pier","Resort Pool Area","Shark Hut",
+"Atrium Lobby",
+"Main Road","Behind Mansion","Main Road (Gathering)","Behind Mansion (Gathering)",
+"Bus Stop","Radio Tower",
+"Train Station","Balcony","River-Side Walkway",
+"Winery Viewpoint","Parking Lot","Shrine"];
+var disguiseExits = ["Chimney|(Santa 47 Only)","Ambulance|(Medic Only)","Nest|(Secret)","Pale Rider|(Secret)","Trash Truck|(Garbage Man Only)","Swan Dive|(Secret)","Window|(Secret)","Snorkel|(Instructor Only)","Underground Cave System|(Tactical Wetsuit Only)"];
+var koExits = ["Chimney|(Santa 47 Only)","Pink Car|(Needs Key)","Nest|(Secret)","Rico's Supercar|(Needs Key)","Local's Car|(Needs Key)","Roadwork Gate|(Needs Key)","Window|(Secret)","Snorkel|(Instructor Only)","Delivery Scooter|(Needs Key)"];
 var proOnly = ["training","test","xmas","director","movie","election","handoff","enforcer","construction","extractor","cult","veteran","mercenary","spread","festival","controller"];
 
 var mechListH1 = ["Instinct|Turn off Instinct in the game's Options menu under Gameplay.",
@@ -29,8 +35,7 @@ var mechListH1 = ["Instinct|Turn off Instinct in the game's Options menu under G
 				"Attention Alert|Turn off Attention Alert in the game's Options menu under Gameplay.",
 				"NPC Icons|Turn off NPC Icons in the game's Options menu under Gameplay.",
 				"Weapon HUD|Turn off Weapon HUD in the game's Options menu under Gameplay.",
-				"No Agility|Do not vault, hang, scale, or climb down.",
-				"No Crouching|Do not crouch."];
+				"No Agility|Do not vault, hang, scale, or climb down."];
 var mechListH2 = ["Instinct|Turn off Instinct in the game's Options menu under Gameplay.",
 				"Mini Map|Turn off the Mini Map in the game's Options menu under Gameplay.",
 				"Attention Alert|Turn off Attention Alert in the game's Options menu under Gameplay.",
@@ -38,8 +43,8 @@ var mechListH2 = ["Instinct|Turn off Instinct in the game's Options menu under G
 				"Weapon HUD|Turn off Weapon HUD in the game's Options menu under Gameplay.",
 				"Picture In Picture|Turn off Picture In Picture in the game's Options menu under Gameplay.",
 				"Limited Vision Area|Turn off the Limited Vision Area in the game's Options menu under Gameplay.",
-				"No Agility|Do not vault, hang, scale, or climb down.",
-				"No Crouching|Do not crouch."];
+				"Camera Grid|Turn off Camera Grid in the game's Options menu under Gameplay.",
+				"No Agility|Do not vault, hang, scale, or climb down."];
 var timeList = [5,7,10,12,15,20,25,30,40,50,60];
 var ratingList = ["Hunted Slayer|Complete the roulette and achieve at least a one star rating.",
 				  "Wanted Murderer|Complete the roulette and achieve at least a two star rating.",
@@ -1931,6 +1936,185 @@ var lr = {
 	"Tiki Time|Serve 5 cocktails."]
 };
 
+var ototw = {
+	missionTitle: "On Top Of The World",
+	missionLocation: "Dubai",
+	missionCode: "tower",
+	melee: ["Fiber Wire",
+	"Folding Knife|Melee","Folding Knife|Thrown Weapon",
+	"Scissors|Melee","Scissors|Thrown Weapon",
+	"Cleaver|Melee","Cleaver|Thrown Weapon",
+	"Kitchen Knife|Melee","Kitchen Knife|Thrown Weapon",
+	"Screwdriver|Melee","Screwdriver|Thrown Weapon",
+	"Letter Opener|Melee","Letter Opener|Thrown Weapon",
+	"Ornate Scimitar|Melee","Ornate Scimitar|Thrown Weapon",
+	"Fire Axe|Melee","Fire Axe|Thrown Weapon"],
+	targetList: ["Carl Ingram","Marcus Stuyvesant"],
+	contractTargets: ["Carl Ingram|Hitman III Contracts Mode Targets Coming Soon",
+	"Marcus Stuyvesant|Hitman III Contracts Mode Targets Coming Soon"],
+	entry: ["Burjal-Ghazali Exterior","Atrium Lobby","Meeting Room","Art Installation","Guard Room","Penthouse"],
+	exit: ["Parachute (Level 4)","Parachute (Level 2)","Atrium Elevator","Penthouse Elevator|(Single Use Terminal)","Staff Elevator|(Single Use Terminal)","Helicopter|(Needs Key)"],
+	eexit: ["Parachute (Level 4)","Parachute (Level 2)","Atrium Elevator","Penthouse Elevator|(Single Use Terminal)","Staff Elevator|(Single Use Terminal)","Helicopter|(Needs Key)"],
+	disguises: ["Any Suit",
+	"Skydiving Suit",
+	"Event Security","Event Staff",
+	"Maintenance Staff",
+	"Penthouse Guard","Penthouse Staff",
+	"Art Crew",
+	"Kitchen Staff",
+	"Famous Chef",
+	"The Assassin",
+	"Helicoptor Pilot",
+	"Ingram's Bodyguard"],
+	wild: ["Coming Soon|Extra Objectives for Hitman III Coming Soon"],
+	contractWild: ["Coming Soon|Extra Objectives for Hitman III Coming Soon"]
+};
+
+var ditf = {
+	missionTitle: "Death In The Family",
+	missionLocation: "Dartmoor",
+	missionCode: "clue",
+	melee: ["Fiber Wire",
+	"Barber Razor|Melee","Barber Razor|Thrown Weapon",
+	"Cleaver|Melee","Cleaver|Thrown Weapon",
+	"Folding Knife|Melee","Folding Knife|Thrown Weapon",
+	"Garden Fork|Melee","Garden Fork|Thrown Weapon",
+	"Hatchet|Melee","Hatchet|Thrown Weapon",
+	"Kitchen Knife|Melee","Kitchen Knife|Thrown Weapon",
+	"Letter Opener|Melee","Letter Opener|Thrown Weapon",
+	"Saber|Melee","Saber|Thrown Weapon",
+	"Scissors|Melee","Scissors|Thrown Weapon",
+	"Screwdriver|Melee","Screwdriver|Thrown Weapon",
+	"Shears|Melee","Shears|Thrown Weapon",
+	"Unicorn Horn|Melee","Unicorn Horn|Thrown Weapon"],
+	targetList: ["Alexa Carlisle"],
+	contractTargets: ["Alexa Carlisle|Hitman III Contracts Mode Targets Coming Soon"],
+	entry: ["Main Road","Garden","Staff Room","Behind Mansion","Library","Zachary's Bedroom","Main Road (Gathering)","Behind Mansion (Gathering)"],
+	exit: ["Motorcycle","Hearse|(Needs Key)","River Bridge","Boat|(Needs Key)"],
+	eexit: ["Motorcycle","Hearse|(Needs Key)","River Bridge","Boat|(Needs Key)"],
+	disguises: ["Any Suit",
+	"Gardener",
+	"Lawyer",
+	"Photographer",
+	"Private Investigator",
+	"Undertaker",
+	"Mansion Guard","Mansion Staff",
+	"Bodyguard"],
+	wild: ["Coming Soon|Extra Objectives for Hitman III Coming Soon"],
+	contractWild: ["Coming Soon|Extra Objectives for Hitman III Coming Soon"]
+};
+
+var ap = {
+	missionTitle: "Apex Predator",
+	missionLocation: "Berlin",
+	missionCode: "club",
+	melee: ["Fiber Wire",
+	"Battle Axe|Melee","Battle Axe|Thrown Weapon",
+	"Combat Knife|Melee","Combat Knife|Thrown Weapon",
+	"Concealable Knife|Melee","Concealable Knife|Thrown Weapon",
+	"Fire Axe|Melee","Fire Axe|Thrown Weapon",
+	"Garden Fork|Melee","Garden Fork|Thrown Weapon",
+	"Hobby Knife|Melee","Hobby Knife|Thrown Weapon",
+	"Kitchen Knife|Melee","Kitchen Knife|Thrown Weapon",
+	"Old Axe|Melee","Old Axe|Thrown Weapon",
+	"Scrap Sword|Melee","Scrap Sword|Thrown Weapon",
+	"Screwdriver|Melee","Screwdriver|Thrown Weapon"],
+	targetList: ["Agent Rhodes","Agent Swan","Agent Banner","Agent Tremaine","Agent Green","Agent Thames","Agent Chamberlin","Agent Montgomery","Agent Lowenthal","Agent Davenport"],
+	//targetList: ["ICA Agent","ICA Agent","ICA Agent","ICA Agent","ICA Agent"],
+	//icaList: ["Agent Rhodes","Agent Swan","Agent Banner","Agent Tremaine","Agent Green","Agent Thames","Agent Chamberlin","Agent Montgomery","Agent Lowenthal","Agent Davenport"],
+	contractTargets: ["Agent Rhodes|Hitman III Contracts Mode Targets Coming Soon",
+	"Agent Swan|Hitman III Contracts Mode Targets Coming Soon",
+	"Agent Banner|Hitman III Contracts Mode Targets Coming Soon",
+	"Agent Tremaine|Hitman III Contracts Mode Targets Coming Soon",
+	"Agent Green|Hitman III Contracts Mode Targets Coming Soon",
+	"Agent Thames|Hitman III Contracts Mode Targets Coming Soon",
+	"Agent Chamberlin|Hitman III Contracts Mode Targets Coming Soon",
+	"Agent Montgomery|Hitman III Contracts Mode Targets Coming Soon",
+	"Agent Lowenthal|Hitman III Contracts Mode Targets Coming Soon",
+	"Agent Davenport|Hitman III Contracts Mode Targets Coming Soon"],
+	entry: ["Bus Stop","Club Entrance","Projection Bar","Radio Tower","Chill Out","DJ Booth","Biker Hangout"],
+	exit: ["Bicycle","Emergency Exit","Delivery Scooter|(Needs Key)","Motorcycle|(Needs Key)"],
+	eexit: ["Bicycle","Emergency Exit","Delivery Scooter|(Needs Key)","Motorcycle|(Needs Key)"],
+	disguises: ["Any Suit",
+	"Bartender",
+	"Biker",
+	"Club Crew","Club Security",
+	"Dealer","Florida Man",
+	"Delivery Guy",
+	"DJ",
+	"Rolf Hirschmüller",
+	"Technician"],
+	wild: ["Coming Soon|Extra Objectives for Hitman III Coming Soon"],
+	contractWild: ["Coming Soon|Extra Objectives for Hitman III Coming Soon"]
+};
+
+var eoae = {
+	missionTitle: "End Of An Era",
+	missionLocation: "Chongqing",
+	missionCode: "archive",
+	melee: ["Fiber Wire","Stethoscope",
+	"Cleaver|Melee","Cleaver|Thrown Weapon",
+	"Fire Axe|Melee","Fire Axe|Thrown Weapon",
+	"Hobby Knife|Melee","Hobby Knife|Thrown Weapon",
+	"Kitchen Knife|Melee","Kitchen Knife|Thrown Weapon",
+	"Letter Opener|Melee","Letter Opener|Thrown Weapon",
+	"Scissors|Melee","Scissors|Thrown Weapon",
+	"Screwdriver|Melee","Screwdriver|Thrown Weapon",
+	"Tanto|Melee","Tanto|Thrown Weapon"],
+	targetList: ["Hush","Imogen Royce"],
+	contractTargets: ["Hush|Hitman III Contracts Mode Targets Coming Soon",
+	"Imogen Royce|Hitman III Contracts Mode Targets Coming Soon"],
+	entry: ["Train Station","Facility Rooftop","Balcony","The Block","Restaurant Kitchen","River-Side Walkway","Facility Locker Room"],
+	exit: ["Apartment Safe House","Scooter","Manhole|(Needs Crowbar)","Train Station","Facility Emergency Exit|(Needs Tier 3 Access)"],
+	eexit: ["Apartment Safe House","Scooter","Manhole|(Needs Crowbar)","Train Station","Facility Emergency Exit|(Needs Tier 3 Access)"],
+	disguises: ["Any Suit",
+	"Block Guard","Street Guard",
+	"Dumpling Cook",
+	"Facility Analyst","Facility Engineer","Facility Guard","Facility Security",
+	"Homeless Person",
+	"Perfect Test Subject","Researcher",
+	"The Board Member"],
+	wild: ["Coming Soon|Extra Objectives for Hitman III Coming Soon"],
+	contractWild: ["Coming Soon|Extra Objectives for Hitman III Coming Soon"]
+};
+
+var tf = {
+	missionTitle: "The Farewell",
+	missionLocation: "Mendoza",
+	missionCode: "vineyard",
+	melee: ["Fiber Wire","Fishing Line",
+	"Broadsword|Melee","Broadsword|Thrown Weapon",
+	"Fire Axe|Melee","Fire Axe|Thrown Weapon",
+	"Garden Fork|Melee","Garden Fork|Thrown Weapon",
+	"Grape Knife|Melee","Grape Knife|Thrown Weapon",
+	"Hatchet|Melee","Hatchet|Thrown Weapon",
+	"Icicle|Melee","Icicle|Thrown Weapon",
+	"Jarl's Pirate Saber|Melee","Jarl's Pirate Saber|Thrown Weapon",
+	"Kitchen Knife|Melee","Kitchen Knife|Thrown Weapon",
+	"Machete|Melee","Machete|Thrown Weapon",
+	"Old Axe|Melee","Old Axe|Thrown Weapon",
+	"Sapper's Axe|Melee","Sapper's Axe|Thrown Weapon",
+	"Screwdriver|Melee","Screwdriver|Thrown Weapon",
+	"Shears|Melee","Shears|Thrown Weapon"],
+	targetList: ["Don Archibald Yates","Tamara Vidal"],
+	contractTargets: ["Don Archibald Yates|Hitman III Contracts Mode Targets Coming Soon",
+	"Tamara Vidal|Hitman III Contracts Mode Targets Coming Soon"],
+	entry: ["Winery Viewpoint","Parking Lot","Vineyard","Tasting Room","Sniper Spot","Shrine","Dining Area"],
+	exit: ["Tango With Diana","Through The Grapefields","Boat|(Needs Key)","Underground Cave System|(Tactical Wetsuit Only)","Don Yate's Car|(Needs Key)"],
+	eexit: ["Tango With Diana","Through The Grapefields","Boat|(Needs Key)","Underground Cave System|(Tactical Wetsuit Only)","Don Yate's Car|(Needs Key)"],
+	disguises: ["Any Suit",
+	"Waiter","Asado Chef","Sommelier",
+	"Chief Winemaker","Winery Worker",
+	"Corvo Black",
+	"Bodyguard","Gaucho","Head of Security","Mercenary",
+	"Lawyer",
+	"Providence Herald",
+	"Tactical Wetsuit",
+	"Tango Musician"],
+	wild: ["Coming Soon|Extra Objectives for Hitman III Coming Soon"],
+	contractWild: ["Coming Soon|Extra Objectives for Hitman III Coming Soon"]
+};
+
 var mission_names_map = {
 	"FFT" : fft,
 	"TFT" : ica,
@@ -1965,7 +2149,12 @@ var mission_names_map = {
 	"ABP": abp,
 	"TAS": tas,
 	"GH": gh,
-	"LR": lr
+	"LR": lr,
+	"OTOTW": ototw,
+	"DITF": ditf,
+	"AP": ap,
+	"EOAE": eoae,
+	"TF": tf
 }
 
 var killTypesMap = {
