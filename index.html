@@ -45,6 +45,7 @@
 			<div id="overlay-target-intel5"></div>
 			<div id="overlay-objective" class="click"></div>
 			<div id="overlay-objectivex" class="click"></div>
+			<div id="overlay-camera" class="click"></div>
 			<div id="overlay-exit"></div>
 			<div id="overlay-complicationi"></div>
 			<div id="overlay-complication1"></div>
@@ -150,6 +151,7 @@
 					<div id="target5" class="column"></div>
 					<div id="objective" class="column"></div>
 					<div id="objectivex" class="column"></div>
+					<div id="camera" class="column"></div>
 					<div id="complication1" class="column" style="display:none;"></div>
 					<div id="complication2" class="column" style="display:none;"></div>
 					<div id="complication3" class="column" style="display:none;"></div>
@@ -200,12 +202,12 @@
 								</ul>
 								<img id="list" class="shrink" src="./img/general/blank.png">
 								<p id="wording">
-									<b>Hitman III</b> added! Support for Extra Objective & Contracts soon.
+									H3 Extra & Photo Objectives added! Contracts targets soon.
 								</p>
 							</div>
 							<div id="nameplate">
 								<span>
-									<p id="title">Last Updated: February 1st, 2021</p>
+									<p id="title">Last Updated: February 16th, 2021</p>
 									<p id="subtitle">Roulette Features</p>
 								</span>
 							</div>
@@ -252,6 +254,8 @@
 						
 						<textarea id="input_objective" class="clearme"></textarea>
 						<textarea id="input_extraobjective" class="clearme"></textarea>
+						
+						<textarea id="input_camera" class="clearme"></textarea>
 						
 						<textarea id="input_complicationt" class="clearme"></textarea>
 						<textarea id="input_complicationi" class="clearme"></textarea>
@@ -971,14 +975,19 @@
 							<input type="checkbox" id="generic" value="true" checked />
 							<b>Generic Kills</b><span>[On]</span>
 						</label>
-						<label id="extra_m" class="mobile" style="display:none;" data-hover="The roulette will choose start/exit points you must use.<br /><br /><b>[Note: Some Missions gain additional exits after their first playthrough.]<br /></b>Both: Start and exit points are both listed.<br />Start Only: Find your own exit location.<br />Exit Only: Select your own starting location.<br />Secret: Select your own starting location. The listed exit may require secret actions to make appear.<br />Off: You choose your own start or exit points.">[INFO]:</label>
-						<label id="extra_starex" class="both" style="display:none;" data-hover="The roulette will choose start/exit points you must use.<br /><br /><b>[Note: Some Missions gain additional exits after their first playthrough.]<br /></b>Both: Start and exit points are both listed.<br />Start Only: Find your own exit location.<br />Exit Only: Select your own starting location.<br />Secret: Select your own starting location. The listed exit may require secret actions to make appear.<br />Off: You choose your own start or exit points.">
+						<label id="extra_m" class="mobile" style="display:none;" data-hover="The roulette will choose start/exit points you must use.<br /><br /><b>[Some Missions gain additional exits after their first playthrough.]</b><br />Both: Start and exit points are both listed.<br />Start Only: Find your own exit location.<br />Exit Only: Select your own starting location.<br />Secret: While you can select your own starting location, the listed exit may require secret actions to make appear.<br />Off: You choose your own start or exit points.">[INFO]:</label>
+						<label id="extra_starex" class="both" style="display:none;" data-hover="The roulette will choose start/exit points you must use.<br /><br /><b>[Some Missions gain additional exits after their first playthrough.]</b><br />Both: Start and exit points are both listed.<br />Start Only: Find your own exit location.<br />Exit Only: Select your own starting location.<br />Secret: While you can select your own starting location, the listed exit may require secret actions to make appear.<br />Off: You choose your own start or exit points.">
 							<b>Force Start/Exit</b><span>[Both]</span>
 						</label>
 						<label id="extra_m" class="mobile" style="display:none;" data-hover="On: Adds one extra mission specific task to complete. For example, most of these tasks are in-game Challenges.<br /><br />Off: Only lists mandatory objectives to complete if there are any needed for the mission.">[INFO]:</label>
 						<label id="extra_obj" for="exobj" style="display:none;" data-hover="On: Adds one extra mission specific task to complete. For example, most of these tasks are in-game Challenges.<br /><br />Off: Only lists mandatory objectives to complete if there are any needed for the mission.">
 							<input type="checkbox" id="exobj" value="true" />
 							<b>Extra Objective</b><span>[Off]</span>
+						</label>
+						<label id="extra_m" class="mobile" style="display:none;" data-hover="On: Adds one mission specific photo to take using the in-game camera gadget. <br /><b>[These are only possible within HITMAN III.]</b><br /><br />Off: No photos will need to be taken.">[INFO]:</label>
+						<label id="extra_camera" for="cameraobj" style="display:none;" data-hover="On: Adds one mission specific photo to take using the in-game camera gadget. <br /><b>[These are only possible within HITMAN III.]</b><br /><br />Off: No photos will need to be taken.">
+							<input type="checkbox" id="cameraobj" value="true" />
+							<b>Photo Objective</b><span>[Off]</span>
 						</label>
 						<label id="extra_m" class="mobile" style="display:none;" data-hover="Adds playstyle constraints or requirements. Some of these are used in the game's Contracts Mode.<br /><br />Slider: Adjust to set the maximum amount that could appear. The amount is random every time.">[INFO]:</label>
 						<label id="extra_comp" style="display:none;" data-hover="Adds playstyle constraints or requirements. Some of these are used in the game's Contracts Mode.<br /><br />Slider: Adjust to set the maximum amount that could appear. The amount is random every time.">
@@ -1057,8 +1066,9 @@
 						<p>This was a hobby project I started in 2016/17 and have worked on during my free time as a way to brush up on my simple javascript, jQuery, and CSS knowledge as well as giving me more reason to play these new Hitman games well after unlocking everything. As such, I've only tested this at about a 1080p resolution using the browsers I frequent: Firefox and Chrome. Also I'm sure my additions to the existing code, as well as my own work, could use cleaning up here and there. If you find any issues or glaring conflicts with roulette results, <a href="https://github.com/BRYN4444/HitmanRoulette/issues" target="_blank">let me know via GitHub</a> and I'll try and address it when I get the chance. <span id="sig">- <a href="http://bryn.info/" target="_blank">BRYN</a><span></p>
 						<h2>To-Do List / Wishlist:</h2>
 						<ul>
-							<li>The Hitman III campaign (and any additional mechanics) will be supported not too long after the game's release. With it will likely come a Hitman III style as the default appearance for the Roulette.</li>
-							<li>More "Extra Objectives" for late-campaign Hitman 2.</li>
+							<li>Add HITMAN III targets for Contract Mode.</li>
+							<li>"Photo Objectives" for HITMAN & HITMAN 2 missions.</li>
+							<li>More "Extra Objectives" for late-campaign HITMAN 2 & HITMAN III.</li>
 							<li>Stream Overlay mode; A method for streamers to show Objectives and more over the gameplay.</li>
 							<li>This would take a complete overhaul, so it's probably out of MY league, but being able to link Roulettes to others would be cool. If you have knowledge on how to do this easily, leave me a message on <a href="https://github.com/BRYN4444/HitmanRoulette/issues" target="_blank">GitHub</a>.</li>
 						</ul>

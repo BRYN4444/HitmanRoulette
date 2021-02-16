@@ -186,6 +186,7 @@ function containerToResult(container) {
 	result.missionLocation = container.missionLocation;
 	result.missionCode = container.missionCode;
 	result.entry = container.entry[Math.floor(Math.random()*container.entry.length)];
+	result.photos = container.photos[Math.floor(Math.random()*container.photos.length)];
 	
 	var modeIndex = document.getElementById("modeselect");
 	var mode = modeIndex.options[modeIndex.selectedIndex].value;
@@ -403,10 +404,25 @@ function writeEverything(result) {
 		if(result.objectives.split('|')[2] != null) { // extra objective hint
 			document.getElementById("hint").innerHTML = "(<a target='_blank' href='./img/general/" + result.objectives.split('|')[2] + "'>Hint</a>)";
 		};
+		if(mode == "MAIN" && result.missionTitle == "Apex Predator") { // Apex Predator First Target Extra Objective
+			document.getElementById("apexwild").innerHTML = result.targets[4].split('|')[0];
+		};
 	}
 	else {
 		document.getElementById("objectivex").innerHTML = "";
 		document.getElementById("input_extraobjective").value = "";
+	};
+	
+	if(document.getElementById("cameraobj").checked == 1) { // photo objectives for H3
+		document.getElementById("camera").innerHTML = 
+			"<div id='cam-image' class='" + result.photos.split('|')[0].replace(/\s|,|'|“|”|-|\?|\!|\(|\)|\./g, "") +
+			"'><div id='instruction'><img id='list' src='./img/general/blank.png'><p id='wording'>"  + result.photos.split('|')[1] +
+			"</p></div><div id='nameplate'><span><p id='title'>Photo Objective</p><p id='subtitle'>"  + result.photos.split('|')[0] + "</p></span></div></div>";
+		document.getElementById("input_camera").value = "\nPhoto Objective: " + result.photos.split('|')[0] + " - " + result.photos.split('|')[1];
+	}
+	else {
+		document.getElementById("camera").innerHTML = "";
+		document.getElementById("input_camera").value = "";
 	};
 	
 	for(var i = 0; i < MAX_EXTRAS; ++i){ // complications
