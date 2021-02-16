@@ -29,12 +29,17 @@ You can deselect any locations you do not own, but by default the Roulette works
 This was a hobby project I started in 2016/17 and have worked on during my free time as a way to brush up on my simple javascript, jQuery, and CSS knowledge as well as giving me more reason to play these new Hitman games well after unlocking everything. As such, I've only tested this at about a 1080p resolution using the browsers I frequent: Firefox and Chrome. Also I'm sure my additions to the existing code, as well as my own work, could use cleaning up here and there. If you find any issues or glaring conflicts with roulette results, [let me know via GitHub](https://github.com/BRYN4444/HitmanRoulette/issues) and I'll try and address it when I get the chance. - [BRYN](http://bryn.info/)
 
 ### To-Do List / Wishlist:
-* Add HITMAN III targets for Contract Mode and some "Extra Objectives" for these new missions.
-* More "Extra Objectives" for late-campaign Hitman 2.
+* Add HITMAN III targets for Contract Mode.
+* "Photo Objectives" for HITMAN & HITMAN 2 missions.
+* More "Extra Objectives" for late-campaign HITMAN 2 & HITMAN III.
 * Stream Overlay mode; A method for streamers to show Objectives and more over the gameplay.
 * This would take a complete overhaul, so it's probably out of MY league, but being able to link Roulettes to others would be cool. If you have knowledge on how to do this easily, leave me a message on [Github](https://github.com/BRYN4444/HitmanRoulette/issues).
 
-### Latest Major Update (Feb. 1, 2021)
+### Latest Major Update (Feb. 16, 2021)
+* **Extra Objectives for HITMAN III missions added.** Hopefully I can still add more, but adding Contracts Mode Targets is higher priority.
+* **Photo Objectives added.** To take advantage of the Camera gadget. So obviously, only possible in HITMAN III. In time, HITMAN & HITMAN 2 photos will be added, but for now only HITMAN III missions have them.
+
+#### Prior Update (Feb. 1, 2021)
 * **HITMAN III campaign missions added.**
   * **Missions:** Five of the six campaign missions are added to the Roulette. The final mission, while great, doesn't lend itself to much replayability. It could be added one day, but not a current focus.
   * **Targets:** 17 added, 10 of which are from the third mission. These targets are then all randomized among themselves, unique to this mission only. The 11th target here had to be left out due to the way some default entrances work in the game.
