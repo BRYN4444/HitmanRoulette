@@ -48,6 +48,8 @@
 .m18-1 { background:#292929 url("../img/missions/18-1.png") no-repeat center top / 350px; }
 .m19-1 { background:#292929 url("../img/missions/19-1.png") no-repeat center top / 350px; }
 
+.NotAvailable { background-image: url('../img/general/NotAvailable.png'); }
+
 /*** Backgrounds ***/
 .training, .test { background-image:var(--missionbggradient), url('../img/missions/ica-facility.webp'); filter:var(--missionbgfilter); -webkit-filter:var(--missionbgfilter); -moz-filter:var(--missionbgfilter); }
 .fashion, .director { background-image:var(--missionbggradient), url('../img/missions/paris.webp'); filter:var(--missionbgfilter); -webkit-filter:var(--missionbgfilter); -moz-filter:var(--missionbgfilter); }
@@ -1097,7 +1099,9 @@ div[class^="ElusiveTarget"] { background-image: url('../img/targetcon/NPC.jpg');
 .HackDataCore, .HackDataCoreOptional { background-image: url('../img/obj/HackDataCore.png'); }
 .DoNotEliminateDianaBurnwood { background-image: url('../img/obj/ObjDiana.png'); }
 
-/*** Extra Objectives ***/
+/*** Extra Objectives & Camera Mode***/
+.PhotographicProof { background-image: url('../img/camera/PhotographicProof.png'); }
+
 /** ICA Facility **/
 /* Freeform Training */
 .LoadingBayEntrance { background-image: url('../img/obj/Loading%20Bay%20Entrance.png'); }
@@ -1378,6 +1382,107 @@ div[class^="ElusiveTarget"] { background-image: url('../img/targetcon/NPC.jpg');
 .StolenUSB { background-image: url('../img/obj/Stolen%20USB.png'); }
 .DoYouEvenLift { background-image: url('../img/obj/Do%20You%20Even%20Lift.png'); }
 .TikiTime { background-image: url('../img/obj/Tiki%20Time.png'); }
+
+/** Dubai **/
+/* On Top Of The World */
+.DownWithTheKingmaker { background-image: url('../img/obj/DownWithTheKingmaker.png'); }
+.DontBankOnIt { background-image: url('../img/obj/DontBankOnIt.png'); }
+.CeremonialStealing { background-image: url('../img/obj/CeremonialStealing.png'); }
+.PocketSizedEmpire { background-image: url('../img/obj/PocketSizedEmpire.png'); }
+.MeettheStuyvesants { background-image: url('../img/obj/MeettheStuyvesants.png'); }
+.PaymentUpFront { background-image: url('../img/obj/PaymentUpFront.png'); }
+.DisturbingthePeace { background-image: url('../img/obj/DisturbingthePeace.png'); }
+
+.PreciousMoments { background-image: url('../img/camera/PreciousMoments.png'); }
+.Nightcrawler { background-image: url('../img/camera/Nightcrawler.png'); }
+
+/** Dartmoor **/
+/* Death In The Family */
+.TheCaseAtHand { background-image: url('../img/obj/TheCaseAtHand.png'); }
+.BeheadOfTheFamily { background-image: url('../img/obj/BeheadOfTheFamily.png'); }
+.MagicisReal { background-image: url('../img/obj/MagicisReal.png'); }
+.DyaLikeDags { background-image: url('../img/obj/DyaLikeDags.png'); }
+.LetsGoHunting { background-image: url('../img/obj/LetsGoHunting.png'); }
+.TheRaven { background-image: url('../img/obj/TheRaven.png'); }
+.PoisonIvy { background-image: url('../img/obj/PoisonIvy.png'); }
+.DingDingDing { background-image: url('../img/obj/DingDingDing.png'); }
+.ProudUndertaker { background-image: url('../img/obj/ProudUndertaker.png'); }
+.SayCheese { background-image: url('../img/obj/SayCheese.png'); }
+
+.Voyeurism { background-image: url('../img/camera/Voyeurism.png'); }
+.NothingasitSeems { background-image: url('../img/camera/NothingasitSeems.png'); }
+.TheGamesAfoot { background-image: url('../img/camera/TheGamesAfoot.png'); }
+.EvidenceisEverything { background-image: url('../img/camera/EvidenceisEverything.png'); }
+
+/** Berlin **/
+/* Apex Predator */
+.OrderofOperations { background-image: url('../img/obj/OrderofOperations.png'); }
+.TheGoldenTicket { background-image: url('../img/obj/TheGoldenTicket.png'); }
+.DevilsDandruff { background-image: url('../img/obj/DevilsDandruff.png'); }
+.Scavenger { background-image: url('../img/obj/Scavenger.png'); }
+.IdLikeaReceipt { background-image: url('../img/obj/IdLikeaReceipt.png'); }
+.SweetRelief { background-image: url('../img/obj/SweetRelief.png'); }
+.NotQuiteACanary { background-image: url('../img/obj/NotQuiteACanary.png'); }
+.GettingUp { background-image: url('../img/obj/GettingUp.png'); }
+.WorkplaceHazard { background-image: url('../img/obj/WorkplaceHazard.png'); }
+
+.ConcreteOrnithology { background-image: url('../img/camera/ConcreteOrnithology.png'); }
+.TrophyAuNaturel { background-image: url('../img/camera/TrophyAuNaturel.png'); }
+.MoshPitMemories { background-image: url('../img/camera/MoshPitMemories.png'); }
+.FailedRestoration { background-image: url('../img/camera/FailedRestoration.png'); }
+.ThisMustMeanSomething { background-image: url('../img/camera/ThisMustMeanSomething.png'); }
+
+/** Chongqing **/
+/* End Of An Era */
+.Silence { background-image: url('../img/obj/Silence.png'); }
+.Unpredictable { background-image: url('../img/obj/Unpredictable.png'); }
+.LastResort { background-image: url('../img/obj/LastResort.png'); }
+.HackthePlanet { background-image: url('../img/obj/HackthePlanet.png'); }
+.BigSister { background-image: url('../img/obj/BigSister.png'); }
+.EaseofPain { background-image: url('../img/obj/EaseofPain.png'); }
+.HumanError { background-image: url('../img/obj/HumanError.png'); }
+.Contact { background-image: url('../img/obj/Contact.png'); }
+.AnEyeforArms { background-image: url('../img/obj/AnEyeforArms.png'); }
+.JusttoSpiteThem { background-image: url('../img/obj/JusttoSpiteThem.png'); }
+.ServicePlease { background-image: url('../img/obj/ServicePlease.png'); }
+.HeadsUp { background-image: url('../img/obj/HeadsUp.png'); }
+
+.DiscoIsntDead { background-image: url('../img/camera/DiscoIsntDead.png'); }
+.ParkingPermit { background-image: url('../img/camera/ParkingPermit.png'); }
+.GoodLuck47 { background-image: url('../img/camera/GoodLuck47.png'); }
+.AdmireTheView { background-image: url('../img/camera/AdmireTheView.png'); }
+.IsThatCouldntBe { background-image: url('../img/camera/IsThatCouldntBe.png'); }
+
+/** Mendoza **/
+/* The Farewell */
+.ConstantPain { background-image: url('../img/obj/ConstantPain.png'); }
+.HarbingerofDeath { background-image: url('../img/obj/HarbingerofDeath.png'); }
+.HarvestSeason { background-image: url('../img/obj/HarvestSeason.png'); }
+.EstateWines { background-image: url('../img/obj/EstateWines.png'); }
+.TheRarestTreat { background-image: url('../img/obj/TheRarestTreat.png'); }
+.BarcodesAreBetter { background-image: url('../img/obj/BarcodesAreBetter.png'); }
+.Backstabber { background-image: url('../img/obj/Backstabber.png'); }
+.SecretStash { background-image: url('../img/obj/SecretStash.png'); }
+.CartoonishTrap { background-image: url('../img/obj/CartoonishTrap.png'); }
+.InCaseOfRain { background-image: url('../img/obj/InCaseOfRain.png'); }
+.MusicLover { background-image: url('../img/obj/MusicLover.png'); }
+.SourGrapes { background-image: url('../img/obj/SourGrapes.png'); }
+.ShockingReturn { background-image: url('../img/obj/ShockingReturn.png'); }
+.BushelofBananas { background-image: url('../img/obj/BushelofBananas.png'); }
+.GreatGrapes { background-image: url('../img/obj/GreatGrapes.png'); }
+.MalbecManiac { background-image: url('../img/obj/MalbecManiac.png'); }
+.PinotPerson { background-image: url('../img/obj/PinotPerson.png'); }
+.CabernetCrazy { background-image: url('../img/obj/CabernetCrazy.png'); }
+.Wineo { background-image: url('../img/obj/Wineo.png'); }
+.Saboteur { background-image: url('../img/obj/Saboteur.png'); }
+
+.PhotographicProof  { background-image: url('../img/camera/PhotographicProof.png'); }
+.WorthAThousandBriefings { background-image: url('../img/camera/WorthAThousandBriefings.png'); }
+.OneWithNature { background-image: url('../img/camera/OneWithNature.png'); }
+.MusicalMemories { background-image: url('../img/camera/MusicalMemories.png'); }
+.EyeOfTheBeholder { background-image: url('../img/camera/EyeOfTheBeholder.png'); }
+.BootlegTapes { background-image: url('../img/camera/BootlegTapes.png'); }
+.BarrelsOfFun { background-image: url('../img/camera/BarrelsOfFun.png'); }
 
 /***** Complications *****/
 .compinfo { background-image: url('../img/comp/none.png'); }

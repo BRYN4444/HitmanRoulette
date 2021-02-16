@@ -85,7 +85,8 @@ var fft = {
 	"The Private Meeting|Disguise yourself as Norfolk and meet with Ritter in private."],
 	contractWild: ["Loading Bay Entrance|Only enter the yacht through the loading bay.",
 	"Sneaking Mission|You must enter the yacht in your Training Gear before killing any targets.",
-	"Crocodile Hunter|Pop the inflatable crocodile by the pool."]
+	"Crocodile Hunter|Pop the inflatable crocodile by the pool."],
+	photos: ["Photographic Proof|Take a photo of your target(s) after you've eliminated them, unless their body is unavailable.<br /><br />They must not be in a body bag."]
 };
 
 var icafailsafe = ["Sniper Rifle","SMG","Shotgun","Any Small Melee Weapon","Any Large Melee Weapon","Explosion","Lethal Poison","Explosive (Weapon)","Fire|Accident","Electricity|Accident","Explosion|Accident"];
@@ -121,7 +122,8 @@ var ica = {
 	"Five O'Clock|Acquire the Bottle of Vodka.",
 	"To Fallen Comrades|Solve the chess puzzle.",
 	"A Slide Show|Collect the Projector Slides.",
-	"Safety First|Sabotage the ejector seat."]
+	"Safety First|Sabotage the ejector seat."],
+	photos: ["Photographic Proof|Take a photo of your target(s) after you've eliminated them, unless their body is unavailable.<br /><br />They must not be in a body bag."]
 };
 
 var showstopper = {
@@ -181,7 +183,8 @@ var showstopper = {
 	"Salut Too Soon|Trigger the fireworks ahead of schedule by finding the remote.",
 	"A Rare Scoop|Find a camera lens for blogger Lana Caprice so she can meet with Novikov.",
 	"Enter the IAGO Auction|Join the auction with an invitation or dressed as the Sheikh.",
-	"A Quick Break|Hack Dalia's computer and sabotage the auction."]
+	"A Quick Break|Hack Dalia's computer and sabotage the auction."],
+	photos: ["Photographic Proof|Take a photo of your target(s) after you've eliminated them, unless their body is unavailable.<br /><br />They must not be in a body bag."]
 };
 var hh = {
 	missionTitle: "Holiday Hoarders",
@@ -220,7 +223,8 @@ var hh = {
 	"Salut Too Soon|Trigger the fireworks ahead of schedule by finding the remote.",
 	"Keeps on Giving|At least once, open any gift with non-lethal contents and use it on the next person you see.",
 	"Wet Bandits Recruit|Overflow 5 sinks in the Palais De Walewska.",
-	"Wet Bandits Veteran|Overflow 8 sinks in the Palais De Walewska."]
+	"Wet Bandits Veteran|Overflow 8 sinks in the Palais De Walewska."],
+	photos: ["Not Available|This mission is inaccessable in Hitman III."]
 };
 var thedirector = {
 	missionTitle: "The Director",
@@ -253,7 +257,8 @@ var thedirector = {
 	"Bare Knuckle Boxer|Mix a Bare Knuckle Boxer cocktail.",
 	"Fifteen Seconds of Fame|Take to the catwalk as Helmut Kruger.",
 	"Salut Too Soon|Trigger the fireworks ahead of schedule by finding the remote.",
-	"Enter the IAGO Auction|Join the auction with an invitation or dressed as the Sheikh."]
+	"Enter the IAGO Auction|Join the auction with an invitation or dressed as the Sheikh."],
+	photos: ["Not Available|This mission is inaccessable in Hitman III."]
 };
 
 var wot = {
@@ -321,7 +326,8 @@ var wot = {
 	"The Good Son|Place flowers on Isabella Caruso's Grave while disguised as a delivery man.",
 	"Green Thumb|Find all 6 flower bouquets hidden around Sapienza.",
 	"For Whom the Bell Tolls|Drop the church bell.",
-	"Leave No Trace|Collect the Virus Prototype.<br /><br />You are permitted to use it as a kill method."]
+	"Leave No Trace|Collect the Virus Prototype.<br /><br />You are permitted to use it as a kill method."],
+	photos: ["Photographic Proof|Take a photo of your target(s) after you've eliminated them, unless their body is unavailable.<br /><br />They must not be in a body bag."]
 };
 var icon = {
 	missionTitle: "The Icon",
@@ -353,7 +359,8 @@ var icon = {
 	contractWild: ["Time to Meet the Fans|Interrupt the film shoot by tampering with the generator rack.",
 	"Free Falling|Drop one body off the top of the Town Square Tower.",
 	"Key Grip|Find all 5 keys scattered around: Town Hall Key, Shop Key, Fuel Case Key, and Bosco’s Car & Trailer Keys.",
-	"Nighttime Vandal|Sabotage 6 of the 13 scooters parked nearby the set."]
+	"Nighttime Vandal|Sabotage 6 of the 13 scooters parked nearby the set."],
+	photos: ["Photographic Proof|Take a photo of your target(s) after you've eliminated them, unless their body is unavailable.<br /><br />They must not be in a body bag."]
 };
 var landslide = {
 	missionTitle: "Landslide",
@@ -412,7 +419,8 @@ var landslide = {
 	"Enter and Break|Retrieve Salvatore Bravuomo’s Folding Knife.",
 	"Dynamic Smile|Get Abiatti’s picture by the pier.",
 	"Safehouse Bugged|The ICA Safehouse is off limits from entering and receiving Agency pickups.",
-	"For Whom the Bell Tolls|Drop the church bell."]
+	"For Whom the Bell Tolls|Drop the church bell."],
+	photos: ["Photographic Proof|Take a photo of your target(s) after you've eliminated them, unless their body is unavailable.<br /><br />They must not be in a body bag."]
 };
 var author = {
 	missionTitle: "The Author",
@@ -438,7 +446,8 @@ var author = {
 	contractWild: ["Two for the Price of None|Collect two bottles of Insecticide.",
 	"Critic Critique|Collect Mike Vogt’s book reading invitation.",
 	"Too Much Ambiance|Pollute the smoke machine being used for the promotional photoshoot.",
-	"No, it's “Cheese”|Get your picture taken with Craig Black during the promotional photoshoot."]
+	"No, it's “Cheese”|Get your picture taken with Craig Black during the promotional photoshoot."],
+	photos: ["Photographic Proof|Take a photo of your target(s) after you've eliminated them, unless their body is unavailable.<br /><br />They must not be in a body bag."]
 };
 var theenforcer = {
 	missionTitle: "The Enforcer",
@@ -481,7 +490,8 @@ var theenforcer = {
 	"First Day on the Job|Attempt to cook Isabella Caruso's spaghetti bolognese and ring the dinner bell.",
 	"The Good Son|Place flowers on Isabella Caruso's Grave while disguised as a delivery man.",
 	"Green Thumb|Find all 6 flower bouquets hidden around Sapienza.",
-	"For Whom the Bell Tolls|Drop the church bell."]
+	"For Whom the Bell Tolls|Drop the church bell."],
+	photos: ["Not Available|This mission is inaccessable in Hitman III."]
 };
 
 var agc = {
@@ -533,7 +543,8 @@ var agc = {
 	"Bathroom Break|Drop the broken toilet bowl in the school bathroom.",
 	"Freedom|Drag Zaydan’s prisoner, Sayid Laham, outdoors.",
 	"Let's Dance|Trigger the dance party at the school.",
-	"Public Speaker|Get rid of the protester Sayid Laham, but do not kill them."]
+	"Public Speaker|Get rid of the protester Sayid Laham, but do not kill them."],
+	photos: ["Photographic Proof|Take a photo of your target(s) after you've eliminated them, unless their body is unavailable.<br /><br />They must not be in a body bag."]
 };
 var ahbos = {
 	missionTitle: "A House Built on Sand",
@@ -569,7 +580,8 @@ var ahbos = {
 	contractWild: ["Dropping the F-bomb|Shoot down the Shisha Cafe sign.",
 	"Keys to the City|Find all 6 keys scattered around: Truck Keys, Maintenance Room Key, Shisha Cafe Key, and the Antiques, Carpet, and unnamed Shop Keys.",
 	"Litter Picker-Upper|Collect 10 soda cans, located in the area around the Shisha Cafe.",
-	"The Future Foretold|Read Matthieu Mendola’s fortune as the fortune teller."]
+	"The Future Foretold|Read Matthieu Mendola’s fortune as the fortune teller."],
+	photos: ["Photographic Proof|Take a photo of your target(s) after you've eliminated them, unless their body is unavailable.<br /><br />They must not be in a body bag."]
 };
 var theextractor = {
 	missionTitle: "The Extractor",
@@ -595,7 +607,8 @@ var theextractor = {
 	"Freedom|Drag Zaydan’s prisoner, Sayid Laham, outdoors."],
 	contractWild: ["Training Cancelled|Trigger the APC turret in the school courtyard.",
 	"Bathroom Break|Drop the broken toilet bowl in the school bathroom.",
-	"Freedom|Drag Zaydan’s prisoner, Sayid Laham, outdoors."]
+	"Freedom|Drag Zaydan’s prisoner, Sayid Laham, outdoors."],
+	photos: ["Not Available|This mission is inaccessable in Hitman III."]
 };
 
 var c27 = {
@@ -650,7 +663,8 @@ var c27 = {
 	"Tik Tuk|Repair the Tuk-Tuk located behind the hotel.",
 	"Keep a Souvenir|Retrieve the Branson MD-2 vocal mic.",
 	"Put the Lime in the Coconut|Acquire 6 coconuts.",
-	"Don't Breathe This|Pollute the ventilation system of the hotel lobby."]
+	"Don't Breathe This|Pollute the ventilation system of the hotel lobby."],
+	photos: ["Photographic Proof|Take a photo of your target(s) after you've eliminated them, unless their body is unavailable.<br /><br />They must not be in a body bag."]
 };
 var source = {
 	missionTitle: "The Source",
@@ -698,7 +712,8 @@ var source = {
 	"Something For Later|Find and collect the 92 Proof Vodka. Do not use it during the contract.",
 	"Inner Circle|Attend the private ceremony as a cult member."],
 	contractWild: ["Something For Later|Find and collect the 92 Proof Vodka. Do not use it during the contract.",
-	"Inner Circle|Attend the private ceremony as a cult member."]
+	"Inner Circle|Attend the private ceremony as a cult member."],
+	photos: ["Photographic Proof|Take a photo of your target(s) after you've eliminated them, unless their body is unavailable.<br /><br />They must not be in a body bag."]
 };
 var theveteran = {
 	missionTitle: "The Veteran",
@@ -726,7 +741,8 @@ var theveteran = {
 	contractWild: ["Tik Tuk|Repair the Tuk-Tuk located behind the hotel.",
 	"Keep a Souvenir|Retrieve the Branson MD-2 vocal mic.",
 	"Put the Lime in the Coconut|Acquire 6 coconuts.",
-	"Don't Breathe This|Pollute the ventilation system of the hotel lobby."]
+	"Don't Breathe This|Pollute the ventilation system of the hotel lobby."],
+	photos: ["Not Available|This mission is inaccessable in Hitman III."]
 };
 
 var ff = {
@@ -784,7 +800,8 @@ var ff = {
 	"Handle With Care|Acquire 5 bottles of Nitroglycerin.",
 	"Not Exactly Ulcer Pills|Play the video game console.",
 	"Apricot Hunter|Find and collect 10 apricots.",
-	"Apricot Hoarder|Find and collect 20 apricots."]
+	"Apricot Hoarder|Find and collect 20 apricots."],
+	photos: ["Photographic Proof|Take a photo of your target(s) after you've eliminated them, unless their body is unavailable.<br /><br />They must not be in a body bag."]
 };
 var themercenary = {
 	missionTitle: "The Mercenary",
@@ -810,7 +827,8 @@ var themercenary = {
 	"Handle With Care|Acquire 5 bottles of Nitroglycerin.",
 	"Not Exactly Ulcer Pills|Play the video game console.",
 	"Apricot Hunter|Find and collect 10 apricots.",
-	"Apricot Hoarder|Find and collect 20 apricots."]
+	"Apricot Hoarder|Find and collect 20 apricots."],
+	photos: ["Not Available|This mission is inaccessable in Hitman III."]
 };
 
 var si = {
@@ -866,7 +884,8 @@ var si = {
 	"Guardian Angel|Both initiate and prevent Katashi Ito from killing himself using only the neurochip remote.",
 	"All Access Pass|Find and collect the RFID master chip card.",
 	"Smoking Kills|Find and collect 3 packs of cigarettes.<br />Note: you will need to keep track of the amount on your own.",
-	"New Career Path|Prepare and serve 3 different people unpoisoned sushi."]
+	"New Career Path|Prepare and serve 3 different people unpoisoned sushi."],
+	photos: ["Photographic Proof|Take a photo of your target(s) after you've eliminated them, unless their body is unavailable.<br /><br />They must not be in a body bag."]
 };
 var patientzero = {
 	missionTitle: "Patient Zero",
@@ -896,7 +915,8 @@ var patientzero = {
 	"You Know the Number|Kill at least 47 people infected with the Nabazov Virus besides Owen Cage.",
 	"Containment|Complete the mission with no one being infected by Nabazov Virus.",
 	"Namaste|Change the temperatures of both the hot spring and sauna, trigger the fire alarm, then wait for the guests to meditate.",
-	"Smell Something Fishy?|Cut the fugu fish to collect it’s poison."]
+	"Smell Something Fishy?|Cut the fugu fish to collect it’s poison."],
+	photos: ["Photographic Proof|Take a photo of your target(s) after you've eliminated them, unless their body is unavailable.<br /><br />They must not be in a body bag."]
 };
 var sf = {
 	missionTitle: "Hokkaido Snow Festival",
@@ -941,7 +961,8 @@ var sf = {
 	"In Your Face!|Knock out three gardeners in the garden using snowballs.",
 	"Cold as Ice|Collect 4 icicles.",
 	"Ice Ice Baby|Collect 4 icicles and shoot down 4 giant icicles.",
-	"Let It Snow|Collect 30 Snowballs. How you use them afterwards is up to you."]
+	"Let It Snow|Collect 30 Snowballs. How you use them afterwards is up to you."],
+	photos: ["Not Available|This mission is inaccessable in Hitman III."]
 };
 var thecontroller = {
 	missionTitle: "The Controller",
@@ -968,7 +989,8 @@ var thecontroller = {
 	contractWild: ["Ghost in the Machine|Sabotage GAMA’s artificial intelligence mainframe KAI.",
 	"Smell Something Fishy?|Cut the fugu fish to collect it’s poison.",
 	"Smoking Kills|Find and collect 3 packs of cigarettes.<br />Note: you will need to keep track of the amount on your own.",
-	"New Career Path|Prepare and serve 3 different people unpoisoned sushi."]
+	"New Career Path|Prepare and serve 3 different people unpoisoned sushi."],
+	photos: ["Not Available|This mission is inaccessable in Hitman III."]
 };
 
 var nc = {
@@ -1016,7 +1038,8 @@ var nc = {
 	"Don't Tread On Me!|Find and collect two squeaky toys.",
 	"Wood You Believe It?|Find and collect two pieces of driftwood.",
 	"Shadow Trail|Collect and witness the three pieces of intel on the Alma Reynard's actions: The File on Dynasty Global, Militia Operations Reports, and the Whiteboard in the panic room.",
-	"Intangible|Enter the intangible vehicle."]
+	"Intangible|Enter the intangible vehicle."],
+	photos: ["Photographic Proof|Take a photo of your target(s) after you've eliminated them, unless their body is unavailable.<br /><br />They must not be in a body bag."]
 };
 
 var tfl = {
@@ -1157,7 +1180,8 @@ var tfl = {
 	"Tintamarresque|Blend in using the photo stand-in.",
 	"Free Fishie|Release a fish back into the ocean.",
 	"Tanked|Knock out both aquarium guards at the same time using the same aquarium.",
-	"Potty Training|Make the patient leave the doctor's office without eliminating him."]
+	"Potty Training|Make the patient leave the doctor's office without eliminating him."],
+	photos: ["Photographic Proof|Take a photo of your target(s) after you've eliminated them, unless their body is unavailable.<br /><br />They must not be in a body bag."]
 };
 var ast = {
 	missionTitle: "A Silver Tongue",
@@ -1215,7 +1239,8 @@ var ast = {
 	"What's In This Thing|Open and collect the contents of the evidence locker.",
 	"In Case Of Shortage...|Fill an Atlantide water bottle with locally sourced water.",
 	"Here to Rep Atlantide|Man the Atlantide stand and serve six individuals.",
-	"Aggressive Advertising|As the Thwack team's driver, meet with Ajit “AJ” Krish in the team's garage."]
+	"Aggressive Advertising|As the Thwack team's driver, meet with Ajit “AJ” Krish in the team's garage."],
+	photos: ["Photographic Proof|Take a photo of your target(s) after you've eliminated them, unless their body is unavailable.<br /><br />They must not be in a body bag."]
 };
 
 var ths = {
@@ -1299,7 +1324,8 @@ var ths = {
 	"Feedin' Time|Make the hippo feel better.",
 	"Don't Shoot The Messenger|Find Héctor Delgado's love letter.",
 	"Salt The Earth|Destroy Franco's rare flower sample.",
-	"How Ribbiting|Catch 5 frogs."]
+	"How Ribbiting|Catch 5 frogs."],
+	photos: ["Photographic Proof|Take a photo of your target(s) after you've eliminated them, unless their body is unavailable.<br /><br />They must not be in a body bag."]
 };
 var eots = {
 	missionTitle: "Embrace of the Serpent",
@@ -1349,7 +1375,8 @@ var eots = {
 	"How Ribbiting|Catch 5 frogs.",
 	"What a Sham!|Bless Blair Reddington's Hut as the Shaman.",
 	"Sprung Traps|Block all three of Blair Reddington's Snake Traps.",
-	"Fruit Basket|Collect 5 Apples and 5 Apricots from in or around Reddington's camp."]
+	"Fruit Basket|Collect 5 Apples and 5 Apricots from in or around Reddington's camp."],
+	photos: ["Photographic Proof|Take a photo of your target(s) after you've eliminated them, unless their body is unavailable.<br /><br />They must not be in a body bag."]
 };
 
 var cag = {
@@ -1434,7 +1461,8 @@ var cag = {
 	"The Artist|Allow the artist to finish his painting of Dawood Rangan.",
 	"Memoir|Find one tape recorded by The Maelstrom",
 	"Smashing, Baby!|Start the photoshoot as the lead actor.",
-	"Big Spender|Buy all three cloth samples from a vendor in the slums."]
+	"Big Spender|Buy all three cloth samples from a vendor in the slums."],
+	photos: ["Photographic Proof|Take a photo of your target(s) after you've eliminated them, unless their body is unavailable.<br /><br />They must not be in a body bag."]
 };
 var iog = {
 	missionTitle: "Illusions of Grandeur",
@@ -1482,7 +1510,8 @@ var iog = {
 	"Wrong Person To Ask|Make Basil Carnaby ask you for money."],
 	contractWild: ["Memoir|Find one tape recorded by The Maelstrom",
 	"Big Spender|Buy all three cloth samples from a vendor in the slums.",
-	"Wrong Person To Ask|Make Basil Carnaby ask you for money."]
+	"Wrong Person To Ask|Make Basil Carnaby ask you for money."],
+	photos: ["Photographic Proof|Take a photo of your target(s) after you've eliminated them, unless their body is unavailable.<br /><br />They must not be in a body bag."]
 };
 
 var al = {
@@ -1574,7 +1603,8 @@ var al = {
 	contractWild: ["Battle Frogs|Capture a pickerel frog.",
 	"Junk Mail|Acquire the package meant for Mr. Batty, but deliver him a political flyer instead.",
 	"Old Grudges|Unearth and take the hatchet.",
-	"Bake Sale|Acquire 10 blueberry muffins."]
+	"Bake Sale|Acquire 10 blueberry muffins."],
+	photos: ["Photographic Proof|Take a photo of your target(s) after you've eliminated them, unless their body is unavailable.<br /><br />They must not be in a body bag."]
 };
 var abp = {
 	missionTitle: "A Bitter Pill",
@@ -1627,7 +1657,8 @@ var abp = {
 	"Bake Sale|Acquire 10 blueberry muffins.",
 	"Cellar Door|Disable Galen's security system.",
 	"Letterboxed|Have Galen Vholes retrieve something from his mailbox.",
-	"Second Opinion|As the mailman, meet with Galen Vholes for a consultation."]
+	"Second Opinion|As the mailman, meet with Galen Vholes for a consultation."],
+	photos: ["Photographic Proof|Take a photo of your target(s) after you've eliminated them, unless their body is unavailable.<br /><br />They must not be in a body bag."]
 };
 
 var tas = {
@@ -1732,7 +1763,8 @@ var tas = {
 	wild: ["People Person|Eliminate Zoe Washington before Sophia Washington.",
 	"Plan Accordingly|Eliminate Sophia Washington before Zoe Washington.",
 	"Five Finger Discount|Steal the Astek necklace."],
-	contractWild: ["Five Finger Discount|Steal the Astek necklace."]
+	contractWild: ["Five Finger Discount|Steal the Astek necklace."],
+	photos: ["Photographic Proof|Take a photo of your target(s) after you've eliminated them, unless their body is unavailable.<br /><br />They must not be in a body bag."]
 };
 
 var gh = {
@@ -1826,7 +1858,8 @@ var gh = {
 	"Insider Trading|Crash the Stock Market.",
 	"Whistleblower|Hand over the Cronkite files to the investigator.",
 	"The Exposé|Hand over the Cronkite files to Ruby Red.",
-	"Preemptive Payout|Throw a gold bar from the vault into the bathroom with the two would-be robbers."]
+	"Preemptive Payout|Throw a gold bar from the vault into the bathroom with the two would-be robbers."],
+	photos: ["Photographic Proof|Take a photo of your target(s) after you've eliminated them, unless their body is unavailable.<br /><br />They must not be in a body bag."]
 };
 
 var lr = {
@@ -1933,7 +1966,8 @@ var lr = {
 	"A Great Source Of Potassium and Comedy|Acquire a banana and have someone slip on it.",
 	"Stolen USB|Obtain the stolen USB.",
 	"Do You Even Lift|Become a personal trainer and give out every type of workout instruction.",
-	"Tiki Time|Serve 5 cocktails."]
+	"Tiki Time|Serve 5 cocktails."],
+	photos: ["Photographic Proof|Take a photo of your target(s) after you've eliminated them, unless their body is unavailable.<br /><br />They must not be in a body bag."]
 };
 
 var ototw = {
@@ -1966,8 +2000,21 @@ var ototw = {
 	"The Assassin",
 	"Helicoptor Pilot",
 	"Ingram's Bodyguard"],
-	wild: ["Coming Soon|Extra Objectives for Hitman III Coming Soon"],
-	contractWild: ["Coming Soon|Extra Objectives for Hitman III Coming Soon"]
+	wild: ["Down With The Kingmaker|Eliminate Carl Ingram before Marcus Stuyvesant.",
+	"Don't Bank On It|Eliminate Marcus Stuyvesant before Carl Ingram.",
+	"Ceremonial Stealing|Exfiltrate with one of Omar Al-Ghazali's Ornate Scimitars.",
+	"Pocket-Sized Empire|Exfiltrate with the miniature Model of the Sceptre.",
+	"Meet the Stuyvesants|Reunite the Stuyvesants.",
+	"Payment Up Front|Exfiltrate with at least one goldbar.",
+	"Disturbing the Peace|Disturb Carl Ingram while he is on his dictaphone."],
+	contractWild: ["Ceremonial Stealing|Exfiltrate with one of Omar Al-Ghazali's Ornate Scimitars.",
+	"Pocket-Sized Empire|Exfiltrate with the miniature Model of the Sceptre.",
+	"Meet the Stuyvesants|Reunite the Stuyvesants.",
+	"Payment Up Front|Exfiltrate with at least one goldbar.",
+	"Disturbing the Peace|Disturb Carl Ingram while he is on his dictaphone."],
+	photos: ["Photographic Proof|Take a photo of your target(s) after you've eliminated them, unless their body is unavailable.<br /><br />They must not be in a body bag.",
+	"Precious Moments|Take a photo of Marcus Stuyvesant being reunited with his daughter.",
+	"Nightcrawler|Take a photo of the Sheikh sleeping."]
 };
 
 var ditf = {
@@ -2000,8 +2047,29 @@ var ditf = {
 	"Undertaker",
 	"Mansion Guard","Mansion Staff",
 	"Bodyguard"],
-	wild: ["Coming Soon|Extra Objectives for Hitman III Coming Soon"],
-	contractWild: ["Coming Soon|Extra Objectives for Hitman III Coming Soon"]
+	wild: ["The Case At Hand|Find the Case File before Eliminating Alexa Carlisle.",
+	"Behead Of The Family|Eliminate Alexa Carlisle before finding the Case File.",
+	"Magic is Real|Exfiltrate with a unicorn horn.",
+	"D'ya Like Dags|Exfiltrate with the bulldog cane.",
+	"Let's Go Hunting|Obtain a hunting rifle from the weapons locker.",
+	"The Raven|Make the birds leave the graveyard.",
+	"Poison Ivy|Create a lethal poison vial using the distillation kit.",
+	"Ding Ding Ding|Make Alexa Carlisle upset about the Bell.",
+	"Proud Undertaker|Have the undertaker present the grave for Alexa Carlisle.",
+	"Say Cheese|Have the photographer take a photo of the Carlisle family."],
+	contractWild: ["Magic is Real|Exfiltrate with a unicorn horn.",
+	"D'ya Like Dags|Exfiltrate with the bulldog cane.",
+	"Let's Go Hunting|Obtain a hunting rifle from the weapons locker.",
+	"The Raven|Make the birds leave the graveyard.",
+	"Poison Ivy|Create a lethal poison vial using the distillation kit.",
+	"Ding Ding Ding|Make Alexa Carlisle upset about the Bell.",
+	"Proud Undertaker|Have the undertaker present the grave for Alexa Carlisle.",
+	"Say Cheese|Have the photographer take a photo of the Carlisle family."],
+	photos: ["Photographic Proof|Take a photo of your target(s) after you've eliminated them, unless their body is unavailable.<br /><br />They must not be in a body bag.",
+	"Voyeurism|Take a photo of flirting employees.",
+	"Nothing as it Seems|Take a photo of Alexa Carlisle during the family meeting.",
+	"The Game's Afoot|Take a photo of Zachary Carlisle's Body.",
+	"Evidence is Everything|Take a photo of at least one piece of evidence related to the death of Zachary Carlisle.",]
 };
 
 var ap = {
@@ -2020,8 +2088,6 @@ var ap = {
 	"Scrap Sword|Melee","Scrap Sword|Thrown Weapon",
 	"Screwdriver|Melee","Screwdriver|Thrown Weapon"],
 	targetList: ["Agent Rhodes","Agent Swan","Agent Banner","Agent Tremaine","Agent Green","Agent Thames","Agent Chamberlin","Agent Montgomery","Agent Lowenthal","Agent Davenport"],
-	//targetList: ["ICA Agent","ICA Agent","ICA Agent","ICA Agent","ICA Agent"],
-	//icaList: ["Agent Rhodes","Agent Swan","Agent Banner","Agent Tremaine","Agent Green","Agent Thames","Agent Chamberlin","Agent Montgomery","Agent Lowenthal","Agent Davenport"],
 	contractTargets: ["Agent Rhodes|Hitman III Contracts Mode Targets Coming Soon",
 	"Agent Swan|Hitman III Contracts Mode Targets Coming Soon",
 	"Agent Banner|Hitman III Contracts Mode Targets Coming Soon",
@@ -2034,7 +2100,7 @@ var ap = {
 	"Agent Davenport|Hitman III Contracts Mode Targets Coming Soon"],
 	entry: ["Bus Stop","Club Entrance","Projection Bar","Radio Tower","Chill Out","DJ Booth","Biker Hangout"],
 	exit: ["Bicycle","Emergency Exit","Delivery Scooter|(Needs Key)","Motorcycle|(Needs Key)"],
-	eexit: ["Bicycle","Emergency Exit","Delivery Scooter|(Needs Key)","Motorcycle|(Needs Key)"],
+	eexit: ["Bicycle","Emergency Exit","Delivery Scooter|(Needs Key)","Motorcycle|(Needs Key)","UFO|(Secret)"],
 	disguises: ["Any Suit",
 	"Bartender",
 	"Biker",
@@ -2044,8 +2110,29 @@ var ap = {
 	"DJ",
 	"Rolf Hirschmüller",
 	"Technician"],
-	wild: ["Coming Soon|Extra Objectives for Hitman III Coming Soon"],
-	contractWild: ["Coming Soon|Extra Objectives for Hitman III Coming Soon"]
+	wild: ["Order of Operations|Take out <span id='apexwild'>the last listed Agent</span> before any other ICA Agent.",
+	"The Golden Ticket|Obtain a juice bar ticket.",
+	"Devil's Dandruff|Get a brick of cocain.",
+	"Scavenger|Exfiltrate with the scrap sword.",
+	"I'd Like a Receipt|Collect the Food Delivery.",
+	"Sweet Relief|Unlock all the stalls in the Red Toilet area.",
+	"Not Quite A Canary|Exfiltrate with at least one Bird's Egg.",
+	"Getting Up|Exfiltrate with at least one can of Spray Paint.",
+	"Workplace Hazard|Cause the crane accident."],
+	contractWild: ["The Golden Ticket|Obtain a juice bar ticket.",
+	"Devil's Dandruff|Get a brick of cocain.",
+	"Scavenger|Exfiltrate with the scrap sword.",
+	"I'd Like a Receipt|Collect the Food Delivery.",
+	"Sweet Relief|Unlock all the stalls in the Red Toilet area.",
+	"Not Quite A Canary|Exfiltrate with at least one Bird's Egg.",
+	"Getting Up|Exfiltrate with at least one can of Spray Paint.",
+	"Workplace Hazard|Cause the crane accident."],
+	photos: ["Photographic Proof|Take a photo of your target(s) after you've eliminated them, unless their body is unavailable.<br /><br />They must not be in a body bag.",
+	"Concrete Ornithology|Take a photo of at least one piece of yellow bird graffiti outside the club.",
+	"Trophy Au Naturel|Take a photo of the dancing shirtless man overlooking the dance floor.",
+	"Mosh Pit Memories|Take a photo of the DJ playing their set.",
+	"Failed Restoration|Take a photo of the unfortunate paining.",
+	"This Must Mean Something|Take a photo of the supernatural graffiti."]
 };
 
 var eoae = {
@@ -2074,8 +2161,34 @@ var eoae = {
 	"Homeless Person",
 	"Perfect Test Subject","Researcher",
 	"The Board Member"],
-	wild: ["Coming Soon|Extra Objectives for Hitman III Coming Soon"],
-	contractWild: ["Coming Soon|Extra Objectives for Hitman III Coming Soon"]
+	wild: ["Silence|Eliminate Hush before Imogen Royce.",
+	"Unpredictable|Eliminate Imogen Royce before Hush.",
+	"Last Resort|Obtain three block flyers.",
+	"Hack the Planet|Obtain all tiers of the hacking access dongles.",
+	"Big Sister|Destroy at least one surveillance drone.",
+	"Ease of Pain|Relieve a test subject from their pain.",
+	"Human Error|Disable the safety mechanism of the Data Core.",
+	"Contact|Turn off Hush's Antenna.",
+	"An Eye for Arms|Collect and Exfiltrate with the Hackl Leviathan Sniper Rifle Covert.",
+	"Just to Spite Them|Flood the two sinks inside the ICA Apartment.",
+	"Service, Please!|Have Angus Pritchard's meal served to him.",
+	"Heads Up!|Drop at least one bird cage."],
+	contractWild: ["Last Resort|Obtain three block flyers.",
+	"Hack the Planet|Obtain all tiers of the hacking access dongles.",
+	"Big Sister|Destroy at least one surveillance drone.",
+	"Ease of Pain|Relieve a test subject from their pain.",
+	"Human Error|Disable the safety mechanism of the Data Core.",
+	"Contact|Turn off Hush's Antenna.",
+	"An Eye for Arms|Collect and Exfiltrate with the Hackl Leviathan Sniper Rifle Covert.",
+	"Just to Spite Them|Flood the two sinks inside the ICA Apartment.",
+	"Service, Please!|Have Angus Pritchard's meal served to him.",
+	"Heads Up!|Drop at least one bird cage."],
+	photos: ["Photographic Proof|Take a photo of your target(s) after you've eliminated them, unless their body is unavailable.<br /><br />They must not be in a body bag.",
+	"Disco Isn't Dead|Take a photo of the Disco Ball inside OK Karaoke.",
+	"Parking Permit|Take a photo of the licence plate of the Rental Car.",
+	"Good Luck, 47|Take a photo of at least one Maneki-neko figurine.",
+	"Admire The View|Take a photo of the Chongqing skyline.",
+	"Is That? Couldn't Be...|Take a photo of the Lee Hong Pawn Shop neon sign."]
 };
 
 var tf = {
@@ -2111,8 +2224,51 @@ var tf = {
 	"Providence Herald",
 	"Tactical Wetsuit",
 	"Tango Musician"],
-	wild: ["Coming Soon|Extra Objectives for Hitman III Coming Soon"],
-	contractWild: ["Coming Soon|Extra Objectives for Hitman III Coming Soon"]
+	wild: ["Constant Pain|Eliminate Don Archibald Yates before Tamara Vidal.",
+	"Harbinger of Death|Eliminate Tamara Vidal before Don Archibald Yates.",
+	"Harvest Season|Harvest at least one Malbec grapevine, and exfiltrate with it.",
+	"Estate Wines|Collect Viñedo Yates' Malbec, Cabernet Sauvignon, and Pinot Noir.",
+	"The Rarest Treat|Exfiltrate with the bottle of of 1945 Grand Paladin.",
+	"Barcodes Are Better|Scan at least one Viñedo Yates QR code.",
+	"Backstabber|Obtain the Data Leak Report from Don Yates' safe.",
+	"Secret Stash|Exfiltrate with a cocaine brick.",
+	"Cartoonish Trap|Drop the chandelier in the Villa Bedroom.",
+	"In Case Of Rain|Exfiltrate with the Yates' Umbrella.",
+	"Music Lover|Exfiltrate with the Yates' Violin.",
+	"Sour Grapes|Create a lethal poison vial using the distillation kit.",
+	"Shocking Return|Collect the Branson MD-2 Microphone.",
+	"Bushel of Bananas|Exfiltrate with 3 Bananas.",
+	"Great Grapes|Exfiltrate with at least 10 Malbec grapevines.",
+	"Malbec Maniac|Exfiltrate with at least 15 bottles of Malbec Wine.",
+	"Pinot Person|Exfiltrate with at least 5 bottles of Pinot Noir Wine.",
+	"Cabernet Crazy|Exfiltrate with at least 10 bottles of Cabernet Sauvignon Wine.",
+	"Wineo|Exfiltrate with the following bottles of wine: 15 Malbec, 10 Cabernet Sauvignon, 5 Pinot Noir, and the 1914 Grand Paladin.",
+	"Saboteur|Break the Viñedo Yates Wine Pump."],
+	contractWild: ["Harvest Season|Harvest at least one Malbec grapevine, and exfiltrate with it.",
+	"Estate Wines|Collect Viñedo Yates' Malbec, Cabernet Sauvignon, and Pinot Noir.",
+	"The Rarest Treat|Exfiltrate with the bottle of of 1945 Grand Paladin.",
+	"Barcodes Are Better|Scan at least one Viñedo Yates QR code.",
+	"Backstabber|Obtain the Data Leak Report from Don Yates' safe.",
+	"Secret Stash|Exfiltrate with a cocaine brick.",
+	"Cartoonish Trap|Drop the chandelier in the Villa Bedroom.",
+	"In Case Of Rain|Exfiltrate with the Yates' Umbrella.",
+	"Music Lover|Exfiltrate with the Yates' Violin.",
+	"Sour Grapes|Create a lethal poison vial using the distillation kit.",
+	"Shocking Return|Collect the Branson MD-2 Microphone.",
+	"Bushel of Bananas|Exfiltrate with 3 Bananas.",
+	"Great Grapes|Exfiltrate with at least 10 Malbec grapevines.",
+	"Malbec Maniac|Exfiltrate with at least 15 bottles of Malbec Wine.",
+	"Pinot Person|Exfiltrate with at least 5 bottles of Pinot Noir Wine.",
+	"Cabernet Crazy|Exfiltrate with at least 10 bottles of Cabernet Sauvignon Wine.",
+	"Wineo|Exfiltrate with the following bottles of wine: 15 Malbec, 10 Cabernet Sauvignon, 5 Pinot Noir, and the 1914 Grand Paladin.",
+	"Saboteur|Break the Viñedo Yates Wine Pump."],
+	photos: ["Photographic Proof|Take a photo of your target(s) after you've eliminated them, unless their body is unavailable.<br /><br />They must not be in a body bag.",
+	"Worth A Thousand Briefings|Take a photo of Diana Burnwood.",
+	"One With Nature|Take a photo of the Lawyer, Aron Ford Jr., observing nature.",
+	"Musical Memories|Take a photo of the three Tango Musicians.",
+	"Eye Of The Beholder|Take a photo of an art piece on the Viñedo Yates property.",
+	"Bootleg Tapes|Take a photo of the Cinema screen.",
+	"Barrel's Of Fun|Take a photo of the Barrel Room from the observation platform above it."]
 };
 
 var mission_names_map = {
