@@ -943,7 +943,7 @@ input[type=range]::-ms-thumb {
 	align-items:stretch;
 }
 #photo { background-size:var(--targetbasebgsize); }
-#photo.contarget { background-size:100% auto; }
+#photo.contarget { background-size:101% auto; }
 html.h1theme #photo[class^="ElusiveTarget"], html.h1gotytheme #photo[class^="ElusiveTarget"] { background-size:100% auto !important; }
 #logo { width:700px; }
 #logothin { width:350px; display:none; }
@@ -1173,7 +1173,7 @@ div[id^="subplate"].intel { background-image:var(--intel); }
 #chall-image #nameplate { background-image:var(--challenge); }
 
 #maps_submenu {
-	grid-template-rows:repeat(6, 1fr); /*Change 6 to 7 when H3dlc drops*/
+	grid-template-rows:repeat(7, 1fr);
 }
 #maps_submenu div span { margin:0 0 13px 65px; }
 @media only screen and (max-height: 700px) {
@@ -1501,7 +1501,7 @@ span#range input { margin-right:10px; }
 #submenumobile #right.submenumobile_map {
 	display: grid;
 	grid-template-columns: 1fr;
-	grid-template-rows: repeat(3, 1fr); /* Change to 4 when H3dlc drops */
+	grid-template-rows: repeat(4, 1fr);
 	grid-row-gap: 3px;
 }
 
@@ -1679,6 +1679,10 @@ p#ioi { font-size:30px; }
 @keyframes sliding {
     from {text-indent:20%;}
     to {text-indent:-80%;}
+}
+.slide {
+	overflow:hidden;
+	text-overflow: ellipsis !important;
 }
 .slide:hover {
 	cursor: help !important;
