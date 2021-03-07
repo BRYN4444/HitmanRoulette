@@ -96,7 +96,7 @@ $(document).ready(function() {
 		$( "#saveroulette" ).hide('slide',{ direction: 'right' }, 500);
 		
 		if($("#mode_con").hasClass("intel") || $("#mode_con").hasClass("hunt")) {
-			$("input.noncon").prop('checked', false).prop('disabled', true).parent().parent().parent().addClass("lock");
+			$("input.noncon").prop('checked', false).prop('disabled', true).parent().parent().removeClass("on").parent().addClass("lock");
 			$("span.noncon").hide();
 			$("b.noncon").show();
 		};
@@ -279,95 +279,72 @@ $(document).ready(function() {
 			$(this).parent().parent().removeClass("on");
 		};
 		
-		//Toggle Random All if every level is selected or not
-		if($(this).is("#RANDOM:checked") && ($("#mode_con").hasClass("intel") || $("#mode_con").hasClass("hunt")) ) {
-			$( "input[id^='RANDOM'], input.h1, input.h1bm, input#TS, input.h2, input.h2ex, input.h3" ).prop('checked', true).parent().parent().addClass("on");
-		}
-		else if($(this).is("#RANDOM:checked") && !($("#mode_con").hasClass("intel") || $("#mode_con").hasClass("hunt")) ) {
-			$( "input[id^='RANDOM'], input.h1, input.h1bm, input.h1pz, input.h1sc, input.h2, input.h2ex, input.h2sa, input.h3" ).prop('checked', true).parent().parent().addClass("on");
-		}
-		else if($(this).is("#RANDOM:not(:checked)")) {
-			$( "input[id^='RANDOM'], input.h1, input.h1bm, input.h1pz, input.h1sc, input.h2, input.h2ex, input.h2sa, input.h3" ).prop('checked', false).parent().parent().removeClass("on");
-		}
-		else if($(this).is("#RANDOMH1:checked")) {
+		if($(this).is("#RANDOMH1:checked")) { // H1 - On
 			$( "input.h1" ).prop('checked', true).parent().parent().addClass("on");
-			if($(".lvl:checked").not(".h1s6").length == $(".lvl").not(".h1s6").length) {
-				$("input#RANDOM").prop('checked', true).parent().parent().addClass("on");
-			};
 		}
-		else if($(this).is("#RANDOMH1:not(:checked)")) {
+		else if($(this).is("#RANDOMH1:not(:checked)")) { // H1 - off
 			$( "input.h1, input#RANDOM" ).prop('checked', false).parent().parent().removeClass("on");
 		}
-		else if($(this).is("#RANDOMH1BM:checked")) {
+		else if($(this).is("#RANDOMH1BM:checked")) { // Bonus Missions - On
 			$( "input.h1bm" ).prop('checked', true).parent().parent().addClass("on");
-			if($(".lvl:checked").not(".h1s6").length == $(".lvl").not(".h1s6").length) {
-				$("input#RANDOM").prop('checked', true).parent().parent().addClass("on");
-			};
 		}
-		else if($(this).is("#RANDOMH1BM:not(:checked)")) {
+		else if($(this).is("#RANDOMH1BM:not(:checked)")) { // Bonus Missions - Off
 			$( "input.h1bm, input#RANDOM" ).prop('checked', false).parent().parent().removeClass("on");
 		}
-		else if($(this).is("#RANDOMH1PZ:checked")) {
+		else if($(this).is("#RANDOMH1PZ:checked")) { // Patient Zero - On
 			$( "input.h1pz" ).prop('checked', true).parent().parent().addClass("on");
-			if($(".lvl:checked").not(".h1s6").length == $(".lvl").not(".h1s6").length) {
-				$("input#RANDOM").prop('checked', true).parent().parent().addClass("on");
-			};
 		}
-		else if($(this).is("#RANDOMH1PZ:not(:checked)")) {
+		else if($(this).is("#RANDOMH1PZ:not(:checked)")) { // Patient Zero - Off
 			$( "input.h1pz, input#RANDOM" ).prop('checked', false).parent().parent().removeClass("on");
 		}
-		else if($(this).is("#RANDOMH1SC:checked")) {
-			$( "input.h1sc" ).prop('checked', true).parent().parent().addClass("on");
-			if($(".lvl:checked").not(".h1s6").length == $(".lvl").not(".h1s6").length) {
-				$("input#RANDOM").prop('checked', true).parent().parent().addClass("on");
-			};
+		else if($(this).is("#RANDOMHSC:checked")) { // Seasonal Content - On
+			$( "input.hsc" ).prop('checked', true).parent().parent().addClass("on");
 		}
-		else if($(this).is("#RANDOMH1SC:not(:checked)")) {
-			$( "input.h1sc, input#RANDOM" ).prop('checked', false).parent().parent().removeClass("on");
+		else if($(this).is("#RANDOMHSC:not(:checked)")) { // Seasonal Content - Off
+			$( "input.hsc, input#RANDOM" ).prop('checked', false).parent().parent().removeClass("on");
 		}
-		else if($(this).is("#RANDOMH1S6:checked")) { //Sarajevo Six Omitted from Random All
+		else if($(this).is("#RANDOMH1S6:checked")) { // Sarajevo Six - On
 			$( "input.h1s6" ).prop('checked', true).parent().parent().addClass("on");
 		}
-		else if($(this).is("#RANDOMH1S6:not(:checked)")) { //Sarajevo Six Omitted from Random All
+		else if($(this).is("#RANDOMH1S6:not(:checked)")) { //Sarajevo Six - Off
 			$( "input.h1s6" ).prop('checked', false).parent().parent().removeClass("on");
 		}
-		else if($(this).is("#RANDOMH2:checked")) {
+		else if($(this).is("#RANDOMH2:checked")) { // H2 - On
 			$( "input.h2" ).prop('checked', true).parent().parent().addClass("on");
-			if($(".lvl:checked").not(".h1s6").length == $(".lvl").not(".h1s6").length) {
-				$("input#RANDOM").prop('checked', true).parent().parent().addClass("on");
-			};
 		}
-		else if($(this).is("#RANDOMH2:not(:checked)")) {
+		else if($(this).is("#RANDOMH2:not(:checked)")) { // H2 - Off
 			$( "input.h2, input#RANDOM" ).prop('checked', false).parent().parent().removeClass("on");
 		}
-		else if($(this).is("#RANDOMH2EX:checked")) {
+		else if($(this).is("#RANDOMH2EX:checked")) { // H2 Expansions - On
 			$( "input.h2ex" ).prop('checked', true).parent().parent().addClass("on");
-			if($(".lvl:checked").not(".h1s6").length == $(".lvl").not(".h1s6").length) {
-				$("input#RANDOM").prop('checked', true).parent().parent().addClass("on");
-			};
 		}
-		else if($(this).is("#RANDOMH2EX:not(:checked)")) {
+		else if($(this).is("#RANDOMH2EX:not(:checked)")) { // H2 Expansions - Off
 			$( "input.h2ex, input#RANDOM" ).prop('checked', false).parent().parent().removeClass("on");
 		}
-		else if($(this).is("#RANDOMH2SA:checked")) {
+		else if($(this).is("#RANDOMH2SA:checked")) { // Special Assignments - On
 			$( "input.h2sa" ).prop('checked', true).parent().parent().addClass("on");
-			if($(".lvl:checked").not(".h1s6").length == $(".lvl").not(".h1s6").length) {
-				$("input#RANDOM").prop('checked', true).parent().parent().addClass("on");
-			};
 		}
-		else if($(this).is("#RANDOMH2SA:not(:checked)")) {
+		else if($(this).is("#RANDOMH2SA:not(:checked)")) { // Special Assignments - Off
 			$( "input.h2sa, input#RANDOM" ).prop('checked', false).parent().parent().removeClass("on");
 		}
-		else if($(this).is("#RANDOMH3:checked")) {
-			$( "input.h3" ).prop('checked', true).parent().parent().addClass("on");
-			if($(".lvl:checked").not(".h1s6").length == $(".lvl").not(".h1s6").length) {
-				$("input#RANDOM").prop('checked', true).parent().parent().addClass("on");
-			};
+		else if($(this).is("#RANDOMH3:checked") && ($("#mode_con").hasClass("intel") || $("#mode_con").hasClass("hunt")) ) { // H3 Contract Mode - On
+			$( "input#OTOTW, input#DITF, input#AP, input#EOAE, input#TF" ).prop('checked', true).parent().parent().addClass("on");
 		}
-		else if($(this).is("#RANDOMH3:not(:checked)")) {
+		else if($(this).is("#RANDOMH3:checked") && !($("#mode_con").hasClass("intel") || $("#mode_con").hasClass("hunt")) ) { // H3 Mission Mode - On
+			$( "input.h3" ).prop('checked', true).parent().parent().addClass("on");
+		}
+		else if($(this).is("#RANDOMH3:not(:checked)")) { // H3 - Off
 			$( "input.h3, input#RANDOM" ).prop('checked', false).parent().parent().removeClass("on");
 		}
-		else if($(".lvl:checked").not(".h1s6").length == $(".lvl").not(".h1s6").length) {
+		else if($(this).is("#RANDOM:checked")) { // All Available - On
+			$( "input#RANDOMH1, input#RANDOMH1BM, input#RANDOMH2, input#RANDOMH2EX, input#RANDOMH3, input#RANDOMH1PZ, input#RANDOMH2SA, input.h1, input.h1bm, input.h1pz, input.h2, input.h2ex, input.h2sa, input.h3" ).prop('checked', true).parent().parent().addClass("on");
+		}
+		else if($(this).is("#RANDOM:not(:checked)")) { // All Available - Off
+			$( "input#RANDOMH1, input#RANDOMH1BM, input#RANDOMH2, input#RANDOMH2EX, input#RANDOMH3, input#RANDOMH1PZ, input#RANDOMH2SA, input.h1, input.h1bm, input.h1pz, input.h2, input.h2ex, input.h2sa, input.h3" ).prop('checked', false).parent().parent().removeClass("on");
+		};
+		
+		// Toggle All Available if all available H3 levels are selected or not
+		if($(".lvl:checked").not(".h1s6, input#HH, input#SF").length == $(".lvl").not(".h1s6, input#HH, input#SF").length) {
 			$("input#RANDOM").prop('checked', true).parent().parent().addClass("on");
 		}
 		else {
@@ -398,12 +375,12 @@ $(document).ready(function() {
 			$("input#RANDOMH1PZ").prop('checked', false).parent().parent().removeClass("on");
 		};
 	
-		//Toggle Random Seasonal Content if H1SC levels are selected or not
-		if($(".h1sc:checked").length == $(".h1sc").length) {
-			$("input#RANDOMH1SC").prop('checked', true).parent().parent().addClass("on");
+		//Toggle Random Seasonal Content if HSC levels are selected or not
+		if($(".hsc:checked").length == $(".hsc").length) {
+			$("input#RANDOMHSC").prop('checked', true).parent().parent().addClass("on");
 		}
 		else {
-			$("input#RANDOMH1SC").prop('checked', false).parent().parent().removeClass("on");
+			$("input#RANDOMHSC").prop('checked', false).parent().parent().removeClass("on");
 		};
 		
 		//Toggle Random Sarajevo Six Content if H1S6 levels are selected or not
@@ -439,12 +416,16 @@ $(document).ready(function() {
 		};
 		
 		//Toggle Random Hitman 3 if H3 levels are selected or not
-		if($(".h3:checked").length == $(".h3").length) {
+		if($(".h3con:checked").length == $(".h3con").length && ($("#mode_con").hasClass("intel") || $("#mode_con").hasClass("hunt")) ) {
+			$("input#RANDOMH3").prop('checked', true).parent().parent().addClass("on");
+		}
+		else if($(".h3:checked").length == $(".h3").length && !($("#mode_con").hasClass("intel") || $("#mode_con").hasClass("hunt")) ) {
 			$("input#RANDOMH3").prop('checked', true).parent().parent().addClass("on");
 		}
 		else {
 			$("input#RANDOMH3").prop('checked', false).parent().parent().removeClass("on");
 		};
+		
 	});
 	/******Options Select Submenu Buttons******/
 	$( "#settings_theme" ).click(function() {
@@ -549,19 +530,23 @@ $(document).ready(function() {
 		$("#etamount").html("0");		
 	};
 	function lockMaps() {
-		$("input.noncon").prop('checked', false).prop('disabled', true).parent().parent().parent().addClass("lock");
+		$("input.noncon").prop('checked', false).prop('disabled', true).parent().parent().removeClass("on").parent().addClass("lock");
 		$("span.noncon").hide();
 		$("b.noncon").show();
+		$("b.nonconsp").css('display','inline-block');
 	};
 	function unlockMaps() {
 		$("input.noncon").prop('disabled', false).parent().parent().parent().removeClass("lock");
 		$("span.noncon").show();
 		$("b.noncon").hide();
+		$("b.nonconsp").css('display','none');
+		$("input#RANDOMH3").prop('checked', false).parent().parent().removeClass("on");
 	};
 	
 	$("#mode_mission").click(function() {
 		if( !$(this).hasClass("on") ) {
 			makeItMain();
+			unlockMaps();
 			stopItContracts();
 			stopItElusive();
 		}
