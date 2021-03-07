@@ -12,7 +12,7 @@ function createContainerObject() {
 		}
 	}
 	var mission_name = missionSelection[Math.floor(Math.random() * missionSelection.length)];
-	var failsafe = [fft,ica,showstopper,wot,agc,c27,ff,si,nc,tfl,ths,cag,al,tas,gh,lr,ototw,ditf,ap,eoae,tf];
+	var failsafe = [fft,ica,showstopper,wot,agc,c27,ff,si,nc,tfl,ths,cag,al,tas,gh,lr,ototw,ditf,ap,eoae,tf,untouchable];
 	
 	for (var prop in generic)
 		if (generic.hasOwnProperty(prop))
@@ -169,16 +169,6 @@ function createTargetList(container) {
 	return targets;
 };
 
-//Chooses ICA targets for Apex Predator
-//function createAgentList(container) {
-//	var agents = [];
-//	
-//	shuffle(container.icaList);
-//	agents = container.icaList.slice(0,5);
-//	
-//	return agents;
-//};
-
 //Adds properties from the container object to the result object
 function containerToResult(container) {
 	var result = {};
@@ -226,6 +216,8 @@ function containerToResult(container) {
 		result.missionobjective = "Hack Data Core [Optional]|Eliminate Hush and Imogen Royce to be able to access the files inside the ICA data core.";
 	else if (mode == "MAIN" && result.missionCode == "vineyard")
 		result.missionobjective = "Do Not Eliminate Diana Burnwood|Do Not Eliminate Diana Burnwood.";
+	else if (mode == "MAIN" && result.missionCode == "train")
+		result.missionobjective = "Providence Members May Be Eliminated|Providence Members May Be Eliminated.";
 	else
 		result.missionobjective = "";
 	
@@ -345,6 +337,26 @@ function writeEverything(result) {
 				document.getElementById("subtitle" + (i+1)).innerHTML = "Any Method";
 				document.getElementById("subtitle-alt" + (i+1)).innerHTML = "";
 				document.getElementById("input_weapon" + (i+1)).value = ", using: Any Method";
+			}
+			else if(result.missionCode == "train" && (result.weapons[i] === "Accident") || generic.accidents.includes(result.weapons[i]) ) {
+					document.getElementById("subtitle" + (i+1)).innerHTML = "Dump Off Train";
+					document.getElementById("subtitle-alt" + (i+1)).innerHTML = "Accident";
+					document.getElementById("input_weapon" + (i+1)).value = ", using: Dump Off Train (Accident)";
+			}
+			else if(result.missionCode == "train" && result.weapons[i] === "Explosion") {
+					document.getElementById("subtitle" + (i+1)).innerHTML = "Fragmentation Grenade";
+					document.getElementById("subtitle-alt" + (i+1)).innerHTML = "";
+					document.getElementById("input_weapon" + (i+1)).value = ", using: Fragmentation Grenade";
+			}
+			else if(result.missionCode == "train" && result.weapons[i] === "Lethal Poison") {
+					document.getElementById("subtitle" + (i+1)).innerHTML = "Serum";
+					document.getElementById("subtitle-alt" + (i+1)).innerHTML = "";
+					document.getElementById("input_weapon" + (i+1)).value = ", using: Serum";
+			}
+			else if(result.missionCode == "train" && (result.weapons[i] === "Any Sniper Rifle" || result.weapons[i] === "Any Assault Rifle") ) {
+					document.getElementById("subtitle" + (i+1)).innerHTML = "Any Pistol";
+					document.getElementById("subtitle-alt" + (i+1)).innerHTML = "";
+					document.getElementById("input_weapon" + (i+1)).value = ", using: Any Pistol";
 			}
 			else { // elimination method
 				document.getElementById("subtitle" + (i+1)).innerHTML = result.weapons[i].split('|')[0];
