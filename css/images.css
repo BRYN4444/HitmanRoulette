@@ -1122,40 +1122,26 @@ div[class^="ElusiveTarget"] { background-image: url('../img/targetcon/NPC.jpg');
 .LeonardParsons-clue { background-image: url('../img/targetcon/LeonardParsons.jpg'); }
 .PhineasWhitmer-clue { background-image: url('../img/targetcon/PhineasWhitmer.jpg'); }
 .HalleDavidson-clue { background-image: url('../img/targetcon/HalleDavidson.jpg'); }
-.SeanReynolds-clue { background-image: url('../img/targetcon/SeanReynolds.jpg'); }
-.AnnieHolland-clue { background-image: url('../img/targetcon/AnnieHolland.jpg'); }
+.SeanReynolds-clue, .AlfredHoughton-clue { background-image: url('../img/targetcon/SeanReynolds.jpg'); }
+.AnnieHolland-clue, .EthelWhite-clue, .ElaineSutton-clue, .BetsyWilliams-clue { background-image: url('../img/targetcon/AnnieHolland.jpg'); }
 .IsaacKing-clue { background-image: url('../img/targetcon/IsaacKing.jpg'); }
-.OscarWalsh-clue { background-image: url('../img/targetcon/OscarWalsh.jpg'); }
+.OscarWalsh-clue, .JordanWebb-clue { background-image: url('../img/targetcon/OscarWalsh.jpg'); }
 .LoganRichards-clue { background-image: url('../img/targetcon/LoganRichards.jpg'); }
-.MagnusClark-clue { background-image: url('../img/targetcon/MagnusClark.jpg'); }
-.AlfredHoughton-clue { background-image: url('../img/targetcon/AlfredHoughton.jpg'); }
-.AronBlack-clue { background-image: url('../img/targetcon/AronBlack.jpg'); }
-.AlbertHill-clue { background-image: url('../img/targetcon/AlbertHill.jpg'); }
-.VincentBrown-clue { background-image: url('../img/targetcon/VincentBrown.jpg'); }
+.MagnusClark-clue, .EllenMoss-clue { background-image: url('../img/targetcon/MagnusClark.jpg'); }
+.AronBlack-clue, .TheoWillis-clue { background-image: url('../img/targetcon/AronBlack.jpg'); }
+.AlbertHill-clue, .SeanCollins-clue, .BenMoore-clue { background-image: url('../img/targetcon/AlbertHill.jpg'); }
+.VincentBrown-clue, .AdrianLloyd-clue { background-image: url('../img/targetcon/VincentBrown.jpg'); }
 .HenryWilliams-clue { background-image: url('../img/targetcon/HenryWilliams.jpg'); }
-.JordanWebb-clue { background-image: url('../img/targetcon/JordanWebb.jpg'); }
-.EllenMoss-clue { background-image: url('../img/targetcon/EllenMoss.jpg'); }
 .RosieJones-clue { background-image: url('../img/targetcon/RosieJones.jpg'); }
-.EthelWhite-clue { background-image: url('../img/targetcon/EthelWhite.jpg'); }
-.TheoWillis-clue { background-image: url('../img/targetcon/TheoWillis.jpg'); }
-.AdrianLloyd-clue { background-image: url('../img/targetcon/AdrianLloyd.jpg'); }
-.ElaineSutton-clue { background-image: url('../img/targetcon/ElaineSutton.jpg'); }
-.HaveyWright-clue { background-image: url('../img/targetcon/HaveyWright.jpg'); }
-.SamuelTaylor-clue { background-image: url('../img/targetcon/SamuelTaylor.jpg'); }
-.SeanCollins-clue { background-image: url('../img/targetcon/SeanCollins.jpg'); }
+.HaveyWright-clue, .MaxwellRees-clue, .LaytonGill-clue { background-image: url('../img/targetcon/HaveyWright.jpg'); }
+.SamuelTaylor-clue, .DanielBrooks-clue { background-image: url('../img/targetcon/SamuelTaylor.jpg'); }
 .RayGibson-clue { background-image: url('../img/targetcon/RayGibson.jpg'); }
-.BenMoore-clue { background-image: url('../img/targetcon/BenMoore.jpg'); }
 .AronFordJr-clue { background-image: url('../img/targetcon/AronFordJr.jpg'); }
 .LucianBarker-clue { background-image: url('../img/targetcon/LucianBarker.jpg'); }
-.MaxwellRees-clue { background-image: url('../img/targetcon/MaxwellRees.jpg'); }
-.RubenDoyle-clue { background-image: url('../img/targetcon/MaxwellRees.jpg'); }
+.RubenDoyle-clue, .IsaacHunter-clue { background-image: url('../img/targetcon/RubenDoyle.jpg'); }
 .JakeWatts-clue { background-image: url('../img/targetcon/JakeWatts.jpg'); }
 .MaryMoore-clue { background-image: url('../img/targetcon/MaryMoore.jpg'); }
-.BetsyWilliams-clue { background-image: url('../img/targetcon/BetsyWilliams.jpg'); }
 .BenStone-clue { background-image: url('../img/targetcon/BenStone.jpg'); }
-.IsaacHunter-clue { background-image: url('../img/targetcon/IsaacHunter.jpg'); }
-.DanielBrooks-clue { background-image: url('../img/targetcon/DanielBrooks.jpg'); }
-.LaytonGill-clue { background-image: url('../img/targetcon/LaytonGill.jpg'); }
 
 /** Berlin **/
 /* Apex Predator */
