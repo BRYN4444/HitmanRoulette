@@ -35,15 +35,24 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 * Stream Overlay mode; A method for streamers to show Objectives and more over the gameplay.
 * This would take a complete overhaul, so it's probably out of MY league, but being able to link Roulettes to others would be cool. If you have knowledge on how to do this easily, leave me a message on [Github](https://github.com/BRYN4444/HitmanRoulette/issues).
 
-### Latest Major Update (March 7, 2021)
-* **HITMAN III Contracts Mode Targets:** 55 Dubai Targets added (not including the mission default ones).
-* **HITMAN III Campaign Mission Added:** Untouchable (Carpathian Mountains, Romania).
-  * **Targets:** 1, with a slightly limited number of elimination methods than other targets. Some work had to be done, so hopefully you aren't given an impossible Roulette roll.
-  * **Starting Points:** There are 3 starting points. I was tempted to leave the story starting point off for the sake of the Roulette, but I like its presentation and you can always toggle off the entry requirement in Roulette Settings.
-  * **Exit Points:** There are actually two exits for this mission, but one is an easter egg exit that, unless the roll is perfect, will have you to go against the Roulette. I think this is very fitting considering the easter egg.
-  * **Objectives:** 1 added, though Its not a typical objective.
-  * **Extra Objectives:** Two. Not much, but maybe after other priorities I can add more.
-  * **Photo Objectives:** None yet. As much of an outlier this mission is, I wanted to add it but still want to focus on Contracts Mode Targets before working back to this.
+### Latest Major Update (March 15, 2021)
+* **HITMAN III:**
+  * **Contract Mode Targets:** 44 Dartmoor Targets added (not including the mission default one).
+* **Other Fixes:**
+  * Sapienza's Non-Target Objective uses an updated image in HITMAN III, so that image has been updated in the Roulette now too.
+
+#### Prior Updates (Feb. 1 - March 7, 2021)
+* **HITMAN III campaign missions added.**
+  * **Missions:** All six campaign missions added to the Roulette.
+  * **Mission Mode Targets:** 18 added, 10 of which are from the third mission which are then randomized among themselves, unique to this mission only (The 11th target had to be left out due to the way some entrances change aspects of the level. The game's final target has a slightly limited number of elimination methods than other targets. Some work had to be done, so hopefully you aren't given an impossible Roulette roll.
+  * **Contract Mode Targets:** 55 Dubai Targets added (not including the mission default ones).
+  * **Starting Points:** 38 total. The game has a unique feature on some levels where the default / story entrance restricts things to match the campaign's plot. As such, the Roulette was tweaked to manage this so impossible tasks will not be rolled. Disable Entrance Requirements in Roulette Settings if you'd rather avoid these hassles.
+  * **Exit Points:** 27 total. There final mission actually has two exits, but one is an easter egg exit that, unless the roll is perfect, will have you to go against the Roulette. I think this is very fitting considering the easter egg.
+  * **Objectives:** 4 added that only appear in Mission Mode Roulette, with one displaying as optional depending on the starting point rolled.
+  * **Extra Objectives:** many added, most taken from the Challenge lists in game. Hopefully I can still add more, but adding Contracts Mode Targets are higher priority.
+  * **New: Photo Objectives** added to take advantage of the Camera gadget. So obviously, only possible in HITMAN III. In time, HITMAN & HITMAN 2 photo objectivess will be added, but for now only the first five HITMAN III missions have them.
+* **Hitman III Appearance added.** By default, the Roulette will now look like the menus of HITMAN III. But as a reminder, the past game's styles are also selectable: Hitman 1 Red, Hitman GOTY Grey, and Hitman 2 "Hot Magenta".
+* **Mobile Friendly / Low Resolution Browsing.** Fixed a few display and HTML bugs while adding H3 support.
 * **Select Mission Listing Changes and Fixes.**
   * Dropped "H1" wording from Seasonal Content. This is in preparation for the upcoming Easter theming being in HITMAN III's Berlin.
   * With HITMAN III's Seasonal Content on another timed rotation:
@@ -52,19 +61,8 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
   * The "All Locations" Mission Grouping toggle has been altered (and as such renamed) to be for all accessible locations within HITMAN III itself (if you own everything, that is).
   * Fixed an issue where missions were staying restricted to Contracts Mode Roulette when switching back to Mission Mode Roulette.
   * HITMAN III levels were able to be individually toggled on mobile. 
+* **Added missing Restrictable Mechanic.** At some point, IOI added the option to disable security Camera Grid to Hitman 2, but I only noticed it in Hitman III... Either way, that is now one of the Gameplay Restrictions that can be rolled.
 * **Other Fixes:**
   * The speedboat exit in "Club 27" requires a key on Master Difficulty. The image and listing now reflect that.
   * IOI updated the menu image for Sapienza, so the Roulette now uses that same image.
   * Minor issue where too much text in a section wasn't gaining ellipses. Also, reminder that you can hover over these and the text will scroll to be readable.
-
-#### Prior Updates (Feb. 1 & 16, 2021)
-* **HITMAN III campaign missions added.**
-  * **Missions:** Five of the six campaign missions are added to the Roulette.
-  * **Targets:** 17 added, 10 of which are from the third mission. These targets are then all randomized among themselves, unique to this mission only. The 11th target here had to be left out due to the way some default entrances work in the game.
-  * **Starting/Exit Points:** The game has a unique feature on some levels where the default / story entrance restricts things to match the campaign's plot. As such, the Roulette was tweaked to manage this so impossible tasks will not be rolled.
-  * **Objectives:** 3 added that only appear in Mission Mode Roulette, with one displaying as optional depending on the starting point rolled.
-  * **Extra Objectives:** many added, most taken from the Challenge lists in game. Hopefully I can still add more, but adding Contracts Mode Targets are higher priority.
-  * **New: Photo Objectives** added to take advantage of the Camera gadget. So obviously, only possible in HITMAN III. In time, HITMAN & HITMAN 2 photo objectivess will be added, but for now only the first five HITMAN III missions have them.
-* **Hitman III Appearance added.** By default, the Roulette will now look like the menus of HITMAN III. But as a reminder, the past game's styles are also selectable: Hitman 1 Red, Hitman GOTY Grey, and Hitman 2 "Hot Magenta".
-* **Mobile Friendly / Low Resolution Browsing.** Fixed a few display and HTML bugs while adding H3 support.
-* **Added missing Restrictable Mechanic.** At some point, IOI added the option to disable security Camera Grid to Hitman 2, but I only noticed it in Hitman III... Either way, that is now one of the Gameplay Restrictions that can be rolled.
