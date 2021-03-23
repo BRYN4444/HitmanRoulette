@@ -120,7 +120,7 @@ function createWeaponList(container) {
 //reads the "entry" field in mission_information
 function createDisguiseList(container, mission_information) {
 	var disguises = [];
-	// Remove "Ninja" and "Any Suit" from potential disguises when starting in an undercover location
+	// Remove "Ninja", "Rave On", and "Any Suit" from potential disguises when starting in an undercover location
 	// The first disguise in the list is always the non-undercover one
 	var undercover_start = suitStarts.indexOf(mission_information.entry) === -1;
 	if (undercover_start)
@@ -311,69 +311,77 @@ function writeEverything(result) {
 	
 	// Write to the HTML elements from the results object
 	var MAX_TARGETS = 5, MAX_EXTRAS = document.getElementById("compslider").value;
-	for(var i = 0; i < MAX_TARGETS; ++i){ // targets, disguise, and intel
+	for(var i = 0; i < MAX_TARGETS; ++i){ // target setup
 		if(i < result.targets.length) {
 			document.getElementById("target" + (i+1)).innerHTML =
 				"<div id='photo' class='" + result.targets[i].split('|')[0].replace(/\s|,|'|“|”|-|\./g, "") + "-" + result.missionCode + contractmode +
-				"'><div id='subplate' class='method'><span><p id='title'>Eliminate using:</p><p id='subtitle" + (i+1) + "'></p><p id='subtitle-alt" + (i+1) +
-				"'></p></span></div><div id='subplate' class='disguise'><span><p id='title'>Wear disguise:</p><p id='subtitle'>" + result.disguises[i] +
-				"</p></span></div><div id='subplate" + (i+1) + "' class='intel'><span id='inteltoggle" + (i+1) + "'><p id='title'>Intel:</p><p id='wording'>" + result.targets[i].split('|')[1] +
+				"'><div id='subplate' class='method'><span><p id='title'>Eliminate using:</p><p id='subtitle-method" + (i+1) + "'></p><p id='subtitle-alt-method" + (i+1) +
+				"'></p></span></div><div id='subplate' class='disguise'><span><p id='title'>Wear disguise:</p><p class='subtitle-disguise' id='subtitle-disguise" + (i+1) +
+				"'></p></span></div><div id='subplate" + (i+1) + "' class='intel'><span id='inteltoggle" + (i+1) + "'><p id='title'>Intel:</p><p id='wording'>" + result.targets[i].split('|')[1] +
 				"</p></span></div><div id='nameplate'><span><p id='title'>Target</p><p id='subtitle'>" + result.targets[i].split('|')[0] + "</p></span></div></div>";
 			document.getElementById("input_target" + (i+1)).value = "\nEliminate " + result.targets[i].split('|')[0];
-			document.getElementById("input_disguise" + (i+1)).value = ", while disguised as: " + result.disguises[i];
-			document.getElementById("input_targetintel" + (i+1)).value = "\n └ Intel: " + result.targets[i].split('|')[1];
+			document.getElementById("input_targetintel" + (i+1)).value = "\n └ Intel: " + result.targets[i].split('|')[1]; // Contracts Mode Target Intel
 			document.getElementById("overlay-target-intel" + (i+1)).innerHTML = result.targets[i].split('|')[1];
-			if(result.missionCode == "training" && (mode == "MAIN" || mode == "ELUSIVE") && fftfailsafe.includes(result.weapons[i]) ) {
-				document.getElementById("subtitle" + (i+1)).innerHTML = "Any Method";
-				document.getElementById("subtitle-alt" + (i+1)).innerHTML = "";
+			if(result.missionCode == "training" && (mode == "MAIN" || mode == "ELUSIVE") && fftfailsafe.includes(result.weapons[i]) ) { // Specific Weapons on ICA Boat 
+				document.getElementById("subtitle-method" + (i+1)).innerHTML = "Any Method";
+				document.getElementById("subtitle-alt-method" + (i+1)).innerHTML = "";
 				document.getElementById("input_weapon" + (i+1)).value = ", using: Any Method";
 			}
-			else if(result.missionCode == "training" && (mode == "CONEASY" || mode == "CONHARD") && fftfailsafeContract.includes(result.weapons[i]) ) {
-				document.getElementById("subtitle" + (i+1)).innerHTML = "Any Method";
-				document.getElementById("subtitle-alt" + (i+1)).innerHTML = "";
+			else if(result.missionCode == "training" && (mode == "CONEASY" || mode == "CONHARD") && fftfailsafeContract.includes(result.weapons[i]) ) { // Specific Weapons on ICA Boat Contracts
+				document.getElementById("subtitle-method" + (i+1)).innerHTML = "Any Method";
+				document.getElementById("subtitle-alt-method" + (i+1)).innerHTML = "";
 				document.getElementById("input_weapon" + (i+1)).value = ", using: Any Method";
 			}
-			else if(result.missionCode == "test" && icafailsafe.includes(result.weapons[i]) ) {
-				document.getElementById("subtitle" + (i+1)).innerHTML = "Any Method";
-				document.getElementById("subtitle-alt" + (i+1)).innerHTML = "";
+			else if(result.missionCode == "test" && icafailsafe.includes(result.weapons[i]) ) { // Specific Weapons on ICA Hanger
+				document.getElementById("subtitle-method" + (i+1)).innerHTML = "Any Method";
+				document.getElementById("subtitle-alt-method" + (i+1)).innerHTML = "";
 				document.getElementById("input_weapon" + (i+1)).value = ", using: Any Method";
 			}
-			else if(result.missionCode == "train" && (result.weapons[i] === "Accident") || generic.accidents.includes(result.weapons[i]) ) {
-					document.getElementById("subtitle" + (i+1)).innerHTML = "Dump Off Train";
-					document.getElementById("subtitle-alt" + (i+1)).innerHTML = "Accident";
-					document.getElementById("input_weapon" + (i+1)).value = ", using: Dump Off Train (Accident)";
+			else if(result.missionCode == "train" && result.weapons[i].split('|')[1] == "Accident" ) {  // Only Accident Kill on Train 
+				document.getElementById("subtitle-method" + (i+1)).innerHTML = "Dump Off Train";
+				document.getElementById("subtitle-alt-method" + (i+1)).innerHTML = "Accident";
+				document.getElementById("input_weapon" + (i+1)).value = ", using: Dump Off Train (Accident)";
 			}
-			else if(result.missionCode == "train" && result.weapons[i] === "Explosion") {
-					document.getElementById("subtitle" + (i+1)).innerHTML = "Fragmentation Grenade";
-					document.getElementById("subtitle-alt" + (i+1)).innerHTML = "";
-					document.getElementById("input_weapon" + (i+1)).value = ", using: Fragmentation Grenade";
+			else if(result.missionCode == "train" && result.weapons[i] === "Explosion") { // Only Explosion Kill on Train
+				document.getElementById("subtitle-method" + (i+1)).innerHTML = "Fragmentation Grenade";
+				document.getElementById("subtitle-alt-method" + (i+1)).innerHTML = "";
+				document.getElementById("input_weapon" + (i+1)).value = ", using: Fragmentation Grenade";
 			}
-			else if(result.missionCode == "train" && result.weapons[i] === "Lethal Poison") {
-					document.getElementById("subtitle" + (i+1)).innerHTML = "Serum";
-					document.getElementById("subtitle-alt" + (i+1)).innerHTML = "";
-					document.getElementById("input_weapon" + (i+1)).value = ", using: Serum";
+			else if(result.missionCode == "train" && result.weapons[i] === "Lethal Poison") { // Only Poison Elimination on Train
+				document.getElementById("subtitle-method" + (i+1)).innerHTML = "Serum";
+				document.getElementById("subtitle-alt-method" + (i+1)).innerHTML = "";
+				document.getElementById("input_weapon" + (i+1)).value = ", using: Serum";
 			}
-			else if(result.missionCode == "train" && (result.weapons[i] === "Any Sniper Rifle" || result.weapons[i] === "Any Assault Rifle") ) {
-					document.getElementById("subtitle" + (i+1)).innerHTML = "Any Pistol";
-					document.getElementById("subtitle-alt" + (i+1)).innerHTML = "";
-					document.getElementById("input_weapon" + (i+1)).value = ", using: Any Pistol";
+			else if(result.missionCode == "train" && (result.weapons[i] === "Any Sniper Rifle" || result.weapons[i] === "Any Assault Rifle") ) { // No Sniper/Assault on Train
+				document.getElementById("subtitle-method" + (i+1)).innerHTML = "Any Pistol";
+				document.getElementById("subtitle-alt-method" + (i+1)).innerHTML = "";
+				document.getElementById("input_weapon" + (i+1)).value = ", using: Any Pistol";
 			}
-			else { // elimination method
-				document.getElementById("subtitle" + (i+1)).innerHTML = result.weapons[i].split('|')[0];
+			else if(result.weapons[i].split('|')[2] != null) { // method subtype hint
+				document.getElementById("subtitle-method" + (i+1)).innerHTML = result.weapons[i].split('|')[0];
+				document.getElementById("subtitle-alt-method" + (i+1)).innerHTML = result.weapons[i].split('|')[1] + " (<a target='_blank' href='./img/general/" + result.weapons[i].split('|')[2] + "'>Hint</a>)";
+				document.getElementById("input_weapon" + (i+1)).value = ", using: " + result.weapons[i].split('|')[0] + " (" + result.weapons[i].split('|')[1] + ")";
+			}	
+			else if(result.weapons[i].split('|')[1] != null) { // method subtype
+				document.getElementById("subtitle-method" + (i+1)).innerHTML = result.weapons[i].split('|')[0];
+				document.getElementById("subtitle-alt-method" + (i+1)).innerHTML = result.weapons[i].split('|')[1];
+				document.getElementById("input_weapon" + (i+1)).value = ", using: " + result.weapons[i].split('|')[0] + " (" + result.weapons[i].split('|')[1] + ")";			
+			}
+			else { // no method subtype
+				document.getElementById("subtitle-method" + (i+1)).innerHTML = result.weapons[i].split('|')[0];
+				document.getElementById("subtitle-alt-method" + (i+1)).innerHTML = "";
 				document.getElementById("input_weapon" + (i+1)).value = ", using: " + result.weapons[i].split('|')[0];
-				if(result.weapons[i].split('|')[2] != null) { // method subtype hint
-					document.getElementById("subtitle-alt" + (i+1)).innerHTML = result.weapons[i].split('|')[1] + " (<a target='_blank' href='./img/general/" + result.weapons[i].split('|')[2] + "'>Hint</a>)";
-					document.getElementById("input_weaponsub" + (i+1)).value = " (" + result.weapons[i].split('|')[1] + ")";
-				}
-				else if(result.weapons[i].split('|')[1] != null) { // method subtype
-					document.getElementById("subtitle-alt" + (i+1)).innerHTML = result.weapons[i].split('|')[1];
-					document.getElementById("input_weaponsub" + (i+1)).value = " (" + result.weapons[i].split('|')[1] + ")";
-				}
-				else { // no method subtype
-					document.getElementById("subtitle-alt" + (i+1)).innerHTML = "";
-					document.getElementById("input_weaponsub" + (i+1)).value = "";
-				};
 			};
+			
+			if(result.missionCode == "speedway" && result.exit.split('|')[0] == "Pale Rider" ) { // pale rider easter egg exit
+				document.getElementById("subtitle-disguise" + (i+1)).innerHTML = "Pale Rider";
+				document.getElementById("input_disguise" + (i+1)).value = ", while disguised as: Pale Rider";
+			}
+			else { // disguises
+				document.getElementById("subtitle-disguise" + (i+1)).innerHTML = result.disguises[i];
+				document.getElementById("input_disguise" + (i+1)).value = ", while disguised as: " + result.disguises[i];
+			};
+			
 			if(result.targets[i].split('|')[1] == null || mode == "CONHARD") { // target intel off
 				document.getElementById("subplate" + (i+1)).style.setProperty("background-image", "none", "important");//display none goes here if tall pics required
 				document.getElementById("inteltoggle" + (i+1)).style.setProperty("display", "none", "important");//also remove inteltoggle in target generation
@@ -602,31 +610,26 @@ function writeEverything(result) {
 	
 	var target1text = document.getElementById("input_target1").value;
 	var weapon1text = document.getElementById("input_weapon1").value;
-	var weaponsub1text = document.getElementById("input_weaponsub1").value;
 	var disguise1text = document.getElementById("input_disguise1").value;
 	var targetintel1text = document.getElementById("input_targetintel1").value;
 	
 	var target2text = document.getElementById("input_target2").value;
 	var weapon2text = document.getElementById("input_weapon2").value;
-	var weaponsub2text = document.getElementById("input_weaponsub2").value;
 	var disguise2text = document.getElementById("input_disguise2").value;
 	var targetintel2text = document.getElementById("input_targetintel2").value;
 	
 	var target3text = document.getElementById("input_target3").value;
 	var weapon3text = document.getElementById("input_weapon3").value;
-	var weaponsub3text = document.getElementById("input_weaponsub3").value;
 	var disguise3text = document.getElementById("input_disguise3").value;
 	var targetintel3text = document.getElementById("input_targetintel3").value;
 	
 	var target4text = document.getElementById("input_target4").value;
 	var weapon4text = document.getElementById("input_weapon4").value;
-	var weaponsub4text = document.getElementById("input_weaponsub4").value;
 	var disguise4text = document.getElementById("input_disguise4").value;
 	var targetintel4text = document.getElementById("input_targetintel4").value;
 	
 	var target5text = document.getElementById("input_target5").value;
 	var weapon5text = document.getElementById("input_weapon5").value;
-	var weaponsub5text = document.getElementById("input_weaponsub5").value;
 	var disguise5text = document.getElementById("input_disguise5").value;
 	var targetintel5text = document.getElementById("input_targetintel5").value;
 	
@@ -650,15 +653,15 @@ function writeEverything(result) {
 
 	document.getElementById('roulettetext').value = "Mission: " + result.missionTitle + contracttext + "\n"
 		+ entrytext
-		+ target1text + weapon1text + weaponsub1text + disguise1text
+		+ target1text + weapon1text + disguise1text
 		+ targetintel1text
-		+ target2text + weapon2text + weaponsub2text + disguise2text
+		+ target2text + weapon2text + disguise2text
 		+ targetintel2text
-		+ target3text + weapon3text + weaponsub3text + disguise3text
+		+ target3text + weapon3text + disguise3text
 		+ targetintel3text
-		+ target4text + weapon4text + weaponsub4text + disguise4text
+		+ target4text + weapon4text + disguise4text
 		+ targetintel4text
-		+ target5text + weapon5text + weaponsub5text + disguise5text
+		+ target5text + weapon5text + disguise5text
 		+ targetintel5text
 		+ objectivetext
 		+ extraobjectivetext
@@ -681,11 +684,11 @@ function writeEverything(result) {
 	document.getElementById("subsaveroulette").disabled = false;
 	
 	
-	document.getElementById('overlay-target1').innerHTML = target1text + weapon1text + weaponsub1text + disguise1text;
-	document.getElementById('overlay-target2').innerHTML = target2text + weapon2text + weaponsub2text + disguise2text;
-	document.getElementById('overlay-target3').innerHTML = target3text + weapon3text + weaponsub3text + disguise3text;
-	document.getElementById('overlay-target4').innerHTML = target4text + weapon4text + weaponsub4text + disguise4text;
-	document.getElementById('overlay-target5').innerHTML = target5text + weapon5text + weaponsub5text + disguise5text;
+	document.getElementById('overlay-target1').innerHTML = target1text + weapon1text + disguise1text;
+	document.getElementById('overlay-target2').innerHTML = target2text + weapon2text + disguise2text;
+	document.getElementById('overlay-target3').innerHTML = target3text + weapon3text + disguise3text;
+	document.getElementById('overlay-target4').innerHTML = target4text + weapon4text + disguise4text;
+	document.getElementById('overlay-target5').innerHTML = target5text + weapon5text + disguise5text;
 	//document.getElementById('overlay-objective').innerHTML = objectivetext;
 	//document.getElementById('overlay-objectivex').innerHTML = extraobjectivetext;
 	document.getElementById('overlay-exit').innerHTML = exittext + exitreqtext;
@@ -708,7 +711,6 @@ function generate_result() {
 	var roulette = containerToResult(current_mission);
 	roulette.extras = createExtrasList(roulette.exit);
 	roulette.targets = createTargetList(current_mission);
-	//roulette.agents = createAgentList(current_mission);
 	roulette.weapons = createWeaponList(current_mission);
 	roulette.disguises = createDisguiseList(current_mission, roulette);
 	
@@ -727,7 +729,7 @@ function button_MakeItGo(){
 	
 	//Hover to scroll long nameplate names
 	$(function() {
-		$('p#subtitle').each(function(i) {
+		$("p[id^='subtitle']").each(function(i) {
 			if (isEllipsisActive(this))
 				$(this).addClass('slide');
 			else
