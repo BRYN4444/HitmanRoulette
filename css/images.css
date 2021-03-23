@@ -328,16 +328,34 @@
 .cartel-exit-Scooter, .biggame-exit-Scooter { background-image: url('../img/exit/Scooter-ThreeheadedSerpent.png'); }
 .cartel-exit-Boat, .biggame-exit-Boat { background-image: url('../img/exit/Boat-ThreeheadedSerpent.png'); }
 .cartel-exit-VillageBusStop, .biggame-exit-VillageBusStop { background-image: url('../img/exit/VillageBusStop.png'); }
-.ghost-exit-Boat, .magic-exit-Boat { background-image: url('../img/exit/Boat-ChasingAGhost.png'); }
-.ghost-exit-MainStreet, .magic-exit-MainStreet { background-image: url('../img/exit/MainStreet.png'); }
-.ghost-exit-MainStreetSouth, .magic-exit-MainStreetSouth { background-image: url('../img/exit/MainStreetSouth.png'); }
-.ghost-exit-Taxi, .magic-exit-Taxi { background-image: url('../img/exit/Taxi.png'); }
-.ghost-exit-Train, .magic-exit-Train { background-image: url('../img/exit/Train.png'); }
+.ghost-exit-Boat { background-image: url('../img/exit/Boat-ChasingAGhost.png'); }
+.ghost-exit-MainStreet { background-image: url('../img/exit/MainStreet.png'); }
+.ghost-exit-RanganTowerRoad { background-image: url('../img/exit/RanganTowerRoad.png'); }
+.ghost-exit-Train { background-image: url('../img/exit/Train.png'); }
 .ghost-exit-CrowsNestTunnel, .magic-exit-CrowsNestTunnel { background-image: url('../img/exit/CrowsNestTunnel.png'); }
+.ghost-exit-TaxiJunkyard { background-image: url('../img/exit/TaxiJunkyard.png'); }
+.ghost-exit-TaxiNearBarge { background-image: url('../img/exit/TaxiNearBarge.png'); }
+.ghost-exit-TaxiCentralSquare { background-image: url('../img/exit/TaxiCentralSquare.png'); }
+.ghost-exit-TaxiSlumSquare { background-image: url('../img/exit/TaxiSlumSquare.png'); }
+.ghost-exit-TaxiMainStreet { background-image: url('../img/exit/TaxiMainStreet.png'); }
+.magic-exit-Boat { background-image: url('../img/exit/Boat-Illusions.png'); }
+.magic-exit-MainStreet { background-image: url('../img/exit/MainStreet-Illusions.png'); }
+.magic-exit-RanganTowerRoad { background-image: url('../img/exit/RanganTowerRoad-Illusions.png'); }
+.magic-exit-Train { background-image: url('../img/exit/Train-Illusions.png'); }
+.magic-exit-TaxiJunkyard { background-image: url('../img/exit/TaxiJunkyard-Illusions.png'); }
+.magic-exit-TaxiNearBarge { background-image: url('../img/exit/TaxiNearBarge-Illusions.png'); }
+.magic-exit-TaxiSlumSquare { background-image: url('../img/exit/TaxiSlumSquare-Illusions.png'); }
 .suburbs-exit-BusStop, .pill-exit-BusStop { background-image: url('../img/exit/BusStop.png'); }
 .suburbs-exit-Bridge, .pill-exit-Bridge { background-image: url('../img/exit/Bridge-AnotherLife.png'); }
 .suburbs-exit-Raft, .pill-exit-Raft { background-image: url('../img/exit/Raft.png'); }
-.suburbs-exit-Manhole, .pill-exit-Manhole { background-image: url('../img/exit/Manhole-AnotherLife.png'); }
+.suburbs-exit-ManholeMuffinStand, .pill-exit-ManholeMuffinStand { background-image: url('../img/exit/ManholeMuffinStand.png'); }
+.suburbs-exit-ManholeMapletreeLn, .pill-exit-ManholeMapletreeLn { background-image: url('../img/exit/ManholeMapletreeLn.png'); }
+.suburbs-exit-ManholeWestProperty, .pill-exit-ManholeWestProperty { background-image: url('../img/exit/ManholeWestProperty.png'); }
+.suburbs-exit-ManholeNearStatue, .pill-exit-ManholeNearStatue { background-image: url('../img/exit/ManholeNearStatue.png'); }
+.suburbs-exit-ManholeNearRoadwork, .pill-exit-ManholeNearRoadwork { background-image: url('../img/exit/ManholeNearRoadwork.png'); }
+.suburbs-exit-ManholeConstructionSite, .pill-exit-ManholeConstructionSite { background-image: url('../img/exit/ManholeConstructionSite.png'); }
+.suburbs-exit-ManholePublicPark, .pill-exit-ManholePublicPark { background-image: url('../img/exit/ManholePublicPark.png'); }
+.suburbs-exit-ManholeNearBusStop, .pill-exit-ManholeNearBusStop { background-image: url('../img/exit/ManholeNearBusStop.png'); }
 .suburbs-exit-ConstructionVan, .pill-exit-ConstructionVan { background-image: url('../img/exit/ConstructionVan.png'); }
 .suburbs-exit-TrashTruck, .pill-exit-TrashTruck { background-image: url('../img/exit/TrashTruck.png'); }
 .suburbs-exit-RoadworkGate, .pill-exit-RoadworkGate { background-image: url('../img/exit/RoadworkGate.png'); }
@@ -1155,6 +1173,66 @@ div[class^="ElusiveTarget"] { background-image: url('../img/targetcon/NPC.jpg');
 .AgentMontgomery-club { background-image: url('../img/target/AgentMontgomery.jpg'); }
 .AgentLowenthal-club { background-image: url('../img/target/AgentLowenthal.jpg'); }
 .AgentDavenport-club { background-image: url('../img/target/AgentDavenport.jpg'); }
+
+.AgentRhodes-club.contarget { background-image: url('../img/targetcon/AgentRhodes.jpg'); }
+.AgentSwan-club.contarget { background-image: url('../img/targetcon/AgentSwan.jpg'); }
+.AgentBanner-club.contarget { background-image: url('../img/targetcon/AgentBanner.jpg'); }
+.AgentTremaine-club.contarget { background-image: url('../img/targetcon/AgentTremaine.jpg'); }
+.AgentGreen-club.contarget { background-image: url('../img/targetcon/AgentGreen.jpg'); }
+.AgentThames-club.contarget { background-image: url('../img/targetcon/AgentThames.jpg'); }
+.AgentChamberlin-club.contarget { background-image: url('../img/targetcon/AgentChamberlin.jpg'); }
+.AgentMontgomery-club.contarget { background-image: url('../img/targetcon/AgentMontgomery.jpg'); }
+.AgentLowenthal-club.contarget { background-image: url('../img/targetcon/AgentLowenthal.jpg'); }
+.AgentDavenport-club.contarget { background-image: url('../img/targetcon/AgentDavenport.jpg'); }
+.HelfriedZiegler-club, .LasseDanegod-club  { background-image: url('../img/targetcon/HelfriedZiegler.jpg'); }
+.Gestur-club { background-image: url('../img/targetcon/Gestur.jpg'); }
+.NicholasVelmorres-club { background-image: url('../img/targetcon/NicholasVelmorres-Berlin.jpg'); }
+.MichaelMishooNenkov-club { background-image: url('../img/targetcon/MichaelMishooNenkov.jpg'); }
+.RolfHirschmüller-club { background-image: url('../img/targetcon/RolfHirschmüller.jpg'); }
+.JuliusdeKoning-club { background-image: url('../img/targetcon/JuliusdeKoning.jpg'); }
+.EgbertJandeGraaf-club { background-image: url('../img/targetcon/EgbertJandeGraaf.jpg'); }
+.DiederikvanderHeijden-club { background-image: url('../img/targetcon/DiederikvanderHeijden.jpg'); }
+.ArnauddeLange-club { background-image: url('../img/targetcon/ArnauddeLange.jpg'); }
+.UdoWürtz-club { background-image: url('../img/targetcon/UdoWürtz.jpg'); }
+.HugoGroßer-club { background-image: url('../img/targetcon/HugoGroßer.jpg'); }
+.EdgarPlanck-club, .EkkehardSiekert-club { background-image: url('../img/targetcon/EdgarPlanck.jpg'); }
+.AlexanderBoesch-club { background-image: url('../img/targetcon/AlexanderBoesch.jpg'); }
+.SiegmundAmsel-club, .VolkerWürtz-club, .ChristophWulf-club { background-image: url('../img/targetcon/SiegmundAmsel.jpg'); }
+.WolframGwerder-club { background-image: url('../img/targetcon/WolframGwerder.jpg'); }
+.NikolaSchweitzer-club, .JuttaWaltz-club { background-image: url('../img/targetcon/NikolaSchweitzer.jpg'); }
+.HeinrichMein-club, .GustafRaskop-club, .SiegmundBach-club { background-image: url('../img/targetcon/HeinrichMein.jpg'); }
+.HaraldFörstner-club { background-image: url('../img/targetcon/HaraldFörstner.jpg'); }
+.GilbertPichler-club, .ErnstLorentz-club { background-image: url('../img/targetcon/GilbertPichler.jpg'); }
+.GustavReuter-club { background-image: url('../img/targetcon/GustavReuter.jpg'); }
+.OttoKerper-club, .MichaelBeyer-club { background-image: url('../img/targetcon/OttoKerper.jpg'); }
+.EckartKüchler-club { background-image: url('../img/targetcon/EckartKüchler.jpg'); }
+.ErichBambach-club { background-image: url('../img/targetcon/ErichBambach.jpg'); }
+.DetlefAchterberg-club { background-image: url('../img/targetcon/DetlefAchterberg.jpg'); }
+.JoachimBlum-club { background-image: url('../img/targetcon/JoachimBlum.jpg'); }
+.HugoPletcher-club { background-image: url('../img/targetcon/HugoPletcher.jpg'); }
+.RüdigerBäcker-club { background-image: url('../img/targetcon/RüdigerBäcker.jpg'); }
+.WaldemarKaufman-club { background-image: url('../img/targetcon/WaldemarKaufman.jpg'); }
+.ManfredMessmann-club { background-image: url('../img/targetcon/ManfredMessmann.jpg'); }
+.SaskiaSchlosser-club { background-image: url('../img/targetcon/SaskiaSchlosser.jpg'); }
+.HendrikBeckenbauer-club, .HartmutBauers-club { background-image: url('../img/targetcon/HendrikBeckenbauer.jpg'); }
+.NiklausFuchs-club { background-image: url('../img/targetcon/NiklausFuchs.jpg'); }
+.UrsulaHoltz-club { background-image: url('../img/targetcon/UrsulaHoltz.jpg'); }
+.BiankaKrantz-club { background-image: url('../img/targetcon/BiankaKrantz.jpg'); }
+.ZoeBuckholtz-club { background-image: url('../img/targetcon/ZoeBuckholtz.jpg'); }
+.BurkhartAlthaus-club { background-image: url('../img/targetcon/BurkhartAlthaus.jpg'); }
+.JessikaFleischer-club { background-image: url('../img/targetcon/JessikaFleischer.jpg'); }
+.TheresiaRose-club { background-image: url('../img/targetcon/TheresiaRose.jpg'); }
+.KatarinaGlass-club { background-image: url('../img/targetcon/KatarinaGlass.jpg'); }
+.GeraldGotti-club { background-image: url('../img/targetcon/GeraldGotti.jpg'); }
+.ViktorHofmann-club { background-image: url('../img/targetcon/ViktorHofmann.jpg'); }
+.OttmarBraband-club, .ArnoldKrauss-club { background-image: url('../img/targetcon/OttmarBraband.jpg'); }
+.RaffaelGaertner-club, .MeinradVogts-club { background-image: url('../img/targetcon/RaffaelGaertner.jpg'); }
+.MariusSchmitt-club, .BjarkeGärtner-club { background-image: url('../img/targetcon/MariusSchmitt.jpg'); }
+.MarwinJäger-club { background-image: url('../img/targetcon/MarwinJäger.jpg'); }
+.KarlJoakimMattson-club { background-image: url('../img/targetcon/KarlJoakimMattson.jpg'); }
+.DennisSachs-club { background-image: url('../img/targetcon/DennisSachs.jpg'); }
+.IngolfMaurer-club, .AntonGeisler-club { background-image: url('../img/targetcon/IngolfMaurer.jpg'); }
+.ReinholdSchultze-club { background-image: url('../img/targetcon/ReinholdSchultze.jpg'); }
 
 /** Chongqing **/
 /* End Of An Era */
