@@ -144,15 +144,37 @@ function createTargetList(container) {
 	var modeIndex = document.getElementById("modeselect");
 	var mode = modeIndex.options[modeIndex.selectedIndex].value;
 	if (mode == "CONEASY" || mode == "CONHARD") { // Contracts Mode
-		var targetAmountCheck = Math.random();
-		var num_targets = 5;
-		if (targetAmountCheck < 0.84) num_targets--;
-		if (targetAmountCheck < 0.69) num_targets--;
-		if (targetAmountCheck < 0.39) num_targets--;
-		if (targetAmountCheck < 0.04) num_targets--;
-		
-		shuffle(container.contractTargets);
-		targets = container.contractTargets.slice(0, num_targets);
+		if (document.getElementById("conslider").value == 5) {
+			shuffle(container.contractTargets);
+			targets = container.contractTargets.slice(0,5);
+		}
+		else if (document.getElementById("conslider").value == 4) {
+			shuffle(container.contractTargets);
+			targets = container.contractTargets.slice(0,4);
+		}
+		else if (document.getElementById("conslider").value == 3) {
+			shuffle(container.contractTargets);
+			targets = container.contractTargets.slice(0,3);
+		}
+		else if (document.getElementById("conslider").value == 2) {
+			shuffle(container.contractTargets);
+			targets = container.contractTargets.slice(0,2);
+		}
+		else if (document.getElementById("conslider").value == 1) {
+			shuffle(container.contractTargets);
+			targets = container.contractTargets.slice(0,1);
+		}
+		else {
+			var targetAmountCheck = Math.random();
+			var num_targets = 5;
+			if (targetAmountCheck < 0.84) num_targets--;
+			if (targetAmountCheck < 0.69) num_targets--;
+			if (targetAmountCheck < 0.39) num_targets--;
+			if (targetAmountCheck < 0.04) num_targets--;
+			
+			shuffle(container.contractTargets);
+			targets = container.contractTargets.slice(0, num_targets);
+		};
 	}
 	else if (mode == "ELUSIVE" && document.getElementById("etslider").value == 1) //One Elusive Target
 		targets = ["Elusive Target"];

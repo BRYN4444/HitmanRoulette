@@ -202,12 +202,12 @@
 								</ul>
 								<img id="list" class="shrink" src="./img/general/blank.png">
 								<p id="wording">
-									<b>HITMAN III:</b> Berlin Contracts Mode Targets added.
+									Remaining <b>HITMAN III</b> Contracts Mode Targets added.
 								</p>
 							</div>
 							<div id="nameplate">
 								<span>
-									<p id="title">Last Updated: Match 23rd, 2021</p>
+									<p id="title">Last Updated: Match 29th, 2021</p>
 									<p id="subtitle">Roulette Features</p>
 								</span>
 							</div>
@@ -949,6 +949,12 @@
 						<label id="mode_con" style="display:none;" data-hover="Targets are pulled from a selection of NPCs within the level. Do these roulettes by starting your own contract within the game's contracts mode. Maybe even publish your successful roulette.<br /><br /><b>[Missions unavailable for contracts mode will be toggled off and locked while Contracts Mode Roulette is enabled. Reselect missions when enabling Mission Mode Roulette.]</b>Intel: A brief description of the target's last known whereabouts are listed. This may include in-game cardinal directions or area text listed on the Map screen.<br /><br />Hunt: No target location information is given. Confirm target identities before eliminating them.">
 							<b>Contracts Mode Roulette</b><span>[Off]</span>
 						</label>
+						<label id="mode_m" class="mobile" style="display:none;" data-hover="Force the amount of targets in Contracts Mode Roulette. First enable the mode, and then use this slider to set how many targets could appear.<br /><br />#: By default, any amount of targets upto 5 can be generated.">[INFO]:</label>
+						<label id="mode_et" style="display:none;" data-hover="Force the amount of targets in Contracts Mode Roulette. First enable the mode, and then use this slider to set how many targets could appear.<br /><br />#: By default, any amount of targets upto 5 can be generated.">
+							<b>Contracts Target Amount</b>
+							<span id="range"><input id="conslider" type="range" min="0" max="5" value="0" />
+							[<span id="conamount">#</span>]</span>
+						</label>
 						<label id="mode_m" class="mobile" style="display:none;" data-hover="Make the difficult task of eliminating elusive targets even harder. Set the number of targets there are (making sure to select the appropriate mission) and issue the roulette.<br /><br />Target names are not listed here, so assigning what conditions to whom is player choice. Just don't cross your kill conditions amongst multiple targets.">[INFO]:</label>
 						<label id="mode_et" style="display:none;" data-hover="Make the difficult task of eliminating elusive targets even harder. Set the number of targets there are (making sure to select the appropriate mission) and issue the roulette.<br /><br />Target names are not listed here, so assigning what conditions to whom is player choice. Just don't cross your kill conditions amongst multiple targets.">
 							<b>Elusive Targets Roulette</b>
@@ -1071,8 +1077,9 @@
 						<p>This was a hobby project I started in 2016/17 and have worked on during my free time as a way to brush up on my simple javascript, jQuery, and CSS knowledge as well as giving me more reason to play these new Hitman games well after unlocking everything. As such, I've only tested this at about a 1080p resolution using the browsers I frequent: Firefox and Chrome. Also I'm sure my additions to the existing code, as well as my own work, could use cleaning up here and there. If you find any issues or glaring conflicts with roulette results, <a href="https://github.com/BRYN4444/HitmanRoulette/issues" target="_blank">let me know via GitHub</a> and I'll try and address it when I get the chance. <span id="sig">- <a href="http://bryn.info/" target="_blank">BRYN</a><span></p>
 						<h2>To-Do List / Wishlist:</h2>
 						<ul>
-							<li>Add HITMAN III targets for Contract Mode.</li>
+							<li>Updates for any future HITMAN III mission DLC.</li>
 							<li>"Photo Objectives" for HITMAN & HITMAN 2 missions.</li>
+							<li>More Contracts Mode Targets for HITMAN missions with updated HITMAN III images to match.</li>
 							<li>More "Extra Objectives" for late-campaign HITMAN 2 & HITMAN III.</li>
 							<li>Stream Overlay mode; A method for streamers to show Objectives and more over the gameplay.</li>
 							<li>This would take a complete overhaul, so it's probably out of MY league, but being able to link Roulettes to others would be cool. If you have knowledge on how to do this easily, leave me a message on <a href="https://github.com/BRYN4444/HitmanRoulette/issues" target="_blank">GitHub</a>.</li>

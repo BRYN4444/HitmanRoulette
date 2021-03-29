@@ -571,6 +571,21 @@ $(document).ready(function() {
 		};
 	});
 	
+	if( $('#conslider').val() == 0 ) {
+		$('#conamount').html('#');
+	}
+	else {
+		$('#conamount').html( $('#conslider').val() );
+	}
+	$('#conslider').on('input', function () {
+		if( $(this).val() > 0 ) {
+			$('#conamount').html( $(this).val() );
+		}
+		else {
+			$('#conamount').html('#');
+		};
+	});
+	
 	$('#etamount').html( $('#etslider').val() );
 	$('#etslider').on('input', function () {
 		$('#etamount').html( $(this).val() );
