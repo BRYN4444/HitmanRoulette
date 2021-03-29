@@ -396,7 +396,8 @@
 .club-exit-UFO { background-image: url('../img/exit/UFO.png'); }
 .archive-exit-ApartmentSafeHouse { background-image: url('../img/exit/ApartmentSafeHouse.png'); }
 .archive-exit-Scooter { background-image: url('../img/exit/Scooter-EndOfAnEra.png'); }
-.archive-exit-Manhole { background-image: url('../img/exit/Manhole-EndOfAnEra.png'); }
+.archive-exit-ManholeRestaurantAlley { background-image: url('../img/exit/ManholeRestaurantAlley.png'); }
+.archive-exit-ManholeTheBlock { background-image: url('../img/exit/ManholeTheBlock.png'); }
 .archive-exit-TrainStation { background-image: url('../img/exit/TrainStation.png'); }
 .archive-exit-FacilityEmergencyExit { background-image: url('../img/exit/FacilityEmergencyExit.png'); }
 .vineyard-exit-TangoWithDiana { background-image: url('../img/exit/TangoWithDiana.png'); }
@@ -526,6 +527,8 @@ div[class^="ElusiveTarget"] { background-image: url('../img/targetcon/NPC.jpg');
 .MarianoPalerma-election { background-image: url('../img/targetcon/MarianoPalerma.jpg'); }
 .SilviaMorando-election { background-image: url('../img/targetcon/LindseyLaCoeur.jpg'); }
 .DarioBronzo-election { background-image: url('../img/targetcon/ArturoTossi.jpg'); }
+.MarioSaltatore-election { background-image: url('../img/targetcon/MarioSaltatore.jpg'); }
+.LuigiSaltatore-election { background-image: url('../img/targetcon/LuigiSaltatore.jpg'); }
 .PadreFrancesco-election { background-image: url('../img/targetcon/PadreFrancesco.jpg'); }
 
 /* The Author */
@@ -1241,12 +1244,148 @@ div[class^="ElusiveTarget"] { background-image: url('../img/targetcon/NPC.jpg');
 .ImogenRoyce-archive { background-image: url('../img/target/ImogenRoyce.jpg'); }
 .ImogenRoyce-archive.contarget { background-size: auto 100% !important; }
 
+.XiaofanDai-archive { background-image: url('../img/targetcon/XiaofanDai.jpg'); }
+.ShunyuanGuo-archive, .BoqinYan-archive { background-image: url('../img/targetcon/ShunyuanGuo.jpg'); }
+.HeHou-archive { background-image: url('../img/targetcon/HeHou.jpg'); }
+.FangZhao-archive { background-image: url('../img/targetcon/FangZhao.jpg'); }
+.TaoYi-archive, .TingfengGu-archive { background-image: url('../img/targetcon/TaoYi.jpg'); }
+.DonnieDemiraca-archive, .HuizhongXiong-archive { background-image: url('../img/targetcon/DonnieDemiraca.jpg'); }
+.XiaYi-archive, .RongLin-archive { background-image: url('../img/targetcon/XiaYi.jpg'); }
+.SamBrownlee-archive, .DeanZirko-archive, .DelmorMerrick-archive { background-image: url('../img/targetcon/SamBrownlee.jpg'); }
+.DelunMa-archive { background-image: url('../img/targetcon/DelunMa.jpg'); }
+.FelixOakes-archive, .DougDowner-archive, .SherwinKung-archive, .ClevieStat-archive, .HaraldNewcombe-archive { background-image: url('../img/targetcon/FelixOakes.jpg'); }
+.GraigJuhl-archive { background-image: url('../img/targetcon/GraigJuhl.jpg'); }
+.ShaoqingWen-archive { background-image: url('../img/targetcon/ShaoqingWen.jpg'); }
+.MeifengZhao-archive { background-image: url('../img/targetcon/MeifengZhao.jpg'); }
+.JinhaiZhao-archive { background-image: url('../img/targetcon/JinhaiZhao.jpg'); }
+.LanfenBai-archive, .HuifangQian-archive { background-image: url('../img/targetcon/LanfenBai.jpg'); }
+.AngusPritchard-archive { background-image: url('../img/targetcon/AngusPritchard.jpg'); }
+.ChenTing-archive { background-image: url('../img/targetcon/ChenTing.jpg'); }
+.HuiZeng-archive, .LongweiFeng-archive { background-image: url('../img/targetcon/HuiZeng.jpg'); }
+.AiJin-archive { background-image: url('../img/targetcon/AiJin.jpg'); }
+.FridaMounsdon-archive { background-image: url('../img/targetcon/FridaMounsdon.jpg'); }
+.MerrillKrantz-archive { background-image: url('../img/targetcon/MerrillKrantz.jpg'); }
+.LeiMeng-archive { background-image: url('../img/targetcon/LeiMeng.jpg'); }
+.XiaoqingFeng-archive { background-image: url('../img/targetcon/XiaoqingFeng.jpg'); }
+.BuckMckeever-archive, .TownieThurley-archive { background-image: url('../img/targetcon/BuckMckeever.jpg'); }
+.QingshanYao-archive { background-image: url('../img/targetcon/QingshanYao.jpg'); }
+.LavernCancel-archive { background-image: url('../img/targetcon/LavernCancel.jpg'); }
+.FilibertoNewbold-archive, .HungSmithers-archive { background-image: url('../img/targetcon/FilibertoNewbold.jpg'); }
+.Mogwai-archive { background-image: url('../img/targetcon/Mogwai.jpg'); }
+.GuozhiYuan-archive, .GuoliangDing-archive { background-image: url('../img/targetcon/GuozhiYuan.jpg'); }
+.NianzuLi-archive, .FengZhao-archive { background-image: url('../img/targetcon/NianzuLi.jpg'); }
+.YuanLin-archive { background-image: url('../img/targetcon/YuanLin.jpg'); }
+.BorisLacayo-archive { background-image: url('../img/targetcon/BorisLacayo.jpg'); }
+.YueCheng-archive, .KirstenPetersen-archive { background-image: url('../img/targetcon/YueCheng.jpg'); }
+.FenggeFang-archive, .ShirongDai-archive { background-image: url('../img/targetcon/FenggeFang.jpg'); }
+.MaynardStorch-archive, .DarylBridgers-archive, .SamuelGleaton-archive, .JeremyPrunty-archive { background-image: url('../img/targetcon/MaynardStorch.jpg'); }
+.AlvaCowell-archive { background-image: url('../img/targetcon/AlvaCowell.jpg'); }
+.ShihongLuo-archive { background-image: url('../img/targetcon/ShihongLuo.jpg'); }
+.EmersonBeecher-archive { background-image: url('../img/targetcon/EmersonBeecher.jpg'); }
+.FuLuoyang-archive { background-image: url('../img/targetcon/FuLuoyang.jpg'); }
+.SisterLei-archive { background-image: url('../img/targetcon/SisterLei.jpg'); }
+.MeilinDu-archive { background-image: url('../img/targetcon/MeilinDu.jpg'); }
+.MeiSun-archive { background-image: url('../img/targetcon/MeiSun.jpg'); }
+.JunliXu-archive { background-image: url('../img/targetcon/JunliXu.jpg'); }
+.XiangWei-archive { background-image: url('../img/targetcon/XiangWei.jpg'); }
+.HuiHou-archive { background-image: url('../img/targetcon/HuiHou.jpg'); }
+.SalvadorMoline-archive { background-image: url('../img/targetcon/SalvadorMoline.jpg'); }
+.TomasPerren-archive, .HarryPeters-archive { background-image: url('../img/targetcon/TomasPerren.jpg'); }
+.EduardoLeverette-archive, .ChetPellegrino-archive, .MarcusEasterwood-archive { background-image: url('../img/targetcon/EduardoLeverette.jpg'); }
+.BerrieKearney-archive, .MarileeTyrrell-archive { background-image: url('../img/targetcon/BerrieKearney.jpg'); }
+.MaiaBarlow-archive { background-image: url('../img/targetcon/MaiaBarlow.jpg'); }
+.HusseinOam-archive, .HankPanker-archive { background-image: url('../img/targetcon/HusseinOam.jpg'); }
+.LeslieHuguley-archive { background-image: url('../img/targetcon/LeslieHuguley.jpg'); }
+.XiaoMing-archive { background-image: url('../img/targetcon/XiaoMing.jpg'); }
+.HughJansson-archive { background-image: url('../img/targetcon/HughJansson.jpg'); }
+.VincentKnowles-archive { background-image: url('../img/targetcon/VincentKnowles.jpg'); }
+.AdamKnudson-archive { background-image: url('../img/targetcon/AdamKnudson.jpg'); }
+.JeremyBolt-archive, .RongWan-archive { background-image: url('../img/targetcon/JeremyBolt.jpg'); }
+.AliciaReynolds-archive { background-image: url('../img/targetcon/AliciaReynolds.jpg'); }
+.SharonReed-archive, .LouBourne-archive, .HelenClaire-archive { background-image: url('../img/targetcon/SharonReed.jpg'); }
+.NicolasCasale-archive { background-image: url('../img/targetcon/NicolasCasale.jpg'); }
+.ArmandFunk-archive { background-image: url('../img/targetcon/ArmandFunk.jpg'); }
+
 /** Mendoza **/
 /* The Farewell */
 .DonArchibaldYates-vineyard { background-image: url('../img/target/DonArchibaldYates.jpg'); }
 .DonArchibaldYates-vineyard.contarget { background-size: auto 100% !important; }
 .TamaraVidal-vineyard { background-image: url('../img/target/TamaraVidal.jpg'); }
 .TamaraVidal-vineyard.contarget { background-size: auto 100% !important; }
+
+.ValentinaYates-vineyard { background-image: url('../img/targetcon/ValentinaYates.jpg'); }
+.AronFordJr-vineyard { background-image: url('../img/targetcon/AronFordJr-Mendoza.jpg'); }
+.GabrielVargas-vineyard { background-image: url('../img/targetcon/GabrielVargas.jpg'); }
+.PamKingsley-vineyard { background-image: url('../img/targetcon/PamKingsley.jpg'); }
+.JaySmart-vineyard { background-image: url('../img/targetcon/JaySmart-Mendoza.jpg'); }
+.RichardJones-vineyard { background-image: url('../img/targetcon/RichardJones.jpg'); }
+.WangYinyuan-vineyard { background-image: url('../img/targetcon/WangYinyuan.jpg'); }
+.MikhailKadir-vineyard { background-image: url('../img/targetcon/MikhailKadir.jpg'); }
+.GeraldineQuill-vineyard { background-image: url('../img/targetcon/GeraldineQuill.jpg'); }
+.CorvoBlack-vineyard { background-image: url('../img/targetcon/CorvoBlack.jpg'); }
+.HiraAmala-vineyard { background-image: url('../img/targetcon/HiraAmala.jpg'); }
+.AlexandraStavroula-vineyard { background-image: url('../img/targetcon/AlexandraStavroula.jpg'); }
+.JuanCourtázar-vineyard { background-image: url('../img/targetcon/JuanCourtázar.jpg'); }
+.MarioLlosa-vineyard { background-image: url('../img/targetcon/MarioLlosa.jpg'); }
+.PabloLlosa-vineyard { background-image: url('../img/targetcon/PabloLlosa.jpg'); }
+.FabricioGiordano-vineyard { background-image: url('../img/targetcon/FabricioGiordano.jpg'); }
+.FracoBlanco-vineyard { background-image: url('../img/targetcon/FracoBlanco.jpg'); }
+.IgoneRamirez-vineyard { background-image: url('../img/targetcon/IgoneRamirez.jpg'); }
+.HeidiSantoro-vineyard { background-image: url('../img/targetcon/HeidiSantoro-Mendoza.jpg'); }
+.DexyBarat-vineyard { background-image: url('../img/targetcon/DexyBarat-Mendoza.jpg'); }
+.TimQuinn-vineyard, .CalebWoods-vineyard { background-image: url('../img/targetcon/TimQuinn.jpg'); }
+.AshDeveraux-vineyard, .AugustoAlbarez-vineyard, .AndrewHarrison-vineyard { background-image: url('../img/targetcon/AshDeveraux.jpg'); }
+.DemiDeveraux-vineyard { background-image: url('../img/targetcon/DemiDeveraux.jpg'); }
+.MirandaRutherford-vineyard { background-image: url('../img/targetcon/MirandaRutherford.jpg'); }
+.DoloresPowell-vineyard { background-image: url('../img/targetcon/DoloresPowell.jpg'); }
+.LenaBjoernshauge-vineyard { background-image: url('../img/targetcon/LenaBjoernshauge.jpg'); }
+.KennethFlowers-vineyard { background-image: url('../img/targetcon/KennethFlowers.jpg'); }
+.EllinorWestrup-vineyard { background-image: url('../img/targetcon/EllinorWestrup-Mendoza.jpg'); }
+.RaoulSalazar-vineyard, .ChristofferFeldtmann-vineyard, .KieranSimmons-vineyard, .a-vineyard { background-image: url('../img/targetcon/RaoulSalazar.jpg'); }
+.PirroSalazar-vineyard, .FinleyReynolds-vineyard, .JamesRobertson-vineyard { background-image: url('../img/targetcon/PirroSalazar.jpg'); }
+.FletcherFernansez-vineyard { background-image: url('../img/targetcon/FletcherFernansez.jpg'); }
+.AlexRheinhart-vineyard { background-image: url('../img/targetcon/AlexRheinhart.jpg'); }
+.ShaunMcGee-vineyard, .SamuelCooke-vineyard { background-image: url('../img/targetcon/ShaunMcGee.jpg'); }
+.NatashaJones-vineyard { background-image: url('../img/targetcon/NatashaJones.jpg'); }
+.KateGilmore-vineyard { background-image: url('../img/targetcon/KateGilmore.jpg'); }
+.GeraldoLavezzi-vineyard { background-image: url('../img/targetcon/GeraldoLavezzi.jpg'); }
+.JuanPabloDíaz-vineyard { background-image: url('../img/targetcon/JuanPabloDíaz.jpg'); }
+.ArchieRiley-vineyard { background-image: url('../img/targetcon/ArchieRiley.jpg'); }
+.MannyRusso-vineyard, .TommyHamilton-vineyard { background-image: url('../img/targetcon/MannyRusso.jpg'); }
+.ReynaldoAlonso-vineyard, .TercieroÁlvarez-vineyard { background-image: url('../img/targetcon/ReynaldoAlonso.jpg'); }
+.ElizabethFritz-vineyard, .MeganMcdonald-vineyard { background-image: url('../img/targetcon/ElizabethFritz.jpg'); }
+.JermaineCrosby-vineyard, .ConnorBaird-vineyard, .JorgeCapon-vineyard { background-image: url('../img/targetcon/JermaineCrosby.jpg'); }
+.LyleMcAllister-vineyard { background-image: url('../img/targetcon/LyleMcAllister.jpg'); }
+.VictorFigueroa-vineyard, .FrancoRios-vineyard, .MiguelBoedo-vineyard { background-image: url('../img/targetcon/VictorFigueroa.jpg'); }
+.NicolasBorroni-vineyard, .RaúlSal-vineyard, .GarciaMartin-vineyard, .JoshuaMacías-vineyard, .LeonidesUdinesi-vineyard, .GabrioIbanez-vineyard, .MarcoVera-vineyard, .PabloFarías-vineyard { background-image: url('../img/targetcon/NicolasBorroni.jpg'); }
+.FrancoPugliesi-vineyard, .GuadalupeBorroni-vineyard, .FriscoOlleros-vineyard, .MontrelPiazza-vineyard { background-image: url('../img/targetcon/FrancoPugliesi.jpg'); }
+.HernanDiStefano-vineyard, .RodolfoBlanco-vineyard, .CarlomagnoSchmidt-vineyard, .NehuenChávez-vineyard, .BrunoElizondo-vineyard, .BeltranRossi-vineyard, .RenoDavide-vineyard, .MontegoEcheverria-vineyard, .HeribertoRomano-vineyard { background-image: url('../img/targetcon/HernanDiStefano.jpg'); }
+.TeyoLeguizamón-vineyard, .JerraldDukaroff-vineyard, .ConradoOlleros-vineyard { background-image: url('../img/targetcon/TeyoLeguizamón.jpg'); }
+.ViolettaMendez-vineyard { background-image: url('../img/targetcon/ViolettaMendez.jpg'); }
+.IsabelMunoz-vineyard { background-image: url('../img/targetcon/IsabelMunoz.jpg'); }
+.VetoIbañez-vineyard { background-image: url('../img/targetcon/VetoIbañez.jpg'); }
+.LayneEstrada-vineyard, .LoganStone-vineyard { background-image: url('../img/targetcon/LayneEstrada.jpg'); }
+.ArturoLori-vineyard, .DarioUdinese-vineyard, .JuanCarlosMalavia-vineyard { background-image: url('../img/targetcon/ArturoLori.jpg'); }
+.BautistaCastiglione-vineyard, .LawrenceColombo-vineyard, .SantinoLombardi-vineyard { background-image: url('../img/targetcon/BautistaCastiglione.jpg'); }
+.CharleeBall-vineyard { background-image: url('../img/targetcon/CharleeBall.jpg'); }
+.ChayaZetticcia-vineyard { background-image: url('../img/targetcon/ChayaZetticcia.jpg'); }
+.BrooklynBush-vineyard { background-image: url('../img/targetcon/BrooklynBush.jpg'); }
+.JonahSherman-vineyard { background-image: url('../img/targetcon/JonahSherman.jpg'); }
+.SpencerBrown-vineyard, .AllanGuzman-vineyard { background-image: url('../img/targetcon/SpencerBrown.jpg'); }
+.TimoSchmidt-vineyard, .PabloBeneventi-vineyard, .JerraldEndrizzi-vineyard, .AurelianoHerrera-vineyard, .MarioToscanoW-vineyard { background-image: url('../img/targetcon/TimoSchmidt.jpg'); }
+.PatricioIglesias-vineyard, .LuceroRomano-vineyard { background-image: url('../img/targetcon/PatricioIglesias.jpg'); }
+.GodfredoLorenzo-vineyard, .AureliusCastiglione-vineyard, .AurelioEscobar-vineyard, .MontrelMoreno-vineyard, .HortenciaVargas-vineyard, .RamonAvelardez-vineyard, .SalBuccho-vineyard { background-image: url('../img/targetcon/GodfredoLorenzo.jpg'); }
+.LeoCollins-vineyard { background-image: url('../img/targetcon/LeoCollins.jpg'); }
+.GeraldoRodriguez-vineyard { background-image: url('../img/targetcon/GeraldoRodriguez.jpg'); }
+.EneasPalermo-vineyard, .ClaudioBarrios-vineyard, .JericoDerose-vineyard { background-image: url('../img/targetcon/EneasPalermo.jpg'); }
+.FaronValdézw-vineyard, .SandroTarella-vineyard, .LonzoMalavia-vineyard, .JulianoCarrizo-vineyard, .LucianoVillalba-vineyard, .MateoRoca-vineyard, .SenonZetticci-vineyard { background-image: url('../img/targetcon/FaronValdézw.jpg'); }
+.MontesCastillo-vineyard, .MauricioDomínguez-vineyard { background-image: url('../img/targetcon/MontesCastillo.jpg'); }
+.FrescoIbañez-vineyard, .NestoSanchez-vineyard { background-image: url('../img/targetcon/FrescoIbañez.jpg'); }
+.ProsperoRomano-vineyard, .QuintoAlvarez-vineyard { background-image: url('../img/targetcon/ProsperoRomano.jpg'); }
+.EliasMedina-vineyard, .NéstorSosa-vineyard, .RauloDominguez-vineyard { background-image: url('../img/targetcon/EliasMedina.jpg'); }
+.JosephByrne-vineyard { background-image: url('../img/targetcon/JosephByrne.jpg'); }
+.GuadalupeBuccho-vineyard, .QuintoOrtiz-vineyard { background-image: url('../img/targetcon/GuadalupeBuccho.jpg'); }
+.w-vineyard { background-image: url('../img/targetcon/w.jpg'); }
 
 /** Romania **/
 /* Untouchable */
