@@ -13,7 +13,9 @@ Hitman Roulette is a tool that aims to give new ideas on how to complete mission
 To initiate a roll of the Roulette, select "Issue Roulette" on the main page. Use the Undo or Redo buttons that appear at the top of that page to move between generated Roulettes. Save your Roulette as a Textfile using the "Export Roulette" option, again on this page, but in the bottom right corner.
 
 All missions from the trilogy are pulled into the Roulette by default, so go to "Select Missions" above to untoggle any missions you're missing or just the ones you don't like.
+
 After that, the options under "Roulette Settings" allow you to alter what the Roulette surfaces. You can get more than the regular targets ("Mission Mode Roulette") by choosing "Contract Mode Roulette". Dial in the difficulty by toggling "Kill Requirements" like disguises or weapons you'll need to wear or use, "Extra Requirements" like one more objective or sets of complications, and "Gameplay Challenges" that force you to change how you play.
+
 To quickly return the Roulette Settings back to default, preform a hard refresh of the page.
 
 ## Special Thanks & External Resources
@@ -26,35 +28,30 @@ To quickly return the Roulette Settings back to default, preform a hard refresh 
 ## Compatibility & Issues
 
 You can deselect any locations you do not own, but by default the Roulette works best with any edition of **HITMAN III** plus the **Access Pass: HITMAN 1 GOTY Edition** and **Access Pass: HITMAN 2 Gold**. However, there may be the odd conflicting trait that changed between game releases.
+
 This was a hobby project I started in 2016/17 and have worked on during my free time as a way to brush up on my simple javascript, jQuery, and CSS knowledge as well as giving me more reason to play these new Hitman games well after unlocking everything. As such, I've only tested this at about a 1080p resolution using the browsers I frequent: Firefox and Chrome. Also I'm sure my additions to the existing code, as well as my own work, could use cleaning up here and there. If you find any issues or glaring conflicts with roulette results, [let me know via GitHub](https://github.com/BRYN4444/HitmanRoulette/issues) and I'll try and address it when I get the chance. - [BRYN](http://bryn.info/)
 
 ### To-Do List / Wishlist:
-* Add HITMAN III targets for Contract Mode.
+* Updates for any future HITMAN III mission DLC.
 * "Photo Objectives" for HITMAN & HITMAN 2 missions.
+* More Contracts Mode Targets for HITMAN missions with updated HITMAN III images to match.
 * More "Extra Objectives" for late-campaign HITMAN 2 & HITMAN III.
 * Stream Overlay mode; A method for streamers to show Objectives and more over the gameplay.
 * This would take a complete overhaul, so it's probably out of MY league, but being able to link Roulettes to others would be cool. If you have knowledge on how to do this easily, leave me a message on [Github](https://github.com/BRYN4444/HitmanRoulette/issues).
 
-### Latest Major Update (March 23, 2021)
+### Latest Major Update (March 29, 2021)
 * **HITMAN III:**
-  * **Contract Mode Targets:** 63 Berlin Targets added (not including the mission default ones).
-* **HITMAN 2:**
-  * **Miami:**
-    * If you roll the Pale Rider Easter Egg Exit in "The Finish Line", the disguises displayed will now all be Pale Rider, allowing the roulette roll to be possible.
-  * **Mumbai:**
-	* The Train exit is possible without the leaver and subsequent collateral damage. Something I overlooked when HITMAN 2 launched. The listing and image are updated to fix this.
-	* "Illusions Of Grandeur" has different lighting than "Chasing A Ghost", so I've updated the exit images to match that.
-    * Each Taxi exit (and their coin requirements) are now differentiated and have proper images to match.
-  * **Whittleton Creek:**
-    * Each Manhole exit for both "Another Life" and "Bitter Pill" have been differentiated and have proper images to match.
-* **Other Fixes:**
-  * In some cases, the textarea for Export Roulette was showing past roll weapon results where they shouldn't be.
+  * **Contract Mode Targets:** 90 Chongqing Targets & 140 Mendoza added (not including the mission default ones).
+  * **Chongqing Manhole Exits** have been differentiated and have proper images to match.
+* **Contracts Mode Roulette Target Amount** can now be set. By default, the amount of targets are a random maximum of 5. You can now change a slider to force a set amount instead of hoping to get the amount you want.
+* **HITMAN III:**
+  * Some Contract Mode Targets from main missions did not have images for bonus missions.
 
-#### Prior Updates (Feb. 1 - March 15, 2021)
+#### Prior Updates (Feb. 1 - March 23, 2021)
 * **HITMAN III campaign missions added.**
   * **Missions:** All six campaign missions added to the Roulette.
   * **Mission Mode Targets:** 18 added, 10 of which are from the third mission which are then randomized among themselves, unique to this mission only (The 11th target had to be left out due to the way some entrances change aspects of the level. The game's final target has a slightly limited number of elimination methods than other targets. Some work had to be done, so hopefully you aren't given an impossible Roulette roll.
-  * **Contract Mode Targets:** 55 Dubai Targets and 44 Dartmoor Targets added (not including the mission default ones).
+  * **Contract Mode Targets:** 55 Dubai Targets, 44 Dartmoor Targets, and 63 Berlin Targets added (not including the mission default ones).
   * **Starting Points:** 38 total. The game has a unique feature on some levels where the default / story entrance restricts things to match the campaign's plot. As such, the Roulette was tweaked to manage this so impossible tasks will not be rolled. Disable Entrance Requirements in Roulette Settings if you'd rather avoid these hassles.
   * **Exit Points:** 27 total. There final mission actually has two exits, but one is an easter egg exit that, unless the roll is perfect, will have you to go against the Roulette. I think this is very fitting considering the easter egg.
   * **Objectives:** 4 added that only appear in Mission Mode Roulette, with one displaying as optional depending on the starting point rolled.
@@ -69,9 +66,16 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
     * I've made the existing Holiday Hoarders and Snow Festival missions no longer active by default.
   * The "All Locations" Mission Grouping toggle has been altered (and as such renamed) to be for all accessible locations within HITMAN III itself (if you own everything, that is).
   * Fixed an issue where missions were staying restricted to Contracts Mode Roulette when switching back to Mission Mode Roulette.
-  * HITMAN III levels were able to be individually toggled on mobile. 
+  * HITMAN III levels were able to be individually toggled on mobile.
+* **Updates to some Exit Points:**
+  * If you roll the Pale Rider Easter Egg Exit in "The Finish Line", the disguises displayed will now all be Pale Rider, allowing the roulette roll to be possible.
+  * The Mumbai Train exit is possible without the leaver and subsequent collateral damage. Something I overlooked when HITMAN 2 launched. The listing and image are updated to fix this.
+  * "Illusions Of Grandeur" has different lighting than "Chasing A Ghost", so I've updated the exit images to match that.
+  * Each Mumbai Taxi exit (and their coin requirements) are now differentiated and have proper images to match.
+  * Each Manhole exit for both "Another Life" and "Bitter Pill" have been differentiated and have proper images to match.
 * **Added missing Restrictable Mechanic.** At some point, IOI added the option to disable security Camera Grid to Hitman 2, but I only noticed it in Hitman III... Either way, that is now one of the Gameplay Restrictions that can be rolled.
 * **Other Fixes:**
   * The speedboat exit in "Club 27" requires a key on Master Difficulty. The image and listing now reflect that.
   * IOI updated the menu background image and objective image for Sapienza, so the Roulette now uses those images.
   * Minor issue where too much text in a section wasn't gaining ellipses. Also, reminder that you can hover over these and the text will scroll to be readable.
+  * In some cases, the textarea for Export Roulette was showing past roll weapon results where they shouldn't be.
