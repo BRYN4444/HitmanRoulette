@@ -44,7 +44,7 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
   * **Contract Mode Targets:** 90 Chongqing Targets & 140 Mendoza added (not including the mission default ones).
   * **Chongqing Manhole Exits** have been differentiated and have proper images to match.
 * **Contracts Mode Roulette Target Amount** can now be set. By default, the amount of targets are a random maximum of 5. You can now change a slider to force a set amount instead of hoping to get the amount you want.
-* **HITMAN III:**
+* **Other Fixes:**
   * Some Contract Mode Targets from main missions did not have images for bonus missions.
 
 #### Prior Updates (Feb. 1 - March 23, 2021)
@@ -60,11 +60,8 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 * **Hitman III Appearance added.** By default, the Roulette will now look like the menus of HITMAN III. But as a reminder, the past game's styles are also selectable: Hitman 1 Red, Hitman GOTY Grey, and Hitman 2 "Hot Magenta".
 * **Mobile Friendly / Low Resolution Browsing.** Fixed a few display and HTML bugs while adding H3 support.
 * **Select Mission Listing Changes and Fixes.**
-  * Dropped "H1" wording from Seasonal Content. This is in preparation for the upcoming Easter theming being in HITMAN III's Berlin.
-  * With HITMAN III's Seasonal Content on another timed rotation:
-    * I've specified where Seasonal Content can be played: Holiday Hoarders (H1 & H2) and Snow Festival (H2).
-    * I've made the existing Holiday Hoarders and Snow Festival missions no longer active by default.
-  * The "All Locations" Mission Grouping toggle has been altered (and as such renamed) to be for all accessible locations within HITMAN III itself (if you own everything, that is).
+  * Dropped "H1" wording from Seasonal Content and specified where Seasonal Content can be played: Holiday Hoarders (H1 & H2) and Snow Festival (H2).
+  * The "All Locations" Mission Grouping toggle has been altered (and as such renamed) to be for all accessible locations within HITMAN III itself (if you own everything, that is). The existing Holiday Hoarders and Snow Festival missions no longer active by default until they're added to H3.
   * Fixed an issue where missions were staying restricted to Contracts Mode Roulette when switching back to Mission Mode Roulette.
   * HITMAN III levels were able to be individually toggled on mobile.
 * **Updates to some Exit Points:**
