@@ -1112,6 +1112,10 @@ div[id^="subplate"].intel span p {
 	display:none;
 	font-weight:normal;
 }
+#nameplate #subtitle b {
+	display:none;
+	font-weight:bold;
+}
 #nameplate #subtitle {
 	font-size:21px;
 	font-weight:700;

@@ -266,8 +266,17 @@ function writeEverything(result) {
 	document.getElementById("background").className = result.missionCode;
 	document.getElementById("map_place").innerHTML = result.missionLocation;
 	document.getElementById("map_place2").innerHTML = result.missionLocation;
+	
+	var modeIndex = document.getElementById("modeselect");
+	var mode = modeIndex.options[modeIndex.selectedIndex].value;
+	if((mode == "CONEASY" || mode == "CONHARD") && result.missionTitle == "Freeform Training") {
+	document.getElementById("map_name").innerHTML = "Tutorial";
+	document.getElementById("map_name2").innerHTML = "Tutorial";
+	}
+	else {
 	document.getElementById("map_name").innerHTML = result.missionTitle;
 	document.getElementById("map_name2").innerHTML = result.missionTitle;
+	}
 	
 	//Start and Exit
 	var exitModeIndex = document.getElementById("startexit");
@@ -325,8 +334,7 @@ function writeEverything(result) {
 		document.getElementById("input_exitreq").value = "";
 	};
 	
-	var modeIndex = document.getElementById("modeselect");
-	var mode = modeIndex.options[modeIndex.selectedIndex].value;
+	// Display Contracts Mode Target Images in Tall Format regardless of Theme
 	if (mode == "CONEASY" || mode == "CONHARD") { var contractmode = " contarget" }
 	else if (mode == "MAIN" && result.missionTitle == "Apex Predator") { var contractmode = " contarget" }
 	else { var contractmode = "" }
