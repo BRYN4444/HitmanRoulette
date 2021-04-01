@@ -394,6 +394,7 @@
 .club-exit-DeliveryScooter { background-image: url('../img/exit/DeliveryScooter.png'); }
 .club-exit-Motorcycle { background-image: url('../img/exit/Motorcycle-ApexPredator.png'); }
 .club-exit-UFO { background-image: url('../img/exit/UFO.png'); }
+.club-exit-ET { background-image: url('../img/exit/ET.png'); }
 .archive-exit-ApartmentSafeHouse { background-image: url('../img/exit/ApartmentSafeHouse.png'); }
 .archive-exit-Scooter { background-image: url('../img/exit/Scooter-EndOfAnEra.png'); }
 .archive-exit-ManholeRestaurantAlley { background-image: url('../img/exit/ManholeRestaurantAlley.png'); }
@@ -417,12 +418,25 @@ div[class^="ElusiveTarget"] { background-image: url('../img/targetcon/NPC.jpg');
 .KalvinRitter-training.contarget { background-size: auto 100% !important; }
 
 .TerryNorfolk-training { background-image: url('../img/targetcon/TerryNorfolk.jpg'); }
-.ThomasCross-training { background-image: url('../img/targetcon/ThomasCross.jpg'); }
+.ThomasCross-training, .NathanMelendez-training, .JoshuaDemarest-training { background-image: url('../img/targetcon/ThomasCross.jpg'); }
 .IsabellaCaruso-training { background-image: url('../img/targetcon/IsabellaCaruso.jpg'); }
 .CalistaHoff-training { background-image: url('../img/targetcon/CalistaHoff.jpg'); }
-.RonnieAguilar-training { background-image: url('../img/targetcon/RonnieAguilar.jpg'); }
+.RonnieAguilar-training, .ReginaldGibson-training { background-image: url('../img/targetcon/RonnieAguilar.jpg'); }
 .OliviaDTrent-training { background-image: url('../img/targetcon/OliviaDTrent.jpg'); }
 .JamesPotts-training { background-image: url('../img/targetcon/JamesPotts.jpg'); }
+.EwanRoberts-training { background-image: url('../img/targetcon/EwanRoberts.jpg'); }
+.JosephHarding-training, .BenFinch-training { background-image: url('../img/targetcon/JosephHarding.jpg'); }
+.RobertRWhite-training, .MasonPerkins-training { background-image: url('../img/targetcon/RobertRWhite.jpg'); }
+.MatthewWarren-training { background-image: url('../img/targetcon/MatthewWarren.jpg'); }
+.JordanReeves-training, .MichaelCarter-training { background-image: url('../img/targetcon/JordanReeves.jpg'); }
+.SebastianGodfrey-training { background-image: url('../img/targetcon/SebastianGodfrey.jpg'); }
+.AlexPerry-training { background-image: url('../img/targetcon/AlexPerry.jpg'); }
+.AustinFerguson-training, .JoshSinclair-training, .JoshSykes-training { background-image: url('../img/targetcon/AustinFerguson.jpg'); }
+.JeffreyTMyers-training, .FinlayBlackburn-training { background-image: url('../img/targetcon/JeffreyTMyers.jpg'); }
+.EvanHolden-training, .JakeWarren-training { background-image: url('../img/targetcon/EvanHolden.jpg'); }
+.CoreyHicks-training { background-image: url('../img/targetcon/CoreyHicks.jpg'); }
+.PeterHolston-training { background-image: url('../img/targetcon/PeterHolston.jpg'); }
+.MichaelSDavis-training { background-image: url('../img/targetcon/MichaelSDavis.jpg'); }
 
 /* The Final Test */
 .JasperKnight-test { background-image: url('../img/target/JasperKnight.jpg'); }
@@ -1407,6 +1421,7 @@ div[class^="ElusiveTarget"] { background-image: url('../img/targetcon/NPC.jpg');
 .ProvidenceMembersMayBeEliminated { background-image: url('../img/obj/ObjProvidence.png'); }
 
 /*** Extra Objectives & Camera Mode***/
+.CameraUnavailable { background-image: url('../img/camera/CameraUnavailable.png'); }
 .PhotographicProof { background-image: url('../img/camera/PhotographicProof.png'); }
 
 /** ICA Facility **/
