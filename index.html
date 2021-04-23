@@ -32,40 +32,46 @@
 	<body>
 		<noscript>Hitman Roulette requires Javascript to work. Please enable Javascript in your browser.</noscript>
 		<div id="overlay-mode" class="hidden">
-			<div id="overlay-close"><span id="overlay-message" style="display:none;">Click to return to the Roulette Page.</span></div>
-			<div id="overlay-target1" class="click"></div>
-			<div id="overlay-target-intel1"></div>
-			<div id="overlay-target2" class="click"></div>
-			<div id="overlay-target-intel2"></div>
-			<div id="overlay-target3" class="click"></div>
-			<div id="overlay-target-intel3"></div>
-			<div id="overlay-target4" class="click"></div>
-			<div id="overlay-target-intel4"></div>
-			<div id="overlay-target5" class="click"></div>
-			<div id="overlay-target-intel5"></div>
-			<div id="overlay-objective" class="click"></div>
-			<div id="overlay-objectivex" class="click"></div>
-			<div id="overlay-camera" class="click"></div>
-			<div id="overlay-exit"></div>
-			<div id="overlay-complicationi"></div>
-			<div id="overlay-complication1"></div>
-			<div id="overlay-complication2"></div>
-			<div id="overlay-complication3"></div>
-			<div id="overlay-complication4"></div>
-			<div id="overlay-complication5"></div>
-			<div id="overlay-complication6"></div>
-			<div id="overlay-challenge_restriction"></div>
-			<div id="overlay-challenge_timelimit"></div>
-			<div id="overlay-challenge_rating"></div>
-			<div id="overlay-info">
-				<div id="overlay-box">
-					<div id="overlay-box-close">Close Box</div>
-					<div id="overlay-box-tip">(Click Roulette Logo to Close Overlay)</div>
-					<div id="overlay-box-row1">This box</div>
-					<div id="overlay-box-row2">may now</div>
-					<div id="overlay-box-row3">be somewhat</div>
-					<div id="overlay-box-row4">pointless.</div>
-				</div>
+			<div id="overlay-adjust"></div>
+			<div id="overlay-list">
+				<div id="overlay-close"><span id="overlay-message" style="display:none;">Click to return to the Roulette Page.</span></div>
+				<div id="overlay-pin-target1" class="mini"></div>
+				<div id="overlay-target1" class="click"></div>
+				<div id="overlay-pin-target2" class="mini"></div>
+				<div id="overlay-target2" class="click"></div>
+				<div id="overlay-pin-target3" class="mini"></div>
+				<div id="overlay-target3" class="click"></div>
+				<div id="overlay-pin-target4" class="mini"></div>
+				<div id="overlay-target4" class="click"></div>
+				<div id="overlay-pin-target5" class="mini"></div>
+				<div id="overlay-target5" class="click"></div>
+				<div id="overlay-pin-objective" class="mini"></div>
+				<div id="overlay-objective" class="click"></div>
+				<div id="overlay-pin-objectivex" class="mini"></div>
+				<div id="overlay-objectivex" class="click"></div>
+				<div id="overlay-pin-camera" class="mini"></div>
+				<div id="overlay-camera" class="click"></div>
+				<div id="overlay-exit"></div>
+				<div id="overlay-complicationi"></div>
+				<div id="overlay-complication1"></div>
+				<div id="overlay-complication2"></div>
+				<div id="overlay-complication3"></div>
+				<div id="overlay-complication4"></div>
+				<div id="overlay-complication5"></div>
+				<div id="overlay-complication6"></div>
+				<div id="overlay-challenge_restriction"></div>
+				<div id="overlay-challenge_timelimit"></div>
+				<div id="overlay-challenge_rating"></div>
+			</div>
+			<div id="overlay-details">
+				<div id="overlay-image-target1" class="hidden"></div>
+				<div id="overlay-image-target2" class="hidden"></div>
+				<div id="overlay-image-target3" class="hidden"></div>				
+				<div id="overlay-image-target4" class="hidden"></div>				
+				<div id="overlay-image-target5" class="hidden"></div>
+				<div id="overlay-image-objective" class="hidden"></div>
+				<div id="overlay-image-objectivex" class="hidden"></div>				
+				<div id="overlay-image-camera" class="hidden"></div>
 			</div>
 		</div>
 		<span id="overlay-toggle">
@@ -79,16 +85,35 @@
 							<p>You can modify the formatting above before selecting SAVE AS TEXTFILE.</p>
 						</span>
 						<span id="popup-overlay" class="hidden">
-							<h1>About Stream Overlay</h1>
+							<h1>Setup Stream Overlay</h1>
+							<p>Stream Overlay benefits viewers of your stream by giving them an aesthetically matching list of Roulette objectives over top of your gameplay.</p>
+							<br />
+							<p>Follow these steps to setting up the Roulette's Stream Overlay:</p>
+							<ul>
+								<li>Add HITMAN™, HITMAN™2, or HITMAN™III to your streaming program as normal.</li>
+								<li>Through the game's Gameplay Options, set Objectives to Always Off. The Roulette generated targets/objectives will sit in the upper left corner for your viewers.</li>
+								<li>Add HitmanRoulette.com as a Browser Source to your streaming platform and ensure that it covers the game footage exactly.</li>
+								<li>Navigate the Roulette as normal, choosing the missions and settings you perfer.</li>
+								<li>Issue Roulette till you're satisfied. Clicking the Enable Overlay button in the corner will display your generated Roulette over top of your gameplay footage where the usual Mission Objectives are listed.</li>
+							</ul>
+							<br />
+							<p>You can interact with the Stream Overlay to toggle things that will help you keep on track:</p>
+							<ul>
+								<li>Clicking a target/objective will mark it as completed with a checkmark.</li>
+								<li>Hovering over a target/objective and clicking the pin will show a relevent picture. If you've pinned a Contract Mode Target, Intel on their location will be listed here if you've enabled the option.</li>
+							</ul>
+							<br />
+							<p>Please test everything out before you go live to your viewers! If things don't work out for you, you can always use the regular Export Roulette option to generate a Textfile instead.</p>
+							<!--
+								<li>...</li>
 							<p>...</p>
-							<p>...</p>
+							<p>Note that the website isn't built for resolutions higher than 1080p, so adjust/zoom the Browser Source if needed.</p>//-->
 						</span>
 					</div>
-					<button id="save">SAVE AS TEXTFILE</button>
-					<!--<button id="overlay">DISPLAY AS STREAM OVERLAY</button> Stream Overlay option coming soon?
-					<button id="overlay-help">ABOUT STREAM OVERLAY</button>
-					<button id="save-return" class="hidden">RETURN TO TEXTFILE</button>//-->					
-					<button id="close">CLOSE</button>
+					<button id="save">Save As Textfile</button>					
+					<button id="close">Close</button>
+					<button id="continue" class="hidden">Continue with Stream Overlay Mode</button>
+					<button id="return" class="hidden">Return to Export Roulette Mode</button>
 				</div>
 			</div>
 			<div id="header">
@@ -188,7 +213,7 @@
 							<div id="notes">
 								<img id="notice" class="shrink" src="./img/general/blank.png">
 								<p id="wording">
-									<b>Contains spoilers</b> for the entire HITMAN trilogy.
+									<b>Contains spoilers</b> for the entire modern HITMAN trilogy.
 								</p>
 								<p id="wording">
 									By default, any location could appear. Use "Select Missions" above to specify by mission, game, and/or DLC instead.
@@ -202,12 +227,12 @@
 								</ul>
 								<img id="list" class="shrink" src="./img/general/blank.png">
 								<p id="wording">
-									Remaining <b>HITMAN III</b> Contracts Mode Targets added.
+									Check on <a href="https://github.com/BRYN4444/HitmanRoulette#latest-updates" target="_blank">GitHub</a> for details on the latest Roulette updates.
 								</p>
 							</div>
 							<div id="nameplate">
 								<span>
-									<p id="title">Last Updated: Match 31st, 2021</p>
+									<p id="title">Last Updated: April 22nd, 2021</p>
 									<p id="subtitle">Roulette Features</p>
 								</span>
 							</div>
@@ -248,7 +273,9 @@
 						<textarea id="input_targetintel5" class="clearme"></textarea>
 						
 						<textarea id="input_objective" class="clearme"></textarea>
+						<textarea id="input_objective_overlay" class="clearme"></textarea>
 						<textarea id="input_extraobjective" class="clearme"></textarea>
+						<textarea id="input_extraobjective_overlay" class="clearme"></textarea>
 						
 						<textarea id="input_camera" class="clearme"></textarea>
 						
@@ -950,7 +977,7 @@
 							<b>Contracts Mode Roulette</b><span>[Off]</span>
 						</label>
 						<label id="mode_m" class="mobile" style="display:none;" data-hover="Force the amount of targets in Contracts Mode Roulette. First enable the mode, and then use this slider to set how many targets could appear.<br /><br />#: By default, any amount of targets upto 5 can be generated.">[INFO]:</label>
-						<label id="mode_et" style="display:none;" data-hover="Force the amount of targets in Contracts Mode Roulette. First enable the mode, and then use this slider to set how many targets could appear.<br /><br />#: By default, any amount of targets upto 5 can be generated.">
+						<label id="mode_conamount" style="display:none;" data-hover="Force the amount of targets in Contracts Mode Roulette. First enable the mode, and then use this slider to set how many targets could appear.<br /><br />#: By default, any amount of targets upto 5 can be generated.">
 							<b>Contracts Target Amount</b>
 							<span id="range"><input id="conslider" type="range" min="0" max="5" value="0" />
 							[<span id="conamount">#</span>]</span>
@@ -961,6 +988,9 @@
 							<span id="range"><input id="etslider" type="range" min="0" max="3" value="0" />
 							[<span id="etamount">0</span>]</span>
 						</label>
+						<!--<label id="mode_ol" style="display:none;" data-hover="Replaces the “Export Roulette” button in the corner with “Enable Overlay”. When the Stream Overlay is enabled, the webpage will go transparent except for mission objectives listed as they would be in game. This would allow you to stream the game with the Roulette's targets and objectives layered over top.<br /><br />Once enabled, read the shown instructions on how to use.">
+							<b>Stream Overlay Mode</b><span>[Off]</span>
+						</label>//-->
 						<label id="kill_m" class="mobile" style="display:none;" data-hover="On: Adds a random mission specific disguise requirement for each elimination. These are not shared between targets.<br /><br />Off: Any disguise can be worn during eliminations.">[INFO]:</label>
 						<label id="kill_disguise" for="disguise" style="display:none;" data-hover="On: Adds a random mission specific disguise requirement for each elimination. These are not shared between targets.<br /><br />Off: Any disguise can be worn during eliminations.">
 							<input type="checkbox" id="disguise" value="true" checked />
@@ -990,13 +1020,13 @@
 						<label id="extra_starex" class="both" style="display:none;" data-hover="The roulette will choose start/exit points you must use.<br /><br /><b>[Some Missions gain additional exits after their first playthrough.]</b><br />Both: Start and exit points are both listed.<br />Start Only: Find your own exit location.<br />Exit Only: Select your own starting location.<br />Secret: While you can select your own starting location, the listed exit may require secret actions to make appear.<br />Off: You choose your own start or exit points.">
 							<b>Force Start/Exit</b><span>[Both]</span>
 						</label>
-						<label id="extra_m" class="mobile" style="display:none;" data-hover="On: Adds one extra mission specific task to complete. For example, most of these tasks are in-game Challenges.<br /><br />Off: Only lists mandatory objectives to complete if there are any needed for the mission.">[INFO]:</label>
-						<label id="extra_obj" for="exobj" style="display:none;" data-hover="On: Adds one extra mission specific task to complete. For example, most of these tasks are in-game Challenges.<br /><br />Off: Only lists mandatory objectives to complete if there are any needed for the mission.">
+						<label id="extra_m" class="mobile" style="display:none;" data-hover="On: Adds one extra mission specific task to complete. For example, most of these tasks are in-game Challenges. The types available narrow based on enabling Contracts Mode, Complications, or Achieve Rating.<br /><br />Off: Only lists mandatory objectives to complete if there are any needed for the mission.">[INFO]:</label>
+						<label id="extra_obj" for="exobj" style="display:none;" data-hover="On: Adds one extra mission specific task to complete. For example, most of these tasks are in-game Challenges. The types available narrow based on enabling Contracts Mode, Complications, or Achieve Rating.<br /><br />Off: Only lists mandatory objectives to complete if there are any needed for the mission.">
 							<input type="checkbox" id="exobj" value="true" />
 							<b>Extra Objective</b><span>[Off]</span>
 						</label>
-						<label id="extra_m" class="mobile" style="display:none;" data-hover="On: Adds one mission specific photo to take using the in-game camera gadget. <br /><b>[These are only possible within HITMAN III.]</b><br /><br />Off: No photos will need to be taken.">[INFO]:</label>
-						<label id="extra_camera" for="cameraobj" style="display:none;" data-hover="On: Adds one mission specific photo to take using the in-game camera gadget. <br /><b>[These are only possible within HITMAN III.]</b><br /><br />Off: No photos will need to be taken.">
+						<label id="extra_m" class="mobile" style="display:none;" data-hover="<b>[Only possible within HITMAN III outside of ICA Facility missions.]</b><br />On: Adds one mission specific photo to take using the in-game camera gadget. <br /><br />Off: No photos will need to be taken.">[INFO]:</label>
+						<label id="extra_camera" for="cameraobj" style="display:none;" data-hover="<b>[Only possible within HITMAN III outside of ICA Facility missions.]</b><br />On: Adds one mission specific photo to take using the in-game camera gadget. <br /><br />Off: No photos will need to be taken.">
 							<input type="checkbox" id="cameraobj" value="true" />
 							<b>Photo Objective</b><span>[Off]</span>
 						</label>
@@ -1178,6 +1208,7 @@
 				<p class="condensed"><a href="https://hitman.com/" target="_blank">Hitman</a>™ belongs to <a href="https://ioi.dk/" target="_blank">IO Interactive</a>.</p>
 			</div>
 			<button id="saveroulette" disabled="true">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Export Roulette</button>
+			<button id="enableoverlay" class="hidden" disabled="true">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Enable Overlay</button>
 			<div id="background"></div>
 		</span>
 		

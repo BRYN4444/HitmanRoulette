@@ -532,6 +532,9 @@ html.h3theme, html { /* Variables for Hitman 2 Styled Theme & Images */
 	--overlaytarget:url("../img/general/h2theme/overlay-target.png");
 	--overlayintel:url("../img/general/h2theme/overlay-intel.png");
 	--overlayobjective:url("../img/general/h2theme/overlay-objective.png");
+	--overlaycamera:url("../img/general/h2theme/overlay-camera.png");
+	--overlaypin:url("../img/general/h2theme/overlay-pin.png");
+	--overlaypinlit:url("../img/general/h2theme/overlay-pinlit.png");
 	--overlayexit:url("../img/general/h2theme/overlay-exit.png");
 	--overlaycomplication:url("../img/general/h2theme/overlay-complication.png");
 	--overlaychallenge:url("../img/general/h2theme/overlay-challenge.png");
@@ -1707,10 +1710,10 @@ p#ioi { font-size:30px; }
 #popwrap {
 	width:50%;
 	display: grid;
-	grid-template-columns: auto auto;
-	grid-template-rows: auto repeat(2, 70px); /* Overlay Enabled? Set to: auto repeat(3, 70px)*/
-	grid-column-gap: 10px;
-	grid-row-gap: 10px;
+	/*grid-template-columns: auto auto;*/
+	grid-template-rows: auto repeat(4, 70px);
+	/*grid-column-gap: 10px;
+	grid-row-gap: 10px;*/
 }
 @media only screen and (max-width: 1470px) {
 	#popwrap { width:75%; }
@@ -1727,27 +1730,42 @@ p#ioi { font-size:30px; }
 	font-size:25px;
 	font-weight:bold;
 	border:none;
+	text-transform: var(--uppercase);
 	color:var(--popupbuttoncolor);
 	background-color:var(--popupbuttonbg);
 	background-size:45px;
 	background-repeat:no-repeat;
 	background-position:left 15px center;
+	margin-top:10px;
 }
 #popwrap button:hover {
 	color:var(--popupbuttoncolorhover);
 	background-color:var(--popupbuttonbghover);
 }
+#popwrap button.hidden {
+	display:none;
+}
 button#save {
-	grid-area: 2 / 1 / 3 / 3;
+	/*grid-area: 2 / 1 / 3 / 3;*/
 	background-image:var(--buttonsave);
 }
-button#save[disabled], button#save[disabled]:hover {
+button#save:hover { background-image:var(--buttonsaveon); }
+button#close {
+	/*grid-area: 3 / 1 / 4 / 3;*/
+	background-image:var(--buttonclose);
+}
+button#close:hover { background-image:var(--buttoncloseon); }
+button#continue { background-image:var(--buttonoverlay); }
+button#continue:hover { background-image:var(--buttonoverlayon); }
+button#return { background-image:var(--buttonclose); }
+button#return:hover { background-image:var(--buttoncloseon); }
+
+/*button#save[disabled], button#save[disabled]:hover {
 	background-image:var(--buttonsavedisabled);
 	background-color: var(--savebuttonbgoff);
 	color: var(--savebuttoncoloroff);
 	cursor: default;
 }
-button#save:hover { background-image:var(--buttonsaveon); }
 button#overlay { background-image:var(--buttonoverlay); }
 button#overlay:hover { background-image:var(--buttonoverlayon); }
 button#overlay-help { background-image:var(--buttonoverlayhelp); }
@@ -1760,15 +1778,10 @@ button#save-return:hover { background-image:var(--buttonsavereturnon); }
 @media only screen and (max-width: 500px) {
 	#popup h1 { font-size:30px !important; }
 	button#overlay, button#overlay-help, button#save-return { font-size:15px; }
-}
-button#close {
-	grid-area: 3 / 1 / 4 / 3; /* Overlay Enabled? Set to: 4 / 1 / 5 / 3*/
-	background-image:var(--buttonclose);
-}
-button#close:hover { background-image:var(--buttoncloseon); }
+}*/
 #popup-save.hidden, #popup-overlay.hidden, #save-return.hidden, #overlay-help.hidden { display:none; }
 #popup {
-	grid-area: 1 / 1 / 2 / 3;
+	/*grid-area: 1 / 1 / 2 / 3;*/
 	background:var(--popupbg);
 	color:var(--popupcolor);
 	padding:0 0 10px;
@@ -1797,6 +1810,11 @@ button#close:hover { background-image:var(--buttoncloseon); }
 	width:97.5%;
 	margin:5px auto 10px;
 }
+#popup ul {
+	text-align:left;
+	font-weight: 300;
+	margin:0 10px 0 0;
+}
 @media only screen and (max-height: 800px) {
 	#popwrap {
 		grid-template-rows: auto repeat(3, 7vh);
@@ -1811,7 +1829,7 @@ button#close:hover { background-image:var(--buttoncloseon); }
 	}
 }
 textarea.clearme { display:none; }
-#saveroulette {
+#saveroulette, #enableoverlay {
 	position: absolute;
 	right:0px;
 	bottom:6.5vh;
@@ -1837,24 +1855,163 @@ textarea.clearme { display:none; }
 @media only screen and (max-width: 808px) {
 	#saveroulette {	display:none !important; }
 }
-#saveroulette.hidden{ right:-300px; }
-#saveroulette:hover {
+#saveroulette:hover, #enableoverlay:hover {
 	background-color:var(--savebuttonbghover);
 	color:var(--savebuttoncolorhover);
 }
-#saveroulette[disabled], #saveroulette[disabled]:hover {
+#saveroulette[disabled], #saveroulette[disabled]:hover, #enableoverlay[disabled], #enableoverlay[disabled]:hover {
 	background-color:var(--savebuttonbgoff);
 	color:var(--savebuttoncoloroff);
 	cursor:default;
 	opacity:var(--savebuttonoffopacity);
 }
-#saveroulette {	background-image:var(--save); }
+#saveroulette, #enableoverlay {	background-image:var(--save); }
 #subsaveroulette { background-image:var(--save), var(--dotlight); }
-#saveroulette:hover { background-image:var(--savehover); }
+#saveroulette:hover, #enableoverlay:hover { background-image:var(--savehover); }
 #subsaveroulette:hover { background-image:var(--savehover), var(--dotdark); }
-#saveroulette[disabled] { background-image:var(--saveoff); }
+#saveroulette[disabled], #enableoverlay[disabled] { background-image:var(--saveoff); }
 #subsaveroulette[disabled] { background-image:var(--saveoff), var(--dotmid); }
 
+
+#overlay-mode {
+	color:white;
+	text-transform:uppercase;
+	font-size:9pt;
+	font-weight:500;
+	display: grid;
+	grid-template-columns: auto 1fr 50%;
+	height: 100%;
+} 
+
+#overlay-adjust {
+	resize:horizontal;
+	transform: rotateX(180deg);
+	overflow:hidden;
+	min-width:20px;
+	max-width:200px;
+}
+
+#overlay-list {
+	display:grid;
+	grid-template-columns: 23px auto; 
+	grid-template-rows: repeat(19, auto);
+	align-content: start;
+}
+
+#overlay-close {
+	background-image:url("../img/general/logo.png");
+	background-position:left center;
+	background-size:auto 50px !important;
+	height:60px;
+	cursor:pointer;
+	display:grid;
+	align-items: center;
+	padding-left:190px !important;
+	margin-left:22px;
+	grid-area: 1 / 1 / 2 / 3;
+}
+#overlay-mode.hidden, #overlay-list div:empty { display:none; }
+#overlay-list div {
+	background-repeat:no-repeat;
+	background-size:18px;
+	padding:2px 0 3px 24px;
+	min-height:18px
+}
+#overlay-list div.mini, #overlay-list div.pin, #overlay-list div.pinned {
+	padding:0px;
+	font-size:1px;
+	color:transparent;
+	overflow:hidden;
+}
+#overlay-list div.pin, #overlay-list div.pinned { background-image:var(--overlaypin); cursor:pointer; }
+#overlay-list div.pin:hover { background-image:var(--overlaypinlit);cursor:pointer; }
+div[id^=overlay-target] { background-image:var(--overlaytarget);cursor:pointer; }
+div[id^=overlay-objective] { background-image:var(--overlayobjective);cursor:pointer; }
+#overlay-camera { background-image:var(--overlaycamera);cursor:pointer; }
+
+#overlay-mode div.complete:hover { background-image:var(--overlayx); }
+div[id^=overlay-target]:hover, div[id^=overlay-objective]:hover, #overlay-camera:hover { background-image:var(--overlaycheck); }
+
+
+
+#overlay-pin-target1 { grid-area: 2 / 1 / 3 / 2; }
+#overlay-target1 { grid-area: 2 / 2 / 3 / 3; }
+#overlay-pin-target2 { grid-area: 3 / 1 / 4 / 2; }
+#overlay-target2 { grid-area: 3 / 2 / 4 / 3; }
+#overlay-pin-target3 { grid-area: 4 / 1 / 5 / 2; }
+#overlay-target3 { grid-area: 4 / 2 / 5 / 3; }
+#overlay-pin-target4 { grid-area: 5 / 1 / 6 / 2; }
+#overlay-target4 { grid-area: 5 / 2 / 6 / 3; }
+#overlay-pin-target5 { grid-area: 6 / 1 / 7 / 2; }
+#overlay-target5 { grid-area: 6 / 2 / 7 / 3; }
+#overlay-pin-objective { grid-area: 7 / 1 / 8 / 2; }
+#overlay-objective { grid-area: 7 / 2 / 8 / 3; }
+#overlay-pin-objectivex { grid-area: 8 / 1 / 9 / 2; }
+#overlay-objectivex { grid-area: 8 / 2 / 9 / 3; }
+#overlay-pin-camera { grid-area: 9 / 1 / 10 / 2; }
+#overlay-camera { grid-area: 9 / 2 / 10 / 3; } 
+
+#overlay-exit {
+	background-image:var(--overlayexit);
+	grid-area: 10 / 1 / 11 / 3;
+	margin-left: 23px;
+}
+div[id^=overlay-complication] { background-image:var(--overlaycomplication); }
+#overlay-complicationi { grid-area: 11 / 1 / 12 / 3;margin-left: 23px; }
+#overlay-complication1 { grid-area: 12 / 1 / 13 / 3;margin-left: 23px; }
+#overlay-complication2 { grid-area: 13 / 1 / 14 / 3;margin-left: 23px; }
+#overlay-complication3 { grid-area: 14 / 1 / 15 / 3;margin-left: 23px; }
+#overlay-complication4 { grid-area: 15 / 1 / 16 / 3;margin-left: 23px; }
+#overlay-complication5 { grid-area: 16 / 1 / 17 / 3;margin-left: 23px; }
+#overlay-complication6 { grid-area: 17 / 1 / 18 / 3;margin-left: 23px; }
+div[id^=overlay-challenge] { background-image:var(--overlaychallenge); }
+#overlay-challenge_restriction { grid-area: 18 / 1 / 19 / 3;margin-left: 23px; }
+#overlay-challenge_timelimit { grid-area: 19 / 1 / 20 / 3;margin-left: 23px; }
+#overlay-challenge_rating { grid-area: 20 / 1 / 21 / 3;margin-left: 23px; }
+
+#overlay-details {}
+div[id^=overlay-image] {
+	float:right;
+	width:246px;
+	height:353px;
+	margin:10px 10px 0 0;
+	border:3px solid #00fac8;
+	background-size:auto 100%;
+	background-position:top center;
+}
+div[id^=overlay-image].hidden, div[id^=overlay-image]:empty div[id^=overlay-image]:empty.hidden, div[id^=overlay-intel]:empty { display:none; }
+#overlay-image #nameplate {
+    background-position: left 4px bottom 4px;
+    background-size: 28px;
+    height: 36px;
+}
+div[id^=overlay-intel] {
+height: auto !important;
+display: flex;
+flex-direction: column;
+justify-content: center;
+background-color: transparent;
+background-image: url("../img/general/h2theme/intel-sfull.png");
+background-repeat: no-repeat;
+background-position: left 2px center;
+background-size: 33px;
+padding: 0 5px 0 36px;
+color: #ffffff;
+font-size: 13px;
+font-weight: 400;
+line-height: 1;
+white-space: normal;
+text-shadow: 0 0 6px #000000, 0 0 2px #000000, 0 0 2px #000000, 0 0 1px #000000, 0 0 1px #000000, 0 0 1px #000000;
+}
+#overlay-image #nameplate span { margin: 3px 0 0 32px; }
+#overlay-image #nameplate #title, #overlay-image #nameplate #title-alt { font-size: 13px; }
+#overlay-image #nameplate #subtitle { font-size: 18px; }
+#overlay-toggle.hidden { display:none; }
+body.hidden { background-color:transparent !important; }
+#saveroulette.hidden, #enableoverlay.hidden { right:-300px !important; }
+
+
+/*
 #overlay-mode {
 	color:white;
 	text-transform:uppercase;
@@ -1944,6 +2101,8 @@ div[id^=overlay-target-intel], div[id^=overlay-target-intel]:hover {
 	background-size:20px !important;
 	padding-left:25px;
 }
+
+*/
 
 #scrollbar {
 	min-height:3.5vh;

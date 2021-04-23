@@ -1,5 +1,6 @@
 //Enjoy looking at the ametuer code work I've done.
 $(document).ready(function() {
+	$( "#enableoverlay" ).hide('slide',{ direction: 'right' }, 500);
 	
 	/******Theme Cookie******/
 	if(document.cookie == "theme=H1") {
@@ -48,7 +49,7 @@ $(document).ready(function() {
 	});
 
 	/******Hide History & Contract Save Buttons on Refresh******/
-	$( ".historybtn, #submenu_obj, #submenu_comp, #submenu_chal, #subsubmenu_obj, #subsubmenu_comp, #subsubmenu_chal, #saveroulette, #subsaveroulette" ).prop('disabled', true);
+	$( ".historybtn, #submenu_obj, #submenu_comp, #submenu_chal, #subsubmenu_obj, #subsubmenu_comp, #subsubmenu_chal, #saveroulette, #subsaveroulette, #enableoverlay" ).prop('disabled', true);
 	$( ".clearme" ).val("");
 	
 	/******Roulette Greeting******/
@@ -70,6 +71,7 @@ $(document).ready(function() {
 			alert("You must select at least one mission.");
 		}
 		else {
+			//Make Sure these settings match with the mode_ol "Read" click
 			$( this ).addClass( "on" );
 			$( this ).siblings().removeClass( "on" );
 			$( "#header, #headermobile, #submenumobile" ).removeClass( "off" );
@@ -79,7 +81,8 @@ $(document).ready(function() {
 			$( "#contract, .submenumobile_mission" ).show();
 			if($("#background").hasClass()) { $( "body" ).addClass( "hide" ); };
 			$( "#background" ).removeClass( "hide" );
-			$( "#saveroulette" ).show('slide',{ direction: 'right' }, 500);
+			$( "#saveroulette:not('.hidden')" ).show('slide',{ direction: 'right' }, 500);
+			$( "#enableoverlay:not('.hidden')" ).show('slide',{ direction: 'right' }, 500);
 		};
 	});
 	$( "#missions" ).click(function() {
@@ -93,7 +96,8 @@ $(document).ready(function() {
 		$( "#maps, .submenumobile_map" ).show();
 		$( "body" ).removeClass( "hide" );
 		$( "#background" ).addClass( "hide" );
-		$( "#saveroulette" ).hide('slide',{ direction: 'right' }, 500);
+		$( "#saveroulette:not('.hidden')" ).hide('slide',{ direction: 'right' }, 500);
+		$( "#enableoverlay:not('.hidden')" ).hide('slide',{ direction: 'right' }, 500);
 		
 		if($("#mode_con").hasClass("intel") || $("#mode_con").hasClass("hunt")) {
 			$("input.noncon").prop('checked', false).prop('disabled', true).parent().parent().removeClass("on").parent().addClass("lock");
@@ -102,35 +106,47 @@ $(document).ready(function() {
 		};
 	});
 	$( "#options" ).click(function() {
-		$( this ).addClass( "on" );
-		$( this ).siblings().removeClass( "on" );
-		$( "#header, #headermobile, #submenumobile" ).addClass( "off" );
-		$( "#content" ).addClass( "tall" );
-		$( "#content" ).removeClass( "med" );
-		$( "#contract, #maps, #credits" ).hide();
-		$( "#settings" ).show();
-		$( "body" ).removeClass( "hide" );
-		$( "#background" ).addClass( "hide" );
-		$( "#saveroulette" ).hide('slide',{ direction: 'right' }, 500);
+		if($("#maps input:checked").length == 0) {
+			alert("You must select at least one mission.");
+		}
+		else {
+			$( this ).addClass( "on" );
+			$( this ).siblings().removeClass( "on" );
+			$( "#header, #headermobile, #submenumobile" ).addClass( "off" );
+			$( "#content" ).addClass( "tall" );
+			$( "#content" ).removeClass( "med" );
+			$( "#contract, #maps, #credits" ).hide();
+			$( "#settings" ).show();
+			$( "body" ).removeClass( "hide" );
+			$( "#background" ).addClass( "hide" );
+			$( "#saveroulette:not('.hidden')" ).hide('slide',{ direction: 'right' }, 500);
+			$( "#enableoverlay:not('.hidden')" ).hide('slide',{ direction: 'right' }, 500);
+		};
 	});
 	$( "#about" ).click(function() {
-		$( this ).addClass( "on" );
-		$( this ).siblings().removeClass( "on" );
-		$( "#header, #headermobile, #submenumobile" ).addClass( "off" );
-		$( "#content" ).addClass( "tall" );
-		$( "#content" ).removeClass( "med" );
-		$( "#contract, #maps, #settings" ).hide();
-		$( "#credits" ).show();
-		$( "body" ).removeClass( "hide" );
-		$( "#background" ).addClass( "hide" );
-		$( "#saveroulette" ).hide('slide',{ direction: 'right' }, 500);
+		if($("#maps input:checked").length == 0) {
+			alert("You must select at least one mission.");
+		}
+		else {
+			$( this ).addClass( "on" );
+			$( this ).siblings().removeClass( "on" );
+			$( "#header, #headermobile, #submenumobile" ).addClass( "off" );
+			$( "#content" ).addClass( "tall" );
+			$( "#content" ).removeClass( "med" );
+			$( "#contract, #maps, #settings" ).hide();
+			$( "#credits" ).show();
+			$( "body" ).removeClass( "hide" );
+			$( "#background" ).addClass( "hide" );
+			$( "#saveroulette:not('.hidden')" ).hide('slide',{ direction: 'right' }, 500);
+			$( "#enableoverlay:not('.hidden')" ).hide('slide',{ direction: 'right' }, 500);
+		};
 	});
 	
 	/******Roulette Submenu Buttons******/
 	$( "#submenu_obj" ).click(function() {
 		$( this ).addClass( "on" );
 		$( "#subsubmenu_obj" ).addClass( "on" );
-		$( "#travel, div[id^='target'], div[id^='objective']" ).show();
+		$( "#travel, div[id^='target'], div[id^='objective'], #camera" ).show();
 		$( "div[id^='complication'], #restriction, #timelimit, #ratingget, #diffget, #challengesi" ).hide();
 		$( this ).siblings().removeClass( "on" );
 		$( "#subsubmenu_comp, #subsubmenu_chal" ).removeClass( "on" );
@@ -139,7 +155,7 @@ $(document).ready(function() {
 		$( this ).addClass( "on" );
 		$( "#subsubmenu_comp" ).addClass( "on" );
 		$( "div[id^='complication']" ).show();
-		$( "#travel, div[id^='target'], div[id^='objective'], #restriction, #timelimit, #ratingget, #diffget, #challengesi" ).hide();
+		$( "#travel, div[id^='target'], div[id^='objective'], #camera, #restriction, #timelimit, #ratingget, #diffget, #challengesi" ).hide();
 		$( this ).siblings().removeClass( "on" );
 		$( "#subsubmenu_obj, #subsubmenu_chal" ).removeClass( "on" );
 	});
@@ -147,14 +163,14 @@ $(document).ready(function() {
 		$( this ).addClass( "on" );
 		$( "#subsubmenu_chal" ).addClass( "on" );
 		$( "#restriction, #timelimit, #ratingget, #diffget, #challengesi" ).show();
-		$( "#travel, div[id^='target'], div[id^='objective'], div[id^='complication']" ).hide();
+		$( "#travel, div[id^='target'], div[id^='objective'], #camera, div[id^='complication']" ).hide();
 		$( this ).siblings().removeClass( "on" );
 		$( "#subsubmenu_obj, #subsubmenu_comp" ).removeClass( "on" );
 	});
 	$( "#submenu_issue" ).click(function() {
 		$( "#map" ).addClass( "on" );
 		$( "#submenu_obj, #subsubmenu_obj" ).addClass( "on" ).prop('disabled', false);
-		$( "#travel, div[id^='target'], div[id^='objective']" ).show();
+		$( "#travel, div[id^='target'], div[id^='objective'], #camera" ).show();
 		$( "div[id^='complication'], div[id^='restriction'], #timelimit, #ratingget, #diffget, #challengesi" ).hide();
 		$( "#submenu_obj" ).siblings().removeClass( "on" );
 		$( "#subsubmenu_comp, #subsubmenu_chal" ).removeClass( "on" );
@@ -336,7 +352,10 @@ $(document).ready(function() {
 		else if($(this).is("#RANDOMH3:not(:checked)")) { // H3 - Off
 			$( "input.h3, input#RANDOM" ).prop('checked', false).parent().parent().removeClass("on");
 		}
-		else if($(this).is("#RANDOM:checked")) { // All Available - On
+		else if($(this).is("#RANDOM:checked") && ($("#mode_con").hasClass("intel") || $("#mode_con").hasClass("hunt")) ) { // All Available Contract Mode - On
+			$( "input#RANDOMH1, input#RANDOMH1BM, input#RANDOMH2, input#RANDOMH2EX, input#RANDOMH3, input.h1, input.h1bm, input#TS, input.h2, input.h2ex, input.h3" ).prop('checked', true).parent().parent().addClass("on");
+		}
+		else if($(this).is("#RANDOM:checked") && !($("#mode_con").hasClass("intel") || $("#mode_con").hasClass("hunt")) ) { // All Available Mission Mode - On
 			$( "input#RANDOMH1, input#RANDOMH1BM, input#RANDOMH2, input#RANDOMH2EX, input#RANDOMH3, input#RANDOMH1PZ, input#RANDOMH2SA, input.h1, input.h1bm, input.h1pz, input.h2, input.h2ex, input.h2sa, input.h3" ).prop('checked', true).parent().parent().addClass("on");
 		}
 		else if($(this).is("#RANDOM:not(:checked)")) { // All Available - Off
@@ -475,6 +494,7 @@ $(document).ready(function() {
 		$( "#settings_subsubmenu label:not(.mobile)" ).css("padding-left","5px");
 		$( "#settings_subsubmenu label.mobile" ).css("padding-right","5px");
 		$( "#theme_cookies" ).css("grid-column","1 / span 2");
+		$( "#mode_ol" ).remove();
 		$( "#settings_subsubmenu label.mobile" ).click(function() {
 			var desc =  $(this).attr("data-hover");
 			$( "#settings_descriptions p" ).html(desc);
@@ -655,8 +675,7 @@ $(document).ready(function() {
 	} else if ($("#startexit").val() == "BOTH") {
 		
 	};
-	
-	
+		
 	$("#game_mech").click(function() {
 		if( $(this).hasClass("off") ) {
 			$(this).removeClass("off").addClass("h2").find("span").text("[H2/H3]");
@@ -679,8 +698,7 @@ $(document).ready(function() {
 	} else if ($("#mechanics").val() == "OFF") {
 		
 	};
-	
-	
+		
 	$("#game_diff").click(function() {
 		if( $(this).hasClass("off") ) {
 			$(this).removeClass("off").addClass("h2").find("span").text("[H2/H3]");
@@ -758,44 +776,65 @@ $(document).ready(function() {
 		e.preventDefault();
 		saveTextAsFile();
 	});
-	$("#save-return").click(function(){
-		$( this ).addClass( "hidden" );
-		$("#overlay-help").removeClass( "hidden" );
-		$("#popup-overlay").addClass( "hidden" );
-		$("#popup-save").removeClass( "hidden" );
-		$("button#save").prop('disabled', false);
-	});
-	$("#overlay-help").click(function(){
-		$( this ).addClass( "hidden" );
-		$("#save-return").removeClass( "hidden" );
-		$("#popup-overlay").removeClass( "hidden" );
-		$("#popup-save").addClass( "hidden" );
-		$("button#save").prop('disabled', true);
-	});
-	$("#close").click(function(){
+	$("#close, #continue").click(function(){
 		$("#shadow").addClass("hidden");
 	});
 	
 	/******Stream Overlay Option & Controls******/
-	$("#overlay").click(function(){
-		$("#overlay-toggle").addClass( "hidden" );
-		$("#overlay-mode").removeClass( "hidden" );
-		$("body").addClass( "overlay-hide" );
-		$("#shadow").addClass("hidden");
-		$("#overlay-message").show().delay(3000).fadeOut(3000);
-		$("#overlay-box").removeClass( "hidden" );
+	$(document).on('click', '#mode_ol:not(".overlaymode")', function() {
+		$("#mode_ol").addClass( "overlaymode" ).find( "span" ).html("[On]");
+		$("#saveroulette, #popup-save, button#save, button#close").addClass("hidden");
+		$("#enableoverlay").removeClass("hidden").show('slide',{ direction: 'right' }, 500);
+		$("#shadow, #popup-overlay, button#continue, button#return").removeClass("hidden");
+		//Make sure the below matches the #roulette click
+		$( "#roulette" ).addClass( "on" );
+		$( "#roulette" ).siblings().removeClass( "on" );
+		$( "#header, #headermobile, #submenumobile" ).removeClass( "off" );
+		$( "#content" ).removeClass( "tall" );
+		$( "#content" ).removeClass( "med" );
+		$( "#maps, #settings, #credits, .submenumobile_map" ).hide();
+		$( "#contract, .submenumobile_mission" ).show();
+		if($("#background").hasClass()) { $( "body" ).addClass( "hide" ); };
+		$( "#background" ).removeClass( "hide" );
 	});
-	$("#overlay-box-close").click(function(){
-		$("#overlay-box").addClass( "hidden" );
+	$(document).on('click', '#mode_ol.overlaymode', function() {
+		$( this ).removeClass( "overlaymode" ).find( "span" ).html("[Off]");
+		$("#enableoverlay").addClass("hidden");
+		$("#saveroulette").removeClass("hidden").hide('slide',{ direction: 'right' }, 500);
 	});
-	$("#overlay-close").click(function(){
-		$("#overlay-toggle").removeClass( "hidden" );
-		$("#overlay-mode").addClass( "hidden" );
-		$("body").removeClass( "overlay-hide" );
+	$(document).on('click', '#return', function() {
+		$("#saveroulette, #popup-save, button#save, button#close").removeClass("hidden");
+		$("#saveroulette").removeClass("hidden").show('slide',{ direction: 'right' }, 500);
+		$("#enableoverlay, #shadow, #popup-overlay, button#continue, button#return").addClass("hidden");
 	});
-	$("#overlay-mode div.click").click(function() {
-		$( this ).toggleClass( "complete" );
-		$( this ).next("div[id^=overlay-target-intel]").toggleClass( "complete" );
+	
+	$("#overlay-list .mini").hover(function() {
+		$(this).addClass("pin");
+	},function() {
+		$(this).removeClass("pin");
+	});
+	$("#overlay-list .click").hover(function() {
+		$(this).prev().addClass("pin");
+	},function() {
+		$(this).prev().removeClass("pin");
+	});
+	$(document).on('click', '#overlay-list .mini', function() {
+		$(this).addClass("pinned").removeClass("mini");
+		$("#overlay-image").removeClass("hidden");
+	});
+	$(document).on('click', '#overlay-list .pinned', function() {
+		$(this).addClass("mini").removeClass("pinned");
+		$("#overlay-image").addClass("hidden");
+	});	
+	
+	$(document).on('click', '#enableoverlay', function() {
+		$("body, #overlay-toggle").addClass( "hidden" );
+		$("#overlay-message").show().delay(6000).fadeOut(3000);
+		$("#overlay-mode").removeClass("hidden");
+	});
+	$(document).on('click', '#overlay-close', function() {
+		$("body, #overlay-toggle").removeClass( "hidden" );
+		$("#overlay-mode").addClass("hidden");
 	});
 	
 });

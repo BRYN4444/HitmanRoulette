@@ -55,7 +55,7 @@ function createExtrasList(exit, eexit) {
 		extras.push("No Disguise Changes|Do not change from your starting disguise at any time during the mission.");
 
 	if (Math.random() < 0.25 && document.getElementById("rating").checked == 0)
-		extras.push("Rowdy Guns|Every ballistic weapon required elimination must be non-silenced.");
+		extras.push("Rowdy Guns|Any ballistic weapon used must be non-silenced.");
 
 	if (Math.random() < 0.25 && document.getElementById("rating").checked == 0)
 		extras.push("No Civilian Casualties|Avoid collateral damage by only eliminating your targets.");
@@ -64,7 +64,7 @@ function createExtrasList(exit, eexit) {
 		extras.push("Do Not Get Spotted|Avoid anyone seeing you performing any illegal action.");
 
 	if (Math.random() < 0.20 && !koExits.includes(exit, eexit) && document.getElementById("exobj").checked == 0)
-		extras.push("No Pacifications|Do not pacify or subdue anyone in any way. This includes using items via melee or throwing.");
+		extras.push("No Pacifications|Do not pacify or subdue anyone in any way. This includes using items via melee/throwing, poisoning, or tranquilizing.");
 
 	if (Math.random() < 0.20)
 		extras.push("Headshots Only|Any shots fired at NPCs must be headshots.");
@@ -75,8 +75,9 @@ function createExtrasList(exit, eexit) {
 	if (Math.random() < 0.30)
 		extras.push("Perfect Shooter|Do not use firearms as distractions or to destroy objects. All shots must hit an NPC, even if they subsequently pass through the NPC and hit a wall.");
 
-	if (Math.random() < 0.25 && document.getElementById("disguise").checked == 0 && !disguiseExits.includes(exit, eexit) )
-		extras.push("One Disguise Change|You are allowed one disguise change while playing the mission.");
+	//Probably Remove This One for Redundancy with No Disguise Changes above
+	//if (Math.random() < 0.25 && document.getElementById("disguise").checked == 0 && !disguiseExits.includes(exit, eexit) )
+	//	extras.push("One Disguise Change|You are allowed one disguise change while playing the mission.");
 	
 	return extras;
 };
@@ -120,13 +121,13 @@ function createWeaponList(container) {
 //reads the "entry" field in mission_information
 function createDisguiseList(container, mission_information) {
 	var disguises = [];
-	// Remove "Ninja", "Rave On", and "Any Suit" from potential disguises when starting in an undercover location
+	// Remove "Ninja", "Recon Gear", "Rave On", and "Any Suit" from potential disguises when starting in an undercover location
 	// The first disguise in the list is always the non-undercover one
 	var undercover_start = suitStarts.indexOf(mission_information.entry) === -1;
 	if (undercover_start)
 		container.disguises.splice(0,1);
 	
-	// For when 'Specific Disguises' is disabed
+	// For when 'Specific Disguises' is disabled
 	if (document.getElementById("disguise").checked)
 		disguises =
 			container.disguises.slice().map(function(e){ return "" + e; });
@@ -213,41 +214,49 @@ function containerToResult(container) {
 		result.exit = container.exit[Math.floor(Math.random()*container.exit.length)];
 	
 	if (mode == "MAIN" && result.missionCode == "virus")
-		result.missionobjective = "DNA Specific Virus|Destroy the virus.";
+		result.missionobjective = "DNA Specific Virus|Destroy the virus.|Destroy the DNA Specific Virus";
 	else if (mode == "MAIN" && result.missionCode == "handoff")
-		result.missionobjective = "Virus Sample|Retrieve the virus sample from one of the targets.";
+		result.missionobjective = "Virus Sample|Retrieve the virus sample from one of the targets.|Retrieve the Virus Sample";
 	else if (mode == "MAIN" && result.missionCode == "construction")
-		result.missionobjective = "Project Proposal|Aquire documents.";
+		result.missionobjective = "Project Proposal|Aquire documents.|Aquire the Project Proposal documents";
 	else if (mode == "MAIN" && result.missionCode == "spread")
-		result.missionobjective = "Eliminate Any Infected|Eliminate anyone who becomes infected. Since the virus spreads through proximity contact, avoid becoming infected yourself. If you become contaminated, find an antidote for yourself within 5 minutes.";
+		result.missionobjective = "Eliminate Any Infected|Eliminate anyone who becomes infected. Since the virus spreads through proximity contact, avoid becoming infected yourself. If you become contaminated, find an antidote for yourself within 5 minutes.|Eliminate Any Infected";
 	else if (mode == "MAIN" && result.missionCode == "controller")
-		result.missionobjective = "Sigma Operations Files|Retrieve Sigma operations files without getting spotted.";
+		result.missionobjective = "Sigma Operations Files|Retrieve Sigma operations files without getting spotted.|Retrieve Sigma operations files without getting spotted";
 	else if (mode != "ELUSIVE" && result.missionCode == "biggame")
-		result.missionobjective = "The Black Book|Retrieve Reddington's Black Book.";
+		result.missionobjective = "The Black Book|Retrieve Reddington's Black Book.|Retrieve Reddington's Black Book";
 	else if (mode == "MAIN" && result.missionCode == "suburbs")
-		result.missionobjective = "Find Clues|Find clues in and around Whittleton Creek to uncover the connection between Janus and Providence.";
+		result.missionobjective = "Find Clues|Find clues in and around Whittleton Creek to uncover the connection between Janus and Providence.|Find Clues";
 	else if (mode == "MAIN" && result.missionCode == "ark")
-		result.missionobjective = "The Constant|Do not eliminate The Constant.";
+		result.missionobjective = "The Constant|Do not eliminate The Constant.|Do not eliminate The Constant";
 	else if (mode == "MAIN" && result.missionCode == "bank")
-		result.missionobjective = "Obtain Data|Retrieve the data and exit the bank.";
+	result.missionobjective = "Obtain Data|Retrieve the vault Data Core or the three Backup Data Disks and exit the bank.|Retrieve vault Data Core or 3 Backup Data Disks";
 	else if (mode == "MAIN" && result.missionCode == "clue")
-		result.missionobjective = "Find The Case File|Find The Case File.";
+		result.missionobjective = "Find The Case File|Find The Case File.|Find The Case File";
 	else if (mode == "MAIN" && result.missionCode == "archive" && result.entry == "Train Station" )
-		result.missionobjective = "Hack Data Core|Eliminate Hush and Imogen Royce to be able to access the files inside the ICA data core.";
+		result.missionobjective = "Hack Data Core|Eliminate Hush and Imogen Royce to be able to access the files inside the ICA data core.|Hack Data Core";
 	else if (mode == "MAIN" && result.missionCode == "archive" && result.entry != "Train Station" )
-		result.missionobjective = "Hack Data Core [Optional]|Eliminate Hush and Imogen Royce to be able to access the files inside the ICA data core.";
+		result.missionobjective = "Hack Data Core [Optional]|Eliminate Hush and Imogen Royce to be able to access the files inside the ICA data core.|Hack Data Core [Optional]";
 	else if (mode == "MAIN" && result.missionCode == "vineyard")
-		result.missionobjective = "Do Not Eliminate Diana Burnwood|Do Not Eliminate Diana Burnwood.";
+		result.missionobjective = "Do Not Eliminate Diana Burnwood|Do Not Eliminate Diana Burnwood.|Do Not Eliminate Diana Burnwood";
 	else if (mode == "MAIN" && result.missionCode == "train")
-		result.missionobjective = "Providence Members May Be Eliminated|Providence Members May Be Eliminated.";
+		result.missionobjective = "Providence Members May Be Eliminated|Providence Members May Be Eliminated.|Providence Members May Be Eliminated";
 	else
 		result.missionobjective = "";
-	
-	if (mode == "CONEASY" || mode == "CONHARD")
-		result.objectives = container.contractWild[Math.floor(Math.random()*container.contractWild.length)];
-	else
-		result.objectives = container.wild[Math.floor(Math.random()*container.wild.length)];
-	
+
+	//Extra Objectives aka "Wildcards"
+	var wildcard = container.wild; // Can be completed Suit Only, No Knockouts, Silent Assassin.
+	var missionwild = container.missionWild; // Can only be completed on specific missions; No Contracts Mode.
+	var compwild = container.compWild; // Can only be completed without Complications enabled; Asks for Knockouts or Disguise Changes.
+	if ((mode == "CONEASY" || mode == "CONHARD") && (document.getElementById("compslider").value == 1 || document.getElementById("rating").checked == 1)) // Contract Mode & Complications/Rating
+		result.objectives = wildcard[Math.floor(Math.random()*wildcard.length)];
+	else if (!(mode == "CONEASY" || mode == "CONHARD") && (document.getElementById("compslider").value == 1 || document.getElementById("rating").checked == 1)) // Complications/Rating without Contract Mode
+		result.objectives = wildcard.concat(missionwild)[Math.floor(Math.random()*wildcard.concat(missionwild).length)];
+	else if ((mode == "CONEASY" || mode == "CONHARD") && document.getElementById("compslider").value == 0 && document.getElementById("rating").checked == 0) // Contract Mode without Complications/Rating
+		result.objectives = wildcard.concat(compwild)[Math.floor(Math.random()*wildcard.concat(compwild).length)];
+	else // Default Extra Objectives (All)
+		result.objectives = wildcard.concat(missionwild, compwild)[Math.floor(Math.random()*wildcard.concat(missionwild, compwild).length)];
+
 	result.mechanicsH1 = mechListH1[Math.floor(Math.random()*mechListH1.length)];
 	result.mechanicsH2 = mechListH2[Math.floor(Math.random()*mechListH2.length)];
 	result.time = timeList[Math.floor(Math.random()*timeList.length)];
@@ -289,6 +298,20 @@ function writeEverything(result) {
 			document.getElementById("input_exit").value = "\nExit: Into The Forrest";
 			document.getElementById("exitreq").innerHTML = "";
 			document.getElementById("input_exitreq").value = "";
+		}
+		else if (result.missionCode == "virus" && result.objectives.split('|')[0] == "Safe House Bugged" && document.getElementById("exobj").checked == 1) {
+			document.getElementById("travel").innerHTML =
+				"<div id='entry' class='virus-start-MainSquare'><div id='nameplate'><span><p id='title'>Starting Location</p><p id='subtitle'>Main Square</p></span></div></div><div id='exit' class='" + result.missionCode + "-exit-" + result.exit.split('|')[0].replace(/\s|'|\.|-|\||\(|\)/g, "") + "'><div id='nameplate'><span><p id='title'>Exit Location <span id='exitreq'></span></p><p id='subtitle'>" + result.exit.split('|')[0] + "</p></span></div></div>";
+			document.getElementById("input_entry").value = "\nStart: Main Square";
+			document.getElementById("input_exit").value = "\nExit: " + result.exit.split('|')[0];
+			if(result.exit.split('|')[1] != null) {
+				document.getElementById("exitreq").innerHTML = result.exit.split('|')[1];
+				document.getElementById("input_exitreq").value = " " + result.exit.split('|')[1];			
+			}
+			else {
+				document.getElementById("exitreq").innerHTML = "";
+				document.getElementById("input_exitreq").value = "";	
+			};
 		}
 		else {		
 			document.getElementById("travel").innerHTML =
@@ -349,9 +372,11 @@ function writeEverything(result) {
 				"'></p></span></div><div id='subplate' class='disguise'><span><p id='title'>Wear disguise:</p><p class='subtitle-disguise' id='subtitle-disguise" + (i+1) +
 				"'></p></span></div><div id='subplate" + (i+1) + "' class='intel'><span id='inteltoggle" + (i+1) + "'><p id='title'>Intel:</p><p id='wording'>" + result.targets[i].split('|')[1] +
 				"</p></span></div><div id='nameplate'><span><p id='title'>Target</p><p id='subtitle'>" + result.targets[i].split('|')[0] + "</p></span></div></div>";
+			document.getElementById("overlay-image-target" + (i+1)).innerHTML =
+				"<div id='overlay-image' class='hidden'><div id='photo' class='" + result.targets[i].split('|')[0].replace(/\s|,|'|“|”|-|\./g, "") + "-" + result.missionCode + contractmode +
+				"'><div id='overlay-intel" + (i+1) + "'>" + result.targets[i].split('|')[1] + "</div><div id='nameplate'><span><p id='title'>Target</p><p id='subtitle'>" + result.targets[i].split('|')[0] + "</p></span></div></div></div>";
 			document.getElementById("input_target" + (i+1)).value = "\nEliminate " + result.targets[i].split('|')[0];
 			document.getElementById("input_targetintel" + (i+1)).value = "\n └ Intel: " + result.targets[i].split('|')[1]; // Contracts Mode Target Intel
-			document.getElementById("overlay-target-intel" + (i+1)).innerHTML = result.targets[i].split('|')[1];
 			if(result.missionCode == "training" && (mode == "MAIN" || mode == "ELUSIVE") && fftfailsafe.includes(result.weapons[i]) ) { // Specific Weapons on ICA Boat 
 				document.getElementById("subtitle-method" + (i+1)).innerHTML = "Any Method";
 				document.getElementById("subtitle-alt-method" + (i+1)).innerHTML = "";
@@ -416,7 +441,7 @@ function writeEverything(result) {
 				document.getElementById("subplate" + (i+1)).style.setProperty("background-image", "none", "important");//display none goes here if tall pics required
 				document.getElementById("inteltoggle" + (i+1)).style.setProperty("display", "none", "important");//also remove inteltoggle in target generation
 				document.getElementById("input_targetintel" + (i+1)).value = "";
-				document.getElementById("overlay-target-intel" + (i+1)).innerHTML = "";
+				document.getElementById("overlay-intel" + (i+1)).style.setProperty("display", "none", "important");
 				document.getElementById("input_contract").value = "";
 			}
 			else {
@@ -429,7 +454,7 @@ function writeEverything(result) {
 			document.getElementById("input_disguise" + (i+1)).value = "";
 			document.getElementById("input_weapon" + (i+1)).value = "";
 			document.getElementById("input_targetintel" + (i+1)).value = "";
-			document.getElementById("overlay-target-intel" + (i+1)).innerHTML = "";
+			document.getElementById("overlay-image-target" + (i+1)).innerHTML = "";
 		};
 	};
 	
@@ -439,10 +464,12 @@ function writeEverything(result) {
 			"'><div id='instruction'><img id='list' src='./img/general/blank.png'><p id='wording'>" + result.missionobjective.split('|')[1] +
 			"</p></div><div id='nameplate'><span><p id='title'>Objective</p><p id='subtitle'>" + result.missionobjective.split('|')[0] + "</p></span></div></div>";
 		document.getElementById("input_objective").value = "\nObjective: " + result.missionobjective.split('|')[0] + " - " + result.missionobjective.split('|')[1];
+		document.getElementById("input_objective_overlay").value = result.missionobjective.split('|')[2];
 	}
 	else {
 		document.getElementById("objective").innerHTML = "";
 		document.getElementById("input_objective").value = "";
+		document.getElementById("input_objective_overlay").value = "";
 	};
 	
 	if(document.getElementById("exobj").checked == 1) { // extra mission objective
@@ -450,9 +477,16 @@ function writeEverything(result) {
 			"<div id='obj-image' class='" + result.objectives.split('|')[0].replace(/\s|,|'|“|”|-|\?|\!|\(|\)|\./g, "") +
 			"'><div id='instruction'><img id='list' src='./img/general/blank.png'><p id='wording'>"  + result.objectives.split('|')[1] +
 			"</p></div><div id='nameplate'><span><p id='title'>Extra Objective <span id='hint'></span></p><p id='subtitle'>"  + result.objectives.split('|')[0] + "</p></span></div></div>";
-		document.getElementById("input_extraobjective").value = "\nExtra Objective: " + result.objectives.split('|')[0] + " - " + result.objectives.split('|')[1];
 		if(result.objectives.split('|')[2] != null) { // extra objective hint
-			document.getElementById("hint").innerHTML = "(<a target='_blank' href='./img/general/" + result.objectives.split('|')[2] + "'>Hint</a>)";
+			document.getElementById("input_extraobjective_overlay").value = result.objectives.split('|')[2];
+			document.getElementById("input_extraobjective").value = "\nExtra Objective: " + result.objectives.split('|')[0] + " - " + result.objectives.split('|')[1];
+		}
+		else {
+			document.getElementById("input_extraobjective_overlay").value = result.objectives.split('|')[1];
+			document.getElementById("input_extraobjective").value = "\nExtra Objective: " + result.objectives.split('|')[0] + " - " + result.objectives.split('|')[1];
+		}
+		if(result.objectives.split('|')[3] != null) { // extra objective hint
+			document.getElementById("hint").innerHTML = "(<a target='_blank' href='./img/general/" + result.objectives.split('|')[3] + "'>Hint</a>)";
 		};
 		if(mode == "MAIN" && result.missionTitle == "Apex Predator") { // Apex Predator First Target Extra Objective
 			document.getElementById("apexwild").innerHTML = result.targets[4].split('|')[0];
@@ -461,9 +495,10 @@ function writeEverything(result) {
 	else {
 		document.getElementById("objectivex").innerHTML = "";
 		document.getElementById("input_extraobjective").value = "";
+		document.getElementById("input_extraobjective_overlay").value = "";
 	};
 	
-	if(document.getElementById("cameraobj").checked == 1) { // photo objectives for H3
+	if(document.getElementById("cameraobj").checked == 1 && !(result.missionCode == "training" || result.missionCode == "test") ) { // photo objectives unavailable in ica facility
 		document.getElementById("camera").innerHTML = 
 			"<div id='cam-image' class='" + result.photos.split('|')[0].replace(/\s|,|'|“|”|-|\?|\!|\(|\)|\./g, "") +
 			"'><div id='instruction'><img id='list' src='./img/general/blank.png'><p id='wording'>"  + result.photos.split('|')[1] +
@@ -496,7 +531,7 @@ function writeEverything(result) {
 		document.getElementById("submenu_comp").disabled = false;
 		document.getElementById("subsubmenu_comp").disabled = false;
 		document.getElementById("complicationi").innerHTML =
-			"<div id='comp-image' class='NoRecordings'><div id='instruction'><img id='list' src='./img/general/blank.png'><p id='wording'>Do not get recorded by a security camera. If you are recorded, you must destroy the evidence.</p></div><div id='nameplate'><span><p id='title'>Complications</p><p id='subtitle'>No Recordings</p></span></div></div>";
+			"<div id='comp-image' class='NoRecordings'><div id='instruction'><img id='list' src='./img/general/blank.png'><p id='wording'>Do not get recorded by a security camera. If you are recorded, you must destroy the evidence.</p></div><div id='nameplate'><span><p id='title'>Complication</p><p id='subtitle'>No Recordings</p></span></div></div>";
 		document.getElementById("input_complicationt").value = "\n\nComplications:";
 		document.getElementById("input_complicationi").value = "\n● No Recordings - Do not get recorded by a security camera. If you are recorded, you must destroy the evidence.";
 		document.getElementById("overlay-complicationi").innerHTML = "No Recordings";
@@ -664,7 +699,9 @@ function writeEverything(result) {
 	var targetintel5text = document.getElementById("input_targetintel5").value;
 	
 	var objectivetext = document.getElementById("input_objective").value;
+	var objectiveoverlaytext = document.getElementById("input_objective_overlay").value;
 	var extraobjectivetext = document.getElementById("input_extraobjective").value;
+	var extraobjectiveoverlaytext = document.getElementById("input_extraobjective_overlay").value;
 	
 	var complicationttext = document.getElementById("input_complicationt").value;			
 	var complicationitext = document.getElementById("input_complicationi").value;
@@ -712,15 +749,22 @@ function writeEverything(result) {
 	
 	document.getElementById("saveroulette").disabled = false;
 	document.getElementById("subsaveroulette").disabled = false;
+	document.getElementById("enableoverlay").disabled = false;
 	
-	
+	document.getElementById('overlay-pin-target1').innerHTML = target1text;
 	document.getElementById('overlay-target1').innerHTML = target1text + weapon1text + disguise1text;
+	document.getElementById('overlay-pin-target2').innerHTML = target2text;
 	document.getElementById('overlay-target2').innerHTML = target2text + weapon2text + disguise2text;
+	document.getElementById('overlay-pin-target3').innerHTML = target3text;
 	document.getElementById('overlay-target3').innerHTML = target3text + weapon3text + disguise3text;
+	document.getElementById('overlay-pin-target4').innerHTML = target4text;
 	document.getElementById('overlay-target4').innerHTML = target4text + weapon4text + disguise4text;
+	document.getElementById('overlay-pin-target5').innerHTML = target5text;
 	document.getElementById('overlay-target5').innerHTML = target5text + weapon5text + disguise5text;
-	//document.getElementById('overlay-objective').innerHTML = objectivetext;
-	//document.getElementById('overlay-objectivex').innerHTML = extraobjectivetext;
+	document.getElementById('overlay-pin-objective').innerHTML = objectivetext;
+	document.getElementById('overlay-objective').innerHTML = objectiveoverlaytext;
+	document.getElementById('overlay-pin-objectivex').innerHTML = extraobjectiveoverlaytext;
+	document.getElementById('overlay-objectivex').innerHTML = extraobjectiveoverlaytext;
 	document.getElementById('overlay-exit').innerHTML = exittext + exitreqtext;
 	//document.getElementById('overlay-complicationi').innerHTML = complicationitext;
 	//document.getElementById('overlay-complication1').innerHTML = complication1text;
@@ -739,7 +783,7 @@ function generate_result() {
 	const current_mission = createContainerObject();
 	
 	var roulette = containerToResult(current_mission);
-	roulette.extras = createExtrasList(roulette.exit);
+	roulette.extras = createExtrasList(roulette.exit, roulette.eexit);
 	roulette.targets = createTargetList(current_mission);
 	roulette.weapons = createWeaponList(current_mission);
 	roulette.disguises = createDisguiseList(current_mission, roulette);
