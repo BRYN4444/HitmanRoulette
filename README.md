@@ -35,48 +35,41 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 * Updates for any future HITMAN III mission DLC.
 * "Photo Objectives" for HITMAN & HITMAN 2 missions.
 * More Contracts Mode Targets for HITMAN missions with updated HITMAN III images to match.
-* More "Extra Objectives" for late-campaign HITMAN 2 & HITMAN III.
 * Stream Overlay mode; A method for streamers to show Objectives and more over the gameplay.
 * This would take a complete overhaul, so it's probably out of MY league, but being able to link Roulettes to others would be cool. If you have knowledge on how to do this easily, leave me a message on [Github](https://github.com/BRYN4444/HitmanRoulette/issues).
 
-### Latest Major Update (March 31, 2021)
+### Latest Updates:
+
+**April 22, 2021**
+* **Roulette:**
+  * **Extra Objectives** were given a complete overhaul. Enabling them is still the same: Roulette Settings > Extra Requirements > Extra Objectives [On]. However, on the back end, you should see less conflicting rolls based on other Roulette Settings being enabled. This allowed more Extra Objectives to be added, especially to HITMAN (2016) locations. Details:
+    * There are Mission Mode specific Extra Objectives that are shuffled in only outside of Contracts Mode. (These existed before)
+    * If you have Complications and/or "Achieve Rating" disabled, another set of Extra Objectives are shuffled in. These are quirkier ones that may require pacifications, disguise changes, or collateral damage like extra eliminations that void Silent Assassin.
+  * **Roulette Settings** had a few descriptions for options updated for clarification.
+  * **Complications:** One was removed due to redundancy. Keeping "No Disguise Changes" over "One Disguise Change".
+* **HITMAN:**
+  * **Tactical Turtleneck** is the renamed version of Training Gear in the ICA Facility missions. Same now for here.
+  * **Ezra Berg** photo updated to match his look in HITMAN III.
+  * **Contract Mode Targets:** Added 35 "The Final Test" Targets and updated the images of the existing ones with their HITMAN III versions.
+  * **Extra Objectives:** Added many due to Roulette improvements listed above. Updated images of the majority of existing ones to match how they look in HITMAN III.
+* **HITMAN 2:**
+  * **Extra Objectives:** Added many due to Roulette improvements listed above. Updated images of the majority of existing ones to match how they look in HITMAN III.
+* **HITMAN III:**
+  * **Extra Objectives:** Added a few due to Roulette improvements listed above.
+* **Other Fixes:**
+  * Some Missions that are unavailable for Contracts Mode could be enabled using the main "H3 Accessable" option. This has been fixed.
+  * ICA Facility Missions have restrictive loadouts that were not being enforced properly by the Roulette in regards to possible elimination methods. This was working at one point, then broken, but now working again. Fun!
+  * Setup for the potential Stream Overlay option is ongoing.
+  * "You must select at least one mission" is enforced a little more.
+
+---
+
+**March 31, 2021**
 * **HITMAN III:**
   * **Added Exit:** Berlin's "E.T." Easter Egg Exit.
 * **HITMAN:**
-  * **Contract Mode Targets:** Added 23 "Freeform Training" (Tutorial) Targets and updated the images of the existing ones with their HITMAN III versions.
+  * **Contract Mode Targets:** Added 23 "Freeform Training" Targets and updated the images of the existing ones with their HITMAN III versions.
 * **Other Fixes:**
   * Updated some of the Mission Grouping images to match the darker HITMAN III look.
   * Updated the Gameplay Challenge Achieve Rating images to match the HITMAN III results screen.
-  * When Contract Mode Roulette is on, "Freeform Training" will be renamed to "Tutorial" to match how it is listed in game. 
-
-#### Prior Updates (Feb. 1 - March 29, 2021)
-* **HITMAN III campaign missions added.**
-  * **Missions:** All six campaign missions added to the Roulette.
-  * **Mission Mode Targets:** 18 added, 10 of which are from the third mission which are then randomized among themselves, unique to this mission only (The 11th target had to be left out due to the way some entrances change aspects of the level. The game's final target has a slightly limited number of elimination methods than other targets. Some work had to be done, so hopefully you aren't given an impossible Roulette roll.
-  * **Contract Mode Targets:** 55 Dubai, 44 Dartmoor, and 63 Berlin, 90 Chongqing, and 140 Mendoza Targets added (not including the mission default ones).
-  * **Starting Points:** 38 total. The game has a unique feature on some levels where the default / story entrance restricts things to match the campaign's plot. As such, the Roulette was tweaked to manage this so impossible tasks will not be rolled. Disable Entrance Requirements in Roulette Settings if you'd rather avoid these hassles.
-  * **Exit Points:** 27 total. There final mission actually has two exits, but one is an easter egg exit that, unless the roll is perfect, will have you to go against the Roulette. I think this is very fitting considering the easter egg.
-  * **Objectives:** 4 added that only appear in Mission Mode Roulette, with one displaying as optional depending on the starting point rolled.
-  * **Extra Objectives:** many added, most taken from the Challenge lists in game. Hopefully I can still add more, but adding Contracts Mode Targets are higher priority.
-  * **New: Photo Objectives** added to take advantage of the Camera gadget. So obviously, only possible in HITMAN III. In time, HITMAN & HITMAN 2 photo objectives will be added, but for now only the first five HITMAN III missions have them.
-* **Hitman III Appearance added.** By default, the Roulette will now look like the menus of HITMAN III. But as a reminder, the past game's styles are also selectable: Hitman 1 Red, Hitman GOTY Grey, and Hitman 2 "Hot Magenta".
-* **Contracts Mode Roulette Target Amount** can now be set. By default, the amount of targets are a random maximum of 5. You can now change a slider to force a set amount instead of hoping to get the amount you want.
-* **Mobile Friendly / Low Resolution Browsing.** Fixed a few display and HTML bugs while adding H3 support.
-* **Select Mission Listing Changes and Fixes.**
-  * Dropped "H1" wording from Seasonal Content and specified where Seasonal Content can be played: Holiday Hoarders (H1 & H2) and Snow Festival (H2).
-  * The "All Locations" Mission Grouping toggle has been altered (and as such renamed) to be for all accessible locations within HITMAN III itself (if you own everything, that is). The existing Holiday Hoarders and Snow Festival missions no longer active by default until they're added to H3.
-  * Fixed an issue where missions were staying restricted to Contracts Mode Roulette when switching back to Mission Mode Roulette.
-  * HITMAN III levels were able to be individually toggled on mobile.
-* **Updates to some Exit Points:**
-  * If you roll the Pale Rider Easter Egg Exit in "The Finish Line", the disguises displayed will now all be Pale Rider, allowing the roulette roll to be possible.
-  * The Mumbai Train exit is possible without the leaver and subsequent collateral damage. Something I overlooked when HITMAN 2 launched. The listing and image are updated to fix this.
-  * "Illusions Of Grandeur" has different lighting than "Chasing A Ghost", so I've updated the exit images to match that.
-  * Each Mumbai Taxi exit (and their coin requirements) are now differentiated and have proper images to match.
-  * Each Manhole exit "Another Life", "Bitter Pill", and "End of an Era" have been differentiated and have proper images to match.
-* **Added missing Restrictable Mechanic.** At some point, IOI added the option to disable security Camera Grid to Hitman 2, but I only noticed it in Hitman III... Either way, that is now one of the Gameplay Restrictions that can be rolled.
-* **Other Fixes:**
-  * The speedboat exit in "Club 27" requires a key on Master Difficulty. The image and listing now reflect that.
-  * IOI updated the menu background image and objective image for Sapienza, so the Roulette now uses those images.
-  * Minor issue where too much text in a section wasn't gaining ellipses. Also, reminder that you can hover over these and the text will scroll to be readable.
-  * In some cases, the textarea for Export Roulette was showing past roll weapon results where they shouldn't be.
-  * Some Contract Mode Targets from main missions did not have images for bonus missions.
+  * When Contract Mode Roulette is on, "Freeform Training" will be renamed to "Tutorial" to match how it is listed in game.
