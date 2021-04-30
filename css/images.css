@@ -473,15 +473,67 @@ div[class^="ElusiveTarget"] { background-image: url('../img/targetcon/NPC.jpg');
 .ValerieStClaire-fashion { background-image: url('../img/targetcon/ValerieStClaire.jpg'); }
 .LizaMcKenzie-fashion { background-image: url('../img/targetcon/LizaMcKenzie.jpg'); }
 .HaileyBrennan-fashion { background-image: url('../img/targetcon/HaileyBrennan.jpg'); }
-.KurtDonovan-fashion { background-image: url('../img/targetcon/KurtDonovan.jpg'); }
+.KurtDonovan-fashion, .RomeoMarkus-fashion, .FrancisGuilmette-fashion, .JustinForest-fashion, .PierreRosso-fashion, .DreuxDescotreaux-fashion, .CédricGendron-fashion, .AlainGendron-fashion, .CharlesLeGars-fashion, .FredBeaujolie-fashion, .AxelduMont-fashion, .RichardMouet-fashion, .IgnaceRichard-fashion, .NicoGros-fashion, .FelicienMontminy-fashion, .JaquesRosso-fashion, .JeanMoreau-fashion { background-image: url('../img/targetcon/KurtDonovan.jpg'); }
 .SophusFatale-fashion { background-image: url('../img/targetcon/SophusFatale.jpg'); }
 .MarthaHerris-fashion { background-image: url('../img/targetcon/MarthaHerris.jpg'); }
 .TrenPo-fashion { background-image: url('../img/targetcon/TrenPo.jpg'); }
 .SirHumphreyTitusRutherford-fashion { background-image: url('../img/targetcon/SirHumphreyTitusRutherford.jpg'); }
 .MabayaMzabumi-fashion { background-image: url('../img/targetcon/MabayaMzabumi.jpg'); }
-.IrinaVladimir-fashion { background-image: url('../img/targetcon/IrinaVladimir.jpg'); }
+.IrinaVladimir-fashion, .AlexVladimir-fashion { background-image: url('../img/targetcon/IrinaVladimir.jpg'); }
 .OlvanShillingford-fashion { background-image: url('../img/targetcon/OlvanShillingford.jpg'); }
 .AndreaMartinez-fashion { background-image: url('../img/targetcon/AndreaMartinez.jpg'); }
+.StéphaneLafrenière-fashion, .KermanLagacé-fashion { background-image: url('../img/targetcon/StéphaneLafrenière.jpg'); }
+.OcéaneBissom-fashion { background-image: url('../img/targetcon/OcéaneBissom.jpg'); }
+.RémyGuibord-fashion, .JeremyHuxley-fashion, .PatrickBisson-fashion, .MarmionMonty-fashion, .CloridanPanetier-fashion, .DésiréMaheu-fashion, .AubertSanschagrin-fashion, .OrsonSéguin-fashion, .RogerDupont-fashion, .MichelTrier-fashion, .AntonFlamand-fashion { background-image: url('../img/targetcon/RémyGuibord.jpg'); }
+.JulienBeausoleil-fashion, .RolandLandry-fashion, .MichelLaux-fashion, .ValiantRenaud-fashion, .DonatienMarleau-fashion, .EmmanuelBourgeois-fashion, .FrancisLangelier-fashion, .EliotMontminy-fashion, .MichelCharest-fashion, .MarcEunuque-fashion, .AugusteDuTrieux-fashion, .BertrandPoussard-fashion, .HughProvencher-fashion { background-image: url('../img/targetcon/JulienBeausoleil.jpg'); }
+.DesireLapresse-fashion { background-image: url('../img/targetcon/DesireLapresse.jpg'); }
+.MikeBirkhead-fashion, .ErnestMousseau-fashion, .PaulLizotte-fashion, .BenjaminCharbonneau-fashion { background-image: url('../img/targetcon/MikeBirkhead.jpg'); }
+.LéopoldBeaudoin-fashion { background-image: url('../img/targetcon/LéopoldBeaudoin.jpg'); }
+.GasparDesforges-fashion, .LucMénard-fashion { background-image: url('../img/targetcon/GasparDesforges.jpg'); }
+.GeorgesCliche-fashion, .ChristopheMothé-fashion, .BobMoran-fashion, .CédricBostin-fashion { background-image: url('../img/targetcon/GeorgesCliche.jpg'); }
+.CongressmanWalsh-fashion { background-image: url('../img/targetcon/CongressmanWalsh.jpg'); }
+.DanielRosenberg-fashion { background-image: url('../img/targetcon/DanielRosenberg.jpg'); }
+.GloriaRosenberg-fashion { background-image: url('../img/targetcon/GloriaRosenberg.jpg'); }
+.CharlotteBolton-fashion { background-image: url('../img/targetcon/CharlotteBolton.jpg'); }
+.BruceProulx-fashion, .JérômeQuirion-fashion, .AdrienDesilets-fashion, .DidierDennis-fashion { background-image: url('../img/targetcon/BruceProulx.jpg'); }
+.EllionoraLapresse-fashion, .AnetteEngstrom-fashion, .JoseRouthier-fashion, .JacquelineDucloitre-fashion { background-image: url('../img/targetcon/EllionoraLapresse.jpg'); }
+.WilliamCorbin-fashion, .ArnouVincent-fashion { background-image: url('../img/targetcon/WilliamCorbin.jpg'); }
+.PatrickSaurel-fashion { background-image: url('../img/targetcon/PatrickSaurel.jpg'); }
+.OnurKaradamir-fashion { background-image: url('../img/targetcon/OnurKaradamir.jpg'); }
+.BayardVadnais-fashion, .MalloryBrunelle-fashion, .ArnouCamus-fashion { background-image: url('../img/targetcon/BayardVadnais.jpg'); }
+.GermainMarleau-fashion { background-image: url('../img/targetcon/GermainMarleau.jpg'); }
+.AkikoCrilley-fashion, .ClaireSwanson-fashion { background-image: url('../img/targetcon/AkikoCrilley.jpg'); }
+.PhilippeDutrieux-fashion, .GasparCaillot-fashion, .ChaplinLeroy-fashion, .MatthieuFrancoeur-fashion { background-image: url('../img/targetcon/PhilippeDutrieux.jpg'); }
+.AlexandreFavreau-fashion, .JacobArpin-fashion, .EugèneMarleau-fashion, .LéopoldGeorges-fashion { background-image: url('../img/targetcon/AlexandreFavreau.jpg'); }
+.ChristopheBienvenue-fashion { background-image: url('../img/targetcon/ChristopheBienvenue.jpg'); }
+.MarcelDimarco-fashion, .OrsonBler-fashion, .SatordiRoux-fashion, .JacquesSansouci-fashion, .LanceArtois-fashion, .JeanLucSalois-fashion, .FabriceSansouci-fashion { background-image: url('../img/targetcon/MarcelDimarco.jpg'); }
+.JosephDucharme-fashion { background-image: url('../img/targetcon/JosephDucharme.jpg'); }
+.DanielDuhamel-fashion { background-image: url('../img/targetcon/DanielDuhamel.jpg'); }
+.PierrettedeBrisay-fashion { background-image: url('../img/targetcon/PierrettedeBrisay.jpg'); }
+.GwenDawson-fashion { background-image: url('../img/targetcon/GwenDawson.jpg'); }
+.ChappellFrancoeur-fashion { background-image: url('../img/targetcon/ChappellFrancoeur.jpg'); }
+.LorthairDaoust-fashion { background-image: url('../img/targetcon/LorthairDaoust.jpg'); }
+.LeroyCouet-fashion { background-image: url('../img/targetcon/LeroyCouet.jpg'); }
+.NathalieBourque-fashion { background-image: url('../img/targetcon/NathalieBourque.jpg'); }
+.IreneObstacle-fashion { background-image: url('../img/targetcon/IreneObstacle.jpg'); }
+.AgathaÉquipage-fashion { background-image: url('../img/targetcon/AgathaÉquipage.jpg'); }
+.JessikaTruesdale-fashion { background-image: url('../img/targetcon/JessikaTruesdale.jpg'); }
+.JacquesBonbon-fashion, .BenjaminLacasse-fashion { background-image: url('../img/targetcon/JacquesBonbon.jpg'); }
+.PhilipVonZell-fashion { background-image: url('../img/targetcon/PhilipVonZell.jpg'); }
+.AugusteMarcheterre-fashion { background-image: url('../img/targetcon/AugusteMarcheterre.jpg'); }
+.OlivierLauzier-fashion, .JustinMills-fashion { background-image: url('../img/targetcon/OlivierLauzier.jpg'); }
+.PhilippeQuiron-fashion, .BenoitLagarde-fashion, .CourtlandAupry-fashion, .YvesBeauchemin-fashion, .BruceFaure-fashion, .AlainRocheleau-fashion { background-image: url('../img/targetcon/PhilippeQuiron.jpg'); }
+.FélicienBourque-fashion { background-image: url('../img/targetcon/FélicienBourque.jpg'); }
+.TristanDupuis-fashion { background-image: url('../img/targetcon/TristanDupuis.jpg'); }
+.MarkParker-fashion { background-image: url('../img/targetcon/MarkParker.jpg'); }
+.AdèleRousseau-fashion { background-image: url('../img/targetcon/AdèleRousseau.jpg'); }
+.LoïcCourcelle-fashion, .EricHébert-fashion { background-image: url('../img/targetcon/LoïcCourcelle.jpg'); }
+.MichaelArchambault-fashion, .ÉdouardLeblanc-fashion, .JaredDorst-fashion, .HughNeufville-fashion, .FaustinDAoust-fashion, .AndréCliche-fashion { background-image: url('../img/targetcon/MichaelArchambault.jpg'); }
+.RaoulBlanc-fashion, .RafaelDante-fashion { background-image: url('../img/targetcon/RaoulBlanc.jpg'); }
+.ChristopheNightlinglam-fashion, .GeorgeCaisse-fashion { background-image: url('../img/targetcon/ChristopheNightlinglam.jpg'); }
+.GuillaumeGarceau-fashion { background-image: url('../img/targetcon/GuillaumeGarceau.jpg'); }
+.NicolasFrank-fashion { background-image: url('../img/targetcon/NicolasFrank.jpg'); }
+.LoyalFluet-fashion { background-image: url('../img/targetcon/LoyalFluet.jpg'); }
 
 /* Holiday Hoarders */
 .HarrySmokeyBagnato-xmas { background-image: url('../img/target/HarrySmokeyBagnato.jpg'); }
