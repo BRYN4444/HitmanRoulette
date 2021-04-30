@@ -40,6 +40,12 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 
 ### Latest Updates:
 
+**April 29, 2021**
+* **HITMAN:**
+  * **Contract Mode Targets:** Added 136 "The Showstopper" Targets and updated the images of the existing ones with their HITMAN III versions.
+
+---
+
 **April 22, 2021**
 * **Roulette:**
   * **Extra Objectives** were given a complete overhaul. Enabling them is still the same: Roulette Settings > Extra Requirements > Extra Objectives [On]. However, on the back end, you should see less conflicting rolls based on other Roulette Settings being enabled. This allowed more Extra Objectives to be added, especially to HITMAN (2016) locations. Details:
