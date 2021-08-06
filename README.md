@@ -4,17 +4,17 @@ Hitman Roulette uses a single cookie to remember your selected theme appearance.
 
 # ABOUT
 
-Hitman Roulette is a tool that aims to give new ideas on how to complete missions in the latest Hitman trilogy of games by giving a set of random guidelines to follow when playing. It randomizes things such as mission entry and exit points, elimination method and worn disguise, generic and mission specific variables, and even targets for Contracts Mode.
+Hitman Roulette generates a set of random guidelines to follow when playing the HITMAN "World of Assassination" trilogy. It randomizes things such as mission entry and exit points, elimination method and worn disguise, generic and mission specific variables, and even targets for Contracts Mode.
 
 [The original Hitman Roulette](https://thekotti.github.io/about.html) (created by [TheKotti](https://twitter.com/TheKotti)) is a more straight forward version that also works with Hitman: Blood Money.
 
 ## How To Use
 
-To initiate a roll of the Roulette, select "Issue Roulette" on the main page. Use the Undo or Redo buttons that appear at the top of that page to move between generated Roulettes. Save your Roulette as a Textfile using the "Export Roulette" option, again on this page, but in the bottom right corner.
+To initiate a roll of the Roulette, click "Issue Roulette" on the main page. Use the Undo or Redo arrow buttons that appear at the top to move between generated Roulettes. Save your Roulette as a Textfile using the "Export Roulette" button, also shown on the main page.
 
-All missions from the trilogy are pulled into the Roulette by default, so go to "Select Missions" above to untoggle any missions you're missing or just the ones you don't like.
+Most missions from the trilogy are pulled into the Roulette by default. Through the "Select Missions" option, you can untoggle any missions you're missing or just the ones you don't like.
 
-After that, the options under "Roulette Settings" allow you to alter what the Roulette surfaces. You can get more than the regular targets ("Mission Mode Roulette") by choosing "Contract Mode Roulette". Dial in the difficulty by toggling "Kill Requirements" like disguises or weapons you'll need to wear or use, "Extra Requirements" like one more objective or sets of complications, and "Gameplay Challenges" that force you to change how you play.
+"Roulette Settings" allow you to change what the Roulette surfaces: You can get more than the regular targets by choosing "Contract Mode Roulette". Dial in the difficulty by toggling "Kill Requirements" like disguises or weapons you'll need to wear or use, "Extra Requirements" like one more objective or sets of complications, and "Gameplay Challenges" that force you to change how you play.
 
 To quickly return the Roulette Settings back to default, preform a hard refresh of the page.
 
@@ -32,13 +32,32 @@ You can deselect any locations you do not own, but by default the Roulette works
 This was a hobby project I started in 2016/17 and have worked on during my free time as a way to brush up on my simple javascript, jQuery, and CSS knowledge as well as giving me more reason to play these new Hitman games well after unlocking everything. As such, I've only tested this at about a 1080p resolution using the browsers I frequent: Firefox and Chrome. Also I'm sure my additions to the existing code, as well as my own work, could use cleaning up here and there. If you find any issues or glaring conflicts with roulette results, [let me know via GitHub](https://github.com/BRYN4444/HitmanRoulette/issues) and I'll try and address it when I get the chance. - [BRYN](http://bryn.info/)
 
 ### To-Do List / Wishlist:
-* Updates for any future HITMAN III mission DLC.
 * "Photo Objectives" for HITMAN & HITMAN 2 missions.
 * More Contracts Mode Targets for HITMAN missions with updated HITMAN III images to match.
+* More "Extra Objectives" for late-campaign HITMAN 2 & HITMAN III.
 * Stream Overlay mode; A method for streamers to show Objectives and more over the gameplay.
-* This would take a complete overhaul, so it's probably out of MY league, but being able to link Roulettes to others would be cool. If you have knowledge on how to do this easily, leave me a message on [Github](https://github.com/BRYN4444/HitmanRoulette/issues).
 
 ### Latest Updates:
+
+**August 5, 2021**
+* **Roulette:**
+  * **Improved Mobile Browsing:** Hopefully better menu navigation and scaling for mobile browsing. Larger resolutions still needs to be worked on.
+* **HITMAN III:**
+  * **Dartmoor Garden Show Added:** Enabled by default. Found in "Select Mission" under "Hitman III Extra Content" and added to the "Seasonal Content" Mission Grouping.
+    * **Implementation:** This unique mission is actually an escalation. After completing it for the first time, Determination Mode is unlocked as an entrance which allows targets to be chosen freely in batches.
+		* **Mission Mode:** 5 Targets will be presented with intel that states what level of the escalation they are to be eliminated during.
+		* **Contracts Mode** is available for this location too. You don't have to complete the escalation to access this.
+    * **Targets:** 7 Potential Targets; 4 Contestants and 3 Judges. Contract Mode Targets will be implemented shortly, so only the existing seven are available.
+	* **Extra Objectives:** Currently 4, with more after a bit more time with the level.
+	* **Photo Objectives:** Just 2. Again, more soon.
+  * **"Tango With Diana" Exit:** Removing this exit while I reevaluate it. This exit is only viable in Mission Mode after a specific mission story. I'll need to test a few things and do some backend work if it can be added back properly.
+* **HITMAN 2:**
+  * **A Silver Tongue:** Updated Mission Image to match the one in game. I originally used a separate one because I felt it matched the other Special Assignments better. But it was the lone exception, so it's changed now.
+* **Plans:**
+  * Contracts Mode Targets for the Dartmoor Garden Show, as well as potential Extra/Photo objectives if I can come up with any more.
+  * Still planning to go through H1 & H2 to add/update Contract Mode Target images and find more Extra/Photo Objectives. Personal issues and other games got in the way of updates here for a while, sorry.
+
+---
 
 **April 29, 2021**
 * **HITMAN:**
