@@ -63,38 +63,142 @@ $(document).ready(function() {
 	else if (currenttime >= 12 && currenttime < 17) { greeting = afternoon;	}
 	else { greeting = evening; }
 
-	$('.welcome #title').text(greeting);	   
+	$('.welcome #title').text(greeting);
+	$('#map_place span').text(greeting);
 	   
 	/******Top Menu Buttons******/
-	$( "#roulette" ).click(function() {
-		if($("#maps input:checked").length == 0) {
+	$( "nav#menu button#roulette" ).click(function() {
+		if($(window).width() < 808) { /* Do Nothing on Mobile */ }
+		else if($("#maps input:checked").length == 0) {
 			alert("You must select at least one mission.");
 		}
 		else {
 			//Make Sure these settings match with the mode_ol "Read" click
 			$( this ).addClass( "on" );
 			$( this ).siblings().removeClass( "on" );
-			$( "#header, #headermobile, #submenumobile" ).removeClass( "off" );
-			$( "#content" ).removeClass( "tall" );
-			$( "#content" ).removeClass( "med" );
-			$( "#maps, #settings, #credits, .submenumobile_map" ).hide();
-			$( "#contract, .submenumobile_mission" ).show();
-			if($("#background").hasClass()) { $( "body" ).addClass( "hide" ); };
-			$( "#background" ).removeClass( "hide" );
+			$( "nav#minimenu, nav#minimenu button#missions, nav#minimenu button#options, nav#minimenu button#about, #maps_mobilesubmenu" ).removeClass("on");
+			$( "nav#minimenu button#roulette, #contract_mobilesubmenu" ).addClass("on");
+			$( "header, #contract, #nav_mobile, #scrollbar" ).removeClass("off");
+			$( "#maps, #settings, #credits" ).addClass("off");
+			$( "body" ).removeClass( "hide missionsmobile settingsaboutmobile");
+			$( "#background" ).addClass( "hide" );
 			$( "#saveroulette:not('.hidden')" ).show('slide',{ direction: 'right' }, 500);
 			$( "#enableoverlay:not('.hidden')" ).show('slide',{ direction: 'right' }, 500);
 		};
 	});
-	$( "#missions" ).click(function() {
-		$( this ).addClass( "on" );
-		$( this ).siblings().removeClass( "on" );
-		$( "#header, #headermobile" ).addClass( "off" );
-		$( "#submenumobile" ).removeClass( "off" );
-		$( "#content" ).removeClass( "tall" );
-		$( "#content" ).addClass( "med" );
-		$( "#contract, #settings, #credits, .submenumobile_mission" ).hide();
-		$( "#maps, .submenumobile_map" ).show();
-		$( "body" ).removeClass( "hide" );
+	$( "nav#menu button#missions" ).click(function() {
+		if($(window).width() < 808) { /* Do Nothing on Mobile */ }
+		else {
+			$( this ).addClass( "on" );
+			$( this ).siblings().removeClass( "on" );
+			$( "nav#minimenu, nav#minimenu button#roulette, nav#minimenu button#options, nav#minimenu button#about, #contract_mobilesubmenu" ).removeClass("on");
+			$( "nav#minimenu button#missions, #maps_mobilesubmenu" ).addClass("on");
+			$( "#maps, #nav_mobile, #scrollbar" ).removeClass("off");
+			$( "header, #contract, #settings, #credits" ).addClass("off");
+			$( "body" ).removeClass( "hide settingsaboutmobile" )
+			$( "body" ).addClass("missionsmobile");
+			$( "#background" ).addClass( "hide" );
+			$( "#saveroulette:not('.hidden')" ).hide('slide',{ direction: 'right' }, 500);
+			$( "#enableoverlay:not('.hidden')" ).hide('slide',{ direction: 'right' }, 500);
+		
+			if($("#mode_con").hasClass("intel") || $("#mode_con").hasClass("hunt")) {
+				$("input.noncon").prop('checked', false).prop('disabled', true).parent().parent().removeClass("on").parent().addClass("lock");
+				$("span.noncon").hide();
+				$("b.noncon").show();
+			};
+		};
+	});
+	$( "nav#menu button#options" ).click(function() {
+		if($(window).width() < 808) { /* Do Nothing on Mobile */ }
+		else if($("#maps input:checked").length == 0) {
+			alert("You must select at least one mission.");
+		}
+		else {
+			$( this ).addClass( "on" );
+			$( this ).siblings().removeClass( "on" );
+			$( "nav#minimenu, nav#minimenu button#roulette, nav#minimenu button#missions, nav#minimenu button#about, #maps_mobilesubmenu, #contract_mobilesubmenu" ).removeClass("on");
+			$( "nav#minimenu button#options" ).addClass("on");
+			$( "#settings" ).removeClass("off");
+			$( "header, #contract, #maps, #credits, #nav_mobile, #scrollbar" ).addClass("off");
+			$( "body" ).removeClass( "hide missionsmobile" )
+			$( "body" ).addClass("settingsaboutmobile");
+			$( "#background" ).addClass( "hide" );
+			$( "#saveroulette:not('.hidden')" ).hide('slide',{ direction: 'right' }, 500);
+			$( "#enableoverlay:not('.hidden')" ).hide('slide',{ direction: 'right' }, 500);
+		};
+	});
+	$( "nav#menu button#about" ).click(function() {
+		if($(window).width() < 808) { /* Do Nothing on Mobile */ }
+		else if($("#maps input:checked").length == 0) {
+			alert("You must select at least one mission.");
+		}
+		else {
+			$( this ).addClass( "on" );
+			$( this ).siblings().removeClass( "on" );
+			$( "nav#minimenu, nav#minimenu button#roulette, nav#minimenu button#missions, nav#minimenu button#options, #maps_mobilesubmenu, #contract_mobilesubmenu" ).removeClass("on");
+			$( "nav#minimenu button#about" ).addClass("on");
+			$( "#credits" ).removeClass("off");
+			$( "header, #contract, #maps, #settings, #nav_mobile, #scrollbar" ).addClass("off");
+			$( "body" ).removeClass( "hide missionsmobile" )
+			$( "body" ).addClass("settingsaboutmobile");
+			$( "#background" ).addClass( "hide" );
+			$( "#saveroulette:not('.hidden')" ).hide('slide',{ direction: 'right' }, 500);
+			$( "#enableoverlay:not('.hidden')" ).hide('slide',{ direction: 'right' }, 500);			
+		};
+	});
+	$( "nav#menu button#mobilemenu" ).click(function() {
+		if( $( this ).hasClass("on") ) {
+			$( this ).removeClass("on");
+			$( "nav#minimenu" ).removeClass("on");
+		}
+		else {
+			$( this ).addClass("on");
+			$( "nav#minimenu" ).addClass("on");
+		};
+	});
+	/* Hides the mobilemenu when the window is wide enough */
+	var $window = $(window);
+
+	function checkWidth() {
+		var windowwidth = $window.width();
+		if (windowwidth > 808) {
+			$( "#mobilemenu" ).removeClass("on");
+			$( "nav#minimenu" ).removeClass("on");
+		};
+	};
+	checkWidth();
+	$(window).resize(checkWidth);
+	
+	
+	/******Top Mobile Menu Buttons******/
+	$(document).on('click', function (e) {
+		if(!$("button#mobilemenu").is(e.target) && !$("nav#minimenu").contents().is(e.target)) {
+			$( "nav#menu button#mobilemenu" ).removeClass("on");
+			$("nav#minimenu").removeClass("on");
+		}
+	});
+	$( "nav#minimenu button#roulette, a#link_roulette" ).click(function() {
+		if($("#maps input:checked").length == 0) {
+			alert("You must select at least one mission.");
+		}
+		else {
+			$( "nav#menu button#mobilemenu, nav#minimenu, nav#minimenu button#missions, nav#minimenu button#options, nav#minimenu button#about, nav#menu button#missions, nav#menu button#options, nav#menu button#about, #maps_mobilesubmenu" ).removeClass("on");
+			$( "nav#menu button#roulette, nav#minimenu button#roulette, #contract_mobilesubmenu" ).addClass("on");
+			$( "header, #contract, #nav_mobile, #scrollbar" ).removeClass("off");
+			$( "#maps, #settings, #credits" ).addClass("off");
+			$( "body" ).removeClass( "hide missionsmobile settingsaboutmobile");
+			$( "#background" ).addClass( "hide" );
+			$( "#saveroulette:not('.hidden')" ).hide('slide',{ direction: 'right' }, 500);
+			$( "#enableoverlay:not('.hidden')" ).hide('slide',{ direction: 'right' }, 500);
+		};
+	});
+	$( "nav#minimenu button#missions, a#link_missions" ).click(function() {
+		$( "nav#menu button#mobilemenu, nav#minimenu, nav#minimenu button#roulette, nav#minimenu button#options, nav#minimenu button#about, nav#menu button#roulette, nav#menu button#options, nav#menu button#about, #contract_mobilesubmenu" ).removeClass("on");
+		$( "nav#menu button#missions, nav#minimenu button#missions, #maps_mobilesubmenu" ).addClass("on");
+		$( "#maps, #nav_mobile, #scrollbar" ).removeClass("off");
+		$( "header, #contract, #settings, #credits" ).addClass("off");
+		$( "body" ).removeClass( "hide settingsaboutmobile" )
+		$( "body" ).addClass("missionsmobile");
 		$( "#background" ).addClass( "hide" );
 		$( "#saveroulette:not('.hidden')" ).hide('slide',{ direction: 'right' }, 500);
 		$( "#enableoverlay:not('.hidden')" ).hide('slide',{ direction: 'right' }, 500);
@@ -104,183 +208,129 @@ $(document).ready(function() {
 			$("span.noncon").hide();
 			$("b.noncon").show();
 		};
+
 	});
-	$( "#options" ).click(function() {
+	$( "nav#minimenu button#options, a#link_settings" ).click(function() {
 		if($("#maps input:checked").length == 0) {
 			alert("You must select at least one mission.");
 		}
 		else {
-			$( this ).addClass( "on" );
-			$( this ).siblings().removeClass( "on" );
-			$( "#header, #headermobile, #submenumobile" ).addClass( "off" );
-			$( "#content" ).addClass( "tall" );
-			$( "#content" ).removeClass( "med" );
-			$( "#contract, #maps, #credits" ).hide();
-			$( "#settings" ).show();
-			$( "body" ).removeClass( "hide" );
+			$( "nav#menu button#mobilemenu, nav#minimenu, nav#minimenu button#roulette, nav#minimenu button#missions, nav#minimenu button#about, nav#menu button#roulette, nav#menu button#missions, nav#menu button#about, #maps_mobilesubmenu, #contract_mobilesubmenu" ).removeClass("on");
+			$( "nav#menu button#options, nav#minimenu button#options" ).addClass("on");
+			$( "#settings" ).removeClass("off");
+			$( "header, #contract, #maps, #credits, #nav_mobile, #scrollbar" ).addClass("off");
+			$( "body" ).removeClass( "hide missionsmobile" )
+			$( "body" ).addClass("settingsaboutmobile");
 			$( "#background" ).addClass( "hide" );
 			$( "#saveroulette:not('.hidden')" ).hide('slide',{ direction: 'right' }, 500);
 			$( "#enableoverlay:not('.hidden')" ).hide('slide',{ direction: 'right' }, 500);
 		};
 	});
-	$( "#about" ).click(function() {
+	$( "nav#minimenu button#about" ).click(function() {
 		if($("#maps input:checked").length == 0) {
 			alert("You must select at least one mission.");
 		}
 		else {
-			$( this ).addClass( "on" );
-			$( this ).siblings().removeClass( "on" );
-			$( "#header, #headermobile, #submenumobile" ).addClass( "off" );
-			$( "#content" ).addClass( "tall" );
-			$( "#content" ).removeClass( "med" );
-			$( "#contract, #maps, #settings" ).hide();
-			$( "#credits" ).show();
-			$( "body" ).removeClass( "hide" );
+			$( "nav#menu button#mobilemenu, nav#minimenu, nav#minimenu button#roulette, nav#minimenu button#missions, nav#minimenu button#options, nav#menu button#roulette, nav#menu button#missions, nav#menu button#options, #maps_mobilesubmenu, #contract_mobilesubmenu" ).removeClass("on");
+			$( "nav#menu button#about, nav#minimenu button#about" ).addClass("on");
+			$( "#credits" ).removeClass("off");
+			$( "header, #contract, #maps, #settings, #nav_mobile, #scrollbar" ).addClass("off");
+			$( "body" ).removeClass( "hide missionsmobile" )
+			$( "body" ).addClass("settingsaboutmobile");
 			$( "#background" ).addClass( "hide" );
 			$( "#saveroulette:not('.hidden')" ).hide('slide',{ direction: 'right' }, 500);
-			$( "#enableoverlay:not('.hidden')" ).hide('slide',{ direction: 'right' }, 500);
+			$( "#enableoverlay:not('.hidden')" ).hide('slide',{ direction: 'right' }, 500);	
 		};
 	});
 	
 	/******Roulette Submenu Buttons******/
-	$( "#submenu_obj" ).click(function() {
-		$( this ).addClass( "on" );
-		$( "#subsubmenu_obj" ).addClass( "on" );
+	$( "#submenu_obj, #subsubmenu_obj" ).click(function() {
+		$( "#submenu_obj, #subsubmenu_obj" ).addClass( "on" );
 		$( "#travel, div[id^='target'], div[id^='objective'], #camera" ).show();
 		$( "div[id^='complication'], #restriction, #timelimit, #ratingget, #diffget, #challengesi" ).hide();
 		$( this ).siblings().removeClass( "on" );
 		$( "#subsubmenu_comp, #subsubmenu_chal" ).removeClass( "on" );
 	});
-	$( "#submenu_comp" ).click(function() {
-		$( this ).addClass( "on" );
-		$( "#subsubmenu_comp" ).addClass( "on" );
+	$( "#submenu_comp, #subsubmenu_comp" ).click(function() {
+		$( "#submenu_comp, #subsubmenu_comp" ).addClass( "on" );
 		$( "div[id^='complication']" ).show();
 		$( "#travel, div[id^='target'], div[id^='objective'], #camera, #restriction, #timelimit, #ratingget, #diffget, #challengesi" ).hide();
 		$( this ).siblings().removeClass( "on" );
 		$( "#subsubmenu_obj, #subsubmenu_chal" ).removeClass( "on" );
 	});
-	$( "#submenu_chal" ).click(function() {
-		$( this ).addClass( "on" );
-		$( "#subsubmenu_chal" ).addClass( "on" );
+	$( "#submenu_chal, #subsubmenu_chal" ).click(function() {
+		$( "#submenu_chal, #subsubmenu_chal" ).addClass( "on" );
 		$( "#restriction, #timelimit, #ratingget, #diffget, #challengesi" ).show();
 		$( "#travel, div[id^='target'], div[id^='objective'], #camera, div[id^='complication']" ).hide();
 		$( this ).siblings().removeClass( "on" );
 		$( "#subsubmenu_obj, #subsubmenu_comp" ).removeClass( "on" );
 	});
-	$( "#submenu_issue" ).click(function() {
+	$( "#submenu_issue, #subsubmenu_issue" ).click(function() {
 		$( "#map" ).addClass( "on" );
 		$( "#submenu_obj, #subsubmenu_obj" ).addClass( "on" ).prop('disabled', false);
 		$( "#travel, div[id^='target'], div[id^='objective'], #camera" ).show();
 		$( "div[id^='complication'], div[id^='restriction'], #timelimit, #ratingget, #diffget, #challengesi" ).hide();
 		$( "#submenu_obj" ).siblings().removeClass( "on" );
 		$( "#subsubmenu_comp, #subsubmenu_chal" ).removeClass( "on" );
+		$( "header" ).css("grid-template-columns","50px auto").css("justify-content","initial");
 	});
-	
-	/******Roulette Submenu Submenu Buttons******/
-	$( "#subsubmenu_obj" ).click(function() {
-		$( this ).addClass( "on" );
-		$( "#submenu_obj" ).addClass( "on" ).siblings().removeClass( "on" );
-		$( "#travel, div[id^='target'], div[id^='objective']" ).show();
-		$( "div[id^='complication'], #restriction, #timelimit, #ratingget, #diffget, #challengesi" ).hide();
-		$( "#subsubmenu_comp, #subsubmenu_chal, #subsubmenu_issue" ).removeClass( "on" );
-	});
-	$( "#subsubmenu_comp" ).click(function() {
-		$( this ).addClass( "on" );
-		$( "#submenu_comp" ).addClass( "on" ).siblings().removeClass( "on" );
-		$( "div[id^='complication']" ).show();
-		$( "#travel, div[id^='target'], div[id^='objective'], #restriction, #timelimit, #ratingget, #diffget, #challengesi" ).hide();
-		$( "#subsubmenu_obj, #subsubmenu_chal, #subsubmenu_issue" ).removeClass( "on" );
-	});
-	$( "#subsubmenu_chal" ).click(function() {
-		$( this ).addClass( "on" );
-		$( "#submenu_chal" ).addClass( "on" ).siblings().removeClass( "on" );
-		$( "#restriction, #timelimit, #ratingget, #diffget, #challengesi" ).show();
-		$( "#travel, div[id^='target'], div[id^='objective'], div[id^='complication']" ).hide();
-		$( "#subsubmenu_comp, #subsubmenu_obj, #subsubmenu_issue" ).removeClass( "on" );
-	});
-	$( "#subsubmenu_issue" ).click(function() {
-		$( "#map" ).addClass( "on" );
-		$( "#subsubmenu_obj, #submenu_obj" ).addClass( "on" ).prop('disabled', false);
-		$( "#travel, div[id^='target'], div[id^='objective']" ).show();
-		$( "div[id^='complication'], div[id^='restriction'], #timelimit, #ratingget, #diffget, #challengesi" ).hide();
-		$( "#subsubmenu_comp, #subsubmenu_chal, #subsubmenu_issue" ).removeClass( "on" );
-		$( "#submenu_obj" ).siblings().removeClass( "on" );
-	});	
 	
 	/******Map Select Submenu Buttons******/
-	$( "#submenu_random" ).click(function() {
-		$( this ).addClass( "on" );
-		$( "label[id^='rand'], div[id^='rand']" ).show();
-		$( "div#h1, div#h1dlc, div#h2, div#h2dlc, div#h3" ).hide();
-		$( this ).siblings().removeClass( "on" );
-	});
-	$( "#submenu_h1" ).click(function() {
-		$( this ).addClass( "on" );
-		$( "div#h1" ).show();
-		$( "label[id^='rand'], div[id^='rand'], div#h1dlc, div#h2, div#h2dlc, div#h3" ).hide();
-		$( this ).siblings().removeClass( "on" );
-	});
-	$( "#submenu_h1dlc" ).click(function() {
-		$( this ).addClass( "on" );
-		$( "div#h1dlc" ).show();
-		$( "label[id^='rand'], div[id^='rand'], div#h1, div#h2, div#h2dlc, div#h3" ).hide();
-		$( this ).siblings().removeClass( "on" );
-	});
-	$( "#submenu_h2" ).click(function() {
-		$( this ).addClass( "on" );
-		$( "div#h2" ).show();
-		$( "label[id^='rand'], div[id^='rand'], div#h1, div#h1dlc, div#h2dlc, div#h3" ).hide();
-		$( this ).siblings().removeClass( "on" );
-	});
-	$( "#submenu_h2dlc" ).click(function() {
-		$( this ).addClass( "on" );
-		$( "div#h2dlc" ).show();
-		$( "label[id^='rand'], div[id^='rand'], div#h1, div#h1dlc, div#h2, div#h3" ).hide();
-		$( this ).siblings().removeClass( "on" );
-	});
-	$( "#submenu_h3" ).click(function() {
-		$( this ).addClass( "on" );
-		$( "div#h3" ).show();
-		$( "label[id^='rand'], div[id^='rand'], div#h1, div#h1dlc, div#h2, div#h2dlc" ).hide();
-		$( this ).siblings().removeClass( "on" );
-	});
-	
-	/******Map Select Subsmenu Submenu Buttons******/
-	$( "#subsubmenu_random" ).click(function() {
-		$( this ).addClass( "on" );
+	$( "#submenu_random, #subsubmenu_random" ).click(function() {
+		$( "#submenu_random, #subsubmenu_random" ).addClass( "on" );
 		$( "label[id^='rand'], div[id^='rand']" ).show();
 		$( "div#h1, div#h1dlc, div#h2, div#h2dlc, div#h3, div#h3dlc" ).hide();
-		$( "#subsubmenu_h1, #subsubmenu_h1dlc, #subsubmenu_h2, #subsubmenu_h2dlc, #subsubmenu_h3, #subsubmenu_h3dlc" ).removeClass( "on" );
+		$( "#submenu_random, #subsubmenu_random" ).siblings().removeClass( "on" );
+		$( "#subsubmenu_name img" ).prop("id", "subsubmenu_random");
+		$( "#subsubmenu_name span" ).text("Mission Groupings");
 	});
-	$( "#subsubmenu_h1" ).click(function() {
-		$( this ).addClass( "on" );
+	$( "#submenu_h1, #subsubmenu_h1" ).click(function() {
+		$( "#submenu_h1, #subsubmenu_h1" ).addClass( "on" );
 		$( "div#h1" ).show();
 		$( "label[id^='rand'], div[id^='rand'], div#h1dlc, div#h2, div#h2dlc, div#h3, div#h3dlc" ).hide();
-		$( "#subsubmenu_random, #subsubmenu_h1dlc, #subsubmenu_h2, #subsubmenu_h2dlc, #subsubmenu_h3, #subsubmenu_h3dlc" ).removeClass( "on" );
+		$( "#submenu_h1, #subsubmenu_h1" ).siblings().removeClass( "on" );
+		$( "#subsubmenu_name img" ).prop("id", "subsubmenu_h1");
+		$( "#subsubmenu_name span" ).text("Hitman™ & Prologue");
 	});
-	$( "#subsubmenu_h1dlc" ).click(function() {
-		$( this ).addClass( "on" );
+	$( "#submenu_h1dlc, #subsubmenu_h1dlc" ).click(function() {
+		$( "#submenu_h1dlc, #subsubmenu_h1dlc" ).addClass( "on" );
 		$( "div#h1dlc" ).show();
 		$( "label[id^='rand'], div[id^='rand'], div#h1, div#h2, div#h2dlc, div#h3, div#h3dlc" ).hide();
-		$( "#subsubmenu_random, #subsubmenu_h1, #subsubmenu_h2, #subsubmenu_h2dlc, #subsubmenu_h3, #subsubmenu_h3dlc" ).removeClass( "on" );
+		$( "#submenu_h1dlc, #subsubmenu_h1dlc" ).siblings().removeClass( "on" );
+		$( "#subsubmenu_name img" ).prop("id", "subsubmenu_h1dlc");
+		$( "#subsubmenu_name span" ).text("Hitman™ Extras");
 	});
-	$( "#subsubmenu_h2" ).click(function() {
-		$( this ).addClass( "on" );
+	$( "#submenu_h2, #subsubmenu_h2" ).click(function() {
+		$( "#submenu_h2, #subsubmenu_h2" ).addClass( "on" );
 		$( "div#h2" ).show();
 		$( "label[id^='rand'], div[id^='rand'], div#h1, div#h1dlc, div#h2dlc, div#h3, div#h3dlc" ).hide();
-		$( "#subsubmenu_random, #subsubmenu_h1, #subsubmenu_h1dlc, #subsubmenu_h2dlc, #subsubmenu_h3, #subsubmenu_h3dlc" ).removeClass( "on" );
+		$( "#submenu_h2, #subsubmenu_h2" ).siblings().removeClass( "on" );
+		$( "#subsubmenu_name img" ).prop("id", "subsubmenu_h2");
+		$( "#subsubmenu_name span" ).text("Hitman™2 & Expansions");
 	});
-	$( "#subsubmenu_h2dlc" ).click(function() {
-		$( this ).addClass( "on" );
+	$( "#submenu_h2dlc, #subsubmenu_h2dlc" ).click(function() {
+		$( "#submenu_h2dlc, #subsubmenu_h2dlc" ).addClass( "on" );
 		$( "div#h2dlc" ).show();
 		$( "label[id^='rand'], div[id^='rand'], div#h1, div#h1dlc, div#h2, div#h3, div#h3dlc" ).hide();
-		$( "#subsubmenu_random, #subsubmenu_h1, #subsubmenu_h1dlc, #subsubmenu_h2, #subsubmenu_h3, #subsubmenu_h3dlc" ).removeClass( "on" );
+		$( "#submenu_h2dlc, #subsubmenu_h2dlc" ).siblings().removeClass( "on" );
+		$( "#subsubmenu_name img" ).prop("id", "subsubmenu_h2dlc");
+		$( "#subsubmenu_name span" ).text("Hitman™2 Extras");
 	});
-	$( "#subsubmenu_h3" ).click(function() {
-		$( this ).addClass( "on" );
+	$( "#submenu_h3, #subsubmenu_h3" ).click(function() {
+		$( "#submenu_h3, #subsubmenu_h3" ).addClass( "on" );
 		$( "div#h3" ).show();
 		$( "label[id^='rand'], div[id^='rand'], div#h1, div#h1dlc, div#h2, div#h2dlc, div#h3dlc" ).hide();
-		$( "#subsubmenu_random, #subsubmenu_h1, #subsubmenu_h1dlc, #subsubmenu_h2, #subsubmenu_h2dlc, #subsubmenu_h3dlc" ).removeClass( "on" );
+		$( "#submenu_h3, #subsubmenu_h3" ).siblings().removeClass( "on" );
+		$( "#subsubmenu_name img" ).prop("id", "subsubmenu_h3");
+		$( "#subsubmenu_name span" ).text("Hitman™III");
+	});
+	$( "#submenu_h3dlc, #subsubmenu_h3dlc" ).click(function() {
+		$( "#submenu_h3dlc, #subsubmenu_h3dlc" ).addClass( "on" );
+		$( "div#h3dlc" ).show();
+		$( "label[id^='rand'], div[id^='rand'], div#h1, div#h1dlc, div#h2, div#h2dlc, div#h3" ).hide();
+		$( "#submenu_h3dlc, #subsubmenu_h3dlc" ).siblings().removeClass( "on" );
+		$( "#subsubmenu_name img" ).prop("id", "subsubmenu_h3dlc");
+		$( "#subsubmenu_name span" ).text("Hitman™III Extras");
 	});
 	
 	/******Map Select Checkbox Logic******/
@@ -352,14 +402,20 @@ $(document).ready(function() {
 		else if($(this).is("#RANDOMH3:not(:checked)")) { // H3 - Off
 			$( "input.h3, input#RANDOM" ).prop('checked', false).parent().parent().removeClass("on");
 		}
+		/*else if($(this).is("#RANDOMH3DLC:checked")) { // H3 Extras - On
+			$( "input.h3dlc" ).prop('checked', true).parent().parent().addClass("on");
+		}
+		else if($(this).is("#RANDOMH3DLC:not(:checked)")) { // H3 Extras - Off
+			$( "input.h3dlc, input#RANDOM" ).prop('checked', false).parent().parent().removeClass("on");
+		} enable when non-seasonal DLC drops; add input.h3dlc to the three below */
 		else if($(this).is("#RANDOM:checked") && ($("#mode_con").hasClass("intel") || $("#mode_con").hasClass("hunt")) ) { // All Available Contract Mode - On
-			$( "input#RANDOMH1, input#RANDOMH1BM, input#RANDOMH2, input#RANDOMH2EX, input#RANDOMH3, input.h1, input.h1bm, input#TS, input.h2, input.h2ex, input.h3" ).prop('checked', true).parent().parent().addClass("on");
+			$( "input#RANDOMH1, input#RANDOMH1BM, input#RANDOMH2, input#RANDOMH2EX, input#RANDOMH3, input#RANDOMH3DLC, input.h1, input.h1bm, input#TS, input.h2, input.h2ex, input.h3" ).prop('checked', true).parent().parent().addClass("on");
 		}
 		else if($(this).is("#RANDOM:checked") && !($("#mode_con").hasClass("intel") || $("#mode_con").hasClass("hunt")) ) { // All Available Mission Mode - On
-			$( "input#RANDOMH1, input#RANDOMH1BM, input#RANDOMH2, input#RANDOMH2EX, input#RANDOMH3, input#RANDOMH1PZ, input#RANDOMH2SA, input.h1, input.h1bm, input.h1pz, input.h2, input.h2ex, input.h2sa, input.h3" ).prop('checked', true).parent().parent().addClass("on");
+			$( "input#RANDOMH1, input#RANDOMH1BM, input#RANDOMH2, input#RANDOMH2EX, input#RANDOMH3, input#RANDOMH3DLC, input#RANDOMH1PZ, input#RANDOMH2SA, input.h1, input.h1bm, input.h1pz, input.h2, input.h2ex, input.h2sa, input.h3, input#DGS" ).prop('checked', true).parent().parent().addClass("on");
 		}
 		else if($(this).is("#RANDOM:not(:checked)")) { // All Available - Off
-			$( "input#RANDOMH1, input#RANDOMH1BM, input#RANDOMH2, input#RANDOMH2EX, input#RANDOMH3, input#RANDOMH1PZ, input#RANDOMH2SA, input.h1, input.h1bm, input.h1pz, input.h2, input.h2ex, input.h2sa, input.h3" ).prop('checked', false).parent().parent().removeClass("on");
+			$( "input#RANDOMH1, input#RANDOMH1BM, input#RANDOMH2, input#RANDOMH2EX, input#RANDOMH3, input#RANDOMH3DLC, input#RANDOMH1PZ, input#RANDOMH2SA, input.h1, input.h1bm, input.h1pz, input.h2, input.h2ex, input.h2sa, input.h3, input#DGS" ).prop('checked', false).parent().parent().removeClass("on");
 		};
 		
 		// Toggle All Available if all available H3 levels are selected or not
@@ -444,6 +500,14 @@ $(document).ready(function() {
 		else {
 			$("input#RANDOMH3").prop('checked', false).parent().parent().removeClass("on");
 		};
+		
+		//Toggle Hitman 3 Extras if H3DLC levels are selected or not
+		//if($(".h3dlc:checked").length == $(".h3dlc").length) {
+		//	$("input#RANDOMH3DLC").prop('checked', true).parent().parent().addClass("on");
+		//}
+		//else {
+		//	$("input#RANDOMH3DLC").prop('checked', false).parent().parent().removeClass("on");
+		//};
 		
 	});
 	/******Options Select Submenu Buttons******/
