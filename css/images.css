@@ -44,6 +44,7 @@
 .m14-1 { background:#292929 url("../img/missions/14-1.png") no-repeat center top / 350px; }
 .m15-1 { background:#292929 url("../img/missions/15-1.png") no-repeat center top / 350px; }
 .m16-1 { background:#292929 url("../img/missions/16-1.png") no-repeat center top / 350px; }
+.m16-E { background:#292929 url("../img/missions/16-E.png") no-repeat center top / 350px; }
 .m17-1 { background:#292929 url("../img/missions/17-1.png") no-repeat center top / 350px; }
 .m18-1 { background:#292929 url("../img/missions/18-1.png") no-repeat center top / 350px; }
 .m19-1 { background:#292929 url("../img/missions/19-1.png") no-repeat center top / 350px; }
@@ -79,6 +80,7 @@
 .resort { background-image:var(--missionbggradient), url('../img/missions/haven-island.webp'); filter:var(--missionbgfilter); -webkit-filter:var(--missionbgfilter); -moz-filter:var(--missionbgfilter); }
 .tower { background-image:var(--missionbggradient), url('../img/missions/dubai.webp'); filter:var(--missionbgfilter); -webkit-filter:var(--missionbgfilter); -moz-filter:var(--missionbgfilter); }
 .clue { background-image:var(--missionbggradient), url('../img/missions/dartmoor.webp'); filter:var(--missionbgfilter); -webkit-filter:var(--missionbgfilter); -moz-filter:var(--missionbgfilter); }
+.gardenshow { background-image:var(--missionbggradient), url('../img/missions/dartmoor-gs.webp'); filter:var(--missionbgfilter); -webkit-filter:var(--missionbgfilter); -moz-filter:var(--missionbgfilter); }
 .club { background-image:var(--missionbggradient), url('../img/missions/berlin.webp'); filter:var(--missionbgfilter); -webkit-filter:var(--missionbgfilter); -moz-filter:var(--missionbgfilter); }
 .archive { background-image:var(--missionbggradient), url('../img/missions/chongqing.webp'); filter:var(--missionbgfilter); -webkit-filter:var(--missionbgfilter); -moz-filter:var(--missionbgfilter); }
 .vineyard { background-image:var(--missionbggradient), url('../img/missions/mendoza.webp'); filter:var(--missionbgfilter); -webkit-filter:var(--missionbgfilter); -moz-filter:var(--missionbgfilter); }
@@ -229,6 +231,8 @@
 .clue-start-BehindMansionGathering { background-image: url('../img/entry/BehindMansionGathering.png'); }
 .clue-start-Library { background-image: url('../img/entry/Library.png'); }
 .clue-start-ZacharysBedroom { background-image: url('../img/entry/ZacharysBedroom.png'); }
+.gardenshow-start-GardenShowEntrance { background-image: url('../img/entry/GardenShowEntrance.png'); }
+.gardenshow-start-DeterministicMode { background-image: url('../img/entry/DeterministicMode-DGS.png'); }
 .club-start-BusStop { background-image: url('../img/entry/BusStop.png'); }
 .club-start-ClubEntrance { background-image: url('../img/entry/ClubEntrance.png'); }
 .club-start-ProjectionBar { background-image: url('../img/entry/ProjectionBar.png'); }
@@ -384,7 +388,10 @@
 .clue-exit-Motorcycle { background-image: url('../img/exit/Motorcycle-DeathInTheFamily.png'); }
 .clue-exit-Hearse { background-image: url('../img/exit/Hearse.png'); }
 .clue-exit-RiverBridge { background-image: url('../img/exit/RiverBridge.png'); }
-.clue-exit-Boat { background-image: url('../img/exit/Boat-DeathInTheFamily.png'); }
+.clue-exit-Boat { background-image: url('../img/exit/Boat-DeathInTheFamily-DeathInTheFamily.png'); }
+.gardenshow-exit-Motorcycle { background-image: url('../img/exit/Motorcycle-GardenShow.png'); }
+.gardenshow-exit-RiverBridge { background-image: url('../img/exit/RiverBridge-GardenShow.png'); }
+.gardenshow-exit-Boat { background-image: url('../img/exit/Boat-GardenShow.png'); }
 .club-exit-IntoTheForrest { background-image: url('../img/exit/IntoTheForrest.png'); }
 .club-exit-Bicycle { background-image: url('../img/exit/Bicycle.png'); }
 .club-exit-EmergencyExit { background-image: url('../img/exit/EmergencyExit.png'); }
@@ -1236,6 +1243,22 @@ div[class^="ElusiveTarget"] { background-image: url('../img/targetcon/NPC.jpg');
 .MaryMoore-clue { background-image: url('../img/targetcon/MaryMoore.jpg'); }
 .BenStone-clue { background-image: url('../img/targetcon/BenStone.jpg'); }
 
+/* Dartmoor Garden Show */
+.EvelynCrane-gardenshow { background-image: url('../img/target/EvelynCrane.jpg'); }
+.EvelynCrane-gardenshow.contarget { background-size: auto 100% !important; }
+.KenTakeuchi-gardenshow { background-image: url('../img/target/KenTakeuchi.jpg'); }
+.KenTakeuchi-gardenshow.contarget { background-size: auto 100% !important; }
+.ManonBeaulieu-gardenshow { background-image: url('../img/target/ManonBeaulieu.jpg'); }
+.ManonBeaulieu-gardenshow.contarget { background-size: auto 100% !important; }
+.GulshanYazdani-gardenshow { background-image: url('../img/target/GulshanYazdani.jpg'); }
+.GulshanYazdani-gardenshow.contarget { background-size: auto 100% !important; }
+.SebastianSato-gardenshow { background-image: url('../img/target/SebastianSato.jpg'); }
+.SebastianSato-gardenshow.contarget { background-size: auto 100% !important; }
+.LucyPhillips-gardenshow { background-image: url('../img/target/LucyPhillips.jpg'); }
+.LucyPhillips-gardenshow.contarget { background-size: auto 100% !important; }
+.CorneliaStuyvesant-gardenshow { background-image: url('../img/target/CorneliaStuyvesant.jpg'); }
+.CorneliaStuyvesant-gardenshow.contarget { background-size: auto 100% !important; }
+
 /** Berlin **/
 /* Apex Predator */
 .AgentRhodes-club { background-image: url('../img/target/AgentRhodes.jpg'); }
@@ -1928,6 +1951,15 @@ div[class^="ElusiveTarget"] { background-image: url('../img/targetcon/NPC.jpg');
 .NothingasitSeems { background-image: url('../img/camera/NothingasitSeems.png'); }
 .TheGamesAfoot { background-image: url('../img/camera/TheGamesAfoot.png'); }
 .EvidenceisEverything { background-image: url('../img/camera/EvidenceisEverything.png'); }
+
+/* Dartmoor Garden Show */
+.UpsetTheApplecart { background-image: url('../img/obj/UpsetTheApplecart.png'); }
+.FrogetEscaping { background-image: url('../img/obj/FrogetEscaping.png'); }
+.DoItForTheGram { background-image: url('../img/obj/DoItForTheGram.png'); }
+.RinginRemembrance { background-image: url('../img/obj/RinginRemembrance.png'); }
+
+.Voyeurist { background-image: url('../img/camera/Voyeurist.png'); }
+.PreviousHobby { background-image: url('../img/camera/PreviousHobby.png'); }
 
 /** Berlin **/
 /* Apex Predator */
