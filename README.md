@@ -39,8 +39,6 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 
 ### Latest Updates:
 
-25
-
 **August 7, 2021**
 * **HITMAN III:**
   * **Dartmoor Garden Show:**
