@@ -49,7 +49,7 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
   * **The Showstopper:**
     * **Photo Objectives:** 10 Added.
 * **Other Fixes:**
-  * Some "A Death In The Family" exit filenames were renamed when adding ewxits for "Dartmoor Garden Show" and improperly changed in the CSS. Oops!
+  * Some "A Death In The Family" exit filenames were renamed when adding exits for "Dartmoor Garden Show" and improperly changed in the CSS. Oops!
 * **Plans:**
   * Potential Extra/Photo objectives for the "Dartmoor Garden Show", if I can come up with any more.
   * Still planning to go through H1 & H2 to add/update Contract Mode Target images and find more Extra/Photo Objectives. Personal issues and other games got in the way of updates here for a while, sorry.
