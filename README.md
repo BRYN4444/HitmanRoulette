@@ -39,6 +39,25 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 
 ### Latest Updates:
 
+25
+
+**August 7, 2021**
+* **HITMAN III:**
+  * **Dartmoor Garden Show:**
+    * **Contracts Mode Targets:** 72 Targets Added: 7 from Mission Mode, 25 unique to this version of Dartmoor, and 40 also seen in "A Death In The Family" Dartmoor.
+  * **A Death In The Family:**
+    * **Contracts Mode Targets:** 13 Targets Added. These were NPCs passed over before with focus been on inside the Manor. Since they're also in "Dartmoor Garden Show", they were added here too.
+* **HITMAN:**
+  * **The Showstopper:**
+    * **Photo Objectives:** 10 Added.
+* **Other Fixes:**
+  * Some "A Death In The Family" exit filenames were renamed when adding ewxits for "Dartmoor Garden Show" and improperly changed in the CSS. Oops!
+* **Plans:**
+  * Potential Extra/Photo objectives for the "Dartmoor Garden Show", if I can come up with any more.
+  * Still planning to go through H1 & H2 to add/update Contract Mode Target images and find more Extra/Photo Objectives. Personal issues and other games got in the way of updates here for a while, sorry.
+
+---
+
 **August 5, 2021**
 * **Roulette:**
   * **Improved Mobile Browsing:** Hopefully better menu navigation and scaling for mobile browsing. Larger resolutions still needs to be worked on.
@@ -53,9 +72,6 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
   * **"Tango With Diana" Exit:** Removing this exit while I reevaluate it. This exit is only viable in Mission Mode after a specific mission story. I'll need to test a few things and do some backend work if it can be added back properly.
 * **HITMAN 2:**
   * **A Silver Tongue:** Updated Mission Image to match the one in game. I originally used a separate one because I felt it matched the other Special Assignments better. But it was the lone exception, so it's changed now.
-* **Plans:**
-  * Contracts Mode Targets for the Dartmoor Garden Show, as well as potential Extra/Photo objectives if I can come up with any more.
-  * Still planning to go through H1 & H2 to add/update Contract Mode Target images and find more Extra/Photo Objectives. Personal issues and other games got in the way of updates here for a while, sorry.
 
 ---
 

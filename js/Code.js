@@ -528,7 +528,7 @@ function writeEverything(result) {
 	
 	if(document.getElementById("cameraobj").checked == 1 && !(result.missionCode == "training" || result.missionCode == "test") ) { // photo objectives unavailable in ica facility
 		document.getElementById("camera").innerHTML = 
-			"<div id='cam-image' class='" + result.photos.split('|')[0].replace(/\s|,|'|“|”|-|\?|\!|\(|\)|\./g, "") +
+			"<div id='cam-image' class='" + result.photos.split('|')[0].replace(/\s|,|'|“|”|-|\?|\!|\:|\(|\)|\./g, "") +
 			"'><div id='instruction'><img id='list' src='./img/general/blank.png'><p id='wording'>"  + result.photos.split('|')[1] +
 			"</p></div><div id='nameplate'><span><p id='title'>Photo Objective</p><p id='subtitle'>"  + result.photos.split('|')[0] + "</p></span></div></div>";
 		document.getElementById("input_camera").value = "\nPhoto Objective: " + result.photos.split('|')[0] + " - " + result.photos.split('|')[1];

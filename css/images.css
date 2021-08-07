@@ -387,8 +387,8 @@
 .tower-exit-Helicopter { background-image: url('../img/exit/Helicopter-TopOfWorld.png'); }
 .clue-exit-Motorcycle { background-image: url('../img/exit/Motorcycle-DeathInTheFamily.png'); }
 .clue-exit-Hearse { background-image: url('../img/exit/Hearse.png'); }
-.clue-exit-RiverBridge { background-image: url('../img/exit/RiverBridge.png'); }
-.clue-exit-Boat { background-image: url('../img/exit/Boat-DeathInTheFamily-DeathInTheFamily.png'); }
+.clue-exit-RiverBridge { background-image: url('../img/exit/RiverBridge-DeathInTheFamily.png'); }
+.clue-exit-Boat { background-image: url('../img/exit/Boat-DeathInTheFamily.png'); }
 .gardenshow-exit-Motorcycle { background-image: url('../img/exit/Motorcycle-GardenShow.png'); }
 .gardenshow-exit-RiverBridge { background-image: url('../img/exit/RiverBridge-GardenShow.png'); }
 .gardenshow-exit-Boat { background-image: url('../img/exit/Boat-GardenShow.png'); }
@@ -1221,27 +1221,32 @@ div[class^="ElusiveTarget"] { background-image: url('../img/targetcon/NPC.jpg');
 .FlynnSharp-clue { background-image: url('../img/targetcon/FlynnSharp.jpg'); }
 .LeonardParsons-clue { background-image: url('../img/targetcon/LeonardParsons.jpg'); }
 .PhineasWhitmer-clue { background-image: url('../img/targetcon/PhineasWhitmer.jpg'); }
-.HalleDavidson-clue { background-image: url('../img/targetcon/HalleDavidson.jpg'); }
-.SeanReynolds-clue, .AlfredHoughton-clue { background-image: url('../img/targetcon/SeanReynolds.jpg'); }
-.AnnieHolland-clue, .EthelWhite-clue, .ElaineSutton-clue, .BetsyWilliams-clue { background-image: url('../img/targetcon/AnnieHolland.jpg'); }
-.IsaacKing-clue { background-image: url('../img/targetcon/IsaacKing.jpg'); }
-.OscarWalsh-clue, .JordanWebb-clue { background-image: url('../img/targetcon/OscarWalsh.jpg'); }
-.LoganRichards-clue { background-image: url('../img/targetcon/LoganRichards.jpg'); }
-.MagnusClark-clue, .EllenMoss-clue { background-image: url('../img/targetcon/MagnusClark.jpg'); }
-.AronBlack-clue, .TheoWillis-clue { background-image: url('../img/targetcon/AronBlack.jpg'); }
+.HalleDavidson-clue, .HalleDavidson-gardenshow, .PenelopeDraper-gardenshow { background-image: url('../img/targetcon/HalleDavidson.jpg'); }
+.SeanReynolds-clue, .AlfredHoughton-clue, .LukeGriffiths-clue, .LukeGriffiths-gardenshow, .DuncanRyley-gardenshow, .SeanReynolds-gardenshow { background-image: url('../img/targetcon/SeanReynolds.jpg'); }
+.AnnieHolland-clue, .EthelWhite-clue, .ElaineSutton-clue, .BetsyWilliams-clue, .ElaineSutton-gardenshow { background-image: url('../img/targetcon/AnnieHolland.jpg'); }
+.IsaacKing-clue, .CillianRussell-clue, .RayWright-clue, .CillianRussell-gardenshow, .RayWright-gardenshow { background-image: url('../img/targetcon/IsaacKing.jpg'); }
+.OscarWalsh-clue, .JordanWebb-clue, .LaytonRose-clue, .LaytonRose-gardenshow, .JordanWebb-gardenshow { background-image: url('../img/targetcon/OscarWalsh.jpg'); }
+.LoganRichards-clue, .JesseAlbinson-gardenshow { background-image: url('../img/targetcon/LoganRichards.jpg'); }
+.MagnusClark-clue, .EllenMoss-clue, .FabianReid-gardenshow, .SigmundBonher-gardenshow, .EllenMoss-gardenshow, .LoganLangdon-gardenshow { background-image: url('../img/targetcon/MagnusClark.jpg'); }
+.AronBlack-clue, .TheoWillis-clue, .TheoWillis-gardenshow { background-image: url('../img/targetcon/AronBlack.jpg'); }
 .AlbertHill-clue, .SeanCollins-clue, .BenMoore-clue { background-image: url('../img/targetcon/AlbertHill.jpg'); }
-.VincentBrown-clue, .AdrianLloyd-clue { background-image: url('../img/targetcon/VincentBrown.jpg'); }
-.HenryWilliams-clue { background-image: url('../img/targetcon/HenryWilliams.jpg'); }
-.RosieJones-clue { background-image: url('../img/targetcon/RosieJones.jpg'); }
-.HaveyWright-clue, .MaxwellRees-clue, .LaytonGill-clue { background-image: url('../img/targetcon/HaveyWright.jpg'); }
-.SamuelTaylor-clue, .DanielBrooks-clue { background-image: url('../img/targetcon/SamuelTaylor.jpg'); }
+.VincentBrown-clue, .AdrianLloyd-clue, .AlexRobinson-clue, .NoelStewart-clue, .AlexRobinson-gardenshow, .AdrianLloyd-gardenshow, .NoelStewart-gardenshow, .JesseGoffe-gardenshow { background-image: url('../img/targetcon/VincentBrown.jpg'); }
+.HenryWilliams-clue, .TobyRoberts-clue, .AlbernKinsley-gardenshow, .TobyRoberts-gardenshow, .HenryWilliams-gardenshow { background-image: url('../img/targetcon/HenryWilliams.jpg'); }
+.RosieJones-clue, .AnnabelJones-clue, .AnnabelJones-gardenshow { background-image: url('../img/targetcon/RosieJones.jpg'); }
+.HarveyWright-clue, .MaxwellRees-clue, .LaytonGill-clue, .FloydMoore-gardenshow, .NigelMichael-gardenshow, .EldonMillhouse-gardenshow { background-image: url('../img/targetcon/HarveyWright.jpg'); }
+.SamuelTaylor-clue, .DanielBrooks-clue, .SamuelTaylor-gardenshow, .SeymourAtkinson-gardenshow { background-image: url('../img/targetcon/SamuelTaylor.jpg'); }
 .RayGibson-clue { background-image: url('../img/targetcon/RayGibson.jpg'); }
 .AronFordJr-clue { background-image: url('../img/targetcon/AronFordJr.jpg'); }
 .LucianBarker-clue { background-image: url('../img/targetcon/LucianBarker.jpg'); }
-.RubenDoyle-clue, .IsaacHunter-clue { background-image: url('../img/targetcon/RubenDoyle.jpg'); }
-.JakeWatts-clue { background-image: url('../img/targetcon/JakeWatts.jpg'); }
-.MaryMoore-clue { background-image: url('../img/targetcon/MaryMoore.jpg'); }
-.BenStone-clue { background-image: url('../img/targetcon/BenStone.jpg'); }
+.RubenDoyle-clue, .IsaacHunter-clue, .BurgessSinclair-gardenshow { background-image: url('../img/targetcon/RubenDoyle.jpg'); }
+.JakeWatts-clue, .RalphBurke-gardenshow { background-image: url('../img/targetcon/JakeWatts.jpg'); }
+.MaryMoore-clue, .MaryMoore-gardenshow { background-image: url('../img/targetcon/MaryMoore.jpg'); }
+.BenStone-clue, .BrockTobin-gardenshow { background-image: url('../img/targetcon/BenStone.jpg'); }
+.OllyMarshall-clue, .OllyMarshall-gardenshow, .FelixAdams-gardenshow { background-image: url('../img/targetcon/OllyMarshall.jpg'); }
+.JoshBarker-clue, .JoshBarker-gardenshow, .GarretStevenson-gardenshow { background-image: url('../img/targetcon/JoshBarker.jpg'); }
+.ElenaBlack-clue, .ElenaBlack-gardenshow { background-image: url('../img/targetcon/ElenaBlack.jpg'); }
+.RaeFisher-clue, .RaeFisher-gardenshow { background-image: url('../img/targetcon/RaeFisher.jpg'); }
+.OliverHill-clue, .OliverHill-gardenshow { background-image: url('../img/targetcon/OliverHill.jpg'); }
 
 /* Dartmoor Garden Show */
 .EvelynCrane-gardenshow { background-image: url('../img/target/EvelynCrane.jpg'); }
@@ -1258,6 +1263,24 @@ div[class^="ElusiveTarget"] { background-image: url('../img/targetcon/NPC.jpg');
 .LucyPhillips-gardenshow.contarget { background-size: auto 100% !important; }
 .CorneliaStuyvesant-gardenshow { background-image: url('../img/target/CorneliaStuyvesant.jpg'); }
 .CorneliaStuyvesant-gardenshow.contarget { background-size: auto 100% !important; }
+
+.KendraJeanes-gardenshow { background-image: url('../img/targetcon/KendraJeanes.jpg'); }
+.CharlieRandal-gardenshow { background-image: url('../img/targetcon/CharlieRandal.jpg'); }
+.RikkiBadcock-gardenshow { background-image: url('../img/targetcon/RikkiBadcock.jpg'); }
+.AmosSimpkin-gardenshow, .EmmanuelRadclyffe-gardenshow, .EdwardColeman-gardenshow { background-image: url('../img/targetcon/AmosSimpkin.jpg'); }
+.DirkSpears-gardenshow, .KevinMurgatroyd-gardenshow { background-image: url('../img/targetcon/DirkSpears.jpg'); }
+.OrsonLukeson-gardenshow, .TylerSinclair-gardenshow { background-image: url('../img/targetcon/OrsonLukeson.jpg'); }
+.MercyRead-gardenshow { background-image: url('../img/targetcon/MercyRead.jpg'); }
+.WayneWestley-gardenshow, .EmrickSimms-gardenshow { background-image: url('../img/targetcon/WayneWestley.jpg'); }
+.ArthurJacksonTodd-gardenshow { background-image: url('../img/targetcon/ArthurJacksonTodd.jpg'); }
+.MairaDuke-gardenshow { background-image: url('../img/targetcon/MairaDuke.jpg'); }
+.QuimbyTravers-gardenshow, .FerdinandBritton-gardenshow, .NathanielKevinson-gardenshow, .CyrilWayne-gardenshow { background-image: url('../img/targetcon/QuimbyTravers.jpg'); }
+.TrudyTravis-gardenshow { background-image: url('../img/targetcon/TrudyTravis.jpg'); }
+.JayHarris-gardenshow { background-image: url('../img/targetcon/JayHarris.jpg'); }
+.RoxanneWinship-gardenshow { background-image: url('../img/targetcon/RoxanneWinship.jpg'); }
+.EugeniaProudfoot-gardenshow { background-image: url('../img/targetcon/EugeniaProudfoot.jpg'); }
+.StephenBurns-gardenshow { background-image: url('../img/targetcon/StephenBurns.jpg'); }
+.JoanDonalds-gardenshow { background-image: url('../img/targetcon/JoanDonalds.jpg'); }
 
 /** Berlin **/
 /* Apex Predator */
@@ -1551,6 +1574,17 @@ div[class^="ElusiveTarget"] { background-image: url('../img/targetcon/NPC.jpg');
 .FifteenSecondsofFame { background-image: url('../img/obj/Fifteen%20Seconds%20of%20Fame.png'); }
 .AQuickBreak { background-image: url('../img/obj/A%20Quick%20Break.png'); }
 .APrivateMeeting { background-image: url('../img/obj/APrivateMeeting.png'); }
+
+.PhotogenicParis { background-image: url('../img/camera/PhotogenicParis.png'); }
+.MiniFoodie { background-image: url('../img/camera/MiniFoodie.png'); }
+.PhotoTheft { background-image: url('../img/camera/PhotoTheft.png'); }
+.DoALittleTurn { background-image: url('../img/camera/DoALittleTurn.png'); }
+.NiceIce { background-image: url('../img/camera/NiceIce.png'); }
+.TallerThanLife { background-image: url('../img/camera/TallerThanLife.png'); }
+.PhotoOpKruger { background-image: url('../img/camera/PhotoOpKruger.png'); }
+.TouristAttraction { background-image: url('../img/camera/TouristAttraction.png'); }
+.Diorama { background-image: url('../img/camera/Diorama.png'); }
+.MuseumDisplay { background-image: url('../img/camera/MuseumDisplay.png'); }
 
 /* Holiday Hoarders */
 .WetBanditsRecruit { background-image: url('../img/obj/Wet%20Bandits%20Recruit.png'); }
