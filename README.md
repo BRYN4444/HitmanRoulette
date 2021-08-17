@@ -39,6 +39,27 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 
 ### Latest Updates:
 
+**August 16, 2021**
+* **HITMAN III:**
+  * **Dartmoor Garden Show:**
+    * **Extra Objectives:** 7 more added.
+    * **Photo Objectives:** 4 more added.
+* **HITMAN 2:**
+  * **The Ark Society:**
+    * **Melee Weapon added:** Learned that there is a Starfish on the map, so it has been added as a possible melee elimination method.
+* **HITMAN:**
+  * **World of Tomorrow:**
+    * **Contracts Mode Targets:** 148 more added. Updated the images of the existing ones with their HITMAN III versions.
+    * **Extra Objectives:** 3 more added, one being an easter egg.
+    * **Photo Objectives:** 17 added.
+* **Other Fixes:**
+  * The background image for "Situs Inversus" Hokkaido was using the "Hokkaido Snow Festival" image instead.
+  * One of the contestants in the "Dartmoor Garden Show" had incorrect intel for Contracts Mode.
+* **Plans:**
+  * Slowly going through H1 & H2 to add/update Contract Mode Target images and find more Extra/Photo Objectives. Personal issues and other games got in the way of updates here for a while, sorry.
+
+---
+
 **August 7, 2021**
 * **HITMAN III:**
   * **Dartmoor Garden Show:**
@@ -50,9 +71,6 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
     * **Photo Objectives:** 10 Added.
 * **Other Fixes:**
   * Some "A Death In The Family" exit filenames were renamed when adding exits for "Dartmoor Garden Show" and improperly changed in the CSS. Oops!
-* **Plans:**
-  * Potential Extra/Photo objectives for the "Dartmoor Garden Show", if I can come up with any more.
-  * Still planning to go through H1 & H2 to add/update Contract Mode Target images and find more Extra/Photo Objectives. Personal issues and other games got in the way of updates here for a while, sorry.
 
 ---
 
@@ -100,15 +118,3 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
   * ICA Facility Missions have restrictive loadouts that were not being enforced properly by the Roulette in regards to possible elimination methods. This was working at one point, then broken, but now working again. Fun!
   * Setup for the potential Stream Overlay option is ongoing.
   * "You must select at least one mission" is enforced a little more.
-
----
-
-**March 31, 2021**
-* **HITMAN III:**
-  * **Added Exit:** Berlin's "E.T." Easter Egg Exit.
-* **HITMAN:**
-  * **Contract Mode Targets:** Added 23 "Freeform Training" Targets and updated the images of the existing ones with their HITMAN III versions.
-* **Other Fixes:**
-  * Updated some of the Mission Grouping images to match the darker HITMAN III look.
-  * Updated the Gameplay Challenge Achieve Rating images to match the HITMAN III results screen.
-  * When Contract Mode Roulette is on, "Freeform Training" will be renamed to "Tutorial" to match how it is listed in game.
