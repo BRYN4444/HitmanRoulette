@@ -561,7 +561,7 @@ div[class^="ElusiveTarget"] { background-image: url('../img/targetcon/NPC.jpg');
 
 .TerenzioEndrizzi-virus { background-image: url('../img/targetcon/TerenzioEndrizzi.jpg'); }
 .RobertoVargas-virus { background-image: url('../img/targetcon/RobertoVargas.jpg'); }
-.ChefMarcelloRay-virus { background-image: url('../img/targetcon/ChefMarcelloRay.jpg'); }
+.ChefMarcelloRay-virus, .MicheleInversini-virus { background-image: url('../img/targetcon/ChefMarcelloRay.jpg'); }
 .DrOscarLafayette-virus { background-image: url('../img/targetcon/DrOscarLafayette.jpg'); }
 .TorresPiombo-virus { background-image: url('../img/targetcon/TorresPiombo.jpg'); }
 .SalFalcone-virus { background-image: url('../img/targetcon/SalFalcone.jpg'); }
@@ -572,6 +572,121 @@ div[class^="ElusiveTarget"] { background-image: url('../img/targetcon/NPC.jpg');
 .JackPlease-virus { background-image: url('../img/targetcon/JackPlease.jpg'); }
 .PadreFrancesco-virus { background-image: url('../img/targetcon/PadreFrancesco.jpg'); }
 .CraigRoccoMcVeigh-virus { background-image: url('../img/targetcon/CraigRoccoMcVeigh.jpg'); }
+.ClaudiaDiMeo-virus { background-image: url('../img/targetcon/ClaudiaDiMeo.jpg'); }
+.UmbertoMegazzini-virus { background-image: url('../img/targetcon/UmbertoMegazzini.jpg'); }
+.EnnioBruno-virus, .RiccardoLombardo-virus { background-image: url('../img/targetcon/EnnioBruno.jpg'); }
+.OrlandoZito-virus { background-image: url('../img/targetcon/OrlandoZito.jpg'); }
+.GianmarioLemma-virus { background-image: url('../img/targetcon/GianmarioLemma.jpg'); }
+.AlessioBiagioni-virus, .SilvioTimeteo-virus { background-image: url('../img/targetcon/AlessioBiagioni.jpg'); }
+.MamanteCassino-virus { background-image: url('../img/targetcon/MamanteCassino.jpg'); }
+.LauraBagnaschi-virus { background-image: url('../img/targetcon/LauraBagnaschi.jpg'); }
+.LeopardoNigro-virus { background-image: url('../img/targetcon/LeopardoNigro.jpg'); }
+.LisandroManocchio-virus { background-image: url('../img/targetcon/LisandroManocchio.jpg'); }
+.GiudittaContu-virus { background-image: url('../img/targetcon/GiudittaContu.jpg'); }
+.AubronWood-virus, .TimoteoMuccino-virus { background-image: url('../img/targetcon/AubronWood.jpg'); }
+.LorenzoPanzarasa-virus { background-image: url('../img/targetcon/LorenzoPanzarasa.jpg'); }
+.DavideDiMeo-virus { background-image: url('../img/targetcon/DavideDiMeo.jpg'); }
+.StefaniaBistaffa-virus, .BertoLoCascio-virus { background-image: url('../img/targetcon/StefaniaBistaffa.jpg'); }
+.IdirAlexander-virus { background-image: url('../img/targetcon/IdirAlexander.jpg'); }
+.ThomasMarbaekNielsen-virus { background-image: url('../img/targetcon/ThomasMarbaekNielsen.jpg'); }
+.StephanAmpburner-virus { background-image: url('../img/targetcon/StephanAmpburner.jpg'); }
+.AlessiaBambino-virus { background-image: url('../img/targetcon/AlessiaBambino.jpg'); }
+.FabianoTorraca-virus { background-image: url('../img/targetcon/FabianoTorraca.jpg'); }
+.EdmondoGiordano-virus, .AraldoLabate-virus { background-image: url('../img/targetcon/EdmondoGiordano.jpg'); }
+.TerenzioFamiglietti-virus { background-image: url('../img/targetcon/TerenzioFamiglietti.jpg'); }
+.DanielSamper-virus { background-image: url('../img/targetcon/DanielSamper.jpg'); }
+.PaoloFellegara-virus { background-image: url('../img/targetcon/PaoloFellegara.jpg'); }
+.VeronicaMantovani-virus { background-image: url('../img/targetcon/VeronicaMantovani.jpg'); }
+.SavinoAngelo-virus { background-image: url('../img/targetcon/SavinoAngelo.jpg'); }
+.ClaudioMarinacci-virus { background-image: url('../img/targetcon/ClaudioMarinacci.jpg'); }
+.LisaAlmestoy-virus { background-image: url('../img/targetcon/LisaAlmestoy.jpg'); }
+.GabrielliOnio-virus { background-image: url('../img/targetcon/GabrielliOnio.jpg'); }
+.RinaldoLucchese-virus { background-image: url('../img/targetcon/RinaldoLucchese.jpg'); }
+.NazarenoDimario-virus { background-image: url('../img/targetcon/NazarenoDimario.jpg'); }
+.CesarioBolognese-virus { background-image: url('../img/targetcon/CesarioBolognese.jpg'); }
+.SebastianoNoce-virus { background-image: url('../img/targetcon/SebastianoNoce.jpg'); }
+.ReginaldoNeglia-virus, .ReginaldoSpitale-virus { background-image: url('../img/targetcon/ReginaldoNeglia.jpg'); }
+.MarceloFaravelli-virus { background-image: url('../img/targetcon/MarceloFaravelli.jpg'); }
+.GinaBellucci-virus { background-image: url('../img/targetcon/GinaBellucci.jpg'); }
+.MariaTorraca-virus { background-image: url('../img/targetcon/MariaTorraca.jpg'); }
+.AndreaPenca-virus { background-image: url('../img/targetcon/AndreaPenca.jpg'); }
+.StefanoZelaschi-virus { background-image: url('../img/targetcon/StefanoZelaschi.jpg'); }
+.PacianoAltobello-virus { background-image: url('../img/targetcon/PacianoAltobello.jpg'); }
+.RiccardoLancini-virus { background-image: url('../img/targetcon/RiccardoLancini.jpg'); }
+.GianmarioLorenzini-virus { background-image: url('../img/targetcon/GianmarioLorenzini.jpg'); }
+.RiccardoParella-virus { background-image: url('../img/targetcon/RiccardoParella.jpg'); }
+.RiccardoBarosselli-virus, .ManuelePignatelli-virus { background-image: url('../img/targetcon/RiccardoBarosselli.jpg'); }
+.PaolaMaffucci-virus { background-image: url('../img/targetcon/PaolaMaffucci.jpg'); }
+.GianmarioLorenzetti-virus { background-image: url('../img/targetcon/GianmarioLorenzetti.jpg'); }
+.DanielePozzi-virus, .AbbondanzioMiano-virus { background-image: url('../img/targetcon/DanielePozzi.jpg'); }
+.GiovanniAnselmi-virus { background-image: url('../img/targetcon/GiovanniAnselmi.jpg'); }
+.GirolamoGiombi-virus { background-image: url('../img/targetcon/GirolamoGiombi.jpg'); }
+.SergioAlba-virus { background-image: url('../img/targetcon/SergioAlba.jpg'); }
+.EmilioMilani-virus, .AnacletoRossi-virus { background-image: url('../img/targetcon/EmilioMilani.jpg'); }
+.IgnazioAlberti-virus { background-image: url('../img/targetcon/IgnazioAlberti.jpg'); }
+.EvodioMinnella-virus { background-image: url('../img/targetcon/EvodioMinnella.jpg'); }
+.StefanoOrecchio-virus { background-image: url('../img/targetcon/StefanoOrecchio.jpg'); }
+.TristianoNicoletti-virus { background-image: url('../img/targetcon/TristianoNicoletti.jpg'); }
+.UbertoNavone-virus { background-image: url('../img/targetcon/UbertoNavone.jpg'); }
+.AmintorePalmiero-virus { background-image: url('../img/targetcon/AmintorePalmiero.jpg'); }
+.SiffredoNocera-virus { background-image: url('../img/targetcon/SiffredoNocera.jpg'); }
+.LucianoMaino-virus, .LuigiCresso-virus { background-image: url('../img/targetcon/LucianoMaino.jpg'); }
+.SeverinoArcuri-virus, .TizianoLoDuca-virus { background-image: url('../img/targetcon/SeverinoArcuri.jpg'); }
+.GianlucaBravo-virus { background-image: url('../img/targetcon/GianlucaBravo.jpg'); }
+.GiulioBaresi-virus, .SergioDeRose-virus, .IsaiaMaita-virus { background-image: url('../img/targetcon/GiulioBaresi.jpg'); }
+.EnricoGenovesi-virus, .MarcelloFranceschi-virus, .RosarioSapone-virus { background-image: url('../img/targetcon/EnricoGenovesi.jpg'); }
+.AlbertoGenovesi-virus, .NicolaScanarotti-virus { background-image: url('../img/targetcon/AlbertoGenovesi.jpg'); }
+.GermanoCrosetti-virus, .ArsenioMilani-virus, .FlemmingAndreetto-virus, .RemondoGuerrera-virus { background-image: url('../img/targetcon/GermanoCrosetti.jpg'); }
+.UgolinoCatena-virus, .MarcelloRomani-virus, .EufebioCosenza-virus { background-image: url('../img/targetcon/UgolinoCatena.jpg'); }
+.AldoTrentino-virus, .StefanoAlberti-virus { background-image: url('../img/targetcon/AldoTrentino.jpg'); }
+.CataldoPisani-virus, .SilvanoColavecchio-virus, .AquilinoBozzuto-virus { background-image: url('../img/targetcon/CataldoPisani.jpg'); }
+.MarioMasiello-virus { background-image: url('../img/targetcon/MarioMasiello.jpg'); }
+.SantoMasiello-virus { background-image: url('../img/targetcon/SantoMasiello.jpg'); }
+.EulaliaMilania-virus { background-image: url('../img/targetcon/EulaliaMilania.jpg'); }
+.ClaudioSpaghetti-virus, .LuisPique-virus, .AlessandroAndreotti-virus { background-image: url('../img/targetcon/ClaudioSpaghetti.jpg'); }
+.EnzoFerri-virus { background-image: url('../img/targetcon/EnzoFerri.jpg'); }
+.PalladiaTancredi-virus { background-image: url('../img/targetcon/PalladiaTancredi.jpg'); }
+.CristinaDionisi-virus { background-image: url('../img/targetcon/CristinaDionisi.jpg'); }
+.RossonAnsovino-virus { background-image: url('../img/targetcon/RossonAnsovino.jpg'); }
+.ClaudioParisi-virus { background-image: url('../img/targetcon/ClaudioParisi.jpg'); }
+.SalomoneMarandola-virus, .RomanLangella-virus, .OsvaldoPaniccia-virus { background-image: url('../img/targetcon/SalomoneMarandola.jpg'); }
+.FilippoNucci-virus, .FazioMennella-virus { background-image: url('../img/targetcon/FilippoNucci.jpg'); }
+.AlexisCaso-virus { background-image: url('../img/targetcon/AlexisCaso.jpg'); }
+.AntonioFerrari-virus { background-image: url('../img/targetcon/AntonioFerrari.jpg'); }
+.SusannaVacchi-virus { background-image: url('../img/targetcon/SusannaVacchi.jpg'); }
+.GioiaFallaci-virus { background-image: url('../img/targetcon/GioiaFallaci.jpg'); }
+.ArcibaldoNasi-virus { background-image: url('../img/targetcon/ArcibaldoNasi.jpg'); }
+.GiuseppaFerri-virus { background-image: url('../img/targetcon/GiuseppaFerri.jpg'); }
+.PaoloParella-virus { background-image: url('../img/targetcon/PaoloParella.jpg'); }
+.GiulianoEsposito-virus, .OlintoTrevisan-virus { background-image: url('../img/targetcon/GiulianoEsposito.jpg'); }
+.ArgeliaDegrandi-virus { background-image: url('../img/targetcon/ArgeliaDegrandi.jpg'); }
+.FilibertoNucci-virus { background-image: url('../img/targetcon/FilibertoNucci.jpg'); }
+.ServerinoRomani-virus { background-image: url('../img/targetcon/ServerinoRomani.jpg'); }
+.PrudenzioEndrizzi-virus { background-image: url('../img/targetcon/PrudenzioEndrizzi.jpg'); }
+.MauroToscano-virus { background-image: url('../img/targetcon/MauroToscano.jpg'); }
+.BenedettoBozzuto-virus { background-image: url('../img/targetcon/BenedettoBozzuto.jpg'); }
+.DavideBergamaschi-virus { background-image: url('../img/targetcon/DavideBergamaschi.jpg'); }
+.DiegoBergamaschi-virus { background-image: url('../img/targetcon/DiegoBergamaschi.jpg'); }
+.NicolaTrevisan-virus, .OlintoScanarotti-virus, .BertoldoVelardo-virus { background-image: url('../img/targetcon/NicolaTrevisan.jpg'); }
+.AlfredoRizzo-virus { background-image: url('../img/targetcon/AlfredoRizzo.jpg'); }
+.FabrizioDavide-virus { background-image: url('../img/targetcon/FabrizioDavide.jpg'); }
+.DelfioEndrizzi-virus { background-image: url('../img/targetcon/DelfioEndrizzi.jpg'); }
+.GeraldoDellucci-virus { background-image: url('../img/targetcon/GeraldoDellucci.jpg'); }
+.FilippoRossi-virus { background-image: url('../img/targetcon/FilippoRossi.jpg'); }
+.JakobOxenvad-virus { background-image: url('../img/targetcon/JakobOxenvad.jpg'); }
+.SerenaSalice-virus { background-image: url('../img/targetcon/SerenaSalice.jpg'); }
+.IndroPagnotto-virus { background-image: url('../img/targetcon/IndroPagnotto.jpg'); }
+.SerafinaCrosetti-virus { background-image: url('../img/targetcon/SerafinaCrosetti.jpg'); }
+.FabrizioVeritiero-virus { background-image: url('../img/targetcon/FabrizioVeritiero.jpg'); }
+.RuggeroFerri-virus { background-image: url('../img/targetcon/RuggeroFerri.jpg'); }
+.AngeloDellaMorte-virus { background-image: url('../img/targetcon/AngeloDellaMorte.jpg'); }
+.BrunoDomenica-virus { background-image: url('../img/targetcon/BrunoDomenica.jpg'); }
+.GuidoLori-virus { background-image: url('../img/targetcon/GuidoLori.jpg'); }
+.BenitoOnio-virus { background-image: url('../img/targetcon/BenitoOnio.jpg'); }
+.PriscoArcuri-virus { background-image: url('../img/targetcon/PriscoArcuri.jpg'); }
+.ValeriaPinelli-virus { background-image: url('../img/targetcon/ValeriaPinelli.jpg'); }
+.AlfredinoRusso-virus { background-image: url('../img/targetcon/AlfredinoRusso.jpg'); }
+.VilibertoBranca-virus { background-image: url('../img/targetcon/VilibertoBranca.jpg'); }
 
 /* The Icon */
 .DinoBosco-movie { background-image: url('../img/target/DinoBosco.jpg'); }
@@ -592,7 +707,7 @@ div[class^="ElusiveTarget"] { background-image: url('../img/targetcon/NPC.jpg');
 .DavideBattistelli-election { background-image: url('../img/targetcon/DavideBattistelli.jpg'); }
 .MarcelloFolliero-election { background-image: url('../img/targetcon/MarcelloFolliero.jpg'); }
 .AlbertaArcuri-election { background-image: url('../img/targetcon/AlbertaArcuri.jpg'); }
-.CristinaDionisi-election { background-image: url('../img/targetcon/CristinaDionisi.jpg'); }
+.CristinaDionisi-election { background-image: url('../img/targetcon/CristinaDionisi-Landslide.jpg'); }
 .FelixMerkl-election { background-image: url('../img/targetcon/FelixMerkl.jpg'); }
 .MicheleDelleMarche-election { background-image: url('../img/targetcon/MicheleDelleMarche.jpg'); }
 .RobertoMulo-election { background-image: url('../img/targetcon/RobertoMulo.jpg'); }
@@ -1618,6 +1733,27 @@ div[class^="ElusiveTarget"] { background-image: url('../img/targetcon/NPC.jpg');
 .KillShot { background-image: url('../img/obj/Kill%20Shot.png'); }
 .PrecisionCaveIn { background-image: url('../img/obj/Precision%20Cave%20In.png'); }
 .LeaveNoTrace { background-image: url('../img/obj/Leave%20No%20Trace.png'); }
+.KeepClean { background-image: url('../img/obj/KeepClean.png'); }
+.SurveillanceState { background-image: url('../img/obj/SurveillanceState.png'); }
+.Cryptkeeping { background-image: url('../img/obj/Cryptkeeping.png'); }
+
+.FountainFan { background-image: url('../img/camera/FountainFan.png'); }
+.LongMayHeRing { background-image: url('../img/camera/LongMayHeRing.png'); }
+.BuskingMakesMeFeelGood { background-image: url('../img/camera/BuskingMakesMeFeelGood.png'); }
+.LighthouseDay { background-image: url('../img/camera/LighthouseDay.png'); }
+.RiposainPace { background-image: url('../img/camera/RiposainPace.png'); }
+.InMemoria { background-image: url('../img/camera/InMemoria.png'); }
+.PreviouslyOn { background-image: url('../img/camera/PreviouslyOn.png'); }
+.HeyYouDownThere { background-image: url('../img/camera/HeyYouDownThere.png'); }
+.SolarStudy { background-image: url('../img/camera/SolarStudy.png'); }
+.CameraMeetLens { background-image: url('../img/camera/CameraMeetLens.png'); }
+.RichPeopleAreWeird { background-image: url('../img/camera/RichPeopleAreWeird.png'); }
+.AnalogConversion { background-image: url('../img/camera/AnalogConversion.png'); }
+.TalentScout { background-image: url('../img/camera/TalentScout.png'); }
+.YoureOnCannonCamera { background-image: url('../img/camera/YoureOnCannonCamera.png'); }
+.InLovingMemory { background-image: url('../img/camera/InLovingMemory.png'); }
+.EthersPrize { background-image: url('../img/camera/EthersPrize.png'); }
+.FinalRestingPlace { background-image: url('../img/camera/FinalRestingPlace.png'); }
 
 /* The Icon */
 .TimetoMeettheFans { background-image: url('../img/obj/Time%20to%20Meet%20the%20Fans.png'); }
@@ -1991,9 +2127,20 @@ div[class^="ElusiveTarget"] { background-image: url('../img/targetcon/NPC.jpg');
 .FrogetEscaping { background-image: url('../img/obj/FrogetEscaping.png'); }
 .DoItForTheGram { background-image: url('../img/obj/DoItForTheGram.png'); }
 .RinginRemembrance { background-image: url('../img/obj/RinginRemembrance.png'); }
+.SplashZone { background-image: url('../img/obj/SplashZone.png'); }
+.PerilousPerch { background-image: url('../img/obj/PerilousPerch.png'); }
+.NoFlyZone { background-image: url('../img/obj/NoFlyZone.png'); }
+.HuntingForSport { background-image: url('../img/obj/HuntingForSport.png'); }
+.WhyIsThisEvenHere { background-image: url('../img/obj/WhyIsThisEvenHere.png'); }
+.DoCryOverSpiltWine { background-image: url('../img/obj/DoCryOverSpiltWine.png'); }
+.ArtistsBlock { background-image: url('../img/obj/ArtistsBlock.png'); }
 
 .Voyeurist { background-image: url('../img/camera/Voyeurist.png'); }
 .PreviousHobby { background-image: url('../img/camera/PreviousHobby.png'); }
+.GodSavetheGreen { background-image: url('../img/camera/GodSavetheGreen.png'); }
+.EnshusPavilion { background-image: url('../img/camera/EnshusPavilion.png'); }
+.SansPareli { background-image: url('../img/camera/SansPareli.png'); }
+.TheGateofParadise { background-image: url('../img/camera/TheGateofParadise.png'); }
 
 /** Berlin **/
 /* Apex Predator */
