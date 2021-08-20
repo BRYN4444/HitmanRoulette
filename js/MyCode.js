@@ -266,7 +266,6 @@ $(document).ready(function() {
 		$( "#subsubmenu_obj, #subsubmenu_comp" ).removeClass( "on" );
 	});
 	$( "#submenu_issue, #subsubmenu_issue" ).click(function() {
-		$( "#map" ).addClass( "on" );
 		$( "#submenu_obj, #subsubmenu_obj" ).addClass( "on" ).prop('disabled', false);
 		$( "#travel, div[id^='target'], div[id^='objective'], #camera" ).show();
 		$( "div[id^='complication'], div[id^='restriction'], #timelimit, #ratingget, #diffget, #challengesi" ).hide();

@@ -829,6 +829,25 @@ function button_MakeItGo(){
 	document.getElementById("intro").style.setProperty("display", "none", "important");
 	document.getElementById("features").style.setProperty("display", "none", "important");
 	
+	//check if mission/contract/escalation/elusive
+	var modeIndex = document.getElementById("modeselect");
+	var mode = modeIndex.options[modeIndex.selectedIndex].value;
+	if (mode == "ELUSIVE") {
+		document.getElementById("map").className = "on-elu";
+	}
+	else if (mode == "CONEASY" || mode == "CONHARD") {
+		document.getElementById("map").className = "on-con";
+	}
+	else if (result.missionTitle == "The Director" || result.missionTitle == "The Enforcer" || result.missionTitle == "The Extractor" || result.missionTitle == "The Veteran" || result.missionTitle == "The Mercenary" || result.missionTitle == "The Controller") {
+		document.getElementById("map").className = "on-sj6";
+	}
+	else if (result.missionTitle == "Dartmoor Garden Show") {
+		document.getElementById("map").className = "on-esc";
+	}
+	else {
+		document.getElementById("map").className = "on";
+	};
+	
 	//Hover to scroll long nameplate names
 	$(function() {
 		$("p[id^='subtitle']").each(function(i) {
