@@ -39,6 +39,22 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 
 ### Latest Updates:
 
+**August 20, 2021**
+* **Roulette:**
+  * Added a preview when selecting "Roulette Appearance". Just hover over the options and the preview appears in the description to the right. This is only on non-mobile browsing due to screen size restrictions.
+* **HITMAN:**
+  * **The Icon:**
+    * **Contracts Mode Targets:** 25 more added. Updated the images of the existing ones with their HITMAN III versions.
+    * **Photo Objectives:** 5 added.
+* **Other Fixes:**
+  * Differentiated the icon shown for Missions, Contracts, and Escalations as well as Elusive Targets and the Sarajevo Six. (Only visable for non-mobile browsing)
+  * Method, Disguise, and Intel icons for Targets now match Hitman III when using the "Hitman III Dark" (default) appearance.
+  * Minor color and text issues fixed for mobile browsing using the "Hitman GOTY White" appearance. 
+* **Plans:**
+  * Slowly going through H1 & H2 to add/update Contract Mode Target images and find more Extra/Photo Objectives. Personal issues and other games got in the way of updates here for a while, sorry.
+
+---
+
 **August 16, 2021**
 * **HITMAN III:**
   * **Dartmoor Garden Show:**
@@ -55,8 +71,6 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 * **Other Fixes:**
   * The background image for "Situs Inversus" Hokkaido was using the "Hokkaido Snow Festival" image instead.
   * One of the contestants in the "Dartmoor Garden Show" had incorrect intel for Contracts Mode.
-* **Plans:**
-  * Slowly going through H1 & H2 to add/update Contract Mode Target images and find more Extra/Photo Objectives. Personal issues and other games got in the way of updates here for a while, sorry.
 
 ---
 
@@ -94,27 +108,3 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 **April 29, 2021**
 * **HITMAN:**
   * **Contract Mode Targets:** Added 136 "The Showstopper" Targets and updated the images of the existing ones with their HITMAN III versions.
-
----
-
-**April 22, 2021**
-* **Roulette:**
-  * **Extra Objectives** were given a complete overhaul. Enabling them is still the same: Roulette Settings > Extra Requirements > Extra Objectives [On]. However, on the back end, you should see less conflicting rolls based on other Roulette Settings being enabled. This allowed more Extra Objectives to be added, especially to HITMAN (2016) locations. Details:
-    * There are Mission Mode specific Extra Objectives that are shuffled in only outside of Contracts Mode. (These existed before)
-    * If you have Complications and/or "Achieve Rating" disabled, another set of Extra Objectives are shuffled in. These are quirkier ones that may require pacifications, disguise changes, or collateral damage like extra eliminations that void Silent Assassin.
-  * **Roulette Settings** had a few descriptions for options updated for clarification.
-  * **Complications:** One was removed due to redundancy. Keeping "No Disguise Changes" over "One Disguise Change".
-* **HITMAN:**
-  * **Tactical Turtleneck** is the renamed version of Training Gear in the ICA Facility missions. Same now for here.
-  * **Ezra Berg** photo updated to match his look in HITMAN III.
-  * **Contract Mode Targets:** Added 35 "The Final Test" Targets and updated the images of the existing ones with their HITMAN III versions.
-  * **Extra Objectives:** Added many due to Roulette improvements listed above. Updated images of the majority of existing ones to match how they look in HITMAN III.
-* **HITMAN 2:**
-  * **Extra Objectives:** Added many due to Roulette improvements listed above. Updated images of the majority of existing ones to match how they look in HITMAN III.
-* **HITMAN III:**
-  * **Extra Objectives:** Added a few due to Roulette improvements listed above.
-* **Other Fixes:**
-  * Some Missions that are unavailable for Contracts Mode could be enabled using the main "H3 Accessable" option. This has been fixed.
-  * ICA Facility Missions have restrictive loadouts that were not being enforced properly by the Roulette in regards to possible elimination methods. This was working at one point, then broken, but now working again. Fun!
-  * Setup for the potential Stream Overlay option is ongoing.
-  * "You must select at least one mission" is enforced a little more.
