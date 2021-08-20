@@ -695,10 +695,31 @@ div[class^="ElusiveTarget"] { background-image: url('../img/targetcon/NPC.jpg');
 .PalmiroRusso-movie { background-image: url('../img/targetcon/PalmiroRusso.jpg'); }
 .EnricoNucci-movie { background-image: url('../img/targetcon/EnricoNucci.jpg'); }
 .SophiaWilde-movie { background-image: url('../img/targetcon/SophiaWilde.jpg'); }
-.GiuseppeMonaldo-movie { background-image: url('../img/targetcon/GiuseppeMonaldo.jpg'); }
-.AmarantoTonyMazzi-movie { background-image: url('../img/targetcon/AmarantoTonyMazzi.jpg'); }
+.GiuseppeMonaldo-movie, .LudovicoPisano-movie { background-image: url('../img/targetcon/GiuseppeMonaldo.jpg'); }
+.AmarantoTonyMazzi-movie, .RobertoGreco-movie, .CamilloSagese-movie { background-image: url('../img/targetcon/AmarantoTonyMazzi.jpg'); }
 .ArturoTossi-movie { background-image: url('../img/targetcon/ArturoTossi.jpg'); }
 .UranioLucchese-movie { background-image: url('../img/targetcon/UranioLucchese.jpg'); }
+.ArnaldoMonaldo-movie { background-image: url('../img/targetcon/ArnaldoMonaldo.jpg'); }
+.RomanoGreece-movie { background-image: url('../img/targetcon/RomanoGreece.jpg'); }
+.GibertoCastiglione-movie { background-image: url('../img/targetcon/GibertoCastiglione.jpg'); }
+.ArnaldoLucchese-movie { background-image: url('../img/targetcon/ArnaldoLucchese.jpg'); }
+.DoroteoMilani-movie { background-image: url('../img/targetcon/DoroteoMilani.jpg'); }
+.CamilloLettiere-movie { background-image: url('../img/targetcon/CamilloLettiere.jpg'); }
+.CupidoGenovesi-movie { background-image: url('../img/targetcon/CupidoGenovesi.jpg'); }
+.FabianoMilani-movie { background-image: url('../img/targetcon/FabianoMilani.jpg'); }
+.MedoroArcuri-movie { background-image: url('../img/targetcon/MedoroArcuri.jpg'); }
+.QuartoBuccho-movie { background-image: url('../img/targetcon/QuartoBuccho.jpg'); }
+.FrancescoLucchese-movie { background-image: url('../img/targetcon/FrancescoLucchese.jpg'); }
+.IppolitoDavide-movie { background-image: url('../img/targetcon/IppolitoDavide.jpg'); }
+.VirgilioPagnotto-movie, .TarquinioColombo-movie { background-image: url('../img/targetcon/VirgilioPagnotto.jpg'); }
+.NicolettaVillani-movie { background-image: url('../img/targetcon/NicolettaVillani.jpg'); }
+.LuisaDoria-movie { background-image: url('../img/targetcon/LuisaDoria.jpg'); }
+.OlivieroLoggia-movie { background-image: url('../img/targetcon/OlivieroLoggia.jpg'); }
+.AntonioBarese-movie { background-image: url('../img/targetcon/AntonioBarese.jpg'); }
+.VincenzaLombardi-movie { background-image: url('../img/targetcon/VincenzaLombardi.jpg'); }
+.ManfredEsposito-movie { background-image: url('../img/targetcon/ManfredEsposito.jpg'); }
+.VinicioGreece-movie { background-image: url('../img/targetcon/VinicioGreece.jpg'); }
+.GiovaniSagese-movie { background-image: url('../img/targetcon/GiovaniSagese.jpg'); }
 
 /* Landslide */
 .MarcoAbiatti-election { background-image: url('../img/target/MarcoAbiatti.jpg'); }
@@ -1765,6 +1786,12 @@ div[class^="ElusiveTarget"] { background-image: url('../img/targetcon/NPC.jpg');
 .SafeSpace { background-image: url('../img/obj/SafeSpace.png'); }
 .HotPocket { background-image: url('../img/obj/HotPocket.png'); }
 .JustaPressAway { background-image: url('../img/obj/JustaPressAway.png'); }
+
+.PromotionalMaterial { background-image: url('../img/camera/PromotionalMaterial.png'); }
+.MarvelousMachine { background-image: url('../img/camera/MarvelousMachine.png'); }
+.BehindTheScenes { background-image: url('../img/camera/BehindTheScenes.png'); }
+.RobotOverlord { background-image: url('../img/camera/RobotOverlord.png'); }
+.PosterPosterity { background-image: url('../img/camera/PosterPosterity.png'); }
 
 /* Landslide */
 .BigBrother { background-image: url('../img/obj/Big%20Brother.png'); }
