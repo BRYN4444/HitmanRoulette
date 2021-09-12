@@ -39,6 +39,24 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 
 ### Latest Updates:
 
+**September 12, 2021**
+* **HITMAN:**
+  * **Landslide:**
+    * **Contracts Mode Targets:** 95 more added. Updated the images of the existing ones with their HITMAN III versions.
+    * **Photo Objectives:** 7 added.
+  * Other Small Updates:
+    * **The Showstopper - Photo Objectives:** 1 more added.
+	* **World of Tomorrow - Contracts Mode Targets:** Added extra learned intel for one NPC.
+	* **The Icon - Contracts Mode Targets:** Fixed a misspelled NPC name.
+	* **Landslide, The Icon, and The Author - "Town Gate" Exit:** Renamed to "Old Town Gate" to reflect the location's proper name within Hitman 2/3.
+* **Other Fixes:**
+  * Newly implemented icons differentiating Missions, Contracts, Escalations, etc. were displaying incorectly if you changed the Roulette Mode and navagated the history (Undo/Redo).
+  * Purged a handful of duplicate Contracts Mode Target Images.
+* **Current Plans:**
+  * Slowly going through H1 & H2 to add/update Contract Mode Target images and find more Extra/Photo Objectives. Personal issues and other games got in the way of updates here for a while, sorry.
+
+---
+
 **August 20, 2021**
 * **Roulette:**
   * Added a preview when selecting "Roulette Appearance". Just hover over the options and the preview appears in the description to the right. This is only on non-mobile browsing due to screen size restrictions.
@@ -50,8 +68,6 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
   * Differentiated the icon shown for Missions, Contracts, and Escalations as well as Elusive Targets and the Sarajevo Six. (Only visable for non-mobile browsing)
   * Method, Disguise, and Intel icons for Targets now match Hitman III when using the "Hitman III Dark" (default) appearance.
   * Minor color and text issues fixed for mobile browsing using the "Hitman GOTY White" appearance. 
-* **Plans:**
-  * Slowly going through H1 & H2 to add/update Contract Mode Target images and find more Extra/Photo Objectives. Personal issues and other games got in the way of updates here for a while, sorry.
 
 ---
 
