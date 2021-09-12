@@ -205,7 +205,7 @@ function createTargetList(container) {
 //Adds properties from the container object to the result object
 function containerToResult(container) {
 	var result = {};
-	result.missionTitle = container.missionTitle;
+	//result.missionTitle = container.missionTitle;
 	result.missionLocation = container.missionLocation;
 	result.missionCode = container.missionCode;
 	result.photos = container.photos[Math.floor(Math.random()*container.photos.length)];
@@ -215,14 +215,40 @@ function containerToResult(container) {
 	var exitModeIndex = document.getElementById("startexit");
 	var exitMode = exitModeIndex.options[exitModeIndex.selectedIndex].value;
 	
-	
-	if (result.missionCode == "gardenshow" && (mode == "CONEASY" || mode == "CONHARD")) //Forces Entrance for Contracts Mode on Dartmoor Garden Show
+	//Changes Iconography For Mission/Contract/Escalation/Elusive/Sarajevo
+	if (container.missionTitle == "The Director" || container.missionTitle == "The Enforcer" || container.missionTitle == "The Extractor" || container.missionTitle == "The Veteran" || container.missionTitle == "The Mercenary" || container.missionTitle == "The Controller") {
+		result.type = "on-sj6";
+		result.missionTitle = container.missionTitle;
+	}
+	else if (mode == "ELUSIVE") {
+		result.type = "on-elu";
+		result.missionTitle = container.missionTitle;
+	}
+	else if((mode == "CONEASY" || mode == "CONHARD") && container.missionTitle == "Freeform Training") {
+		result.type = "on-con";
+		result.missionTitle = "Tutorial";
+	}
+	else if (mode == "CONEASY" || mode == "CONHARD") {
+		result.type = "on-con";
+		result.missionTitle = container.missionTitle;
+	}
+	else if (container.missionTitle == "Dartmoor Garden Show") {
+		result.type = "on-esc";
+		result.missionTitle = container.missionTitle;
+	}
+	else {
+		result.type = "on";
+		result.missionTitle = container.missionTitle;
+	};
+		
+	//Forces Entrance for Contracts Mode on Dartmoor Garden Show
+	if (result.missionCode == "gardenshow" && (mode == "CONEASY" || mode == "CONHARD"))
 		result.entry = "Garden Show Entrance";
 	else
 		result.entry = container.entry[Math.floor(Math.random()*container.entry.length)];
 	
-	
-	if (result.missionCode == "beach" && (mode == "CONEASY" || mode == "CONHARD")) //Hides exit requirement for Contracts Mode on Nightcall
+	//Hides exit requirement for Contracts Mode on Nightcall
+	if (result.missionCode == "beach" && (mode == "CONEASY" || mode == "CONHARD"))
 		result.exit = "Boat";
 	else if (exitMode == "SECRET" && mode == "MAIN") //Hides Easter Egg Exits for Contracts Mode
 		result.exit = container.eexit[Math.floor(Math.random()*container.eexit.length)];
@@ -286,22 +312,11 @@ function containerToResult(container) {
 function writeEverything(result) {
 	
 	//Location, Mission name, and background image
-	//document.documentElement.className = result.missionCode;
 	document.body.className = "hide"
 	document.getElementById("background").className = result.missionCode;
 	document.getElementById("map_place").innerHTML = result.missionLocation;
-	//DELETE document.getElementById("map_place2").innerHTML = result.missionLocation;
-	
-	var modeIndex = document.getElementById("modeselect");
-	var mode = modeIndex.options[modeIndex.selectedIndex].value;
-	if((mode == "CONEASY" || mode == "CONHARD") && result.missionTitle == "Freeform Training") {
-	document.getElementById("map_name").innerHTML = "Tutorial";
-	//DELETE document.getElementById("map_name2").innerHTML = "Tutorial";
-	}
-	else {
+	document.getElementById("map").className = result.type;
 	document.getElementById("map_name").innerHTML = result.missionTitle;
-	//DELETE document.getElementById("map_name2").innerHTML = result.missionTitle;
-	}
 	
 	//Start and Exit
 	var exitModeIndex = document.getElementById("startexit");
@@ -380,6 +395,8 @@ function writeEverything(result) {
 	};
 	
 	// Display Contracts Mode Target Images in Tall Format regardless of Theme
+	var modeIndex = document.getElementById("modeselect");
+	var mode = modeIndex.options[modeIndex.selectedIndex].value;
 	if (mode == "CONEASY" || mode == "CONHARD") { var contractmode = " contarget" }
 	else if (mode == "MAIN" && result.missionTitle == "Apex Predator") { var contractmode = " contarget" }
 	else { var contractmode = "" }
@@ -829,25 +846,6 @@ function button_MakeItGo(){
 	document.getElementById("intro").style.setProperty("display", "none", "important");
 	document.getElementById("features").style.setProperty("display", "none", "important");
 	
-	//check if mission/contract/escalation/elusive
-	var modeIndex = document.getElementById("modeselect");
-	var mode = modeIndex.options[modeIndex.selectedIndex].value;
-	if (mode == "ELUSIVE") {
-		document.getElementById("map").className = "on-elu";
-	}
-	else if (mode == "CONEASY" || mode == "CONHARD") {
-		document.getElementById("map").className = "on-con";
-	}
-	else if (result.missionTitle == "The Director" || result.missionTitle == "The Enforcer" || result.missionTitle == "The Extractor" || result.missionTitle == "The Veteran" || result.missionTitle == "The Mercenary" || result.missionTitle == "The Controller") {
-		document.getElementById("map").className = "on-sj6";
-	}
-	else if (result.missionTitle == "Dartmoor Garden Show") {
-		document.getElementById("map").className = "on-esc";
-	}
-	else {
-		document.getElementById("map").className = "on";
-	};
-	
 	//Hover to scroll long nameplate names
 	$(function() {
 		$("p[id^='subtitle']").each(function(i) {
@@ -873,12 +871,10 @@ function history_push(x){
 	//history exists, enable undobtn
 	if(history_past.length > 1) {
 		document.getElementById("undobtn").disabled = false;
-		//DELETE document.getElementById("undobtn2").disabled = false;
 	}
 	// disable redobtn
 	document.getElementById("redobtn").disabled = true;
 	document.getElementsByTagName("header")[0].style.gridTemplateColumns = "50px auto";
-	//DELETE document.getElementById("redobtn2").disabled = true;
 }
 
 
@@ -895,11 +891,9 @@ function history_undo(){
 	// enable redobtn
 	document.getElementById("redobtn").disabled = false;
 	document.getElementsByTagName("header")[0].style.gridTemplateColumns = "50px auto 50px";
-	//DELETE document.getElementById("redobtn2").disabled = false;
 	//history exists, enable undobtn
 	if(history_past.length < 2) {
 		document.getElementById("undobtn").disabled = true;
-		//DELETE document.getElementById("undobtn2").disabled = true;
 	}
 	
 	//Hover to scroll long nameplate names
@@ -929,13 +923,11 @@ function history_redo(){
 	//history exists, enable undobtn
 	if(history_past.length > 1) {
 		document.getElementById("undobtn").disabled = false;
-		//DELETE document.getElementById("undobtn2").disabled = false;
 	}
 	// disable redobtn
 	if(redo_stack.length < 1) {
 		document.getElementById("redobtn").disabled = true;
 		document.getElementsByTagName("header")[0].style.gridTemplateColumns = "50px auto";
-		//DELETE document.getElementById("redobtn2").disabled = true;
 	}
 	
 	//Hover to scroll long nameplate names
