@@ -280,19 +280,19 @@
 .virus-exit-SpeedboatHarbor, .enforcer-exit-SpeedboatHarbor { background-image: url('../img/exit/Speedboat%20%28Harbor%29.png'); }
 .virus-exit-Seaplane, .enforcer-exit-Seaplane { background-image: url('../img/exit/Seaplane.png'); }
 .virus-exit-SpeedboatRuins, .enforcer-exit-SpeedboatRuins { background-image: url('../img/exit/Speedboat%20%28Ruins%29.png'); }
-.movie-exit-TownGate { background-image: url('../img/exit/Town%20Gate-TheIcon.png'); }
+.movie-exit-OldTownGate { background-image: url('../img/exit/Old%20Town%20Gate-TheIcon.png'); }
 .movie-exit-BoscosCar { background-image: url('../img/exit/Bosco%27s%20Car.png'); }
-.election-exit-TownGate { background-image: url('../img/exit/Town%20Gate-Landslide.png'); }
+.election-exit-OldTownGate { background-image: url('../img/exit/Old%20Town%20Gate-Landslide.png'); }
 .election-exit-PinkCar { background-image: url('../img/exit/Pink%20Car.png'); }
 .election-exit-Speedboat { background-image: url('../img/exit/Speedboat-Landslide.png'); }
 .handoff-exit-Car { background-image: url('../img/exit/Car-TheAuthor.png'); }
-.handoff-exit-TownGate { background-image: url('../img/exit/Town%20Gate-TheAuthor.png'); }
+.handoff-exit-OldTownGate { background-image: url('../img/exit/Old%20Town%20Gate-TheAuthor.png'); }
 .handoff-exit-Speedboat { background-image: url('../img/exit/Speedboat-TheAuthor.png'); }
-.tension-exit-MarketplaceGates, .extractor-exit-MarketplaceGates { background-image: url('../img/exit/Marketplace%20Gates.png'); }
+.tension-exit-WestMarketGates, .extractor-exit-WestMarketGates { background-image: url('../img/exit/West%20Market%20Gates.png'); }
 .tension-exit-BazaarGates, .extractor-exit-BazaarGates { background-image: url('../img/exit/Bazaar%20Gates.png'); }
 .tension-exit-ArmoredVehicle, .extractor-exit-ArmoredVehicle { background-image: url('../img/exit/Armored%20Vehicle.png'); }
 .tension-exit-CarintheGarage, .extractor-exit-CarintheGarage { background-image: url('../img/exit/Car%20in%20the%20Garage.png'); }
-.construction-exit-MarketplaceGates { background-image: url('../img/exit/Marketplace%20Gates%20AHBOS.png'); }
+.construction-exit-WestMarketGates { background-image: url('../img/exit/West%20Market%20Gates%20AHBOS.png'); }
 .construction-exit-BazaarGates { background-image: url('../img/exit/Bazaar%20Gates%20AHBOS.png'); }
 .construction-exit-Truck { background-image: url('../img/exit/Truck.png'); }
 .construction-exit-DoorneartheWell { background-image: url('../img/exit/Door%20near%20the%20Well.png'); }
@@ -1911,6 +1911,12 @@ div[class^="ElusiveTarget"] { background-image: url('../img/targetcon/NPC.jpg');
 .AndtheFootstepsYouHear { background-image: url('../img/obj/AndtheFootstepsYouHear.png'); }
 .WillbetheLasttoReachYourDyingEar { background-image: url('../img/obj/WillbetheLasttoReachYourDyingEar.png'); }
 .UnsafeSafe { background-image: url('../img/obj/UnsafeSafe.png'); }
+
+.LighthouseDark { background-image: url('../img/camera/LighthouseDark.png'); }
+.PicnicPerformance { background-image: url('../img/camera/PicnicPerformance.png'); }
+.ClosingShop { background-image: url('../img/camera/ClosingShop.png'); }
+.PaintNotBlood { background-image: url('../img/camera/PaintNotBlood.png'); }
+.CassandraSnow { background-image: url('../img/camera/CassandraSnow.png'); }
 
 /** Marrakesh **/
 /* A Gilded Cage */
