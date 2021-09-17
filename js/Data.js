@@ -966,7 +966,12 @@ var author = {
 	suitWild: ["Two for the Price of None|Collect two bottles of Insecticide.",
 	"And the Footsteps You Hear...|Become Brother Akram and attend the meeting.",
 	"...Will be the Last to Reach Your Dying Ear|Become Craig Black and attend the meeting."],
-	photos: ["Photographic Proof|Take a photo of your target(s) after you've eliminated them, unless their body is unavailable.<br /><br />They must not be in a body bag."]
+	photos: ["Photographic Proof|Take a photo of your target(s) after you've eliminated them, unless their body is unavailable.<br /><br />They must not be in a body bag.",
+	"Lighthouse: Dark|Take a photo of the distant lighthouse.",
+	"Picnic Performance|Take a photo of the guitarist on the beach.",
+	"Closing Shop|Take a photo from inside the Deliziose Torte della Mamma bakery.",
+	"Paint, Not Blood|Take a photo of Brother Akram's Apartment ritual.",
+	"Cassandra Snow|Take a photo of Craig Black during his book reading inside the Church."]
 };
 var theenforcer = {
 	missionTitle: "The Enforcer",
@@ -1047,8 +1052,8 @@ var agc = {
 	"Erik Olander|The Consul of Sweden in Marrakesh. In a conference room in the Consulate. (Level 2)",
 	"Ellinor Westrup|Fashion model for Sanguine and former IAGO spy. In the Shisha Café areas."],
 	entry: ["Bazaar Entrance","Undercover at the Snail Stand","Undercover on the West Bazaar Rooftop","Undercover in the Courtyard Club","Undercover in Zaydan's Compound","Lamp Store Rooftop","Undercover in the Consulate","School Alley","Consulate Parking Garage"],
-	exit: ["Marketplace Gates","Bazaar Gates","Armored Vehicle|(Needs Key)","Car in the Garage|(Needs Key)"],
-	eexit: ["Marketplace Gates","Bazaar Gates","Armored Vehicle|(Needs Key)","Car in the Garage|(Needs Key)"],
+	exit: ["West Market Gates","Bazaar Gates","Armored Vehicle|(Needs Key)","Car in the Garage|(Needs Key)"],
+	eexit: ["West Market Gates","Bazaar Gates","Armored Vehicle|(Needs Key)","Car in the Garage|(Needs Key)"],
 	disguises: ["Any Suit","Cameraman","Headmaster","Masseur","Prisoner","Fortune Teller",
 	"Handyman","Shopkeeper","Local Printing Crew",
 	"Food Vendor","Waiter",
