@@ -39,6 +39,20 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 
 ### Latest Updates:
 
+**September 16, 2021**
+* **HITMAN:**
+  * **The Author:**
+    * **Photo Objectives:** 5 added.
+  * Other Small Updates:
+    * **A Gilded Cage / A House Build on Sand - "Marketplace Gate" Exit:** Renamed to "West Market Gates" to better reflect the location's direction and name within Hitman 2/3.
+* **Other Fixes:**
+  * CSS for "Old Town Gate" exit wasn't updated following the previous renaming, so the images weren't showing up.
+  * Recentered the image used for the "Lighthouse: Dusk" Photo Objective in Landslide.
+* **Current Plans:**
+  * Slowly going through H1 & H2 to add/update Contract Mode Target images and find more Extra/Photo Objectives. Personal issues and other games got in the way of updates here for a while, sorry.
+
+---
+
 **September 12, 2021**
 * **HITMAN:**
   * **Landslide:**
@@ -52,8 +66,6 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 * **Other Fixes:**
   * Newly implemented icons differentiating Missions, Contracts, Escalations, etc. were displaying incorectly if you changed the Roulette Mode and navagated the history (Undo/Redo).
   * Purged a handful of duplicate Contracts Mode Target Images.
-* **Current Plans:**
-  * Slowly going through H1 & H2 to add/update Contract Mode Target images and find more Extra/Photo Objectives. Personal issues and other games got in the way of updates here for a while, sorry.
 
 ---
 
@@ -118,9 +130,3 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
   * **"Tango With Diana" Exit:** Removing this exit while I reevaluate it. This exit is only viable in Mission Mode after a specific mission story. I'll need to test a few things and do some backend work if it can be added back properly.
 * **HITMAN 2:**
   * **A Silver Tongue:** Updated Mission Image to match the one in game. I originally used a separate one because I felt it matched the other Special Assignments better. But it was the lone exception, so it's changed now.
-
----
-
-**April 29, 2021**
-* **HITMAN:**
-  * **Contract Mode Targets:** Added 136 "The Showstopper" Targets and updated the images of the existing ones with their HITMAN III versions.
