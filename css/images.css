@@ -291,7 +291,7 @@
 .tension-exit-WestMarketGates, .extractor-exit-WestMarketGates { background-image: url('../img/exit/West%20Market%20Gates.png'); }
 .tension-exit-BazaarGates, .extractor-exit-BazaarGates { background-image: url('../img/exit/Bazaar%20Gates.png'); }
 .tension-exit-ArmoredVehicle, .extractor-exit-ArmoredVehicle { background-image: url('../img/exit/Armored%20Vehicle.png'); }
-.tension-exit-CarintheGarage, .extractor-exit-CarintheGarage { background-image: url('../img/exit/Car%20in%20the%20Garage.png'); }
+.tension-exit-ConsulateCar, .extractor-exit-ConsulateCar { background-image: url('../img/exit/Consulate%20Car.png'); }
 .construction-exit-WestMarketGates { background-image: url('../img/exit/West%20Market%20Gates%20AHBOS.png'); }
 .construction-exit-BazaarGates { background-image: url('../img/exit/Bazaar%20Gates%20AHBOS.png'); }
 .construction-exit-Truck { background-image: url('../img/exit/Truck.png'); }
@@ -845,15 +845,127 @@ div[class^="ElusiveTarget"] { background-image: url('../img/targetcon/NPC.jpg');
 .JeffBaker-tension { background-image: url('../img/targetcon/JeffBaker.jpg'); }
 .ShahinAbdulBarrMaalouf-tension { background-image: url('../img/targetcon/ShahinAbdul-barrMaalouf.jpg'); }
 .KonnyEngström-tension { background-image: url('../img/targetcon/KonnyEngström.jpg'); }
-.JawwaadReza-tension { background-image: url('../img/targetcon/JawwaadReza.jpg'); }
+.JawwaadReza-tension, .ZafirLablabTannous-tension, .AshrafMahfouz-tension, .UmayrSamihBitar-tension, .FaheemAttar-tension, .MahbubJalalalDinGanim-tension { background-image: url('../img/targetcon/JawwaadReza.jpg'); }
 .HektorLindberg-tension { background-image: url('../img/targetcon/HektorLindberg.jpg'); }
 .ZakiDiab-tension { background-image: url('../img/targetcon/ZakiDiab.jpg'); }
 .ShuaibAly-tension { background-image: url('../img/targetcon/ShuaibAly.jpg'); }
 .HildaBerg-tension { background-image: url('../img/targetcon/HildaBerg.jpg'); }
 .SayidLaham-tension { background-image: url('../img/targetcon/SayidLaham.jpg'); }
-.AldenRiauffHansson-tension { background-image: url('../img/targetcon/AldenRiauffHansson.jpg'); }
+.AldenRiauffHansson-tension, .MarkusLanden-tension { background-image: url('../img/targetcon/AldenRiauffHansson.jpg'); }
 .ErikOlander-tension { background-image: url('../img/targetcon/ErikOlander.jpg'); }
 .EllinorWestrup-tension { background-image: url('../img/targetcon/EllinorWestrup.jpg'); }
+.AnwaarAly-tension, .WaleedSuraqahTahan-tension { background-image: url('../img/targetcon/AnwaarAly.jpg'); }
+.AmeenSahli-tension { background-image: url('../img/targetcon/AmeenSahli.jpg'); }
+.AnetteEngstrom-tension { background-image: url('../img/targetcon/AnetteEngstrom.jpg'); }
+.LatifaEid-tension { background-image: url('../img/targetcon/LatifaEid.jpg'); }
+.KaiAbdulBarrMaalouf-tension { background-image: url('../img/targetcon/KaiAbdulBarrMaalouf.jpg'); }
+.MadaAnwaarSleiman-tension { background-image: url('../img/targetcon/MadaAnwaarSleiman.jpg'); }
+.VincenzSenten-tension { background-image: url('../img/targetcon/VincenzSenten.jpg'); }
+.RashidLabibGaber-tension, .BashirLubaidSarkis-tension { background-image: url('../img/targetcon/RashidLabibGaber.jpg'); }
+.FarajBudailSaliba-tension { background-image: url('../img/targetcon/FarajBudailSaliba.jpg'); }
+.MirnaCamirand-tension { background-image: url('../img/targetcon/MirnaCamirand.jpg'); }
+.RenellGunnells-tension { background-image: url('../img/targetcon/RenellGunnells.jpg'); }
+.AsadHabeeb-tension { background-image: url('../img/targetcon/AsadHabeeb.jpg'); }
+.HasanHalim-tension, .RiaasatHussein-tension { background-image: url('../img/targetcon/HasanHalim.jpg'); }
+.RolphGriffith-tension { background-image: url('../img/targetcon/RolphGriffith.jpg'); }
+.JafarSayed-tension, .NashatHakeemBotros-tension, .HaddadNawafSeif-tension, .DarwishJumuahShamoun-tension, .RamiSuhaylHandal-tension, .BadriFakhiriHandal-tension, .UsaidHai-tension, .AjmalKhalil-tension { background-image: url('../img/targetcon/JafarSayed.jpg'); }
+.MansoorShaikh-tension, .MazharHaider-tension, .AnwaarShaheed-tension, .ShaahdSafar-tension, .IhsanBa-tension, .ZaairAman-tension { background-image: url('../img/targetcon/MansoorShaikh.jpg'); }
+.SabihMunjidTuma-tension, .BaaqirIsmael-tension { background-image: url('../img/targetcon/SabihMunjidTuma.jpg'); }
+.MaysaSaah-tension, .SaharAnwaar-tension, .SalwaFahadaNahas-tension { background-image: url('../img/targetcon/MaysaSaah.jpg'); }
+.NimahSultana-tension { background-image: url('../img/targetcon/NimahSultana.jpg'); }
+.TaqqeeAkel-tension, .TayyabSamra-tension, .AdanRasilGerges-tension { background-image: url('../img/targetcon/TaqqeeAkel.jpg'); }
+.JoannaColdwell-tension { background-image: url('../img/targetcon/JoannaColdwell.jpg'); }
+.CharlestonColdwell-tension { background-image: url('../img/targetcon/CharlestonColdwell.jpg'); }
+.NadaOzer-tension { background-image: url('../img/targetcon/NadaOzer.jpg'); }
+.MisbaahPopal-tension { background-image: url('../img/targetcon/MisbaahPopal.jpg'); }
+.ZaahidJamal-tension { background-image: url('../img/targetcon/ZaahidJamal.jpg'); }
+.TerryStrong-tension { background-image: url('../img/targetcon/TerryStrong.jpg'); }
+.SayyedMohammed-tension, .MSofranov-tension { background-image: url('../img/targetcon/SayyedMohammed.jpg'); }
+.TayyabMahmood-tension, .BishrNusrahDeeb-tension, .KazimFalahBishara-tension, .RafeeqYounes-tension, .JafarFarrah-tension, .AzharZahra-tension, .AamirMohamed-tension { background-image: url('../img/targetcon/TayyabMahmood.jpg'); }
+.NijadKhaledRahal-tension, .RafeeqLone-tension, .NasuhWahhabSaliba-tension, .IrfaanHaidar-tension { background-image: url('../img/targetcon/NijadKhaledRahal.jpg'); }
+.MansoorJamail-tension, .NasuhKedarBoutros-tension, .OthmanJaunFakhoury-tension, .LjaazLatif-tension { background-image: url('../img/targetcon/MansoorJamail.jpg'); }
+.HaamidFirman-tension, .AltaafJabour-tension, .KhaaliqAwan-tension, .IsmatMasri-tension, .BassamSadadAttia-tension, .InamYusriKouri-tension { background-image: url('../img/targetcon/HaamidFirman.jpg'); }
+.ArshadMohammadi-tension, .AbdulWaliyWakilSalib-tension, .BishrAbdulShahidBahar-tension, .ZaahirAshraf-tension, .IrfaanHaidar-tension, .SaleemHai-tension { background-image: url('../img/targetcon/ArshadMohammadi.jpg'); }
+.RiaasatIshmael-tension, .IsmatKazmi-tension, .SafeeUllahHussain-tension { background-image: url('../img/targetcon/RiaasatIshmael.jpg'); }
+.MihyarRaidKassis-tension { background-image: url('../img/targetcon/MihyarRaidKassis.jpg'); }
+.HiramDaher-tension { background-image: url('../img/targetcon/HiramDaher.jpg'); }
+.DhakwanRafiqDaher-tension { background-image: url('../img/targetcon/DhakwanRafiqDaher.jpg'); }
+.FaisalMuradAsghar-tension, .YahyaLablabNaifeh-tension, .BoulosMajidSaliba-tension, .MukarramAwan-tension { background-image: url('../img/targetcon/FaisalMuradAsghar.jpg'); }
+.UbayySaudMifsud-tension { background-image: url('../img/targetcon/UbayySaudMifsud.jpg'); }
+.HanifRasmiAntoun-tension { background-image: url('../img/targetcon/HanifRasmiAntoun.jpg'); }
+.RajiEmirGhanem-tension, .AnasMeer-tension { background-image: url('../img/targetcon/RajiEmirGhanem.jpg'); }
+.MasruqKhalidAlmasi-tension { background-image: url('../img/targetcon/MasruqKhalidAlmasi.jpg'); }
+.AmeenMunisSalib-tension { background-image: url('../img/targetcon/AmeenMunisSalib.jpg'); }
+.AndreanaCorey-tension { background-image: url('../img/targetcon/AndreanaCorey.jpg'); }
+.CarrieBrodfuehrer-tension { background-image: url('../img/targetcon/CarrieBrodfuehrer.jpg'); }
+.ShaukatShahan-tension { background-image: url('../img/targetcon/ShaukatShahan.jpg'); }
+.RasoolAbdelrahman-tension, .IrshaadBegum-tension { background-image: url('../img/targetcon/RasoolAbdelrahman.jpg'); }
+.RoydenCloutier-tension { background-image: url('../img/targetcon/RoydenCloutier.jpg'); }
+.ZiyadJameelGerges-tension { background-image: url('../img/targetcon/ZiyadJameelGerges.jpg'); }
+.ShafeeHosseini-tension { background-image: url('../img/targetcon/ShafeeHosseini.jpg'); }
+.KhalafSeifalDinTannous-tension { background-image: url('../img/targetcon/KhalafSeifalDinTannous.jpg'); }
+.KhairalDinYusefSarkis-tension { background-image: url('../img/targetcon/KhairalDinYusefSarkis.jpg'); }
+.NabhanRashidHaik-tension { background-image: url('../img/targetcon/NabhanRashidHaik.jpg'); }
+.NuhaidMuneerGuirguis-tension { background-image: url('../img/targetcon/NuhaidMuneerGuirguis.jpg'); }
+.BayhasBishrAttia-tension { background-image: url('../img/targetcon/BayhasBishrAttia.jpg'); }
+.LabibAbdulWajidSabbag-tension { background-image: url('../img/targetcon/LabibAbdulWajidSabbag.jpg'); }
+.OrlandoHerrington-tension { background-image: url('../img/targetcon/OrlandoHerrington.jpg'); }
+.IzoVonKaishev-tension { background-image: url('../img/targetcon/IzoVonKaishev.jpg'); }
+.HayyanNazihBoulos-tension { background-image: url('../img/targetcon/HayyanNazihBoulos.jpg'); }
+.HudhaifahMushtaqShadid-tension { background-image: url('../img/targetcon/HudhaifahMushtaqShadid.jpg'); }
+.LulwaArijTannous-tension { background-image: url('../img/targetcon/LulwaArijTannous.jpg'); }
+.LinkParr-tension { background-image: url('../img/targetcon/LinkParr.jpg'); }
+.AgrethaDupont-tension { background-image: url('../img/targetcon/AgrethaDupont.jpg'); }
+.HaneefGhazi-tension, .AarifGhazi-tension { background-image: url('../img/targetcon/HaneefGhazi.jpg'); }
+.AamalAsalahKassis-tension { background-image: url('../img/targetcon/AamalAsalahKassis.jpg'); }
+.BasmahBeshara-tension { background-image: url('../img/targetcon/BasmahBeshara.jpg'); }
+.NooriHumamHarb-tension { background-image: url('../img/targetcon/NooriHumamHarb.jpg'); }
+.NabhanShamimSleiman-tension { background-image: url('../img/targetcon/NabhanShamimSleiman.jpg'); }
+.HaleyTuen-tension { background-image: url('../img/targetcon/HaleyTuen.jpg'); }
+.KhuzaimahAfeefSaliba-tension { background-image: url('../img/targetcon/KhuzaimahAfeefSaliba.jpg'); }
+.KhaleelRaniNahas-tension { background-image: url('../img/targetcon/KhaleelRaniNahas.jpg'); }
+.IrshaadIsmail-tension { background-image: url('../img/targetcon/IrshaadIsmail.jpg'); }
+.HarryOlsson-tension { background-image: url('../img/targetcon/HarryOlsson.jpg'); }
+.EmanuelHolmlund-tension { background-image: url('../img/targetcon/EmanuelHolmlund.jpg'); }
+.KnutMarklund-tension { background-image: url('../img/targetcon/KnutMarklund.jpg'); }
+.EmilHult-tension { background-image: url('../img/targetcon/EmilHult.jpg'); }
+.PatrikFransson-tension { background-image: url('../img/targetcon/PatrikFransson.jpg'); }
+.LasseBraunHansson-tension, .VincentRobertsson-tension { background-image: url('../img/targetcon/LasseBraunHansson.jpg'); }
+.JonasMårtensson-tension, .JensKristianNielsson-tension, .JesperKarlson-tension { background-image: url('../img/targetcon/JonasMårtensson.jpg'); }
+.LarsChristiansson-tension { background-image: url('../img/targetcon/LarsChristiansson.jpg'); }
+.TomasPersson-tension, .EmilPersson-tension { background-image: url('../img/targetcon/TomasPersson.jpg'); }
+.AxelHansdotter-tension, .PederValind-tension { background-image: url('../img/targetcon/AxelHansdotter.jpg'); }
+.JanDragsström-tension { background-image: url('../img/targetcon/JanDragsström.jpg'); }
+.NilsGöransson-tension { background-image: url('../img/targetcon/NilsGöransson.jpg'); }
+.PeterHägg-tension { background-image: url('../img/targetcon/PeterHägg.jpg'); }
+.AntonOlofsson-tension { background-image: url('../img/targetcon/AntonOlofsson.jpg'); }
+.JakobRingholm-tension, .OskarEngstrom-tension { background-image: url('../img/targetcon/JakobRingholm.jpg'); }
+.ZaahirFaraj-tension { background-image: url('../img/targetcon/ZaahirFaraj.jpg'); }
+.MagnusNordin-tension { background-image: url('../img/targetcon/MagnusNordin.jpg'); }
+.AndreEngström-tension { background-image: url('../img/targetcon/AndreEngström.jpg'); }
+.LouiseJakobsson-tension { background-image: url('../img/targetcon/LouiseJakobsson.jpg'); }
+.MarkusJanson-tension { background-image: url('../img/targetcon/MarkusJanson.jpg'); }
+.OlaMatisson-tension { background-image: url('../img/targetcon/OlaMatisson.jpg'); }
+.FrejaJohansson-tension, .JuliaSten-tension { background-image: url('../img/targetcon/FrejaJohansson.jpg'); }
+.MsPersson-tension { background-image: url('../img/targetcon/MsPersson.jpg'); }
+.OskarÅberg-tension { background-image: url('../img/targetcon/OskarÅberg.jpg'); }
+.HåkanAlmer-tension { background-image: url('../img/targetcon/HåkanAlmer.jpg'); }
+.EdwardMalmqvist-tension { background-image: url('../img/targetcon/EdwardMalmqvist.jpg'); }
+.LarsLjungren-tension { background-image: url('../img/targetcon/LarsLjungren.jpg'); }
+.AnnaNordin-tension { background-image: url('../img/targetcon/AnnaNordin.jpg'); }
+.RobertEriksson-tension { background-image: url('../img/targetcon/RobertEriksson.jpg'); }
+.HektorBerggren-tension { background-image: url('../img/targetcon/HektorBerggren.jpg'); }
+.PernilleHansson-tension { background-image: url('../img/targetcon/PernilleHansson.jpg'); }
+.ErikLinden-tension { background-image: url('../img/targetcon/ErikLinden.jpg'); }
+.JesperOlson-tension { background-image: url('../img/targetcon/JesperOlson.jpg'); }
+.RobertDahl-tension { background-image: url('../img/targetcon/RobertDahl.jpg'); }
+.RuneSoir-tension { background-image: url('../img/targetcon/RuneSoir.jpg'); }
+.MukarramJavid-tension { background-image: url('../img/targetcon/MukarramJavid.jpg'); }
+.BjörnEkbom-tension { background-image: url('../img/targetcon/BjörnEkbom.jpg'); }
+.OrvarLiljeström-tension { background-image: url('../img/targetcon/OrvarLiljeström.jpg'); }
+.RasmusGyllenhaal-tension { background-image: url('../img/targetcon/RasmusGyllenhaal.jpg'); }
+.JohnathanWallin-tension { background-image: url('../img/targetcon/JohnathanWallin.jpg'); }
+.TylerClark-tension { background-image: url('../img/targetcon/TylerClark.jpg'); }
 
 /* A House Built on Sand */
 .KongTuoKwang-construction { background-image: url('../img/target/KongTuoKwang.jpg'); }
@@ -1930,11 +2042,21 @@ div[class^="ElusiveTarget"] { background-image: url('../img/targetcon/NPC.jpg');
 .LetsDance { background-image: url("../img/obj/Let's%20Dance.png"); }
 .GoldenTouch { background-image: url('../img/obj/Golden%20Touch.png'); }
 .ARoomWithaMoose { background-image: url('../img/obj/A%20Room%20With%20a%20Moose.png'); }
-.TrainingCancelled { background-image: url('../img/obj/Training%20Cancelled.png'); }
+.TrainingCanceled { background-image: url('../img/obj/Training%20Canceled.png'); }
 .BathroomBreak { background-image: url('../img/obj/Bathroom%20Break.png'); }
 .Freedom { background-image: url('../img/obj/Freedom.png'); }
 .PublicSpeaker { background-image: url('../img/obj/Public%20Speaker.png'); }
 .ThirtyMinutesorItsFree { background-image: url('../img/obj/ThirtyMinutesorItsFree.png'); }
+
+.TheScenicRoute { background-image: url('../img/camera/TheScenicRoute.png'); }
+.EducationReform { background-image: url('../img/camera/EducationReform.png'); }
+.LuminousDay { background-image: url('../img/camera/LuminousDay.png'); }
+.AsTheSituationDevelops { background-image: url('../img/camera/AsTheSituationDevelops.png'); }
+.MarketMorning { background-image: url('../img/camera/MarketMorning.png'); }
+.DeskJob { background-image: url('../img/camera/DeskJob.png'); }
+.AMooseWithaView { background-image: url('../img/camera/AMooseWithaView.png'); }
+.RiotLooming { background-image: url('../img/camera/RiotLooming.png'); }
+.CaféQuality { background-image: url('../img/camera/CaféQuality.png'); }
 
 /* A House Built on Sand */
 .ClimbtheCorporateLadder { background-image: url('../img/obj/Climb%20the%20Corporate%20Ladder.png'); }
@@ -2131,7 +2253,7 @@ div[class^="ElusiveTarget"] { background-image: url('../img/targetcon/NPC.jpg');
 .BreakingNews { background-image: url('../img/obj/BreakingNews.png'); }
 .RingWhittletonCreek { background-image: url('../img/obj/RingWhittletonCreek.png'); }
 .DingDongDitch { background-image: url('../img/obj/DingDongDitch.png'); }
-.SmailMail { background-image: url('../img/obj/SmailMail.png'); }
+.SnailMail { background-image: url('../img/obj/SnailMail.png'); }
 .BattleFrogs { background-image: url('../img/obj/BattleFrogs.png'); }
 .ExtensivePresentation { background-image: url('../img/obj/ExtensivePresentation.png'); }
 .Stuffed { background-image: url('../img/obj/Stuffed.png'); }
