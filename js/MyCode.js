@@ -696,6 +696,7 @@ $(document).ready(function() {
 	};
 	
 	$("#settings input:checkbox:not(:checked)").parent().find("span").text("[Off]");
+	$("#settings input:checkbox:checked").parent().find("span").text("[On]");
 	$("#settings input:checkbox").change(function(){
 		if($(this).is(":checked")) {
 			$(this).parent().find("span").text("[On]");
@@ -737,8 +738,8 @@ $(document).ready(function() {
 		$("#extra_starex").removeClass("both").addClass("start").find("span").text("[Start Only]");
 	} else if ($("#startexit").val() == "BOTH") {
 		
-	};
-		
+	};	
+	
 	$("#game_mech").click(function() {
 		if( $(this).hasClass("off") ) {
 			$(this).removeClass("off").addClass("h2").find("span").text("[H2/H3]");
@@ -777,7 +778,7 @@ $(document).ready(function() {
 		};
 	});
 	
-	if($("#difficulty").val() == "H2/H3") {
+	if($("#difficulty").val() == "H2") {
 		$("#game_diff").removeClass("off").addClass("h2").find("span").text("[H2/H3]");
 	} else if ($("#difficulty").val() == "H1") {
 		$("#game_diff").removeClass("off").addClass("h1").find("span").text("[H1]");
