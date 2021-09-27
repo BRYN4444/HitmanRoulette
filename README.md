@@ -19,15 +19,15 @@ Most missions from the trilogy are pulled into the Roulette by default. Through 
 To quickly return the Roulette Settings back to default, preform a hard refresh of the page.
 
 ## Special Thanks & External Resources
+* [IO Interactive](https://www.ioi.dk/) for making a great trilogy of games that helped me through some bad days and kept me better occupied here.
 * TheKotti, for his [original Hitman Roulette](https://thekotti.github.io/about.html) that was the code base and inspiration for this spin-off.
 * [Hitman Interactive Maps](http://hitmanmaps.com/) by Winterbird & [Hitmaps](https://www.hitmaps.com/) (formerly Hitman 2 Maps) by mkoch227 for being great tools that aided in my data collection.
 * The tools [jQuery CSS Customizable Scrollbar](https://github.com/gromo/jquery.scrollbar) by gromo & [Event Mouse Wheel](https://www.dte.web.id/2013/02/event-mouse-wheel.html) by Taufik Nurrohman which I used for style and navigation.
 * [Detect Mobile Browsers](http://detectmobilebrowsers.com/) by Chad Smith, which helped in allowing settings descriptions viewable for mobile via touch.
-* [IO Interactive](https://www.ioi.dk/) for making a great game and constantly supporting it with new stuff!
 
 ## Compatibility & Issues
 
-You can deselect any locations you do not own, but by default the Roulette works best with any edition of **HITMAN III** plus the **Access Pass: HITMAN 1 GOTY Edition** and **Access Pass: HITMAN 2 Gold**. However, there may be the odd conflicting trait that changed between game releases.
+You can deselect any locations you do not own, but by default the Roulette works best with any edition of **HITMAN III** plus the **Access Pass: HITMAN 1 GOTY Edition** and **Access Pass: HITMAN 2 Gold**. However, there may be the odd conflicting trait that changed between game releases.  It is also important to note that the later the game sequel, the more gear is available to unlock for use. Since Contract Mode Targets are regular NPCs and Elimination Methods are randomly assigned, not every Target can be killed with every Method easily/silently.
 
 This was a hobby project I started in 2016/17 and have worked on during my free time as a way to brush up on my simple javascript, jQuery, and CSS knowledge as well as giving me more reason to play these new Hitman games well after unlocking everything. As such, I've only tested this at about a 1080p resolution using the browsers I frequent: Firefox and Chrome. Also I'm sure my additions to the existing code, as well as my own work, could use cleaning up here and there. If you find any issues or glaring conflicts with roulette results, [let me know via GitHub](https://github.com/BRYN4444/HitmanRoulette/issues) and I'll try and address it when I get the chance. - [BRYN](http://bryn.info/)
 
@@ -39,17 +39,32 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 
 ### Latest Updates:
 
+**September 27, 2021**
+* **HITMAN:**
+  * **A Gilded Cage:**
+    * **Contracts Mode Targets:** 175 more added. Updated the images of the existing ones with their HITMAN III versions.
+    * **Photo Objectives:** 9 added.
+  * Other Small Updates:
+    * **A Gilded Cage - "Car in the Garage" Exit:** Renamed to "Consulate Car" to better reflect the location.
+* **Other Fixes:**
+  * Some Roulette Settings were displaying incorrect selections when refreshing/reloading (not hard refreshing/reloading) the page.
+  * Added slightly more text under the "Compatibility & Issues" section of the "About & Help" page. Clarifying elimination possibilities for later sequels and how Contracts Mode may generate challenging Roulettes.
+  * Fixed spelling mistakes throughout Contracts Mode Target Intel for every mission. Also, replaced every mention of "washroom" with "bathroom" for consistency.
+* **Current Plans:**
+  * Slowly going through H1 & H2 to add/update Contract Mode Target images and find more Extra/Photo Objectives. Personal issues and other games got in the way of updates here for a while, sorry.
+
+---
+
 **September 16, 2021**
 * **HITMAN:**
   * **The Author:**
     * **Photo Objectives:** 5 added.
   * Other Small Updates:
     * **A Gilded Cage / A House Build on Sand - "Marketplace Gate" Exit:** Renamed to "West Market Gates" to better reflect the location's direction and name within Hitman 2/3.
+	* **Another Life / A Bitter Pill - Extra Objectives:** "Ring Whittleton Creek" and "Snail Mail" were mislabeled.
 * **Other Fixes:**
   * CSS for "Old Town Gate" exit wasn't updated following the previous renaming, so the images weren't showing up.
   * Recentered the image used for the "Lighthouse: Dusk" Photo Objective in Landslide.
-* **Current Plans:**
-  * Slowly going through H1 & H2 to add/update Contract Mode Target images and find more Extra/Photo Objectives. Personal issues and other games got in the way of updates here for a while, sorry.
 
 ---
 
@@ -113,20 +128,3 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
     * **Photo Objectives:** 10 Added.
 * **Other Fixes:**
   * Some "A Death In The Family" exit filenames were renamed when adding exits for "Dartmoor Garden Show" and improperly changed in the CSS. Oops!
-
----
-
-**August 5, 2021**
-* **Roulette:**
-  * **Improved Mobile Browsing:** Hopefully better menu navigation and scaling for mobile browsing. Larger resolutions still needs to be worked on.
-* **HITMAN III:**
-  * **Dartmoor Garden Show Added:** Enabled by default. Found in "Select Mission" under "Hitman III Extra Content" and added to the "Seasonal Content" Mission Grouping.
-    * **Implementation:** This unique mission is actually an escalation. After completing it for the first time, Determination Mode is unlocked as an entrance which allows targets to be chosen freely in batches.
-		* **Mission Mode:** 5 Targets will be presented with intel that states what level of the escalation they are to be eliminated during.
-		* **Contracts Mode** is available for this location too. You don't have to complete the escalation to access this.
-    * **Targets:** 7 Potential Targets; 4 Contestants and 3 Judges. Contract Mode Targets will be implemented shortly, so only the existing seven are available.
-	* **Extra Objectives:** Currently 4, with more after a bit more time with the level.
-	* **Photo Objectives:** Just 2. Again, more soon.
-  * **"Tango With Diana" Exit:** Removing this exit while I reevaluate it. This exit is only viable in Mission Mode after a specific mission story. I'll need to test a few things and do some backend work if it can be added back properly.
-* **HITMAN 2:**
-  * **A Silver Tongue:** Updated Mission Image to match the one in game. I originally used a separate one because I felt it matched the other Special Assignments better. But it was the lone exception, so it's changed now.
