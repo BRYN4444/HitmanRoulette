@@ -39,6 +39,27 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 
 ### Latest Updates:
 
+**October 4, 2021**
+* **Roulette:**
+  * **Roulette Settings:**
+    * **Extra Requirements - Force Start/Exit:** The "Secret" option will now allow easter egg exits for Contract Mode. It was originally restricting due to specific easter egg exits being unavailable in Contracts Mode, but work was done to omit these exits for Contract Mode Roulette.
+* **HITMAN:**
+  * **A Gilded Cage:**
+    * **Contracts Mode Targets:** 1 more added.
+  * **A House Built On Sand:**
+    * **Contracts Mode Targets:** 72 more added. Updated the images of the existing ones with their HITMAN III versions.
+    * **Photo Objectives:** 5 added.
+  * Other Small Updates:
+    * **Apex Predator - "Into The Forrest" Exit:** Now only forced when using the Bus Stop entrance outside of Contracta Mode, like it is normally.
+    * **The Farewell - Contract Mode Targets:** Had to remove one possible target, one of the Asado Chefs, because they do not spawn if you use the Dining Area entrance.
+* **Other Fixes:**
+  * The boxes containing the generated Starting and Exit Locations could stretch if enabled after already using the Roulette with the Force Start/Exit set to Off.
+  * Changed the wording for the "No Pacifications" Extra Objective from 'no poisoning' to 'no sedating' to better reflect that emetic poisoning is fine.
+* **Current Plans:**
+  * Slowly going through H1 & H2 to add/update Contract Mode Target images and find more Extra/Photo Objectives. Personal issues and other games got in the way of updates here for a while, sorry.
+
+---
+
 **September 27, 2021**
 * **HITMAN:**
   * **A Gilded Cage:**
@@ -50,8 +71,6 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
   * Some Roulette Settings were displaying incorrect selections when refreshing/reloading (not hard refreshing/reloading) the page.
   * Added slightly more text under the "Compatibility & Issues" section of the "About & Help" page. Clarifying elimination possibilities for later sequels and how Contracts Mode may generate challenging Roulettes.
   * Fixed spelling mistakes throughout Contracts Mode Target Intel for every mission. Also, replaced every mention of "washroom" with "bathroom" for consistency.
-* **Current Plans:**
-  * Slowly going through H1 & H2 to add/update Contract Mode Target images and find more Extra/Photo Objectives. Personal issues and other games got in the way of updates here for a while, sorry.
 
 ---
 
@@ -114,17 +133,3 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 * **Other Fixes:**
   * The background image for "Situs Inversus" Hokkaido was using the "Hokkaido Snow Festival" image instead.
   * One of the contestants in the "Dartmoor Garden Show" had incorrect intel for Contracts Mode.
-
----
-
-**August 7, 2021**
-* **HITMAN III:**
-  * **Dartmoor Garden Show:**
-    * **Contracts Mode Targets:** 72 Targets Added: 7 from Mission Mode, 25 unique to this version of Dartmoor, and 40 also seen in "A Death In The Family" Dartmoor.
-  * **A Death In The Family:**
-    * **Contracts Mode Targets:** 13 Targets Added. These were NPCs passed over before with focus been on inside the Manor. Since they're also in "Dartmoor Garden Show", they were added here too.
-* **HITMAN:**
-  * **The Showstopper:**
-    * **Photo Objectives:** 10 Added.
-* **Other Fixes:**
-  * Some "A Death In The Family" exit filenames were renamed when adding exits for "Dartmoor Garden Show" and improperly changed in the CSS. Oops!
