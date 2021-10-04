@@ -246,29 +246,29 @@ $(document).ready(function() {
 	/******Roulette Submenu Buttons******/
 	$( "#submenu_obj, #subsubmenu_obj" ).click(function() {
 		$( "#submenu_obj, #subsubmenu_obj" ).addClass( "on" );
-		$( "#travel, div[id^='target'], div[id^='objective'], #camera" ).show();
-		$( "div[id^='complication'], #restriction, #timelimit, #ratingget, #diffget, #challengesi" ).hide();
+		$( "#travel, div[id^='target'], div[id^='objective'], #camera" ).css('display', 'flex');
+		$( "div[id^='complication'], #restriction, #timelimit, #ratingget, #diffget, #challengesi" ).css('display', 'none');
 		$( this ).siblings().removeClass( "on" );
 		$( "#subsubmenu_comp, #subsubmenu_chal" ).removeClass( "on" );
 	});
 	$( "#submenu_comp, #subsubmenu_comp" ).click(function() {
 		$( "#submenu_comp, #subsubmenu_comp" ).addClass( "on" );
-		$( "div[id^='complication']" ).show();
-		$( "#travel, div[id^='target'], div[id^='objective'], #camera, #restriction, #timelimit, #ratingget, #diffget, #challengesi" ).hide();
+		$( "div[id^='complication']" ).css('display', 'flex');
+		$( "#travel, div[id^='target'], div[id^='objective'], #camera, #restriction, #timelimit, #ratingget, #diffget, #challengesi" ).css('display', 'none');
 		$( this ).siblings().removeClass( "on" );
 		$( "#subsubmenu_obj, #subsubmenu_chal" ).removeClass( "on" );
 	});
 	$( "#submenu_chal, #subsubmenu_chal" ).click(function() {
 		$( "#submenu_chal, #subsubmenu_chal" ).addClass( "on" );
-		$( "#restriction, #timelimit, #ratingget, #diffget, #challengesi" ).show();
-		$( "#travel, div[id^='target'], div[id^='objective'], #camera, div[id^='complication']" ).hide();
+		$( "#restriction, #timelimit, #ratingget, #diffget, #challengesi" ).css('display', 'flex');
+		$( "#travel, div[id^='target'], div[id^='objective'], #camera, div[id^='complication']" ).css('display', 'none');
 		$( this ).siblings().removeClass( "on" );
 		$( "#subsubmenu_obj, #subsubmenu_comp" ).removeClass( "on" );
 	});
 	$( "#submenu_issue, #subsubmenu_issue" ).click(function() {
 		$( "#submenu_obj, #subsubmenu_obj" ).addClass( "on" ).prop('disabled', false);
-		$( "#travel, div[id^='target'], div[id^='objective'], #camera" ).show();
-		$( "div[id^='complication'], div[id^='restriction'], #timelimit, #ratingget, #diffget, #challengesi" ).hide();
+		$( "#travel, div[id^='target'], div[id^='objective'], #camera" ).css('display', 'flex');
+		$( "div[id^='complication'], div[id^='restriction'], #timelimit, #ratingget, #diffget, #challengesi" ).css('display', 'none');
 		$( "#submenu_obj" ).siblings().removeClass( "on" );
 		$( "#subsubmenu_comp, #subsubmenu_chal" ).removeClass( "on" );
 		$( "header" ).css("grid-template-columns","50px auto").css("justify-content","initial");
