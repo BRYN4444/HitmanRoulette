@@ -862,7 +862,7 @@ div[class^="ElusiveTarget"] { background-image: url('../img/targetcon/NPC.jpg');
 .MadaAnwaarSleiman-tension { background-image: url('../img/targetcon/MadaAnwaarSleiman.jpg'); }
 .VincenzSenten-tension { background-image: url('../img/targetcon/VincenzSenten.jpg'); }
 .RashidLabibGaber-tension, .BashirLubaidSarkis-tension { background-image: url('../img/targetcon/RashidLabibGaber.jpg'); }
-.FarajBudailSaliba-tension { background-image: url('../img/targetcon/FarajBudailSaliba.jpg'); }
+.FarajBudailSaliba-tension, .BasheerJan-tension { background-image: url('../img/targetcon/FarajBudailSaliba.jpg'); }
 .MirnaCamirand-tension { background-image: url('../img/targetcon/MirnaCamirand.jpg'); }
 .RenellGunnells-tension { background-image: url('../img/targetcon/RenellGunnells.jpg'); }
 .AsadHabeeb-tension { background-image: url('../img/targetcon/AsadHabeeb.jpg'); }
@@ -973,14 +973,64 @@ div[class^="ElusiveTarget"] { background-image: url('../img/targetcon/NPC.jpg');
 .MatthieuMendola-construction { background-image: url('../img/target/MatthieuMendola.jpg'); }
 .MatthieuMendola-construction.contarget { background-size: auto 100% !important; }
 
+.YousefShitrit-construction, .AbdulSaburMasrurAsker-construction { background-image: url('../img/targetcon/NooriHumamHarb.jpg'); }
 .ZakiDiab-construction { background-image: url('../img/targetcon/ZakiDiab.jpg'); }
-.YousefShitrit-construction { background-image: url('../img/targetcon/YousefShitrit.jpg'); }
 .SebastianKrogh-construction { background-image: url('../img/targetcon/SebastianKrogh.jpg'); }
-.HusseinGuirguis-construction { background-image: url('../img/targetcon/HusseinGuirguis.jpg'); }
+.HusseinGuirguis-construction, .JabalahNassar-construction { background-image: url('../img/targetcon/LabibAbdulWajidSabbag.jpg'); }
 .NimrArifBahar-construction { background-image: url('../img/targetcon/NimrArifBahar.jpg'); }
-.AhmedAziz-construction { background-image: url('../img/targetcon/AhmedAziz.jpg'); }
-.NourJoumari-construction { background-image: url('../img/targetcon/NourJoumari.jpg'); }
-
+.AhmedAziz-construction, .NoorahSaladin-construction { background-image: url('../img/targetcon/NuhaidMuneerGuirguis.jpg'); }
+.NourJoumari-construction, .GuangTseng-construction { background-image: url('../img/targetcon/NourJoumari.jpg'); }
+.UlaIkramBoutros-construction { background-image: url('../img/targetcon/UlaIkramBoutros.jpg'); }
+.ZiyadJameelGerges-construction { background-image: url('../img/targetcon/MisbaahPopal.jpg'); }
+.VallisDeGrasse-construction { background-image: url('../img/targetcon/SayyedMohammed.jpg'); }
+.YazidRafiArian-construction { background-image: url('../img/targetcon/JohnathanWallin.jpg'); }
+.MazinSadaqatHandal-construction, .BandarJabrTannous-construction { background-image: url('../img/targetcon/KaiAbdulBarrMaalouf.jpg'); }
+.JadaAyahHarb-construction { background-image: url('../img/targetcon/AamalAsalahKassis.jpg'); }
+.ClemensKoch-construction { background-image: url('../img/targetcon/AsadHabeeb.jpg'); }
+.BaraaaHijrahGuirguis-construction { background-image: url('../img/targetcon/HaleyTuen.jpg'); }
+.LatifaEid-construction { background-image: url('../img/targetcon/LatifaEid.jpg'); }
+.VincenzSenten-construction { background-image: url('../img/targetcon/VincenzSenten.jpg'); }
+.RashidLabibGaber-construction { background-image: url('../img/targetcon/RashidLabibGaber.jpg'); }
+.FarajBudailSaliba-construction { background-image: url('../img/targetcon/FarajBudailSaliba.jpg'); }
+.MirnaCamirand-construction { background-image: url('../img/targetcon/MirnaCamirand.jpg'); }
+.SabihMunjidTuma-construction, .BaaqirIsmael-construction, .IzzalDinRamihKalb-construction { background-image: url('../img/targetcon/SabihMunjidTuma.jpg'); }
+.MaysaSaah-construction, .SaharAnwaar-construction, .MayAmalShamon-construction { background-image: url('../img/targetcon/MaysaSaah.jpg'); }
+.AdilahAdawiyahBotros-construction { background-image: url('../img/targetcon/AdilahAdawiyahBotros.jpg'); }
+.NadaOzer-construction { background-image: url('../img/targetcon/NadaOzer.jpg'); }
+.ZaahidJamal-construction { background-image: url('../img/targetcon/ZaahidJamal.jpg'); }
+.AndreanaCorey-construction { background-image: url('../img/targetcon/AndreanaCorey.jpg'); }
+.CarrieBrodfuehrer-construction { background-image: url('../img/targetcon/CarrieBrodfuehrer.jpg'); }
+.RasoolAbdelrahman-construction, .IrshaadBegum-construction, .ShihabIshaqKhouri-construction { background-image: url('../img/targetcon/RasoolAbdelrahman.jpg'); }
+.RoydenCloutier-construction { background-image: url('../img/targetcon/RoydenCloutier.jpg'); }
+.TayyabSamra-construction, .AzharMashhurAswad-construction, .YahyaMaloof-construction { background-image: url('../img/targetcon/TaqqeeAkel.jpg'); }
+.HaneefGhazi-construction, .AarifGhazi-construction { background-image: url('../img/targetcon/HaneefGhazi.jpg'); }
+.BasmahBeshara-construction, .MiyazHaythamHanania-construction { background-image: url('../img/targetcon/BasmahBeshara.jpg'); }
+.NabhanShamimSleiman-construction { background-image: url('../img/targetcon/NabhanShamimSleiman.jpg'); }
+.SuhaymTaqiyKalb-construction { background-image: url('../img/targetcon/BayhasBishrAttia.jpg'); }
+.FaarooqBeshara-construction { background-image: url('../img/targetcon/FaarooqBeshara.jpg'); }
+.ShihadNawafGaber-construction, .AitorIbirika-construction { background-image: url('../img/targetcon/ShihadNawafGaber.jpg'); }
+.NasirHamisKattan-construction { background-image: url('../img/targetcon/AnwaarAly.jpg'); }
+.JuwainAmjadMifsud-construction { background-image: url('../img/targetcon/JuwainAmjadMifsud.jpg'); }
+.AhmedFadlAmari-construction { background-image: url('../img/targetcon/AhmedFadlAmari.jpg'); }
+.HollieShaw-construction { background-image: url('../img/targetcon/HollieShaw.jpg'); }
+.LaraParkin-construction { background-image: url('../img/targetcon/LaraParkin.jpg'); }
+.CalvinDeleon-construction { background-image: url('../img/targetcon/CalvinDeleon.jpg'); }
+.ClancyWallis-construction { background-image: url('../img/targetcon/ClancyWallis.jpg'); }
+.FrancisBenny-construction { background-image: url('../img/targetcon/FrancisBenny.jpg'); }
+.NasuhUsamaMustafa-construction { background-image: url('../img/targetcon/KhalafSeifalDinTannous.jpg'); }
+.HamimQutbNajjar-construction, .RamziBalighShamon-construction { background-image: url('../img/targetcon/HamimQutbNajjar.jpg'); }
+.NasserShukriArian-construction { background-image: url('../img/targetcon/NasserShukriArian.jpg'); }
+.JewelBourgeois-construction { background-image: url('../img/targetcon/JewelBourgeois.jpg'); }
+.UmairZaynQuraishi-construction, .SahibHudMaroun-construction { background-image: url('../img/targetcon/UmairZaynQuraishi.jpg'); }
+.SaraZitouna-construction, .JumaanaWahidahNahas-construction, .NoojoodSirinHandal-construction { background-image: url('../img/targetcon/SaraZitouna.jpg'); }
+.AkilGhaziMaroun-construction { background-image: url('../img/targetcon/HasanHalim.jpg'); }
+.SalamahJubairAntoun-construction, .OthmanIshaqBaz-construction { background-image: url('../img/targetcon/SalamahJubairAntoun.jpg'); }
+.UsamaNawafTouma-construction { background-image: url('../img/targetcon/UsamaNawafTouma.jpg'); }
+.SafiyYasinSarkis-construction { background-image: url('../img/targetcon/ZiyadJameelGerges.jpg'); }
+.NajiSayyidBaba-construction, .FakhiriSajjadMustafa-construction { background-image: url('../img/targetcon/JohnathanWallin.jpg'); }
+.NizarRajiKoury-construction { background-image: url('../img/targetcon/NizarRajiKoury.jpg'); }
+.FaarooqOmer-construction { background-image: url('../img/targetcon/FaarooqOmer.jpg'); }
+		
 /* The Extractor */
 .WalterMenard-extractor { background-image: url('../img/target/WalterMenard.jpg'); }
 .WalterMenard-extractor.contarget { background-size: auto 100% !important; }
@@ -2066,6 +2116,12 @@ div[class^="ElusiveTarget"] { background-image: url('../img/targetcon/NPC.jpg');
 .LitterPickerUpper { background-image: url('../img/obj/Litter%20Picker-Upper.png'); } 
 .TheFutureForetold { background-image: url('../img/obj/The%20Future%20Foretold.png'); }
 .PartyCrasher { background-image: url('../img/obj/PartyCrasher.png'); }
+
+.LikeMothestoaFlame { background-image: url('../img/camera/LikeMothestoaFlame.png'); }
+.LuminousNight { background-image: url('../img/camera/LuminousNight.png'); }
+.ScreenBurn { background-image: url('../img/camera/ScreenBurn.png'); }
+.SchoolsOut { background-image: url('../img/camera/SchoolsOut.png'); }
+.MarketEvening { background-image: url('../img/camera/MarketEvening.png'); }
 
 /** Bangkok **/
 /* Club 27 */
