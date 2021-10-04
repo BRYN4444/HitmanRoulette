@@ -64,7 +64,7 @@ function createExtrasList(exit, eexit) {
 		extras.push("Do Not Get Spotted|Avoid anyone seeing you performing any illegal action.");
 
 	if (Math.random() < 0.20 && !koExits.includes(exit, eexit) && document.getElementById("exobj").checked == 0)
-		extras.push("No Pacifications|Do not pacify or subdue anyone in any way. This includes using items via melee/throwing, poisoning, or tranquilizing.");
+		extras.push("No Pacifications|Do not pacify or subdue anyone in any way. This includes using items via melee/throwing, sedating, or tranquilizing.");
 
 	if (Math.random() < 0.20)
 		extras.push("Headshots Only|Any shots fired at NPCs must be headshots.");
@@ -247,10 +247,10 @@ function containerToResult(container) {
 	else
 		result.entry = container.entry[Math.floor(Math.random()*container.entry.length)];
 	
-	//Hides exit requirement for Contracts Mode on Nightcall
-	if (result.missionCode == "beach" && (mode == "CONEASY" || mode == "CONHARD"))
+	//Determines Exit
+	if (result.missionCode == "beach" && (mode == "CONEASY" || mode == "CONHARD")) //Hides exit requirement for Contracts Mode on Nightcall
 		result.exit = "Boat";
-	else if (exitMode == "SECRET" && mode == "MAIN") //Hides Easter Egg Exits for Contracts Mode
+	else if (exitMode == "SECRET") //Easter Egg Exits
 		result.exit = container.eexit[Math.floor(Math.random()*container.eexit.length)];
 	else
 		result.exit = container.exit[Math.floor(Math.random()*container.exit.length)];
@@ -310,6 +310,8 @@ function containerToResult(container) {
 
 //Makes text appear
 function writeEverything(result) {
+	var modeIndex = document.getElementById("modeselect");
+	var mode = modeIndex.options[modeIndex.selectedIndex].value;
 	
 	//Location, Mission name, and background image
 	document.body.className = "hide"
@@ -321,8 +323,8 @@ function writeEverything(result) {
 	//Start and Exit
 	var exitModeIndex = document.getElementById("startexit");
 	var exitMode = exitModeIndex.options[exitModeIndex.selectedIndex].value;
-	if (exitMode == "BOTH") {
-		if (result.missionCode == "club" && result.entry == "Bus Stop") {
+	if (exitMode == "BOTH" || exitMode == "SECRET") {
+		if (result.missionCode == "club" && result.entry == "Bus Stop" && mode == "MAIN") { // Bus Stop outside of Contracts forces cinimatic exit
 			document.getElementById("travel").innerHTML =
 				"<div id='entry' class='club-start-BusStop'><div id='nameplate'><span><p id='title'>Starting Location</p><p id='subtitle'>Bus Stop</p></span></div></div><div id='exit' class='club-exit-IntoTheForrest'><div id='nameplate'><span><p id='title'>Exit Location <span id='exitreq'></span></p><p id='subtitle'>Into The Forrest</p></span></div></div>";
 			document.getElementById("input_entry").value = "\nStart: Bus Stop";
@@ -330,7 +332,39 @@ function writeEverything(result) {
 			document.getElementById("exitreq").innerHTML = "";
 			document.getElementById("input_exitreq").value = "";
 		}
-		else if (result.missionCode == "virus" && result.objectives.split('|')[0] == "Safe House Bugged" && document.getElementById("exobj").checked == 1) {
+		else if (result.missionCode == "club" && result.exit.split('|')[0] == "UFO" && mode != "MAIN") { // UFO Exit disabled in Contracts Mode
+			document.getElementById("travel").innerHTML =
+				"<div id='entry' class='" + result.missionCode + "-start-" + result.entry.replace(/\s|'|\.|-|\(|\)/g, "") + "'><div id='nameplate'><span><p id='title'>Starting Location</p><p id='subtitle'>" + result.entry + "</p></span></div></div><div id='exit' class='club-exit-Bicycle'><div id='nameplate'><span><p id='title'>Exit Location <span id='exitreq'></span></p><p id='subtitle'>Bicycle</p></span></div></div>";
+			document.getElementById("input_entry").value = "\nStart: " + result.entry;
+			document.getElementById("input_exit").value = "\nExit: Bicycle";
+			document.getElementById("exitreq").innerHTML = "";
+			document.getElementById("input_exitreq").value = "";
+		}
+		else if (result.missionCode == "ark" && result.exit.split('|')[0] == "Swan Dive" && mode != "MAIN") { // Swan Dive Exit disabled in Contracts Mode
+			document.getElementById("travel").innerHTML =
+				"<div id='entry' class='" + result.missionCode + "-start-" + result.entry.replace(/\s|'|\.|-|\(|\)/g, "") + "'><div id='nameplate'><span><p id='title'>Starting Location</p><p id='subtitle'>" + result.entry + "</p></span></div></div><div id='exit' class='ark-exit-EastWall'><div id='nameplate'><span><p id='title'>Exit Location <span id='exitreq'></span></p><p id='subtitle'>East Wall</p></span></div></div>";
+			document.getElementById("input_entry").value = "\nStart: " + result.entry;
+			document.getElementById("input_exit").value = "\nExit: East Wall";
+			document.getElementById("exitreq").innerHTML = "";
+			document.getElementById("input_exitreq").value = "";
+		}
+		else if (result.missionCode == "speedway" && result.exit.split('|')[0] == "Pale Rider" && mode != "MAIN") { // Pale Rider Exit disabled in Contracts Mode
+			document.getElementById("travel").innerHTML =
+				"<div id='entry' class='" + result.missionCode + "-start-" + result.entry.replace(/\s|'|\.|-|\(|\)/g, "") + "'><div id='nameplate'><span><p id='title'>Starting Location</p><p id='subtitle'>" + result.entry + "</p></span></div></div><div id='exit' class='speedway-exit-Ambulance'><div id='nameplate'><span><p id='title'>Exit Location <span id='exitreq'>(Medic Only)</span></p><p id='subtitle'>Ambulance</p></span></div></div>";
+			document.getElementById("input_entry").value = "\nStart: " + result.entry;
+			document.getElementById("input_exit").value = "\nExit: Ambulance";
+			document.getElementById("exitreq").innerHTML = "(Medic Only)";
+			document.getElementById("input_exitreq").value = "(Medic Only)";
+		}
+		else if (result.missionCode == "resort" && result.exit.split('|')[0] == "Dundee" && document.getElementById("firearm").checked == 1) { // Dundee Exit disabled with Specific Firearms checked
+			document.getElementById("travel").innerHTML =
+				"<div id='entry' class='" + result.missionCode + "-start-" + result.entry.replace(/\s|'|\.|-|\(|\)/g, "") + "'><div id='nameplate'><span><p id='title'>Starting Location</p><p id='subtitle'>" + result.entry + "</p></span></div></div><div id='exit' class='resort-exit-Dinghy'><div id='nameplate'><span><p id='title'>Exit Location <span id='exitreq'></span></p><p id='subtitle'>Dinghy</p></span></div></div>";
+			document.getElementById("input_entry").value = "\nStart: " + result.entry;
+			document.getElementById("input_exit").value = "\nExit: Dinghy";
+			document.getElementById("exitreq").innerHTML = "";
+			document.getElementById("input_exitreq").value = "";
+		}
+		else if (result.missionCode == "virus" && result.objectives.split('|')[0] == "Safe House Bugged" && document.getElementById("exobj").checked == 1) { // Entrance forced if Safehouse Bugged Extra Objective is active.
 			document.getElementById("travel").innerHTML =
 				"<div id='entry' class='virus-start-MainSquare'><div id='nameplate'><span><p id='title'>Starting Location</p><p id='subtitle'>Main Square</p></span></div></div><div id='exit' class='" + result.missionCode + "-exit-" + result.exit.split('|')[0].replace(/\s|'|\.|-|\||\(|\)/g, "") + "'><div id='nameplate'><span><p id='title'>Exit Location <span id='exitreq'></span></p><p id='subtitle'>" + result.exit.split('|')[0] + "</p></span></div></div>";
 			document.getElementById("input_entry").value = "\nStart: Main Square";
@@ -367,8 +401,8 @@ function writeEverything(result) {
 		document.getElementById("exitreq").innerHTML = "";
 		document.getElementById("input_exitreq").value = "";			
 	}
-	else if (exitMode == "EXIT" || exitMode == "SECRET") {
-		if(container.missionTitle === "Dartmoor Garden Show") {
+	else if (exitMode == "EXIT") {
+		if(container.missionTitle === "Dartmoor Garden Show" && mode == "MAIN") {
 			document.getElementById("travel").innerHTML =
 				"<div id='entry' class='gardenshow-start-DeterministicMode'><div id='nameplate'><span><p id='title'>Starting Location</p><p id='subtitle'>Deterministic Mode</p></span></div></div><div id='exit' class='" + result.missionCode + "-exit-" + result.exit.split('|')[0].replace(/\s|'|\.|-|\||\(|\)/g, "") + "'><div id='nameplate'><span><p id='title'>Exit Location <span id='exitreq'></span></p><p id='subtitle'>" + result.exit.split('|')[0] + "</p></span></div></div>";
 		}
@@ -395,8 +429,6 @@ function writeEverything(result) {
 	};
 	
 	// Display Contracts Mode Target Images in Tall Format regardless of Theme
-	var modeIndex = document.getElementById("modeselect");
-	var mode = modeIndex.options[modeIndex.selectedIndex].value;
 	if (mode == "CONEASY" || mode == "CONHARD") { var contractmode = " contarget" }
 	else if (mode == "MAIN" && result.missionTitle == "Apex Predator") { var contractmode = " contarget" }
 	else { var contractmode = "" }
@@ -467,7 +499,7 @@ function writeEverything(result) {
 				document.getElementById("input_weapon" + (i+1)).value = ", using: " + result.weapons[i].split('|')[0];
 			};
 			
-			if(result.missionCode == "speedway" && result.exit.split('|')[0] == "Pale Rider" ) { // pale rider easter egg exit
+			if(result.missionCode == "speedway" && mode == "MAIN" && result.exit.split('|')[0] == "Pale Rider" ) { // pale rider easter egg exit
 				document.getElementById("subtitle-disguise" + (i+1)).innerHTML = "Pale Rider";
 				document.getElementById("input_disguise" + (i+1)).value = ", while disguised as: Pale Rider";
 			}
