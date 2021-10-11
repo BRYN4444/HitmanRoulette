@@ -39,6 +39,23 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 
 ### Latest Updates:
 
+**October 11, 2021**
+* **HITMAN:**
+  * **World of Tomorrow:**
+    * **Extra Objectives:** 1 more added.
+  * **The Extractor:**
+    * **Extra Objectives:** 1 added.
+  * **Club 27:**
+    * **Contracts Mode Targets:** 168 more added. Updated the images of the existing ones with their HITMAN III versions.
+    * **Extra Objectives:** 1 added.
+    * **Photo Objectives:** 9 added.
+* **Other Fixes:**
+  * Added a missing image for a Photo Objective in The Showstopper.
+* **Current Plans:**
+  * Slowly going through H1 & H2 to add/update Contract Mode Target images and find more Extra/Photo Objectives. Personal issues and other games got in the way of updates here for a while, sorry.
+
+---
+
 **October 4, 2021**
 * **Roulette:**
   * **Roulette Settings:**
@@ -55,8 +72,6 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 * **Other Fixes:**
   * The boxes containing the generated Starting and Exit Locations could stretch if enabled after already using the Roulette with the Force Start/Exit set to Off.
   * Changed the wording for the "No Pacifications" Extra Objective from 'no poisoning' to 'no sedating' to better reflect that emetic poisoning is fine.
-* **Current Plans:**
-  * Slowly going through H1 & H2 to add/update Contract Mode Target images and find more Extra/Photo Objectives. Personal issues and other games got in the way of updates here for a while, sorry.
 
 ---
 
@@ -114,22 +129,3 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
   * Differentiated the icon shown for Missions, Contracts, and Escalations as well as Elusive Targets and the Sarajevo Six. (Only visable for non-mobile browsing)
   * Method, Disguise, and Intel icons for Targets now match Hitman III when using the "Hitman III Dark" (default) appearance.
   * Minor color and text issues fixed for mobile browsing using the "Hitman GOTY White" appearance. 
-
----
-
-**August 16, 2021**
-* **HITMAN III:**
-  * **Dartmoor Garden Show:**
-    * **Extra Objectives:** 7 more added.
-    * **Photo Objectives:** 4 more added.
-* **HITMAN 2:**
-  * **The Ark Society:**
-    * **Melee Weapon added:** Learned that there is a Starfish on the map, so it has been added as a possible melee elimination method.
-* **HITMAN:**
-  * **World of Tomorrow:**
-    * **Contracts Mode Targets:** 148 more added. Updated the images of the existing ones with their HITMAN III versions.
-    * **Extra Objectives:** 3 more added, one being an easter egg.
-    * **Photo Objectives:** 17 added.
-* **Other Fixes:**
-  * The background image for "Situs Inversus" Hokkaido was using the "Hokkaido Snow Festival" image instead.
-  * One of the contestants in the "Dartmoor Garden Show" had incorrect intel for Contracts Mode.
