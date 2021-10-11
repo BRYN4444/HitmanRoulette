@@ -1050,12 +1050,86 @@ div[class^="ElusiveTarget"] { background-image: url('../img/targetcon/NPC.jpg');
 .AbelDeSilva-birthday { background-image: url('../img/targetcon/AbelDeSilva.jpg'); }
 .MrsMookjai-birthday { background-image: url('../img/targetcon/MrsMookjai.jpg'); }
 .TharnSrisai-birthday { background-image: url('../img/targetcon/TharnSrisai.jpg'); }
-.Julian-birthday { background-image: url('../img/targetcon/Julian.jpg'); }
+.Julian-birthday, .Teerasak-birthday { background-image: url('../img/targetcon/Julian.jpg'); }
 .BenjaminBertram-birthday { background-image: url('../img/targetcon/BenjaminBertram.jpg'); }
 .OtisKaplan-birthday { background-image: url('../img/targetcon/OtisKaplan.jpg'); }
 .Tarrin-birthday, .Maelng-birthday { background-image: url('../img/targetcon/Tarrin.jpg'); }
-.Prasert-birthday { background-image: url('../img/targetcon/Prasert.jpg'); }
-.Chaiya-birthday { background-image: url('../img/targetcon/Chaiya.jpg'); }
+.Prasert-birthday, .SudarakKasemsun-birthday, .KittinanJanpong-birthday { background-image: url('../img/targetcon/Prasert.jpg'); }
+.Chaiya-birthday, .ChristianSato-birthday, .ArthitPrugsanapan-birthday, .SeriSanya-birthday, .Bob-birthday { background-image: url('../img/targetcon/Chaiya.jpg'); }
+.KeithMcKenzie-birthday { background-image: url('../img/targetcon/KeithMcKenzie.jpg'); }
+.TadthonNitpattanasai-birthday, .PakdhiSamsen-birthday, .MartinHolas-birthday { background-image: url('../img/targetcon/TadthonNitpattanasai.jpg'); }
+.SeriChadee-birthday { background-image: url('../img/targetcon/SeriChadee.jpg'); }
+.CharanyaDarakorn-birthday, .IsareeKeacham-birthday, .SuprangSirisaeng-birthday, .NoiLertkunakorn-birthday, .DuangrudeePrugsanapan-birthday, .NamSrisati-birthday, .KeeratiSiracha-birthday, .Kamol-birthday, .SaichonSirikun-birthday, .NaruemonThanom-birthday, .ApsornKwangnoi-birthday, .ChulabhornRatana-birthday, .Wattana-birthday, .Niew-birthday, .Suda-birthday, .SavitreePureesrisak-birthday, .Phonphan-birthday, .KhunMaeAnand-birthday, .MekhlaMahagitsiri-birthday, .PrapasNarkhirunkanok-birthday, .NipatNarkhirunkanok-birthday { background-image: url('../img/targetcon/CharanyaDarakorn.jpg'); }
+.AWut-birthday, .KhunSasipa-birthday, .ThammapornMongkoltham-birthday { background-image: url('../img/targetcon/AWut.jpg'); }
+.Channarong-birthday, .PravatSudham-birthday, .WaltGervers-birthday { background-image: url('../img/targetcon/Channarong.jpg'); }
+.Chanchai-birthday, .KriangsakPhakdi-birthday, .LamomSongprawati-birthday { background-image: url('../img/targetcon/Chanchai.jpg'); }
+.AnnaStone-birthday, .ClariceHuttingdon-birthday { background-image: url('../img/targetcon/AnnaStone.jpg'); }
+.SananTheprak-birthday { background-image: url('../img/targetcon/SananTheprak.jpg'); }
+.Anurat-birthday, .RamaYodsuwan-birthday, .BahnNakpradith-birthday, .SurawongWiwantra-birthday, .NattapatJuntasa-birthday, .TinnawatMahanakorn-birthday, .ThamBoonShinnawat-birthday, .ParitPlainukool-birthday, .ParinChanocha-birthday { background-image: url('../img/targetcon/Anurat.jpg'); }
+.Nattapong-birthday, .YingyaiChaiprasit-birthday { background-image: url('../img/targetcon/Nattapong.jpg'); }
+.Werawat-birthday, .JackieTan-birthday, .SudPrasarttong-birthday, .ThongKongCheenchamras-birthday, .ThanaboonWattana-birthday, .PhetPichit-birthday, .ThepKantawong-birthday, .Wiriya-birthday, .TumarBimbombur-birthday, .KamnanSindudeja-birthday, .Prem-birthday, .PranSanya-birthday { background-image: url('../img/targetcon/Werawat.jpg'); }
+.NopjiraLui-birthday, .YodRakSirisop-birthday, .LamomMontri-birthday { background-image: url('../img/targetcon/NopjiraLui.jpg'); }
+.AnadaKammana-birthday, .JackTorrent-birthday { background-image: url('../img/targetcon/AnadaKammana.jpg'); }
+.HansGraub-birthday { background-image: url('../img/targetcon/HansGraub.jpg'); }
+.WongsaJaidee-birthday, .JariyaChansiri-birthday { background-image: url('../img/targetcon/WongsaJaidee.jpg'); }
+.LukasHimmeltramp-birthday, .VictorHuttingdon-birthday, .MagnusPike-birthday { background-image: url('../img/targetcon/LukasHimmeltramp.jpg'); }
+.AkakinéHimmeltramp-birthday { background-image: url('../img/targetcon/AkakinéHimmeltramp.jpg'); }
+.Arthit-birthday { background-image: url('../img/targetcon/Arthit.jpg'); }
+.OrapanSanya-birthday, .PenchanKhad-birthday { background-image: url('../img/targetcon/OrapanSanya.jpg'); }
+.DrJonesYama-birthday { background-image: url('../img/targetcon/DrJonesYama.jpg'); }
+.MadeePhyachai-birthday, .TiwatKitJakarn-birthday, .Lloyd-birthday, .ChalongAkradej-birthday, .Somchai-birthday { background-image: url('../img/targetcon/MadeePhyachai.jpg'); }
+.GeorgeAustin-birthday { background-image: url('../img/targetcon/GeorgeAustin.jpg'); }
+.VladVolodin-birthday, .AlexanderHoffman-birthday { background-image: url('../img/targetcon/VladVolodin.jpg'); }
+.TukKitJakarn-birthday { background-image: url('../img/targetcon/TukKitJakarn.jpg'); }
+.WillyPonhpaiboon-birthday, .SavitreeSrisak-birthday { background-image: url('../img/targetcon/WillyPonhpaiboon.jpg'); }
+.ThomasCraig-birthday { background-image: url('../img/targetcon/ThomasCraig.jpg'); }
+.AliceJLowry-birthday { background-image: url('../img/targetcon/AliceJLowry.jpg'); }
+.VictoriaCole-birthday { background-image: url('../img/targetcon/VictoriaCole.jpg'); }
+.SeanStokes-birthday { background-image: url('../img/targetcon/SeanStokes.jpg'); }
+.PedroParker-birthday { background-image: url('../img/targetcon/PedroParker.jpg'); }
+.ParunKaewmanee-birthday, .BoontumChaipatana-birthday, .RamaMalee-birthday { background-image: url('../img/targetcon/ParunKaewmanee.jpg'); }
+.SuchinThanom-birthday, .DanitVanich-birthday { background-image: url('../img/targetcon/SuchinThanom.jpg'); }
+.AlDAndrea-birthday, .FrankHorrigan-birthday, .Crowbar-birthday { background-image: url('../img/targetcon/AlDAndrea.jpg'); }
+.RatsamiPanichwit-birthday { background-image: url('../img/targetcon/RatsamiPanichwit.jpg'); }
+.PhetRardchawat-birthday { background-image: url('../img/targetcon/PhetRardchawat.jpg'); }
+.BoonmaChavalit-birthday, .NiwatChalermchon-birthday { background-image: url('../img/targetcon/BoonmaChavalit.jpg'); }
+.FeydReuter-birthday, .Tanawat-birthday { background-image: url('../img/targetcon/FeydReuter.jpg'); }
+.TunlayaJanpong-birthday, .AkkaratChaikarn-birthday, .DornPalathai-birthday { background-image: url('../img/targetcon/TunlayaJanpong.jpg'); }
+.PuPatalung-birthday { background-image: url('../img/targetcon/PuPatalung.jpg'); }
+.RonaldSump-birthday { background-image: url('../img/targetcon/RonaldSump.jpg'); }
+.LekChalerm-birthday { background-image: url('../img/targetcon/LekChalerm.jpg'); }
+.NibunPanyachon-birthday { background-image: url('../img/targetcon/NibunPanyachon.jpg'); }
+.FrancisFish-birthday { background-image: url('../img/targetcon/FrancisFish.jpg'); }
+.KianPotter-birthday, .ThomasBurton-birthday, .BuddyAkward-birthday { background-image: url('../img/targetcon/KianPotter.jpg'); }
+.JedKnucklesPitt-birthday, .PederKoch-birthday { background-image: url('../img/targetcon/JedKnucklesPitt.jpg'); }
+.KongLekcharuthas-birthday { background-image: url('../img/targetcon/KongLekcharuthas.jpg'); }
+.Magnu-birthday, .BaileyRees-birthday, .GabrielCook-birthday { background-image: url('../img/targetcon/Magnu.jpg'); }
+.ChristopherLees-birthday, .AntonScales-birthday { background-image: url('../img/targetcon/ChristopherLees.jpg'); }
+.RobertWalker-birthday, .NicholasCross-birthday { background-image: url('../img/targetcon/RobertWalker.jpg'); }
+.SiddhiMongkoltham-birthday, .KontheeSamak-birthday { background-image: url('../img/targetcon/SiddhiMongkoltham.jpg'); }
+.NathanNapalmPalmer-birthday { background-image: url('../img/targetcon/NathanNapalmPalmer.jpg'); }
+.GeoffCloney-birthday, .JudeOSullivan-birthday { background-image: url('../img/targetcon/GeoffCloney.jpg'); }
+.EdwardJohnston-birthday { background-image: url('../img/targetcon/EdwardJohnston.jpg'); }
+.BobAltmuligmanGanoosh-birthday, .AndrewAbbott-birthday, .JerryBusey-birthday { background-image: url('../img/targetcon/BobAltmuligmanGanoosh.jpg'); }
+.ThijsFhakir-birthday, .JasonHunter-birthday { background-image: url('../img/targetcon/ThijsFhakir.jpg'); }
+.NielBurgess-birthday { background-image: url('../img/targetcon/NielBurgess.jpg'); }
+.BonesGordon-birthday, .ErikFrancis-birthday { background-image: url('../img/targetcon/BonesGordon.jpg'); }
+.ColinDwight-birthday { background-image: url('../img/targetcon/ColinDwight.jpg'); }
+.MaxBlueBalls-birthday { background-image: url('../img/targetcon/MaxBlueBalls.jpg'); }
+.JamesSparkyParker-birthday { background-image: url('../img/targetcon/JamesSparkyParker.jpg'); }
+.SteveTilsbury-birthday { background-image: url('../img/targetcon/SteveTilsbury.jpg'); }
+.SamEmerson-birthday { background-image: url('../img/targetcon/SamEmerson.jpg'); }
+.MichaelEmerson-birthday { background-image: url('../img/targetcon/MichaelEmerson.jpg'); }
+.AlanFroge-birthday { background-image: url('../img/targetcon/AlanFroge.jpg'); }
+.EdgarFroge-birthday { background-image: url('../img/targetcon/EdgarFroge.jpg'); }
+.SteveAlbino-birthday { background-image: url('../img/targetcon/SteveAlbino.jpg'); }
+.GavinCrusherLewis-birthday { background-image: url('../img/targetcon/GavinCrusherLewis.jpg'); }
+.StanTaggart-birthday { background-image: url('../img/targetcon/StanTaggart.jpg'); }
+.JohnHarrison-birthday { background-image: url('../img/targetcon/JohnHarrison.jpg'); }
+.RussJones-birthday { background-image: url('../img/targetcon/RussJones.jpg'); }
+.JackHellhoundCerberus-birthday { background-image: url('../img/targetcon/JackHellhoundCerberus.jpg'); }
+.SteveBacon-birthday, .UbbeLeffeson-birthday { background-image: url('../img/targetcon/SteveBacon.jpg'); }
+.RookieNelson-birthday { background-image: url('../img/targetcon/RookieNelson.jpg'); }
 
 /* The Source */
 .OybekNabazov-cult { background-image: url('../img/target/OybekNabazov.jpg'); }
@@ -2027,6 +2101,7 @@ div[class^="ElusiveTarget"] { background-image: url('../img/targetcon/NPC.jpg');
 .InLovingMemory { background-image: url('../img/camera/InLovingMemory.png'); }
 .EthersPrize { background-image: url('../img/camera/EthersPrize.png'); }
 .FinalRestingPlace { background-image: url('../img/camera/FinalRestingPlace.png'); }
+.SniperStudies { background-image: url('../img/camera/SniperStudies.png'); }
 
 /* The Icon */
 .TimetoMeettheFans { background-image: url('../img/obj/Time%20to%20Meet%20the%20Fans.png'); }
@@ -2123,6 +2198,9 @@ div[class^="ElusiveTarget"] { background-image: url('../img/targetcon/NPC.jpg');
 .SchoolsOut { background-image: url('../img/camera/SchoolsOut.png'); }
 .MarketEvening { background-image: url('../img/camera/MarketEvening.png'); }
 
+/* The Extractor */
+.RoomRestricted { background-image: url('../img/obj/RoomRestricted.png'); }
+
 /** Bangkok **/
 /* Club 27 */
 .TheDayTheMusicDied { background-image: url('../img/obj/The%20Day%20The%20Music%20Died.png'); }
@@ -2143,6 +2221,17 @@ div[class^="ElusiveTarget"] { background-image: url('../img/targetcon/NPC.jpg');
 .TikTuk { background-image: url('../img/obj/Tik%20Tuk.png'); }
 .KeepaSouvenir { background-image: url('../img/obj/Keep%20a%20Souvenir.png'); }
 .DontBreatheThis { background-image: url("../img/obj/Don't%20Breathe%20This.png"); }
+.IWillCryifIWantTo { background-image: url("../img/obj/IWillCryifIWantTo.png"); }
+
+.BloodyTears { background-image: url('../img/camera/BloodyTears.png'); }
+.Cokra { background-image: url('../img/camera/Cokra.png'); }
+.ShockinglyExecuted { background-image: url('../img/camera/ShockinglyExecuted.png'); }
+.CleanMe { background-image: url('../img/camera/CleanMe.png'); }
+.CheaperSouvenir { background-image: url('../img/camera/CheaperSouvenir.png'); }
+.TempleofDawn { background-image: url('../img/camera/TempleofDawn.png'); }
+.Connoisseur { background-image: url('../img/camera/Connoisseur.png'); }
+.CakeTopped { background-image: url('../img/camera/CakeTopped.png'); }
+.PhotoOpCross { background-image: url('../img/camera/PhotoOpCross.png'); }
 
 /* The Source */
 .SpilledFlavorCrystals { background-image: url('../img/obj/Spilled%20Flavor%20Crystals.png'); }
