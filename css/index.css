@@ -1396,8 +1396,8 @@ div[id^="subplate"].intel { background-image:var(--intel); }
 #res-image #nameplate { background-image:var(--restriction); }
 #time-image #nameplate { background-image:var(--time); }
 #rating-image #nameplate { background-image:var(--rating); }
-#diff-image-Casual #nameplate, #diff-image-Normal #nameplate { background-image:var(--casual); }
-#diff-image-Professional #nameplate { background-image:var(--pro); }
+#diff-image-Casual #nameplate, #diff-image-NotAvailable #nameplate { background-image:var(--casual); }
+#diff-image-Professional #nameplate, #diff-image-Normal #nameplate { background-image:var(--pro); }
 #diff-image-Master #nameplate, #diff-image-ProfessionalH1 #nameplate { background-image:var(--master); }
 #chall-image #nameplate { background-image:var(--challenge); }
 
