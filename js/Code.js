@@ -303,7 +303,13 @@ function containerToResult(container) {
 	result.mechanicsH2 = mechListH2[Math.floor(Math.random()*mechListH2.length)];
 	result.time = timeList[Math.floor(Math.random()*timeList.length)];
 	result.rating = ratingList[Math.floor(Math.random()*ratingList.length)];
-	result.difficulty = difficultyList[Math.floor(Math.random()*difficultyList.length)];
+	
+	var difficultyModeIndex = document.getElementById("difficulty");
+	var difficultyMode = difficultyModeIndex.options[difficultyModeIndex.selectedIndex].value;
+	if (difficultyMode == "H1")
+		result.difficulty = difficultyH1[Math.floor(Math.random()*difficultyH1.length)];
+	else
+		result.difficulty = difficultyH2[Math.floor(Math.random()*difficultyH2.length)];
 	
 	return result;
 };
@@ -323,6 +329,8 @@ function writeEverything(result) {
 	//Start and Exit
 	var exitModeIndex = document.getElementById("startexit");
 	var exitMode = exitModeIndex.options[exitModeIndex.selectedIndex].value;
+	var difficultyModeIndex = document.getElementById("difficulty");
+	var difficultyMode = difficultyModeIndex.options[difficultyModeIndex.selectedIndex].value;
 	if (exitMode == "BOTH" || exitMode == "SECRET") {
 		if (result.missionCode == "club" && result.entry == "Bus Stop" && mode == "MAIN") { // Bus Stop outside of Contracts forces cinimatic exit
 			document.getElementById("travel").innerHTML =
@@ -364,6 +372,14 @@ function writeEverything(result) {
 			document.getElementById("exitreq").innerHTML = "";
 			document.getElementById("input_exitreq").value = "";
 		}
+		else if (result.missionCode == "birthday" && result.exit.split('|')[0] == "Speedboat" && difficultyMode == "H1") { // Speedboat Exit shows Key Needed on rofessional when Difficulty set to H1 
+			document.getElementById("travel").innerHTML =
+				"<div id='entry' class='" + result.missionCode + "-start-" + result.entry.replace(/\s|'|\.|-|\(|\)/g, "") + "'><div id='nameplate'><span><p id='title'>Starting Location</p><p id='subtitle'>" + result.entry + "</p></span></div></div><div id='exit' class='birthday-exit-SpeedboatH1'><div id='nameplate'><span><p id='title'>Exit Location <span id='exitreq'>(Needs Key on Pro.)</span></p><p id='subtitle'>Speedboat</p></span></div></div>";
+			document.getElementById("input_entry").value = "\nStart: " + result.entry;
+			document.getElementById("input_exit").value = "\nExit: Speedboat";
+			document.getElementById("exitreq").innerHTML = "(Needs Key on Pro.)";
+			document.getElementById("input_exitreq").value = "(Needs Key on Professional)";
+		}		
 		else if (result.missionCode == "virus" && result.objectives.split('|')[0] == "Safe House Bugged" && document.getElementById("exobj").checked == 1) { // Entrance forced if Safehouse Bugged Extra Objective is active.
 			document.getElementById("travel").innerHTML =
 				"<div id='entry' class='virus-start-MainSquare'><div id='nameplate'><span><p id='title'>Starting Location</p><p id='subtitle'>Main Square</p></span></div></div><div id='exit' class='" + result.missionCode + "-exit-" + result.exit.split('|')[0].replace(/\s|'|\.|-|\||\(|\)/g, "") + "'><div id='nameplate'><span><p id='title'>Exit Location <span id='exitreq'></span></p><p id='subtitle'>" + result.exit.split('|')[0] + "</p></span></div></div>";
@@ -699,28 +715,37 @@ function writeEverything(result) {
 		document.getElementById("input_rating").value = "";
 	};
 	
-	var difficultyModeIndex = document.getElementById("difficulty");
-	var difficultyMode = difficultyModeIndex.options[difficultyModeIndex.selectedIndex].value;
+	//var difficultyModeIndex = document.getElementById("difficulty"); (variables determined earlier in exits)
+	//var difficultyMode = difficultyModeIndex.options[difficultyModeIndex.selectedIndex].value;
 	if(mode != "MAIN") { // no alternate difficulty in contracts mode or elusive targets
 		document.getElementById("diffget").innerHTML = "";
 		document.getElementById("input_difficulty").value = "";
 	}
-	else if(difficultyMode == "H2" && !proOnly.includes(result.missionCode)) { // H2 difficulty on maps where available
+	else if(difficultyMode == "H2" && !proOnly.includes(result.missionCode) ) { // H2/3 difficulty on maps where available
 		document.getElementById("diffget").innerHTML = 
 			"<div id='diff-image-" + result.difficulty + "' class=''><div id='instruction'><img id='list' src='./img/general/blank.png'><p id='wording'>Complete the roulette with the mission's difficulty set to " + result.difficulty +
 			".</p></div><div id='nameplate'><span><p id='title'>Difficulty</p><p id='subtitle'>" + result.difficulty + "</p></span></div></div>";
 		document.getElementById("input_difficulty").value = "\n● Complete the roulette with the mission's difficulty set to " + result.difficulty + ".";
 	}
-	else if(difficultyMode == "H1" && !proOnly.includes(result.missionCode) && !h1.includes(result.missionCode)) { // H1 difficulty not available for H1 maps
-		document.getElementById("diffget").innerHTML = "";
-		document.getElementById("input_difficulty").value = "";
+	else if(difficultyMode == "H1" && !proOnly.includes(result.missionCode)) { // H1 difficulty
+		if (!h1.includes(result.missionCode)){ // Unavailable on H2/3 Maps
+			document.getElementById("diffget").innerHTML = 
+				"<div id='diff-image-NotAvailable' class=''><div id='instruction'><img id='list' src='./img/general/blank.png'><p id='wording'>You must Select Missions from the first HITMAN Campaign while Force Difficulty is set to “H1”.</p></div><div id='nameplate'><span><p id='title'>Difficulty</p><p id='subtitle'>Unavailable</p></span></div></div>";
+			document.getElementById("input_difficulty").value = "";
+		}
+		else if (result.difficulty == "Professional"){ // H1 Professional
+			document.getElementById("diffget").innerHTML = 
+				"<div id='diff-image-ProfessionalH1' class=''><div id='instruction'><img id='list' src='./img/general/blank.png'><p id='wording'>Complete the roulette with the mission's difficulty set to Professional.</p></div><div id='nameplate'><span><p id='title'>Difficulty</p><p id='subtitle'>Professional</p></span></div></div>";
+			document.getElementById("input_difficulty").value = "\n● Complete the roulette with the mission's difficulty set to Professional.";
+		}
+		else {
+			document.getElementById("diffget").innerHTML = //H1 Normal
+				"<div id='diff-image-" + result.difficulty + "' class=''><div id='instruction'><img id='list' src='./img/general/blank.png'><p id='wording'>Complete the roulette with the mission's difficulty set to " + result.difficulty +
+				".</p></div><div id='nameplate'><span><p id='title'>Difficulty</p><p id='subtitle'>" + result.difficulty + "</p></span></div></div>";
+			document.getElementById("input_difficulty").value = "\n● Complete the roulette with the mission's difficulty set to " + result.difficulty + ".";
+		}
 	}
-	else if(difficultyMode == "H1" && !proOnly.includes(result.missionCode) && result.difficulty == "Master") { // H1 difficulty on maps where available
-		document.getElementById("diffget").innerHTML = 
-			"<div id='diff-image-ProfessionalH1' class=''><div id='instruction'><img id='list' src='./img/general/blank.png'><p id='wording'>Complete the roulette with the mission's difficulty set to Professional.</p></div><div id='nameplate'><span><p id='title'>Difficulty</p><p id='subtitle'>Professional</p></span></div></div>";
-		document.getElementById("input_difficulty").value = "\n● Complete the roulette with the mission's difficulty set to Professional.";
-	}
-	else {
+	else { // force difficulty off / map difficulty cannot be changed
 		document.getElementById("diffget").innerHTML = "";
 		document.getElementById("input_difficulty").value = "";
 	};

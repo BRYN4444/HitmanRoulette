@@ -208,7 +208,6 @@ $(document).ready(function() {
 			$("span.noncon").hide();
 			$("b.noncon").show();
 		};
-
 	});
 	$( "nav#minimenu button#options, a#link_settings" ).click(function() {
 		if($("#maps input:checked").length == 0) {
@@ -765,23 +764,23 @@ $(document).ready(function() {
 		
 	$("#game_diff").click(function() {
 		if( $(this).hasClass("off") ) {
-			$(this).removeClass("off").addClass("h2").find("span").text("[H2/H3]");
+			$(this).removeClass("off").addClass("dh2").find("span").text("[H2/H3]");
 			$("#difficulty").val("H2");
 		}
-		else if( $(this).hasClass("h2") ) {
-			$(this).removeClass("h2").addClass("h1").find("span").text("[H1]");
+		else if( $(this).hasClass("dh2") ) {
+			$(this).removeClass("dh2").addClass("dh1").find("span").text("[H1]");
 			$("#difficulty").val("H1");
 		}
-		else if( $(this).hasClass("h1") ) {
-			$(this).removeClass("h1").addClass("off").find("span").text("[Off]");
+		else if( $(this).hasClass("dh1") ) {
+			$(this).removeClass("dh1").addClass("off").find("span").text("[Off]");
 			$("#difficulty").val("OFF");
 		};
 	});
 	
 	if($("#difficulty").val() == "H2") {
-		$("#game_diff").removeClass("off").addClass("h2").find("span").text("[H2/H3]");
+		$("#game_diff").removeClass("off").addClass("dh2").find("span").text("[H2/H3]");
 	} else if ($("#difficulty").val() == "H1") {
-		$("#game_diff").removeClass("off").addClass("h1").find("span").text("[H1]");
+		$("#game_diff").removeClass("off").addClass("dh1").find("span").text("[H1]");
 	} else if ($("#difficulty").val() == "OFF") {
 		
 	};
