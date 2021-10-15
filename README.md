@@ -39,6 +39,28 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 
 ### Latest Updates:
 
+**October 14, 2021**
+* **HITMAN:**
+  * **Club 27:**
+    * **"Speedboat" Exit:** When selecting "H1" as the Forced Difficulty, the key will now list Professional as needed instead of Master. The image used is also modified.
+    * **Contracts Mode Targets:** 8 more added, as well as fixing a few missing Contract Target images.
+  * **The Source:**
+    * **Exits:** 1 added. Apparently I just missed adding the Tuk-Tuk exit to this mission for some reason...
+    * **Contracts Mode Targets:** 127 more added. Updated the images of the existing ones with their HITMAN III versions.
+    * **Extra Objectives:** 1 more added.
+    * **Photo Objectives:** 6 added.
+  * Other Small Updates:
+    * **Golden Handshake - "Director's Exit":** Specified the need for a "CEO Exit Keycard" rather than just a key.
+* **Other Fixes:**
+  * If you have Forced Difficulty set to "H1" but randomize a HITMAN 2/III map, the box generated will warn you about this.
+  * Fixed misspelled Contract Target names in Club 27, as well as a parse error.
+  * Updated the image for the Tuk-Tuk exit in Club 27 to better match the same exit in The Source.
+  * Fixed a cosmetic issue where the Hitman Campaign Mission Grouping under Selected Missions was displaying as unselected when Forced Difficulty was set to H1.
+* **Current Plans:**
+  * Slowly going through H1 & H2 to add/update Contract Mode Target images and find more Extra/Photo Objectives. Personal issues and other games got in the way of updates here for a while, sorry.
+
+---
+
 **October 11, 2021**
 * **HITMAN:**
   * **World of Tomorrow:**
@@ -51,8 +73,6 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
     * **Photo Objectives:** 9 added.
 * **Other Fixes:**
   * Added a missing image for a Photo Objective in The Showstopper.
-* **Current Plans:**
-  * Slowly going through H1 & H2 to add/update Contract Mode Target images and find more Extra/Photo Objectives. Personal issues and other games got in the way of updates here for a while, sorry.
 
 ---
 
@@ -115,17 +135,3 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 * **Other Fixes:**
   * Newly implemented icons differentiating Missions, Contracts, Escalations, etc. were displaying incorectly if you changed the Roulette Mode and navagated the history (Undo/Redo).
   * Purged a handful of duplicate Contracts Mode Target Images.
-
----
-
-**August 20, 2021**
-* **Roulette:**
-  * Added a preview when selecting "Roulette Appearance". Just hover over the options and the preview appears in the description to the right. This is only on non-mobile browsing due to screen size restrictions.
-* **HITMAN:**
-  * **The Icon:**
-    * **Contracts Mode Targets:** 25 more added. Updated the images of the existing ones with their HITMAN III versions.
-    * **Photo Objectives:** 5 added.
-* **Other Fixes:**
-  * Differentiated the icon shown for Missions, Contracts, and Escalations as well as Elusive Targets and the Sarajevo Six. (Only visable for non-mobile browsing)
-  * Method, Disguise, and Intel icons for Targets now match Hitman III when using the "Hitman III Dark" (default) appearance.
-  * Minor color and text issues fixed for mobile browsing using the "Hitman GOTY White" appearance. 
