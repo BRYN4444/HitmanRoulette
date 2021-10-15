@@ -298,9 +298,11 @@
 .construction-exit-DoorneartheWell { background-image: url('../img/exit/Door%20near%20the%20Well.png'); }
 .construction-exit-DoorbytheStreet { background-image: url('../img/exit/Door%20by%20the%20Street.png'); }
 .birthday-exit-Speedboat, .veteran-exit-Speedboat { background-image: url('../img/exit/Speedboat-Club27.png'); }
+.birthday-exit-SpeedboatH1 { background-image: url('../img/exit/Speedboat-Club27-H1.png'); }
 .birthday-exit-Tuktuk, .veteran-exit-Tuktuk { background-image: url('../img/exit/Tuk-tuk.png'); }
 .birthday-exit-Tunnel, .cult-exit-Tunnel, .veteran-exit-Tunnel { background-image: url('../img/exit/Tunnel.png'); }
 .cult-exit-Speedboat { background-image: url('../img/exit/Speedboat-TheSource.png'); }
+.cult-exit-Tuktuk { background-image: url('../img/exit/Tuk-tuk-TheSource.png'); }
 .terrorists-exit-Bridge { background-image: url('../img/exit/Bridge-FreedomFighters.png'); }
 .terrorists-exit-QuadBike { background-image: url('../img/exit/Quad%20Bike.png'); }
 .terrorists-exit-River { background-image: url('../img/exit/River.png'); }
@@ -1068,16 +1070,16 @@ div[class^="ElusiveTarget"] { background-image: url('../img/targetcon/NPC.jpg');
 .Anurat-birthday, .RamaYodsuwan-birthday, .BahnNakpradith-birthday, .SurawongWiwantra-birthday, .NattapatJuntasa-birthday, .TinnawatMahanakorn-birthday, .ThamBoonShinnawat-birthday, .ParitPlainukool-birthday, .ParinChanocha-birthday { background-image: url('../img/targetcon/Anurat.jpg'); }
 .Nattapong-birthday, .YingyaiChaiprasit-birthday { background-image: url('../img/targetcon/Nattapong.jpg'); }
 .Werawat-birthday, .JackieTan-birthday, .SudPrasarttong-birthday, .ThongKongCheenchamras-birthday, .ThanaboonWattana-birthday, .PhetPichit-birthday, .ThepKantawong-birthday, .Wiriya-birthday, .TumarBimbombur-birthday, .KamnanSindudeja-birthday, .Prem-birthday, .PranSanya-birthday { background-image: url('../img/targetcon/Werawat.jpg'); }
-.NopjiraLui-birthday, .YodRakSirisop-birthday, .LamomMontri-birthday { background-image: url('../img/targetcon/NopjiraLui.jpg'); }
+.NopjiraLui-birthday, .YodRakSirisopa-birthday, .LamomMontri-birthday { background-image: url('../img/targetcon/NopjiraLui.jpg'); }
 .AnadaKammana-birthday, .JackTorrent-birthday { background-image: url('../img/targetcon/AnadaKammana.jpg'); }
 .HansGraub-birthday { background-image: url('../img/targetcon/HansGraub.jpg'); }
 .WongsaJaidee-birthday, .JariyaChansiri-birthday { background-image: url('../img/targetcon/WongsaJaidee.jpg'); }
 .LukasHimmeltramp-birthday, .VictorHuttingdon-birthday, .MagnusPike-birthday { background-image: url('../img/targetcon/LukasHimmeltramp.jpg'); }
 .AkakinéHimmeltramp-birthday { background-image: url('../img/targetcon/AkakinéHimmeltramp.jpg'); }
 .Arthit-birthday { background-image: url('../img/targetcon/Arthit.jpg'); }
-.OrapanSanya-birthday, .PenchanKhad-birthday { background-image: url('../img/targetcon/OrapanSanya.jpg'); }
+.OrapanSanya-birthday, .ChutamasPreecha-birthday, .PenchanKhad-birthday { background-image: url('../img/targetcon/OrapanSanya.jpg'); }
 .DrJonesYama-birthday { background-image: url('../img/targetcon/DrJonesYama.jpg'); }
-.MadeePhyachai-birthday, .TiwatKitJakarn-birthday, .Lloyd-birthday, .ChalongAkradej-birthday, .Somchai-birthday { background-image: url('../img/targetcon/MadeePhyachai.jpg'); }
+.MadeePhyachai-birthday, .UtumpornLampoon-birthday, .TiwatKitJakarn-birthday, .Lloyd-birthday, .ChalongAkradej-birthday, .Somchai-birthday { background-image: url('../img/targetcon/MadeePhyachai.jpg'); }
 .GeorgeAustin-birthday { background-image: url('../img/targetcon/GeorgeAustin.jpg'); }
 .VladVolodin-birthday, .AlexanderHoffman-birthday { background-image: url('../img/targetcon/VladVolodin.jpg'); }
 .TukKitJakarn-birthday { background-image: url('../img/targetcon/TukKitJakarn.jpg'); }
@@ -1103,17 +1105,17 @@ div[class^="ElusiveTarget"] { background-image: url('../img/targetcon/NPC.jpg');
 .KianPotter-birthday, .ThomasBurton-birthday, .BuddyAkward-birthday { background-image: url('../img/targetcon/KianPotter.jpg'); }
 .JedKnucklesPitt-birthday, .PederKoch-birthday { background-image: url('../img/targetcon/JedKnucklesPitt.jpg'); }
 .KongLekcharuthas-birthday { background-image: url('../img/targetcon/KongLekcharuthas.jpg'); }
-.Magnu-birthday, .BaileyRees-birthday, .GabrielCook-birthday { background-image: url('../img/targetcon/Magnu.jpg'); }
+.Magnu-birthday, .BaileyRees-birthday, .GabrielCook-birthday, .Shane-birthday { background-image: url('../img/targetcon/Magnu.jpg'); }
 .ChristopherLees-birthday, .AntonScales-birthday { background-image: url('../img/targetcon/ChristopherLees.jpg'); }
-.RobertWalker-birthday, .NicholasCross-birthday { background-image: url('../img/targetcon/RobertWalker.jpg'); }
+.RobertWalker-birthday, .NicholasCross-birthday, .ThomasPentz-birthday { background-image: url('../img/targetcon/RobertWalker.jpg'); }
 .SiddhiMongkoltham-birthday, .KontheeSamak-birthday { background-image: url('../img/targetcon/SiddhiMongkoltham.jpg'); }
 .NathanNapalmPalmer-birthday { background-image: url('../img/targetcon/NathanNapalmPalmer.jpg'); }
-.GeoffCloney-birthday, .JudeOSullivan-birthday { background-image: url('../img/targetcon/GeoffCloney.jpg'); }
+.GeoffCloney-birthday, .JudeOSullivan-birthday, .KurtHondo-birthday, .MannyBoscovitch-birthday { background-image: url('../img/targetcon/GeoffCloney.jpg'); }
 .EdwardJohnston-birthday { background-image: url('../img/targetcon/EdwardJohnston.jpg'); }
 .BobAltmuligmanGanoosh-birthday, .AndrewAbbott-birthday, .JerryBusey-birthday { background-image: url('../img/targetcon/BobAltmuligmanGanoosh.jpg'); }
 .ThijsFhakir-birthday, .JasonHunter-birthday { background-image: url('../img/targetcon/ThijsFhakir.jpg'); }
 .NielBurgess-birthday { background-image: url('../img/targetcon/NielBurgess.jpg'); }
-.BonesGordon-birthday, .ErikFrancis-birthday { background-image: url('../img/targetcon/BonesGordon.jpg'); }
+.BonesGordon-birthday, .ErikFrancis-birthday, .TaylorTodd-birthday, .GeorgeGroves-birthday { background-image: url('../img/targetcon/BonesGordon.jpg'); }
 .ColinDwight-birthday { background-image: url('../img/targetcon/ColinDwight.jpg'); }
 .MaxBlueBalls-birthday { background-image: url('../img/targetcon/MaxBlueBalls.jpg'); }
 .JamesSparkyParker-birthday { background-image: url('../img/targetcon/JamesSparkyParker.jpg'); }
@@ -1130,6 +1132,8 @@ div[class^="ElusiveTarget"] { background-image: url('../img/targetcon/NPC.jpg');
 .JackHellhoundCerberus-birthday { background-image: url('../img/targetcon/JackHellhoundCerberus.jpg'); }
 .SteveBacon-birthday, .UbbeLeffeson-birthday { background-image: url('../img/targetcon/SteveBacon.jpg'); }
 .RookieNelson-birthday { background-image: url('../img/targetcon/RookieNelson.jpg'); }
+.KevinJohnson-birthday { background-image: url('../img/targetcon/KevinJohnson.jpg'); }
+.AlTootsieAvery-birthday { background-image: url('../img/targetcon/AlTootsieAvery.jpg'); }
 
 /* The Source */
 .OybekNabazov-cult { background-image: url('../img/target/OybekNabazov.jpg'); }
@@ -1137,25 +1141,94 @@ div[class^="ElusiveTarget"] { background-image: url('../img/targetcon/NPC.jpg');
 .SisterYulduz-cult { background-image: url('../img/target/SisterYulduz.jpg'); }
 .SisterYulduz-cult.contarget { background-size: auto 100% !important; }
 
-.Jeff-cult { background-image: url('../img/targetcon/Jeff.jpg'); }
-.Rebecca-cult { background-image: url('../img/targetcon/Rebecca.jpg'); }
 .JackieCarrington-cult { background-image: url('../img/targetcon/JackieCarrington.jpg'); }
 .MrsMookjai-cult { background-image: url('../img/targetcon/MrsMookjai.jpg'); }
 .TharnSrisai-cult { background-image: url('../img/targetcon/TharnSrisai.jpg'); }
-.Julian-cult { background-image: url('../img/targetcon/Julian.jpg'); }
-.SuchartWattana-cult { background-image: url('../img/targetcon/SuchartWattana.jpg'); }
-.ChegoPregoet-cult { background-image: url('../img/targetcon/ChegoPregoet.jpg'); }
-.WilliamCavanagh-cult { background-image: url('../img/targetcon/WilliamCavanagh.jpg'); }
-.MichaelPeterson-cult { background-image: url('../img/targetcon/MichaelPeterson.jpg'); }
-.ThomasGreyheart-cult { background-image: url('../img/targetcon/ThomasGreyheart.jpg'); }
-.ThomasSpencer-cult { background-image: url('../img/targetcon/ThomasSpencer.jpg'); }
-.JohnDoe-cult { background-image: url('../img/targetcon/JohnDoe.jpg'); }
+.Julian-cult, .Teerasak-cult { background-image: url('../img/targetcon/Julian.jpg'); }
+.Tarrin-cult { background-image: url('../img/targetcon/Tarrin.jpg'); }
+.Prasert-cult, .KittinanJanpong-cult { background-image: url('../img/targetcon/Prasert.jpg'); }
+.Chaiya-cult, .ChristianSato-cult, .ArthitPrugsanapan-cult, .Bob-cult { background-image: url('../img/targetcon/Chaiya.jpg'); }
+.KeithMcKenzie-cult { background-image: url('../img/targetcon/KeithMcKenzie.jpg'); }
+.TadthonNitpattanasai-cult, .PakdhiSamsen-cult, .MartinHolas-cult { background-image: url('../img/targetcon/TadthonNitpattanasai.jpg'); }
+.SeriChadee-cult { background-image: url('../img/targetcon/SeriChadee.jpg'); }
+.CharanyaDarakorn-cult, .IsareeKeacham-cult, .SuprangSirisaeng-cult, .DuangrudeePrugsanapan-cult, .NamSrisati-cult, .KeeratiSiracha-cult, .NaruemonThanom-cult, .ApsornKwangnoi-cult, .KhunMaeAnand-cult, .MekhlaMahagitsiri-cult, .PrapasNarkhirunkanok-cult, .NipatNarkhirunkanok-cult { background-image: url('../img/targetcon/CharanyaDarakorn.jpg'); }
+.AWut-cult, .ThammapornMongkoltham-cult { background-image: url('../img/targetcon/AWut.jpg'); }
+.Channarong-cult, .WaltGervers-cult { background-image: url('../img/targetcon/Channarong.jpg'); }
+.KriangsakPhakdi-cult, .LamomSongprawati-cult { background-image: url('../img/targetcon/Chanchai.jpg'); }
+.SananTheprak-cult, .PhillipWinston-cult, .TigartPalahkrunn-cult, .TrevorSimpletown-cult { background-image: url('../img/targetcon/SananTheprak.jpg'); }
+.Anurat-cult, .RamaYodsuwan-cult, .BahnNakpradith-cult, .SurawongWiwantra-cult, .NattapatJuntasa-cult, .ParitPlainukool-cult, .ParinChanocha-cult { background-image: url('../img/targetcon/Anurat.jpg'); }
+.Nattapong-cult, .YingyaiChaiprasit-cult { background-image: url('../img/targetcon/Nattapong.jpg'); }
+.Werawat-cult, .SudPrasarttong-cult, .ThongKongCheenchamras-cult, .ThepKantawong-cult, .Wiriya-cult, .TumarBimbombur-cult, .PranSanya-cult { background-image: url('../img/targetcon/Werawat.jpg'); }
+.YodRakSirisopa-cult, .LamomMontri-cult { background-image: url('../img/targetcon/NopjiraLui.jpg'); }
+.AnadaKammana-cult { background-image: url('../img/targetcon/AnadaKammana.jpg'); }
+.HansGraub-cult { background-image: url('../img/targetcon/HansGraub.jpg'); }
+.WongsaJaidee-cult { background-image: url('../img/targetcon/WongsaJaidee.jpg'); }
+.LukasHimmeltramp-cult, .VictorHuttingdon-cult, .MagnusPike-cult { background-image: url('../img/targetcon/LukasHimmeltramp.jpg'); }
+.AkakinéHimmeltramp-cult { background-image: url('../img/targetcon/AkakinéHimmeltramp.jpg'); }
+.Arthit-cult { background-image: url('../img/targetcon/Arthit.jpg'); }
+.OrapanSanya-cult, .ChutamasPreecha-cult, .ChegoPregoet-cult { background-image: url('../img/targetcon/OrapanSanya.jpg'); }
+.DrJonesYama-cult { background-image: url('../img/targetcon/DrJonesYama.jpg'); }
+.MadeePhyachai-cult, .UtumpornLampoon-cult, .TiwatKitJakarn-cult, .Lloyd-cult, .ChalongAkradej-cult, .Somchai-cult, .SuchartWattana-cult { background-image: url('../img/targetcon/MadeePhyachai.jpg'); }
+.GeorgeAustin-cult { background-image: url('../img/targetcon/GeorgeAustin.jpg'); }
+.VladVolodin-cult { background-image: url('../img/targetcon/VladVolodin.jpg'); }
+.WillyPonhpaiboon-cult, .SavitreeSrisak-cult { background-image: url('../img/targetcon/WillyPonhpaiboon.jpg'); }
+.ThomasCraig-cult { background-image: url('../img/targetcon/ThomasCraig.jpg'); }
+.AliceJLowry-cult, .LawanPracheta-cult { background-image: url('../img/targetcon/AliceJLowry.jpg'); }
+.RamaMalee-cult { background-image: url('../img/targetcon/ParunKaewmanee.jpg'); }
+.DanitVanich-cult { background-image: url('../img/targetcon/SuchinThanom.jpg'); }
+.FrankHorrigan-cult { background-image: url('../img/targetcon/AlDAndrea.jpg'); }
+.NiwatChalermchon-cult { background-image: url('../img/targetcon/BoonmaChavalit.jpg'); }
+.FeydReuter-cult { background-image: url('../img/targetcon/FeydReuter.jpg'); }
+.TunlayaJanpong-cult, .AkkaratChaikarn-cult, .DornPalathai-cult { background-image: url('../img/targetcon/TunlayaJanpong.jpg'); }
+.PuPatalung-cult { background-image: url('../img/targetcon/PuPatalung.jpg'); }
+.RonaldSump-cult { background-image: url('../img/targetcon/RonaldSump.jpg'); }
+.LekChalerm-cult { background-image: url('../img/targetcon/LekChalerm.jpg'); }
+.NibunPanyachon-cult { background-image: url('../img/targetcon/NibunPanyachon.jpg'); }
+.FrancisFish-cult { background-image: url('../img/targetcon/FrancisFish.jpg'); }
+.PederKoch-cult { background-image: url('../img/targetcon/JedKnucklesPitt.jpg'); }
+.KongLekcharuthas-cult, .SriSutabuhr-cult { background-image: url('../img/targetcon/KongLekcharuthas.jpg'); }
+.KontheeSamak-cult { background-image: url('../img/targetcon/SiddhiMongkoltham.jpg'); }
+.StanTaggart-cult { background-image: url('../img/targetcon/StanTaggart.jpg'); }
+.SteveBacon-cult { background-image: url('../img/targetcon/SteveBacon.jpg'); }
+
+.TomButtler-cult, .ChristopherKimberly-cult { background-image: url('../img/targetcon/TomButtler.jpg'); }
+.SusanneAyeran-cult, .MarianneBartez-cult { background-image: url('../img/targetcon/SusanneAyeran.jpg'); }
+.Shane-cult { background-image: url('../img/targetcon/Magnu.jpg'); }
+.KevinJohnson-cult { background-image: url('../img/targetcon/KevinJohnson.jpg'); }
+.BenJohnsson-cult { background-image: url('../img/targetcon/BenJohnsson.jpg'); }
+.TaylorTodd-cult, .GeorgeGroves-cult { background-image: url('../img/targetcon/BonesGordon.jpg'); }
+.KurtHondo-cult, .MannyBoscovitch-cult { background-image: url('../img/targetcon/GeoffCloney.jpg'); }
+.ThomasPentz-cult { background-image: url('../img/targetcon/RobertWalker.jpg'); }
+.SusanCheguyen-cult, .ChristopherGarner-cult { background-image: url('../img/targetcon/SusanCheguyen.jpg'); }
+.AlTootsieAvery-cult { background-image: url('../img/targetcon/AlTootsieAvery.jpg'); }
 .ThomasSmith-cult { background-image: url('../img/targetcon/ThomasSmith.jpg'); }
+.JohnDoe-cult { background-image: url('../img/targetcon/JohnDoe.jpg'); }
 .EricPreston-cult { background-image: url('../img/targetcon/EricPreston.jpg'); }
 .KirckSackville-cult { background-image: url('../img/targetcon/KirckSackville.jpg'); }
-.Tarrin-cult { background-image: url('../img/targetcon/Tarrin.jpg'); }
-.Prasert-cult { background-image: url('../img/targetcon/Prasert.jpg'); }
-.Chaiya-cult { background-image: url('../img/targetcon/Chaiya.jpg'); }
+.Jeff-cult { background-image: url('../img/targetcon/Jeff.jpg'); }
+.Rebecca-cult { background-image: url('../img/targetcon/Rebecca.jpg'); }
+.WilliamCavanagh-cult { background-image: url('../img/targetcon/WilliamCavanagh.jpg'); }
+.MichaelPeterson-cult { background-image: url('../img/targetcon/MichaelPeterson.jpg'); }
+.ArthitBursac-cult, .ThomasSpencer-cult { background-image: url('../img/targetcon/ArthitBursac.jpg'); }
+.EricaTomlinson-cult { background-image: url('../img/targetcon/EricaTomlinson.jpg'); }
+.KarlBengtsson-cult { background-image: url('../img/targetcon/KarlBengtsson.jpg'); }
+.NilsHolgersson-cult { background-image: url('../img/targetcon/NilsHolgersson.jpg'); }
+.PaulSimons-cult { background-image: url('../img/targetcon/PaulSimons.jpg'); }
+.MarcoPederoni-cult, .OlafIvarsson-cult { background-image: url('../img/targetcon/MarcoPederoni.jpg'); }
+.RamonaPutri-cult { background-image: url('../img/targetcon/RamonaPutri.jpg'); }
+.ChegoTinumir-cult { background-image: url('../img/targetcon/ChegoTinumir.jpg'); }
+.Akram-cult { background-image: url('../img/targetcon/Akram.jpg'); }
+.Akmal-cult { background-image: url('../img/targetcon/Akmal.jpg'); }
+.ThomasGreyheart-cult { background-image: url('../img/targetcon/ThomasGreyheart.jpg'); }
+.FrancoRottenhowler-cult { background-image: url('../img/targetcon/FrancoRottenhowler.jpg'); }
+.MichaelPena-cult { background-image: url('../img/targetcon/MichaelPena.jpg'); }
+.PreechaBunnang-cult { background-image: url('../img/targetcon/PreechaBunnang.jpg'); }
+.LeilaTyduk-cult { background-image: url('../img/targetcon/LeilaTyduk.jpg'); }
+.TimothyLace-cult { background-image: url('../img/targetcon/TimothyLace.jpg'); }
+.CarlWiley-cult { background-image: url('../img/targetcon/CarlWiley.jpg'); }
+.EmillyCarson-cult { background-image: url('../img/targetcon/EmillyCarson.jpg'); }
+.RobertUppyJr-cult { background-image: url('../img/targetcon/RobertUppyJr.jpg'); }
+.CallieBarton-cult { background-image: url('../img/targetcon/CallieBarton.jpg'); }
 
 /* The Veteran */
 .JohnStubbs-veteran { background-image: url('../img/target/JohnStubbs.jpg'); }
@@ -1986,7 +2059,7 @@ div[class^="ElusiveTarget"] { background-image: url('../img/targetcon/NPC.jpg');
 .ProvidenceMembersMayBeEliminated { background-image: url('../img/obj/ObjProvidence.png'); }
 
 /*** Extra Objectives & Camera Mode***/
-.NotAvailable { background-image: url('../img/general/NotAvailable.jpg'); }
+#diff-image-NotAvailable, .NotAvailable { background-image: url('../img/general/NotAvailable.jpg'); }
 .CameraUnavailable { background-image: url('../img/camera/CameraUnavailable.png'); }
 .PhotographicProof { background-image: url('../img/camera/PhotographicProof.png'); }
 
@@ -2239,6 +2312,14 @@ div[class^="ElusiveTarget"] { background-image: url('../img/targetcon/NPC.jpg');
 .AtEaseSoldier { background-image: url('../img/obj/AtEaseSoldier.png'); }
 .SomethingForLater { background-image: url('../img/obj/Something%20For%20Later.png'); }
 .InnerCircle { background-image: url('../img/obj/Inner%20Circle.png'); }
+.AnEveningCryifIWantTo { background-image: url("../img/obj/AnEveningCryifIWantTo.png"); }
+
+.TempleofDawnNight { background-image: url('../img/camera/TempleofDawnNight.png'); }
+.PhotoOpNabazov { background-image: url('../img/camera/PhotoOpNabazov.png'); }
+.InspirationalQuotes { background-image: url('../img/camera/InspirationalQuotes.png'); }
+.RitesofPassage { background-image: url('../img/camera/RitesofPassage.png'); }
+.TouchofLiberation { background-image: url('../img/camera/TouchofLiberation.png'); }
+.SymphonyatNightBloodyTears { background-image: url('../img/camera/SymphonyatNightBloodyTears.png'); }
 
 /** Colorado **/
 /* Freedom Fighters */
@@ -2660,7 +2741,8 @@ div[class^="ElusiveTarget"] { background-image: url('../img/targetcon/NPC.jpg');
 .MissingKiller { background-image: url('../img/gpc/3star.png'); }
 .QuietHitman { background-image: url('../img/gpc/4star.png'); }
 .SilentAssassin { background-image: url('../img/gpc/5star.png'); }
+#diff-image-Normal { background-image: url('../img/gpc/Normal.png'); }
 #diff-image-ProfessionalH1 { background-image: url('../img/gpc/ProfessionalH1.png'); }
-#diff-image-Normal, #diff-image-Casual { background-image: url('../img/gpc/Casual.png'); }
+#diff-image-Casual { background-image: url('../img/gpc/Casual.png'); }
 #diff-image-Professional { background-image: url('../img/gpc/Professional.png'); }
 #diff-image-Master { background-image: url('../img/gpc/Master.png'); }
