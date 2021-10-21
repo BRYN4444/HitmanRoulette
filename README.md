@@ -39,6 +39,25 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 
 ### Latest Updates:
 
+**October 20, 2021**
+* **Roulette:**
+  * **Roulette Settings:**
+    * **Kill Requirements - Forced Melee Methods:** Added this option to disable the "Throw Weapon" / "Melee" requirement when "Specific Melee Methods" is enabled.
+* **HITMAN III:**
+  * **Apex Predator:**
+    * **Mission Target Images:** The targets in Apex Predator do not get images like regular targets; only through intel. These intel images will show as their target images when using "Mission Mode Roulette". This was implemented incorrectly initially.
+* **HITMAN:**
+  * **Freedom Fighters:**
+    * **Contracts Mode Targets:** 98 more added. Updated the images of the existing ones with their HITMAN III versions.
+    * **Photo Objectives:** 8 added.
+  * Other Small Updates:
+    * **The Source - Extra Objectives:** Fixed a wrong file type for an image.
+	* **Another Life - Melee Weapons:** Some melee weapons are hidden using obscure eater eggs. Hints to obtain them are shown, but were not working in a few instances. This is fixed.
+* **Current Plans:**
+  * Slowly going through H1 & H2 to add/update Contract Mode Target images and find more Extra/Photo Objectives. Personal issues and other games got in the way of updates here for a while, sorry.
+
+---
+
 **October 14, 2021**
 * **HITMAN:**
   * **Club 27:**
@@ -56,8 +75,6 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
   * Fixed misspelled Contract Target names in Club 27, as well as a parse error.
   * Updated the image for the Tuk-Tuk exit in Club 27 to better match the same exit in The Source.
   * Fixed a cosmetic issue where the Hitman Campaign Mission Grouping under Selected Missions was displaying as unselected when Forced Difficulty was set to H1.
-* **Current Plans:**
-  * Slowly going through H1 & H2 to add/update Contract Mode Target images and find more Extra/Photo Objectives. Personal issues and other games got in the way of updates here for a while, sorry.
 
 ---
 
@@ -119,19 +136,3 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 * **Other Fixes:**
   * CSS for "Old Town Gate" exit wasn't updated following the previous renaming, so the images weren't showing up.
   * Recentered the image used for the "Lighthouse: Dusk" Photo Objective in Landslide.
-
----
-
-**September 12, 2021**
-* **HITMAN:**
-  * **Landslide:**
-    * **Contracts Mode Targets:** 95 more added. Updated the images of the existing ones with their HITMAN III versions.
-    * **Photo Objectives:** 7 added.
-  * Other Small Updates:
-    * **The Showstopper - Photo Objectives:** 1 more added.
-	* **World of Tomorrow - Contracts Mode Targets:** Added extra learned intel for one NPC.
-	* **The Icon - Contracts Mode Targets:** Fixed a misspelled NPC name.
-	* **Landslide, The Icon, and The Author - "Town Gate" Exit:** Renamed to "Old Town Gate" to reflect the location's proper name within Hitman 2/3.
-* **Other Fixes:**
-  * Newly implemented icons differentiating Missions, Contracts, Escalations, etc. were displaying incorectly if you changed the Roulette Mode and navagated the history (Undo/Redo).
-  * Purged a handful of duplicate Contracts Mode Target Images.
