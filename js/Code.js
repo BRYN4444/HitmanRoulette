@@ -446,7 +446,6 @@ function writeEverything(result) {
 	
 	// Display Contracts Mode Target Images in Tall Format regardless of Theme
 	if (mode == "CONEASY" || mode == "CONHARD") { var contractmode = " contarget" }
-	else if (mode == "MAIN" && result.missionTitle == "Apex Predator") { var contractmode = " contarget" }
 	else { var contractmode = "" }
 	
 	// Write to the HTML elements from the results object
@@ -498,6 +497,16 @@ function writeEverything(result) {
 				document.getElementById("subtitle-method" + (i+1)).innerHTML = "Any Pistol";
 				document.getElementById("subtitle-alt-method" + (i+1)).innerHTML = "";
 				document.getElementById("input_weapon" + (i+1)).value = ", using: Any Pistol";
+			}
+			else if(result.weapons[i].split('|')[2] != null && document.getElementById("mtype").checked == 0 ){ // Hint Disable Forced Melee Elimination Methods
+				document.getElementById("subtitle-method" + (i+1)).innerHTML = result.weapons[i].split('|')[0];
+				document.getElementById("subtitle-alt-method" + (i+1)).innerHTML = "(<a target='_blank' href='./img/general/" + result.weapons[i].split('|')[2] + "'>Hint</a>)";
+				document.getElementById("input_weapon" + (i+1)).value = ", using: " + result.weapons[i].split('|')[0];
+			}
+			else if(document.getElementById("mtype").checked == 0 && !accicheck.includes(result.weapons[i]) ){ // Disable Forced Melee Elimination Methods
+				document.getElementById("subtitle-method" + (i+1)).innerHTML = result.weapons[i].split('|')[0];
+				document.getElementById("subtitle-alt-method" + (i+1)).innerHTML = "";
+				document.getElementById("input_weapon" + (i+1)).value = ", using: " + result.weapons[i].split('|')[0];
 			}
 			else if(result.weapons[i].split('|')[2] != null) { // method subtype hint
 				document.getElementById("subtitle-method" + (i+1)).innerHTML = result.weapons[i].split('|')[0];
