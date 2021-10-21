@@ -50,9 +50,9 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
   * **Freedom Fighters:**
     * **Contracts Mode Targets:** 98 more added. Updated the images of the existing ones with their HITMAN III versions.
     * **Photo Objectives:** 8 added.
-  * Other Small Updates:
-    * **The Source - Extra Objectives:** Fixed a wrong file type for an image.
-	* **Another Life - Melee Weapons:** Some melee weapons are hidden using obscure eater eggs. Hints to obtain them are shown, but were not working in a few instances. This is fixed.
+* **Other Fixes:**
+  * Fixed a wrong image file type made for an Extra Objective in The Source.
+  * Some melee weapons in Another Life are hidden using obscure eater eggs. Hints to obtain them are shown, but were not working in a few instances. This is fixed.
 * **Current Plans:**
   * Slowly going through H1 & H2 to add/update Contract Mode Target images and find more Extra/Photo Objectives. Personal issues and other games got in the way of updates here for a while, sorry.
 
@@ -62,18 +62,19 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 * **HITMAN:**
   * **Club 27:**
     * **"Speedboat" Exit:** When selecting "H1" as the Forced Difficulty, the key will now list Professional as needed instead of Master. The image used is also modified.
+	* **"Tuk-Tuk" Exit:**Updated the image to better match the same exit in The Source.
     * **Contracts Mode Targets:** 8 more added, as well as fixing a few missing Contract Target images.
   * **The Source:**
     * **Exits:** 1 added. Apparently I just missed adding the Tuk-Tuk exit to this mission for some reason...
     * **Contracts Mode Targets:** 127 more added. Updated the images of the existing ones with their HITMAN III versions.
     * **Extra Objectives:** 1 more added.
     * **Photo Objectives:** 6 added.
+* **HITMAN 2:**
   * Other Small Updates:
     * **Golden Handshake - "Director's Exit":** Specified the need for a "CEO Exit Keycard" rather than just a key.
 * **Other Fixes:**
   * If you have Forced Difficulty set to "H1" but randomize a HITMAN 2/III map, the box generated will warn you about this.
   * Fixed misspelled Contract Target names in Club 27, as well as a parse error.
-  * Updated the image for the Tuk-Tuk exit in Club 27 to better match the same exit in The Source.
   * Fixed a cosmetic issue where the Hitman Campaign Mission Grouping under Selected Missions was displaying as unselected when Forced Difficulty was set to H1.
 
 ---
@@ -103,6 +104,7 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
   * **A House Built On Sand:**
     * **Contracts Mode Targets:** 72 more added. Updated the images of the existing ones with their HITMAN III versions.
     * **Photo Objectives:** 5 added.
+* **HITMAN III:**
   * Other Small Updates:
     * **Apex Predator - "Into The Forrest" Exit:** Now only forced when using the Bus Stop entrance outside of Contracta Mode, like it is normally.
     * **The Farewell - Contract Mode Targets:** Had to remove one possible target, one of the Asado Chefs, because they do not spawn if you use the Dining Area entrance.
@@ -115,10 +117,9 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 **September 27, 2021**
 * **HITMAN:**
   * **A Gilded Cage:**
+    * **"Car in the Garage" Exit:** Renamed to "Consulate Car" to better reflect the location.
     * **Contracts Mode Targets:** 175 more added. Updated the images of the existing ones with their HITMAN III versions.
     * **Photo Objectives:** 9 added.
-  * Other Small Updates:
-    * **A Gilded Cage - "Car in the Garage" Exit:** Renamed to "Consulate Car" to better reflect the location.
 * **Other Fixes:**
   * Some Roulette Settings were displaying incorrect selections when refreshing/reloading (not hard refreshing/reloading) the page.
   * Added slightly more text under the "Compatibility & Issues" section of the "About & Help" page. Clarifying elimination possibilities for later sequels and how Contracts Mode may generate challenging Roulettes.
@@ -132,7 +133,9 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
     * **Photo Objectives:** 5 added.
   * Other Small Updates:
     * **A Gilded Cage / A House Build on Sand - "Marketplace Gate" Exit:** Renamed to "West Market Gates" to better reflect the location's direction and name within Hitman 2/3.
-	* **Another Life / A Bitter Pill - Extra Objectives:** "Ring Whittleton Creek" and "Snail Mail" were mislabeled.
+* **HITMAN 2:**
+  * Other Small Updates:
+    * **Another Life / A Bitter Pill - Extra Objectives:** "Ring Whittleton Creek" and "Snail Mail" were mislabeled.
 * **Other Fixes:**
   * CSS for "Old Town Gate" exit wasn't updated following the previous renaming, so the images weren't showing up.
   * Recentered the image used for the "Lighthouse: Dusk" Photo Objective in Landslide.
