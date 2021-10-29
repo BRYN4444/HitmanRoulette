@@ -546,8 +546,9 @@ $(document).ready(function() {
 	});
 	
 	/******Range Value Displayed for Complications Slider******/
+	$('#compamount').html( $('#compslider').val() );
 	$(document).on('input', '#compslider', function() {
-		$('#compamount').html( $(this).val() );
+		$('#compamount').html( $('#compslider').val() );
 	});
 	
 	/******Options Select Submenu Descriptions******/
