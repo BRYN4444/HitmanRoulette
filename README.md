@@ -39,6 +39,29 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 
 ### Latest Updates:
 
+**October 28, 2021**
+* **HITMAN:**
+  * **Situs Inversus:**
+    * **Contracts Mode Targets:** 127 more added. Updated the images of the existing ones with their HITMAN III versions.
+	* **Extra Objectives:** 3 more added.
+    * **Photo Objectives:** 9 added.
+  * **Patient Zero:**
+    * **"Eliminate Any Infected" Objective:** Renamed to "Infected" and replaced image to match in game. Reworded description text to be more concise.
+	* **Extra Objectives:** 1 more added.
+    * **Photo Objectives:** 6 added.
+  * Other Small Updates:
+    * **Hokkaido (All Missions) - "Hiking Route" Exit:** Renamed to "Mountain Path" to better match the Starting Location.
+* **Other Fixes:**
+  * Erich Soders' target specific eliminations on Situs Inversus were having their labeling cut off when "Forced Melee Methods" was disabled.
+  * Fixed a coding issue where the Complication "One Save Only" wasn't properly appearing in Roulette generation. Also, it will only appear in missions that allow saving as long as "Force Difficulty" is disabled.
+  * A Complication "One Disguise Change" was previously removed due to another Complication, "No Disguise Changes", causing redundancy. It is now coded so that as long as "Specific Disguises" is disabled, one of these two Complications have an equal chance of appearing (rather than the potential of both).
+  * The Allow Complications setting was displaying an incorrect value when refreshing/reloading (not hard refreshing/reloading) the page.
+  * Removed a few more duplicate Contracts Mode Target images.
+* **Current Plans:**
+  * After a bit of a break, keep going through H2 to add/update Contract Mode Target images and find more Extra/Photo Objectives.
+
+---
+
 **October 20, 2021**
 * **Roulette:**
   * **Roulette Settings:**
@@ -53,8 +76,6 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 * **Other Fixes:**
   * Fixed a wrong image file type made for an Extra Objective in The Source.
   * Some melee weapons in Another Life are hidden using obscure eater eggs. Hints to obtain them are shown, but were not working in a few instances. This is fixed.
-* **Current Plans:**
-  * Slowly going through H1 & H2 to add/update Contract Mode Target images and find more Extra/Photo Objectives. Personal issues and other games got in the way of updates here for a while, sorry.
 
 ---
 
@@ -124,18 +145,3 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
   * Some Roulette Settings were displaying incorrect selections when refreshing/reloading (not hard refreshing/reloading) the page.
   * Added slightly more text under the "Compatibility & Issues" section of the "About & Help" page. Clarifying elimination possibilities for later sequels and how Contracts Mode may generate challenging Roulettes.
   * Fixed spelling mistakes throughout Contracts Mode Target Intel for every mission. Also, replaced every mention of "washroom" with "bathroom" for consistency.
-
----
-
-**September 16, 2021**
-* **HITMAN:**
-  * **The Author:**
-    * **Photo Objectives:** 5 added.
-  * Other Small Updates:
-    * **A Gilded Cage / A House Build on Sand - "Marketplace Gate" Exit:** Renamed to "West Market Gates" to better reflect the location's direction and name within Hitman 2/3.
-* **HITMAN 2:**
-  * Other Small Updates:
-    * **Another Life / A Bitter Pill - Extra Objectives:** "Ring Whittleton Creek" and "Snail Mail" were mislabeled.
-* **Other Fixes:**
-  * CSS for "Old Town Gate" exit wasn't updated following the previous renaming, so the images weren't showing up.
-  * Recentered the image used for the "Lighthouse: Dusk" Photo Objective in Landslide.
