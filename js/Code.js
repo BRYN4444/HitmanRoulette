@@ -51,8 +51,12 @@ function createExtrasList(exit, eexit) {
 	if (Math.random() < 0.40)
 		extras.push("No Bodies Found|No dead or unconscious bodies may be found. This does not include victims of accidents or poisoning.");
 
-	if (Math.random() < 0.30 && document.getElementById("disguise").checked == 0 && !disguiseExits.includes(exit, eexit) )
-		extras.push("No Disguise Changes|Do not change from your starting disguise at any time during the mission.");
+	if (Math.random() < 0.30 && document.getElementById("disguise").checked == 0 && !disguiseExits.includes(exit, eexit) ) {
+		if (Math.random() < 0.50)
+			extras.push("No Disguise Changes|Do not change from your starting disguise at any time during the mission.");
+		else
+			extras.push("One Disguise Change|You are allowed one disguise change while playing the mission.");
+	};
 
 	if (Math.random() < 0.25 && document.getElementById("rating").checked == 0)
 		extras.push("Rowdy Guns|Any ballistic weapon used must be non-silenced.");
@@ -69,15 +73,11 @@ function createExtrasList(exit, eexit) {
 	if (Math.random() < 0.20)
 		extras.push("Headshots Only|Any shots fired at NPCs must be headshots.");
 
-	if (Math.random() < 0.20 && mode == "MAIN" && document.getElementById("difficulty").checked == 0)
+	if (Math.random() < 0.20 && mode == "MAIN" && document.getElementById("difficulty").selectedIndex == 0)
 		extras.push("One Save Only|You are allowed to save your mission progress only once.");
 	
 	if (Math.random() < 0.30)
 		extras.push("Perfect Shooter|Do not use firearms as distractions or to destroy objects. All shots must hit an NPC, even if they subsequently pass through the NPC and hit a wall.");
-
-	//Probably Remove This One for Redundancy with No Disguise Changes above
-	//if (Math.random() < 0.25 && document.getElementById("disguise").checked == 0 && !disguiseExits.includes(exit, eexit) )
-	//	extras.push("One Disguise Change|You are allowed one disguise change while playing the mission.");
 	
 	return extras;
 };
@@ -262,7 +262,7 @@ function containerToResult(container) {
 	else if (mode == "MAIN" && result.missionCode == "construction")
 		result.missionobjective = "Project Proposal|Aquire documents.|Aquire the Project Proposal documents";
 	else if (mode == "MAIN" && result.missionCode == "spread")
-		result.missionobjective = "Eliminate Any Infected|Eliminate anyone who becomes infected. Since the virus spreads through proximity contact, avoid becoming infected yourself. If you become contaminated, find an antidote for yourself within 5 minutes.|Eliminate Any Infected";
+		result.missionobjective = "Infected|Eliminate all infected. The virus spreads through proximity contact. If you become contaminated, find and inject the vaccine within 5 minutes.|Eliminate All Infected";
 	else if (mode == "MAIN" && result.missionCode == "controller")
 		result.missionobjective = "Sigma Operations Files|Retrieve Sigma operations files without getting spotted.|Retrieve Sigma operations files without getting spotted";
 	else if (mode != "ELUSIVE" && result.missionCode == "biggame")
@@ -503,7 +503,7 @@ function writeEverything(result) {
 				document.getElementById("subtitle-alt-method" + (i+1)).innerHTML = "(<a target='_blank' href='./img/general/" + result.weapons[i].split('|')[2] + "'>Hint</a>)";
 				document.getElementById("input_weapon" + (i+1)).value = ", using: " + result.weapons[i].split('|')[0];
 			}
-			else if(document.getElementById("mtype").checked == 0 && !accicheck.includes(result.weapons[i]) ){ // Disable Forced Melee Elimination Methods
+			else if(document.getElementById("mtype").checked == 0 && !submethodbypass.includes(result.weapons[i]) ){ // Disable Forced Melee Elimination Methods
 				document.getElementById("subtitle-method" + (i+1)).innerHTML = result.weapons[i].split('|')[0];
 				document.getElementById("subtitle-alt-method" + (i+1)).innerHTML = "";
 				document.getElementById("input_weapon" + (i+1)).value = ", using: " + result.weapons[i].split('|')[0];
@@ -614,13 +614,20 @@ function writeEverything(result) {
 	
 	for(var i = 0; i < MAX_EXTRAS; ++i){ // complications
 		if(i < result.extras.length) {
-			document.getElementById("complication" + (i+1)).innerHTML = 
-				"<div id='comp-image' class='" + result.extras[i].split('|')[0].replace(/\s/g, "") +
-				"'><div id='instruction'><img id='list' src='./img/general/blank.png'><p id='wording'>" + result.extras[i].split('|')[1] +
-				"</p></div><div id='nameplate'><span><p id='title'>Complication</p><p id='subtitle'>" + result.extras[i].split('|')[0] + "</p></span></div></div>";
-			document.getElementById("input_complicationt").value = "\n\nComplications:";
-			document.getElementById("input_complication" + (i+1)).value = "\n● " + result.extras[i].split('|')[0] + " - " + result.extras[i].split('|')[1];
-			//document.getElementById("overlay-complication" + (i+1)).innerHTML = result.extras[i].split('|')[0];
+			if(result.extras[i].split('|')[0] == "One Save Only" && mode == "MAIN" && (container.missionTitle == "Holiday Hoarders" || container.missionTitle == "Hokkaido Snow Festival" || container.missionTitle == "Dartmoor Garden Show" || container.missionTitle == "The Director" || container.missionTitle == "The Enforcer" || container.missionTitle == "The Extractor" || container.missionTitle == "The Veteran" || container.missionTitle == "The Mercenary" || container.missionTitle == "The Controller")) {
+				document.getElementById("complication" + (i+1)).innerHTML = ""; // No saving on HH, HSF, DGS, or the Sarajevo Six
+				document.getElementById("input_complication" + (i+1)).value = "";
+				//document.getElementById("overlay-complication" + (i+1)).innerHTML = "";
+			}
+			else {
+				document.getElementById("complication" + (i+1)).innerHTML = 
+					"<div id='comp-image' class='" + result.extras[i].split('|')[0].replace(/\s/g, "") +
+					"'><div id='instruction'><img id='list' src='./img/general/blank.png'><p id='wording'>" + result.extras[i].split('|')[1] +
+					"</p></div><div id='nameplate'><span><p id='title'>Complication</p><p id='subtitle'>" + result.extras[i].split('|')[0] + "</p></span></div></div>";
+				document.getElementById("input_complicationt").value = "\n\nComplications:";
+				document.getElementById("input_complication" + (i+1)).value = "\n● " + result.extras[i].split('|')[0] + " - " + result.extras[i].split('|')[1];
+				//document.getElementById("overlay-complication" + (i+1)).innerHTML = result.extras[i].split('|')[0];
+			};
 		}
 		else {
 			document.getElementById("complication" + (i+1)).innerHTML = "";
