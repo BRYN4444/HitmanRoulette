@@ -478,7 +478,7 @@ function writeEverything(result) {
 				document.getElementById("subtitle-alt-method" + (i+1)).innerHTML = "";
 				document.getElementById("input_weapon" + (i+1)).value = ", using: Any Method";
 			}
-			else if(result.missionCode == "train" && result.weapons[i].split('|')[1] == "Accident" ) {  // Only Accident Kill on Train 
+			else if(result.missionCode == "train" && (result.weapons[i].split('|')[0] == "Accident" || result.weapons[i].split('|')[1] == "Accident") ) {  // Only Accident Kill on Train 
 				document.getElementById("subtitle-method" + (i+1)).innerHTML = "Dump Off Train";
 				document.getElementById("subtitle-alt-method" + (i+1)).innerHTML = "Accident";
 				document.getElementById("input_weapon" + (i+1)).value = ", using: Dump Off Train (Accident)";
