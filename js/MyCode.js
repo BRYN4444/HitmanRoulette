@@ -400,7 +400,7 @@ $(document).ready(function() {
 		else if($(this).is("#RANDOMH3:not(:checked)")) { // H3 - Off
 			$( "input.h3, input#RANDOM" ).prop('checked', false).parent().parent().removeClass("on");
 		}
-		/*else if($(this).is("#RANDOMH3DLC:checked")) { // H3 Extras - On
+		/* else if($(this).is("#RANDOMH3DLC:checked")) { // H3 Extras - On
 			$( "input.h3dlc" ).prop('checked', true).parent().parent().addClass("on");
 		}
 		else if($(this).is("#RANDOMH3DLC:not(:checked)")) { // H3 Extras - Off
