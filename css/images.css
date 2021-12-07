@@ -1469,11 +1469,13 @@ div[class^="ElusiveTarget"] { background-image: url('../img/targetcon/NPC.jpg');
 
 .OrsonMills-beach { background-image: url('../img/targetcon/OrsonMills.jpg'); }
 .GerardMann-beach { background-image: url('../img/targetcon/GerardMann.jpg'); }
-.ShaneMinette-beach, .PerryFirmin-beach, .JulianRowntree-beach { background-image: url('../img/targetcon/ShaneMinette.jpg'); }
-.DennisElder-beach { background-image: url('../img/targetcon/DennisElder.jpg'); }
+.ShaneMinette-beach, .PerryFirmin-beach { background-image: url('../img/targetcon/ShaneMinette.jpg'); }
+.DennisElder-beach, .NatIvers-beach, .WillIrwin-beach, .EddieWilcox-beach { background-image: url('../img/targetcon/DennisElder.jpg'); }
 .CareyHuxley-beach { background-image: url('../img/targetcon/CareyHuxley.jpg'); }
 .JarvisCorey-beach { background-image: url('../img/targetcon/JarvisCorey.jpg'); }
-.EugeneBurrell-beach, .RogerBooth-beach, .DougShelby-beach, .DeeMorriss-beach, .ValSolomon-beach, .PrestonMorce-beach, .ArchieGilliam-beach, .CliftonWaterman-beach { background-image: url('../img/targetcon/EugeneBurrell.jpg'); }
+.EugeneBurrell-beach, .RogerBooth-beach, .DougShelby-beach, .DeeMorriss-beach, .ValSolomon-beach, .PrestonMorce-beach, .ArchieGilliam-beach, .CliftonWaterman-beach, .DwightNye-beach, .AlecShaw-beach, .CharlieBurke-beach, .KrisMathews-beach, .NeilBunker-beach, .HenryTodd-beach { background-image: url('../img/targetcon/EugeneBurrell.jpg'); }
+.PatThacker-beach, .TheoLinwood-beach { background-image: url('../img/targetcon/PatThacker.jpg'); }
+.JamesEllsworth-beach, .MatthewBowman-beach, .KyleRoscoe-beach, .JulianRowntree-beach { background-image: url('../img/targetcon/JamesEllsworth.jpg'); }
 
 /** Miami **/
 /* The Finish Line */
@@ -1503,7 +1505,7 @@ div[class^="ElusiveTarget"] { background-image: url('../img/targetcon/NPC.jpg');
 .KikoStills-speedway { background-image: url('../img/targetcon/KikoStills.jpg'); }
 .BradEaston-speedway { background-image: url('../img/targetcon/BradEaston.jpg'); }
 .DonaldFede-speedway { background-image: url('../img/targetcon/DonaldFede.jpg'); }
-.AntonieMack-speedway { background-image: url('../img/targetcon/AntonieMack.jpg'); }
+.AntoineMack-speedway { background-image: url('../img/targetcon/AntoineMack.jpg'); }
 .RaphaelBenitez-speedway { background-image: url('../img/targetcon/RaphaelBenitez.jpg'); }
 .AlbertNoah-speedway { background-image: url('../img/targetcon/AlbertNoah.jpg'); }
 .KirstenWillard-speedway, .JunZheng-speedway { background-image: url('../img/targetcon/KirstenWillard.jpg'); }
@@ -1586,7 +1588,7 @@ div[class^="ElusiveTarget"] { background-image: url('../img/targetcon/NPC.jpg');
 .RaulCovasIbarra-cartel { background-image: url('../img/targetcon/RaulCovasIbarra.jpg'); }
 .PabloBenítezFarías-cartel { background-image: url('../img/targetcon/PabloBenítezFarías.jpg'); }
 .WhoukrSerre-cartel { background-image: url('../img/targetcon/WhoukrSerre.jpg'); }
-.HenryCottoEchevarria-cartel { background-image: url('../img/targetcon/HenryCottoEchevarria.jpg'); }
+.HenryCottoEchevarría-cartel { background-image: url('../img/targetcon/HenryCottoEchevarría.jpg'); }
 .CharlesJTaylor-cartel { background-image: url('../img/targetcon/CharlesJTaylor.jpg'); }
 .MateoLunaCovarrubias-cartel { background-image: url('../img/targetcon/MateoLunaCovarrubias.jpg'); }
 .ArgeoRodriguez-cartel { background-image: url('../img/targetcon/ArgeoRodriguez.jpg'); }
@@ -2577,6 +2579,14 @@ div[class^="ElusiveTarget"] { background-image: url('../img/targetcon/NPC.jpg');
 .SmokeOnTheWater { background-image: url('../img/obj/SmokeOnTheWater.png'); }
 .HomeTogether { background-image: url('../img/obj/HomeTogether.png'); }
 .NinjaPreparation { background-image: url('../img/obj/NinjaPreparation.png'); }
+.GrabaSpare { background-image: url('../img/obj/GrabaSpare.png'); }
+
+.OceanByMoonlight { background-image: url('../img/camera/OceanByMoonlight.png'); }
+.Rebroadcast { background-image: url('../img/camera/Rebroadcast.png'); }
+.PoorBastards { background-image: url('../img/camera/PoorBastards.png'); }
+.FishFeature { background-image: url('../img/camera/FishFeature.png'); }
+.SharpDressedMan { background-image: url('../img/camera/SharpDressedMan.png'); }
+.NoAccountingForTaste { background-image: url('../img/camera/NoAccountingForTaste.png'); }
 
 /** Miami **/
 /* The Finish Line */
@@ -2599,10 +2609,32 @@ div[class^="ElusiveTarget"] { background-image: url('../img/targetcon/NPC.jpg');
 .BringaTearToHisEye { background-image: url('../img/obj/BringaTearToHisEye.png'); }
 .SweetTooth { background-image: url('../img/obj/SweetTooth.png'); }
 
+.DolphinFan { background-image: url('../img/camera/DolphinFan.png'); }
+.InHisPrime { background-image: url('../img/camera/InHisPrime.png'); }
+.LastTimeOn { background-image: url('../img/camera/LastTimeOn.png'); }
+.RobotDivision { background-image: url('../img/camera/RobotDivision.png'); }
+.OctaneBooster { background-image: url('../img/camera/OctaneBooster.png'); }
+.Ayakashi20 { background-image: url('../img/camera/Ayakashi20.png'); }
+.KnoxsBaby { background-image: url('../img/camera/KnoxsBaby.png'); }
+.SecretWeapon { background-image: url('../img/camera/SecretWeapon.png'); }
+.FloridaFood { background-image: url('../img/camera/FloridaFood.png'); }
+.AnchorsDown { background-image: url('../img/camera/AnchorsDown.png'); }
+.SecretMeeting { background-image: url('../img/camera/SecretMeeting.png'); }
+.GottaGoFast { background-image: url('../img/camera/GottaGoFast.png'); }
+.FlamingoHotel { background-image: url('../img/camera/FlamingoHotel.png'); }
+.AreYouReadyKids { background-image: url('../img/camera/AreYouReadyKids.png'); }
+.WishYouWereHere { background-image: url('../img/camera/WishYouWereHere.png'); }
+.RememberDuck { background-image: url('../img/camera/RememberDuck.png'); }
+
 /* A Silver Tongue */
 .InCaseOfShortage { background-image: url('../img/obj/In%20Case%20Of%20Shortage.png'); }
 .HeretoRepAtlantide { background-image: url('../img/obj/Here%20to%20Rep%20Atlantide.png'); }
 .AggressiveAdvertising { background-image: url('../img/obj/Aggressive%20Advertising.png'); }
+
+.YouCantTakeItWithYou { background-image: url('../img/camera/YouCantTakeItWithYou.png'); }
+.HashtagBrand { background-image: url('../img/camera/HashtagBrand.png'); }
+.FromSeaToSoul { background-image: url('../img/camera/FromSeaToSoul.png'); }
+.PerfectPitch { background-image: url('../img/camera/PerfectPitch.png'); }
 
 /** Colombia **/
 /* Three-Headed Serpent */
@@ -2627,12 +2659,31 @@ div[class^="ElusiveTarget"] { background-image: url('../img/targetcon/NPC.jpg');
 .ProductionPipeline { background-image: url('../img/obj/ProductionPipeline.png'); }
 .Cupid { background-image: url('../img/obj/Cupid.png'); }
 
+.PartiedHard { background-image: url('../img/camera/PartiedHard.png'); }
+.MissingMember { background-image: url('../img/camera/MissingMember.png'); }
+.PartiedHardest { background-image: url('../img/camera/PartiedHardest.png'); }
+.IllWireThisToYourAccount { background-image: url('../img/camera/IllWireThisToYourAccount.png'); }
+.StuckintheMud { background-image: url('../img/camera/StuckintheMud.png'); }
+.DontCrosstheCartel { background-image: url('../img/camera/DontCrosstheCartel.png'); }
+.SacredGrounds { background-image: url('../img/camera/SacredGrounds.png'); }
+.WhatsBehindDoorNumber47 { background-image: url('../img/camera/WhatsBehindDoorNumber47.png'); }
+.ElMijo { background-image: url('../img/camera/ElMijo.png'); }
+.CocaineParty { background-image: url('../img/camera/CocaineParty.png'); }
+.RicosMachine { background-image: url('../img/camera/RicosMachine.png'); }
+.LikeGoldMuch { background-image: url('../img/camera/LikeGoldMuch.png'); }
+.WaysofMakingYouTalk { background-image: url('../img/camera/WaysofMakingYouTalk.png'); }
+.UnderwaterVentures { background-image: url('../img/camera/UnderwaterVentures.png'); }
+.Ayahuasca { background-image: url('../img/camera/Ayahuasca.png'); }
+
 /* Embrace of the Serpent */
 .TheBlackBook { background-image: url('../img/obj/The%20Black%20Book.png'); }
 .IntelFirst { background-image: url('../img/obj/Intel%20First.png'); }
 .WhataSham { background-image: url('../img/obj/What%20a%20Sham.png'); }
 .SprungTraps { background-image: url('../img/obj/Sprung%20Traps.png'); }
 .FruitBasket { background-image: url('../img/obj/Fruit%20Basket.png'); }
+
+.BlessTheHunt { background-image: url('../img/camera/BlessTheHunt.png'); }
+.ItsaTrap { background-image: url('../img/camera/ItsaTrap.png'); }
 
 /** India **/
 /* Chasing a Ghost */
