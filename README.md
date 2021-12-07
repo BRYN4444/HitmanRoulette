@@ -27,7 +27,7 @@ To quickly return the Roulette Settings back to default, preform a hard refresh 
 
 ## Compatibility & Issues
 
-You can deselect any locations you do not own, but by default the Roulette works best with any edition of **HITMAN III** plus the **Access Pass: HITMAN 1 GOTY Edition** and **Access Pass: HITMAN 2 Gold**. However, there may be the odd conflicting trait that changed between game releases.  It is also important to note that the later the game sequel, the more gear is available to unlock for use. Since Contract Mode Targets are regular NPCs and Elimination Methods are randomly assigned, not every Target can be killed with every Method easily/silently.
+You can deselect any locations you do not own, but by default the Roulette works best with any edition of **HITMAN III** plus the **Access Pass: HITMAN 1 GOTY Edition** and **Access Pass: HITMAN 2 Gold**. However, there may be the odd conflicting trait that changed between past game releases in this trilogy. It is also important to note that the later the game sequel, the more gear is available to unlock for use. Since Contract Mode Targets are regular NPCs and Elimination Methods are randomly assigned, not every Target can be killed with every Method easily/silently.
 
 This was a hobby project I started in 2016/17 and have worked on during my free time as a way to brush up on my simple javascript, jQuery, and CSS knowledge as well as giving me more reason to play these new Hitman games well after unlocking everything. As such, I've only tested this at about a 1080p resolution using the browsers I frequent: Firefox and Chrome. Also I'm sure my additions to the existing code, as well as my own work, could use cleaning up here and there. If you find any issues or glaring conflicts with roulette results, [let me know via GitHub](https://github.com/BRYN4444/HitmanRoulette/issues) and I'll try and address it when I get the chance. - [BRYN](http://bryn.info/)
 
@@ -38,6 +38,34 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 * Stream Overlay mode; A method for streamers to show Objectives and more over the gameplay.
 
 ### Latest Updates:
+
+**December 6, 2021**
+* **Roulette:**
+  * **Select Missions:**
+    * **Default:** With Holiday Hoarders now available in Hitman III, this Seasonal Content Mission is now toggled on by default in the Roulette, like all Hitman III Available Locations.
+* **HITMAN 2:**
+  * **Nightcall:**
+    * **Contracts Mode Targets:** 14 more added. Updated the images of the existing ones with their HITMAN III versions.
+	* **Extra Objectives:** 1 more added.
+    * **Photo Objectives:** 6 added.
+  * **The Finish Line:**
+    * **Contracts Mode Targets:** Updated target images with their HITMAN III versions.
+	* **Extra Objectives:** Readded "Blackmail", based off a challenge that was bugged at HITMAN 3's Launch.
+    * **Photo Objectives:** 16 added.
+  * **A Silver Tongue:**
+    * **Photo Objectives:** 4 added.
+  * **Three-Headed Serpent:**
+    * **Contracts Mode Targets:** Updated target images with their HITMAN III versions.
+    * **Photo Objectives:** 15 added.
+  * **Embrace Of The Serpent:**
+    * **Photo Objectives:** 2 added.
+* **Other Fixes:**
+  * If any Accident Elimination is randomized for the target in Untouchable, the roulette will now specify the only available accident kill. This was only working partially before.
+  * Fixed misspelled Contract Target name in The Finish Line & Three-Headed Serpent.
+* **Current Plans:**
+  * Going through H2 to update Contract Mode Target images and add Photo Objectives. Might add more H2 targets and/or extra objectives afterwards, but I'd like to get these bigger milestones out of the way first.
+
+---
 
 **October 28, 2021**
 * **HITMAN:**
@@ -57,8 +85,6 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
   * A Complication "One Disguise Change" was previously removed due to another Complication, "No Disguise Changes", causing redundancy. It is now coded so that as long as "Specific Disguises" is disabled, one of these two Complications have an equal chance of appearing (rather than the potential of both).
   * The Allow Complications setting was displaying an incorrect value when refreshing/reloading (not hard refreshing/reloading) the page.
   * Removed a few more duplicate Contracts Mode Target images.
-* **Current Plans:**
-  * After a bit of a break, keep going through H2 to add/update Contract Mode Target images and find more Extra/Photo Objectives.
 
 ---
 
@@ -132,16 +158,3 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 * **Other Fixes:**
   * The boxes containing the generated Starting and Exit Locations could stretch if enabled after already using the Roulette with the Force Start/Exit set to Off.
   * Changed the wording for the "No Pacifications" Extra Objective from 'no poisoning' to 'no sedating' to better reflect that emetic poisoning is fine.
-
----
-
-**September 27, 2021**
-* **HITMAN:**
-  * **A Gilded Cage:**
-    * **"Car in the Garage" Exit:** Renamed to "Consulate Car" to better reflect the location.
-    * **Contracts Mode Targets:** 175 more added. Updated the images of the existing ones with their HITMAN III versions.
-    * **Photo Objectives:** 9 added.
-* **Other Fixes:**
-  * Some Roulette Settings were displaying incorrect selections when refreshing/reloading (not hard refreshing/reloading) the page.
-  * Added slightly more text under the "Compatibility & Issues" section of the "About & Help" page. Clarifying elimination possibilities for later sequels and how Contracts Mode may generate challenging Roulettes.
-  * Fixed spelling mistakes throughout Contracts Mode Target Intel for every mission. Also, replaced every mention of "washroom" with "bathroom" for consistency.
