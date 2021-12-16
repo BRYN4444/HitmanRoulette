@@ -6,7 +6,7 @@ Hitman Roulette uses a single cookie to remember your selected theme appearance.
 
 Hitman Roulette generates a set of random guidelines to follow when playing the HITMAN "World of Assassination" trilogy. It randomizes things such as mission entry and exit points, elimination method and worn disguise, generic and mission specific variables, and even targets for Contracts Mode.
 
-[The original Hitman Roulette](https://thekotti.github.io/about.html) (created by [TheKotti](https://twitter.com/TheKotti)) is a more straight forward version that also works with Hitman: Blood Money.
+[The original Hitman Roulette](https://thekotti.github.io/about.html) (created by [TheKotti](https://twitter.com/TheKotti))  is a more straight forward version that supports Hitman (2016), Hitman 2 (2018), and Hitman: Blood Money.
 
 ## How To Use
 
@@ -21,7 +21,7 @@ To quickly return the Roulette Settings back to default, preform a hard refresh 
 ## Special Thanks & External Resources
 * [IO Interactive](https://www.ioi.dk/) for making a great trilogy of games that helped me through some bad days and kept me better occupied here.
 * TheKotti, for his [original Hitman Roulette](https://thekotti.github.io/about.html) that was the code base and inspiration for this spin-off.
-* [Hitman Interactive Maps](http://hitmanmaps.com/) by Winterbird & [Hitmaps](https://www.hitmaps.com/) (formerly Hitman 2 Maps) by mkoch227 for being great tools that aided in my data collection.
+* [Hitman Interactive Maps](http://hitmanmaps.com/) by Winterbird & [Hitmaps](https://www.hitmaps.com/) (formerly Hitman 2 Maps) by Mike Koch for being great tools that aided in my data collection.
 * The tools [jQuery CSS Customizable Scrollbar](https://github.com/gromo/jquery.scrollbar) by gromo & [Event Mouse Wheel](https://www.dte.web.id/2013/02/event-mouse-wheel.html) by Taufik Nurrohman which I used for style and navigation.
 * [Detect Mobile Browsers](http://detectmobilebrowsers.com/) by Chad Smith, which helped in allowing settings descriptions viewable for mobile via touch.
 
@@ -38,6 +38,14 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 * Stream Overlay mode; A method for streamers to show Objectives and more over the gameplay.
 
 ### Latest Updates:
+
+**December 16, 2021**
+* **Roulette:**
+  * **Resolution/Zoom Warning:** Changes have been made to the phrasing and implementation of this warning. It will no longer block access to the Roulette outright. Instead, the warning will display at the top of the page and can be closed out of.
+* **Current Plans:**
+  * Going through H2 to update Contract Mode Target images and add Photo Objectives. Might add more H2 targets and/or extra objectives afterwards, but I'd like to get these bigger milestones out of the way first.
+
+---
 
 **December 6, 2021**
 * **Roulette:**
@@ -62,8 +70,6 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 * **Other Fixes:**
   * If any Accident Elimination is randomized for the target in Untouchable, the roulette will now specify the only available accident kill. This was only working partially before.
   * Fixed misspelled Contract Target name in The Finish Line & Three-Headed Serpent.
-* **Current Plans:**
-  * Going through H2 to update Contract Mode Target images and add Photo Objectives. Might add more H2 targets and/or extra objectives afterwards, but I'd like to get these bigger milestones out of the way first.
 
 ---
 
@@ -138,23 +144,3 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
     * **Photo Objectives:** 9 added.
 * **Other Fixes:**
   * Added a missing image for a Photo Objective in The Showstopper.
-
----
-
-**October 4, 2021**
-* **Roulette:**
-  * **Roulette Settings:**
-    * **Extra Requirements - Force Start/Exit:** The "Secret" option will now allow easter egg exits for Contract Mode. It was originally restricting due to specific easter egg exits being unavailable in Contracts Mode, but work was done to omit these exits for Contract Mode Roulette.
-* **HITMAN:**
-  * **A Gilded Cage:**
-    * **Contracts Mode Targets:** 1 more added.
-  * **A House Built On Sand:**
-    * **Contracts Mode Targets:** 72 more added. Updated the images of the existing ones with their HITMAN III versions.
-    * **Photo Objectives:** 5 added.
-* **HITMAN III:**
-  * Other Small Updates:
-    * **Apex Predator - "Into The Forrest" Exit:** Now only forced when using the Bus Stop entrance outside of Contracta Mode, like it is normally.
-    * **The Farewell - Contract Mode Targets:** Had to remove one possible target, one of the Asado Chefs, because they do not spawn if you use the Dining Area entrance.
-* **Other Fixes:**
-  * The boxes containing the generated Starting and Exit Locations could stretch if enabled after already using the Roulette with the Force Start/Exit set to Off.
-  * Changed the wording for the "No Pacifications" Extra Objective from 'no poisoning' to 'no sedating' to better reflect that emetic poisoning is fine.
