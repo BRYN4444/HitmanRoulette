@@ -37,6 +37,11 @@ $(document).ready(function() {
 	  document.documentElement.style.setProperty('--vh', `${vh}px`);
 	});
 	
+	/******Resolution Warning Bypass******/
+	$(document).on('click', '#closenotice', function() {
+		$( "div#sizewarning" ).remove();
+	});
+	
 	/******Scrollbar******/
 	$('#contract').scrollbar({
 		"scrollx": $('.external-scroll_x1')

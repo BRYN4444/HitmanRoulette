@@ -81,10 +81,6 @@
 		
 		<div id="shadow" class="hidden">
 			<div id="popwrap">
-				<div id="sizewarning">
-					<img id="notice" class="shrink" src="./img/general/blank.png">
-					Sorry, your browsing resolution is too small for Hitman Roulette to manage.
-				</div>
 				<div id="popup">
 					<span id="popup-save">
 						<h1>Export Roulette</h1>
@@ -122,6 +118,12 @@
 				<!--<button id="continue" class="hidden">Continue with Stream Overlay Mode</button>
 				<button id="return" class="hidden">Return to Export Roulette Mode</button>//-->
 			</div>
+		</div>
+		
+		<div id="sizewarning">
+			<img id="notice" class="shrink" src="./img/general/blank.png">
+			Sorry, your browsing resolution or zoom level might be causing issues with Hitman Roulette.
+			<a id="closenotice" href="#">☒ Close</a>
 		</div>
 		
 		<header>
@@ -239,7 +241,7 @@
 						</div>
 						<div id="nameplate">
 							<span>
-								<p id="title">Last Updated: December 6th, 2021</p>
+								<p id="title">Last Updated: December 16th, 2021</p>
 								<p id="subtitle">Roulette Features</p>
 							</span>
 						</div>
@@ -1107,7 +1109,7 @@
 				<div id="credits_submenu" class="wide">
 					<h1>About</h1>
 					<p>Hitman Roulette generates a set of random guidelines to follow when playing the HITMAN "World of Assassination" trilogy. It randomizes things such as mission entry and exit points, elimination method and worn disguise, generic and mission specific variables, and even targets for Contracts Mode.</p>
-					<p><a href="https://thekotti.github.io/about.html" target="_blank">The original Hitman Roulette</a> (created by <a href="https://twitter.com/TheKotti" target="_blank">TheKotti</a>) is a more straight forward version that also works with Hitman: Blood Money.</p>
+					<p><a href="https://thekotti.github.io/about.html" target="_blank">The original Hitman Roulette</a> (created by <a href="https://twitter.com/TheKotti" target="_blank">TheKotti</a>) is a more straight forward version that supports Hitman (2016), Hitman 2 (2018), and Hitman: Blood Money.</p>
 					<h1>How To Use</h1>
 					<p>To initiate a roll of the Roulette, click "Issue Roulette" on the <a id="link_roulette" href="#">main page</a>. Use the Undo or Redo arrow buttons that appear at the top to move between generated Roulettes. Save your Roulette as a Textfile using the "Export Roulette" button, also shown on the main page.</p>
 					<p>Most missions from the trilogy are pulled into the Roulette by default. Through the "<a id="link_missions" href="#">Select Missions</a>" option, you can untoggle any missions you're missing or just the ones you don't like.<br />
@@ -1117,7 +1119,7 @@
 					<ul>
 						<li><a href="https://ioi.dk/" target="_blank">IO Interactive</a> for making a great trilogy of games that helped me through some bad days and kept me better occupied here.</li>
 						<li>TheKotti, for his <a href="https://thekotti.github.io/about.html" target="_blank">original Hitman Roulette</a> that was the code base and inspiration for this spin-off.</li>
-						<li><a href="http://hitmanmaps.com/" target="_blank">Hitman Interactive Maps</a> by Winterbirds & <a href="https://www.hitmaps.com/" target="_blank">Hitmaps</a> (formerly Hitman 2 Maps) by mkoch227 for being great tools that aided in my data collection.</li>
+						<li><a href="http://hitmanmaps.com/" target="_blank">Hitman Interactive Maps</a> by Winterbirds & <a href="https://www.hitmaps.com/" target="_blank">Hitmaps</a> (formerly Hitman 2 Maps) by Mike Koch for being great tools that aided in my data collection.</li>
 						<li><a href="https://github.com/gromo/jquery.scrollbar" target="_target">jQuery CSS Customizable Scrollbar</a> by gromo & <a href="https://www.dte.web.id/2013/02/event-mouse-wheel.html" target="_blank">Event Mouse Wheel</a> by Taufik Nurrohman which I used for style and navigation.</li>
 						<li><a href="http://detectmobilebrowsers.com/" target="_target">Detect Mobile Browsers</a> by Chad Smith, which helped in allowing settings descriptions viewable for mobile via touch.</li>
 					</ul>
