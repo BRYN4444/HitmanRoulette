@@ -439,7 +439,16 @@ var hh = {
 	"Piano Forty Seven|Knock someone out with the piano.",
 	"Fifteen Seconds of Fame|Impersonate Helmut Kruger, walk the catwalk, then meet with Dalia in the Voltaire Suite.",
 	"A Private Meeting|Facilitate the meeting between Max Decker and Viktor Novikov."],
-	photos: ["Not Available|This mission is inaccessible in HITMAN III."]
+	photos: ["Photographic Proof|Take a photo of your target(s) after you've eliminated them, unless their body is unavailable.<br /><br />They must not be in a body bag.",
+	"Tub of Toys|Take a photo of the tub in the Voltaire Suitee bathroom.",
+	"Santa Sighting|Take a photo of the elisive Santa Claus.",
+	"O Christmas Tree|Take a photo of any Christmas Tree inside Palais De Walewska.",
+	"Wine To Be Mulled|Take a photo of the seasonal spread in the Wine Tasting Room.",
+	"That Was Close|Take a photo of one of the burglars believing they're hiding from you.",
+	"No Shirt, No Shoes, Noël|Take a photo of the unnecessarily decorated Locker Room. They painted the lockers for this...",
+	"Crime on Camera|Take a photo of one of the burglars stealing something.",
+	"Looks Like Christmas Eve|Take a photo of the Christmas corner in the Dining Room.",
+	"Deck The Halls|Take a photo of the decorations within the Entrance Hall."]
 };
 var thedirector = {
 	missionTitle: "The Director",

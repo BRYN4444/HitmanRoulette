@@ -2290,6 +2290,16 @@ div[class^="ElusiveTarget"] { background-image: url('../img/targetcon/NPC.jpg');
 .WetBanditsRecruit { background-image: url('../img/obj/Wet%20Bandits%20Recruit.png'); }
 .WetBanditsVeteran { background-image: url('../img/obj/Wet%20Bandits%20Veteran.png'); }
 
+.TubofToys { background-image: url('../img/camera/TubofToys.png'); }
+.SantaSighting { background-image: url('../img/camera/SantaSighting.png'); }
+.OChristmasTree { background-image: url('../img/camera/OChristmasTree.png'); }
+.WineToBeMulled { background-image: url('../img/camera/WineToBeMulled.png'); }
+.ThatWasClose { background-image: url('../img/camera/ThatWasClose.png'); }
+.NoShirtNoShoesNoël { background-image: url('../img/camera/NoShirtNoShoesNoël.png'); }
+.CrimeonCamera { background-image: url('../img/camera/CrimeonCamera.png'); }
+.LooksLikeChristmasEve { background-image: url('../img/camera/LooksLikeChristmasEve.png'); }
+.DeckTheHalls { background-image: url('../img/camera/DeckTheHalls.png'); }
+
 /** Sapienza **/
 /* World of Tomorrow */
 .LadiesFirst { background-image: url('../img/obj/Ladies%20First.png'); }
