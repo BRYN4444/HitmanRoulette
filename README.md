@@ -31,19 +31,20 @@ You can deselect any locations you do not own, but by default the Roulette works
 
 This was a hobby project I started in 2016/17 and have worked on during my free time as a way to brush up on my simple javascript, jQuery, and CSS knowledge as well as giving me more reason to play these new Hitman games well after unlocking everything. As such, I've only tested this at about a 1080p resolution using the browsers I frequent: Firefox and Chrome. Also I'm sure my additions to the existing code, as well as my own work, could use cleaning up here and there. If you find any issues or glaring conflicts with roulette results, [let me know via GitHub](https://github.com/BRYN4444/HitmanRoulette/issues) and I'll try and address it when I get the chance. - [BRYN](http://bryn.info/)
 
-### To-Do List / Wishlist:
-* "Photo Objectives" for HITMAN & HITMAN 2 missions.
-* More Contracts Mode Targets for HITMAN missions with updated HITMAN III images to match.
-* More "Extra Objectives" for late-campaign HITMAN 2 & HITMAN III.
-* Stream Overlay mode; A method for streamers to show Objectives and more over the gameplay.
-
 ### Latest Updates:
+
+**December 18, 2021**
+* **HITMAN:**
+  * **Holiday Hoarders:**
+    * **Photo Objectives:** 9 added. (Been very IRL busy, but wanted to get these out before Christmas.)
+* **Current Plans:**
+  * Going through H2 to update Contract Mode Target images and add Photo Objectives. Might add more H2 targets and/or extra objectives afterwards, but I'd like to get these bigger milestones out of the way first.
+  
+---
 
 **December 16, 2021**
 * **Roulette:**
   * **Resolution/Zoom Warning:** Changes have been made to the phrasing and implementation of this warning. It will no longer block access to the Roulette outright. Instead, the warning will display at the top of the page and can be closed out of.
-* **Current Plans:**
-  * Going through H2 to update Contract Mode Target images and add Photo Objectives. Might add more H2 targets and/or extra objectives afterwards, but I'd like to get these bigger milestones out of the way first.
 
 ---
 
@@ -129,18 +130,3 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
   * If you have Forced Difficulty set to "H1" but randomize a HITMAN 2/III map, the box generated will warn you about this.
   * Fixed misspelled Contract Target names in Club 27, as well as a parse error.
   * Fixed a cosmetic issue where the Hitman Campaign Mission Grouping under Selected Missions was displaying as unselected when Forced Difficulty was set to H1.
-
----
-
-**October 11, 2021**
-* **HITMAN:**
-  * **World of Tomorrow:**
-    * **Extra Objectives:** 1 more added.
-  * **The Extractor:**
-    * **Extra Objectives:** 1 added.
-  * **Club 27:**
-    * **Contracts Mode Targets:** 168 more added. Updated the images of the existing ones with their HITMAN III versions.
-    * **Extra Objectives:** 1 added.
-    * **Photo Objectives:** 9 added.
-* **Other Fixes:**
-  * Added a missing image for a Photo Objective in The Showstopper.
