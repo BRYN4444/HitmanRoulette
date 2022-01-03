@@ -33,12 +33,60 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 
 ### Latest Updates:
 
+**January 3, 2022**
+* **Roulette:**
+  * **Select Missions:**
+    * **Default:** With the Hokkaido Snow Festival now available in Hitman III, this Seasonal Content Mission is now toggled on by default in the Roulette, like all Hitman III Available Locations.
+	* **Phrasing:** The "Toggle All" option is renamed from "H3 Accessable Locations" to "All Locations (Default)" now that every prior game mission is available within Hitman III.
+  * **Image File Formats:** For better browser compatability, all .WEBP files have been changed to .JPG files.
+* **HITMAN:**
+  * **Holiday Hoarders:**
+    * **Photo Objectives:** 1 more added.
+	* **Elimination Method:** The "Xmas Star" Lethal Melee item isn't available in the Hitman 1 version of Holiday Hoarders. Special text will now state any Lethal Throw or Melee weapon is allowed using the Roulette for Hitman 1.
+  * **Hokkaido Snow Festival:**
+    * **Select Mission Image:** Updated to match Hitman III.
+    * **Photo Objectives:** 5 added.
+* **HITMAN 2:**
+  * **Chasing a Ghost:**
+    * **Contracts Mode Targets:** Updated the images of the existing ones with their HITMAN III versions.
+    * **Photo Objectives:** 12 added.
+  * **Illusions of Grandeur:**
+    * **Photo Objectives:** 2 added.
+  * **Another Life:**
+    * **Contracts Mode Targets:** Updated target images with their HITMAN III versions.
+    * **Photo Objectives:** 11 added.
+  * **A Bitter Pill:**
+    * **Photo Objectives:** 2 added.
+  * **The Ark Society:**
+    * **Contracts Mode Targets:** Updated target images with their HITMAN III versions.
+	* **Extra Objectives:** 1 more added.
+    * **Photo Objectives:** 13 added.
+  * **Golden Handshake:**
+    * **Contracts Mode Targets:** Updated target images with their HITMAN III versions.
+	* **Extra Objectives:** 1 more added.
+    * **Photo Objectives:** 10 added.
+  * **The Last Resort:**
+    * **Contracts Mode Targets:** 1 more added. Updated target images with their HITMAN III versions.
+    * **Photo Objectives:** 12 added.
+* **HITMAN III:**
+  * **On Top Of The World:**
+    * **Photo Objectives:** 4 more added.
+  * **The Farewell:**
+  	* **Restored Exit:** "Tango With Diana" Exit. Only appears in Mission Mode Roulette, as eliminating Contract Mode Targets do not enable it.
+  	* **Added Exit:** "Shrine" Easter Egg Exit. Only appears for Suit Starting Locations.
+    * **Starting Location:** The Parking Lot starting location was using the incorrect image.
+* **Other Fixes:**
+  * Updated some Intel for a handful of Contract Mode Targets in Hitman 2 missions.
+  * Two Contract Mode Targets in The Arc Society had their names accidentally swapped with each other.
+* **Current Plans:**
+  * Happy new year! I'm mostly waiting on Hitman III's upcoming Year 2 plans to see what missions might be added to the Roulette.
+
+---
+
 **December 18, 2021**
 * **HITMAN:**
   * **Holiday Hoarders:**
     * **Photo Objectives:** 9 added. (Been very IRL busy, but wanted to get these out before Christmas.)
-* **Current Plans:**
-  * Going through H2 to update Contract Mode Target images and add Photo Objectives. Might add more H2 targets and/or extra objectives afterwards, but I'd like to get these bigger milestones out of the way first.
   
 ---
 
@@ -109,24 +157,3 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 * **Other Fixes:**
   * Fixed a wrong image file type made for an Extra Objective in The Source.
   * Some melee weapons in Another Life are hidden using obscure eater eggs. Hints to obtain them are shown, but were not working in a few instances. This is fixed.
-
----
-
-**October 14, 2021**
-* **HITMAN:**
-  * **Club 27:**
-    * **"Speedboat" Exit:** When selecting "H1" as the Forced Difficulty, the key will now list Professional as needed instead of Master. The image used is also modified.
-	* **"Tuk-Tuk" Exit:**Updated the image to better match the same exit in The Source.
-    * **Contracts Mode Targets:** 8 more added, as well as fixing a few missing Contract Target images.
-  * **The Source:**
-    * **Exits:** 1 added. Apparently I just missed adding the Tuk-Tuk exit to this mission for some reason...
-    * **Contracts Mode Targets:** 127 more added. Updated the images of the existing ones with their HITMAN III versions.
-    * **Extra Objectives:** 1 more added.
-    * **Photo Objectives:** 6 added.
-* **HITMAN 2:**
-  * Other Small Updates:
-    * **Golden Handshake - "Director's Exit":** Specified the need for a "CEO Exit Keycard" rather than just a key.
-* **Other Fixes:**
-  * If you have Forced Difficulty set to "H1" but randomize a HITMAN 2/III map, the box generated will warn you about this.
-  * Fixed misspelled Contract Target names in Club 27, as well as a parse error.
-  * Fixed a cosmetic issue where the Hitman Campaign Mission Grouping under Selected Missions was displaying as unselected when Forced Difficulty was set to H1.
