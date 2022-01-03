@@ -1,7 +1,7 @@
 #rand-all { background-image:url("../img/general/hx.jpg"); }
-.rand-h1 { background-image:url("../img/general/h1.webp");background-repeat:no-repeat;background-position:top center; background-size:auto 100% !important; }
-.rand-h2 { background-image:url("../img/general/h2.webp");background-repeat:no-repeat;background-position:top center; background-size:auto 100% !important; }
-.rand-h3 { background-image:url("../img/general/h3.webp");background-repeat:no-repeat;background-position:top center; background-size:auto 100% !important; }
+.rand-h1 { background-image:url("../img/general/h1.jpg");background-repeat:no-repeat;background-position:top center; background-size:auto 100% !important; }
+.rand-h2 { background-image:url("../img/general/h2.jpg");background-repeat:no-repeat;background-position:top center; background-size:auto 100% !important; }
+.rand-h3 { background-image:url("../img/general/h3.jpg");background-repeat:no-repeat;background-position:top center; background-size:auto 100% !important; }
 .rand-h1bm { background-image:url("../img/general/h1bm.jpg");background-repeat:no-repeat;background-position:top center; }
 .rand-h1pz { background-image:url("../img/general/h1pz.jpg");background-repeat:no-repeat;background-position:top center; }
 .rand-hsc { background-image:url("../img/general/hsc.jpg");background-repeat:no-repeat;background-position:top center; }
@@ -51,40 +51,40 @@
 .m20-1 { background:#292929 url("../img/missions/20-1.png") no-repeat center top / 350px; }
 
 /*** Backgrounds ***/
-.training, .test { background-image:var(--missionbggradient), url('../img/missions/ica-facility.webp'); filter:var(--missionbgfilter); -webkit-filter:var(--missionbgfilter); -moz-filter:var(--missionbgfilter); }
-.fashion, .director { background-image:var(--missionbggradient), url('../img/missions/paris.webp'); filter:var(--missionbgfilter); -webkit-filter:var(--missionbgfilter); -moz-filter:var(--missionbgfilter); }
-.xmas { background-image:var(--missionbggradient), url('../img/missions/paris-hh.webp'); filter:var(--missionbgfilter); -webkit-filter:var(--missionbgfilter); -moz-filter:var(--missionbgfilter); }
-.virus, .enforcer { background-image:var(--missionbggradient), url('../img/missions/sapienza.webp'); filter:var(--missionbgfilter); -webkit-filter:var(--missionbgfilter); -moz-filter:var(--missionbgfilter); }
-.movie { background-image:var(--missionbggradient), url('../img/missions/sapienza-icon.webp'); filter:var(--missionbgfilter); -webkit-filter:var(--missionbgfilter); -moz-filter:var(--missionbgfilter); }
-.election { background-image:var(--missionbggradient), url('../img/missions/sapienza-landslide.webp'); filter:var(--missionbgfilter); -webkit-filter:var(--missionbgfilter); -moz-filter:var(--missionbgfilter); }
-.handoff { background-image:var(--missionbggradient), url('../img/missions/sapienza-author.webp'); filter:var(--missionbgfilter); -webkit-filter:var(--missionbgfilter); -moz-filter:var(--missionbgfilter); }
-.tension, .extractor { background-image:var(--missionbggradient), url('../img/missions/marrakesh.webp'); filter:var(--missionbgfilter); -webkit-filter:var(--missionbgfilter); -moz-filter:var(--missionbgfilter); }
-.construction { background-image:var(--missionbggradient), url('../img/missions/marrakesh-ahbos.webp'); filter:var(--missionbgfilter); -webkit-filter:var(--missionbgfilter); -moz-filter:var(--missionbgfilter); }
-.birthday, .veteran { background-image:var(--missionbggradient), url('../img/missions/bangkok.webp'); filter:var(--missionbgfilter); -webkit-filter:var(--missionbgfilter); -moz-filter:var(--missionbgfilter); }
-.cult { background-image:var(--missionbggradient), url('../img/missions/bangkok-source.webp'); filter:var(--missionbgfilter); -webkit-filter:var(--missionbgfilter); -moz-filter:var(--missionbgfilter); }
-.terrorists, .mercenary { background-image:var(--missionbggradient), url('../img/missions/colorado.webp'); filter:var(--missionbgfilter); -webkit-filter:var(--missionbgfilter); -moz-filter:var(--missionbgfilter); }
-.heart, .controller { background-image:var(--missionbggradient), url('../img/missions/hokkaido.webp'); filter:var(--missionbgfilter); -webkit-filter:var(--missionbgfilter); -moz-filter:var(--missionbgfilter); }
-.spread { background-image:var(--missionbggradient), url('../img/missions/hokkaido-pz.webp'); filter:var(--missionbgfilter); -webkit-filter:var(--missionbgfilter); -moz-filter:var(--missionbgfilter); }
-.festival { background-image:var(--missionbggradient), url('../img/missions/hokkaido-sf.webp'); filter:var(--missionbgfilter); -webkit-filter:var(--missionbgfilter); -moz-filter:var(--missionbgfilter); }
-.beach { background-image:var(--missionbggradient), url('../img/missions/hawkes-bay.webp'); filter:var(--missionbgfilter); -webkit-filter:var(--missionbgfilter); -moz-filter:var(--missionbgfilter); }
-.speedway { background-image:var(--missionbggradient), url('../img/missions/miami.webp'); filter:var(--missionbgfilter); -webkit-filter:var(--missionbgfilter); -moz-filter:var(--missionbgfilter); }
-.water { background-image:var(--missionbggradient), url('../img/missions/miami-sa.webp'); filter:var(--missionbgfilter); -webkit-filter:var(--missionbgfilter); -moz-filter:var(--missionbgfilter); }
-.cartel { background-image:var(--missionbggradient), url('../img/missions/santa-fortuna.webp'); filter:var(--missionbgfilter); -webkit-filter:var(--missionbgfilter); -moz-filter:var(--missionbgfilter); }
-.biggame { background-image:var(--missionbggradient), url('../img/missions/santa-fortuna-sa.webp'); filter:var(--missionbgfilter); -webkit-filter:var(--missionbgfilter); -moz-filter:var(--missionbgfilter); }
-.ghost { background-image:var(--missionbggradient), url('../img/missions/mumbai.webp'); filter:var(--missionbgfilter); -webkit-filter:var(--missionbgfilter); -moz-filter:var(--missionbgfilter); }
-.magic { background-image:var(--missionbggradient), url('../img/missions/mumbai-sa.webp'); filter:var(--missionbgfilter); -webkit-filter:var(--missionbgfilter); -moz-filter:var(--missionbgfilter); }
-.suburbs { background-image:var(--missionbggradient), url('../img/missions/whittleton-creek.webp'); filter:var(--missionbgfilter); -webkit-filter:var(--missionbgfilter); -moz-filter:var(--missionbgfilter); }
-.pill { background-image:var(--missionbggradient), url('../img/missions/whittleton-creek-sa.webp'); filter:var(--missionbgfilter); -webkit-filter:var(--missionbgfilter); -moz-filter:var(--missionbgfilter); }
-.ark { background-image:var(--missionbggradient), url('../img/missions/isle-of-sgail.webp'); filter:var(--missionbgfilter); -webkit-filter:var(--missionbgfilter); -moz-filter:var(--missionbgfilter); }
-.bank { background-image:var(--missionbggradient), url('../img/missions/new-york.webp'); filter:var(--missionbgfilter); -webkit-filter:var(--missionbgfilter); -moz-filter:var(--missionbgfilter); }
-.resort { background-image:var(--missionbggradient), url('../img/missions/haven-island.webp'); filter:var(--missionbgfilter); -webkit-filter:var(--missionbgfilter); -moz-filter:var(--missionbgfilter); }
-.tower { background-image:var(--missionbggradient), url('../img/missions/dubai.webp'); filter:var(--missionbgfilter); -webkit-filter:var(--missionbgfilter); -moz-filter:var(--missionbgfilter); }
-.clue { background-image:var(--missionbggradient), url('../img/missions/dartmoor.webp'); filter:var(--missionbgfilter); -webkit-filter:var(--missionbgfilter); -moz-filter:var(--missionbgfilter); }
-.gardenshow { background-image:var(--missionbggradient), url('../img/missions/dartmoor-gs.webp'); filter:var(--missionbgfilter); -webkit-filter:var(--missionbgfilter); -moz-filter:var(--missionbgfilter); }
-.club { background-image:var(--missionbggradient), url('../img/missions/berlin.webp'); filter:var(--missionbgfilter); -webkit-filter:var(--missionbgfilter); -moz-filter:var(--missionbgfilter); }
-.archive { background-image:var(--missionbggradient), url('../img/missions/chongqing.webp'); filter:var(--missionbgfilter); -webkit-filter:var(--missionbgfilter); -moz-filter:var(--missionbgfilter); }
-.vineyard { background-image:var(--missionbggradient), url('../img/missions/mendoza.webp'); filter:var(--missionbgfilter); -webkit-filter:var(--missionbgfilter); -moz-filter:var(--missionbgfilter); }
-.train{ background-image:var(--missionbggradient), url('../img/missions/romania.webp'); filter:var(--missionbgfilter); -webkit-filter:var(--missionbgfilter); -moz-filter:var(--missionbgfilter); }
+.training, .test { background-image:var(--missionbggradient), url('../img/missions/ica-facility.jpg'); filter:var(--missionbgfilter); -webkit-filter:var(--missionbgfilter); -moz-filter:var(--missionbgfilter); }
+.fashion, .director { background-image:var(--missionbggradient), url('../img/missions/paris.jpg'); filter:var(--missionbgfilter); -webkit-filter:var(--missionbgfilter); -moz-filter:var(--missionbgfilter); }
+.xmas { background-image:var(--missionbggradient), url('../img/missions/paris-hh.jpg'); filter:var(--missionbgfilter); -webkit-filter:var(--missionbgfilter); -moz-filter:var(--missionbgfilter); }
+.virus, .enforcer { background-image:var(--missionbggradient), url('../img/missions/sapienza.jpg'); filter:var(--missionbgfilter); -webkit-filter:var(--missionbgfilter); -moz-filter:var(--missionbgfilter); }
+.movie { background-image:var(--missionbggradient), url('../img/missions/sapienza-icon.jpg'); filter:var(--missionbgfilter); -webkit-filter:var(--missionbgfilter); -moz-filter:var(--missionbgfilter); }
+.election { background-image:var(--missionbggradient), url('../img/missions/sapienza-landslide.jpg'); filter:var(--missionbgfilter); -webkit-filter:var(--missionbgfilter); -moz-filter:var(--missionbgfilter); }
+.handoff { background-image:var(--missionbggradient), url('../img/missions/sapienza-author.jpg'); filter:var(--missionbgfilter); -webkit-filter:var(--missionbgfilter); -moz-filter:var(--missionbgfilter); }
+.tension, .extractor { background-image:var(--missionbggradient), url('../img/missions/marrakesh.jpg'); filter:var(--missionbgfilter); -webkit-filter:var(--missionbgfilter); -moz-filter:var(--missionbgfilter); }
+.construction { background-image:var(--missionbggradient), url('../img/missions/marrakesh-ahbos.jpg'); filter:var(--missionbgfilter); -webkit-filter:var(--missionbgfilter); -moz-filter:var(--missionbgfilter); }
+.birthday, .veteran { background-image:var(--missionbggradient), url('../img/missions/bangkok.jpg'); filter:var(--missionbgfilter); -webkit-filter:var(--missionbgfilter); -moz-filter:var(--missionbgfilter); }
+.cult { background-image:var(--missionbggradient), url('../img/missions/bangkok-source.jpg'); filter:var(--missionbgfilter); -webkit-filter:var(--missionbgfilter); -moz-filter:var(--missionbgfilter); }
+.terrorists, .mercenary { background-image:var(--missionbggradient), url('../img/missions/colorado.jpg'); filter:var(--missionbgfilter); -webkit-filter:var(--missionbgfilter); -moz-filter:var(--missionbgfilter); }
+.heart, .controller { background-image:var(--missionbggradient), url('../img/missions/hokkaido.jpg'); filter:var(--missionbgfilter); -webkit-filter:var(--missionbgfilter); -moz-filter:var(--missionbgfilter); }
+.spread { background-image:var(--missionbggradient), url('../img/missions/hokkaido-pz.jpg'); filter:var(--missionbgfilter); -webkit-filter:var(--missionbgfilter); -moz-filter:var(--missionbgfilter); }
+.festival { background-image:var(--missionbggradient), url('../img/missions/hokkaido-sf.jpg'); filter:var(--missionbgfilter); -webkit-filter:var(--missionbgfilter); -moz-filter:var(--missionbgfilter); }
+.beach { background-image:var(--missionbggradient), url('../img/missions/hawkes-bay.jpg'); filter:var(--missionbgfilter); -webkit-filter:var(--missionbgfilter); -moz-filter:var(--missionbgfilter); }
+.speedway { background-image:var(--missionbggradient), url('../img/missions/miami.jpg'); filter:var(--missionbgfilter); -webkit-filter:var(--missionbgfilter); -moz-filter:var(--missionbgfilter); }
+.water { background-image:var(--missionbggradient), url('../img/missions/miami-sa.jpg'); filter:var(--missionbgfilter); -webkit-filter:var(--missionbgfilter); -moz-filter:var(--missionbgfilter); }
+.cartel { background-image:var(--missionbggradient), url('../img/missions/santa-fortuna.jpg'); filter:var(--missionbgfilter); -webkit-filter:var(--missionbgfilter); -moz-filter:var(--missionbgfilter); }
+.biggame { background-image:var(--missionbggradient), url('../img/missions/santa-fortuna-sa.jpg'); filter:var(--missionbgfilter); -webkit-filter:var(--missionbgfilter); -moz-filter:var(--missionbgfilter); }
+.ghost { background-image:var(--missionbggradient), url('../img/missions/mumbai.jpg'); filter:var(--missionbgfilter); -webkit-filter:var(--missionbgfilter); -moz-filter:var(--missionbgfilter); }
+.magic { background-image:var(--missionbggradient), url('../img/missions/mumbai-sa.jpg'); filter:var(--missionbgfilter); -webkit-filter:var(--missionbgfilter); -moz-filter:var(--missionbgfilter); }
+.suburbs { background-image:var(--missionbggradient), url('../img/missions/whittleton-creek.jpg'); filter:var(--missionbgfilter); -webkit-filter:var(--missionbgfilter); -moz-filter:var(--missionbgfilter); }
+.pill { background-image:var(--missionbggradient), url('../img/missions/whittleton-creek-sa.jpg'); filter:var(--missionbgfilter); -webkit-filter:var(--missionbgfilter); -moz-filter:var(--missionbgfilter); }
+.ark { background-image:var(--missionbggradient), url('../img/missions/isle-of-sgail.jpg'); filter:var(--missionbgfilter); -webkit-filter:var(--missionbgfilter); -moz-filter:var(--missionbgfilter); }
+.bank { background-image:var(--missionbggradient), url('../img/missions/new-york.jpg'); filter:var(--missionbgfilter); -webkit-filter:var(--missionbgfilter); -moz-filter:var(--missionbgfilter); }
+.resort { background-image:var(--missionbggradient), url('../img/missions/haven-island.jpg'); filter:var(--missionbgfilter); -webkit-filter:var(--missionbgfilter); -moz-filter:var(--missionbgfilter); }
+.tower { background-image:var(--missionbggradient), url('../img/missions/dubai.jpg'); filter:var(--missionbgfilter); -webkit-filter:var(--missionbgfilter); -moz-filter:var(--missionbgfilter); }
+.clue { background-image:var(--missionbggradient), url('../img/missions/dartmoor.jpg'); filter:var(--missionbgfilter); -webkit-filter:var(--missionbgfilter); -moz-filter:var(--missionbgfilter); }
+.gardenshow { background-image:var(--missionbggradient), url('../img/missions/dartmoor-gs.jpg'); filter:var(--missionbgfilter); -webkit-filter:var(--missionbgfilter); -moz-filter:var(--missionbgfilter); }
+.club { background-image:var(--missionbggradient), url('../img/missions/berlin.jpg'); filter:var(--missionbgfilter); -webkit-filter:var(--missionbgfilter); -moz-filter:var(--missionbgfilter); }
+.archive { background-image:var(--missionbggradient), url('../img/missions/chongqing.jpg'); filter:var(--missionbgfilter); -webkit-filter:var(--missionbgfilter); -moz-filter:var(--missionbgfilter); }
+.vineyard { background-image:var(--missionbggradient), url('../img/missions/mendoza.jpg'); filter:var(--missionbgfilter); -webkit-filter:var(--missionbgfilter); -moz-filter:var(--missionbgfilter); }
+.train{ background-image:var(--missionbggradient), url('../img/missions/romania.jpg'); filter:var(--missionbgfilter); -webkit-filter:var(--missionbgfilter); -moz-filter:var(--missionbgfilter); }
 
 /***** Starting Locations *****/
 .any-start { background-image: url('../img/entry/Any.png'); }
@@ -248,7 +248,7 @@
 .archive-start-RiverSideWalkway { background-image: url('../img/entry/RiverSideWalkway.png'); }
 .archive-start-FacilityLockerRoom { background-image: url('../img/entry/FacilityLockerRoom.png'); }
 .vineyard-start-WineryViewpoint { background-image: url('../img/entry/WineryViewpoint.png'); }
-.vineyard-start-ParkingLot { background-image: url('../img/entry/Penthouse.png'); }
+.vineyard-start-ParkingLot { background-image: url('../img/entry/ParkingLot.png'); }
 .vineyard-start-Vineyard { background-image: url('../img/entry/Vineyard.png'); }
 .vineyard-start-TastingRoom { background-image: url('../img/entry/TastingRoom.png'); }
 .vineyard-start-SniperSpot { background-image: url('../img/entry/SniperSpot.png'); }
@@ -413,6 +413,7 @@
 .vineyard-exit-Boat { background-image: url('../img/exit/Boat-TheFarewell.png'); }
 .vineyard-exit-UndergroundCaveSystem { background-image: url('../img/exit/UndergroundCaveSystem.png'); }
 .vineyard-exit-DonYatesCar { background-image: url('../img/exit/DonYatesCar.png'); }
+.vineyard-exit-Shrine { background-image: url('../img/exit/Shrine.png'); }
 .train-exit-StopTrain { background-image: url('../img/exit/StopTrain.png'); }
 .train-exit-TakeSerum { background-image: url('../img/exit/TakeSerum.png'); }
 
@@ -1760,7 +1761,7 @@ div[class^="ElusiveTarget"] { background-image: url('../img/targetcon/NPC.jpg');
 .ElvisLankford-bank, .JosueFederico-bank { background-image: url('../img/targetcon/ElvisLankford.jpg'); }
 .Roy-bank { background-image: url('../img/targetcon/Roy.jpg'); }
 .Joss-bank { background-image: url('../img/targetcon/Joss.jpg'); }
-.JulianneCarson-bank { background-image: url('../img/targetcon/JulianneCarson.jpg'); }
+.JulianneCason-bank { background-image: url('../img/targetcon/JulianneCason.jpg'); }
 .TannerGodley-bank, .MiltonLaprade-bank { background-image: url('../img/targetcon/TannerGodley.jpg'); }
 .RayPoyner-bank { background-image: url('../img/targetcon/RayPoyner.jpg'); }
 .SebastianMattson-bank { background-image: url('../img/targetcon/SebastianMattson.jpg'); }
@@ -1832,6 +1833,7 @@ div[class^="ElusiveTarget"] { background-image: url('../img/targetcon/NPC.jpg');
 .BobSchwab-resort { background-image: url('../img/targetcon/BobSchwab.jpg'); }
 .JimMurphy-resort { background-image: url('../img/targetcon/JimMurphy.jpg'); }
 .AdamCrest-resort { background-image: url('../img/targetcon/AdamCrest.jpg'); }
+.KayeZahn-resort { background-image: url('../img/targetcon/KayeZahn-Resort.jpg'); }
 
 /** Dubai **/
 /* On Top Of The World */
@@ -2299,6 +2301,7 @@ div[class^="ElusiveTarget"] { background-image: url('../img/targetcon/NPC.jpg');
 .CrimeonCamera { background-image: url('../img/camera/CrimeonCamera.png'); }
 .LooksLikeChristmasEve { background-image: url('../img/camera/LooksLikeChristmasEve.png'); }
 .DeckTheHalls { background-image: url('../img/camera/DeckTheHalls.png'); }
+.GetDown { background-image: url('../img/camera/GetDown.png'); }
 
 /** Sapienza **/
 /* World of Tomorrow */
@@ -2577,6 +2580,12 @@ div[class^="ElusiveTarget"] { background-image: url('../img/targetcon/NPC.jpg');
 .IceIceBaby { background-image: url('../img/obj/Ice%20Ice%20Baby.png'); }
 .LetItSnow { background-image: url('../img/obj/Let%20It%20Snow.png'); }
 
+.ItsNotEasyBeingGreen { background-image: url('../img/camera/ItsNotEasyBeingGreen.png'); }
+.KingoftheJingle { background-image: url('../img/camera/KingoftheJingle.png'); }
+.CalmColdandCollected { background-image: url('../img/camera/CalmColdandCollected.png'); }
+.Abominable { background-image: url('../img/camera/Abominable.png'); }
+.SnoWayJosé { background-image: url('../img/camera/SnoWayJosé.png'); }
+
 /* The Controller */
 .AgainstRecommendations { background-image: url('../img/obj/AgainstRecommendations.png'); }
 
@@ -2714,9 +2723,25 @@ div[class^="ElusiveTarget"] { background-image: url('../img/targetcon/NPC.jpg');
 .NotintheScript { background-image: url('../img/obj/NotintheScript.png'); }
 .SmashingBaby { background-image: url('../img/obj/SmashingBaby.png'); }
 
+.HardlyaRival { background-image: url('../img/camera/HardlyaRival.png'); }
+.NotSoSecretPlan { background-image: url('../img/camera/NotSoSecretPlan.png'); }
+.MumbaiHero { background-image: url('../img/camera/MumbaiHero.png'); }
+.HappyLittleAccident { background-image: url('../img/camera/HappyLittleAccident.png'); }
+.DawoodFanatic { background-image: url('../img/camera/DawoodFanatic.png'); }
+.QuietOnSet { background-image: url('../img/camera/QuietOnSet.png'); }
+.BehindTheShots { background-image: url('../img/camera/BehindTheShots.png'); }
+.QueenOnHerThrone { background-image: url('../img/camera/QueenOnHerThrone.png'); }
+.LaundryLabor { background-image: url('../img/camera/LaundryLabor.png'); }
+.DreamingOfHair47 { background-image: url('../img/camera/DreamingOfHair47.png'); }
+.TheyreTheCrowsGetIt { background-image: url('../img/camera/TheyreTheCrowsGetIt.png'); }
+.Recursive { background-image: url('../img/camera/Recursive.png'); }
+
 /* Illusions of Grandeur */
 .WrongPersonToAsk { background-image: url('../img/obj/Wrong%20Person%20To%20Ask.png'); }
 .FreeTea { background-image: url('../img/obj/FreeTea.png'); }
+
+.DanceForMe { background-image: url('../img/camera/DanceForMe.png'); }
+.SmokersAreJokers { background-image: url('../img/camera/SmokersAreJokers.png'); }
 
 /** Whittleton Creek **/
 /* Another Life */
@@ -2745,10 +2770,25 @@ div[class^="ElusiveTarget"] { background-image: url('../img/targetcon/NPC.jpg');
 .BakeSale { background-image: url('../img/obj/BakeSale.png'); }
 .PoptheHydrants { background-image: url('../img/obj/PoptheHydrants.png'); }
 
+.PhotoOpCharlesBlakeIII { background-image: url('../img/camera/PhotoOpCharlesBlakeIII.png'); }
+.AnAddiction { background-image: url('../img/camera/AnAddiction.png'); }
+.SerialBaker { background-image: url('../img/camera/SerialBaker.png'); }
+.EgoAsBigAsHisPainting { background-image: url('../img/camera/EgoAsBigAsHisPainting.png'); }
+.LetTheMusicPlay { background-image: url('../img/camera/LetTheMusicPlay.png'); }
+.InHonorofWest { background-image: url('../img/camera/InHonorofWest.png'); }
+.UnlockedVault { background-image: url('../img/camera/UnlockedVault.png'); }
+.BatchelorPad { background-image: url('../img/camera/BatchelorPad.png'); }
+.SmashandGrab { background-image: url('../img/camera/SmashandGrab.png'); }
+.MoreThanFanFiction { background-image: url('../img/camera/MoreThanFanFiction.png'); }
+.GrowOp { background-image: url('../img/camera/GrowOp.png'); }
+
 /* A Bitter Pill */
 .CellarDoor { background-image: url('../img/obj/Cellar%20Door.png'); }
 .Letterboxed { background-image: url('../img/obj/Letterboxed.png'); }
 .SecondOpinion { background-image: url('../img/obj/Second%20Opinion.png'); }
+
+.MaleFraud { background-image: url('../img/camera/MaleFraud.png'); }
+.TopOfThePyramid { background-image: url('../img/camera/TopOfThePyramid.png'); }
 
 /** North Atlantic **/
 /* The Ark Society */
@@ -2768,6 +2808,21 @@ div[class^="ElusiveTarget"] { background-image: url('../img/targetcon/NPC.jpg');
 .APainInTheNeck { background-image: url('../img/obj/APainInTheNeck.png'); }
 .ATrueTestOfSkillet { background-image: url('../img/obj/ATrueTestOfSkillet.png'); }
 .IChallengeTheeToADuel { background-image: url('../img/obj/IChallengeTheeToADuel.png'); }
+.WorthySacrifice { background-image: url('../img/obj/WorthySacrifice.png'); }
+
+.InitiateIntel { background-image: url('../img/camera/InitiateIntel.png'); }
+.ShowroomShowoff { background-image: url('../img/camera/ShowroomShowoff.png'); }
+.AllForShow { background-image: url('../img/camera/AllForShow.png'); }
+.SpareSomeChange { background-image: url('../img/camera/SpareSomeChange.png'); }
+.InLothingMemory { background-image: url('../img/camera/InLothingMemory.png'); }
+.InHisElement { background-image: url('../img/camera/InHisElement.png'); }
+.DotMP3 { background-image: url('../img/camera/DotMP3.png'); }
+.LoungeMusic { background-image: url('../img/camera/LoungeMusic.png'); }
+.TheFutureReclaimed { background-image: url('../img/camera/TheFutureReclaimed.png'); }
+.LisadelGiocondo { background-image: url('../img/camera/LisadelGiocondo.png'); }
+.TheScream { background-image: url('../img/camera/TheScream.png'); }
+.FarewellFounder { background-image: url('../img/camera/FarewellFounder.png'); }
+.TimeConsumingWork { background-image: url('../img/camera/TimeConsumingWork.png'); }
 
 /** New York **/
 /* Golden Handshake */
@@ -2796,6 +2851,18 @@ div[class^="ElusiveTarget"] { background-image: url('../img/targetcon/NPC.jpg');
 .ImGettingTooOldforThis { background-image: url('../img/obj/ImGettingTooOldforThis.png'); }
 .ShowMetheMoney { background-image: url('../img/obj/ShowMetheMoney.png'); }
 .YouveBeenServed { background-image: url('../img/obj/YouveBeenServed.png'); }
+.IslandLife { background-image: url('../img/obj/IslandLife.png'); }
+
+.HidinginPlainSight { background-image: url('../img/camera/HidinginPlainSight.png'); }
+.TheVault { background-image: url('../img/camera/TheVault.png'); }
+.CaughtYouNapping { background-image: url('../img/camera/CaughtYouNapping.png'); }
+.FreedomFighters { background-image: url('../img/camera/FreedomFighters.png'); }
+.WallOfShame { background-image: url('../img/camera/WallOfShame.png'); }
+.Motivation { background-image: url('../img/camera/Motivation.png'); }
+.SadPizzaParty { background-image: url('../img/camera/SadPizzaParty.png'); }
+.Outstanding { background-image: url('../img/camera/Outstanding.png'); }
+.TwoWayMirror { background-image: url('../img/camera/TwoWayMirror.png'); }
+.EvilLayerVibes { background-image: url('../img/camera/EvilLayerVibes.png'); }
 
 /** Haven Island **/
 /* The Last Resort */
@@ -2817,6 +2884,19 @@ div[class^="ElusiveTarget"] { background-image: url('../img/targetcon/NPC.jpg');
 .ForaHandfulofUSB { background-image: url('../img/obj/ForaHandfulofUSB.png'); }
 .TreasureChart { background-image: url('../img/obj/TreasureChart.png'); }
 
+.PhotoOpJasonPortman { background-image: url('../img/camera/PhotoOpJasonPortman.png'); }
+.WhatsOnTheMenu { background-image: url('../img/camera/WhatsOnTheMenu.png'); }
+.JustBreath { background-image: url('../img/camera/JustBreath.png'); }
+.PerfectView { background-image: url('../img/camera/PerfectView.png'); }
+.GetSwole { background-image: url('../img/camera/GetSwole.png'); }
+.WordsToLiftBy { background-image: url('../img/camera/WordsToLiftBy.png'); }
+.JetSkiFree { background-image: url('../img/camera/JetSkiFree.png'); }
+.CookoutKing { background-image: url('../img/camera/CookoutKing.png'); }
+.JustDoIt { background-image: url('../img/camera/JustDoIt.png'); }
+.NotInTheJobDescription { background-image: url('../img/camera/NotInTheJobDescription.png'); }
+.SoothingRed { background-image: url('../img/camera/SoothingRed.png'); }
+.QuiteThePasture { background-image: url('../img/camera/QuiteThePasture.png'); }
+
 /** Dubai **/
 /* On Top Of The World */
 .DownWithTheKingmaker { background-image: url('../img/obj/DownWithTheKingmaker.png'); }
@@ -2835,6 +2915,10 @@ div[class^="ElusiveTarget"] { background-image: url('../img/targetcon/NPC.jpg');
 
 .PreciousMoments { background-image: url('../img/camera/PreciousMoments.png'); }
 .Nightcrawler { background-image: url('../img/camera/Nightcrawler.png'); }
+.RibbonCutting { background-image: url('../img/camera/RibbonCutting.png'); }
+.Accumulus { background-image: url('../img/camera/Accumulus.png'); }
+.BirdsEyeView { background-image: url('../img/camera/BirdsEyeView.png'); }
+.TipoftheSceptre { background-image: url('../img/camera/TipoftheSceptre.png'); }
 
 /** Dartmoor **/
 /* Death In The Family */
