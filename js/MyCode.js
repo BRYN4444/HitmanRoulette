@@ -415,14 +415,14 @@ $(document).ready(function() {
 			$( "input#RANDOMH1, input#RANDOMH1BM, input#RANDOMH2, input#RANDOMH2EX, input#RANDOMH3, input#RANDOMH3DLC, input.h1, input.h1bm, input#TS, input.h2, input.h2ex, input.h3" ).prop('checked', true).parent().parent().addClass("on");
 		}
 		else if($(this).is("#RANDOM:checked") && !($("#mode_con").hasClass("intel") || $("#mode_con").hasClass("hunt")) ) { // All Available Mission Mode - On
-			$( "input#RANDOMH1, input#RANDOMH1BM, input#RANDOMH2, input#RANDOMH2EX, input#RANDOMH3, input#RANDOMH3DLC, input#RANDOMH1PZ, input#RANDOMH2SA, input.h1, input.h1bm, input.h1pz, input#HH, input.h2, input.h2ex, input.h2sa, input.h3, input#DGS" ).prop('checked', true).parent().parent().addClass("on");
+			$( "input#RANDOMH1, input#RANDOMH1BM, input#RANDOMH2, input#RANDOMH2EX, input#RANDOMH3, input#RANDOMH3DLC, input#RANDOMH1PZ, input#RANDOMH2SA, input.h1, input.h1bm, input.h1pz, input#HH, input#SF, input.h2, input.h2ex, input.h2sa, input.h3, input#DGS" ).prop('checked', true).parent().parent().addClass("on");
 		}
 		else if($(this).is("#RANDOM:not(:checked)")) { // All Available - Off
-			$( "input#RANDOMH1, input#RANDOMH1BM, input#RANDOMH2, input#RANDOMH2EX, input#RANDOMH3, input#RANDOMH3DLC, input#RANDOMH1PZ, input#RANDOMH2SA, input.h1, input.h1bm, input.h1pz, input#HH, input.h2, input.h2ex, input.h2sa, input.h3, input#DGS" ).prop('checked', false).parent().parent().removeClass("on");
+			$( "input#RANDOMH1, input#RANDOMH1BM, input#RANDOMH2, input#RANDOMH2EX, input#RANDOMH3, input#RANDOMH3DLC, input#RANDOMH1PZ, input#RANDOMH2SA, input.h1, input.h1bm, input.h1pz, input#HH, input#SF, input.h2, input.h2ex, input.h2sa, input.h3, input#DGS" ).prop('checked', false).parent().parent().removeClass("on");
 		};
 		
 		// Toggle All Available if all available H3 levels are selected or not
-		if($(".lvl:checked").not(".h1s6, input#SF").length == $(".lvl").not(".h1s6, input#SF").length) {
+		if($(".lvl:checked").not(".h1s6").length == $(".lvl").not(".h1s6").length) {
 			$("input#RANDOM").prop('checked', true).parent().parent().addClass("on");
 		}
 		else {
