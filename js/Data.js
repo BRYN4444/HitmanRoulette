@@ -414,7 +414,7 @@ var hh = {
 	"Saber|Melee","Saber|Thrown Weapon",
 	"Scissors|Melee","Scissors|Thrown Weapon",
 	"Screwdriver|Melee","Screwdriver|Thrown Weapon",
-	"Xmas Star|Melee","Xmas Star|Lethal Throw"],
+	"Xmas Star|Melee [Any in Hitman 1]","Xmas Star|Lethal Throw [Any in Hitman 1]"],
 	targetList: ["Harry “Smokey” Bagnato","Marv “Slick” Gonif"],
 	contractTargets: ["Harry “Smokey” Bagnato|Delinquent and compulsive smoker. Stealing items, starting in the second floor dining room.",
 	"Marv “Slick” Gonif|Middle-class thrill-seeker. Stealing items, starting in the palace basement."],
@@ -448,7 +448,8 @@ var hh = {
 	"No Shirt, No Shoes, Noël|Take a photo of the unnecessarily decorated Locker Room. They painted the lockers for this...",
 	"Crime on Camera|Take a photo of one of the burglars stealing something.",
 	"Looks Like Christmas Eve|Take a photo of the Christmas corner in the Dining Room.",
-	"Deck The Halls|Take a photo of the decorations within the Entrance Hall."]
+	"Deck The Halls|Take a photo of the decorations within the Entrance Hall.",
+	"Get Down|Take a photo of the shotgun, roses, and sunglasses found after opening a specific present."]
 };
 var thedirector = {
 	missionTitle: "The Director",
@@ -2351,7 +2352,12 @@ var sf = {
 	"All Access Pass|Find and collect the RFID master chip card.",
 	"New Career Path|Prepare and serve 3 different people unpoisoned sushi.",
 	"In Your Face!|Knock out three gardeners in the garden using snowballs."],
-	photos: ["Not Available|This mission is inaccessible in HITMAN III."]
+	photos: ["Photographic Proof|Take a photo of your target(s) after you've eliminated them, unless their body is unavailable.<br /><br />They must not be in a body bag.",
+	"It's Not Easy Being Green|Take a photo of the snowfrog in the Garden.",
+	"King of the Jingle|Take a photo of the snowlion in the Garden.",
+	"Calm, Cold, and Collected|Take a photo of the snowmonk or snow-Buddha in the Garden.",
+	"Abominable|Take a photo of the snowbeast in the Garden.",
+	"Sno-Way José|Take a photo of a giant snowflake decoration."]
 };
 var thecontroller = {
 	missionTitle: "The Controller",
@@ -2800,7 +2806,7 @@ var cag = {
 	"Gurdeep Gokhale|The new laundry foreman. In his Office looking for the previous foreman's Business Documents. (Level 1)",
 	"Rajender Sanjeev|Queen's Guard for Vanya Shah. Patrolling the Mumbai Laundry. (Level 0)",
 	"Pran Narayana|Queen's Guard for Vanya Shah. Watching the laundry workers from the Yellow Skywalk. (Level 2)",
-	"Jagjit Dinesh|Queen's Bodyguard for Vanya Shah. Guarding an eastern train car entrance to the Train Yard. (Level 0)",
+	"Jagjit Dinesh|Queen's Bodyguard for Vanya Shah. Stationed at the eastern train coach on the Train Tracks leading into the Train Yard. (Level 0)",
 	"Krishna Chadha|Queen's Bodyguard for Vanya Shah. Watching the Water Tanks on the Train Yard Rooftop.",
 	"Aditi Bakshi|Vanya's Servant, worried about the water pressure for the Steam Pool.",
 	"Rima Shah|Non-blood related assistant to Vanya Shah. Follows Vanya throughout the Train Yard.",
@@ -2844,7 +2850,19 @@ var cag = {
 	compWild: ["Hard Hat|Knock out someone in the Rangan Tower Construction Site with a brick.",
 	"Show's Over|Knock out the guard watching TV on the top floor in Rangan Tower.",
 	"Smashing, Baby!|Start the photoshoot as the lead actor."],
-	photos: ["Photographic Proof|Take a photo of your target(s) after you've eliminated them, unless their body is unavailable.<br /><br />They must not be in a body bag."]
+	photos: ["Photographic Proof|Take a photo of your target(s) after you've eliminated them, unless their body is unavailable.<br /><br />They must not be in a body bag.",
+	"Hardly a Rival|Take a photo of The Kashmirian without him noticing. Easy enough, right 47?",
+	"Not So Secret Plan|Take a photo of the assassination map within The Kashmirian's Apartment.",
+	"Mumbai Hero|Take a photo of Mumbai from the Fifth Floor of Rangan Tower.",
+	"Happy Little Accident|Take a photo of the incomplete Rangan painting inside the Studio.",
+	"Dawood Fanatic|Take a photo of any complete piece of Rangan artwook on display in Rangan Tower.",
+	"Quiet On Set|Take a photo of the Film Shoot set on Rangan Tower.",
+	"Behind The Shots|Take a photo of Dancers posing for the Bollywood Crew photos in the Film Shoot area of Rangan Tower.",
+	"Queen On Her Throne|Take a photo of Vanya Shah sitting in the Audience Area of the Train Yard.",
+	"Laundry Labor|Take a photo of the conditions within Mumbai Laundry.",
+	"Dreaming Of Hair, 47?|Take a photo of the mural on the rolling door of the Barber Shop.",
+	"They're The Crows, Get It?|Take a photo of a hanging crow within the Crows' Hideout.",
+	"Recursive|Take a photo of Hitman 2 on a computer in the Central Square arcade."]
 };
 var iog = {
 	missionTitle: "Illusions of Grandeur",
@@ -2878,7 +2896,9 @@ var iog = {
 	"Memoir|Find one tape recorded by The Maelstrom."],
 	missionWild: ["Wrong Person To Ask|Make Basil Carnaby ask you for money."],
 	compWild: ["Free Tea|Serve Tea to Basil Carnaby."],
-	photos: ["Photographic Proof|Take a photo of your target(s) after you've eliminated them, unless their body is unavailable.<br /><br />They must not be in a body bag."]
+	photos: ["Photographic Proof|Take a photo of your target(s) after you've eliminated them, unless their body is unavailable.<br /><br />They must not be in a body bag.",
+	"Dance For Me|Take a photo showing Basil Carnaby's power of hypnosis.",
+	"Smokers Are Jokers|Take a photo of Basil Carnaby smoking."]
 };
 
 var al = {
@@ -2966,7 +2986,18 @@ var al = {
 	"Troll Toll|Dump a body down the well in the public park.",
 	"Extensive Presentation|Present every room in the house for sale to Nolan Cassidy.",
 	"Walkthrough|Serve at least 3 people at the Wilson's party disguised as a Server."],
-	photos: ["Photographic Proof|Take a photo of your target(s) after you've eliminated them, unless their body is unavailable.<br /><br />They must not be in a body bag."]
+	photos: ["Photographic Proof|Take a photo of your target(s) after you've eliminated them, unless their body is unavailable.<br /><br />They must not be in a body bag.",
+	"Photo Op: Charles Blake III|Take a photo of Charles Blake III as he fails to get your vote in conversation.",
+	"An Addiction|Take a photo of Real Estate Broker Samir Chandra eating a blueberry muffin.",
+	"Serial Baker|Take a photo of Helen West contemplating her work in her Murder Basement.",
+	"Ego As Big As His Painting|Take a photo of the giant Janus painting on Janus' Property.",
+	"Let The Music Play|Take a photo of the Rehearsal Space.",
+	"In Honor of West|Take a photo of the Jonathan West Statue.",
+	"Unlocked Vault|Take a photo of the open vault door<a href='./img/general/vault.jpg' target='_blank'>.</a>",
+	"Batchelor Pad|Take a photo inside the Garden Shed on the Batty Property.",
+	"Smash and Grab|Take a photo of the display case in Cassidy's Gun Room.",
+	"More Than Fan Fiction|Take a photo Richard Wilson's secret Georgette Delaney writings.",
+	"Grow Op.|Take a photo of the weed inside 420 Mapletree Ln."]
 };
 var abp = {
 	missionTitle: "A Bitter Pill",
@@ -3010,7 +3041,9 @@ var abp = {
 	"Raking it In|Make any target step on a rake and become pacified.",
 	"Troll Toll|Dump a body down the well in the public park.",
 	"Walkthrough|Serve at least 3 people at the Wilson's party disguised as a Server."],
-	photos: ["Photographic Proof|Take a photo of your target(s) after you've eliminated them, unless their body is unavailable.<br /><br />They must not be in a body bag."]
+	photos: ["Photographic Proof|Take a photo of your target(s) after you've eliminated them, unless their body is unavailable.<br /><br />They must not be in a body bag.",
+	"Male Fraud|Take a photo of Galen Vholes collecting his mail.",
+	"Top Of The Pyramid|Take a photo of Galen Vholes within his Office."]
 };
 
 var tas = {
@@ -3049,14 +3082,14 @@ var tas = {
 	"John A. Walker|Arc Patron looking through the Stronghold Showroom exhibit.",
 	"Louis Tyler|Event staff, working in the Patrons' Lounge.",
 	"Chelsea Webster|Event staff, working in the Patrons' Lounge.",
-	"Maya Grant|Event staff, working in the Lower Courtyard.",
+	"Maya Grant|Event staff, mostly working behind the bar in the Lower Courtyard.",
 	"Lucas Hutchinson|Guard, standing under the portcullis in the Lower Courtyard.",
 	"Edward Field|Guard working on the East Wall. (Level 2)",
 	"Douglas C. Leavitt|Guard working on the satellite dish above the Security Room. (Level 3)",
 	"Kai O'Sullivan|Guard working in the Security Room above the entrance to the Gathering. (Level 2)",
 	"Zara Lamb|Event staff in the Sewer, failing to expose the Arc Society.",
 	"Connor Wade|Guard in the Crypt area. (Level 2)",
-	"Judy T. Houchins|Custodian. Also known as Molly. Inspecting the Hydraulic Door under the Effigy.",
+	"Judy T. Houchins|Custodian, also known as Molly. Inspecting the Hydraulic Door under the Effigy.",
 	"Declan Barton|Arc Member by the stairs leading up to the VIP Lounge. (Level 2)",
 	"Axel Phinniger|Broadway actor and current Master of Ceremonies. Nervously stalling next door to the Chapel.",
 	"Bernadette Craig|One of the Arc's Original Five. Waiting in the Conclave for Jebediah Block.",
@@ -3091,8 +3124,8 @@ var tas = {
 	"Malcolm Hughes|Architect, operating a computer behind the Hyperborea Showroom curtain.",
 	"Adrian Salazar|Raider, working in the Security Room next door to the Raider Room. (Level 5)",
 	"Constantin|Butler working in the Library beneath the Constant's Office. (Level 5)",
-	"Louis Briggs|Elite Guard watching out front of the Library beneath the Constant's Office.",
-	"Larry T. Nicholas|Elite Guard on the balcony just outside the Penthouse. (Level 8)"],
+	"Larry T. Nicholas|Elite Guard guarding out front of the Library beneath the Constant's Office.",
+	"Louis Briggs|Elite Guard on the balcony just outside the Penthouse. (Level 8)"],
 	entry: ["Harbor","Chapel","Keep","Reception Area","Kitchens","Warehouse","Gallery","Architects' Lounge"],
 	exit: ["Speedboat","Helipad","East Wall","Rooftop|(Needs Flare)","Warehouse Ladder"],
 	eexit: ["Speedboat","Helipad","East Wall","Rooftop|(Needs Hand Flare)","Warehouse Ladder","Swan Dive|(Secret)"],
@@ -3117,8 +3150,22 @@ var tas = {
 	"The Greatest Show|Complete the effigy ceremony as planned.",
 	"A Pain In The Neck|Acquire the poison chip blueprints.",
 	"A True Test Of Skillet|Pacify 10 people with the frying pan while disguised as a chef and remain unspotted.",
-	"I Challenge Thee To A Duel|Knock out 10 people with a fish."],
-	photos: ["Photographic Proof|Take a photo of your target(s) after you've eliminated them, unless their body is unavailable.<br /><br />They must not be in a body bag."]
+	"I Challenge Thee To A Duel|Knock out 10 people with a fish.",
+	"Worthy Sacrifice|Through process, exfiltrate with the Sacrificial Knife<a href='./img/general/burialknife.jpg' target='_blank'>.</a>"],
+	photos: ["Photographic Proof|Take a photo of your target(s) after you've eliminated them, unless their body is unavailable.<br /><br />They must not be in a body bag.",
+	"Initiate Intel|Take a photo of the TV screen in the Patrons' Lounge.",
+	"Showroom Show-off|Take a photo within the Stronghold Showroom.",
+	"All For Show|Take a photo of the phoenix effigy. Flames optional.",
+	"Spare Some Change?|Take a photo of the money offering in the Upper Courtyard.",
+	"In Lothing Memory|Take a photo of the late Janus in the Morgue.",
+	"In His Element|Take a photo of The Constant while he's within his Office or Library.",
+	"Dot MP3|Take a photo of the iron maiden in the Penthouse.",
+	"Lounge Music|Take a photo of the Entertainer playing in the Councillors' Lounge.",
+	"The Future Reclaimed|Take a photo of one of the displays inside the Hyperborea Showroom.",
+	"Lisa del Giocondo|Take a photo of the Mona Lisa.",
+	"The Scream|Take a photo of this 1910 version of The Scream.",
+	"Farewell Founder|Take a photo of Janus' mamorial in the Memorial Room.",
+	"Time Consuming Work|Take a photo showing a Custodian restoring a painting in the Restoration Room."]
 };
 
 var gh = {
@@ -3138,7 +3185,7 @@ var gh = {
 	targetList: ["Athena Savalas"],
 	contractTargets: ["Athena Savalas|Bank Director and soon to be CEO of Milton-Fitzpatrick. Supervising on the top floor.",
 	"Frank Winkelman|Soon to retire Security Guard. Wandering throughout the bank, starting in the Teller Hall.",
-	"Hadyn Holme|Security Guard near or in the Teller Hall bathrooms.",
+	"Hadyn Holme|Security Guard inside or nearby the Teller Hall bathrooms.",
 	"Gourd|Conspiring bank robber. Hiding out in the Teller Hall bathrooms.",
 	"Sugar Squirrel|Conspiring bank robber. Hiding out in the Teller Hall bathrooms.",
 	"Ruby Red|Investigative Reporter looking to expose Athena Savalas. Found at the back end of the Teller Hall.",
@@ -3146,18 +3193,18 @@ var gh = {
 	"Raymond Bissett|Bank Teller working in the back of the Teller Ship, willing to open an account for you, 47.",
 	"Mateo Pérez|Head of Security for the bank. Wandering throughout the lower floors of the building.",
 	"Nicole Samson|Bank Teller turned whistleblower for Ruby Red. Overlooking Ruby on the balcony above her. (Level 1)",
-	"Kaye Zahn|Bank Teller working in the Teller Ship.",
+	"Kaye Zahn|Bank Teller working in the Teller Ship. Takes phone breaks off in the VIP Clients area. Thinking about a career change.",
 	"Freeman Luoma|Security Guard working the Lost and Found desk.",
 	"Kiran Panwar|Security Guard watching sports on TV in the Lost and Found area.",
 	"Lewis Thomas|Nervous Job Applicant, currently sick in the Waiting Lounge bathrooms.",
-	"Melissa Chien|Bank Teller and job interviewer. Waiting in the VIP clients area.",
-	"Kevin Nardone|Bank Teller and job interviewer. Waiting in the VIP clients area.",
+	"Melissa Chien|Bank Teller and job interviewer. Waiting in the Interview Room.",
+	"Kevin Nardone|Bank Teller and job interviewer. TAlking to the secretary at the VIP Clients desk.",
 	"Angelo Gillispie|High Security Guard watching monitors in the Vault Security area.",
 	"Elvis Lankford|Shotgun wielding High Security Guard, watching the Vault in the Vault Security area.",
 	"Enoch Holly|Security Guard chatting it up with a Janitor in the basement Storage area.",
 	"Roy|IT Worker playing games and answering calls in the IT Room.",
 	"Joss|IT Worker playing games and answering calls in the IT Room.",
-	"Julianne Carson|Bank Teller searching through the Deposit Boxes area.",
+	"Julianne Cason|Bank Teller searching through the Deposit Boxes area.",
 	"Tanner Godley|Security Guard sleeping in the Deposit Boxes area.",
 	"Ray Poyner|Investment Banker searching through the Deposit Boxes area.",
 	"Sebastian Mattson|Janitor mopping up the north-side hallway looking over the Teller Hall.",
@@ -3201,8 +3248,19 @@ var gh = {
 	"Whistleblower|Hand over the Cronkite files to the investigator.",
 	"I'm Getting Too Old for This...|Allow Frank to slip on the wet floor.",
 	"Show Me the Money|Throw a goldbar at a Security Guard's head.",
-	"You've Been Served|Throw the Data Core at someone and knock them out."],
-	photos: ["Photographic Proof|Take a photo of your target(s) after you've eliminated them, unless their body is unavailable.<br /><br />They must not be in a body bag."]
+	"You've Been Served|Throw the Data Core at someone and knock them out.",
+	"Island Life|Find and collect the Haven Pamphlet."],
+	photos: ["Photographic Proof|Take a photo of your target(s) after you've eliminated them, unless their body is unavailable.<br /><br />They must not be in a body bag.",
+	"Hiding in Plain Sight|Take a photo of Ruby Red in the back corner of the Teller Hall.",
+	"The Vault|Take a photo within the the Bank's Vault.",
+	"Caught You Napping|Take a photo of the sleeping Security Guard in the Deposit Boxes area.",
+	"Freedom Fighters|Take a photo of the video game being played in the IT Room.",
+	"Wall Of Shame|Take a photo of any Former CEO portrait hanging in the hallway near the Interview Room.",
+	"Motivation|Take a picture of any motivational poster hanging throughout the bank.",
+	"Sad Pizza Party|Take a photo of the investigation in the Conference Room.",
+	"Outstanding|Take a photo of Athena's Award inside the Director's Office.",
+	"Two-Way Mirror|Take a photo of the Conference Room from within the Private Chambers.",
+	"Evil Layer Vibes|Take a photo of the glass clock window in the Director's Office."]
 };
 
 var lr = {
@@ -3235,12 +3293,12 @@ var lr = {
 	"Cooper Gilliam|Bodyguard of Ljudmila Vetrova. Follows her throughout the public areas of the island.",
 	"Christopher Johnson|Snorkeler Instructor for the island. Working at the Water Activity Center.",
 	"Mitch Nocannon|Lifeguard tending to a supposedly injured guest in the beach near the Water Activity Center.",
-	"Ashley Montague|Jetski enthusiast at the Natural Beach, taking a jetski on numerous drives.",
+	"Ashley Montague|Water scooter enthusiast at the Natural Beach, taking numerous drives on one.",
 	"Camille Lawson|Jogger running around the Natural Beach.",
 	"Dean Pettington|Lifeguard, napping on a chair in the Medical Clinic.",
 	"Radha Dewan|Resort Guard smoking out the window of the Security Break Room.",
 	"Larry Cox|Bodyguard of Steven Bradley. Following as he wanders between the Gym and the Private Island.",
-	"Akshay Ratti|Resort Guard sanding at the Natural Beach, nearby the showers under the Gym.",
+	"Akshay Ratti|Resort Guard patrolling the Natural Beach, nearby the showers under the Gym.",
 	"Jakson Mamao|Personal Trainer at the HAVEN Gym.",
 	"Diego de la Torres|Resort Staff working at the HAVEN Gym.",
 	"Lesley Salazar|Resort Staff working the Pool Area bar.",
@@ -3253,8 +3311,8 @@ var lr = {
 	"Ben “Urben” Urbach|Chef preparing food in the restaurant Kitchen. (Level 1)",
 	"Chef Rampart|Chef preparing a meal for Ljudmila Vetrova. In the restaurant Kitchen. (Level 1)",
 	"Captain Rutherford|Elderly Boat Captain looking over some type of map piece at the Cocktail Bar.",
-	"Mario Giovine|Resort staff working the Pool Area bar and the stock area beside the Spa.",
-	"Narendra Nigam|Resort guard working by the stock area beside the Spa.",
+	"Mario Giovine|Resort Staff working the Pool Area bar and the stock area beside the Spa.",
+	"Narendra Nigam|Resort Guard working by the stock area beside the Spa.",
 	"Prasad Ratti|Resort Guard inside the Security Outpost.",
 	"Suman Dalal|Resort Guard on the roof of the Security Outpost.",
 	"Jordan “Jack 9mm” Cucci|Villa Guard stationed at the front entrance to the Villa.",
@@ -3275,9 +3333,10 @@ var lr = {
 	"Leah Cooper|Tech Crew that stole a USB stick for Ljudmila. In the Security Break Room. (Level -3)",
 	"Conrad Agozzino|Villa Guard relaxing on the deck just outside the Living Room.",
 	"Luo Shoushan|First day on the job as Tech Crew. Working down in the underground Server Farm.",
-	"Bob Schwab|Villa Security stationed in the underground Server Room.",
+	"Bob Schwab|Villa Security stationed in the underground Server Farm.",
 	"Jim Murphy|Tech Crew working in the underground Control Room.",
-	"Adam Crest|Villa guest doing yoga on the Private Island."],
+	"Adam Crest|Villa guest doing yoga on the Private Island.",
+	"Kaye Zahn|Newly hired Resort Staff tending to guests near the Kitchen and Cocktail Bar areas."],
 	entry: ["Resort Pier","Resort Pool Area","Restaurant's Kitchen","Shark Hut","Resort Gym","Private Villa Pier"],
 	exit: ["Resort Pier Speedboat","Dinghy","Seaplane","Snorkel|(Instructor Only)","Water Scooter|(Needs Key)","Private Villa Speedboat|(Needs Key)"],
 	eexit: ["Resort Pier Speedboat","Dinghy","Seaplane","Snorkel|(Instructor Only)","Water Scooter|(Needs Key)","Private Villa Speedboat|(Needs Key)","Dundee|(Secret)"],
@@ -3302,7 +3361,19 @@ var lr = {
 	"Take A Deep Breath|Perform Tyson Williams' examination as the Doctor.",
 	"For a Handful of USB|Give the USB to both Ljudmila Vetrova and Tyson Williams.",
 	"Treasure Chart|Collect all three pieces of the treasure map."],
-	photos: ["Photographic Proof|Take a photo of your target(s) after you've eliminated them, unless their body is unavailable.<br /><br />They must not be in a body bag."]
+	photos: ["Photographic Proof|Take a photo of your target(s) after you've eliminated them, unless their body is unavailable.<br /><br />They must not be in a body bag.",
+	"Photo Op: Jason Portman|Take a photo of Jason Portman and his extensive plastic surgery.",
+	"What's On The Menu?|Take a photo of any food related poster in the Kitchen or Cocktail Bar areas.",
+	"Just Breath|Take a photo of any poster within the Spa.",
+	"Perfect View|Take a photo of Haven from atop the Radio Tower.",
+	"Get Swole|Take a photo of anyone exercising in the Gym.",
+	"Words To Lift By|Take a photo of any poster within the Gym.",
+	"JetSkiFree|Take a photo of anyone enjoying a water scooter.",
+	"Cookout King|Take a photo of the Tech Crew member using the BBQ in the Villa Pool Terrace.",
+	"Just Do It!|Take a photo of the guest on the diving board at the Villa Pool Terrace.",
+	"Not In The Job Description|Take a photo of the Tech Crew member repairing the jacuzzi in the Master Bathroom.",
+	"Soothing Red|Take a photo of the red screen in the Home Theater.",
+	"Quite The Pasture|Take a photo of the Server Farm from the surrounding catwalk."]
 };
 
 var ototw = {
@@ -3398,7 +3469,11 @@ var ototw = {
 	"Jackpot|Collect 19 Gold Bars from the Gold Rush ATM."],
 	photos: ["Photographic Proof|Take a photo of your target(s) after you've eliminated them, unless their body is unavailable.<br /><br />They must not be in a body bag.",
 	"Precious Moments|Take a photo of Marcus Stuyvesant being reunited with his daughter.",
-	"Nightcrawler|Take a photo of the Sheikh sleeping."]
+	"Nightcrawler|Take a photo of Sheikh Omar Al-Ghazali sleeping.",
+	"Ribbon Cutting|Take a photo of Sheikh Omar Al-Ghazali during his speech in the Atrium.",
+	"Accumulus|Take a photo of the Art Gallery from within it.",
+	"Bird's Eye View|Take a photo of any Dubai skyscraper from Outdoor Area of the Burj Al-Ghazali.",
+	"Tip of the Sceptre|Take a photo of the Burj Al-Ghazali penthouse from the Courtyard."]
 };
 
 var ditf = {
@@ -4013,8 +4088,8 @@ var tf = {
 	"Jerico Derose|Gaucho patrolling the Boatdock.",
 	"Raulo Dominguez|Gaucho stationed at the Boatdock."],
 	entry: ["Winery Viewpoint","Parking Lot","Vineyard","Tasting Room","Sniper Spot","Shrine","Dining Area"],
-	exit: ["Through The Grapefields","Boat|(Needs Key)","Underground Cave System|(Tactical Wetsuit Only)","Don Yate's Car|(Needs Key)"],
-	eexit: ["Through The Grapefields","Boat|(Needs Key)","Underground Cave System|(Tactical Wetsuit Only)","Don Yate's Car|(Needs Key)"],
+	exit: ["Through The Grapefields","Boat|(Needs Key)","Underground Cave System|(Tactical Wetsuit Only)","Don Yate's Car|(Needs Key)","Tango With Diana"],
+	eexit: ["Through The Grapefields","Boat|(Needs Key)","Underground Cave System|(Tactical Wetsuit Only)","Don Yate's Car|(Needs Key)","Tango With Diana","Shrine|(Requiem Suit Only)"],
 	disguises: ["Any Suit","Tactical Wetsuit","Lawyer","Sommelier","Chief Winemaker","Corvo Black",
 	"Winery Worker","Waiter","Asado Chef",
 	"Bodyguard","Gaucho","Head of Security","Mercenary",
