@@ -342,15 +342,39 @@ function writeEverything(result) {
 		}
 		else if (result.missionCode == "club" && result.exit.split('|')[0] == "UFO" && mode != "MAIN") { // UFO Exit disabled in Contracts Mode
 			document.getElementById("travel").innerHTML =
-				"<div id='entry' class='" + result.missionCode + "-start-" + result.entry.replace(/\s|'|\.|-|\(|\)/g, "") + "'><div id='nameplate'><span><p id='title'>Starting Location</p><p id='subtitle'>" + result.entry + "</p></span></div></div><div id='exit' class='club-exit-Bicycle'><div id='nameplate'><span><p id='title'>Exit Location <span id='exitreq'></span></p><p id='subtitle'>Bicycle</p></span></div></div>";
+				"<div id='entry' class='club-start-" + result.entry.replace(/\s|'|\.|-|\(|\)/g, "") + "'><div id='nameplate'><span><p id='title'>Starting Location</p><p id='subtitle'>" + result.entry + "</p></span></div></div><div id='exit' class='club-exit-Bicycle'><div id='nameplate'><span><p id='title'>Exit Location <span id='exitreq'></span></p><p id='subtitle'>Bicycle</p></span></div></div>";
 			document.getElementById("input_entry").value = "\nStart: " + result.entry;
 			document.getElementById("input_exit").value = "\nExit: Bicycle";
 			document.getElementById("exitreq").innerHTML = "";
 			document.getElementById("input_exitreq").value = "";
 		}
+		else if (result.missionCode == "vineyard" && result.exit == "Tango With Diana" && (mode == "CONEASY" || mode == "CONHARD")) { // Tango With Diana Exit disabled in Contracts Mode
+			document.getElementById("travel").innerHTML =
+				"<div id='entry' class='vineyard-start-" + result.entry.replace(/\s|'|\.|-|\(|\)/g, "") + "'><div id='nameplate'><span><p id='title'>Starting Location</p><p id='subtitle'>" + result.entry + "</p></span></div></div><div id='exit' class='vineyard-exit-ThroughTheGrapefields'><div id='nameplate'><span><p id='title'>Exit Location <span id='exitreq'></span></p><p id='subtitle'>Through The Grapefields</p></span></div></div>";
+			document.getElementById("input_entry").value = "\nStart: " + result.entry;
+			document.getElementById("input_exit").value = "\nExit: Through The Grapefields";
+			document.getElementById("exitreq").innerHTML = "";
+			document.getElementById("input_exitreq").value = "";
+		}
+		else if (result.missionCode == "vineyard" && result.exit.split('|')[0] == "Shrine" && (result.entry == "Winery Viewpoint" || result.entry == "Parking Lot" || result.entry == "Shrine")) { // When Shrine Exit enabled: Request Requiem Suit w/ Starting Location
+			document.getElementById("travel").innerHTML =
+				"<div id='entry' class='vineyard-start-" + result.entry.replace(/\s|'|\.|-|\(|\)/g, "") + "'><div id='nameplate'><span><p id='title'>Starting Location (Equip Requiem Suit)</p><p id='subtitle'>" + result.entry + "</p></span></div></div><div id='exit' class='vineyard-exit-Shrine'><div id='nameplate'><span><p id='title'>Exit Location <span id='exitreq'>(Requiem Suit Only)</span></p><p id='subtitle'>Shrine</p></span></div></div>";
+			document.getElementById("input_entry").value = "\nStart: " + result.entry + " (Equip Requiem Suit)";
+			document.getElementById("input_exit").value = "\nExit: Shrine";
+			document.getElementById("exitreq").innerHTML = "(Requiem Suit Only)";
+			document.getElementById("input_exitreq").value = "(Requiem Suit Only)";
+		}
+		else if (result.missionCode == "vineyard" && result.exit.split('|')[0] == "Shrine" && !(result.entry == "Winery Viewpoint" || result.entry == "Parking Lot" || result.entry == "Shrine")) { // Shrine Exit disabled with Disguise Entrances
+			document.getElementById("travel").innerHTML =
+				"<div id='entry' class='vineyard-start-" + result.entry.replace(/\s|'|\.|-|\(|\)/g, "") + "'><div id='nameplate'><span><p id='title'>Starting Location</p><p id='subtitle'>" + result.entry + "</p></span></div></div><div id='exit' class='vineyard-exit-ThroughTheGrapefields'><div id='nameplate'><span><p id='title'>Exit Location <span id='exitreq'></span></p><p id='subtitle'>Through The Grapefields</p></span></div></div>";
+			document.getElementById("input_entry").value = "\nStart: " + result.entry;
+			document.getElementById("input_exit").value = "\nExit: Through The Grapefields";
+			document.getElementById("exitreq").innerHTML = "";
+			document.getElementById("input_exitreq").value = "";
+		}
 		else if (result.missionCode == "ark" && result.exit.split('|')[0] == "Swan Dive" && mode != "MAIN") { // Swan Dive Exit disabled in Contracts Mode
 			document.getElementById("travel").innerHTML =
-				"<div id='entry' class='" + result.missionCode + "-start-" + result.entry.replace(/\s|'|\.|-|\(|\)/g, "") + "'><div id='nameplate'><span><p id='title'>Starting Location</p><p id='subtitle'>" + result.entry + "</p></span></div></div><div id='exit' class='ark-exit-EastWall'><div id='nameplate'><span><p id='title'>Exit Location <span id='exitreq'></span></p><p id='subtitle'>East Wall</p></span></div></div>";
+				"<div id='entry' class='ark-start-" + result.entry.replace(/\s|'|\.|-|\(|\)/g, "") + "'><div id='nameplate'><span><p id='title'>Starting Location</p><p id='subtitle'>" + result.entry + "</p></span></div></div><div id='exit' class='ark-exit-EastWall'><div id='nameplate'><span><p id='title'>Exit Location <span id='exitreq'></span></p><p id='subtitle'>East Wall</p></span></div></div>";
 			document.getElementById("input_entry").value = "\nStart: " + result.entry;
 			document.getElementById("input_exit").value = "\nExit: East Wall";
 			document.getElementById("exitreq").innerHTML = "";
@@ -358,7 +382,7 @@ function writeEverything(result) {
 		}
 		else if (result.missionCode == "speedway" && result.exit.split('|')[0] == "Pale Rider" && mode != "MAIN") { // Pale Rider Exit disabled in Contracts Mode
 			document.getElementById("travel").innerHTML =
-				"<div id='entry' class='" + result.missionCode + "-start-" + result.entry.replace(/\s|'|\.|-|\(|\)/g, "") + "'><div id='nameplate'><span><p id='title'>Starting Location</p><p id='subtitle'>" + result.entry + "</p></span></div></div><div id='exit' class='speedway-exit-Ambulance'><div id='nameplate'><span><p id='title'>Exit Location <span id='exitreq'>(Medic Only)</span></p><p id='subtitle'>Ambulance</p></span></div></div>";
+				"<div id='entry' class='speedway-start-" + result.entry.replace(/\s|'|\.|-|\(|\)/g, "") + "'><div id='nameplate'><span><p id='title'>Starting Location</p><p id='subtitle'>" + result.entry + "</p></span></div></div><div id='exit' class='speedway-exit-Ambulance'><div id='nameplate'><span><p id='title'>Exit Location <span id='exitreq'>(Medic Only)</span></p><p id='subtitle'>Ambulance</p></span></div></div>";
 			document.getElementById("input_entry").value = "\nStart: " + result.entry;
 			document.getElementById("input_exit").value = "\nExit: Ambulance";
 			document.getElementById("exitreq").innerHTML = "(Medic Only)";
@@ -366,7 +390,7 @@ function writeEverything(result) {
 		}
 		else if (result.missionCode == "resort" && result.exit.split('|')[0] == "Dundee" && document.getElementById("firearm").checked == 1) { // Dundee Exit disabled with Specific Firearms checked
 			document.getElementById("travel").innerHTML =
-				"<div id='entry' class='" + result.missionCode + "-start-" + result.entry.replace(/\s|'|\.|-|\(|\)/g, "") + "'><div id='nameplate'><span><p id='title'>Starting Location</p><p id='subtitle'>" + result.entry + "</p></span></div></div><div id='exit' class='resort-exit-Dinghy'><div id='nameplate'><span><p id='title'>Exit Location <span id='exitreq'></span></p><p id='subtitle'>Dinghy</p></span></div></div>";
+				"<div id='entry' class='resort-start-" + result.entry.replace(/\s|'|\.|-|\(|\)/g, "") + "'><div id='nameplate'><span><p id='title'>Starting Location</p><p id='subtitle'>" + result.entry + "</p></span></div></div><div id='exit' class='resort-exit-Dinghy'><div id='nameplate'><span><p id='title'>Exit Location <span id='exitreq'></span></p><p id='subtitle'>Dinghy</p></span></div></div>";
 			document.getElementById("input_entry").value = "\nStart: " + result.entry;
 			document.getElementById("input_exit").value = "\nExit: Dinghy";
 			document.getElementById("exitreq").innerHTML = "";
@@ -374,7 +398,7 @@ function writeEverything(result) {
 		}
 		else if (result.missionCode == "birthday" && result.exit.split('|')[0] == "Speedboat" && difficultyMode == "H1") { // Speedboat Exit shows Key Needed on rofessional when Difficulty set to H1 
 			document.getElementById("travel").innerHTML =
-				"<div id='entry' class='" + result.missionCode + "-start-" + result.entry.replace(/\s|'|\.|-|\(|\)/g, "") + "'><div id='nameplate'><span><p id='title'>Starting Location</p><p id='subtitle'>" + result.entry + "</p></span></div></div><div id='exit' class='birthday-exit-SpeedboatH1'><div id='nameplate'><span><p id='title'>Exit Location <span id='exitreq'>(Needs Key on Pro.)</span></p><p id='subtitle'>Speedboat</p></span></div></div>";
+				"<div id='entry' class='birthday-start-" + result.entry.replace(/\s|'|\.|-|\(|\)/g, "") + "'><div id='nameplate'><span><p id='title'>Starting Location</p><p id='subtitle'>" + result.entry + "</p></span></div></div><div id='exit' class='birthday-exit-SpeedboatH1'><div id='nameplate'><span><p id='title'>Exit Location <span id='exitreq'>(Needs Key on Pro.)</span></p><p id='subtitle'>Speedboat</p></span></div></div>";
 			document.getElementById("input_entry").value = "\nStart: " + result.entry;
 			document.getElementById("input_exit").value = "\nExit: Speedboat";
 			document.getElementById("exitreq").innerHTML = "(Needs Key on Pro.)";
@@ -497,6 +521,11 @@ function writeEverything(result) {
 				document.getElementById("subtitle-method" + (i+1)).innerHTML = "Any Pistol";
 				document.getElementById("subtitle-alt-method" + (i+1)).innerHTML = "";
 				document.getElementById("input_weapon" + (i+1)).value = ", using: Any Pistol";
+			}
+			else if(document.getElementById("mtype").checked == 0 && result.weapons[i].split('|')[0] == "Xmas Star"){ // Holiday Hoarders Xmas Star Disable Forced Melee Elimination Methods
+				document.getElementById("subtitle-method" + (i+1)).innerHTML = result.weapons[i].split('|')[0];
+				document.getElementById("subtitle-alt-method" + (i+1)).innerHTML = "[Any Weapon in Hitman 1]";
+				document.getElementById("input_weapon" + (i+1)).value = ", using: " + result.weapons[i].split('|')[0] + " [Any Weapon in Hitman 1]";
 			}
 			else if(result.weapons[i].split('|')[2] != null && document.getElementById("mtype").checked == 0 ){ // Hint Disable Forced Melee Elimination Methods
 				document.getElementById("subtitle-method" + (i+1)).innerHTML = result.weapons[i].split('|')[0];
