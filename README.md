@@ -33,6 +33,14 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 
 ### Latest Updates:
 
+**January 4, 2022**
+* **Roulette:**
+  * **Resolution/Zoom Warning:** Adjustment to the resolution size required to trigger the warning. Also changed the unicode character used as the close icon as it was auto-changing into an emoji on mobile Chrome.
+* **Current Plans:**
+  * Happy new year! I'm mostly waiting on Hitman III's upcoming Year 2 plans to see what missions might be added to the Roulette.
+
+---
+
 **January 3, 2022**
 * **Roulette:**
   * **Select Missions:**
@@ -78,8 +86,6 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 * **Other Fixes:**
   * Updated some Intel for a handful of Contract Mode Targets in Hitman 2 missions.
   * Two Contract Mode Targets in The Arc Society had their names accidentally swapped with each other.
-* **Current Plans:**
-  * Happy new year! I'm mostly waiting on Hitman III's upcoming Year 2 plans to see what missions might be added to the Roulette.
 
 ---
 
@@ -140,20 +146,3 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
   * A Complication "One Disguise Change" was previously removed due to another Complication, "No Disguise Changes", causing redundancy. It is now coded so that as long as "Specific Disguises" is disabled, one of these two Complications have an equal chance of appearing (rather than the potential of both).
   * The Allow Complications setting was displaying an incorrect value when refreshing/reloading (not hard refreshing/reloading) the page.
   * Removed a few more duplicate Contracts Mode Target images.
-
----
-
-**October 20, 2021**
-* **Roulette:**
-  * **Roulette Settings:**
-    * **Kill Requirements - Forced Melee Methods:** Added this option to disable the "Throw Weapon" / "Melee" requirement when "Specific Melee Methods" is enabled.
-* **HITMAN III:**
-  * **Apex Predator:**
-    * **Mission Target Images:** The targets in Apex Predator do not get images like regular targets; only through intel. These intel images will show as their target images when using "Mission Mode Roulette". This was implemented incorrectly initially.
-* **HITMAN:**
-  * **Freedom Fighters:**
-    * **Contracts Mode Targets:** 98 more added. Updated the images of the existing ones with their HITMAN III versions.
-    * **Photo Objectives:** 8 added.
-* **Other Fixes:**
-  * Fixed a wrong image file type made for an Extra Objective in The Source.
-  * Some melee weapons in Another Life are hidden using obscure eater eggs. Hints to obtain them are shown, but were not working in a few instances. This is fixed.
