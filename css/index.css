@@ -2239,7 +2239,7 @@ textarea.clearme { display:none; }
 #subsaveroulette[disabled] { background-image:var(--saveoff), var(--dotmid); }
 
 #sizewarning { display: none; }
-	@media only screen and (max-width: 359px), only screen and (max-height: 830px) {
+	@media only screen and (max-width: 359px), only screen and (max-height: 620px) {
 		#sizewarning {
 			display: block !important;
 			color: white;
