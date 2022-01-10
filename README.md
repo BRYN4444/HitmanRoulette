@@ -33,11 +33,18 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 
 ### Latest Updates:
 
+**January 10, 2022**
+* **HITMAN:**
+  * **Freedom Fighters:**
+    * **Contract Mode Targets:** 2 removed due to differences between HITMAN III and prior releases.
+* **Current Plans:**
+  * Happy new year! I'm mostly waiting on Hitman III's upcoming Year 2 plans to see what missions might be added to the Roulette.
+
+---
+
 **January 4, 2022**
 * **Roulette:**
   * **Resolution/Zoom Warning:** Adjustment to the resolution size required to trigger the warning. Also changed the unicode character used as the close icon as it was auto-changing into an emoji on mobile Chrome.
-* **Current Plans:**
-  * Happy new year! I'm mostly waiting on Hitman III's upcoming Year 2 plans to see what missions might be added to the Roulette.
 
 ---
 
