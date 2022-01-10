@@ -2003,8 +2003,6 @@ var ff = {
 	"Frank Chappell|Militia Soldier patrolling the outer compound road.",
 	"Richard Kirkland|Militia Soldier stationed at the northern entrance to the Garages, next to the Quad Bikes.",
 	"Leo Frost|Militia Soldier stationed on the outer compound road in the west, using binoculars to check for intruders.",
-	"Proust Kisser|Militia Soldier stationed on the outer compound road in the west, using binoculars to check for intruders.",
-	"Seth Thomas|Militia Soldier stationed on the outer compound road in the west, talking to others checking for intruders.",
 	"Logan Akhtar|Militia Soldier stationed at a gate on the outer compound road in a west corner, next to a vehicle.",
 	"Dustin Soto|Militia Soldier patrolling the outer compound road on the south. Looks out at the dock with binoculars.",
 	"Adam May|Militia Soldier stationed on the south compound entrance next to the bridge.",

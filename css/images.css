@@ -1281,7 +1281,7 @@ div[class^="ElusiveTarget"] { background-image: url('../img/targetcon/NPC.jpg');
 .CraigAbel-terrorists { background-image: url('../img/targetcon/CraigAbel.jpg'); }
 .TimothyGuerrero-terrorists { background-image: url('../img/targetcon/TimothyGuerrero.jpg'); }
 .MarcusNolan-terrorists, .MichaelAdams-terrorists { background-image: url('../img/targetcon/MarcusNolan.jpg'); }
-.JulioYingst-terrorists, .ProustKisser-terrorists { background-image: url('../img/targetcon/JulioYingst.jpg'); }
+.JulioYingst-terrorists { background-image: url('../img/targetcon/JulioYingst.jpg'); }
 .BillyGoodwin-terrorists { background-image: url('../img/targetcon/BillyGoodwin.jpg'); }
 .MarioJarosz-terrorists { background-image: url('../img/targetcon/MarioJarosz.jpg'); }
 .EddieHobbs-terrorists { background-image: url('../img/targetcon/EddieHobbs.jpg'); }
@@ -1292,7 +1292,7 @@ div[class^="ElusiveTarget"] { background-image: url('../img/targetcon/NPC.jpg');
 .MiguelEllis-terrorists, .DavidNasser-terrorists { background-image: url('../img/targetcon/MiguelEllis.jpg'); }
 .CollinMcDonald-terrorists { background-image: url('../img/targetcon/CollinMcDonald.jpg'); }
 .KoryCampbell-terrorists { background-image: url('../img/targetcon/KoryCampbell.jpg'); }
-.ThomasHarner-terrorists, .SethThomas-terrorists { background-image: url('../img/targetcon/ThomasHarner.jpg'); }
+.ThomasHarner-terrorists { background-image: url('../img/targetcon/ThomasHarner.jpg'); }
 .CurtNavarro-terrorists { background-image: url('../img/targetcon/CurtNavarro.jpg'); }
 .MarkHicks-terrorists { background-image: url('../img/targetcon/MarkHicks.jpg'); }
 .DouglasGray-terrorists { background-image: url('../img/targetcon/DouglasGray.jpg'); }
