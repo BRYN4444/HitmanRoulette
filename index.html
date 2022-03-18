@@ -234,14 +234,14 @@
 								<li>Enable Complications for playstyle constraints or requirements.</li>
 							</ul>
 							<img id="list" class="shrink" src="./img/general/blank.png">
-							<p id="wording">
-								<!--<b>H3</b>: Description here for new thing added. Info: <a href="https://github.com/BRYN4444/HitmanRoulette#latest-updates" target="_blank">GitHub</a>.//-->
-								Check on <a href="https://github.com/BRYN4444/HitmanRoulette#latest-updates" target="_blank">GitHub</a> for details on the latest Roulette updates.
+							<p id="wording" style="padding-right:5px">
+								<b><a href="https://github.com/BRYN4444/HitmanRoulette#latest-updates" target="_blank">Update:</a></b> Contracts Mode Roulette for The Author & Patient Zero! (H3)
+								<!--Check on <a href="https://github.com/BRYN4444/HitmanRoulette#latest-updates" target="_blank">GitHub</a> for details on the latest Roulette updates.//-->
 							</p>
 						</div>
 						<div id="nameplate">
 							<span>
-								<p id="title">Last Updated: January 10th, 2021</p>
+								<p id="title">Last Updated: March 17th, 2021</p>
 								<p id="subtitle">Roulette Features</p>
 							</span>
 						</div>
@@ -331,11 +331,11 @@
 						<span>Hitman™III Extras</span>
 					</div>
 				</div>
-				<label id="rand-all" class="column" for="RANDOM">
+				<label id="rand-all" class="column" for="RANDOMALL">
 					<div id="nameplate">
 						<span>
-							<input id="RANDOM" type="checkbox" value="true" checked />
-							<p id="title">Toggle (Except Sarajevo Six)</p>
+							<input id="RANDOMALL" type="checkbox" value="true" checked />
+							<p id="title">Toggle <span class="noncon">(Except Sarajevo Six)</span><b class="noncon">(Contract Mode Only Missions)</b></p>
 							<p id="subtitle">All Locations (Default)</p>
 						</span>
 					</div>
@@ -394,7 +394,7 @@
 							<div id="nameplate">
 								<span>
 									<input id="RANDOMH3" class="" type="checkbox" value="true" checked />
-									<p id="title">Toggle<b class="nonconsp">&nbsp;/ "Untouchable" Unavailable</b></p>
+									<p id="title">Toggle<b class="nonconsp">("Untouchable" Unavailable)</b></p>
 									<p id="subtitle">Hitman™III Campaign</p>
 								</span>
 							</div>
@@ -404,8 +404,8 @@
 						<div id="bottom" class="rand-h1pz">
 							<div id="nameplate">
 								<span>
-									<input id="RANDOMH1PZ" class="noncon" type="checkbox" value="true" checked />
-									<p id="title"><span class="noncon">Toggle</span><b class="noncon">Manually Select "The Source"</b></p>
+									<input id="RANDOMH1PZ" class="" type="checkbox" value="true" checked />
+									<p id="title">Toggle<b class="nonconsp">(H1/H2: "The Source" Only)</b></p>
 									<p id="subtitle">Patient Zero Campaign</p>
 								</span>
 							</div>
@@ -599,8 +599,8 @@
 						<div id="top" class="m2-4">
 							<div id="nameplate">
 								<span>
-									<input id="TA" class="lvl h1pz noncon" type="checkbox" value="true" checked />
-									<p id="title"><span class="noncon">Toggle / Patient Zero</span><b class="noncon">Unavailable for Contracts Mode</b></p>
+									<input id="TA" class="lvl h1pz" type="checkbox" value="true" checked />
+									<p id="title">Toggle / Patient Zero<b class="nonconsp">(H3 Only)</b></p>
 									<p id="subtitle">The Author</p>
 								</span>
 							</div>
@@ -610,8 +610,8 @@
 						<div id="bottom" class="m6-2">
 							<div id="nameplate">
 								<span>
-									<input id="PZ" class="lvl h1pz noncon" type="checkbox" value="true" checked />
-									<p id="title"><span class="noncon">Toggle / Patient Zero</span><b class="noncon">Unavailable for Contracts Mode</b></p>
+									<input id="PZ" class="lvl h1pz" type="checkbox" value="true" checked />
+									<p id="title">Toggle / Patient Zero<b class="nonconsp">(H3 Only)</b></p>
 									<p id="subtitle">Patient Zero</p>
 								</span>
 							</div>
@@ -987,8 +987,8 @@
 					<label id="mode_mission" class="on" style="display:none;" data-hover="Targets and any main objectives are pulled from the standard mission.<br />This is the default option.<br /><br /><b>[If you were previously using Contracts Mode Roulette, you may need to reselect missions when enabling Mission Mode Roulette.]</b>">
 						<b>Mission Mode Roulette</b><span>[On]</span>
 					</label>
-					<label id="mode_m" class="mobile" style="display:none;" data-hover="Targets are pulled from a selection of NPCs within the level. Do these roulettes by starting your own contract within the game's contracts mode. Maybe even publish your successful roulette.<br /><br /><b>[Missions unavailable for contracts mode will be toggled off and locked while Contracts Mode Roulette is enabled. Reselect missions when enabling Mission Mode Roulette.]</b>Intel: A brief description of the target's last known whereabouts are listed. This may include in-game cardinal directions or area text listed on the Map screen.<br /><br />Hunt: No target location information is given. Confirm target identities before eliminating them.">[INFO]:</label>
-					<label id="mode_con" style="display:none;" data-hover="Targets are pulled from a selection of NPCs within the level. Do these roulettes by starting your own contract within the game's contracts mode. Maybe even publish your successful roulette.<br /><br /><b>[Missions unavailable for contracts mode will be toggled off and locked while Contracts Mode Roulette is enabled. Reselect missions when enabling Mission Mode Roulette.]</b>Intel: A brief description of the target's last known whereabouts are listed. This may include in-game cardinal directions or area text listed on the Map screen.<br /><br />Hunt: No target location information is given. Confirm target identities before eliminating them.">
+					<label id="mode_m" class="mobile" style="display:none;" data-hover="Targets are pulled from a selection of NPCs within the level. Do these roulettes by starting your own contract within the game's contracts mode. Maybe even publish your successful roulette.<br /><br /><b>[Missions unavailable for contracts mode in H3 will be toggled off and locked while Contracts Mode Roulette is enabled. Reselect missions when enabling Mission Mode Roulette.]</b>Intel: A brief description of the target's last known whereabouts are listed. This may include in-game cardinal directions or area text listed on the Map screen.<br /><br />Hunt: No target location information is given. Confirm target identities before eliminating them.">[INFO]:</label>
+					<label id="mode_con" style="display:none;" data-hover="Targets are pulled from a selection of NPCs within the level. Do these roulettes by starting your own contract within the game's contracts mode. Maybe even publish your successful roulette.<br /><br /><b>[Missions unavailable for contracts mode in H3 will be toggled off and locked while Contracts Mode Roulette is enabled. Reselect missions when enabling Mission Mode Roulette.]</b>Intel: A brief description of the target's last known whereabouts are listed. This may include in-game cardinal directions or area text listed on the Map screen.<br /><br />Hunt: No target location information is given. Confirm target identities before eliminating them.">
 						<b>Contracts Mode Roulette</b><span>[Off]</span>
 					</label>
 					<label id="mode_m" class="mobile" style="display:none;" data-hover="Force the amount of targets in Contracts Mode Roulette. First enable the mode, and then use this slider to set how many targets could appear.<br /><br />#: By default, any amount of targets upto 5 can be generated.">[INFO]:</label>
@@ -997,8 +997,8 @@
 						<span id="range"><input id="conslider" type="range" min="0" max="5" value="0" />
 						[<span id="conamount">#</span>]</span>
 					</label>
-					<label id="mode_m" class="mobile" style="display:none;" data-hover="Make the difficult task of eliminating elusive targets even harder. Set the number of targets there are (making sure to select the appropriate mission) and issue the roulette.<br /><br />Target names are not listed here, so assigning what conditions to whom is player choice. Just don't cross your kill conditions amongst multiple targets.">[INFO]:</label>
-					<label id="mode_et" style="display:none;" data-hover="Make the difficult task of eliminating elusive targets even harder. Set the number of targets there are (making sure to select the appropriate mission) and issue the roulette.<br /><br />Target names are not listed here, so assigning what conditions to whom is player choice. Just don't cross your kill conditions amongst multiple targets.">
+					<label id="mode_m" class="mobile" style="display:none;" data-hover="Make the difficult task of eliminating elusive targets even harder. Set the number of targets there are (making sure to select the appropriate mission) and issue the roulette.<br /><br />Target names are not listed here, so assigning what conditions to whom is player choice. Just don't cross your kill conditions amongst multiple targets.<br /><br />The roulette also doesn't account for unique starting/exit points or objectives.">[INFO]:</label>
+					<label id="mode_et" style="display:none;" data-hover="Make the difficult task of eliminating elusive targets even harder. Set the number of targets there are (making sure to select the appropriate mission) and issue the roulette.<br /><br />Target names are not listed here, so assigning what conditions to whom is player choice. Just don't cross your kill conditions amongst multiple targets.<br /><br />The roulette also doesn't account for unique starting/exit points or objectives.">
 						<b>Elusive Targets Roulette</b>
 						<span id="range"><input id="etslider" type="range" min="0" max="3" value="0" />
 						[<span id="etamount">0</span>]</span>
