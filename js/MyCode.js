@@ -411,22 +411,27 @@ $(document).ready(function() {
 		else if($(this).is("#RANDOMH3DLC:not(:checked)")) { // H3 Extras - Off
 			$( "input.h3dlc, input#RANDOM" ).prop('checked', false).parent().parent().removeClass("on");
 		} enable when non-seasonal DLC drops; add input.h3dlc to the three below */
-		else if($(this).is("#RANDOM:checked") && ($("#mode_con").hasClass("intel") || $("#mode_con").hasClass("hunt")) ) { // All Available Contract Mode - On
-			$( "input#RANDOMH1, input#RANDOMH1BM, input#RANDOMH2, input#RANDOMH2EX, input#RANDOMH3, input#RANDOMH3DLC, input.h1, input.h1bm, input#TS, input.h2, input.h2ex, input.h3" ).prop('checked', true).parent().parent().addClass("on");
+		else if($(this).is("#RANDOMALL") && ($("#mode_con").hasClass("intel") || $("#mode_con").hasClass("hunt")) ){
+			if ($(this).prop("checked")) { // All Contract Mode - On
+				$( "input#RANDOMH1, input#RANDOMH1BM, input#RANDOMH2, input#RANDOMH2EX, input#RANDOMH3, input#RANDOMH3DLC, input#RANDOMH1PZ, input.h1, input.h1bm, input.h1pz, input.h2, input.h2ex, input.h3, input#DGS" ).prop('checked', true).parent().parent().addClass("on");
+				return;
+			} // All Contract Mode - Off \/
+			$( "input#RANDOMH1, input#RANDOMH1BM, input#RANDOMH2, input#RANDOMH2EX, input#RANDOMH3, input#RANDOMH3DLC, input#RANDOMH1PZ, input.h1, input.h1bm, input.h1pz, input.h2, input.h2ex, input.h3, input#DGS" ).prop('checked', false).parent().parent().removeClass("on");
 		}
-		else if($(this).is("#RANDOM:checked") && !($("#mode_con").hasClass("intel") || $("#mode_con").hasClass("hunt")) ) { // All Available Mission Mode - On
-			$( "input#RANDOMH1, input#RANDOMH1BM, input#RANDOMH2, input#RANDOMH2EX, input#RANDOMH3, input#RANDOMH3DLC, input#RANDOMH1PZ, input#RANDOMH2SA, input.h1, input.h1bm, input.h1pz, input#HH, input#SF, input.h2, input.h2ex, input.h2sa, input.h3, input#DGS" ).prop('checked', true).parent().parent().addClass("on");
-		}
-		else if($(this).is("#RANDOM:not(:checked)")) { // All Available - Off
-			$( "input#RANDOMH1, input#RANDOMH1BM, input#RANDOMH2, input#RANDOMH2EX, input#RANDOMH3, input#RANDOMH3DLC, input#RANDOMH1PZ, input#RANDOMH2SA, input.h1, input.h1bm, input.h1pz, input#HH, input#SF, input.h2, input.h2ex, input.h2sa, input.h3, input#DGS" ).prop('checked', false).parent().parent().removeClass("on");
+		else if($(this).is("#RANDOMALL") && !($("#mode_con").hasClass("intel") || $("#mode_con").hasClass("hunt")) ){
+			if ($(this).prop("checked")) { // All Mission Mode - On
+				$( "input#RANDOMH1, input#RANDOMH1BM, input#RANDOMH2, input#RANDOMH2EX, input#RANDOMH3, input#RANDOMH3DLC, input#RANDOMH1PZ, input#RANDOMH2SA, input#RANDOMHSC, input.h1, input.h1bm, input.h1pz, input.h2, input.h2ex, input.h2sa, input.h3, input.hsc" ).prop('checked', true).parent().parent().addClass("on");
+				return;
+			} // All Mission Mode - Off \/
+			$( "input#RANDOMH1, input#RANDOMH1BM, input#RANDOMH2, input#RANDOMH2EX, input#RANDOMH3, input#RANDOMH3DLC, input#RANDOMH1PZ, input#RANDOMH2SA, input#RANDOMHSC, input.h1, input.h1bm, input.h1pz, input.h2, input.h2ex, input.h2sa, input.h3, input.hsc" ).prop('checked', false).parent().parent().removeClass("on");
 		};
 		
 		// Toggle All Available if all available H3 levels are selected or not
 		if($(".lvl:checked").not(".h1s6").length == $(".lvl").not(".h1s6").length) {
-			$("input#RANDOM").prop('checked', true).parent().parent().addClass("on");
+			$("input#RANDOMALL").prop('checked', true).parent().parent().addClass("on");
 		}
 		else {
-			$("input#RANDOM").prop('checked', false).parent().parent().removeClass("on");
+			$("input#RANDOMALL").prop('checked', false).parent().parent().removeClass("on");
 		};
 		
 		//Toggle Random Hitman 1 if H1 levels are selected or not
@@ -582,6 +587,7 @@ $(document).ready(function() {
 	};
 	
 	/******Options Select Submenu Logic******/
+	/***Theme***/
 	$("#theme_h1old").click(function() {
 		$(this).find("span").text("[On]");
 		document.documentElement.className = "h1theme";
@@ -602,7 +608,8 @@ $(document).ready(function() {
 		document.documentElement.className = "h3theme";
 		$("#theme_h1old, #theme_h1goty, #theme_h2").find("span").text("[Off]");
 	});	
-		
+	
+	/***Mode Functions***/
 	function makeItMain() {
 		$("#mode_mission").addClass("on").find("span").text("[On]");
 		$("#modeselect").val("MAIN");
@@ -620,7 +627,7 @@ $(document).ready(function() {
 	function lockMaps() {
 		$("input.noncon").prop('checked', false).prop('disabled', true).parent().parent().removeClass("on").parent().addClass("lock");
 		$("span.noncon").hide();
-		$("b.noncon").show();
+		$("b.noncon").attr( "style", "display: inline !important;" );
 		$("b.nonconsp").css('display','inline-block');
 	};
 	function unlockMaps() {
@@ -631,6 +638,24 @@ $(document).ready(function() {
 		$("input#RANDOMH3").prop('checked', false).parent().parent().removeClass("on");
 	};
 	
+	/***Page Refresh Check***/
+	if($("#modeselect").val() == "CONEASY") {
+		$("#mode_con").addClass("intel").find("span").text("[Intel]");
+		stopItMain();
+		stopItElusive();
+		lockMaps();
+	} else if ($("#modeselect").val() == "CONHARD") {
+		$("#mode_con").removeClass("intel").addClass("hunt").find("span").text("[Hunt]");
+		stopItMain();
+		stopItElusive();
+		lockMaps();
+	} else if ($("#modeselect").val() == "ELUSIVE") {
+		stopItMain();
+		stopItContracts();
+	};
+	
+	/***Mode Change***/
+	/*Middion Mode Button*/
 	$("#mode_mission").click(function() {
 		if( !$(this).hasClass("on") ) {
 			makeItMain();
@@ -640,6 +665,7 @@ $(document).ready(function() {
 		}
 	});
 	
+	/*Contracts Mode Button*/
 	$("#mode_con").click(function() {
 		if( $(this).hasClass("intel") ) {
 			$(this).removeClass("intel").addClass("hunt").find("span").text("[Hunt]");
@@ -659,6 +685,7 @@ $(document).ready(function() {
 		};
 	});
 	
+	/*Contracts Mode Slider*/
 	if( $('#conslider').val() == 0 ) {
 		$('#conamount').html('#');
 	}
@@ -674,6 +701,7 @@ $(document).ready(function() {
 		};
 	});
 	
+	/*Elusive Target Button*/
 	$('#etamount').html( $('#etslider').val() );
 	$('#etslider').on('input', function () {
 		$('#etamount').html( $(this).val() );
@@ -687,19 +715,7 @@ $(document).ready(function() {
 		};
 	});
 	
-	if($("#modeselect").val() == "CONEASY") {
-		$("#mode_con").addClass("intel").find("span").text("[Intel]");
-		stopItMain();
-		stopItElusive();
-	} else if ($("#modeselect").val() == "CONHARD") {
-		$("#mode_con").removeClass("intel").addClass("hunt").find("span").text("[Hunt]");
-		stopItMain();
-		stopItElusive();
-	} else if ($("#modeselect").val() == "ELUSIVE") {
-		stopItMain();
-		stopItContracts();
-	};
-	
+	/***Kill Requirements & Extra/Photo Objective & Time Limit & Achieve Rating***/
 	$("#settings input:checkbox:not(:checked)").parent().find("span").text("[Off]");
 	$("#settings input:checkbox:checked").parent().find("span").text("[On]");
 	$("#settings input:checkbox").change(function(){
@@ -710,6 +726,8 @@ $(document).ready(function() {
 		};
 	});
 	
+	/***Force Start/Exit***/
+	/*Button*/
 	$("#extra_starex").click(function() {
 		if( $(this).hasClass("both") ) {
 			$(this).removeClass("both").addClass("start").find("span").text("[Start Only]");
@@ -733,6 +751,7 @@ $(document).ready(function() {
 		};
 	});
 	
+	/*Refresh*/
 	if($("#startexit").val() == "OFF") {
 		$("#extra_starex").removeClass("both").addClass("off").find("span").text("[Off]");
 	} else if ($("#startexit").val() == "SECRET") {
@@ -742,9 +761,11 @@ $(document).ready(function() {
 	} else if ($("#startexit").val() == "START") {
 		$("#extra_starex").removeClass("both").addClass("start").find("span").text("[Start Only]");
 	} else if ($("#startexit").val() == "BOTH") {
-		
+		//Default
 	};	
 	
+	/***Restricted Mechanics***/
+	/*Button*/
 	$("#game_mech").click(function() {
 		if( $(this).hasClass("off") ) {
 			$(this).removeClass("off").addClass("h2").find("span").text("[H2/H3]");
@@ -760,6 +781,7 @@ $(document).ready(function() {
 		};
 	});
 	
+	/*Refresh*/
 	if($("#mechanics").val() == "H2") {
 		$("#game_mech").removeClass("off").addClass("h2").find("span").text("[H2/H3]");
 	} else if ($("#mechanics").val() == "H1") {
@@ -767,7 +789,9 @@ $(document).ready(function() {
 	} else if ($("#mechanics").val() == "OFF") {
 		
 	};
-		
+	
+	/***Force Difficulty***/
+	/*Button*/
 	$("#game_diff").click(function() {
 		if( $(this).hasClass("off") ) {
 			$(this).removeClass("off").addClass("dh2").find("span").text("[H2/H3]");
@@ -783,6 +807,7 @@ $(document).ready(function() {
 		};
 	});
 	
+	/*Refresh*/
 	if($("#difficulty").val() == "H2") {
 		$("#game_diff").removeClass("off").addClass("dh2").find("span").text("[H2/H3]");
 	} else if ($("#difficulty").val() == "H1") {
