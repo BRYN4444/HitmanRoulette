@@ -33,12 +33,31 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 
 ### Latest Updates:
 
+**March 17th, 2022**
+* **Roulette:**
+  * Select Missions:
+    * **Contract Mode Roulette:** Added to The Author and Patient Zero. This is only available within HITMAN III, and I specified as best as I could on the menu, but they are on by default (so note this is you're playing through H1 or H2).
+* **HITMAN:**
+  * **The Author:**
+    * **Contracts Mode Targets:** 83 added. (Includes NPCs reused in other missions on this location)
+	* **Photo Objective:** 1 added.
+  * **Patient Zero:**
+    * **Contracts Mode Targets:** 111 added. (Includes NPCs reused in other missions on this location)
+	* **Extra Objective:** 1 added (carryover from Situs Inversus). 1 image updated. Also, "You Know the Number" (based on the in-game Challenge) is now restricted to Mission Mode Roulette due to the virus spread being removed in Contracts Mode. While still possible to Silent Assassin, this could be a very time-consuming Extra Objective, and has been noted in the objective.
+* **Other Fixes:**
+  * Enabling Contracts Mode Roulette and using the All Locations selection would sometime lock your choices. This has been fixed; only Contract Mode allowed missions will toggle under these conditions.
+  * Better clarified some position Intel for Contract Mode Targets in World of Tomorrow and Situs Inversus. Also fixed a misspelled name.
+  * Removed a few duplicate Contract Target images.
+* **Current Plans:**
+  * Jeff in H3 Contracts Mode seems to work the same as he does in regular Missions: finicky. Contemplating how to implement him, if at all?
+  * Double checking past work for inconsistencies between game versions, such as NPCs existing in H2/3 that don't in H1 or vice versa. Otherwise, updates will be slow until the new location "Rocky" is added.
+
+---
+
 **January 10, 2022**
 * **HITMAN:**
   * **Freedom Fighters:**
     * **Contract Mode Targets:** 2 removed due to differences between HITMAN III and prior releases.
-* **Current Plans:**
-  * Happy new year! I'm mostly waiting on Hitman III's upcoming Year 2 plans to see what missions might be added to the Roulette.
 
 ---
 
@@ -132,24 +151,3 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 * **Other Fixes:**
   * If any Accident Elimination is randomized for the target in Untouchable, the roulette will now specify the only available accident kill. This was only working partially before.
   * Fixed misspelled Contract Target name in The Finish Line & Three-Headed Serpent.
-
----
-
-**October 28, 2021**
-* **HITMAN:**
-  * **Situs Inversus:**
-    * **Contracts Mode Targets:** 127 more added. Updated the images of the existing ones with their HITMAN III versions.
-	* **Extra Objectives:** 3 more added.
-    * **Photo Objectives:** 9 added.
-  * **Patient Zero:**
-    * **"Eliminate Any Infected" Objective:** Renamed to "Infected" and replaced image to match in game. Reworded description text to be more concise.
-	* **Extra Objectives:** 1 more added.
-    * **Photo Objectives:** 6 added.
-  * Other Small Updates:
-    * **Hokkaido (All Missions) - "Hiking Route" Exit:** Renamed to "Mountain Path" to better match the Starting Location.
-* **Other Fixes:**
-  * Erich Soders' target specific eliminations on Situs Inversus were having their labeling cut off when "Forced Melee Methods" was disabled.
-  * Fixed a coding issue where the Complication "One Save Only" wasn't properly appearing in Roulette generation. Also, it will only appear in missions that allow saving as long as "Force Difficulty" is disabled.
-  * A Complication "One Disguise Change" was previously removed due to another Complication, "No Disguise Changes", causing redundancy. It is now coded so that as long as "Specific Disguises" is disabled, one of these two Complications have an equal chance of appearing (rather than the potential of both).
-  * The Allow Complications setting was displaying an incorrect value when refreshing/reloading (not hard refreshing/reloading) the page.
-  * Removed a few more duplicate Contracts Mode Target images.
