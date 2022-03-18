@@ -218,26 +218,37 @@ function containerToResult(container) {
 	//Changes Iconography For Mission/Contract/Escalation/Elusive/Sarajevo
 	if (container.missionTitle == "The Director" || container.missionTitle == "The Enforcer" || container.missionTitle == "The Extractor" || container.missionTitle == "The Veteran" || container.missionTitle == "The Mercenary" || container.missionTitle == "The Controller") {
 		result.type = "on-sj6";
+		result.cm = "";
 		result.missionTitle = container.missionTitle;
 	}
 	else if (mode == "ELUSIVE") {
 		result.type = "on-elu";
+		result.cm = " (Elusive Target)";
 		result.missionTitle = container.missionTitle;
 	}
 	else if((mode == "CONEASY" || mode == "CONHARD") && container.missionTitle == "Freeform Training") {
 		result.type = "on-con";
+		result.cm = " (Contracts Mode)";
 		result.missionTitle = "Tutorial";
+	}
+	else if((mode == "CONEASY" || mode == "CONHARD") && (container.missionTitle == "The Author" || container.missionTitle == "Patient Zero") ) {
+		result.type = "on-con";
+		result.cm = " (H3 Contracts Mode)";
+		result.missionTitle = container.missionTitle;
 	}
 	else if (mode == "CONEASY" || mode == "CONHARD") {
 		result.type = "on-con";
+		result.cm = " (Contracts Mode)";
 		result.missionTitle = container.missionTitle;
 	}
 	else if (container.missionTitle == "Dartmoor Garden Show") {
 		result.type = "on-esc";
+		result.cm = "";
 		result.missionTitle = container.missionTitle;
 	}
 	else {
 		result.type = "on";
+		result.cm = "";
 		result.missionTitle = container.missionTitle;
 	};
 		
@@ -322,7 +333,7 @@ function writeEverything(result) {
 	//Location, Mission name, and background image
 	document.body.className = "hide"
 	document.getElementById("background").className = result.missionCode;
-	document.getElementById("map_place").innerHTML = result.missionLocation;
+	document.getElementById("map_place").innerHTML = result.missionLocation + result.cm;
 	document.getElementById("map").className = result.type;
 	document.getElementById("map_name").innerHTML = result.missionTitle;
 	
@@ -487,6 +498,7 @@ function writeEverything(result) {
 			//	"'><div id='overlay-intel" + (i+1) + "'>" + result.targets[i].split('|')[1] + "</div><div id='nameplate'><span><p id='title'>Target</p><p id='subtitle'>" + result.targets[i].split('|')[0] + "</p></span></div></div></div>";
 			document.getElementById("input_target" + (i+1)).value = "\nEliminate " + result.targets[i].split('|')[0];
 			document.getElementById("input_targetintel" + (i+1)).value = "\n └ Intel: " + result.targets[i].split('|')[1]; // Contracts Mode Target Intel
+			document.getElementById("input_contract").value = result.cm;
 			if(result.missionCode == "training" && (mode == "MAIN" || mode == "ELUSIVE") && fftfailsafe.includes(result.weapons[i]) ) { // Specific Weapons on ICA Boat 
 				document.getElementById("subtitle-method" + (i+1)).innerHTML = "Any Method";
 				document.getElementById("subtitle-alt-method" + (i+1)).innerHTML = "";
@@ -567,17 +579,15 @@ function writeEverything(result) {
 				document.getElementById("inteltoggle" + (i+1)).style.setProperty("display", "none", "important");//also remove inteltoggle in target generation
 				document.getElementById("input_targetintel" + (i+1)).value = "";
 				//document.getElementById("overlay-intel" + (i+1)).style.setProperty("display", "none", "important");
-				if(mode == "CONHARD")
-					document.getElementById("input_contract").value = " (Contracts Mode)";
-				else
-					document.getElementById("input_contract").value = "";
 			}
+			
+			/*
 			else {
 				if (result.missionCode == "gardenshow")
 					document.getElementById("input_contract").value = "";
 				else
-					document.getElementById("input_contract").value = " (Contracts Mode)";
-			};
+					document.getElementById("input_contract").value = " (Contracts Modet)";
+			};*/
 		}
 		else { // no more targets
 			document.getElementById("target" + (i+1)).innerHTML = "";
