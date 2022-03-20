@@ -33,6 +33,15 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 
 ### Latest Updates:
 
+**March 19th, 2022**
+* **HITMAN:**
+  * **The Author & Patient Zero:**
+    * **Contracts Mode Targets:** NPC "Jeff" added. Note: He only appears if you've 'saved' him linearly through the Patient Zero Campaign (look up a guide). In the Patient Zero Mission he drops three random weapons, two of which aren't in the mission normally. I would have added these to the Roulette's data, but since they're random each time you start the mission that would be a randoimizer on top of a randomizer and could lead to real frustration (if you roll a elimination method that works with the weapons he drops, then congrats).
+* **Current Plans:**
+  * Double checking past work for inconsistencies between game versions, such as NPCs existing in H2/3 that don't in H1 or vice versa. If you know of any, please post so on this Github's Issues page! Otherwise, updates will be slow until the new location "Rocky" is added.
+
+---
+
 **March 17th, 2022**
 * **Roulette:**
   * Select Missions:
@@ -48,9 +57,6 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
   * Enabling Contracts Mode Roulette and using the All Locations selection would sometime lock your choices. This has been fixed; only Contract Mode allowed missions will toggle under these conditions.
   * Better clarified some position Intel for Contract Mode Targets in World of Tomorrow and Situs Inversus. Also fixed a misspelled name.
   * Removed a few duplicate Contract Target images.
-* **Current Plans:**
-  * Jeff in H3 Contracts Mode seems to work the same as he does in regular Missions: finicky. Contemplating how to implement him, if at all?
-  * Double checking past work for inconsistencies between game versions, such as NPCs existing in H2/3 that don't in H1 or vice versa. Otherwise, updates will be slow until the new location "Rocky" is added.
 
 ---
 
@@ -125,29 +131,3 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 **December 16, 2021**
 * **Roulette:**
   * **Resolution/Zoom Warning:** Changes have been made to the phrasing and implementation of this warning. It will no longer block access to the Roulette outright. Instead, the warning will display at the top of the page and can be closed out of.
-
----
-
-**December 6, 2021**
-* **Roulette:**
-  * **Select Missions:**
-    * **Default:** With Holiday Hoarders now available in Hitman III, this Seasonal Content Mission is now toggled on by default in the Roulette, like all Hitman III Available Locations.
-* **HITMAN 2:**
-  * **Nightcall:**
-    * **Contracts Mode Targets:** 14 more added. Updated the images of the existing ones with their HITMAN III versions.
-	* **Extra Objectives:** 1 more added.
-    * **Photo Objectives:** 6 added.
-  * **The Finish Line:**
-    * **Contracts Mode Targets:** Updated target images with their HITMAN III versions.
-	* **Extra Objectives:** Readded "Blackmail", based off a challenge that was bugged at HITMAN 3's Launch.
-    * **Photo Objectives:** 16 added.
-  * **A Silver Tongue:**
-    * **Photo Objectives:** 4 added.
-  * **Three-Headed Serpent:**
-    * **Contracts Mode Targets:** Updated target images with their HITMAN III versions.
-    * **Photo Objectives:** 15 added.
-  * **Embrace Of The Serpent:**
-    * **Photo Objectives:** 2 added.
-* **Other Fixes:**
-  * If any Accident Elimination is randomized for the target in Untouchable, the roulette will now specify the only available accident kill. This was only working partially before.
-  * Fixed misspelled Contract Target name in The Finish Line & Three-Headed Serpent.
