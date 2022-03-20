@@ -1244,7 +1244,7 @@ div[class^="ElusiveTarget"] { background-image: url('../img/targetcon/NPC.jpg');
 .JohnDoe-cult { background-image: url('../img/targetcon/JohnDoe.jpg'); }
 .EricPreston-cult { background-image: url('../img/targetcon/EricPreston.jpg'); }
 .KirckSackville-cult { background-image: url('../img/targetcon/KirckSackville.jpg'); }
-.Jeff-cult { background-image: url('../img/targetcon/Jeff.jpg'); }
+.Jeff-cult, .Jeff-handoff, .Jeff-spread { background-image: url('../img/targetcon/Jeff.jpg'); }
 .Rebecca-cult { background-image: url('../img/targetcon/Rebecca.jpg'); }
 .WilliamCavanagh-cult { background-image: url('../img/targetcon/WilliamCavanagh.jpg'); }
 .MichaelPeterson-cult { background-image: url('../img/targetcon/MichaelPeterson.jpg'); }
