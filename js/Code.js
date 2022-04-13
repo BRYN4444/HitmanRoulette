@@ -41,6 +41,8 @@ function createExtrasList(exit, eexit) {
 	var extras = [];
 	var modeIndex = document.getElementById("modeselect");
 	var mode = modeIndex.options[modeIndex.selectedIndex].value;
+	var disguiseIndex = document.getElementById("disguise");
+	var disguise = disguiseIndex.options[disguiseIndex.selectedIndex].value;
 	
 	if (Math.random() < 0.50)
 		extras.push("No Recordings|Do not get recorded by a security camera. If you are recorded, you must destroy the evidence.");
@@ -51,7 +53,7 @@ function createExtrasList(exit, eexit) {
 	if (Math.random() < 0.40)
 		extras.push("No Bodies Found|No dead or unconscious bodies may be found. This does not include victims of accidents or poisoning.");
 
-	if (Math.random() < 0.30 && document.getElementById("disguise").checked == 0 && !disguiseExits.includes(exit, eexit) ) {
+	if (Math.random() < 0.30 && disguise == "OFF" && !disguiseExits.includes(exit, eexit) ) {
 		if (Math.random() < 0.50)
 			extras.push("No Disguise Changes|Do not change from your starting disguise at any time during the mission.");
 		else
@@ -101,16 +103,18 @@ function createWeaponList(container) {
 	// add Soders-specific kill if relevant. =/
 	var modeIndex = document.getElementById("modeselect");
 	var mode = modeIndex.options[modeIndex.selectedIndex].value;
-	if (mode == "MAIN" && container.missionTitle === "Situs Inversus" && document.getElementById("firearm").checked == 1 && document.getElementById("disguise").checked == 1 && !(no_methods_selected)) {
+	var disguiseIndex = document.getElementById("disguise");
+	var disguise = disguiseIndex.options[disguiseIndex.selectedIndex].value;
+	if (mode == "MAIN" && container.missionTitle === "Situs Inversus" && document.getElementById("firearm").checked == 1 && disguise != "OFF" && !(no_methods_selected)) {
 		kills[0] = container.sodersKillsFD[Math.floor(Math.random()*container.sodersKillsFD.length)];
 	}
-	else if (mode == "MAIN" && container.missionTitle === "Situs Inversus" && document.getElementById("firearm").checked == 1 && document.getElementById("disguise").checked == 0 && !(no_methods_selected)) {
+	else if (mode == "MAIN" && container.missionTitle === "Situs Inversus" && document.getElementById("firearm").checked == 1 && disguise == "OFF" && !(no_methods_selected)) {
 		kills[0] = container.sodersKillsF[Math.floor(Math.random()*container.sodersKillsF.length)];
 	}
-	else if (mode == "MAIN" && container.missionTitle === "Situs Inversus" && document.getElementById("firearm").checked == 0 && document.getElementById("disguise").checked == 1 && !(no_methods_selected)) {
+	else if (mode == "MAIN" && container.missionTitle === "Situs Inversus" && document.getElementById("firearm").checked == 0 && disguise != "OFF" && !(no_methods_selected)) {
 		kills[0] = container.sodersKillsD[Math.floor(Math.random()*container.sodersKillsD.length)];
 	}
-	else if (mode == "MAIN" && container.missionTitle === "Situs Inversus" && document.getElementById("firearm").checked == 0 && document.getElementById("disguise").checked == 0 && !(no_methods_selected)) {
+	else if (mode == "MAIN" && container.missionTitle === "Situs Inversus" && document.getElementById("firearm").checked == 0 && disguise == "OFF" && !(no_methods_selected)) {
 		kills[0] = container.sodersKills[Math.floor(Math.random()*container.sodersKills.length)];
 	}
 	
@@ -128,9 +132,14 @@ function createDisguiseList(container, mission_information) {
 		container.disguises.splice(0,1);
 	
 	// For when 'Specific Disguises' is disabled
-	if (document.getElementById("disguise").checked)
+	var disguiseIndex = document.getElementById("disguise");
+	var disguise = disguiseIndex.options[disguiseIndex.selectedIndex].value;
+	if (disguise == "ON")
 		disguises =
 			container.disguises.slice().map(function(e){ return "" + e; });
+	else if (disguise == "ONPLUS")
+		disguises =
+			container.disguises.concat(container.disguiseVariants).slice().map(function(e){ return "" + e; });
 	else
 		disguises = ["Any Disguise", "Any Disguise", "Any Disguise", "Any Disguise", "Any Disguise"];
 	
