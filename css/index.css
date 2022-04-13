@@ -885,7 +885,7 @@ nav#menu button.on, nav#menu button:hover, nav#minimenu button:hover {
 			cursor: default !important;
 		}
 	}
-	@media only screen and (max-width: 375px) {
+	@media only screen and (max-width: 405px) {
 		nav#menu button { font-size:15px; }
 	}
 nav#minimenu {
