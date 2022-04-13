@@ -524,35 +524,50 @@ $(document).ready(function() {
 		$( "label[id^='theme_']" ).show();
 		$( "label[id^='mode_'], label[id^='kill_'], label[id^='extra_'], label[id^='game_']" ).hide();
 		$( this ).siblings().removeClass( "on" );
-		$( "#settings_descriptions p" ).html("");
+		if(jQuery.browser.mobile)
+			$( "#settings_descriptions p" ).html("Touch [INFO] for a description of the adjacent setting.");
+		else
+			$( "#settings_descriptions p" ).html("");
 	});
 	$( "#settings_roulette" ).click(function() {
 		$( this ).addClass( "on" );
 		$( "label[id^='mode_']" ).show();
 		$( "label[id^='theme_'], label[id^='kill_'], label[id^='extra_'], label[id^='game_']" ).hide();
 		$( this ).siblings().removeClass( "on" );
-		$( "#settings_descriptions p" ).html("");
+		if(jQuery.browser.mobile)
+			$( "#settings_descriptions p" ).html("Touch [INFO] for a description of the adjacent setting.");
+		else
+			$( "#settings_descriptions p" ).html("");
 	});
 	$( "#settings_kills" ).click(function() {
 		$( this ).addClass( "on" );
 		$( "label[id^='kill_']" ).show();
 		$( "label[id^='theme_'], label[id^='mode_'], label[id^='extra_'], label[id^='game_']" ).hide();
 		$( this ).siblings().removeClass( "on" );
-		$( "#settings_descriptions p" ).html("");
+		if(jQuery.browser.mobile)
+			$( "#settings_descriptions p" ).html("Touch [INFO] for a description of the adjacent setting.");
+		else
+			$( "#settings_descriptions p" ).html("");
 	});
 	$( "#settings_extras" ).click(function() {
 		$( this ).addClass( "on" );
 		$( "label[id^='extra_']" ).show();
 		$( "label[id^='theme_'], label[id^='mode_'], label[id^='kill_'], label[id^='game_']" ).hide();
 		$( this ).siblings().removeClass( "on" );
-		$( "#settings_descriptions p" ).html("");
+		if(jQuery.browser.mobile)
+			$( "#settings_descriptions p" ).html("Touch [INFO] for a description of the adjacent setting.");
+		else
+			$( "#settings_descriptions p" ).html("");
 	});
 	$( "#settings_challenges" ).click(function() {
 		$( this ).addClass( "on" );
 		$( "label[id^='game_']" ).show();
 		$( "label[id^='theme_'], label[id^='mode_'], label[id^='extra_'], label[id^='kill_']" ).hide();
 		$( this ).siblings().removeClass( "on" );
-		$( "#settings_descriptions p" ).html("");
+		if(jQuery.browser.mobile)
+			$( "#settings_descriptions p" ).html("Touch [INFO] for a description of the adjacent setting.");
+		else
+			$( "#settings_descriptions p" ).html("");
 	});
 	
 	/******Range Value Displayed for Complications Slider******/
@@ -725,6 +740,32 @@ $(document).ready(function() {
 			$(this).parent().find("span").text("[Off]");
 		};
 	});
+	
+	/***Specific Disguise***/
+	/*Button*/
+	$("#kill_disguise").click(function() {
+		if( $(this).hasClass("on") ) {
+			$(this).removeClass("on").addClass("onplus").find("span").text("[On+]");
+			$("#disguise").val("ONPLUS");
+		}
+		else if( $(this).hasClass("onplus") ) {
+			$(this).removeClass("onplus").addClass("off").find("span").text("[Off]");
+			$("#disguise").val("OFF");
+		}
+		else if( $(this).hasClass("off") ) {
+			$(this).removeClass("off").addClass("on").find("span").text("[On]");
+			$("#disguise").val("ON");
+		};
+	});
+	
+	/*Refresh*/
+	if($("#disguise").val() == "OFF") {
+		$("#kill_disguise").removeClass("on").addClass("off").find("span").text("[Off]");
+	} else if ($("#disguise").val() == "ONPLUS") {
+		$("#extra_starex").removeClass("on").addClass("onplus").find("span").text("[On+]");
+	} else if ($("#disguise").val() == "ON") {
+		//Default
+	};	
 	
 	/***Force Start/Exit***/
 	/*Button*/
