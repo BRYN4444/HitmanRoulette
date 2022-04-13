@@ -235,13 +235,13 @@
 							</ul>
 							<img id="list" class="shrink" src="./img/general/blank.png">
 							<p id="wording" style="padding-right:5px">
-								<b><a href="https://github.com/BRYN4444/HitmanRoulette#latest-updates" target="_blank">Update:</a></b> Contracts Mode Roulette for The Author & Patient Zero! (H3)
-								<!--Check on <a href="https://github.com/BRYN4444/HitmanRoulette#latest-updates" target="_blank">GitHub</a> for details on the latest Roulette updates.//-->
+								<!--<b><a href="https://github.com/BRYN4444/HitmanRoulette#latest-updates" target="_blank">Update:</a></b> Contracts Mode Roulette for The Author & Patient Zero! (H3)//-->
+								Check on <a href="https://github.com/BRYN4444/HitmanRoulette#latest-updates" target="_blank">GitHub</a> for details on the latest Roulette updates.
 							</p>
 						</div>
 						<div id="nameplate">
 							<span>
-								<p id="title">Last Updated: March 19th, 2021</p>
+								<p id="title">Last Updated: April 12th, 2021</p>
 								<p id="subtitle">Roulette Features</p>
 							</span>
 						</div>
@@ -1006,9 +1006,8 @@
 					<!--<label id="mode_ol" style="display:none;" data-hover="Replaces the “Export Roulette” button in the corner with “Enable Overlay”. When the Stream Overlay is enabled, the webpage will go transparent except for mission objectives listed as they would be in game. This would allow you to stream the game with the Roulette's targets and objectives layered over top.<br /><br />Once enabled, read the shown instructions on how to use.">
 						<b>Stream Overlay Mode</b><span>[Off]</span>
 					</label>//-->
-					<label id="kill_m" class="mobile" style="display:none;" data-hover="On: Adds a random mission specific disguise requirement for each elimination. These are not shared between targets.<br /><br />Off: Any disguise can be worn during eliminations.">[INFO]:</label>
-					<label id="kill_disguise" for="disguise" style="display:none;" data-hover="On: Adds a random mission specific disguise requirement for each elimination. These are not shared between targets.<br /><br />Off: Any disguise can be worn during eliminations.">
-						<input type="checkbox" id="disguise" value="true" checked />
+					<label id="kill_m" class="mobile" style="display:none;" data-hover="On: Adds a random mission specific disguise requirement for each elimination. These are not shared between targets.<br /><br />On+: In a few missions, some disguises have variants that are counted as different for Contracts Mode. These are added to the pool for elimination disguise requirements.<br /><br />Off: Any disguise can be worn during eliminations.">[INFO]:</label>
+					<label id="kill_disguise" class="on" style="display:none;" data-hover="On: Adds a random mission specific disguise requirement for each elimination. These are not shared between targets.<br /><br />On+: In a few missions, some disguises have variants that are counted as different for Contracts Mode. These are added to the pool for elimination disguise requirements.<br /><br />Off: Any disguise can be worn during eliminations.">
 						<b>Specific Disguises</b><span>[On]</span>
 					</label>
 					<label id="kill_m" class="mobile" style="display:none;" data-hover="On: Mission specific melee weapons can appear as elimination methods. Pulls from the mission's available lethal weaponry, including hard to find ones.<br /><br />Off: Melee weapons do not appear as elimination methods.">[INFO]:</label>
@@ -1079,6 +1078,11 @@
 						<option value="CONEASY">Contracts Mode: Intel</option>
 						<option value="CONHARD">Contracts Mode: Hunt</option>
 						<option value="ELUSIVE">Elusive Target</option>
+					</select>
+					<select id="disguise" style="display:none;">
+						<option value="ON" selected>Specific Disguises</option>
+						<option value="ONPLUS">Specific Disguises with Variations</option>
+						<option value="OFF">Any Disguise</option>
 					</select>
 					<select id="startexit" style="display:none;">
 						<option value="BOTH" selected>Both Start/Exit</option>
