@@ -33,12 +33,27 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 
 ### Latest Updates:
 
+**April 12th, 2022**
+* **Roulette:**
+  * Roulette Settings:
+    * **Kill Requirements > Specific Disguises:** Added a "On+" selection. In a few missions, some disguises have variants that are counted as different for Contracts Mode. When "On+" is selected, these are added to the pool for elimination disguise requirements. Currently, the outfits are: VIP Patient (Unmasked Portman) in non-PZ Hokkaido missions, Garbage Man (Undercover) & Gardener (Undercover) in Whittleton Creek missions, and any ICA Agent disguise in Berlin.
+* **HITMAN:**
+  * **World of Tomorrow:**
+    * **Contract Mode Targets:** 2 removed due to differences between HITMAN III and prior releases.
+  * **Situs Inversus:**
+    * **Contract Mode Targets:** 2 removed due to differences between HITMAN III and prior releases.
+* **Other Fixes:**
+  * When Mobile browsing, added a sentence mentioning to touch the [INFO] text to display descriptions for settings.
+  * Minor style improvment for mobile browsing.
+* **Current Plans:**
+  * Double checking past work for inconsistencies between game versions, such as NPCs existing in H2/3 that don't in H1 or vice versa. If you know of any, please post so on this Github's Issues page! Otherwise, updates will be slow until the new location "Rocky" is added.
+
+---
+
 **March 19th, 2022**
 * **HITMAN:**
   * **The Author & Patient Zero:**
     * **Contracts Mode Targets:** NPC "Jeff" added. Note: He only appears if you've 'saved' him linearly through the Patient Zero Campaign (look up a guide). In the Patient Zero Mission he drops three random weapons, two of which aren't in the mission normally. I would have added these to the Roulette's data, but since they're random each time you start the mission that would be a randoimizer on top of a randomizer and could lead to real frustration (if you roll a elimination method that works with the weapons he drops, then congrats).
-* **Current Plans:**
-  * Double checking past work for inconsistencies between game versions, such as NPCs existing in H2/3 that don't in H1 or vice versa. If you know of any, please post so on this Github's Issues page! Otherwise, updates will be slow until the new location "Rocky" is added.
 
 ---
 
@@ -125,9 +140,3 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 * **HITMAN:**
   * **Holiday Hoarders:**
     * **Photo Objectives:** 9 added. (Been very IRL busy, but wanted to get these out before Christmas.)
-  
----
-
-**December 16, 2021**
-* **Roulette:**
-  * **Resolution/Zoom Warning:** Changes have been made to the phrasing and implementation of this warning. It will no longer block access to the Roulette outright. Instead, the warning will display at the top of the page and can be closed out of.
