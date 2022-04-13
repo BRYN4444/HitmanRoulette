@@ -597,7 +597,6 @@ div[class^="ElusiveTarget"] { background-image: url('../img/targetcon/NPC.jpg');
 .FabianoTorraca-virus, .FabianoTorraca-handoff { background-image: url('../img/targetcon/FabianoTorraca.jpg'); }
 .EdmondoGiordano-virus, .AraldoLabate-virus, .EdmondoGiordano-handoff { background-image: url('../img/targetcon/EdmondoGiordano.jpg'); }
 .TerenzioFamiglietti-virus { background-image: url('../img/targetcon/TerenzioFamiglietti.jpg'); }
-.DanielSamper-virus, .DanielSamper-handoff { background-image: url('../img/targetcon/DanielSamper.jpg'); }
 .PaoloFellegara-virus, .PaoloFellegara-handoff { background-image: url('../img/targetcon/PaoloFellegara.jpg'); }
 .VeronicaMantovani-virus, .VeronicaMantovani-handoff { background-image: url('../img/targetcon/VeronicaMantovani.jpg'); }
 .SavinoAngelo-virus { background-image: url('../img/targetcon/SavinoAngelo.jpg'); }
@@ -661,7 +660,7 @@ div[class^="ElusiveTarget"] { background-image: url('../img/targetcon/NPC.jpg');
 .ArcibaldoNasi-virus { background-image: url('../img/targetcon/ArcibaldoNasi.jpg'); }
 .GiuseppaFerri-virus { background-image: url('../img/targetcon/GiuseppaFerri.jpg'); }
 .PaoloParella-virus { background-image: url('../img/targetcon/PaoloParella.jpg'); }
-.GiulianoEsposito-virus, .OlintoTrevisan-virus { background-image: url('../img/targetcon/GiulianoEsposito.jpg'); }
+.OlintoTrevisan-virus { background-image: url('../img/targetcon/OlintoTrevisan.jpg'); }
 .ArgeliaDegrandi-virus { background-image: url('../img/targetcon/ArgeliaDegrandi.jpg'); }
 .FilibertoNucci-virus { background-image: url('../img/targetcon/FilibertoNucci.jpg'); }
 .ServerinoRomani-virus { background-image: url('../img/targetcon/ServerinoRomani.jpg'); }
@@ -816,7 +815,7 @@ div[class^="ElusiveTarget"] { background-image: url('../img/targetcon/NPC.jpg');
 .BasilioRomani-election { background-image: url('../img/targetcon/BasilioRomani.jpg'); }
 .AlessioBrunoAnselmo-election { background-image: url('../img/targetcon/StefanoOrecchio.jpg'); }
 .EnricoFerrara-election { background-image: url('../img/targetcon/GiovanniAnselmi.jpg'); }
-.FeliceLettiere-election { background-image: url('../img/targetcon/DanielSamper.jpg'); }
+.FeliceLettiere-election { background-image: url('../img/targetcon/FeliceLettiere.jpg'); }
 .OresteFerri-election, .CelsoCremonesi-election { background-image: url('../img/targetcon/FabianoMilani.jpg'); }
 .ArcangeloPiazza-election { background-image: url('../img/targetcon/AmintorePalmiero.jpg'); }
 .AuroraPiccolo-election { background-image: url('../img/targetcon/AuroraPiccolo.jpg'); }
@@ -856,7 +855,7 @@ div[class^="ElusiveTarget"] { background-image: url('../img/targetcon/NPC.jpg');
 .JamesKing-handoff { background-image: url('../img/targetcon/JamesKing.jpg'); }
 .DarioBuccio-handoff, .RaymondOwen-handoff { background-image: url('../img/targetcon/SergioAlba.jpg'); }
 .EttoreDeMarco-handoff { background-image: url('../img/targetcon/AndreaPenca.jpg'); }
-.DouglasTucker-handoff, .WilliamPearce-handoff { background-image: url('../img/targetcon/DanielSamper.jpg'); }
+.DouglasTucker-handoff, .WilliamPearce-handoff { background-image: url('../img/targetcon/FeliceLettiere.jpg'); }
 .BeppeCalabresi-handoff { background-image: url('../img/targetcon/UgolinoCatena.jpg'); }
 .VittoreBianchi-handoff { background-image: url('../img/targetcon/StefanoZelaschi.jpg'); }
 .RobertLester-handoff { background-image: url('../img/targetcon/GiovanniAnselmi.jpg'); }
@@ -1378,7 +1377,7 @@ div[class^="ElusiveTarget"] { background-image: url('../img/targetcon/NPC.jpg');
 .TenriShinosaki-heart, .TenriShinosaki-spread { background-image: url('../img/targetcon/TenriShinosaki.jpg'); }
 .MakioYanagisawa-heart, .HomareKanai-heart, .MakioYanagisawa-spread { background-image: url('../img/targetcon/MakioYanagisawa.jpg'); }
 .KinjiYamazaki-heart, .SorahikoSatou-heart, .KinjiYamazaki-spread { background-image: url('../img/targetcon/KinjiYamazaki.jpg'); }
-.MiamotoSan-heart, .Nokadota-heart, .MiamotoSan-spread { background-image: url('../img/targetcon/MiamotoSan.jpg'); }
+.Nokadota-heart{ background-image: url('../img/targetcon/Nokadota.jpg'); }
 .ShoudaiKurosawa-heart, .ShoudaiKurosawa-spread { background-image: url('../img/targetcon/ShoudaiKurosawa.jpg'); }
 .YukioMatsushima-heart, .YukioMatsushima-spread { background-image: url('../img/targetcon/YukioMatsushima.jpg'); }
 .EllinorYasuda-heart { background-image: url('../img/targetcon/EllinorYasuda.jpg'); }
