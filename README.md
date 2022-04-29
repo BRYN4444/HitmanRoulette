@@ -29,9 +29,20 @@ To quickly return the Roulette Settings back to default, preform a hard refresh 
 
 You can deselect any locations you do not own, but by default the Roulette works best with any edition of **HITMAN III** plus the **Access Pass: HITMAN 1 GOTY Edition** and **Access Pass: HITMAN 2 Gold**. However, there may be the odd conflicting trait that changed between past game releases in this trilogy. It is also important to note that the later the game sequel, the more gear is available to unlock for use. Since Contract Mode Targets are regular NPCs and Elimination Methods are randomly assigned, not every Target can be killed with every Method easily/silently.
 
-This was a hobby project I started in 2016/17 and have worked on during my free time as a way to brush up on my simple javascript, jQuery, and CSS knowledge as well as giving me more reason to play these new Hitman games well after unlocking everything. As such, I've only tested this at about a 1080p resolution using the browsers I frequent: Firefox and Chrome. Also I'm sure my additions to the existing code, as well as my own work, could use cleaning up here and there. If you find any issues or glaring conflicts with roulette results, [let me know via GitHub](https://github.com/BRYN4444/HitmanRoulette/issues) and I'll try and address it when I get the chance. - [BRYN](http://bryn.info/)
+This was a hobby project I started in 2016/17 and have worked on during my free time as a way to brush up on my simple javascript, jQuery, and CSS knowledge as well as giving me more reason to play these new Hitman games well after unlocking everything. As such, I've only tested this at about a 1080p resolution using the browsers I frequent: Firefox and Chrome. Also I'm sure my additions to the existing code, as well as my own work, could use cleaning up here and there. If you find any issues or glaring conflicts with roulette results, let me know [via GitHub](https://github.com/BRYN4444/HitmanRoulette/issues) or [on Hitman Forum](https://hitmanforum.com/t/13107) and I'll try and address it when I get the chance. - [BRYN](http://bryn.info/)
 
 ### Latest Updates:
+
+**April 29th, 2022**
+* **Roulette:**
+  * **About & Help:** Added a link to the [Hitman Roulette post on Hitman Forum](https://www.hitmanforum.com/t/13107), in case you have a question or issue and would rather not register here to post.
+* **HITMAN:**
+  * **The Showstopper:**
+    * **Contract Mode Targets:** 1 removed due to differences between HITMAN III and prior releases.
+* **Current Plans:**
+  * Double checking past work for inconsistencies between game versions, such as NPCs existing in H2/3 that don't in H1 or vice versa. If you know of any, please share here on Github's Issues page or in the Hitman Forum thread! Otherwise, updates will be slow until the new location "Rocky" is added (unless Freelancer has something the Roulette can add to the experience).
+
+---
 
 **April 12th, 2022**
 * **Roulette:**
@@ -45,15 +56,13 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 * **Other Fixes:**
   * When Mobile browsing, added a sentence mentioning to touch the [INFO] text to display descriptions for settings.
   * Minor style improvment for mobile browsing.
-* **Current Plans:**
-  * Double checking past work for inconsistencies between game versions, such as NPCs existing in H2/3 that don't in H1 or vice versa. If you know of any, please post so on this Github's Issues page! Otherwise, updates will be slow until the new location "Rocky" is added.
 
 ---
 
 **March 19th, 2022**
 * **HITMAN:**
   * **The Author & Patient Zero:**
-    * **Contracts Mode Targets:** NPC "Jeff" added. Note: He only appears if you've 'saved' him linearly through the Patient Zero Campaign (look up a guide). In the Patient Zero Mission he drops three random weapons, two of which aren't in the mission normally. I would have added these to the Roulette's data, but since they're random each time you start the mission that would be a randoimizer on top of a randomizer and could lead to real frustration (if you roll a elimination method that works with the weapons he drops, then congrats).
+    * **Contracts Mode Targets:** NPC "Jeff" added. Note: He only appears if you've 'saved' him linearly through the Patient Zero Campaign (look up a guide). In the Patient Zero Mission he drops three random weapons, two of which aren't in the mission normally. I would have added these to the Roulette's data, but since they're random each time you start the mission that would be a randomizer on top of a randomizer and could lead to real frustration (if you roll a elimination method that works with the weapons he drops, then congrats).
 
 ---
 
@@ -133,10 +142,3 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 * **Other Fixes:**
   * Updated some Intel for a handful of Contract Mode Targets in Hitman 2 missions.
   * Two Contract Mode Targets in The Arc Society had their names accidentally swapped with each other.
-
----
-
-**December 18, 2021**
-* **HITMAN:**
-  * **Holiday Hoarders:**
-    * **Photo Objectives:** 9 added. (Been very IRL busy, but wanted to get these out before Christmas.)
