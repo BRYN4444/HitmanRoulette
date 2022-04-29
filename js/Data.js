@@ -284,7 +284,6 @@ var showstopper = {
 	"Joseph Ducharme|Real name: Carson. CICADA Bodyguard for Max Decker, with him on the Terrace.",
 	"Daniel Duhamel|Show guest mingling in the Bar and Terrace area.",
 	"Pierrette de Brisay|Show guest mingling in the Bar and Terrace area.",
-	"Emmanuel Bourgeois|CICADA Bodyguard patrolling the Bar and Terrace area.",
 	"Anette Engstrom|Palace Staff member working the tables of the Bar.",
 	"Gwen Dawson|Guest, soon heading up to the auction from the Three Lions Fountain area.",
 	"Chappell Francoeur|Show guest being spied on by IAGO. Near the Palace Garden statue.",
