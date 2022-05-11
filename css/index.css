@@ -7,7 +7,7 @@ html, body {
 }
 html.h1theme { /* Variables for Hitman 1 Styled Theme & Images */
 	/* Background */
-	--regularbg:url("../img/general/h1theme/background.webp");
+	--regularbg:url("../img/general/h1theme/background.jpg");
 	--regularbggradient:linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 15%, rgba(0,0,0,0) 71%, rgba(0,0,0,0) 100%);
 	--regularbgcolor:#220307;
 	--missionbgfilter:sepia(1) brightness(0.4) hue-rotate(300deg) saturate(3) contrast(3);
@@ -35,7 +35,7 @@ html.h1theme { /* Variables for Hitman 1 Styled Theme & Images */
 	--contract:url("../img/general/h1theme/contract-frame.png");
 	--escalation:url("../img/general/h1theme/escalation-frame.png");
 	--elusive:url("../img/general/h1theme/elusive-frame.png");
-	--sarajevo:url("../img/general/h1theme/sarajevo-frame.png");
+	--sarajevo:url("../img/general/h1theme/sarajevo-zframe.png");
 	--arrowleft:url("../img/general/h1theme/arrow-left.png");
 	--arrowright:url("../img/general/h1theme/arrow-right.png");
 	--roulette:url("../img/general/h1theme/roulette-frame.png");
@@ -92,29 +92,27 @@ html.h1theme { /* Variables for Hitman 1 Styled Theme & Images */
 	--xedhover:url("../img/general/h1theme/xed-full.png");
 	--checked:url("../img/general/h1theme/checked-frame.png");
 	--checkedhover:url("../img/general/h1theme/checked-full.png");
-	--randomall:url("../img/general/h1theme/caution-frame.png");
-	--randomallhover:url("../img/general/h1theme/caution-full.png");
-	--randomallon:url("../img/general/h1theme/caution-full.png");
+	--randomall:url("../img/general/h1theme/global-frame.png");
+	--randomallhover:url("../img/general/h1theme/global-full.png");
+	--randomallon:url("../img/general/h1theme/global-full.png");
 	--h1:url("../img/general/h1theme/h1-frame.png");
 	--h1hover:url("../img/general/h1theme/h1-full.png");
 	--h1on:url("../img/general/h1theme/h1-full.png");
-	--h1dlc:url("../img/general/h1theme/h1p-frame.png");
-	--h1dlchover:url("../img/general/h1theme/h1p-full.png");
-	--h1dlcon:url("../img/general/h1theme/h1p-full.png");
 	--h2:url("../img/general/h1theme/h2-frame.png");
 	--h2hover:url("../img/general/h1theme/h2-full.png");
 	--h2on:url("../img/general/h1theme/h2-full.png");
-	--h2dlc:url("../img/general/h1theme/h2p-frame.png");
-	--h2dlchover:url("../img/general/h1theme/h2p-full.png");
-	--h2dlcon:url("../img/general/h1theme/h2p-full.png");
 	--h3:url("../img/general/h1theme/h3-frame.png");
 	--h3hover:url("../img/general/h1theme/h3-full.png");
 	--h3on:url("../img/general/h1theme/h3-full.png");
-	--h3off:url("../img/general/h1theme/h3-lframe.png");
-	--h3dlc:url("../img/general/h1theme/h3p-frame.png");
-	--h3dlchover:url("../img/general/h1theme/h3p-full.png");
-	--h3dlcon:url("../img/general/h1theme/h3p-full.png");
-	--h3dlcoff:url("../img/general/h1theme/h3p-lframe.png");
+	--hside:url("../img/general/h1theme/side-frame.png");
+	--hsidehover:url("../img/general/h1theme/side-full.png");
+	--hsideon:url("../img/general/h1theme/side-full.png");
+	--hpz:url("../img/general/h1theme/pz-frame.png");
+	--hpzhover:url("../img/general/h1theme/pz-full.png");
+	--hpzon:url("../img/general/h1theme/pz-full.png");
+	--hs6:url("../img/general/h1theme/sarajevo-frame.png");
+	--hs6hover:url("../img/general/h1theme/sarajevo-full.png");
+	--hs6on:url("../img/general/h1theme/sarajevo-full.png");
 	--lock:url("../img/general/h1theme/lock-frame.png");
 	--lockstripes:url("../img/general/h1theme/stripes.png");
 	--settingtheme:url("../img/general/h1theme/disguise-frame.png");
@@ -144,11 +142,11 @@ html.h1theme { /* Variables for Hitman 1 Styled Theme & Images */
 }
 html.h1gotytheme { /* Variables for Hitman 1 GOTY Styled Theme & Images */
 	/* Background */
-	--regularbg:url("../img/general/h1gotytheme/background.webp");
+	--regularbg:url("../img/general/h1gotytheme/background.jpg");
 	--regularbggradient:linear-gradient(to bottom, rgba(210,210,210,1) 0%, rgba(210,210,210,0.8) 30%, rgba(210,210,210,0.4) 100%);
 	--regularbgcolor:#aaaaaa;
 	--missionbgfilter: grayscale(1) contrast(0.33) brightness(1.3);
-	--missionbggradient:linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(210,210,210,0.4) 30%, rgba(210,210,210,0) 100%);
+	--missionbggradient:linear-gradient(to bottom, rgba(210,210,210,1) 0%, rgba(210,210,210,0.4) 30%, rgba(210,210,210,0) 100%);
 	--missionbgopacity:1;
 	/* Regular Styling */ --normalshadow:none; --normalcolor:#2c2c2c; --uppercase:none;
 	/* Link Styling */	--linkcolor:#ffffff; --linkhover:#2c2c2c; --linkshadow:none; --linkhovershadow:none;
@@ -172,7 +170,7 @@ html.h1gotytheme { /* Variables for Hitman 1 GOTY Styled Theme & Images */
 	--contract:url("../img/general/h1gotytheme/contract-dfull.png");
 	--escalation:url("../img/general/h1gotytheme/escalation-dfull.png");
 	--elusive:url("../img/general/h1gotytheme/elusive-dfull.png");
-	--sarajevo:url("../img/general/h1gotytheme/sarajevo-dfull.png");
+	--sarajevo:url("../img/general/h1gotytheme/sarajevo-zdfull.png");
 	--arrowleft:url("../img/general/h1gotytheme/arrow-left.png");
 	--arrowright:url("../img/general/h1gotytheme/arrow-right.png");
 	--roulette:url("../img/general/h1gotytheme/roulette-dframe.png");
@@ -229,29 +227,27 @@ html.h1gotytheme { /* Variables for Hitman 1 GOTY Styled Theme & Images */
 	--xedhover:url("../img/general/h1gotytheme/xed-full.png");
 	--checked:url("../img/general/h1gotytheme/checked-frame.png");
 	--checkedhover:url("../img/general/h1gotytheme/checked-full.png");
-	--randomall:url("../img/general/h1gotytheme/caution-lfull.png");
-	--randomallhover:url("../img/general/h1gotytheme/caution-dframe.png");
-	--randomallon:url("../img/general/h1gotytheme/caution-dframe.png");
+	--randomall:url("../img/general/h1gotytheme/global-lfull.png");
+	--randomallhover:url("../img/general/h1gotytheme/global-dframe.png");
+	--randomallon:url("../img/general/h1gotytheme/global-dframe.png");
 	--h1:url("../img/general/h1gotytheme/h1-lfull.png");
 	--h1hover:url("../img/general/h1gotytheme/h1-dframe.png");
 	--h1on:url("../img/general/h1gotytheme/h1-dframe.png");
-	--h1dlc:url("../img/general/h1gotytheme/h1p-lfull.png");
-	--h1dlchover:url("../img/general/h1gotytheme/h1p-dframe.png");
-	--h1dlcon:url("../img/general/h1gotytheme/h1p-dframe.png");
 	--h2:url("../img/general/h1gotytheme/h2-lfull.png");
 	--h2hover:url("../img/general/h1gotytheme/h2-dframe.png");
 	--h2on:url("../img/general/h1gotytheme/h2-dframe.png");
-	--h2dlc:url("../img/general/h1gotytheme/h2p-lfull.png");
-	--h2dlchover:url("../img/general/h1gotytheme/h2p-dframe.png");
-	--h2dlcon:url("../img/general/h1gotytheme/h2p-dframe.png");
 	--h3:url("../img/general/h1gotytheme/h3-lfull.png");
 	--h3hover:url("../img/general/h1gotytheme/h3-dframe.png");
 	--h3on:url("../img/general/h1gotytheme/h3-dframe.png");
-	--h3off:url("../img/general/h1gotytheme/h3-lframe.png");/**/
-	--h3dlc:url("../img/general/h1gotytheme/h3p-lfull.png");
-	--h3dlchover:url("../img/general/h1gotytheme/h3p-dframe.png");
-	--h3dlcon:url("../img/general/h1gotytheme/h3p-dframe.png");
-	--h3dlcoff:url("../img/general/h1gotytheme/h3p-lframe.png"); /**/
+	--hside:url("../img/general/h1gotytheme/side-lfull.png");
+	--hsidehover:url("../img/general/h1gotytheme/side-dframe.png");
+	--hsideon:url("../img/general/h1gotytheme/side-dframe.png");
+	--hpz:url("../img/general/h1gotytheme/pz-lfull.png");
+	--hpzhover:url("../img/general/h1gotytheme/pz-dframe.png");
+	--hpzon:url("../img/general/h1gotytheme/pz-dframe.png");
+	--hs6:url("../img/general/h1gotytheme/sarajevo-lfull.png");
+	--hs6hover:url("../img/general/h1gotytheme/sarajevo-dframe.png");
+	--hs6on:url("../img/general/h1gotytheme/sarajevo-dframe.png");
 	--lock:url("../img/general/h1gotytheme/lock-lframe.png");
 	--lockstripes:url("../img/general/h1gotytheme/stripes.png");
 	--settingtheme:url("../img/general/h1gotytheme/disguise-dframe.png");
@@ -281,7 +277,7 @@ html.h1gotytheme { /* Variables for Hitman 1 GOTY Styled Theme & Images */
 }
 html.h2theme { /* Variables for Hitman 2 Styled Theme & Images */
 	/* Background */
-	--regularbg:url("../img/general/h2theme/background.webp");
+	--regularbg:url("../img/general/h2theme/background.jpg");
 	--regularbggradient:linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 15%, rgba(0,0,0,0) 71%, rgba(0,0,0,0.4) 100%);
 	--regularbgcolor:#667077;
 	--missionbgfilter:none;
@@ -364,29 +360,27 @@ html.h2theme { /* Variables for Hitman 2 Styled Theme & Images */
 	--xedhover:url("../img/general/h2theme/xed-full.png");
 	--checked:url("../img/general/h2theme/checked-dframe.png");
 	--checkedhover:url("../img/general/h2theme/checked-full.png");
-	--randomall:url("../img/general/h2theme/caution-dframe.png");
-	--randomallhover:url("../img/general/h2theme/caution-full.png");
-	--randomallon:url("../img/general/h2theme/caution-dfull.png");
+	--randomall:url("../img/general/h2theme/global-dframe.png");
+	--randomallhover:url("../img/general/h2theme/global-full.png");
+	--randomallon:url("../img/general/h2theme/global-dfull.png");
 	--h1:url("../img/general/h2theme/h1-dframe.png");
 	--h1hover:url("../img/general/h2theme/h1-full.png");
 	--h1on:url("../img/general/h2theme/h1-dfull.png");
-	--h1dlc:url("../img/general/h2theme/h1p-dframe.png");
-	--h1dlchover:url("../img/general/h2theme/h1p-full.png");
-	--h1dlcon:url("../img/general/h2theme/h1p-dfull.png");
 	--h2:url("../img/general/h2theme/h2-dframe.png");
 	--h2hover:url("../img/general/h2theme/h2-full.png");
 	--h2on:url("../img/general/h2theme/h2-dfull.png");
-	--h2dlc:url("../img/general/h2theme/h2p-dframe.png");
-	--h2dlchover:url("../img/general/h2theme/h2p-full.png");
-	--h2dlcon:url("../img/general/h2theme/h2p-dfull.png");
 	--h3:url("../img/general/h2theme/h3-dframe.png");
 	--h3hover:url("../img/general/h2theme/h3-full.png");
 	--h3on:url("../img/general/h2theme/h3-dfull.png");
-	--h3off:url("../img/general/h2theme/h3-lframe.png");
-	--h3dlc:url("../img/general/h2theme/h3p-dframe.png");
-	--h3dlchover:url("../img/general/h2theme/h3p-full.png");
-	--h3dlcon:url("../img/general/h2theme/h3p-dfull.png");
-	--h3dlcoff:url("../img/general/h2theme/h3p-lframe.png");
+	--hside:url("../img/general/h2theme/side-dframe.png");
+	--hsidehover:url("../img/general/h2theme/side-full.png");
+	--hsideon:url("../img/general/h2theme/side-dfull.png");
+	--hpz:url("../img/general/h2theme/pz-dframe.png");
+	--hpzhover:url("../img/general/h2theme/pz-full.png");
+	--hpzon:url("../img/general/h2theme/pz-dfull.png");
+	--hs6:url("../img/general/h2theme/sarajevo-dframe.png");
+	--hs6hover:url("../img/general/h2theme/sarajevo-full.png");
+	--hs6on:url("../img/general/h2theme/sarajevo-dfull.png");
 	--lock:url("../img/general/h2theme/lock-lframe.png");
 	--lockstripes:url("../img/general/h2theme/stripes.png");
 	--settingtheme:url("../img/general/h2theme/disguise-frame.png");
@@ -411,19 +405,12 @@ html.h2theme { /* Variables for Hitman 2 Styled Theme & Images */
 	--saveoff:url("../img/general/h2theme/save-lframe.png");
 	--buttonsave:url("../img/general/h2theme/save-dframe.png");
 	--buttonsaveon:url("../img/general/h2theme/save-full.png");
-	--buttonsavedisabled:url("../img/general/h2theme/save-lframe.png");
-	--buttonoverlay:url("../img/general/h2theme/overlay-dframe.png");
-	--buttonoverlayon:url("../img/general/h2theme/overlay-full.png");
-	--buttonoverlayhelp:url("../img/general/h2theme/about-dframe.png");
-	--buttonoverlayhelpon:url("../img/general/h2theme/about-full.png");
-	--buttonsavereturn:url("../img/general/h2theme/arrow-right-dframe.png");
-	--buttonsavereturnon:url("../img/general/h2theme/arrow-right-full.png");
 	--buttonclose:url("../img/general/h2theme/xed-dframe.png");
 	--buttoncloseon:url("../img/general/h2theme/xed-full.png");
 }
 html.h3theme, html { /* Variables for Hitman 2 Styled Theme & Images */
 	/* Background */
-	--regularbg:url("../img/general/h3theme/background.webp");
+	--regularbg:url("../img/general/h3theme/background.jpg");
 	--regularbggradient:linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 15%, rgba(0,0,0,0) 71%, rgba(0,0,0,0.4) 100%);
 	--regularbgcolor:#091018;
 	--missionbgfilter:none;
@@ -506,29 +493,27 @@ html.h3theme, html { /* Variables for Hitman 2 Styled Theme & Images */
 	--xedhover:url("../img/general/h3theme/xed-full.png");
 	--checked:url("../img/general/h3theme/checked-frame.png");
 	--checkedhover:url("../img/general/h3theme/checked-full.png");
-	--randomall:url("../img/general/h3theme/caution-full.png");
-	--randomallhover:url("../img/general/h3theme/caution-full.png");
-	--randomallon:url("../img/general/h3theme/caution-lfull.png");
+	--randomall:url("../img/general/h3theme/global-full.png");
+	--randomallhover:url("../img/general/h3theme/global-full.png");
+	--randomallon:url("../img/general/h3theme/global-lfull.png");
 	--h1:url("../img/general/h3theme/h1-full.png");
 	--h1hover:url("../img/general/h3theme/h1-full.png");
 	--h1on:url("../img/general/h3theme/h1-lfull.png");
-	--h1dlc:url("../img/general/h3theme/h1p-full.png");
-	--h1dlchover:url("../img/general/h3theme/h1p-full.png");
-	--h1dlcon:url("../img/general/h3theme/h1p-lfull.png");
 	--h2:url("../img/general/h3theme/h2-full.png");
 	--h2hover:url("../img/general/h3theme/h2-full.png");
 	--h2on:url("../img/general/h3theme/h2-lfull.png");
-	--h2dlc:url("../img/general/h3theme/h2p-full.png");
-	--h2dlchover:url("../img/general/h3theme/h2p-full.png");
-	--h2dlcon:url("../img/general/h3theme/h2p-lfull.png");
 	--h3:url("../img/general/h3theme/h3-full.png");
 	--h3hover:url("../img/general/h3theme/h3-full.png");
 	--h3on:url("../img/general/h3theme/h3-lfull.png");
-	--h3off:url("../img/general/h3theme/h3-lframe.png");
-	--h3dlc:url("../img/general/h3theme/h3p-full.png");
-	--h3dlchover:url("../img/general/h3theme/h3p-full.png");
-	--h3dlcon:url("../img/general/h3theme/h3p-lfull.png");
-	--h3dlcoff:url("../img/general/h3theme/h3p-lframe.png");
+	--hside:url("../img/general/h3theme/side-full.png");
+	--hsidehover:url("../img/general/h3theme/side-full.png");
+	--hsideon:url("../img/general/h3theme/side-lfull.png");
+	--hpz:url("../img/general/h3theme/pz-full.png");
+	--hpzhover:url("../img/general/h3theme/pz-full.png");
+	--hpzon:url("../img/general/h3theme/pz-lfull.png");
+	--hs6:url("../img/general/h3theme/sarajevo-full.png");
+	--hs6hover:url("../img/general/h3theme/sarajevo-full.png");
+	--hs6on:url("../img/general/h3theme/sarajevo-lfull.png");
 	--lock:url("../img/general/h3theme/lock-lframe.png");
 	--lockstripes:url("../img/general/h3theme/stripes.png");
 	--settingtheme:url("../img/general/h3theme/disguise-full.png");
@@ -553,30 +538,8 @@ html.h3theme, html { /* Variables for Hitman 2 Styled Theme & Images */
 	--saveoff:url("../img/general/h3theme/save-lframe.png");
 	--buttonsave:url("../img/general/h3theme/save-full.png");
 	--buttonsaveon:url("../img/general/h3theme/save-full.png");
-	--buttonsavedisabled:url("../img/general/h3theme/save-lframe.png");
-	--buttonoverlay:url("../img/general/h3theme/overlay-full.png");
-	--buttonoverlayon:url("../img/general/h3theme/overlay-full.png");
-	--buttonoverlayhelp:url("../img/general/h3theme/about-full.png");
-	--buttonoverlayhelpon:url("../img/general/h3theme/about-full.png");
-	--buttonsavereturn:url("../img/general/h3theme/arrow-right-full.png");
-	--buttonsavereturnon:url("../img/general/h3theme/arrow-right-full.png");
 	--buttonclose:url("../img/general/h3theme/xed-full.png");
 	--buttoncloseon:url("../img/general/h3theme/xed-full.png");
-	
-	
-	
-	--overlaytarget:url("../img/general/h2theme/overlay-target.png");
-	--overlayintel:url("../img/general/h2theme/overlay-intel.png");
-	--overlayobjective:url("../img/general/h2theme/overlay-objective.png");
-	--overlaycamera:url("../img/general/h2theme/overlay-camera.png");
-	--overlaypin:url("../img/general/h2theme/overlay-pin.png");
-	--overlaypinlit:url("../img/general/h2theme/overlay-pinlit.png");
-	--overlayexit:url("../img/general/h2theme/overlay-exit.png");
-	--overlaycomplication:url("../img/general/h2theme/overlay-complication.png");
-	--overlaychallenge:url("../img/general/h2theme/overlay-challenge.png");
-	--overlaycomplete:url("../img/general/h2theme/overlay-complete.png");
-	--overlaycheck:url("../img/general/h2theme/overlay-check.png");
-	--overlayx:url("../img/general/h2theme/overlay-x.png");
 }
 
 body {
@@ -798,6 +761,7 @@ header.off {
 .historybtn {
 	display:inline;
 	font-size:15px;
+	font-weight:bold;
     text-shadow:var(--normalshadow);
 	padding:0;
 	border:none;
@@ -1430,23 +1394,22 @@ label:hover #nameplate.on { background-image:var(--checkedhover); }
 #submenu_h1, #subsubmenu_h1 { background-image:var(--h1); }
 #submenu_h1:hover, #subsubmenu_h1:hover { background-image:var(--h1hover); }
 #submenu_h1.on, #subsubmenu_h1.on { background-image:var(--h1on); }
-#submenu_h1dlc, #subsubmenu_h1dlc { background-image:var(--h1dlc); }
-#submenu_h1dlc:hover, #subsubmenu_h1dlc:hover { background-image:var(--h1dlchover); }
-#submenu_h1dlc.on, #subsubmenu_h1dlc.on { background-image:var(--h1dlcon); }
 #submenu_h2, #subsubmenu_h2 { background-image:var(--h2); }
 #submenu_h2:hover, #subsubmenu_h2:hover { background-image:var(--h2hover); }
 #submenu_h2.on, #subsubmenu_h2.on { background-image:var(--h2on); }
-#submenu_h2dlc, #subsubmenu_h2dlc { background-image:var(--h2dlc); }
-#submenu_h2dlc:hover, #subsubmenu_h2dlc:hover { background-image:var(--h2dlchover); }
-#submenu_h2dlc.on, #subsubmenu_h2dlc.on { background-image:var(--h2dlcon); }
 #submenu_h3, #subsubmenu_h3 { background-image:var(--h3); }
 #submenu_h3:hover, #subsubmenu_h3:hover { background-image:var(--h3hover); }
 #submenu_h3.on, #subsubmenu_h3.on { background-image:var(--h3on); }
-#submenu_h3.off, #subsubmenu_h3.off { background-image:var(--h3off); }
-#submenu_h3dlc, #subsubmenu_h3dlc { background-image:var(--h3dlc); }
-#submenu_h3dlc:hover, #subsubmenu_h3dlc:hover { background-image:var(--h3dlchover); }
-#submenu_h3dlc.on, #subsubmenu_h3dlc.on { background-image:var(--h3dlcon); }
-#submenu_h3dlc.off, #subsubmenu_h3dlc.off { background-image:var(--h3dlcoff); }
+#submenu_hside, #subsubmenu_hside { background-image:var(--hside); }
+#submenu_hside:hover, #subsubmenu_hside:hover { background-image:var(--hsidehover); }
+#submenu_hside.on, #subsubmenu_hside.on { background-image:var(--hsideon); }
+#submenu_hpz, #subsubmenu_hpz { background-image:var(--hpz); }
+#submenu_hpz:hover, #subsubmenu_hpz:hover { background-image:var(--hpzhover); }
+#submenu_hpz.on, #subsubmenu_hpz.on { background-image:var(--hpzon); }
+#submenu_hs6, #subsubmenu_hs6 { background-image:var(--hs6); }
+#submenu_hs6:hover, #subsubmenu_hs6:hover { background-image:var(--hs6hover); }
+#submenu_hs6.on, #subsubmenu_hs6.on { background-image:var(--hs6on); }
+
 .lock { 
 	background-color:var(--lockbg) !important;
 	background-image:var(--lockstripes) !important;
@@ -1936,33 +1899,6 @@ button#subsaveroulette { grid-area: 2 / 3 / 3 / 5; }
 	background-position:center;
 	background-size:100%;	
 }
-
-#submenu_random, #subsubmenu_random { background-image:var(--randomall); }
-#submenu_random:hover, #sububmenu_random:hover { background-image:var(--randomallhover); }
-#submenu_random.on, #subsubmenu_random.on { background-image:var(--randomallon); }
-#submenu_h1, #subsubmenu_h1 { background-image:var(--h1); }
-#submenu_h1:hover, #subsubmenu_h1:hover { background-image:var(--h1hover); }
-#submenu_h1.on, #subsubmenu_h1.on { background-image:var(--h1on); }
-#submenu_h1dlc, #subsubmenu_h1dlc { background-image:var(--h1dlc); }
-#submenu_h1dlc:hover, #subsubmenu_h1dlc:hover { background-image:var(--h1dlchover); }
-#submenu_h1dlc.on, #subsubmenu_h1dlc.on { background-image:var(--h1dlcon); }
-#submenu_h2, #subsubmenu_h2 { background-image:var(--h2); }
-#submenu_h2:hover, #subsubmenu_h2:hover { background-image:var(--h2hover); }
-#submenu_h2.on, #subsubmenu_h2.on { background-image:var(--h2on); }
-#submenu_h2dlc, #subsubmenu_h2dlc { background-image:var(--h2dlc); }
-#submenu_h2dlc:hover, #subsubmenu_h2dlc:hover { background-image:var(--h2dlchover); }
-#submenu_h2dlc.on, #subsubmenu_h2dlc.on { background-image:var(--h2dlcon); }
-#submenu_h3, #subsubmenu_h3 { background-image:var(--h3); }
-#submenu_h3:hover, #subsubmenu_h3:hover { background-image:var(--h3hover); }
-#submenu_h3.on, #subsubmenu_h3.on { background-image:var(--h3on); }
-#submenu_h3.off, #subsubmenu_h3.off { background-image:var(--h3off); }
-#submenu_h3dlc, #subsubmenu_h3dlc { background-image:var(--h3dlc); }
-#submenu_h3dlc:hover, #subsubmenu_h3dlc:hover { background-image:var(--h3dlchover); }
-#submenu_h3dlc.on, #subsubmenu_h3dlc.on { background-image:var(--h3dlcon); }
-#submenu_h3dlc.off, #subsubmenu_h3dlc.off { background-image:var(--h3dlcoff); }
-
-
-
 
 footer {
 	order: 5;
