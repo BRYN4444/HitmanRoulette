@@ -33,14 +33,26 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 
 ### Latest Updates:
 
+**May 10th, 2022**
+* **Roulette:**
+  * **Select Missions:** Reorganized the submenus closer to the campaign selection menu in HITMAN III. This thins out the denser menus, and groups together the sparser ones.
+  * **Roulette Appearance:** For the "Launch Red" and "GOTY White" Theme, the location image background were using CSS filters that were causing lag. The filters have been removed, removing this lag, and the images are now theme appropriate themselves now.
+* **Other Fixes:**
+  * When tabbing back to the Roulette main page after generating a roulette, the location background image would be missing.
+  * Updated a number of icons to better match their in-game glyphs, as well as adding icons for the new choices under Select Missions.
+  * Minor theme adjustments.
+* **Current Plans:**
+  * Preparing for Ambrose Island, Hitman III's upcoming new location.
+  * Double checking past work for inconsistencies between game versions, such as NPCs existing in H2/3 that don't in H1 or vice versa. If you know of any, please share here on Github's Issues page or in the Hitman Forum thread!
+
+---
+
 **April 29th, 2022**
 * **Roulette:**
   * **About & Help:** Added a link to the [Hitman Roulette post on Hitman Forum](https://www.hitmanforum.com/t/13107), in case you have a question or issue and would rather not register here to post.
 * **HITMAN:**
   * **The Showstopper:**
     * **Contract Mode Targets:** 1 removed due to differences between HITMAN III and prior releases.
-* **Current Plans:**
-  * Double checking past work for inconsistencies between game versions, such as NPCs existing in H2/3 that don't in H1 or vice versa. If you know of any, please share here on Github's Issues page or in the Hitman Forum thread! Otherwise, updates will be slow until the new location "Rocky" is added (unless Freelancer has something the Roulette can add to the experience).
 
 ---
 
@@ -55,7 +67,7 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
     * **Contract Mode Targets:** 2 removed due to differences between HITMAN III and prior releases.
 * **Other Fixes:**
   * When Mobile browsing, added a sentence mentioning to touch the [INFO] text to display descriptions for settings.
-  * Minor style improvment for mobile browsing.
+  * Minor style improvement for mobile browsing.
 
 ---
 
@@ -88,57 +100,3 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 * **HITMAN:**
   * **Freedom Fighters:**
     * **Contract Mode Targets:** 2 removed due to differences between HITMAN III and prior releases.
-
----
-
-**January 4, 2022**
-* **Roulette:**
-  * **Resolution/Zoom Warning:** Adjustment to the resolution size required to trigger the warning. Also changed the unicode character used as the close icon as it was auto-changing into an emoji on mobile Chrome.
-
----
-
-**January 3, 2022**
-* **Roulette:**
-  * **Select Missions:**
-    * **Default:** With the Hokkaido Snow Festival now available in Hitman III, this Seasonal Content Mission is now toggled on by default in the Roulette, like all Hitman III Available Locations.
-	* **Phrasing:** The "Toggle All" option is renamed from "H3 Accessable Locations" to "All Locations (Default)" now that every prior game mission is available within Hitman III.
-  * **Image File Formats:** For better browser compatability, all .WEBP files have been changed to .JPG files.
-* **HITMAN:**
-  * **Holiday Hoarders:**
-    * **Photo Objectives:** 1 more added.
-	* **Elimination Method:** The "Xmas Star" Lethal Melee item isn't available in the Hitman 1 version of Holiday Hoarders. Special text will now state any Lethal Throw or Melee weapon is allowed using the Roulette for Hitman 1.
-  * **Hokkaido Snow Festival:**
-    * **Select Mission Image:** Updated to match Hitman III.
-    * **Photo Objectives:** 5 added.
-* **HITMAN 2:**
-  * **Chasing a Ghost:**
-    * **Contracts Mode Targets:** Updated the images of the existing ones with their HITMAN III versions.
-    * **Photo Objectives:** 12 added.
-  * **Illusions of Grandeur:**
-    * **Photo Objectives:** 2 added.
-  * **Another Life:**
-    * **Contracts Mode Targets:** Updated target images with their HITMAN III versions.
-    * **Photo Objectives:** 11 added.
-  * **A Bitter Pill:**
-    * **Photo Objectives:** 2 added.
-  * **The Ark Society:**
-    * **Contracts Mode Targets:** Updated target images with their HITMAN III versions.
-	* **Extra Objectives:** 1 more added.
-    * **Photo Objectives:** 13 added.
-  * **Golden Handshake:**
-    * **Contracts Mode Targets:** Updated target images with their HITMAN III versions.
-	* **Extra Objectives:** 1 more added.
-    * **Photo Objectives:** 10 added.
-  * **The Last Resort:**
-    * **Contracts Mode Targets:** 1 more added. Updated target images with their HITMAN III versions.
-    * **Photo Objectives:** 12 added.
-* **HITMAN III:**
-  * **On Top Of The World:**
-    * **Photo Objectives:** 4 more added.
-  * **The Farewell:**
-  	* **Restored Exit:** "Tango With Diana" Exit. Only appears in Mission Mode Roulette, as eliminating Contract Mode Targets do not enable it.
-  	* **Added Exit:** "Shrine" Easter Egg Exit. Only appears for Suit Starting Locations.
-    * **Starting Location:** The Parking Lot starting location was using the incorrect image.
-* **Other Fixes:**
-  * Updated some Intel for a handful of Contract Mode Targets in Hitman 2 missions.
-  * Two Contract Mode Targets in The Arc Society had their names accidentally swapped with each other.
