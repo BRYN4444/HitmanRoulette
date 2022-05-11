@@ -235,13 +235,13 @@
 							</ul>
 							<img id="list" class="shrink" src="./img/general/blank.png">
 							<p id="wording" style="padding-right:5px">
-								<!--<b><a href="https://github.com/BRYN4444/HitmanRoulette#latest-updates" target="_blank">Update:</a></b> Contracts Mode Roulette for The Author & Patient Zero! (H3)//-->
+								<!--<b><a href="https://github.com/BRYN4444/HitmanRoulette#latest-updates" target="_blank">Update:</a></b> Ambrose Island Added! Soon: Contracts Mode Support.//-->
 								Check on <a href="https://github.com/BRYN4444/HitmanRoulette#latest-updates" target="_blank">GitHub</a> for details on the latest Roulette updates.
 							</p>
 						</div>
 						<div id="nameplate">
 							<span>
-								<p id="title">Last Updated: April 29th, 2021</p>
+								<p id="title">Last Updated: May 10th, 2021</p>
 								<p id="subtitle">Roulette Features</p>
 							</span>
 						</div>
@@ -313,22 +313,40 @@
 						</span>
 					</div>
 					<div id="submenu_h1">
-						<span>Hitman™ & Prologue</span>
-					</div>
-					<div id="submenu_h1dlc">
-						<span>Hitman™ Extras</span>
+						<span>
+							<p id="subtitle">Story</p>
+							<p id="title">Hitman™ & Prologue</p>
+						</span>
 					</div>
 					<div id="submenu_h2">
-						<span>Hitman™2 & Expansions</span>
-					</div>
-					<div id="submenu_h2dlc">
-						<span>Hitman™2 Extras</span>
+						<span>
+							<p id="subtitle">Story & DLC</p>
+							<p id="title">Hitman™2 & Expansions</p>
+						</span>
 					</div>
 					<div id="submenu_h3">
-						<span>Hitman™III</span>
+						<span>
+							<p id="subtitle">Story</p>
+							<p id="title">Hitman™III</p>
+						</span>
 					</div>
-					<div id="submenu_h3dlc">
-						<span>Hitman™III Extras</span>
+					<div id="submenu_hside">
+						<span>
+							<p id="subtitle">Miscellaneous</p>
+							<p id="title">Side Missions</p>
+						</span>
+					</div>
+					<div id="submenu_hpz">
+						<span>
+							<p id="subtitle">Campaign</p>
+							<p id="title">Patient Zero</p>
+						</span>
+					</div>
+					<div id="submenu_hs6">
+						<span>
+							<p id="subtitle">Campaign (H1 PS4 Exclusive)</p>
+							<p id="title">Sarajevo Six</p>
+						</span>
 					</div>
 				</div>
 				<label id="rand-all" class="column" for="RANDOMALL">
@@ -352,37 +370,13 @@
 							</div>
 						</div>
 					</label>
-					<label for="RANDOMH1BM">
-						<div id="bottom" class="rand-h1bm">
-							<div id="nameplate">
-								<span>
-									<input id="RANDOMH1BM" class="" type="checkbox" value="true" checked />
-									<p id="title">Toggle</p>
-									<p id="subtitle">Hitman™ Bonus Missions</p>
-								</span>
-							</div>
-						</div>
-					</label>
-				</div>
-				<div id="rand-col" class="column">
 					<label for="RANDOMH2">
-						<div id="top" class="rand-h2">
+						<div id="bottom" class="rand-h2">
 							<div id="nameplate">
 								<span>
 									<input id="RANDOMH2" class="" type="checkbox" value="true" checked />
 									<p id="title">Toggle</p>
 									<p id="subtitle">Hitman™2 Campaign</p>
-								</span>
-							</div>
-						</div>
-					</label>					
-					<label for="RANDOMH2EX">
-						<div id="bottom" class="rand-h2ex">
-							<div id="nameplate">
-								<span>
-									<input id="RANDOMH2EX" class="" type="checkbox" value="true" checked />
-									<p id="title">Toggle</p>
-									<p id="subtitle">Hitman™2 Expansions</p>
 								</span>
 							</div>
 						</div>
@@ -400,13 +394,37 @@
 							</div>
 						</div>
 					</label>
+					<label for="RANDOMH2EX">
+						<div id="bottom" class="rand-h2ex">
+							<div id="nameplate">
+								<span>
+									<input id="RANDOMH2EX" class="" type="checkbox" value="true" checked />
+									<p id="title">Toggle</p>
+									<p id="subtitle">Hitman™2 Expansions</p>
+								</span>
+							</div>
+						</div>
+					</label>
+				</div>
+				<div id="rand-col" class="column">
 					<label for="RANDOMH1PZ">
-						<div id="bottom" class="rand-h1pz">
+						<div id="top" class="rand-h1pz">
 							<div id="nameplate">
 								<span>
 									<input id="RANDOMH1PZ" class="" type="checkbox" value="true" checked />
 									<p id="title">Toggle<b class="nonconsp">(H1/H2: "The Source" Only)</b></p>
 									<p id="subtitle">Patient Zero Campaign</p>
+								</span>
+							</div>
+						</div>
+					</label>
+					<label for="RANDOMH1BM">
+						<div id="bottom" class="rand-h1bm">
+							<div id="nameplate">
+								<span>
+									<input id="RANDOMH1BM" class="" type="checkbox" value="true" checked />
+									<p id="title">Toggle</p>
+									<p id="subtitle">H1: Bonus Missions</p>
 								</span>
 							</div>
 						</div>
@@ -546,174 +564,6 @@
 						</div>
 					</label>
 				</div>
-				<div id="h1dlc" class="column" style="display:none;">
-					<label for="ICON">
-						<div id="top" class="m2-2">
-							<div id="nameplate">
-								<span>
-									<input id="ICON" class="lvl h1bm" type="checkbox" value="true" checked />
-									<p id="title">Toggle / Bonus Mission</p>
-									<p id="subtitle">The Icon</p>
-								</span>
-							</div>
-						</div>
-					</label>
-					<label for="AHBOS">
-						<div id="bottom" class="m3-2">
-							<div id="nameplate">
-								<span>
-									<input id="AHBOS" class="lvl h1bm" type="checkbox" value="true" checked />
-									<p id="title">Toggle / Bonus Mission</p>
-									<p id="subtitle">A House Built on Sand</p>
-								</span>
-							</div>
-						</div>
-					</label>
-				</div>
-				<div id="h1dlc" class="column" style="display:none;">
-					<label for="LS">
-						<div id="top" class="m2-3">
-							<div id="nameplate">
-								<span>
-									<input id="LS" class="lvl h1bm" type="checkbox" value="true" checked />
-									<p id="title">Toggle / Bonus Mission</p>
-									<p id="subtitle">Landslide</p>
-								</span>
-							</div>
-						</div>
-					</label>
-					<label for="TS">
-						<div id="bottom" class="m4-2">
-							<div id="nameplate">
-								<span>
-									<input id="TS" class="lvl h1pz" type="checkbox" value="true" checked />
-									<p id="title">Toggle / Patient Zero</p>
-									<p id="subtitle">The Source</p>
-								</span>
-							</div>
-						</div>
-					</label>
-				</div>
-				<div id="h1dlc" class="column" style="display:none;">
-					<label for="TA">
-						<div id="top" class="m2-4">
-							<div id="nameplate">
-								<span>
-									<input id="TA" class="lvl h1pz" type="checkbox" value="true" checked />
-									<p id="title">Toggle / Patient Zero<b class="nonconsp">(H3 Only)</b></p>
-									<p id="subtitle">The Author</p>
-								</span>
-							</div>
-						</div>
-					</label>
-					<label for="PZ">
-						<div id="bottom" class="m6-2">
-							<div id="nameplate">
-								<span>
-									<input id="PZ" class="lvl h1pz" type="checkbox" value="true" checked />
-									<p id="title">Toggle / Patient Zero<b class="nonconsp">(H3 Only)</b></p>
-									<p id="subtitle">Patient Zero</p>
-								</span>
-							</div>
-						</div>
-					</label>
-				</div>
-				<div id="h1dlc" class="column" style="display:none;">
-					<label for="HH">
-						<div id="top" class="m1-2">
-							<div id="nameplate">
-								<span>
-									<input id="HH" class="lvl hsc noncon" type="checkbox" value="true" checked />
-									<p id="title"><span class="noncon">Toggle / Seasonal Content (H1/H2/H3)</span><b class="noncon">Unavailable for Contracts Mode</b></p>
-									<p id="subtitle">Holiday Hoarders</p>
-								</span>
-							</div>
-						</div>
-					</label>
-					<label for="SF">
-						<div id="bottom" class="m6-3">
-							<div id="nameplate">
-								<span>
-									<input id="SF" class="lvl hsc noncon" type="checkbox" value="true" checked />
-									<p id="title"><span class="noncon">Toggle / Seasonal Content (H2/H3)</span><b class="noncon">Unavailable for Contracts Mode</b></p>
-									<p id="subtitle">Hokkaido Snow Festival</p>
-								</span>
-							</div>
-						</div>
-					</label>
-				</div>
-				<div id="h1dlc" class="column" style="display:none;">
-					<label for="TD">
-						<div id="top" class="m1-S">
-							<div id="nameplate">
-								<span>
-									<input id="TD" class="lvl h1s6 noncon" type="checkbox" value="true" />
-									<p id="title"><span class="noncon">Toggle / The Sarajevo Six (H1 PS4)</span><b class="noncon">Unavailable for Contracts Mode</b></p>
-									<p id="subtitle">The Director</p>
-								</span>
-							</div>
-						</div>
-					</label>
-					<label for="TE">
-						<div id="bottom" class="m2-S">
-							<div id="nameplate">
-								<span>
-									<input id="TE" class="lvl h1s6 noncon" type="checkbox" value="true" />
-									<p id="title"><span class="noncon">Toggle / The Sarajevo Six (H1 PS4)</span><b class="noncon">Unavailable for Contracts Mode</b></p>
-									<p id="subtitle">The Enforcer</p>
-								</span>
-							</div>
-						</div>
-					</label>
-				</div>
-				<div id="h1dlc" class="column" style="display:none;">
-					<label for="TX">
-						<div id="top" class="m3-S">
-							<div id="nameplate">
-								<span>
-									<input id="TX" class="lvl h1s6 noncon" type="checkbox" value="true" />
-									<p id="title"><span class="noncon">Toggle / The Sarajevo Six (H1 PS4)</span><b class="noncon">Unavailable for Contracts Mode</b></p>
-									<p id="subtitle">The Extractor</p>
-								</span>
-							</div>
-						</div>
-					</label>
-					<label for="TV">
-						<div id="bottom" class="m4-S">
-							<div id="nameplate">
-								<span>
-									<input id="TV" class="lvl h1s6 noncon" type="checkbox" value="true" />
-									<p id="title"><span class="noncon">Toggle / The Sarajevo Six (H1 PS4)</span><b class="noncon">Unavailable for Contracts Mode</b></p>
-									<p id="subtitle">The Veteran</p>
-								</span>
-							</div>
-						</div>
-					</label>
-				</div>
-				<div id="h1dlc" class="column" style="display:none;">
-					<label for="TM">
-						<div id="top" class="m5-S">
-							<div id="nameplate">
-								<span>
-									<input id="TM" class="lvl h1s6 noncon" type="checkbox" value="true" />
-									<p id="title"><span class="noncon">Toggle / The Sarajevo Six (H1 PS4)</span><b class="noncon">Unavailable for Contracts Mode</b></p>
-									<p id="subtitle">The Mercenary</p>
-								</span>
-							</div>
-						</div>
-					</label>
-					<label for="TC">
-						<div id="bottom" class="m6-S">
-							<div id="nameplate">
-								<span>
-									<input id="TC" class="lvl h1s6 noncon" type="checkbox" value="true" />
-									<p id="title"><span class="noncon">Toggle / The Sarajevo Six (H1 PS4)</span><b class="noncon">Unavailable for Contracts Mode</b></p>
-									<p id="subtitle">The Controller</p>
-								</span>
-							</div>
-						</div>
-					</label>
-				</div>
 				<div id="h2" class="column" style="display:none;">
 					<label for="NC">
 						<div id="top" class="m7-1">
@@ -810,54 +660,6 @@
 						</div>
 					</label>
 				</div>
-				<div id="h2dlc" class="column" style="display:none;">
-					<label for="IOG">
-						<div id="top" class="m10-2">
-							<div id="nameplate">
-								<span>
-									<input id="IOG" class="lvl h2sa noncon" type="checkbox" value="true" checked />
-									<p id="title"><span class="noncon">Toggle / Special Assignment</span><b class="noncon">Unavailable for Contracts Mode</b></p>
-									<p id="subtitle">Illusions of Grandeur</p>
-								</span>
-							</div>
-						</div>
-					</label>
-					<label for="EOTS">
-						<div id="bottom" class="m9-2">
-							<div id="nameplate">
-								<span>
-									<input id="EOTS" class="lvl h2sa noncon" type="checkbox" value="true" checked />
-									<p id="title"><span class="noncon">Toggle / Special Assignment</span><b class="noncon">Unavailable for Contracts Mode</b></p>
-									<p id="subtitle">Embrace of the Serpent</p>
-								</span>
-							</div>
-						</div>
-					</label>
-				</div>
-				<div id="h2dlc" class="column" style="display:none;">
-					<label for="AST">
-						<div id="top" class="m8-2">
-							<div id="nameplate">
-								<span>
-									<input id="AST" class="lvl h2sa noncon" type="checkbox" value="true" checked />
-									<p id="title"><span class="noncon">Toggle / Special Assignment</span><b class="noncon">Unavailable for Contracts Mode</b></p>
-									<p id="subtitle">A Silver Tongue</p>
-								</span>
-							</div>
-						</div>
-					</label>
-					<label for="ABP">
-						<div id="bottom" class="m11-2">
-							<div id="nameplate">
-								<span>
-									<input id="ABP" class="lvl h2sa noncon" type="checkbox" value="true" checked />
-									<p id="title"><span class="noncon">Toggle / Special Assignment</span><b class="noncon">Unavailable for Contracts Mode</b></p>
-									<p id="subtitle">A Bitter Pill</p>
-								</span>
-							</div>
-						</div>
-					</label>
-				</div>
 				<div id="h3" class="column" style="display:none;">
 					<label for="OTOTW">
 						<div id="top" class="m15-1">
@@ -930,9 +732,44 @@
 						</div>
 					</label>
 				</div>	
-				<div id="h3dlc" class="column" style="display:none;">
+				<div id="hside" class="column" style="display:none;">
+					<label for="ICON">
+						<div id="top" class="m2-2">
+							<div id="nameplate">
+								<span>
+									<input id="ICON" class="lvl h1bm" type="checkbox" value="true" checked />
+									<p id="title">Toggle / Bonus Mission</p>
+									<p id="subtitle">The Icon</p>
+								</span>
+							</div>
+						</div>
+					</label>
+					<label for="AHBOS">
+						<div id="bottom" class="m3-2">
+							<div id="nameplate">
+								<span>
+									<input id="AHBOS" class="lvl h1bm" type="checkbox" value="true" checked />
+									<p id="title">Toggle / Bonus Mission</p>
+									<p id="subtitle">A House Built on Sand</p>
+								</span>
+							</div>
+						</div>
+					</label>
+				</div>
+				<div id="hside" class="column" style="display:none;">
+					<label for="LS">
+						<div id="top" class="m2-3">
+							<div id="nameplate">
+								<span>
+									<input id="LS" class="lvl h1bm" type="checkbox" value="true" checked />
+									<p id="title">Toggle / Bonus Mission</p>
+									<p id="subtitle">Landslide</p>
+								</span>
+							</div>
+						</div>
+					</label>
 					<label for="DGS">
-						<div id="top" class="m16-E">
+						<div id="bottom" class="m16-E">
 							<div id="nameplate">
 								<span>
 									<input id="DGS" class="lvl hsc" type="checkbox" value="true" checked/>
@@ -942,7 +779,188 @@
 							</div>
 						</div>
 					</label>
+				</div>
+				<div id="hside" class="column" style="display:none;">
+					<label for="HH">
+						<div id="top" class="m1-2">
+							<div id="nameplate">
+								<span>
+									<input id="HH" class="lvl hsc noncon" type="checkbox" value="true" checked />
+									<p id="title"><span class="noncon">Toggle / Seasonal Content (H1/H2/H3)</span><b class="noncon">Unavailable for Contracts Mode</b></p>
+									<p id="subtitle">Holiday Hoarders</p>
+								</span>
+							</div>
+						</div>
+					</label>
+					<label for="SF">
+						<div id="bottom" class="m6-3">
+							<div id="nameplate">
+								<span>
+									<input id="SF" class="lvl hsc noncon" type="checkbox" value="true" checked />
+									<p id="title"><span class="noncon">Toggle / Seasonal Content (H2/H3)</span><b class="noncon">Unavailable for Contracts Mode</b></p>
+									<p id="subtitle">Hokkaido Snow Festival</p>
+								</span>
+							</div>
+						</div>
+					</label>
+				</div>		
+				<div id="hside" class="column" style="display:none;">
+					<label for="IOG">
+						<div id="top" class="m10-2">
+							<div id="nameplate">
+								<span>
+									<input id="IOG" class="lvl h2sa noncon" type="checkbox" value="true" checked />
+									<p id="title"><span class="noncon">Toggle / Special Assignment</span><b class="noncon">Unavailable for Contracts Mode</b></p>
+									<p id="subtitle">Illusions of Grandeur</p>
+								</span>
+							</div>
+						</div>
+					</label>
+					<label for="EOTS">
+						<div id="bottom" class="m9-2">
+							<div id="nameplate">
+								<span>
+									<input id="EOTS" class="lvl h2sa noncon" type="checkbox" value="true" checked />
+									<p id="title"><span class="noncon">Toggle / Special Assignment</span><b class="noncon">Unavailable for Contracts Mode</b></p>
+									<p id="subtitle">Embrace of the Serpent</p>
+								</span>
+							</div>
+						</div>
+					</label>
+				</div>
+				<div id="hside" class="column" style="display:none;">
+					<label for="AST">
+						<div id="top" class="m8-2">
+							<div id="nameplate">
+								<span>
+									<input id="AST" class="lvl h2sa noncon" type="checkbox" value="true" checked />
+									<p id="title"><span class="noncon">Toggle / Special Assignment</span><b class="noncon">Unavailable for Contracts Mode</b></p>
+									<p id="subtitle">A Silver Tongue</p>
+								</span>
+							</div>
+						</div>
+					</label>
+					<label for="ABP">
+						<div id="bottom" class="m11-2">
+							<div id="nameplate">
+								<span>
+									<input id="ABP" class="lvl h2sa noncon" type="checkbox" value="true" checked />
+									<p id="title"><span class="noncon">Toggle / Special Assignment</span><b class="noncon">Unavailable for Contracts Mode</b></p>
+									<p id="subtitle">A Bitter Pill</p>
+								</span>
+							</div>
+						</div>
+					</label>
+				</div>
+				<div id="hpz" class="column" style="display:none;">
+					<label for="TS">
+						<div id="top" class="m4-2">
+							<div id="nameplate">
+								<span>
+									<input id="TS" class="lvl h1pz" type="checkbox" value="true" checked />
+									<p id="title">Toggle / Patient Zero</p>
+									<p id="subtitle">The Source</p>
+								</span>
+							</div>
+						</div>
+					</label>
+					<label for="TA">
+						<div id="bottom" class="m2-4">
+							<div id="nameplate">
+								<span>
+									<input id="TA" class="lvl h1pz" type="checkbox" value="true" checked />
+									<p id="title">Toggle / Patient Zero<b class="nonconsp">(H3 Only)</b></p>
+									<p id="subtitle">The Author</p>
+								</span>
+							</div>
+						</div>
+					</label>					
+				</div>
+				<div id="hpz" class="column" style="display:none;">
+					<label for="PZ">
+						<div id="top" class="m6-2">
+							<div id="nameplate">
+								<span>
+									<input id="PZ" class="lvl h1pz" type="checkbox" value="true" checked />
+									<p id="title">Toggle / Patient Zero<b class="nonconsp">(H3 Only)</b></p>
+									<p id="subtitle">Patient Zero</p>
+								</span>
+							</div>
+						</div>
+					</label>
 					<label id="blank"></label>
+				</div>
+				<div id="hs6" class="column" style="display:none;">
+					<label for="TD">
+						<div id="top" class="m1-S">
+							<div id="nameplate">
+								<span>
+									<input id="TD" class="lvl h1s6 noncon" type="checkbox" value="true" />
+									<p id="title"><span class="noncon">Toggle / The Sarajevo Six (H1 PS4)</span><b class="noncon">Unavailable for Contracts Mode</b></p>
+									<p id="subtitle">The Director</p>
+								</span>
+							</div>
+						</div>
+					</label>
+					<label for="TE">
+						<div id="bottom" class="m2-S">
+							<div id="nameplate">
+								<span>
+									<input id="TE" class="lvl h1s6 noncon" type="checkbox" value="true" />
+									<p id="title"><span class="noncon">Toggle / The Sarajevo Six (H1 PS4)</span><b class="noncon">Unavailable for Contracts Mode</b></p>
+									<p id="subtitle">The Enforcer</p>
+								</span>
+							</div>
+						</div>
+					</label>
+				</div>
+				<div id="hs6" class="column" style="display:none;">
+					<label for="TX">
+						<div id="top" class="m3-S">
+							<div id="nameplate">
+								<span>
+									<input id="TX" class="lvl h1s6 noncon" type="checkbox" value="true" />
+									<p id="title"><span class="noncon">Toggle / The Sarajevo Six (H1 PS4)</span><b class="noncon">Unavailable for Contracts Mode</b></p>
+									<p id="subtitle">The Extractor</p>
+								</span>
+							</div>
+						</div>
+					</label>
+					<label for="TV">
+						<div id="bottom" class="m4-S">
+							<div id="nameplate">
+								<span>
+									<input id="TV" class="lvl h1s6 noncon" type="checkbox" value="true" />
+									<p id="title"><span class="noncon">Toggle / The Sarajevo Six (H1 PS4)</span><b class="noncon">Unavailable for Contracts Mode</b></p>
+									<p id="subtitle">The Veteran</p>
+								</span>
+							</div>
+						</div>
+					</label>
+				</div>
+				<div id="hs6" class="column" style="display:none;">
+					<label for="TM">
+						<div id="top" class="m5-S">
+							<div id="nameplate">
+								<span>
+									<input id="TM" class="lvl h1s6 noncon" type="checkbox" value="true" />
+									<p id="title"><span class="noncon">Toggle / The Sarajevo Six (H1 PS4)</span><b class="noncon">Unavailable for Contracts Mode</b></p>
+									<p id="subtitle">The Mercenary</p>
+								</span>
+							</div>
+						</div>
+					</label>
+					<label for="TC">
+						<div id="bottom" class="m6-S">
+							<div id="nameplate">
+								<span>
+									<input id="TC" class="lvl h1s6 noncon" type="checkbox" value="true" />
+									<p id="title"><span class="noncon">Toggle / The Sarajevo Six (H1 PS4)</span><b class="noncon">Unavailable for Contracts Mode</b></p>
+									<p id="subtitle">The Controller</p>
+								</span>
+							</div>
+						</div>
+					</label>
 				</div>
 				<div id="empty" class="side"></div>
 			</div>
@@ -1175,11 +1193,11 @@
 			<div id="maps_mobilesubmenu">
 				<button id="subsubmenu_random" class="on"></button>
 				<button id="subsubmenu_h1"></button>
-				<button id="subsubmenu_h1dlc"></button>
 				<button id="subsubmenu_h2"></button>
-				<button id="subsubmenu_h2dlc"></button>
 				<button id="subsubmenu_h3"></button>
-				<button id="subsubmenu_h3dlc"></button>
+				<button id="subsubmenu_hside"></button>
+				<button id="subsubmenu_hpz"></button>
+				<button id="subsubmenu_hs6"></button>
 				<div id="subsubmenu_name">
 					<img id="subsubmenu_random" class="on" src="./img/general/blank.png" />
 					<span>Mission Groupings</span>

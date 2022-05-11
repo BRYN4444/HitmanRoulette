@@ -86,7 +86,7 @@ $(document).ready(function() {
 			$( "header, #contract, #nav_mobile, #scrollbar" ).removeClass("off");
 			$( "#maps, #settings, #credits" ).addClass("off");
 			$( "body" ).removeClass( "hide missionsmobile settingsaboutmobile");
-			$( "#background" ).addClass( "hide" );
+			$( "#background" ).removeClass( "hide" );
 			$( "#saveroulette:not('.hidden')" ).show('slide',{ direction: 'right' }, 500);
 			$( "#enableoverlay:not('.hidden')" ).show('slide',{ direction: 'right' }, 500);
 		};
@@ -282,7 +282,7 @@ $(document).ready(function() {
 	$( "#submenu_random, #subsubmenu_random" ).click(function() {
 		$( "#submenu_random, #subsubmenu_random" ).addClass( "on" );
 		$( "label[id^='rand'], div[id^='rand']" ).show();
-		$( "div#h1, div#h1dlc, div#h2, div#h2dlc, div#h3, div#h3dlc" ).hide();
+		$( "div#h1, div#h2, div#h3, div#hside, div#hpz, div#hs6" ).hide();
 		$( "#submenu_random, #subsubmenu_random" ).siblings().removeClass( "on" );
 		$( "#subsubmenu_name img" ).prop("id", "subsubmenu_random");
 		$( "#subsubmenu_name span" ).text("Mission Groupings");
@@ -290,50 +290,49 @@ $(document).ready(function() {
 	$( "#submenu_h1, #subsubmenu_h1" ).click(function() {
 		$( "#submenu_h1, #subsubmenu_h1" ).addClass( "on" );
 		$( "div#h1" ).show();
-		$( "label[id^='rand'], div[id^='rand'], div#h1dlc, div#h2, div#h2dlc, div#h3, div#h3dlc" ).hide();
+		$( "label[id^='rand'], div[id^='rand'], div#h2, div#h3, div#hside, div#hpz, div#hs6" ).hide();
 		$( "#submenu_h1, #subsubmenu_h1" ).siblings().removeClass( "on" );
 		$( "#subsubmenu_name img" ).prop("id", "subsubmenu_h1");
 		$( "#subsubmenu_name span" ).text("Hitman™ & Prologue");
 	});
-	$( "#submenu_h1dlc, #subsubmenu_h1dlc" ).click(function() {
-		$( "#submenu_h1dlc, #subsubmenu_h1dlc" ).addClass( "on" );
-		$( "div#h1dlc" ).show();
-		$( "label[id^='rand'], div[id^='rand'], div#h1, div#h2, div#h2dlc, div#h3, div#h3dlc" ).hide();
-		$( "#submenu_h1dlc, #subsubmenu_h1dlc" ).siblings().removeClass( "on" );
-		$( "#subsubmenu_name img" ).prop("id", "subsubmenu_h1dlc");
-		$( "#subsubmenu_name span" ).text("Hitman™ Extras");
-	});
 	$( "#submenu_h2, #subsubmenu_h2" ).click(function() {
 		$( "#submenu_h2, #subsubmenu_h2" ).addClass( "on" );
 		$( "div#h2" ).show();
-		$( "label[id^='rand'], div[id^='rand'], div#h1, div#h1dlc, div#h2dlc, div#h3, div#h3dlc" ).hide();
+		$( "label[id^='rand'], div[id^='rand'], div#h1, div#h3, div#hside, div#hpz, div#hs6" ).hide();
 		$( "#submenu_h2, #subsubmenu_h2" ).siblings().removeClass( "on" );
 		$( "#subsubmenu_name img" ).prop("id", "subsubmenu_h2");
 		$( "#subsubmenu_name span" ).text("Hitman™2 & Expansions");
 	});
-	$( "#submenu_h2dlc, #subsubmenu_h2dlc" ).click(function() {
-		$( "#submenu_h2dlc, #subsubmenu_h2dlc" ).addClass( "on" );
-		$( "div#h2dlc" ).show();
-		$( "label[id^='rand'], div[id^='rand'], div#h1, div#h1dlc, div#h2, div#h3, div#h3dlc" ).hide();
-		$( "#submenu_h2dlc, #subsubmenu_h2dlc" ).siblings().removeClass( "on" );
-		$( "#subsubmenu_name img" ).prop("id", "subsubmenu_h2dlc");
-		$( "#subsubmenu_name span" ).text("Hitman™2 Extras");
-	});
 	$( "#submenu_h3, #subsubmenu_h3" ).click(function() {
 		$( "#submenu_h3, #subsubmenu_h3" ).addClass( "on" );
 		$( "div#h3" ).show();
-		$( "label[id^='rand'], div[id^='rand'], div#h1, div#h1dlc, div#h2, div#h2dlc, div#h3dlc" ).hide();
+		$( "label[id^='rand'], div[id^='rand'], div#h1, div#h2, div#hside, div#hpz, div#hs6" ).hide();
 		$( "#submenu_h3, #subsubmenu_h3" ).siblings().removeClass( "on" );
 		$( "#subsubmenu_name img" ).prop("id", "subsubmenu_h3");
 		$( "#subsubmenu_name span" ).text("Hitman™III");
 	});
-	$( "#submenu_h3dlc, #subsubmenu_h3dlc" ).click(function() {
-		$( "#submenu_h3dlc, #subsubmenu_h3dlc" ).addClass( "on" );
-		$( "div#h3dlc" ).show();
-		$( "label[id^='rand'], div[id^='rand'], div#h1, div#h1dlc, div#h2, div#h2dlc, div#h3" ).hide();
-		$( "#submenu_h3dlc, #subsubmenu_h3dlc" ).siblings().removeClass( "on" );
-		$( "#subsubmenu_name img" ).prop("id", "subsubmenu_h3dlc");
-		$( "#subsubmenu_name span" ).text("Hitman™III Extras");
+	$( "#submenu_hside, #subsubmenu_hside" ).click(function() {
+		$( "#submenu_hside, #subsubmenu_hside" ).addClass( "on" );
+		$( "div#hside" ).show();
+		$( "label[id^='rand'], div[id^='rand'], div#h1, div#h2, div#h3, div#hpz, div#hs6" ).hide();
+		$( "#submenu_hside, #subsubmenu_hside" ).siblings().removeClass( "on" );
+		$( "#subsubmenu_name img" ).prop("id", "subsubmenu_hside");
+		$( "#subsubmenu_name span" ).text("Side Missions");
+	});
+	$( "#submenu_hpz, #subsubmenu_hpz" ).click(function() {
+		$( "#submenu_hpz, #subsubmenu_hpz" ).addClass( "on" );
+		$( "div#hpz" ).show();
+		$( "label[id^='rand'], div[id^='rand'], div#h1, div#h2, div#h3, div#hside, div#hs6" ).hide();
+		$( "#submenu_hpz, #subsubmenu_hpz" ).siblings().removeClass( "on" );
+		$( "#subsubmenu_name img" ).prop("id", "subsubmenu_hpz");
+		$( "#subsubmenu_name span" ).text("Patient Zero");
+	});
+	$( "#submenu_hs6, #subsubmenu_hs6" ).click(function() {
+		$( "#submenu_hs6, #subsubmenu_hs6" ).addClass( "on" );
+		$( "div#hs6" ).show();
+		$( "label[id^='rand'], div[id^='rand'], div#h1, div#h2, div#h3, div#hside, div#hpz" ).hide();
+		$( "#submenu_hs6, #subsubmenu_hs6" ).siblings().removeClass( "on" );
+		$( "#subsubmenu_name img" ).prop("id", "subsubmenu_hs6");
 	});
 	
 	/******Map Select Checkbox Logic******/
