@@ -106,6 +106,42 @@ html.h2theme, html.h3theme {
 	--mendoza:url('../img/missions/h2h3theme/mendoza.jpg');
 	--romania:url('../img/missions/h2h3theme/romania.jpg');
 }
+html.httheme {
+	--icafacility:url('../img/missions/httheme/ica-facility.jpg');
+	--paris:url('../img/missions/httheme/paris.jpg');
+	--parishh:url('../img/missions/httheme/paris-hh.jpg');
+	--sapienza:url('../img/missions/httheme/sapienza.jpg');
+	--sapienzaicon:url('../img/missions/httheme/sapienza-icon.jpg');
+	--sapienzalandslide:url('../img/missions/httheme/sapienza-landslide.jpg');
+	--sapienzaauthor:url('../img/missions/httheme/sapienza-author.jpg');
+	--marrakesh:url('../img/missions/httheme/marrakesh.jpg');
+	--marrakeshahbos:url('../img/missions/httheme/marrakesh-ahbos.jpg');
+	--bangkok:url('../img/missions/httheme/bangkok.jpg');
+	--bangkoksource:url('../img/missions/httheme/bangkok-source.jpg');
+	--colorado:url('../img/missions/httheme/colorado.jpg');
+	--hokkaido:url('../img/missions/httheme/hokkaido.jpg');
+	--hokkaidopz:url('../img/missions/httheme/hokkaido-pz.jpg');
+	--hokkaidosf:url('../img/missions/httheme/hokkaido-sf.jpg');
+	--hawkesbay:url('../img/missions/httheme/hawkes-bay.jpg');
+	--miami:url('../img/missions/httheme/miami.jpg');
+	--miamisa:url('../img/missions/httheme/miami-sa.jpg');
+	--santafortuna:url('../img/missions/httheme/santa-fortuna.jpg');
+	--santafortunasa:url('../img/missions/httheme/santa-fortuna-sa.jpg');
+	--mumbai:url('../img/missions/httheme/mumbai.jpg');
+	--mumbaisa:url('../img/missions/httheme/mumbai-sa.jpg');
+	--whittletoncreek:url('../img/missions/httheme/whittleton-creek.jpg');
+	--whittletoncreeksa:url('../img/missions/httheme/whittleton-creek-sa.jpg');
+	--isleofsgail:url('../img/missions/httheme/isle-of-sgail.jpg');
+	--newyork:url('../img/missions/httheme/new-york.jpg');
+	--havenisland:url('../img/missions/httheme/haven-island.jpg');
+	--dubai:url('../img/missions/httheme/dubai.jpg');
+	--dartmoor:url('../img/missions/httheme/dartmoor.jpg');
+	--dartmoorgs:url('../img/missions/httheme/dartmoor-gs.jpg');
+	--berlin:url('../img/missions/httheme/berlin.jpg');
+	--chongqing:url('../img/missions/httheme/chongqing.jpg');
+	--mendoza:url('../img/missions/httheme/mendoza.jpg');
+	--romania:url('../img/missions/httheme/romania.jpg');
+}
 
 #rand-all { background-image:url("../img/general/hx.jpg"); }
 .rand-h1 { background-image:url("../img/general/h1.jpg");background-repeat:no-repeat;background-position:top center; background-size:auto 100% !important; }
@@ -527,7 +563,7 @@ html.h2theme, html.h3theme {
 .train-exit-TakeSerum { background-image: url('../img/exit/TakeSerum.png'); }
 
 /*** Mission & Contract Targets ***/
-div[class^="ElusiveTarget"] { background-image: url('../img/targetcon/NPC.jpg'); }
+div[class^="ElusiveTarget"], div[class^="UnassignedTarget"] { background-image: url('../img/targetcon/NPC.jpg'); }
 
 /** ICA Facility **/
 /* Freeform Training */
@@ -2319,7 +2355,7 @@ div[class^="ElusiveTarget"] { background-image: url('../img/targetcon/NPC.jpg');
 .LenaBjoernshauge-vineyard { background-image: url('../img/targetcon/LenaBjoernshauge.jpg'); }
 .KennethFlowers-vineyard { background-image: url('../img/targetcon/KennethFlowers.jpg'); }
 .EllinorWestrup-vineyard { background-image: url('../img/targetcon/EllinorWestrup-Mendoza.jpg'); }
-.RaoulSalazar-vineyard, .ChristofferFeldtmann-vineyard, .KieranSimmons-vineyard, .a-vineyard { background-image: url('../img/targetcon/RaoulSalazar.jpg'); }
+.RaoulSalazar-vineyard, .ChristofferFeldtmann-vineyard, .KieranSimmons-vineyard, .AndersonSilviero-vineyard { background-image: url('../img/targetcon/RaoulSalazar.jpg'); }
 .PirroSalazar-vineyard, .FinleyReynolds-vineyard, .JamesRobertson-vineyard { background-image: url('../img/targetcon/PirroSalazar.jpg'); }
 .FletcherFernansez-vineyard { background-image: url('../img/targetcon/FletcherFernansez.jpg'); }
 .AlexRheinhart-vineyard { background-image: url('../img/targetcon/AlexRheinhart.jpg'); }
@@ -2363,7 +2399,6 @@ div[class^="ElusiveTarget"] { background-image: url('../img/targetcon/NPC.jpg');
 .EliasMedina-vineyard, .NéstorSosa-vineyard, .RauloDominguez-vineyard { background-image: url('../img/targetcon/EliasMedina.jpg'); }
 .JosephByrne-vineyard { background-image: url('../img/targetcon/JosephByrne.jpg'); }
 .GuadalupeBuccho-vineyard, .QuintoOrtiz-vineyard { background-image: url('../img/targetcon/GuadalupeBuccho.jpg'); }
-.w-vineyard { background-image: url('../img/targetcon/w.jpg'); }
 
 /** Romania **/
 /* Untouchable */
