@@ -186,6 +186,47 @@ function createTargetList(container) {
 			targets = container.contractTargets.slice(0, num_targets);
 		};
 	}
+	if (mode == "CONANY") { // Unassigned Targets
+		if (document.getElementById("conslider").value == 5) {
+			targets = ["Unassigned Target A","Unassigned Target B","Unassigned Target C","Unassigned Target D","Unassigned Target E"];
+		}
+		else if (document.getElementById("conslider").value == 4) {
+			targets = ["Unassigned Target A","Unassigned Target B","Unassigned Target C","Unassigned Target D"];
+		}
+		else if (document.getElementById("conslider").value == 3) {
+			targets = ["Unassigned Target A","Unassigned Target B","Unassigned Target C"];
+		}
+		else if (document.getElementById("conslider").value == 2) {
+			targets = ["Unassigned Target A","Unassigned Target B"];
+		}
+		else if (document.getElementById("conslider").value == 1) {
+			targets = ["Unassigned Target"];
+		}
+		else {
+			var targetAmountCheck = Math.random();
+			var num_targets = 5;
+			if (targetAmountCheck < 0.84) num_targets--;
+			if (targetAmountCheck < 0.69) num_targets--;
+			if (targetAmountCheck < 0.39) num_targets--;
+			if (targetAmountCheck < 0.04) num_targets--;
+			
+			if (num_targets == 5) {
+				targets = ["Unassigned Target A","Unassigned Target B","Unassigned Target C","Unassigned Target D","Unassigned Target E"];
+			}
+			else if (num_targets == 4) {
+				targets = ["Unassigned Target A","Unassigned Target B","Unassigned Target C","Unassigned Target D"];
+			}
+			else if (num_targets == 3) {
+				targets = ["Unassigned Target A","Unassigned Target B","Unassigned Target C"];
+			}
+			else if (num_targets == 2) {
+				targets = ["Unassigned Target A","Unassigned Target B"];
+			}
+			else {
+				targets = ["Unassigned Target"];
+			}
+		};
+	}
 	else if (mode == "ELUSIVE" && document.getElementById("etslider").value == 1) //One Elusive Target
 		targets = ["Elusive Target"];
 	else if (mode == "ELUSIVE" && document.getElementById("etslider").value == 2) //Two Elusive Targets
@@ -235,17 +276,17 @@ function containerToResult(container) {
 		result.cm = " (Elusive Target)";
 		result.missionTitle = container.missionTitle;
 	}
-	else if((mode == "CONEASY" || mode == "CONHARD") && container.missionTitle == "Freeform Training") {
+	else if((mode == "CONEASY" || mode == "CONHARD" || mode == "CONANY") && container.missionTitle == "Freeform Training") {
 		result.type = "on-con";
 		result.cm = " (Contracts Mode)";
 		result.missionTitle = "Tutorial";
 	}
-	else if((mode == "CONEASY" || mode == "CONHARD") && (container.missionTitle == "The Author" || container.missionTitle == "Patient Zero") ) {
+	else if((mode == "CONEASY" || mode == "CONHARD" || mode == "CONANY") && (container.missionTitle == "The Author" || container.missionTitle == "Patient Zero") ) {
 		result.type = "on-con";
 		result.cm = " (H3 Contracts Mode)";
 		result.missionTitle = container.missionTitle;
 	}
-	else if (mode == "CONEASY" || mode == "CONHARD") {
+	else if (mode == "CONEASY" || mode == "CONHARD" || mode == "CONANY") {
 		result.type = "on-con";
 		result.cm = " (Contracts Mode)";
 		result.missionTitle = container.missionTitle;
@@ -262,13 +303,13 @@ function containerToResult(container) {
 	};
 		
 	//Forces Entrance for Contracts Mode on Dartmoor Garden Show
-	if (result.missionCode == "gardenshow" && (mode == "CONEASY" || mode == "CONHARD"))
+	if (result.missionCode == "gardenshow" && (mode == "CONEASY" || mode == "CONHARD" || mode == "CONANY"))
 		result.entry = "Garden Show Entrance";
 	else
 		result.entry = container.entry[Math.floor(Math.random()*container.entry.length)];
 	
 	//Determines Exit
-	if (result.missionCode == "beach" && (mode == "CONEASY" || mode == "CONHARD")) //Hides exit requirement for Contracts Mode on Nightcall
+	if (result.missionCode == "beach" && (mode == "CONEASY" || mode == "CONHARD" || mode == "CONANY")) //Hides exit requirement for Contracts Mode on Nightcall
 		result.exit = "Boat";
 	else if (exitMode == "SECRET") //Easter Egg Exits
 		result.exit = container.eexit[Math.floor(Math.random()*container.eexit.length)];
@@ -310,11 +351,11 @@ function containerToResult(container) {
 	var wildcard = container.wild; // Can be completed Suit Only, No Knockouts, Silent Assassin.
 	var missionwild = container.missionWild; // Can only be completed on specific missions; No Contracts Mode.
 	var compwild = container.compWild; // Can only be completed without Complications enabled; Asks for Knockouts or Disguise Changes.
-	if ((mode == "CONEASY" || mode == "CONHARD") && (document.getElementById("compslider").value == 1 || document.getElementById("rating").checked == 1)) // Contract Mode & Complications/Rating
+	if ((mode == "CONEASY" || mode == "CONHARD" || mode == "CONANY") && (document.getElementById("compslider").value == 1 || document.getElementById("rating").checked == 1)) // Contract Mode & Complications/Rating
 		result.objectives = wildcard[Math.floor(Math.random()*wildcard.length)];
-	else if (!(mode == "CONEASY" || mode == "CONHARD") && (document.getElementById("compslider").value == 1 || document.getElementById("rating").checked == 1)) // Complications/Rating without Contract Mode
+	else if (!(mode == "CONEASY" || mode == "CONHARD" || mode == "CONANY") && (document.getElementById("compslider").value == 1 || document.getElementById("rating").checked == 1)) // Complications/Rating without Contract Mode
 		result.objectives = wildcard.concat(missionwild)[Math.floor(Math.random()*wildcard.concat(missionwild).length)];
-	else if ((mode == "CONEASY" || mode == "CONHARD") && document.getElementById("compslider").value == 0 && document.getElementById("rating").checked == 0) // Contract Mode without Complications/Rating
+	else if ((mode == "CONEASY" || mode == "CONHARD" || mode == "CONANY") && document.getElementById("compslider").value == 0 && document.getElementById("rating").checked == 0) // Contract Mode without Complications/Rating
 		result.objectives = wildcard.concat(compwild)[Math.floor(Math.random()*wildcard.concat(compwild).length)];
 	else // Default Extra Objectives (All)
 		result.objectives = wildcard.concat(missionwild, compwild)[Math.floor(Math.random()*wildcard.concat(missionwild, compwild).length)];
@@ -368,7 +409,7 @@ function writeEverything(result) {
 			document.getElementById("exitreq").innerHTML = "";
 			document.getElementById("input_exitreq").value = "";
 		}
-		else if (result.missionCode == "vineyard" && result.exit == "Tango With Diana" && (mode == "CONEASY" || mode == "CONHARD")) { // Tango With Diana Exit disabled in Contracts Mode
+		else if (result.missionCode == "vineyard" && result.exit == "Tango With Diana" && (mode == "CONEASY" || mode == "CONHARD" || mode == "CONANY")) { // Tango With Diana Exit disabled in Contracts Mode
 			document.getElementById("travel").innerHTML =
 				"<div id='entry' class='vineyard-start-" + result.entry.replace(/\s|'|\.|-|\(|\)/g, "") + "'><div id='nameplate'><span><p id='title'>Starting Location</p><p id='subtitle'>" + result.entry + "</p></span></div></div><div id='exit' class='vineyard-exit-ThroughTheGrapefields'><div id='nameplate'><span><p id='title'>Exit Location <span id='exitreq'></span></p><p id='subtitle'>Through The Grapefields</p></span></div></div>";
 			document.getElementById("input_entry").value = "\nStart: " + result.entry;
@@ -489,8 +530,12 @@ function writeEverything(result) {
 	};
 	
 	// Display Contracts Mode Target Images in Tall Format regardless of Theme
-	if (mode == "CONEASY" || mode == "CONHARD") { var contractmode = " contarget" }
+	if (mode == "CONEASY" || mode == "CONHARD" || mode == "CONANY") { var contractmode = " contarget" }
 	else { var contractmode = "" }
+	
+	// Masked Conditions
+	if (document.getElementById("mask").checked == 1) { var maskedconditions = "mask" }
+	else { var maskedconditions = "" }
 	
 	// Write to the HTML elements from the results object
 	var MAX_TARGETS = 5, MAX_EXTRAS = document.getElementById("compslider").value;
@@ -498,8 +543,8 @@ function writeEverything(result) {
 		if(i < result.targets.length) {
 			document.getElementById("target" + (i+1)).innerHTML =
 				"<div id='photo' class='" + result.targets[i].split('|')[0].replace(/\s|,|'|“|”|-|\./g, "") + "-" + result.missionCode + contractmode +
-				"'><div id='subplate' class='method'><span><p id='title'>Eliminate using:</p><p id='subtitle-method" + (i+1) + "'></p><p id='subtitle-alt-method" + (i+1) +
-				"'></p></span></div><div id='subplate' class='disguise'><span><p id='title'>Wear disguise:</p><p class='subtitle-disguise' id='subtitle-disguise" + (i+1) +
+				"'><div id='subplate' class='method'><span class='" + maskedconditions + "'><p id='title'>Eliminate using:</p><p id='subtitle-method" + (i+1) + "'></p><p id='subtitle-alt-method" + (i+1) +
+				"'></p></span></div><div id='subplate' class='disguise'><span class='" + maskedconditions + "'><p id='title'>Wear disguise:</p><p class='subtitle-disguise' id='subtitle-disguise" + (i+1) +
 				"'></p></span></div><div id='subplate" + (i+1) + "' class='intel'><span id='inteltoggle" + (i+1) + "'><p id='title'>Intel:</p><p id='wording'>" + result.targets[i].split('|')[1] +
 				"</p></span></div><div id='nameplate'><span><p id='title'>Target</p><p id='subtitle'>" + result.targets[i].split('|')[0] + "</p></span></div></div>";
 			//document.getElementById("overlay-image-target" + (i+1)).innerHTML =
@@ -513,7 +558,7 @@ function writeEverything(result) {
 				document.getElementById("subtitle-alt-method" + (i+1)).innerHTML = "";
 				document.getElementById("input_weapon" + (i+1)).value = ", using: Any Method";
 			}
-			else if(result.missionCode == "training" && (mode == "CONEASY" || mode == "CONHARD") && fftfailsafeContract.includes(result.weapons[i]) ) { // Specific Weapons on ICA Boat Contracts
+			else if(result.missionCode == "training" && (mode == "CONEASY" || mode == "CONHARD" || mode == "CONANY") && fftfailsafeContract.includes(result.weapons[i]) ) { // Specific Weapons on ICA Boat Contracts
 				document.getElementById("subtitle-method" + (i+1)).innerHTML = "Any Method";
 				document.getElementById("subtitle-alt-method" + (i+1)).innerHTML = "";
 				document.getElementById("input_weapon" + (i+1)).value = ", using: Any Method";
@@ -912,10 +957,7 @@ function writeEverything(result) {
 		+ timelimittext
 		+ ratingtext
 		+ difficultytext;
-	
-	document.getElementById("saveroulette").disabled = false;
-	document.getElementById("subsaveroulette").disabled = false;
-	//document.getElementById("enableoverlay").disabled = false;
+		
 	/*
 	document.getElementById('overlay-pin-target1').innerHTML = target1text;
 	document.getElementById('overlay-target1').innerHTML = target1text + weapon1text + disguise1text;
@@ -980,6 +1022,16 @@ function button_MakeItGo(){
 	function isEllipsisActive(e) {
 		return ($(e).innerWidth() < $(e)[0].scrollWidth);
 	};
+	
+	if (document.getElementById("mask").checked == 0) {
+		document.getElementById("saveroulette").disabled = false;
+		document.getElementById("subsaveroulette").disabled = false;
+	}
+	else {
+		document.getElementById("saveroulette").disabled = true;
+		document.getElementById("subsaveroulette").disabled = true;
+	}
+	//document.getElementById("enableoverlay").disabled = false;
 }
 
 //adds x to the history stack for a maximum of 20 most recent runs
