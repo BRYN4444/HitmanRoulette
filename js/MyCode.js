@@ -1,33 +1,162 @@
 //Enjoy looking at the ametuer code work I've done.
 $(document).ready(function() {
-	$( "#enableoverlay" ).hide('slide',{ direction: 'right' }, 500);
-	
 	/******Theme Cookie******/
 	if(document.cookie == "theme=H1") {
 		document.documentElement.className = "h1theme";
 		$("#theme_h1old span").text("[On]");
-		$("#theme_h1goty, #theme_h2, #theme_h3").find("span").text("[Off]");
+		$("#theme_h1goty, #theme_h2, #theme_h3, #theme_ht").find("span").text("[Off]");
+		if( $("#musicselect").val() == "DEFAULT" ) {
+			$("#audiosource").attr("src","./audio/World%20of%20Assassination.mp3");
+			$("#audiocontainer")[0].load();
+		}
     }
 	else if(document.cookie == "theme=H1goty") {
 		document.documentElement.className = "h1gotytheme";
 		$("#theme_h1goty span").text("[On]");
-		$("#theme_h1old, #theme_h2, #theme_h3").find("span").text("[Off]");
+		$("#theme_h1old, #theme_h2, #theme_h3, #theme_ht").find("span").text("[Off]");
+		if( $("#musicselect").val() == "DEFAULT" ) {
+			$("#audiosource").attr("src","./audio/World%20of%20Assassination.mp3");
+			$("#audiocontainer")[0].load();
+		}
 	}
 	else if(document.cookie == "theme=H2") {
 		document.documentElement.className = "h2theme";
 		$("#theme_h2 span").text("[On]");
-		$("#theme_h1old, #theme_h1goty, #theme_h3").find("span").text("[Off]");
+		$("#theme_h1old, #theme_h1goty, #theme_h3, #theme_ht").find("span").text("[Off]");
+		if( $("#musicselect").val() == "DEFAULT" ) {
+			$("#audiosource").attr("src","./audio/Agent%20and%20Handler.mp3");
+			$("#audiocontainer")[0].load();
+		}
 	}
 	else if(document.cookie == "theme=H3") {
 		document.documentElement.className = "h3theme";
 		$("#theme_h3 span").text("[On]");
-		$("#theme_h1old, #theme_h1goty, #theme_h2").find("span").text("[Off]");
+		$("#theme_h1old, #theme_h1goty, #theme_h2, #theme_ht").find("span").text("[Off]");
+		if( $("#musicselect").val() == "DEFAULT" ) {
+			$("#audiosource").attr("src","./audio/Death%20Awaits%20(Menu%20ver.).mp3");
+			$("#audiocontainer")[0].load();
+		}
+	}
+	else if(document.cookie == "theme=HT") {
+		document.documentElement.className = "httheme";
+		$("#theme_ht span").text("[On]");
+		$("#theme_h1old, #theme_h1goty, #theme_h2, #theme_h3").find("span").text("[Off]");
+		if( $("#musicselect").val() == "DEFAULT" ) {
+			$("#audiosource").attr("src","./audio/Death%20Awaits%20(Planning%20ver.).mp3");
+			$("#audiocontainer")[0].load();
+		}
 	}
 	else {
-		document.documentElement.className = "h3theme";
-		$("#theme_h3 span").text("[On]");
-		$("#theme_h1old, #theme_h1goty, #theme_h2").find("span").text("[Off]");
+		document.documentElement.className = "httheme";
+		$("#theme_ht span").text("[On]");
+		$("#theme_h1old, #theme_h1goty, #theme_h2, #theme_h3").find("span").text("[Off]");
+		if( $("#musicselect").val() == "DEFAULT" ) {
+			$("#audiosource").attr("src","./audio/Death%20Awaits%20(Planning%20ver.).mp3");
+			$("#audiocontainer")[0].load();
+		}
 	};
+	
+	/***Music***/
+	/*Button*/
+	$('#music').click(function() {
+		if( $(this).hasClass("off") ) {
+			$(this).removeClass("off").addClass("on");
+			$('#audiocontainer')[0].play();
+		} else {
+			$(this).removeClass("on").addClass("off");
+			$('#audiocontainer')[0].pause();
+		}
+	});
+		
+	/*Setting*/
+	$("#audio_music").click(function() {
+		if( $(this).hasClass("default") ) {
+			$(this).removeClass("default").addClass("WoA").find("span").text("[HITMAN]");
+			$("#musicselect").val("WoA");
+			$("#audiocontainer")[0].pause();
+			$("#music").removeClass("on").addClass("off");
+			$("#audiosource").attr("src","./audio/World%20of%20Assassination.mp3");
+			$("#audiocontainer")[0].load();
+		}
+		else if( $(this).hasClass("WoA") ) {
+			$(this).removeClass("WoA").addClass("AaH").find("span").text("[HITMAN 2]");
+			$("#musicselect").val("AaH");
+			$("#audiocontainer")[0].pause();
+			$("#music").removeClass("on").addClass("off");
+			$("#audiosource").attr("src","./audio/Agent%20and%20Handler.mp3");
+			$("#audiocontainer")[0].load();
+		}
+		else if( $(this).hasClass("AaH") ) {
+			$(this).removeClass("AaH").addClass("DA1").find("span").text("[H3 MENU]");
+			$("#musicselect").val("DA1");
+			$("#audiocontainer")[0].pause();
+			$("#music").removeClass("on").addClass("off");
+			$("#audiosource").attr("src","./audio/Death%20Awaits%20(Menu%20ver.).mp3");
+			$("#audiocontainer")[0].load();
+		}
+		else if( $(this).hasClass("DA1") ) {
+			$(this).removeClass("DA1").addClass("DA2").find("span").text("[H3 PLAN]");
+			$("#musicselect").val("DA2");
+			$("#audiocontainer")[0].pause();
+			$("#music").removeClass("on").addClass("off");
+			$("#audiosource").attr("src","./audio/Death%20Awaits%20(Planning%20ver.).mp3");
+			$("#audiocontainer")[0].load();
+		}
+		else if( $(this).hasClass("DA2") ) {
+			$(this).removeClass("DA2").addClass("default").find("span").text("[Default]");
+			$("#musicselect").val("DEFAULT");
+			if(document.cookie == "theme=H1") {
+				$("#audiosource").attr("src","./audio/World%20of%20Assassination.mp3");
+				$("#audiocontainer")[0].load();
+			} else if(document.cookie == "theme=H1goty") {
+			$("#audiosource").attr("src","./audio/World%20of%20Assassination.mp3");
+			$("#audiocontainer")[0].load();
+			} else if(document.cookie == "theme=H2") {
+				$("#audiosource").attr("src","./audio/Agent%20and%20Handler.mp3");
+				$("#audiocontainer")[0].load();
+			} else if(document.cookie == "theme=H3") {
+				$("#audiosource").attr("src","./audio/Death%20Awaits%20(Menu%20ver.).mp3");
+				$("#audiocontainer")[0].load();
+			} else if(document.cookie == "theme=HT") {
+				$("#audiosource").attr("src","./audio/Death%20Awaits%20(Planning%20ver.).mp3");
+				$("#audiocontainer")[0].load();
+			} else {
+				$("#audiosource").attr("src","./audio/Death%20Awaits%20(Planning%20ver.).mp3");
+				$("#audiocontainer")[0].load();
+			}
+		}
+	});
+	
+	/*Refresh*/
+	if($("#musicselect").val() == "DA2") {
+		$("#audio_music").removeClass("DEFAULT").addClass("DA2").find("span").text("[H3 PLAN]");
+		$("#audiosource").attr("src","./audio/Death%20Awaits%20(Planning%20ver.).mp3");
+		$("#audiocontainer")[0].load();
+	} else if ($("#musicselect").val() == "DA1") {
+		$("#audio_music").removeClass("DEFAULT").addClass("DA1").find("span").text("[H3 MENU]");
+		$("#audiosource").attr("src","./audio/Death%20Awaits%20(Menu%20ver.).mp3");
+		$("#audiocontainer")[0].load();
+	} else if ($("#musicselect").val() == "AaH") {
+		$("#audio_music").removeClass("DEFAULT").addClass("AaH").find("span").text("[HITMAN 2]");
+		$("#audiosource").attr("src","./audio/Agent%20and%20Handler.mp3");
+		$("#audiocontainer")[0].load();
+	} else if ($("#musicselect").val() == "WoA") {
+		$("#audio_music").removeClass("DEFAULT").addClass("WoA").find("span").text("[HITMAN]");
+		$("#audiosource").attr("src","./audio/World%20of%20Assassination.mp3");
+		$("#audiocontainer")[0].load();
+	} else if ($("#musicselect").val() == "DEFAULT") {
+		
+	};
+		
+	/*Volume Slider*/
+	var loadvolume = $('#volumeslider').val();
+	$('#audiocontainer')[0].volume = loadvolume/100 ; 
+	
+	$('#volumeslider').on('input', function () {
+		var totalvolume = $(this).val();
+		$('#volumeamount').html( totalvolume );
+		$('#audiocontainer')[0].volume = totalvolume/100 ; 
+	});
 	
 	/******Height Calc on Mobile******/
 	let vh = window.innerHeight * 0.01;
@@ -70,7 +199,7 @@ $(document).ready(function() {
 
 	$('.welcome #title').text(greeting);
 	$('#map_place span').text(greeting);
-	   
+	
 	/******Top Menu Buttons******/
 	$( "nav#menu button#roulette" ).click(function() {
 		if($(window).width() < 808) { /* Do Nothing on Mobile */ }
@@ -86,9 +215,11 @@ $(document).ready(function() {
 			$( "header, #contract, #nav_mobile, #scrollbar" ).removeClass("off");
 			$( "#maps, #settings, #credits" ).addClass("off");
 			$( "body" ).removeClass( "hide missionsmobile settingsaboutmobile");
-			$( "#background" ).removeClass( "hide" );
-			$( "#saveroulette:not('.hidden')" ).show('slide',{ direction: 'right' }, 500);
-			$( "#enableoverlay:not('.hidden')" ).show('slide',{ direction: 'right' }, 500);
+			$( "#background, .external-scroll_x1" ).removeClass( "hide" );
+			//$( "#floatbuttons:not('.hidden')" ).show('slide',{ direction: 'right' }, 500);
+			
+			var floater = $("#floatbuttons").width(); var muzzak = $("#music").width();	var floatmuzz = floater-muzzak;
+			$( "#floatbuttons:not('.hidden')" ).animate({"right": 0}, 500);
 		};
 	});
 	$( "nav#menu button#missions" ).click(function() {
@@ -102,9 +233,11 @@ $(document).ready(function() {
 			$( "header, #contract, #settings, #credits" ).addClass("off");
 			$( "body" ).removeClass( "hide settingsaboutmobile" )
 			$( "body" ).addClass("missionsmobile");
-			$( "#background" ).addClass( "hide" );
-			$( "#saveroulette:not('.hidden')" ).hide('slide',{ direction: 'right' }, 500);
-			$( "#enableoverlay:not('.hidden')" ).hide('slide',{ direction: 'right' }, 500);
+			$( "#background, .external-scroll_x1" ).addClass( "hide" );
+			//$( "#floatbuttons:not('.hidden')" ).hide('slide',{ direction: 'right' }, 500);
+			
+			var floater = $("#floatbuttons").width(); var muzzak = $("#music").width();	var floatmuzz = floater-muzzak;
+			$( "#floatbuttons:not('.hidden')" ).animate({"right": - floatmuzz}, 500);
 		
 			if($("#mode_con").hasClass("intel") || $("#mode_con").hasClass("hunt")) {
 				$("input.noncon").prop('checked', false).prop('disabled', true).parent().parent().removeClass("on").parent().addClass("lock");
@@ -127,9 +260,11 @@ $(document).ready(function() {
 			$( "header, #contract, #maps, #credits, #nav_mobile, #scrollbar" ).addClass("off");
 			$( "body" ).removeClass( "hide missionsmobile" )
 			$( "body" ).addClass("settingsaboutmobile");
-			$( "#background" ).addClass( "hide" );
-			$( "#saveroulette:not('.hidden')" ).hide('slide',{ direction: 'right' }, 500);
-			$( "#enableoverlay:not('.hidden')" ).hide('slide',{ direction: 'right' }, 500);
+			$( "#background, .external-scroll_x1" ).addClass( "hide" );
+			//$( "#floatbuttons:not('.hidden')" ).hide('slide',{ direction: 'right' }, 500);
+			
+			var floater = $("#floatbuttons").width(); var muzzak = $("#music").width();	var floatmuzz = floater-muzzak;
+			$( "#floatbuttons:not('.hidden')" ).animate({"right": - floatmuzz}, 500);
 		};
 	});
 	$( "nav#menu button#about" ).click(function() {
@@ -146,9 +281,11 @@ $(document).ready(function() {
 			$( "header, #contract, #maps, #settings, #nav_mobile, #scrollbar" ).addClass("off");
 			$( "body" ).removeClass( "hide missionsmobile" )
 			$( "body" ).addClass("settingsaboutmobile");
-			$( "#background" ).addClass( "hide" );
-			$( "#saveroulette:not('.hidden')" ).hide('slide',{ direction: 'right' }, 500);
-			$( "#enableoverlay:not('.hidden')" ).hide('slide',{ direction: 'right' }, 500);			
+			$( "#background, .external-scroll_x1" ).addClass( "hide" );
+			//$( "#floatbuttons:not('.hidden')" ).hide('slide',{ direction: 'right' }, 500);
+
+			var floater = $("#floatbuttons").width(); var muzzak = $("#music").width();	var floatmuzz = floater-muzzak;
+			$( "#floatbuttons:not('.hidden')" ).animate({"right": - floatmuzz}, 500);
 		};
 	});
 	$( "nav#menu button#mobilemenu" ).click(function() {
@@ -169,6 +306,9 @@ $(document).ready(function() {
 		if (windowwidth > 808) {
 			$( "#mobilemenu" ).removeClass("on");
 			$( "nav#minimenu" ).removeClass("on");
+		}
+		else {
+			$('#audiocontainer')[0].pause();
 		};
 	};
 	checkWidth();
@@ -193,8 +333,10 @@ $(document).ready(function() {
 			$( "#maps, #settings, #credits" ).addClass("off");
 			$( "body" ).removeClass( "hide missionsmobile settingsaboutmobile");
 			$( "#background" ).addClass( "hide" );
-			$( "#saveroulette:not('.hidden')" ).hide('slide',{ direction: 'right' }, 500);
-			$( "#enableoverlay:not('.hidden')" ).hide('slide',{ direction: 'right' }, 500);
+			//$( "#floatbuttons:not('.hidden')" ).hide('slide',{ direction: 'right' }, 500);
+			
+			var floater = $("#floatbuttons").width(); var muzzak = $("#music").width();	var floatmuzz = floater-muzzak;
+			$( "#floatbuttons:not('.hidden')" ).animate({"right": - floatmuzz}, 500);
 		};
 	});
 	$( "nav#minimenu button#missions, a#link_missions" ).click(function() {
@@ -205,8 +347,10 @@ $(document).ready(function() {
 		$( "body" ).removeClass( "hide settingsaboutmobile" )
 		$( "body" ).addClass("missionsmobile");
 		$( "#background" ).addClass( "hide" );
-		$( "#saveroulette:not('.hidden')" ).hide('slide',{ direction: 'right' }, 500);
-		$( "#enableoverlay:not('.hidden')" ).hide('slide',{ direction: 'right' }, 500);
+		//$( "#floatbuttons:not('.hidden')" ).hide('slide',{ direction: 'right' }, 500);
+		
+		var floater = $("#floatbuttons").width(); var muzzak = $("#music").width();	var floatmuzz = floater-muzzak;
+		$( "#floatbuttons:not('.hidden')" ).animate({"right": - floatmuzz}, 500);
 		
 		if($("#mode_con").hasClass("intel") || $("#mode_con").hasClass("hunt")) {
 			$("input.noncon").prop('checked', false).prop('disabled', true).parent().parent().removeClass("on").parent().addClass("lock");
@@ -226,8 +370,10 @@ $(document).ready(function() {
 			$( "body" ).removeClass( "hide missionsmobile" )
 			$( "body" ).addClass("settingsaboutmobile");
 			$( "#background" ).addClass( "hide" );
-			$( "#saveroulette:not('.hidden')" ).hide('slide',{ direction: 'right' }, 500);
-			$( "#enableoverlay:not('.hidden')" ).hide('slide',{ direction: 'right' }, 500);
+			//$( "#floatbuttons:not('.hidden')" ).hide('slide',{ direction: 'right' }, 500);
+			
+			var floater = $("#floatbuttons").width(); var muzzak = $("#music").width();	var floatmuzz = floater-muzzak;
+			$( "#floatbuttons:not('.hidden')" ).animate({"right": - floatmuzz}, 500);
 		};
 	});
 	$( "nav#minimenu button#about" ).click(function() {
@@ -242,8 +388,10 @@ $(document).ready(function() {
 			$( "body" ).removeClass( "hide missionsmobile" )
 			$( "body" ).addClass("settingsaboutmobile");
 			$( "#background" ).addClass( "hide" );
-			$( "#saveroulette:not('.hidden')" ).hide('slide',{ direction: 'right' }, 500);
-			$( "#enableoverlay:not('.hidden')" ).hide('slide',{ direction: 'right' }, 500);	
+			//$( "#floatbuttons:not('.hidden')" ).hide('slide',{ direction: 'right' }, 500);
+			
+			var floater = $("#floatbuttons").width(); var muzzak = $("#music").width();	var floatmuzz = floater-muzzak;
+			$( "#floatbuttons:not('.hidden')" ).animate({"right": - floatmuzz}, 500);
 		};
 	});
 	
@@ -521,7 +669,17 @@ $(document).ready(function() {
 	$( "#settings_theme" ).click(function() {
 		$( this ).addClass( "on" );
 		$( "label[id^='theme_']" ).show();
-		$( "label[id^='mode_'], label[id^='kill_'], label[id^='extra_'], label[id^='game_']" ).hide();
+		$( "label[id^='audio_'], label[id^='mode_'], label[id^='kill_'], label[id^='extra_'], label[id^='game_']" ).hide();
+		$( this ).siblings().removeClass( "on" );
+		if(jQuery.browser.mobile)
+			$( "#settings_descriptions p" ).html("Touch [INFO] for a description of the adjacent setting.");
+		else
+			$( "#settings_descriptions p" ).html("");
+	});
+	$( "#settings_audio" ).click(function() {
+		$( this ).addClass( "on" );
+		$( "label[id^='audio_']" ).show();
+		$( "label[id^='theme_'], label[id^='mode_'], label[id^='kill_'], label[id^='extra_'], label[id^='game_']" ).hide();
 		$( this ).siblings().removeClass( "on" );
 		if(jQuery.browser.mobile)
 			$( "#settings_descriptions p" ).html("Touch [INFO] for a description of the adjacent setting.");
@@ -531,7 +689,7 @@ $(document).ready(function() {
 	$( "#settings_roulette" ).click(function() {
 		$( this ).addClass( "on" );
 		$( "label[id^='mode_']" ).show();
-		$( "label[id^='theme_'], label[id^='kill_'], label[id^='extra_'], label[id^='game_']" ).hide();
+		$( "label[id^='theme_'], label[id^='audio_'], label[id^='kill_'], label[id^='extra_'], label[id^='game_']" ).hide();
 		$( this ).siblings().removeClass( "on" );
 		if(jQuery.browser.mobile)
 			$( "#settings_descriptions p" ).html("Touch [INFO] for a description of the adjacent setting.");
@@ -541,7 +699,7 @@ $(document).ready(function() {
 	$( "#settings_kills" ).click(function() {
 		$( this ).addClass( "on" );
 		$( "label[id^='kill_']" ).show();
-		$( "label[id^='theme_'], label[id^='mode_'], label[id^='extra_'], label[id^='game_']" ).hide();
+		$( "label[id^='theme_'], label[id^='audio_'], label[id^='mode_'], label[id^='extra_'], label[id^='game_']" ).hide();
 		$( this ).siblings().removeClass( "on" );
 		if(jQuery.browser.mobile)
 			$( "#settings_descriptions p" ).html("Touch [INFO] for a description of the adjacent setting.");
@@ -551,7 +709,7 @@ $(document).ready(function() {
 	$( "#settings_extras" ).click(function() {
 		$( this ).addClass( "on" );
 		$( "label[id^='extra_']" ).show();
-		$( "label[id^='theme_'], label[id^='mode_'], label[id^='kill_'], label[id^='game_']" ).hide();
+		$( "label[id^='theme_'], label[id^='audio_'], label[id^='mode_'], label[id^='kill_'], label[id^='game_']" ).hide();
 		$( this ).siblings().removeClass( "on" );
 		if(jQuery.browser.mobile)
 			$( "#settings_descriptions p" ).html("Touch [INFO] for a description of the adjacent setting.");
@@ -561,7 +719,7 @@ $(document).ready(function() {
 	$( "#settings_challenges" ).click(function() {
 		$( this ).addClass( "on" );
 		$( "label[id^='game_']" ).show();
-		$( "label[id^='theme_'], label[id^='mode_'], label[id^='extra_'], label[id^='kill_']" ).hide();
+		$( "label[id^='theme_'], label[id^='audio_'], label[id^='mode_'], label[id^='extra_'], label[id^='kill_']" ).hide();
 		$( this ).siblings().removeClass( "on" );
 		if(jQuery.browser.mobile)
 			$( "#settings_descriptions p" ).html("Touch [INFO] for a description of the adjacent setting.");
@@ -605,22 +763,52 @@ $(document).ready(function() {
 	$("#theme_h1old").click(function() {
 		$(this).find("span").text("[On]");
 		document.documentElement.className = "h1theme";
-		$("#theme_h1goty, #theme_h2, #theme_h3").find("span").text("[Off]");
+		$("#theme_h1goty, #theme_h2, #theme_h3, #theme_ht").find("span").text("[Off]");
+		if( $("#musicselect").val() == "DEFAULT" ) {
+			$("#audiosource").attr("src","./audio/World%20of%20Assassination.mp3");
+			$("#audiocontainer")[0].load();
+			$("#music").removeClass("on").addClass("off");
+		}
 	});
 	$("#theme_h1goty").click(function() {
 		$(this).find("span").text("[On]");
 		document.documentElement.className = "h1gotytheme";
-		$("#theme_h1old, #theme_h2, #theme_h3").find("span").text("[Off]");
-	});	
+		$("#theme_h1old, #theme_h2, #theme_h3, #theme_ht").find("span").text("[Off]");
+		if( $("#musicselect").val() == "DEFAULT" ) {
+			$("#audiosource").attr("src","./audio/World%20of%20Assassination.mp3");
+			$("#audiocontainer")[0].load();
+			$("#music").removeClass("on").addClass("off");
+		}
+	});
 	$("#theme_h2").click(function() {
 		$(this).find("span").text("[On]");
 		document.documentElement.className = "h2theme";
-		$("#theme_h1old, #theme_h1goty, #theme_h3").find("span").text("[Off]");
-	});	
+		$("#theme_h1old, #theme_h1goty, #theme_h3, #theme_ht").find("span").text("[Off]");
+		if( $("#musicselect").val() == "DEFAULT" ) {
+			$("#audiosource").attr("src","./audio/Agent%20and%20Handler.mp3");
+			$("#audiocontainer")[0].load();
+			$("#music").removeClass("on").addClass("off");
+		}
+	});
 	$("#theme_h3").click(function() {
 		$(this).find("span").text("[On]");
 		document.documentElement.className = "h3theme";
-		$("#theme_h1old, #theme_h1goty, #theme_h2").find("span").text("[Off]");
+		$("#theme_h1old, #theme_h1goty, #theme_h2, #theme_ht").find("span").text("[Off]");
+		if( $("#musicselect").val() == "DEFAULT" ) {
+			$("#audiosource").attr("src","./audio/Death%20Awaits%20(Menu%20ver.).mp3");
+			$("#audiocontainer")[0].load();
+			$("#music").removeClass("on").addClass("off");
+		}
+	});
+	$("#theme_ht").click(function() {
+		$(this).find("span").text("[On]");
+		document.documentElement.className = "httheme";
+		$("#theme_h1old, #theme_h1goty, #theme_h2, #theme_h3").find("span").text("[Off]");
+		if( $("#musicselect").val() == "DEFAULT" ) {
+			$("#audiosource").attr("src","./audio/Death%20Awaits%20(Planning%20ver.).mp3");
+			$("#audiocontainer")[0].load();
+			$("#music").removeClass("on").addClass("off");
+		}
 	});	
 	
 	/***Mode Functions***/
@@ -663,6 +851,11 @@ $(document).ready(function() {
 		stopItMain();
 		stopItElusive();
 		lockMaps();
+	} else if ($("#modeselect").val() == "CONANY") {
+		$("#mode_con").removeClass("intel").addClass("any").find("span").text("[Any]");
+		stopItMain();
+		stopItElusive();
+		lockMaps();
 	} else if ($("#modeselect").val() == "ELUSIVE") {
 		stopItMain();
 		stopItContracts();
@@ -686,7 +879,11 @@ $(document).ready(function() {
 			$("#modeselect").val("CONHARD");
 		}
 		else if( $(this).hasClass("hunt") ) {
-			$(this).removeClass("hunt").find("span").text("[Off]");
+			$(this).removeClass("hunt").addClass("any").find("span").text("[Any]");
+			$("#modeselect").val("CONANY");
+		}
+		else if( $(this).hasClass("any") ) {
+			$(this).removeClass("any").find("span").text("[Off]");
 			makeItMain();
 			unlockMaps();
 		}
@@ -727,6 +924,16 @@ $(document).ready(function() {
 		else {
 			makeItMain();
 		};
+	});
+	
+	/***Masked Conditions***/
+	$(document).on('click', '.mask', function() {
+		$(this).removeClass("mask");
+		
+		if($(".mask").length == 0) {
+			document.getElementById("saveroulette").disabled = false;
+			document.getElementById("subsaveroulette").disabled = false;
+		}
 	});
 	
 	/***Kill Requirements & Extra/Photo Objective & Time Limit & Achieve Rating***/
@@ -860,7 +1067,7 @@ $(document).ready(function() {
 	function scrollHorizontally(e) {
 		e = window.event || e;
 		var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
-		document.documentElement.scrollLeft -= (delta*40); // Multiplied by 40
+		/*document.documentElement.scrollLeft -= (delta*40); // Multiplied by 40*/
 		document.getElementById("contract").scrollLeft -= (delta*40); // Multiplied by 40
 		document.getElementById("maps").scrollLeft -= (delta*40); // Multiplied by 40
 		//e.preventDefault();
@@ -885,7 +1092,9 @@ $(document).ready(function() {
 		var textToWrite = document.getElementById("roulettetext").value;
 		textToWrite = textToWrite.replace(/\n/g, "\r\n"); //retain line breaks
 		var textFileAsBlob = new Blob([textToWrite], { type: 'text/plain' });
-		var fileNameToSaveAs = "HitmanRoulette.txt";
+		var currentdate = new Date();
+		var fileNameToSaveAs = "HitmanRoulette(" + currentdate.getDate() + "-" + (currentdate.getMonth()+1) + "-" + currentdate.getFullYear() +
+                               "@" + currentdate.getHours() + "-" + currentdate.getMinutes() + "-" + currentdate.getSeconds() + ").txt";
 
 		var downloadLink = document.createElement("a");
 		downloadLink.download = fileNameToSaveAs;
@@ -915,9 +1124,9 @@ $(document).ready(function() {
 	});
 	
 	/******Stream Overlay Option & Controls******/
-	$(document).on('click', '#mode_ol:not(".overlaymode")', function() {
+	/*$(document).on('click', '#mode_ol:not(".overlaymode")', function() {
 		$("#mode_ol").addClass( "overlaymode" ).find( "span" ).html("[On]");
-		$("#saveroulette, #popup-save, button#save, button#close").addClass("hidden");
+		$("#floatbuttons, #popup-save, button#save, button#close").addClass("hidden");
 		$("#enableoverlay").removeClass("hidden").show('slide',{ direction: 'right' }, 500);
 		$("#shadow, #popup-overlay, button#continue, button#return").removeClass("hidden");
 		//Make sure the below matches the #roulette click
@@ -934,11 +1143,11 @@ $(document).ready(function() {
 	$(document).on('click', '#mode_ol.overlaymode', function() {
 		$( this ).removeClass( "overlaymode" ).find( "span" ).html("[Off]");
 		$("#enableoverlay").addClass("hidden");
-		$("#saveroulette").removeClass("hidden").hide('slide',{ direction: 'right' }, 500);
+		$("#floatbuttons").removeClass("hidden").hide('slide',{ direction: 'right' }, 500);
 	});
 	$(document).on('click', '#return', function() {
-		$("#saveroulette, #popup-save, button#save, button#close").removeClass("hidden");
-		$("#saveroulette").removeClass("hidden").show('slide',{ direction: 'right' }, 500);
+		$("#floatbuttons, #popup-save, button#save, button#close").removeClass("hidden");
+		$("#floatbuttons").removeClass("hidden").show('slide',{ direction: 'right' }, 500);
 		$("#enableoverlay, #shadow, #popup-overlay, button#continue, button#return").addClass("hidden");
 	});
 	
@@ -969,6 +1178,6 @@ $(document).ready(function() {
 	$(document).on('click', '#overlay-close', function() {
 		$("body, #overlay-toggle").removeClass( "hidden" );
 		$("#overlay-mode").addClass("hidden");
-	});
+	});*/
 	
 });
