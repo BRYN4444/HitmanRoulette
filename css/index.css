@@ -426,7 +426,7 @@ html.h2theme { /* Variables for Hitman 2 Styled Theme & Images */
 	--buttonclose:url("../img/general/h2theme/xed-dframe.png");
 	--buttoncloseon:url("../img/general/h2theme/xed-full.png");
 }
-html.h3theme, html { /* Variables for Hitman 2 Styled Theme & Images */
+html.h3theme { /* Variables for Hitman 2 Styled Theme & Images */
 	/* Background */
 	--regularbg:url("../img/general/h3theme/background.jpg");
 	--regularbggradient:linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 15%, rgba(0,0,0,0) 71%, rgba(0,0,0,0.4) 100%);
