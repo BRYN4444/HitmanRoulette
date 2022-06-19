@@ -186,7 +186,7 @@ function createTargetList(container) {
 			targets = container.contractTargets.slice(0, num_targets);
 		};
 	}
-	if (mode == "CONANY") { // Unassigned Targets
+	else if (mode == "CONANY") { // Unassigned Targets
 		if (document.getElementById("conslider").value == 5) {
 			targets = ["Unassigned Target A","Unassigned Target B","Unassigned Target C","Unassigned Target D","Unassigned Target E"];
 		}
@@ -698,7 +698,7 @@ function writeEverything(result) {
 			"<div id='cam-image' class='" + result.photos.split('|')[0].replace(/\s|,|'|“|”|-|\?|\!|\:|\(|\)|\./g, "") +
 			"'><div id='instruction'><img id='list' src='./img/general/blank.png'><p id='wording'>"  + result.photos.split('|')[1] +
 			"</p></div><div id='nameplate'><span><p id='title'>Photo Objective</p><p id='subtitle'>"  + result.photos.split('|')[0] + "</p></span></div></div>";
-		document.getElementById("input_camera").value = "\nPhoto Objective: " + result.photos.split('|')[0] + " - " + result.photos.split('|')[1];
+		document.getElementById("input_camera").value = "\nPhoto Objective: " + result.photos.split('|')[0] + " - " + result.photos.split('|')[1].replace(/<br\s*[\/]?><br\s*[\/]?>/g, " ");
 	}
 	else {
 		document.getElementById("camera").innerHTML = "";
@@ -914,6 +914,8 @@ function writeEverything(result) {
 	var extraobjectivetext = document.getElementById("input_extraobjective").value;
 	//var extraobjectiveoverlaytext = document.getElementById("input_extraobjective_overlay").value;
 	
+	var cameratext = document.getElementById("input_camera").value;
+	
 	var complicationttext = document.getElementById("input_complicationt").value;			
 	var complicationitext = document.getElementById("input_complicationi").value;
 	var complication1text = document.getElementById("input_complication1").value;
@@ -943,6 +945,7 @@ function writeEverything(result) {
 		+ targetintel5text
 		+ objectivetext
 		+ extraobjectivetext
+		+ cameratext
 		+ exittext + exitreqtext
 		+ complicationttext
 		+ complicationitext
