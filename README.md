@@ -40,6 +40,18 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 
 ### Latest Updates:
 
+**June 18th, 2022**
+* **Other Fixes:**
+  * Contracts Mode Targets were not appearing in Intel and Hunt modes. (A single word omitted and overlooked from code can really cause issues, huh. My apologies.) 
+  * Camera Objectives were not properly being added in Export Roulette .txt/textarea.
+* **Current Plans:**
+  * Preparing for Ambrose Island, Hitman III's upcoming new location. Will be added in steps with Main Target(s) first, and Contracts Mode Targets last.
+> **Bug Hunting:** Please make a post [via GitHub](https://github.com/BRYN4444/HitmanRoulette/issues) or [on Hitman Forum](https://hitmanforum.com/t/13107) if you:
+>* Experience any graphical issues while using the Roulette in 4K, or on phones/tablets.
+>* Notice inconsistencies or impossibilities generated if using the Roulette while playing HITMAN or HITMAN 2.
+
+---
+
 **May 30th, 2022**
 * **Roulette:**
   * **Roulette Settings - New Options:**
@@ -56,11 +68,6 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 * **Other Fixes:**
   * An NPC previously removed due to compatibility between games was still in the data for a secondary mission. They are now properly removed.
   * Reworded a part of the Compatibility & Issues section to include the HITMAN Trilogy & Add-Ons Bundle, as well as other minor additions/changes to About & Help.
-* **Current Plans:**
-  * Preparing for Ambrose Island, Hitman III's upcoming new location. Will be added in steps with Main Target(s) first, and Contracts Mode Targets last.
-> **Bug Hunting:** Please make a post [via GitHub](https://github.com/BRYN4444/HitmanRoulette/issues) or [on Hitman Forum](https://hitmanforum.com/t/13107) if you:
->* Experience any graphical issues while using the Roulette in 4K, or on phones/tablets.
->* Notice inconsistencies or impossibilities generated if using the Roulette while playing HITMAN or HITMAN 2.
 
 ---
 
@@ -103,21 +110,3 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 * **HITMAN:**
   * **The Author & Patient Zero:**
     * **Contracts Mode Targets:** NPC "Jeff" added. Note: He only appears if you've 'saved' him linearly through the Patient Zero Campaign (look up a guide). In the Patient Zero Mission he drops three random weapons, two of which aren't in the mission normally. I would have added these to the Roulette's data, but since they're random each time you start the mission that would be a randomizer on top of a randomizer and could lead to real frustration (if you roll a elimination method that works with the weapons he drops, then congrats).
-
----
-
-**March 17th, 2022**
-* **Roulette:**
-  * Select Missions:
-    * **Contract Mode Roulette:** Added to The Author and Patient Zero. This is only available within HITMAN III, and I specified as best as I could on the menu, but they are on by default (so note this is you're playing through H1 or H2).
-* **HITMAN:**
-  * **The Author:**
-    * **Contracts Mode Targets:** 83 added. (Includes NPCs reused in other missions on this location)
-	* **Photo Objective:** 1 added.
-  * **Patient Zero:**
-    * **Contracts Mode Targets:** 111 added. (Includes NPCs reused in other missions on this location)
-	* **Extra Objective:** 1 added (carryover from Situs Inversus). 1 image updated. Also, "You Know the Number" (based on the in-game Challenge) is now restricted to Mission Mode Roulette due to the virus spread being removed in Contracts Mode. While still possible to Silent Assassin, this could be a very time-consuming Extra Objective, and has been noted in the objective.
-* **Other Fixes:**
-  * Enabling Contracts Mode Roulette and using the All Locations selection would sometime lock your choices. This has been fixed; only Contract Mode allowed missions will toggle under these conditions.
-  * Better clarified some position Intel for Contract Mode Targets in World of Tomorrow and Situs Inversus. Also fixed a misspelled name.
-  * Removed a few duplicate Contract Target images.
