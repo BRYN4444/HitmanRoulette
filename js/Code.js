@@ -672,19 +672,16 @@ function writeEverything(result) {
 			"<div id='obj-image' class='" + result.objectives.split('|')[0].replace(/\s|,|'|“|”|-|\?|\!|\(|\)|\./g, "") +
 			"'><div id='instruction'><img id='list' src='./img/general/blank.png'><p id='wording'>"  + result.objectives.split('|')[1] +
 			"</p></div><div id='nameplate'><span><p id='title'>Extra Objective <span id='hint'></span></p><p id='subtitle'>"  + result.objectives.split('|')[0] + "</p></span></div></div>";
-		if(result.objectives.split('|')[2] != null) { // extra objective hint
-			//document.getElementById("input_extraobjective_overlay").value = result.objectives.split('|')[2];
+		if(mode == "MAIN" && result.missionTitle == "Apex Predator" && result.objectives.split('|')[0] == "Order of Operations") { // Apex Predator missionWild Extra Objective	
+			document.getElementById("input_extraobjective").value = "\nExtra Objective: Order of Operations - Take out " + result.targets[4].split('|')[0] + " before any other ICA Agent.";
+			document.getElementById("apexwild").innerHTML = result.targets[4].split('|')[0];
+			//document.getElementById("input_extraobjective_overlay").value = result.objectives.split('|')[0];
+		} else {
 			document.getElementById("input_extraobjective").value = "\nExtra Objective: " + result.objectives.split('|')[0] + " - " + result.objectives.split('|')[1];
-		}
-		else {
-			//document.getElementById("input_extraobjective_overlay").value = result.objectives.split('|')[1];
-			document.getElementById("input_extraobjective").value = "\nExtra Objective: " + result.objectives.split('|')[0] + " - " + result.objectives.split('|')[1];
+			//document.getElementById("input_extraobjective_overlay").value = result.objectives.split('|')[0];
 		}
 		if(result.objectives.split('|')[3] != null) { // extra objective hint
 			document.getElementById("hint").innerHTML = "(<a target='_blank' href='./img/general/" + result.objectives.split('|')[3] + "'>Hint</a>)";
-		};
-		if(mode == "MAIN" && result.missionTitle == "Apex Predator") { // Apex Predator First Target Extra Objective
-			document.getElementById("apexwild").innerHTML = result.targets[4].split('|')[0];
 		};
 	}
 	else {
