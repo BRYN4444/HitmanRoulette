@@ -40,9 +40,10 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 
 ### Latest Updates:
 
-**June 18th, 2022**
+**June 20th, 2022**
 * **Other Fixes:**
-  * Contracts Mode Targets were not appearing in Intel and Hunt modes. (A single word omitted and overlooked from code can really cause issues, huh. My apologies.) 
+  * Contracts Mode Targets were not appearing in Intel and Hunt modes. (A single word omitted and overlooked from code can really cause issues, huh. My apologies.)
+  * The Extra Objective "Order of Operations" on Apex Predator wasn't properly listed in the Export Roulette .txt/textarea.
   * Camera Objectives were not properly being added in Export Roulette .txt/textarea.
 * **Current Plans:**
   * Preparing for Ambrose Island, Hitman III's upcoming new location. Will be added in steps with Main Target(s) first, and Contracts Mode Targets last.
