@@ -30,13 +30,13 @@ var suitStarts = ["Weapons Building","Crouched behind a Truck",
 var disguiseExits = ["Chimney|(Santa 47 Only)","Ambulance|(Medic Only)","Nest|(Secret)","Pale Rider|(Secret)","Trash Truck|(Garbage Man Only)","Swan Dive|(Secret)","Window|(Secret)","Snorkel|(Instructor Only)","Underground Cave System|(Tactical Wetsuit Only)"];
 var koExits = ["Chimney|(Santa 47 Only)","Pink Car|(Needs Key)","Nest|(Secret)","Rico's Supercar|(Needs Key)","Local's Car|(Needs Key)","Roadwork Gate|(Needs Key)","Window|(Secret)","Snorkel|(Instructor Only)","Delivery Scooter|(Needs Key)"];
 var proOnly = ["training","test","xmas","director","movie","election","handoff","enforcer","construction","extractor","cult","veteran","mercenary","spread","festival","controller"];
+var noSave = ["xmas","director","enforcer","extractor","veteran","mercenary","festival","controller","gardenshow"]
 
 var mechListH1 = ["Instinct|Turn off Instinct in the game's Options menu under Gameplay.",
 				"Mini Map|Turn off the Mini Map in the game's Options menu under Gameplay.",
 				"Attention Alert|Turn off Attention Alert in the game's Options menu under Gameplay.",
 				"NPC Icons|Turn off NPC Icons in the game's Options menu under Gameplay.",
-				"Weapon HUD|Turn off Weapon HUD in the game's Options menu under Gameplay.",
-				"No Agility|Do not vault, hang, scale, or climb down."];
+				"Weapon HUD|Turn off Weapon HUD in the game's Options menu under Gameplay."];
 var mechListH2 = ["Instinct|Turn off Instinct in the game's Options menu under Gameplay.",
 				"Mini Map|Turn off the Mini Map in the game's Options menu under Gameplay.",
 				"Attention Alert|Turn off Attention Alert in the game's Options menu under Gameplay.",
@@ -44,14 +44,13 @@ var mechListH2 = ["Instinct|Turn off Instinct in the game's Options menu under G
 				"Weapon HUD|Turn off Weapon HUD in the game's Options menu under Gameplay.",
 				"Picture In Picture|Turn off Picture In Picture in the game's Options menu under Gameplay.",
 				"Limited Vision Area|Turn off the Limited Vision Area in the game's Options menu under Gameplay.",
-				"Camera Grid|Turn off Camera Grid in the game's Options menu under Gameplay.",
-				"No Agility|Do not vault, hang, scale, or climb down."];
+				"Camera Grid|Turn off Camera Grid in the game's Options menu under Gameplay."];
 var timeList = [5,7,10,12,15,20,25,30,40,50,60];
-var ratingList = ["Hunted Slayer|Complete the roulette and achieve at least a one star rating.",
-				  "Wanted Murderer|Complete the roulette and achieve at least a two star rating.",
-				  "Missing Killer|Complete the roulette and achieve at least a three star rating.",
-				  "Quiet Hitman|Complete the roulette and achieve at least a four star rating.",
-				  "Silent Assassin|Complete the roulette and achieve a five star rating."];
+var ratingList = ["Hunted Slayer|Complete the roulette and achieve at least a one star rating.|Achieve at least a one star",
+				  "Wanted Murderer|Complete the roulette and achieve at least a two star rating.|Achieve at least a two stars",
+				  "Missing Killer|Complete the roulette and achieve at least a three star rating.|Achieve at least a three stars",
+				  "Quiet Hitman|Complete the roulette and achieve at least a four star rating.|Achieve at least a four stars",
+				  "Silent Assassin|Complete the roulette and achieve a five star rating.|Achieve Silent Assassin"];
 var difficultyH2 = ["Casual","Professional","Master"];
 var difficultyH1 = ["Normal","Professional"];
 
@@ -416,7 +415,7 @@ var hh = {
 	"Saber|Melee","Saber|Thrown Weapon",
 	"Scissors|Melee","Scissors|Thrown Weapon",
 	"Screwdriver|Melee","Screwdriver|Thrown Weapon",
-	"Xmas Star|Melee [Any in Hitman 1]","Xmas Star|Lethal Throw [Any in Hitman 1]"],
+	"Xmas Star|Melee [Any Weapon in Hitman 1]","Xmas Star|Lethal Throw [Any Weapon in Hitman 1]"],
 	targetList: ["Harry “Smokey” Bagnato","Marv “Slick” Gonif"],
 	contractTargets: ["Harry “Smokey” Bagnato|Delinquent and compulsive smoker. Stealing items, starting in the second floor dining room.",
 	"Marv “Slick” Gonif|Middle-class thrill-seeker. Stealing items, starting in the palace basement."],
