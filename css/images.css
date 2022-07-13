@@ -2794,6 +2794,7 @@ div[class^="ElusiveTarget"], div[class^="UnassignedTarget"] { background-image: 
 .HomeTogether { background-image: url('../img/obj/HomeTogether.png'); }
 .NinjaPreparation { background-image: url('../img/obj/NinjaPreparation.png'); }
 .GrabaSpare { background-image: url('../img/obj/GrabaSpare.png'); }
+.ShadowTrail { background-image: url('../img/obj/ShadowTrail.png'); }
 
 .OceanByMoonlight { background-image: url('../img/camera/OceanByMoonlight.png'); }
 .Rebroadcast { background-image: url('../img/camera/Rebroadcast.png'); }
@@ -3233,11 +3234,11 @@ div[class^="ElusiveTarget"], div[class^="UnassignedTarget"] { background-image: 
 .HeresYourStop { background-image: url('../img/obj/HeresYourStop.png'); }
 
 /***** Complications *****/
-.compinfo { background-image: url('../img/comp/none.png'); }
 .NoRecordings { background-image: url('../img/comp/NoRecordings.png'); }
 .NoAgencyPickup { background-image: url('../img/comp/NoAgencyPickup.png'); }
 .NoBodiesFound { background-image: url('../img/comp/NoBodiesFound.png'); }
 .NoDisguiseChanges { background-image: url('../img/comp/NoDisguiseChanges.png'); }
+.OneDisguiseChange { background-image: url('../img/comp/OneDisguiseChange.png'); }
 .RowdyGuns { background-image: url('../img/comp/RowdyGuns.png'); }
 .NoCivilianCasualties { background-image: url('../img/comp/NoCivilianCasualties.png'); }
 .DoNotGetSpotted { background-image: url('../img/comp/DoNotGetSpotted.png'); }
@@ -3245,13 +3246,12 @@ div[class^="ElusiveTarget"], div[class^="UnassignedTarget"] { background-image: 
 .HeadshotsOnly { background-image: url('../img/comp/HeadshotsOnly.png'); }
 .OneSaveOnly { background-image: url('../img/comp/OneSaveOnly.png'); }
 .PerfectShooter { background-image: url('../img/comp/PerfectShooter.png'); }
-.OneDisguiseChange { background-image: url('../img/comp/OneDisguiseChange.png'); }
+.NoAgility { background-image: url('../img/comp/NoAgility.png'); }
 
 /***** Gameplay Challenges *****/
 /*** Restrictions ***/
-.h2-challinfo, .h1-challinfo { background-image: url('../img/gpc/none.png'); }
 .h2-Instinct { background-image: url('../img/gpc/Instinct.png'); }
-.h1-Instinct { background-image: url('../img/gpc/InstinctH1.png'); }
+.h1-Instinct { background-image: url('../img/gpc/Instinct.png'); }
 .h2-MiniMap { background-image: url('../img/gpc/MiniMap.png'); }
 .h1-MiniMap { background-image: url('../img/gpc/MiniMapH1.png'); }
 .h2-AttentionAlert { background-image: url('../img/gpc/AttentionAlert.png'); }
@@ -3262,8 +3262,6 @@ div[class^="ElusiveTarget"], div[class^="UnassignedTarget"] { background-image: 
 .h1-WeaponHUD { background-image: url('../img/gpc/WeaponHUDH1.png'); }
 .h2-PictureInPicture { background-image: url('../img/gpc/PictureInPicture.png'); }
 .h2-LimitedVisionArea { background-image: url('../img/gpc/LimitedVisionArea.png'); }
-.h2-NoAgility, .h1-NoAgility { background-image: url('../img/gpc/NoAgility.png'); }
-.h2-NoCrouching, .h1-NoCrouching { background-image: url('../img/gpc/NoCrouching.png'); }
 .h2-CameraGrid { background-image: url('../img/gpc/CameraGrid.png'); }
 
 /*** Time, Rating, and Difficulty ***/
