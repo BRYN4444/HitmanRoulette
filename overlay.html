@@ -1,0 +1,1400 @@
+<!DOCTYPE html>
+<html class="hrtheme">
+	<head lang="en">
+		<title>Hitman Roulette</title>
+		<meta charset="UTF-8">
+		<meta property="og:title" content="Hitman Roulette" />
+		<meta name="description" content="Eliminate the given targets in randomized ways. Hitman Roulette aims to give new ideas when playing the World of Assassination™ trilogy.">
+		<meta property="og:description" content="Eliminate the given targets in randomized ways. Hitman Roulette aims to give new ideas when playing the World of Assassination™ trilogy." />
+		<meta property="og:site_name" content="Up For A Challenge, 47?" >
+		<meta property="og:url" content="https://hitmanroulette.com/" />
+		<meta property="og:image" content="https://hitmanroulette.com/hrfavicon.png" />
+		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:title" content="Hitman Roulette" />
+		<meta name="twitter:site" content="hitmanroulette.com" />
+		<meta name="twitter:description" content="This randomizer aims to give new ideas when playing the World of Assassination™ trilogy." />
+		<meta name="twitter:image" content="https://hitmanroulette.com/img/general/meta-twit.png" /> 
+		<meta name="keywords" content="Hitman Roulette, Hitman, Hitman 2016, Hitman 2, Hitman 2018, Hitman III, Hitman 3, Hitman 2021, Hitman Trilogy, Agent 47, Enter a World of Assassination, Make the World Your Weapon, Death Awaits, Contracts Mode">
+		<meta name="theme-color" content="#FB000F">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" href="./hrfavicon.png" type="image/png" />
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@900&family=Roboto:wght@300;400;500;700;900" rel="stylesheet">
+		<link rel="stylesheet" href="./css/index.css" type="text/css" />
+		<link rel="stylesheet" href="./css/overlay.css" type="text/css" />
+		<link rel="stylesheet" href="./css/images.css" type="text/css" />
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/smoothness/jquery-ui.css">
+		<script type="text/javascript" src="./js/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="./js/jquery.scrollbar.js"></script>
+		<script type="text/javascript" src="js/jquery.plugin.js"></script> 
+		<script type="text/javascript" src="js/jquery.countdown.js"></script>
+		<script type="text/javascript" src="./js/detectmobilebrowser.js"></script>
+	</head>
+
+	<body>
+		<noscript>Hitman Roulette requires Javascript to work. Please enable Javascript in your browser.</noscript>
+		
+		<div id="shadow" class="hidden">
+			<div id="popwrap">
+				<div id="popup">
+					<span id="popup-save">
+						<h1>Export Roulette</h1>
+						<p>Below is the generated Roulette. Copy it, or select SAVE AS TEXTFILE to save it for yourself.</p>
+						<textarea id="roulettetext">Eliminate TARGET NAME with WEAPON NAME (MELEE) while disguised as DISGUISE NAME.</textarea>
+						<p>You can modify the formatting above before selecting SAVE AS TEXTFILE.</p>
+					</span>
+				</div>
+				<button id="save">Save As Textfile</button>					
+				<button id="close">Close</button>
+			</div>
+			<div id="overlaywrap" class="hidden">
+				<div id="popup">
+					<h1>Stream Overlay BETA</h1>
+					<p>Intended for PC Streamers to easily switch between generating Roulettes and playing the game with the generated objectives on screen for the viewers.
+					<br /><br /><b>Instructions for setting up are below</b>. These can also be found on the Overlay URL page.</p>
+					<ol>
+						<li>
+							In your streaming software, add a website/browser source of 1920px width by 1080px height with the URL:
+							<br /><input id="URLinput" type="text" value="https://HitmanRoulette.com/overlay" /> <button id="URLbutton" onclick="overlayCopy()">Copy URL</button>
+							<script type="text/javascript">
+								function overlayCopy() {
+									var copyText = document.getElementById("URLinput");
+									copyText.select();
+									navigator.clipboard.writeText(copyText.value);
+									document.getElementById("URLbutton").innerText = "COPIED!";
+									const timeDelay = setTimeout(buttonReturn, 3000); //3 seconds
+									function buttonReturn() {
+										document.getElementById("URLbutton").innerText = "Copy URL";
+									};
+								};								
+							</script>
+						</li>
+						<li>Adjust this so it fits over your gameplay source 1:1 exact. (This shouldn't disrupt your layout)</li>
+						<li>
+							Interact with the website/browser source, issue a Roulette, and click the Overlay button in the bottom-right corner to test things. (Gameplay should now be seen with all objectives overlayed)
+							<br /><b>To prevent confusion, set "Objectives" to "Always Off" in the game's Options menu under Gameplay.</b>
+						</li>
+						<li>
+							The overlay's header allows adjusting position & text size, and has a Return to Roulette button to swap back.
+							<br />When adjusting, remember that Picture In Picture alerts appears in the top-left corner.
+						</li>
+						<li>Cosmetic adjustments are available in the Roulette Settings on that website/browser source.</li>
+					</ol><br />
+					<p><b>Overlay Interaction Controls:</b></p>
+					<ul>
+						<li>Prerequisit Objectives (things to set before you start a mission), can be hidden to help reduce clutter. Just click the top prompt.</li>
+						<li>Target and mission/extra/photo Objectives can be marked as complete by clicking them. Clicking them again unmarks them.</li>
+						<li>Most Objectives have an intel icon when hovered over. Clicking it shows the objective as it looks on the Roulette; with images and extra text.</li>
+						<li>If a Time Limit is enforced, clicking that Objective begins a timer for the listed amount. Clicking it again restarts this timer.</li>
+						<li>Returning to the Roulette and back to the Overlay will restore the state of these listed interations.</li>
+					</ul>
+				</div>				
+				<button id="close">Close</button>
+			</div>
+		</div>
+		
+		<div id="streamsafety">
+			<img id="streamsafetylogo" src="./img/general/logo.png">
+			<center>
+				Add the Website Source at the following size:<br />Width: 1920px<br />Height: 1080px<br />Also disable any Custom CSS.
+			</center>
+		</div>
+		
+		<div id="overlay" class="hidden regular h3theme whitetext noshadow defaultcase">
+			<div id="overlaybox">
+				<div id="overlayboxheader">Drag to Reposition Objectives</div>
+				<div id="overlaysize"><span id="overlaymin"></span><span id="overlaybetween">Size</span><span id="overlaymax"></span></div>
+				<div id="overlayfinish"><span>&nbsp;Return to Hitman Roulette&nbsp;</span></div>
+				<div id="overlayinfo-return" class="hidden">[Return To All Objectives]</div>
+				<div id="overlayboxprereq">
+					<div id="overlay-intel-prereq"></div><div id="overlay-prereq">Prerequisites: Set the following before you begin. [Click to remove]</div>
+					<div></div><div id="overlay-intel-restriction" class="detailsicon"></div><div id="overlay-restriction" class="details nocheck prereqcheck"></div>
+					<div></div><div id="overlay-intel-start" class="detailsicon"></div><div id="overlay-start" class="details nocheck prereqcheck"></div>
+					<div></div><div id="overlay-intel-pickup" class="detailsicon"></div><div id="overlay-pickup" class="details nocheck prereqcheck"></div>
+					<div></div><div id="overlay-intel-difficulty"></div><div id="overlay-difficulty" class="prereqcheck"></div>
+				</div>
+				<div id="overlay-intel-target1" class="detailsicon"></div><div id="overlay-target1" class="details"></div>
+				<div id="overlay-intel-target2" class="detailsicon"></div><div id="overlay-target2" class="details"></div>
+				<div id="overlay-intel-target3" class="detailsicon"></div><div id="overlay-target3" class="details"></div>
+				<div id="overlay-intel-target4" class="detailsicon"></div><div id="overlay-target4" class="details"></div>
+				<div id="overlay-intel-target5" class="detailsicon"></div><div id="overlay-target5" class="details"></div>
+				<div id="overlay-intel-objective" class="detailsicon"></div><div id="overlay-objective" class="details"></div>
+				<div id="overlay-intel-objectivex" class="detailsicon"></div><div id="overlay-objectivex" class="details"></div>
+				<div id="overlay-intel-camera" class="detailsicon"></div><div id="overlay-camera" class="details"></div>
+				<div id="overlay-intel-exit" class="detailsicon"></div><div id="overlay-exit" class="details nocheck"></div>
+				<div id="overlay-intel-complication1" class="detailsicon"></div><div id="overlay-complication1" class="details nocheck"></div>
+				<div id="overlay-intel-complication2" class="detailsicon"></div><div id="overlay-complication2" class="details nocheck"></div>
+				<div id="overlay-intel-complication3" class="detailsicon"></div><div id="overlay-complication3" class="details nocheck"></div>
+				<div id="overlay-intel-complication4" class="detailsicon"></div><div id="overlay-complication4" class="details nocheck"></div>
+				<div id="overlay-intel-complication5" class="detailsicon"></div><div id="overlay-complication5" class="details nocheck"></div>
+				<div id="overlay-intel-complication6" class="detailsicon"></div><div id="overlay-complication6" class="details nocheck"></div>
+				<div id="overlay-intel-challenge_rating"></div><div id="overlay-challenge_rating"></div>
+				<div id="overlay-intel-challenge_timelimit"></div><div id="overlay-challenge_timelimit">
+					<span id="timeprompt"></span>
+					<span id="timekeeper" class="hidden">
+						<span>Time Remaining</span>
+						<b id="timeexact">00:00</b>
+					</span>
+				</div>
+				<div id="overlayinfo" class="hidden">
+					<div id="overlayinfo-image" class="hidden">
+						<div id="overlayinfo-method" class="hidden">
+							<span class="">
+								<p id="title">Eliminate using:</p>
+								<p id="subtitle-method"></p>
+								<p id="subtitle-alt-method"></p>
+							</span>
+						</div>
+						<div id="overlayinfo-disguise" class="hidden">
+							<span class="">
+								<p id="title">Wear disguise:</p>
+								<p id="subtitle-disguise"></p>
+							</span>
+						</div>
+						<div id="overlayinfo-intel" class="hidden">
+							<span id="overlayinfo-inteltoggle">
+								<p id="title">Intel:</p>
+								<p id="wording"></p>
+							</span>
+						</div>
+						<div id="overlayinfo-instruction" class="hidden">
+							<img id="list" src="./img/general/blank.png">
+							<p id="wording"></p>
+						</div>
+						<div id="overlayinfo-nameplate">
+							<span>
+								<p id="title"></p>
+								<p id="subtitle"></p>
+							</span>
+						</div>
+					</div>
+					
+					<div id="overlayinfo-entry" class="hidden">
+						<div id="entry-nameplate">
+							<span>
+								<p id="title">Starting Location</p>
+								<p id="subtitle"></p>
+							</span>
+						</div>
+					</div>
+					<div id="overlayinfo-exit" class="hidden">
+						<div id="exit-nameplate">
+							<span>
+								<p id="title">Exit Location <span id="overlayinfo-exitreq"></span></p>
+								<p id="subtitle"></p>
+							</span>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		
+		
+		
+		<header>
+			<div id="undo">
+				<button id="undobtn" class="historybtn" type="button" disabled="true" onclick="history_undo()">Undo</button>
+			</div>
+			<div id="map" class="">
+				<p id="map_place">
+					<span>Good evening, 47.</span>
+				</p>
+				<p id="map_name">
+					<span>"Issue Roulette" to Begin</span>
+				</p>
+			</div>
+			<div id="redo">
+				<button id="redobtn" class="historybtn" type="button" disabled="true" onclick="history_redo()">Redo</button>
+			</div>
+		</header>
+		<nav id="menu">
+			<button id="roulette" class="on" type="button">Hitman Roulette</button>
+			<button id="missions" type="button">Select Missions</button>
+			<button id="options" type="button">Roulette Settings</button>
+			<button id="about" type="button">About & Help</button>
+			<button id="mobilemenu" type="button">Options</button>
+		</nav>
+		<nav id="minimenu">
+			<button id="roulette" class="on" type="button">Hitman Roulette</button>
+			<button id="missions" type="button">Select Missions</button>
+			<button id="options" type="button">Roulette Settings</button>
+			<button id="about" type="button">About & Help</button>
+		</nav>		
+		<section id="content">
+			<div id="spacing"></div>
+			<div id="contract">
+				<div id="empty" class="side"></div>
+				<div id="contract_submenu" class="column">
+					<button id="submenu_obj" type="button" disabled="true">
+						<span>Objectives</span>
+					</button>
+					<button id="submenu_comp" type="button" disabled="true">
+						<span>Complications</span>
+					</button>
+					<button id="submenu_chal" type="button" disabled="true">
+						<span>Challenges</span>
+					</button>
+					<button id="submenu_issue" onclick="button_MakeItGo()" type="button">
+						<span>
+							<p id="subtitle">Reissue for Mission/Setting Changes</p>
+							<p id="title">Issue Roulette</p>
+						</span>
+					</button>
+				</div>
+				<div id="travel" class="column"></div>
+				<div id="target1" class="column"></div>
+				<div id="target2" class="column"></div>
+				<div id="target3" class="column"></div>
+				<div id="target4" class="column"></div>
+				<div id="target5" class="column"></div>
+				<div id="objective" class="column"></div>
+				<div id="objectivex" class="column"></div>
+				<div id="camera" class="column"></div>
+				<div id="complication1" class="column" style="display:none;"></div>
+				<div id="complication2" class="column" style="display:none;"></div>
+				<div id="complication3" class="column" style="display:none;"></div>
+				<div id="complication4" class="column" style="display:none;"></div>
+				<div id="complication5" class="column" style="display:none;"></div>
+				<div id="complication6" class="column" style="display:none;"></div>
+				<div id="restriction" class="column" style="display:none;"></div>
+				<div id="timelimit" class="column" style="display:none;"></div>
+				<div id="ratingget" class="column" style="display:none;"></div>
+				<div id="diffget" class="column" style="display:none;"></div>
+				<div id="intro" class="column">
+					<div id="logo" class="welcome">
+						<div id="nameplate">
+							<span>
+								<p id="title">Good evening, 47.</p>
+								<p id="subtitle">"Issue Roulette" to Begin</p>
+							</span>
+						</div>
+					</div>
+					<div id="logothin" class="welcome">
+						<div id="nameplate">
+							<span>
+								<p id="title">Good evening, 47.</p>
+								<p id="subtitle">"Issue Roulette" to Begin</p>
+							</span>
+						</div>
+					</div>
+				</div>
+
+				<div id="features" class="column">
+					<div id="wrapper">
+						<div id="notes">
+							<img id="notice" class="shrink" src="./img/general/blank.png">
+							<p id="wording">
+								<b>Contains spoilers</b> for the entire "World of Assassination" trilogy.
+							</p>
+							<p id="wording">
+								By default, any location could appear. Use "Select Missions" above to specify by mission, game, and/or DLC instead.
+								<br /><br />
+								The following options and more can be set using "Roulette Settings", also above:
+							</p>
+							<ul>
+								<li>Support for Contracts Mode! Eliminate more than the default targets.</li>
+								<li>Enable a mission unique Extra Objective for a potential curveball in approach.</li>
+								<li>Enable Complications for playstyle constraints or requirements.</li>
+							</ul>
+							<img id="list" class="shrink" src="./img/general/blank.png">
+							<p id="wording" style="padding-right:5px">
+								New Theme, New Settings, and 4K testing. Check <a href="https://github.com/BRYN4444/HitmanRoulette#latest-updates" target="_blank">GitHub</a> for details. 
+								<!--<b><a href="https://github.com/BRYN4444/HitmanRoulette#latest-updates" target="_blank">Update:</a></b> Ambrose Island Added! Soon: Contracts Mode Support.//-->
+								<!--Check on <a href="https://github.com/BRYN4444/HitmanRoulette#latest-updates" target="_blank">GitHub</a> for details on the latest Roulette updates.//-->
+							</p>
+						</div>
+						<div id="nameplate">
+							<span>
+								<p id="title">Information</p>
+								<p id="subtitle">Roulette Features</p>
+							</span>
+						</div>
+					</div>
+				</div>
+				
+				<div id="overlayguide" class="column">
+					<div id="wrapper">
+						<div id="notes">
+							<p id="wording">
+								Intended for PC Streamers to easily switch between generating Roulettes and playing the game with the generated objectives on screen for the viewers.
+							</p>
+							<img id="notice" class="shrink" src="./img/general/blank.png">
+							<p id="wording">
+								<a href="#" id="openoverlayinstructions">Click here</a> to read setup instructions & interaction controls.
+							</p>							
+							<img id="bigx" class="shrink" src="./img/general/blank.png">
+							<p id="wording">
+								<a href="#" id="closeoverlayguide">Click here</a> to hide this Stream Overlay box.
+							</p>
+							<!--<img id="list" class="shrink" src="./img/general/blank.png">
+							<p id="wording">
+								Latest Changes
+							</p>//-->
+						</div>
+						<div id="nameplate">
+							<span>
+								<p id="title">Information</p>
+								<p id="subtitle">Stream Overlay</p>
+							</span>
+						</div>
+					</div>
+				</div>
+				
+				<div id="empty" class="side"></div>
+				<form class="clearme">
+					<textarea id="input_mission" class="clearme"></textarea>
+					<textarea id="input_contract" class="clearme"></textarea>
+					<textarea id="contarget" class="clearme"></textarea>
+					
+					<textarea id="input_entry" class="clearme"></textarea>
+					<textarea id="input_exit" class="clearme"></textarea>
+					
+					<textarea id="input_target1" class="clearme"></textarea>
+					<textarea id="input_method1" class="clearme"></textarea>
+					<textarea id="input_disguise1" class="clearme"></textarea>
+					<textarea id="input_intel1" class="clearme"></textarea>
+					
+					<textarea id="input_target2" class="clearme"></textarea>
+					<textarea id="input_method2" class="clearme"></textarea>
+					<textarea id="input_disguise2" class="clearme"></textarea>
+					<textarea id="input_intel2" class="clearme"></textarea>
+					
+					<textarea id="input_target3" class="clearme"></textarea>
+					<textarea id="input_method3" class="clearme"></textarea>
+					<textarea id="input_disguise3" class="clearme"></textarea>
+					<textarea id="input_intel3" class="clearme"></textarea>
+					
+					<textarea id="input_target4" class="clearme"></textarea>
+					<textarea id="input_method4" class="clearme"></textarea>
+					<textarea id="input_disguise4" class="clearme"></textarea>
+					<textarea id="input_intel4" class="clearme"></textarea>
+					
+					<textarea id="input_target5" class="clearme"></textarea>
+					<textarea id="input_method5" class="clearme"></textarea>
+					<textarea id="input_disguise5" class="clearme"></textarea>
+					<textarea id="input_intel5" class="clearme"></textarea>
+					
+					<textarea id="input_objective" class="clearme"></textarea>
+					<textarea id="input_extraobjective" class="clearme"></textarea>
+					<textarea id="input_camera" class="clearme"></textarea>
+					
+					<textarea id="input_complicationt" class="clearme"></textarea>
+					<textarea id="input_complication1" class="clearme"></textarea>
+					<textarea id="input_complication2" class="clearme"></textarea>
+					<textarea id="input_complication3" class="clearme"></textarea>
+					<textarea id="input_complication4" class="clearme"></textarea>
+					<textarea id="input_complication5" class="clearme"></textarea>
+					<textarea id="input_complication6" class="clearme"></textarea>
+					<textarea id="input_pickup" class="clearme"></textarea>
+					
+					<textarea id="input_challengest" class="clearme"></textarea>
+					<textarea id="input_restriction" class="clearme"></textarea>
+					<textarea id="input_timelimit" class="clearme"></textarea>
+					<textarea id="input_timelimitvalue" class="clearme"></textarea>
+					<textarea id="input_rating" class="clearme"></textarea>
+					<textarea id="input_difficulty" class="clearme"></textarea>
+				</form>
+			</div>
+			<div id="maps" class="off">
+				<div id="empty" class="side"></div>
+				<div id="maps_submenu" class="column">
+					<div id="submenu_random" class="on">
+						<span>
+							<p id="subtitle">Categorized For Quick Selection</p>
+							<p id="title">Mission Groupings</p>
+						</span>
+					</div>
+					<div id="submenu_h1">
+						<span>
+							<p id="subtitle">Story</p>
+							<p id="title">Hitman™ & Prologue</p>
+						</span>
+					</div>
+					<div id="submenu_h2">
+						<span>
+							<p id="subtitle">Story & DLC</p>
+							<p id="title">Hitman™2 & Expansions</p>
+						</span>
+					</div>
+					<div id="submenu_h3">
+						<span>
+							<p id="subtitle">Story</p>
+							<p id="title">Hitman™III</p>
+						</span>
+					</div>
+					<div id="submenu_hside">
+						<span>
+							<p id="subtitle">Miscellaneous</p>
+							<p id="title">Side Missions</p>
+						</span>
+					</div>
+					<div id="submenu_hpz">
+						<span>
+							<p id="subtitle">Campaign</p>
+							<p id="title">Patient Zero</p>
+						</span>
+					</div>
+					<div id="submenu_hs6">
+						<span>
+							<p id="subtitle">Campaign (H1 PS4 Exclusive)</p>
+							<p id="title">Sarajevo Six</p>
+						</span>
+					</div>
+				</div>
+				<label id="rand-all" class="column" for="RANDOMALL">
+					<div id="nameplate">
+						<span>
+							<input id="RANDOMALL" type="checkbox" value="true" checked />
+							<p id="title">Toggle <span class="noncon">(Except Sarajevo Six)</span><b class="noncon">(Contract Mode Only Missions)</b></p>
+							<p id="subtitle">All Locations (Default)</p>
+						</span>
+					</div>
+				</label>
+				<div id="rand-col" class="column">
+					<label for="RANDOMH1">
+						<div id="top" class="rand-h1">
+							<div id="nameplate">
+								<span>
+									<input id="RANDOMH1" class="" type="checkbox" value="true" checked />
+									<p id="title">Toggle</p>
+									<p id="subtitle">Hitman™ Campaign</p>
+								</span>
+							</div>
+						</div>
+					</label>
+					<label for="RANDOMH2">
+						<div id="bottom" class="rand-h2">
+							<div id="nameplate">
+								<span>
+									<input id="RANDOMH2" class="" type="checkbox" value="true" checked />
+									<p id="title">Toggle</p>
+									<p id="subtitle">Hitman™2 Campaign</p>
+								</span>
+							</div>
+						</div>
+					</label>
+				</div>
+				<div id="rand-col" class="column">
+					<label for="RANDOMH3">
+						<div id="top" class="rand-h3">
+							<div id="nameplate">
+								<span>
+									<input id="RANDOMH3" class="" type="checkbox" value="true" checked />
+									<p id="title">Toggle<b class="nonconsp">("Untouchable" Unavailable)</b></p>
+									<p id="subtitle">Hitman™III Campaign</p>
+								</span>
+							</div>
+						</div>
+					</label>
+					<label for="RANDOMH2EX">
+						<div id="bottom" class="rand-h2ex">
+							<div id="nameplate">
+								<span>
+									<input id="RANDOMH2EX" class="" type="checkbox" value="true" checked />
+									<p id="title">Toggle</p>
+									<p id="subtitle">Hitman™2 Expansions</p>
+								</span>
+							</div>
+						</div>
+					</label>
+				</div>
+				<div id="rand-col" class="column">
+					<label for="RANDOMH1PZ">
+						<div id="top" class="rand-h1pz">
+							<div id="nameplate">
+								<span>
+									<input id="RANDOMH1PZ" class="" type="checkbox" value="true" checked />
+									<p id="title">Toggle<b class="nonconsp">(H1/H2: "The Source" Only)</b></p>
+									<p id="subtitle">Patient Zero Campaign</p>
+								</span>
+							</div>
+						</div>
+					</label>
+					<label for="RANDOMH1BM">
+						<div id="bottom" class="rand-h1bm">
+							<div id="nameplate">
+								<span>
+									<input id="RANDOMH1BM" class="" type="checkbox" value="true" checked />
+									<p id="title">Toggle</p>
+									<p id="subtitle">H1: Bonus Missions</p>
+								</span>
+							</div>
+						</div>
+					</label>
+				</div>
+				<div id="rand-col" class="column">
+					<label for="RANDOMHSC">
+						<div id="top" class="rand-hsc">
+							<div id="nameplate">
+								<span>
+									<input id="RANDOMHSC" class="noncon" type="checkbox" value="true" checked />
+									<p id="title"><span class="noncon">Toggle (Access Varies by Game)</span><b class="noncon">Manually Select The "Garden Show"</b></p>
+									<p id="subtitle">Seasonal Content</p>
+								</span>
+							</div>
+						</div>
+					</label>
+					<label for="RANDOMH2SA">
+						<div id="bottom" class="rand-h2sa">
+							<div id="nameplate">
+								<span>
+									<input id="RANDOMH2SA" class="noncon" type="checkbox" value="true" checked />
+									<p id="title"><span class="noncon">Toggle</span><b class="noncon">Unavailable for Contracts Mode</b></p>
+									<p id="subtitle">H2: Special Assignments</p>
+								</span>
+							</div>
+						</div>
+					</label>
+				</div>
+				<div id="rand-col" class="column">
+					<label for="RANDOMH1S6">
+						<div id="top" class="rand-h1s6">
+							<div id="nameplate">
+								<span>
+									<input id="RANDOMH1S6" class="noncon" type="checkbox" value="true" />
+									<p id="title"><span class="noncon">Toggle / Manually (H1 PS4 Exclusive)</span><b class="noncon">Unavailable for Contracts Mode</b></p>
+									<p id="subtitle">H1: The Sarajevo Six</p>
+								</span>
+							</div>
+						</div>
+					</label>
+					<label id="blank"></label>
+				</div>
+				<div id="h1" class="column" style="display:none;">
+					<label for="FFT">
+						<div id="top" class="m0-3">
+							<div id="nameplate">
+								<span>
+									<input id="FFT" class="lvl h1" type="checkbox" value="true" checked />
+									<p id="title">Toggle / Prologue</p>
+									<p id="subtitle"><span class="noncon">Freeform Training</span><b class="noncon">Tutorial</b></p>
+								</span>
+							</div>
+						</div>
+					</label>
+					<label for="TFT">
+						<div id="bottom" class="m0-4">
+							<div id="nameplate">
+								<span>
+									<input id="TFT" class="lvl h1" type="checkbox" value="true" checked />
+									<p id="title">Toggle / Prologue</p>
+									<p id="subtitle">The Final Test</p>
+								</span>
+							</div>
+						</div>
+					</label>
+				</div>
+				<div id="h1" class="column" style="display:none;">
+					<label for="TSS">
+						<div id="top" class="m1-1">
+							<div id="nameplate">
+								<span>
+									<input id="TSS" class="lvl h1" type="checkbox" value="true" checked />
+									<p id="title">Toggle / Mission</p>
+									<p id="subtitle">The Showstopper</p>
+								</span>
+							</div>
+						</div>
+					</label>
+					<label for="WOT">
+						<div id="bottom" class="m2-1">
+							<div id="nameplate">
+								<span>
+									<input id="WOT" class="lvl h1" type="checkbox" value="true" checked />
+									<p id="title">Toggle / Mission</p>
+									<p id="subtitle">World of Tomorrow</p>
+								</span>
+							</div>
+						</div>
+					</label>
+				</div>
+				<div id="h1" class="column" style="display:none;">
+					<label for="AGC">
+						<div id="top" class="m3-1">
+							<div id="nameplate">
+								<span>
+									<input id="AGC" class="lvl h1" type="checkbox" value="true" checked />
+									<p id="title">Toggle / Mission</p>
+									<p id="subtitle">A Gilded Cage</p>
+								</span>
+							</div>
+						</div>
+					</label>
+					<label for="C27">
+						<div id="bottom" class="m4-1">
+							<div id="nameplate">
+								<span>
+									<input id="C27" class="lvl h1" type="checkbox" value="true" checked />
+									<p id="title">Toggle / Mission</p>
+									<p id="subtitle">Club 27</p>
+								</span>
+							</div>
+						</div>
+					</label>
+				</div>
+				<div id="h1" class="column" style="display:none;">
+					<label for="FF">
+						<div id="top" class="m5-1">
+							<div id="nameplate">
+								<span>
+									<input id="FF" class="lvl h1" type="checkbox" value="true" checked />
+									<p id="title">Toggle / Mission</p>
+									<p id="subtitle">Freedom Fighters</p>
+								</span>
+							</div>
+						</div>
+					</label>
+					<label for="SI">
+						<div id="bottom" class="m6-1">
+							<div id="nameplate">
+								<span>
+									<input id="SI" class="lvl h1" type="checkbox" value="true" checked />
+									<p id="title">Toggle / Mission</p>
+									<p id="subtitle">Situs Inversus</p>
+								</span>
+							</div>
+						</div>
+					</label>
+				</div>
+				<div id="h2" class="column" style="display:none;">
+					<label for="NC">
+						<div id="top" class="m7-1">
+							<div id="nameplate">
+								<span>
+									<input id="NC" class="lvl h2" type="checkbox" value="true" checked />
+									<p id="title">Toggle / Mission</p>
+									<p id="subtitle">Nightcall</p>
+								</span>
+							</div>
+						</div>
+					</label>
+					<label for="TFL">
+						<div id="bottom" class="m8-1">
+							<div id="nameplate">
+								<span>
+									<input id="TFL" class="lvl h2" type="checkbox" value="true" checked />
+									<p id="title">Toggle / Mission</p>
+									<p id="subtitle">The Finish Line</p>
+								</span>
+							</div>
+						</div>
+					</label>
+				</div>
+				<div id="h2" class="column" style="display:none;">
+					<label for="THS">
+						<div id="top" class="m9-1">
+							<div id="nameplate">
+								<span>
+									<input id="THS" class="lvl h2" type="checkbox" value="true" checked />
+									<p id="title">Toggle / Mission</p>
+									<p id="subtitle">Three-Headed Serpent</p>
+								</span>
+							</div>
+						</div>
+					</label>
+					<label for="CAG">
+						<div id="bottom" class="m10-1">
+							<div id="nameplate">
+								<span>
+									<input id="CAG" class="lvl h2" type="checkbox" value="true" checked />
+									<p id="title">Toggle / Mission</p>
+									<p id="subtitle">Chasing a Ghost</p>
+								</span>
+							</div>
+						</div>
+					</label>
+				</div>
+				<div id="h2" class="column" style="display:none;">
+					<label for="AL">
+						<div id="top" class="m11-1">
+							<div id="nameplate">
+								<span>
+									<input id="AL" class="lvl h2" type="checkbox" value="true" checked />
+									<p id="title">Toggle / Mission</p>
+									<p id="subtitle">Another Life</p>
+								</span>
+							</div>
+						</div>
+					</label>
+					<label for="TAS">
+						<div id="bottom" class="m12-1">
+							<div id="nameplate">
+								<span>
+									<input id="TAS" class="lvl h2" type="checkbox" value="true" checked />
+									<p id="title">Toggle / Mission</p>
+									<p id="subtitle">The Ark Society</p>
+								</span>
+							</div>
+						</div>
+					</label>
+				</div>
+				<div id="h2" class="column" style="display:none;">
+					<label for="GH">
+						<div id="top" class="m13-1">
+							<div id="nameplate">
+								<span>
+									<input id="GH" class="lvl h2ex" type="checkbox" value="true" checked />
+									<p id="title">Toggle / Mission</p>
+									<p id="subtitle">Golden Handshake</p>
+								</span>
+							</div>
+						</div>
+					</label>
+					<label for="LR">
+						<div id="bottom" class="m14-1">
+							<div id="nameplate">
+								<span>
+									<input id="LR" class="lvl h2ex" type="checkbox" value="true" checked />
+									<p id="title">Toggle / Mission</p>
+									<p id="subtitle">The Last Resort</p>
+								</span>
+							</div>
+						</div>
+					</label>
+				</div>
+				<div id="h3" class="column" style="display:none;">
+					<label for="OTOTW">
+						<div id="top" class="m15-1">
+							<div id="nameplate">
+								<span>
+									<input id="OTOTW" class="lvl h3 h3con" type="checkbox" value="true" checked />
+									<p id="title">Toggle / Mission</p>
+									<p id="subtitle">On Top Of The World</p>
+								</span>
+							</div>
+						</div>
+					</label>
+					<label for="DITF">
+						<div id="bottom" class="m16-1">
+							<div id="nameplate">
+								<span>
+									<input id="DITF" class="lvl h3 h3con" type="checkbox" value="true" checked />
+									<p id="title">Toggle / Mission</p>
+									<p id="subtitle">Death In The Family</p>
+								</span>
+							</div>
+						</div>
+					</label>
+				</div>
+				<div id="h3" class="column" style="display:none;">
+					<label for="AP">
+						<div id="top" class="m17-1">
+							<div id="nameplate">
+								<span>
+									<input id="AP" class="lvl h3 h3con" type="checkbox" value="true" checked />
+									<p id="title">Toggle / Mission</p>
+									<p id="subtitle">Apex Predator</p>
+								</span>
+							</div>
+						</div>
+					</label>
+					<label for="EOAE">
+						<div id="bottom" class="m18-1">
+							<div id="nameplate">
+								<span>
+									<input id="EOAE" class="lvl h3 h3con" type="checkbox" value="true" checked />
+									<p id="title">Toggle / Mission</p>
+									<p id="subtitle">End Of An Era</p>
+								</span>
+							</div>
+						</div>
+					</label>
+				</div>
+				<div id="h3" class="column" style="display:none;">
+					<label for="TF">
+						<div id="top" class="m19-1">
+							<div id="nameplate">
+								<span>
+									<input id="TF" class="lvl h3 h3con" type="checkbox" value="true" checked />
+									<p id="title">Toggle / Mission</p>
+									<p id="subtitle">The Farewell</p>
+								</span>
+							</div>
+						</div>
+					</label>
+					<label for="UNTOUCH">
+						<div id="bottom" class="m20-1">
+							<div id="nameplate">
+								<span>
+									<input id="UNTOUCH" class="lvl h3 noncon" type="checkbox" value="true" checked />
+									<p id="title"><span class="noncon">Toggle / Mission</span><b class="noncon">Unavailable for Contracts Mode</b></p>
+									<p id="subtitle">Untouchable</p>
+								</span>
+							</div>
+						</div>
+					</label>
+				</div>	
+				<div id="hside" class="column" style="display:none;">
+					<label for="ICON">
+						<div id="top" class="m2-2">
+							<div id="nameplate">
+								<span>
+									<input id="ICON" class="lvl h1bm" type="checkbox" value="true" checked />
+									<p id="title">Toggle / Bonus Mission</p>
+									<p id="subtitle">The Icon</p>
+								</span>
+							</div>
+						</div>
+					</label>
+					<label for="AHBOS">
+						<div id="bottom" class="m3-2">
+							<div id="nameplate">
+								<span>
+									<input id="AHBOS" class="lvl h1bm" type="checkbox" value="true" checked />
+									<p id="title">Toggle / Bonus Mission</p>
+									<p id="subtitle">A House Built on Sand</p>
+								</span>
+							</div>
+						</div>
+					</label>
+				</div>
+				<div id="hside" class="column" style="display:none;">
+					<label for="LS">
+						<div id="top" class="m2-3">
+							<div id="nameplate">
+								<span>
+									<input id="LS" class="lvl h1bm" type="checkbox" value="true" checked />
+									<p id="title">Toggle / Bonus Mission</p>
+									<p id="subtitle">Landslide</p>
+								</span>
+							</div>
+						</div>
+					</label>
+					<label for="DGS">
+						<div id="bottom" class="m16-E">
+							<div id="nameplate">
+								<span>
+									<input id="DGS" class="lvl hsc" type="checkbox" value="true" checked/>
+									<p id="title">Toggle / Seasonal Content (H3)</p>
+									<p id="subtitle">Dartmoor Garden Show</p>
+								</span>
+							</div>
+						</div>
+					</label>
+				</div>
+				<div id="hside" class="column" style="display:none;">
+					<label for="HH">
+						<div id="top" class="m1-2">
+							<div id="nameplate">
+								<span>
+									<input id="HH" class="lvl hsc noncon" type="checkbox" value="true" checked />
+									<p id="title"><span class="noncon">Toggle / Seasonal Content (H1/H2/H3)</span><b class="noncon">Unavailable for Contracts Mode</b></p>
+									<p id="subtitle">Holiday Hoarders</p>
+								</span>
+							</div>
+						</div>
+					</label>
+					<label for="SF">
+						<div id="bottom" class="m6-3">
+							<div id="nameplate">
+								<span>
+									<input id="SF" class="lvl hsc noncon" type="checkbox" value="true" checked />
+									<p id="title"><span class="noncon">Toggle / Seasonal Content (H2/H3)</span><b class="noncon">Unavailable for Contracts Mode</b></p>
+									<p id="subtitle">Hokkaido Snow Festival</p>
+								</span>
+							</div>
+						</div>
+					</label>
+				</div>		
+				<div id="hside" class="column" style="display:none;">
+					<label for="IOG">
+						<div id="top" class="m10-2">
+							<div id="nameplate">
+								<span>
+									<input id="IOG" class="lvl h2sa noncon" type="checkbox" value="true" checked />
+									<p id="title"><span class="noncon">Toggle / Special Assignment</span><b class="noncon">Unavailable for Contracts Mode</b></p>
+									<p id="subtitle">Illusions of Grandeur</p>
+								</span>
+							</div>
+						</div>
+					</label>
+					<label for="EOTS">
+						<div id="bottom" class="m9-2">
+							<div id="nameplate">
+								<span>
+									<input id="EOTS" class="lvl h2sa noncon" type="checkbox" value="true" checked />
+									<p id="title"><span class="noncon">Toggle / Special Assignment</span><b class="noncon">Unavailable for Contracts Mode</b></p>
+									<p id="subtitle">Embrace of the Serpent</p>
+								</span>
+							</div>
+						</div>
+					</label>
+				</div>
+				<div id="hside" class="column" style="display:none;">
+					<label for="AST">
+						<div id="top" class="m8-2">
+							<div id="nameplate">
+								<span>
+									<input id="AST" class="lvl h2sa noncon" type="checkbox" value="true" checked />
+									<p id="title"><span class="noncon">Toggle / Special Assignment</span><b class="noncon">Unavailable for Contracts Mode</b></p>
+									<p id="subtitle">A Silver Tongue</p>
+								</span>
+							</div>
+						</div>
+					</label>
+					<label for="ABP">
+						<div id="bottom" class="m11-2">
+							<div id="nameplate">
+								<span>
+									<input id="ABP" class="lvl h2sa noncon" type="checkbox" value="true" checked />
+									<p id="title"><span class="noncon">Toggle / Special Assignment</span><b class="noncon">Unavailable for Contracts Mode</b></p>
+									<p id="subtitle">A Bitter Pill</p>
+								</span>
+							</div>
+						</div>
+					</label>
+				</div>
+				<div id="hpz" class="column" style="display:none;">
+					<label for="TS">
+						<div id="top" class="m4-2">
+							<div id="nameplate">
+								<span>
+									<input id="TS" class="lvl h1pz" type="checkbox" value="true" checked />
+									<p id="title">Toggle / Patient Zero</p>
+									<p id="subtitle">The Source</p>
+								</span>
+							</div>
+						</div>
+					</label>
+					<label for="TA">
+						<div id="bottom" class="m2-4">
+							<div id="nameplate">
+								<span>
+									<input id="TA" class="lvl h1pz" type="checkbox" value="true" checked />
+									<p id="title">Toggle / Patient Zero<b class="nonconsp">(H3 Only)</b></p>
+									<p id="subtitle">The Author</p>
+								</span>
+							</div>
+						</div>
+					</label>					
+				</div>
+				<div id="hpz" class="column" style="display:none;">
+					<label for="PZ">
+						<div id="top" class="m6-2">
+							<div id="nameplate">
+								<span>
+									<input id="PZ" class="lvl h1pz" type="checkbox" value="true" checked />
+									<p id="title">Toggle / Patient Zero<b class="nonconsp">(H3 Only)</b></p>
+									<p id="subtitle">Patient Zero</p>
+								</span>
+							</div>
+						</div>
+					</label>
+					<label id="blank"></label>
+				</div>
+				<div id="hs6" class="column" style="display:none;">
+					<label for="TD">
+						<div id="top" class="m1-S">
+							<div id="nameplate">
+								<span>
+									<input id="TD" class="lvl h1s6 noncon" type="checkbox" value="true" />
+									<p id="title"><span class="noncon">Toggle / The Sarajevo Six (H1 PS4)</span><b class="noncon">Unavailable for Contracts Mode</b></p>
+									<p id="subtitle">The Director</p>
+								</span>
+							</div>
+						</div>
+					</label>
+					<label for="TE">
+						<div id="bottom" class="m2-S">
+							<div id="nameplate">
+								<span>
+									<input id="TE" class="lvl h1s6 noncon" type="checkbox" value="true" />
+									<p id="title"><span class="noncon">Toggle / The Sarajevo Six (H1 PS4)</span><b class="noncon">Unavailable for Contracts Mode</b></p>
+									<p id="subtitle">The Enforcer</p>
+								</span>
+							</div>
+						</div>
+					</label>
+				</div>
+				<div id="hs6" class="column" style="display:none;">
+					<label for="TX">
+						<div id="top" class="m3-S">
+							<div id="nameplate">
+								<span>
+									<input id="TX" class="lvl h1s6 noncon" type="checkbox" value="true" />
+									<p id="title"><span class="noncon">Toggle / The Sarajevo Six (H1 PS4)</span><b class="noncon">Unavailable for Contracts Mode</b></p>
+									<p id="subtitle">The Extractor</p>
+								</span>
+							</div>
+						</div>
+					</label>
+					<label for="TV">
+						<div id="bottom" class="m4-S">
+							<div id="nameplate">
+								<span>
+									<input id="TV" class="lvl h1s6 noncon" type="checkbox" value="true" />
+									<p id="title"><span class="noncon">Toggle / The Sarajevo Six (H1 PS4)</span><b class="noncon">Unavailable for Contracts Mode</b></p>
+									<p id="subtitle">The Veteran</p>
+								</span>
+							</div>
+						</div>
+					</label>
+				</div>
+				<div id="hs6" class="column" style="display:none;">
+					<label for="TM">
+						<div id="top" class="m5-S">
+							<div id="nameplate">
+								<span>
+									<input id="TM" class="lvl h1s6 noncon" type="checkbox" value="true" />
+									<p id="title"><span class="noncon">Toggle / The Sarajevo Six (H1 PS4)</span><b class="noncon">Unavailable for Contracts Mode</b></p>
+									<p id="subtitle">The Mercenary</p>
+								</span>
+							</div>
+						</div>
+					</label>
+					<label for="TC">
+						<div id="bottom" class="m6-S">
+							<div id="nameplate">
+								<span>
+									<input id="TC" class="lvl h1s6 noncon" type="checkbox" value="true" />
+									<p id="title"><span class="noncon">Toggle / The Sarajevo Six (H1 PS4)</span><b class="noncon">Unavailable for Contracts Mode</b></p>
+									<p id="subtitle">The Controller</p>
+								</span>
+							</div>
+						</div>
+					</label>
+				</div>
+				<div id="empty" class="side"></div>
+			</div>
+			<div id="settings" class="off">
+				<div id="empty" class="side one"></div>
+				<div id="settings_theme">
+					<span>Roulette Appearance</span>
+				</div>
+				<div id="settings_overlay">
+					<span>Overlay Appearance</span>
+				</div>
+				<div id="settings_roulette">
+					<span>Roulette Mode</span>
+				</div>
+				<div id="settings_kills">
+					<span>Kill Requirements</span>
+				</div>
+				<div id="settings_extras">
+					<span>Extra Requirements</span>
+				</div>
+				<div id="settings_challenges">
+					<span>Gameplay Challenges</span>
+				</div>
+				<div id="settings_reset">
+					<span>Reset Or Return</span>
+				</div>
+				<div id="settings_subsubmenu">
+					<label id="theme_m"  class="mobile" style="display:none;" data-hover="The Roulette takes on the colors of HITMAN's original red menu.">[INFO]:</label>
+					<label id="theme_h1old" style="display:none;" data-hover="<div id='themebox' class='previewh1'><div class='prehon'></div><div class='preh'></div><div class='precon'></div><div class='prec'></div><div class='preciss'></div><div class='pretarg1'></div><div class='pretarg2'></div><div class='preobj1'></div><div class='preobj2'></div><div class='preobjt'></div><div class='pretargt'></div><div class='prescron'></div><div class='prescrbg'></div><div class='precred'>Appearance Preview</div><div class='preexp'></div></div>The Roulette takes on the colors of HITMAN's original red menu." onClick="document.cookie = 'theme=H1; max-age=' + 30*24*60*60;">
+						<b>Hitman Launch Red</b><span>[Off]</span>
+					</label>
+					<label id="theme_m" class="mobile" style="display:none;" data-hover="The Roulette takes on the colors of HITMAN's current GOTY menu.">[INFO]:</label>
+					<label id="theme_h1goty" style="display:none;" data-hover="<div id='themebox' class='previewh1goty'><div class='prehon'></div><div class='preh'></div><div class='precon'></div><div class='prec'></div><div class='preciss'></div><div class='pretarg1'></div><div class='pretarg2'></div><div class='preobj1'></div><div class='preobj2'></div><div class='preobjt'></div><div class='pretargt'></div><div class='prescron'></div><div class='prescrbg'></div><div class='precred'>Appearance Preview</div><div class='preexp'></div></div>The Roulette takes on the colors of HITMAN's current GOTY menu." onClick="document.cookie = 'theme=H1goty; max-age=' + 30*24*60*60;">
+						<b>Hitman GOTY White</b><span>[Off]</span>
+					</label>
+					<label id="theme_m" class="mobile" style="display:none;" data-hover="The Roulette takes on the appearance of HITMAN 2's menu.">[INFO]:</label>
+					<label id="theme_h2" style="display:none;" data-hover="<div id='themebox' class='previewh2'><div class='prehon'></div><div class='preh'></div><div class='precon'></div><div class='prec'></div><div class='preciss'></div><div class='pretarg1'></div><div class='pretarg2'></div><div class='preobj1'></div><div class='preobj2'></div><div class='preobjt'></div><div class='pretargt'></div><div class='prescron'></div><div class='prescrbg'></div><div class='precred'>Appearance Preview</div><div class='preexp'></div></div>The Roulette takes on the appearance of HITMAN 2's menu." onClick="document.cookie = 'theme=H2; max-age=' + 30*24*60*60;">
+						<b>Hitman 2 "Hot Magenta"</b><span>[Off]</span>
+					</label>
+					<label id="theme_m" class="mobile" style="display:none;" data-hover="The Roulette takes on the appearance of HITMAN III's menu.">[INFO]:</label>
+					<label id="theme_h3" style="display:none;" data-hover="<div id='themebox' class='previewh3'><div class='prehon'></div><div class='preh'></div><div class='precon'></div><div class='prec'></div><div class='preciss'></div><div class='pretarg1'></div><div class='pretarg2'></div><div class='preobj1'></div><div class='preobj2'></div><div class='preobjt'></div><div class='pretargt'></div><div class='prescron'></div><div class='prescrbg'></div><div class='precred'>Appearance Preview</div><div class='preexp'></div></div>The Roulette takes on the appearance of HITMAN III's menu." onClick="document.cookie = 'theme=H3; max-age=' + 30*24*60*60;">
+						<b>Hitman III Dark</b><span>[Off]</span>
+					</label>
+					<label id="theme_m" class="mobile" style="display:none;" data-hover="The Roulette takes on the colors of the HITMAN Trilogy's promotional art.<br />This is the default appearance.">[INFO]:</label>
+					<label id="theme_ht" class="on" style="display:none;" data-hover="<div id='themebox' class='previewht'><div class='prehon'></div><div class='preh'></div><div class='precon'></div><div class='prec'></div><div class='preciss'></div><div class='pretarg1'></div><div class='pretarg2'></div><div class='preobj1'></div><div class='preobj2'></div><div class='preobjt'></div><div class='pretargt'></div><div class='prescron'></div><div class='prescrbg'></div><div class='precred'>Appearance Preview</div><div class='preexp'></div></div>The Roulette takes on the colors of the HITMAN Trilogy's promotional art.<br />This is the default appearance." onClick="document.cookie = 'theme=HR; max-age=' + 30*24*60*60;">
+						<b>Hitman Trilogy Promo</b><span>[On]</span>
+					</label>
+					<label id="theme_cookies" style="display:none;">
+						<p>This site uses a single <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies" target="_blank">Cookie</a> to remember your selected theme appearance above. By selecting any of those options, you consent to the use of this cookie, which expires in 30 days.</p>
+					</label>
+					<label id="overlay_style" class="H3" style="display:none;" data-hover="Select the game style the overlay will take.">
+						<b>Overlay Style</b><span>[HITMAN III]</span>
+					</label>
+					<label id="overlay_color" class="white" style="display:none;" data-hover="Override the color of the objectives.">
+						<b>Text Color</b><span>[White]</span>
+					</label>
+					<label id="overlay_shadow" for="overlayshadow" style="display:none;" data-hover="Apply a shadow under the objective text.">
+						<input type="checkbox" id="overlayshadow" value="true" />
+						<b>Text Shadow</b><span>[Off]</span>
+					</label>
+					<label id="overlay_capitals" class="default" style="display:none;" data-hover="Override the capitalization of objective text.">
+						<b>Text Capitalization</b><span>[Default]</span>
+					</label>
+					<label id="overlay_others" style="display:none;">
+						<p>Adjusting the Overlay's text size and screen position is available once the Roulette is generated and you enable the Overlay itself.</p>
+					</label>
+					<label id="audio_music" class="default" style="display:none;" data-hover="Select the optional background track that can play.<br />Composed by Niels Bye Nielsen.<br /><br /><b>[Music is not playing by default. To enable music, select the speaker icon on the bottom corner of the page.]</b><br /><br />Default: Music is paired to the matching selected theme appearance.<br />HITMAN: Plays “World Of Assassination” from HITMAN's Main Menu.<br />HITMAN 2: Plays “Agent and Handler” from HITMAN 2's Main Menu.<br />H3 MENU: Plays the beginning of “Death Awaits” from HITMAN III's Main Menu.<br />H3 PLAN: Plays the ending of “Death Awaits” from HITMAN III's Planning Screen after watching a briefing.">
+						<b>Music Track</b><span>[Default]</span>
+					</label>
+					<label id="audio_volume" style="display:none;" data-hover="Use the slider to adjust the volume of the music when playing.<br />Composed by Niels Bye Nielsen.<br /><br /><b>[Music is not playing by default. To enable music, select the speaker icon on the bottom corner of the page.]</b>">
+						<b>Music Volume</b>
+						<span id="range"><input id="volumeslider" type="range" min="0" max="100" value="50" />
+						[<span id="volumeamount">50</span>]</span>
+					</label>
+					<label id="mode_m" class="mobile" style="display:none;" data-hover="Targets and any main objectives are pulled from the standard mission.<br />This is the default option.<br /><br /><b>[If you were previously using Contracts Mode Roulette, you may need to reselect missions when enabling Mission Mode Roulette.]</b>">[INFO]:</label>
+					<label id="mode_mission" class="on" style="display:none;" data-hover="Targets and any main objectives are pulled from the standard mission.<br />This is the default option.<br /><br /><b>[If you were previously using Contracts Mode Roulette, you may need to reselect missions when enabling Mission Mode Roulette.]</b>">
+						<b>Mission Mode Roulette</b><span>[On]</span>
+					</label>
+					<label id="mode_m" class="mobile" style="display:none;" data-hover="Targets are pulled from a selection of NPCs within the contracts mode version of a mission. Thus, you could immediatly publish any successful run upon completion.<br /><br /><b>[Missions unavailable for contracts mode in H3 will be toggled off and locked while Contracts Mode Roulette is enabled. Reselect missions when enabling Mission Mode Roulette.]</b>Intel: A brief description of the target's last known whereabouts are listed. This may include in-game cardinal directions or area text listed on the Map screen.<br />Hunt: No target location information is given. You must confirm target identities before eliminating them.<br />Any: Target are unassigned. Pick any NPC, but use the generated elimination conditions.">[INFO]:</label>
+					<label id="mode_con" style="display:none;" data-hover="Targets are pulled from a selection of NPCs within the contracts mode version of a mission. Thus, you could immediatly publish any successful run upon completion.<br /><br /><b>[Missions unavailable for contracts mode in H3 will be toggled off and locked while Contracts Mode Roulette is enabled. Reselect missions when enabling Mission Mode Roulette.]</b>Intel: A brief description of the target's last known whereabouts are listed. This may include in-game cardinal directions or area text listed on the Map screen.<br />Hunt: No target location information is given. You must confirm target identities before eliminating them.<br />Any: Target are unassigned. Pick any NPC, but use the generated elimination conditions.">
+						<b>Contracts Mode Roulette</b><span>[Off]</span>
+					</label>
+					<label id="mode_m" class="mobile" style="display:none;" data-hover="Force the amount of targets in Contracts Mode Roulette. First enable the mode, and then use this slider to set how many targets could appear.<br /><br />#: By default, any amount of targets upto 5 can be generated.">[INFO]:</label>
+					<label id="mode_conamount" style="display:none;" data-hover="Force the amount of targets in Contracts Mode Roulette. First enable the mode, and then use this slider to set how many targets could appear.<br /><br />#: By default, any amount of targets upto 5 can be generated.">
+						<b>Contracts Target Amount</b>
+						<span id="range"><input id="conslider" type="range" min="0" max="5" value="0" />
+						[<span id="conamount">#</span>]</span>
+					</label>
+					<label id="mode_m" class="mobile" style="display:none;" data-hover="Make the difficult task of eliminating elusive targets even harder. Set the number of targets there are (making sure to select the appropriate mission) and issue the roulette.<br /><br />Target names are not listed here, so assigning what conditions to whom is player choice. Just don't cross your kill conditions amongst multiple targets.<br /><br />The roulette also doesn't account for unique starting/exit points or objectives.">[INFO]:</label>
+					<label id="mode_et" style="display:none;" data-hover="Make the difficult task of eliminating elusive targets even harder. Set the number of targets there are (making sure to select the appropriate mission) and issue the roulette.<br /><br />Target names are not listed here, so assigning what conditions to whom is player choice. Just don't cross your kill conditions amongst multiple targets.<br /><br />The roulette also doesn't account for unique starting/exit points or objectives.">
+						<b>Elusive Targets Roulette</b>
+						<span id="range"><input id="etslider" type="range" min="0" max="3" value="0" />
+						[<span id="etamount">0</span>]</span>
+					</label>
+					<label id="mode_m" class="mobile" style="display:none;" data-hover="On: Generated Disguise and Elimination Methods are hidden until clicked at your discretion. This allows meta play when using the Roulette. Example: Reveal subsequent target conditions after the previous ones are eliminated. Note: The Export Roulette option is disabled until all conditions are revealed to avoid cheating.<br /><br />Off: All generated conditions are displayed.">[INFO]:</label>
+					<label id="mode_mask" for="mask" style="display:none;" data-hover="On: Generated Disguise and Elimination Methods are hidden until clicked at your discretion. This allows meta play when using the Roulette. Example: Reveal subsequent target conditions after the previous ones are eliminated. Note: The Export Roulette option is disabled until all conditions are revealed to avoid cheating.<br /><br />Off: All generated conditions are displayed.">
+						<input type="checkbox" id="mask" value="true" />
+						<b>Conditions Masked</b><span>[Off]</span>
+					</label>
+					<label id="kill_m" class="mobile" style="display:none;" data-hover="On: Adds a random mission specific disguise requirement for each elimination. These are not shared between targets.<br /><br />On+: In a few missions, some disguises have variants that are counted as different for Contracts Mode. These are added to the pool for elimination disguise requirements.<br /><br />Off: Any disguise can be worn during eliminations.">[INFO]:</label>
+					<label id="kill_disguise" class="on" style="display:none;" data-hover="On: Adds a random mission specific disguise requirement for each elimination. These are not shared between targets.<br /><br />On+: In a few missions, some disguises have variants that are counted as different for Contracts Mode. These are added to the pool for elimination disguise requirements.<br /><br />Off: Any disguise can be worn during eliminations.">
+						<b>Specific Disguises</b><span>[On]</span>
+					</label>
+					<label id="kill_m" class="mobile" style="display:none;" data-hover="On: Mission specific melee weapons can appear as elimination methods. Pulls from the mission's available lethal weaponry, including hard to find ones.<br /><br />Off: Melee weapons do not appear as elimination methods.">[INFO]:</label>
+					<label id="kill_melee" for="melee" style="display:none;" data-hover="On: Mission specific melee weapons can appear as elimination methods. Pulls from the mission's available lethal weaponry, including hard to find ones.<br /><br />Off: Melee weapons do not appear as elimination methods.">
+						<input type="checkbox" id="melee" value="true" checked />
+						<b>Specific Melee Weapons</b><span>[On]</span>
+					</label>
+					<label id="kill_m" class="mobile" style="display:none;" data-hover="This setting only works if “Specific Melee Weapons” is enabled.<br /><br />On: Melee weapon eliminations will require up close “Melee” or “Thrown Weapon” methods.<br /><br />Off: Melee weapons eliminations can be done using any method.">[INFO]:</label>
+					<label id="kill_mtype" for="mtype" style="display:none;" data-hover="This setting only works if “Specific Melee Weapons” is enabled.<br /><br />On: Melee weapon eliminations will require up close “Melee” or “Thrown Weapon” methods.<br /><br />Off: Melee weapons eliminations can be done using any method.">
+						<input type="checkbox" id="mtype" value="true" checked />
+						<b>Forced Melee Methods</b><span>[On]</span>
+					</label>
+					<label id="kill_m" class="mobile" style="display:none;" data-hover="On: Different firearm types can appear as elimination methods, including sniper rifles and explosives (even though they're not actually firearms).<br /><br />Off: Different firearm types do not appear as elimination methods.">[INFO]:</label>
+					<label id="kill_firearm" for="firearm" style="display:none;" data-hover="On: Different firearm types can appear as elimination methods, including sniper rifles and explosives (even though they're not actually firearms).<br /><br />Off: Different firearm types do not appear as elimination methods.">
+						<input type="checkbox" id="firearm" value="true" checked />
+						<b>Specific Firearms</b><span>[On]</span>
+					</label>
+					<label id="kill_m" class="mobile" style="display:none;" data-hover="On: Specific accidents can appear as elimination methods, including fire and explosion. These can be very tricky to accomplish.<br /><br />Off: Specific accidents do not appear as elimination methods.">[INFO]:</label>
+					<label id="kill_accident" for="accident" style="display:none;" data-hover="On: Specific accidents can appear as elimination methods, including fire and explosion. These can be very tricky to accomplish.<br /><br />Off: Specific accidents do not appear as elimination methods.">
+						<input type="checkbox" id="accident" value="true" checked />
+						<b>Specific Accidents</b><span>[On]</span>
+					</label>
+					<label id="kill_m" class="mobile" style="display:none;" data-hover="On: Non-specific kills can appear as elimination methods. There are the broadest choices, perfect to roulette newcomers.<br /><br />Off: Non-specific kills do not appear as elimination methods.">[INFO]:</label>
+					<label id="kill_generic" for="generic" style="display:none;" data-hover="On: Non-specific kills can appear as elimination methods. There are the broadest choices, perfect to roulette newcomers.<br /><br />Off: Non-specific kills do not appear as elimination methods.">
+						<input type="checkbox" id="generic" value="true" checked />
+						<b>Generic Kills</b><span>[On]</span>
+					</label>
+					<label id="extra_m" class="mobile" style="display:none;" data-hover="The roulette will choose start/exit points you must use.<br /><br /><b>[Some Missions gain additional exits after their first playthrough.]</b><br />Both: Starting and exit points are both listed. (Default)<br />Start Only: Starting pont is listed. Find your own exit location.<br />Exit Only: Exit point is listed. Select your own starting location.<br />Secret: Start and exit are both listed, but exit may require secret actions to enable.<br />Off: Nothing is listed. You choose your own start and exit points.">[INFO]:</label>
+					<label id="extra_starex" class="both" style="display:none;" data-hover="The roulette will choose start/exit points you must use.<br /><br /><b>[Some Missions gain additional exits after their first playthrough.]</b><br />Both: Starting and exit points are both listed. (Default)<br />Start Only: Starting pont is listed. Find your own exit location.<br />Exit Only: Exit point is listed. Select your own starting location.<br />Secret: Start and exit are both listed, but exit may require secret actions to enable.<br />Off: Nothing is listed. You choose your own start and exit points.">
+						<b>Force Start/Exit</b><span>[Both]</span>
+					</label>
+					<label id="extra_m" class="mobile" style="display:none;" data-hover="On: Adds one extra mission specific task to complete. For example, most of these tasks are in-game Challenges. The types available narrow based on enabling Contracts Mode, Complications, or Achieve Rating.<br /><br />Off: Only lists mandatory objectives to complete if there are any needed for the mission.">[INFO]:</label>
+					<label id="extra_obj" for="exobj" style="display:none;" data-hover="On: Adds one extra mission specific task to complete. For example, most of these tasks are in-game Challenges. The types available narrow based on enabling Contracts Mode, Complications, or Achieve Rating.<br /><br />Off: Only lists mandatory objectives to complete if there are any needed for the mission.">
+						<input type="checkbox" id="exobj" value="true" />
+						<b>Extra Objective</b><span>[Off]</span>
+					</label>
+					<label id="extra_m" class="mobile" style="display:none;" data-hover="<b>[Only possible within HITMAN III outside of ICA Facility missions.]</b><br />On: Adds one mission specific photo to take using the in-game camera gadget. <br /><br />Off: No photos will need to be taken.">[INFO]:</label>
+					<label id="extra_camera" for="cameraobj" style="display:none;" data-hover="<b>[Only possible within HITMAN III outside of ICA Facility missions.]</b><br />On: Adds one mission specific photo to take using the in-game camera gadget. <br /><br />Off: No photos will need to be taken.">
+						<input type="checkbox" id="cameraobj" value="true" />
+						<b>Photo Objective</b><span>[Off]</span>
+					</label>
+					<label id="extra_m" class="mobile" style="display:none;" data-hover="Adds playstyle constraints or requirements. Most of these are used in the game's Contracts Mode.<br /><br />Slider: Adjust to set the maximum amount that could appear.<br /><br /><b>[Note: More complications can appear when less requirements or challenges are selected.]</b>">[INFO]:</label>
+					<label id="extra_comp" style="display:none;" data-hover="Adds playstyle constraints or requirements. Most of these are used in the game's Contracts Mode.<br /><br />Slider: Adjust to set the maximum amount that could appear.<br /><br /><b>[Note: More complications can appear when less requirements or challenges are selected.]</b>">
+						<b>Allow Complications</b>
+						<span id="range"><input id="compslider" type="range" min="0" max="6" value="0" />
+						[Max: <span id="compamount">0</span>]</span>
+					</label>
+					<label id="game_m" class="mobile" style="display:none;" data-hover="Lists a game mechanic that must be disabled though the game's Options menu.<br /><br />H2: Pulls from the available mechanics from HITMAN 2.<br />H1: Pulls from the available mechanics from HITMAN.<br />Off: Use any game mechanic freely.">[INFO]:</label>
+					<label id="game_mech" class="off" style="display:none;" data-hover="Lists a game mechanic that must be disabled though the game's Options menu.<br /><br />H2/3: Pulls from the available mechanics from HITMAN 2 and III.<br />H1: Pulls from the available mechanics from HITMAN.<br />Off: Use any game mechanic freely.">
+						<b>Restricted Mechanics</b><span>[Off]</span>
+					</label>
+					<label id="game_m" class="mobile" style="display:none;" data-hover="On: Complete the roulette within the time listed. For accuracy, enable the Mission Timer through the game's Options menu under Gameplay.<br /><br />Off: Complete the roulette at your own speed.">[INFO]:</label>
+					<label id="game_time" for="time" style="display:none;" data-hover="On: Complete the roulette within the time listed. For accuracy, enable the Mission Timer through the game's Options menu under Gameplay.<br /><br />Off: Complete the roulette at your own speed.">
+						<input type="checkbox" id="time" value="true" />
+						<b>Time Limit</b><span>[Off]</span>
+					</label>
+					<label id="game_m" class="mobile" style="display:none;" data-hover="On: Complete the roulette and achieve the rating listed, or better. Depending on other Roulette Settings, achieving the best rating of Silent Assassin could be tough for even skilled players.<br /><br />Off: Complete the roulette with whatever rating you get.">[INFO]:</label>
+					<label id="game_rate" for="rating" style="display:none;" data-hover="On: Complete the roulette and achieve the rating listed, or better. Depending on other Roulette Settings, achieving the best rating of Silent Assassin could be tough for even skilled players.<br /><br />Off: Complete the roulette with whatever rating you get.">
+						<input type="checkbox" id="rating" value="true" />
+						<b>Achieve Rating</b><span>[Off]</span>
+					</label>
+					<label id="game_m" class="mobile" style="display:none;" data-hover="Before attempting the roulette, select the difficulty chosen by the roulette before starting the mission. Note that only campaign missions outside of Contracts Mode have alternate difficulties.<br /><br />H2/H3: Casual, Professional, and Master are the difficulties available.<br />H1: Normal and Professional are the difficulties available (HITMAN missions only).<br />Off: Complete the roulette on whatever difficulty to want.">[INFO]:</label>
+					<label id="game_diff" class="off" style="display:none;" data-hover="Before attempting the roulette, select the difficulty chosen by the roulette before starting the mission. Note that only campaign missions outside of Contracts Mode have alternate difficulties.<br /><br />H2/H3: Casual, Professional, and Master are the difficulties available.<br />H1: Normal and Professional are the difficulties available (HITMAN missions only).<br />Off: Complete the roulette on whatever difficulty to want.">
+						<b>Force Difficulty</b><span>[Off]</span>
+					</label>
+					<label id="reset_m" class="mobile" style="display:none;" data-hover="Resets all Roulette Settings to their default state. This does not include Selected Missions or Roulette Appearance.">[INFO]:</label>
+					<label id="reset_settings" class="off" style="display:none;" data-hover="Resets all Roulette Settings to their default state. This does not include Selected Missions or Roulette Appearance.">
+						<b>Reset All Roulette Settings</b>
+					</label>
+					<label id="reset_m" class="mobile" style="display:none;" data-hover="Returns you to the main Hitman Roulette tab and clears out any Issued Roulettes. Settings changes will be retained.">[INFO]:</label>
+					<label id="reset_return" class="off" style="display:none;" data-hover="Returns you to the main Hitman Roulette tab and clears out any Issued Roulettes. Settings changes will be retained.">
+						<b>Return To Front Page</b>
+					</label>
+					<select id="overlayselect" style="display:none;">
+						<option value="H1">HITMAN</option>
+						<option value="H2">HITMAN 2</option>
+						<option value="H3" selected>HITMAN III</option>
+					</select>
+					<select id="overlaycolor" style="display:none;">
+						<option value="white" selected>White</option>
+						<option value="black">Black</option>
+						<option value="icon">Icon Dependant</option>
+					</select>
+					<select id="overlaycaps" style="display:none;">
+						<option value="default" selected>Default</option>
+						<option value="upper">Uppercase</option>
+						<option value="lower">Lowercase</option>
+					</select>
+					<select id="musicselect" style="display:none;">
+						<option value="DEFAULT" selected>Default To Theme</option>
+						<option value="WoA">HITMAN - World Of Assassination</option>
+						<option value="AaH">HITMAN 2 - Agent and Handler</option>
+						<option value="DA1">HITMAN III - Death Awaits (Beginning)</option>
+						<option value="DA2">HITMAN III - Death Awaits (Ending)</option>
+					</select>					
+					<select id="modeselect" style="display:none;">
+						<option value="MAIN" selected>Main Mission</option>
+						<option value="CONEASY">Contracts Mode: Intel</option>
+						<option value="CONHARD">Contracts Mode: Hunt</option>
+						<option value="CONANY">Contracts Mode: Unassigned Targets</option>
+						<option value="ELUSIVE">Elusive Target</option>
+					</select>
+					<select id="disguise" style="display:none;">
+						<option value="ON" selected>Specific Disguises</option>
+						<option value="ONPLUS">Specific Disguises with Variations</option>
+						<option value="OFF">Any Disguise</option>
+					</select>
+					<select id="startexit" style="display:none;">
+						<option value="BOTH" selected>Both Start/Exit</option>
+						<option value="START">Start Only</option>
+						<option value="EXIT">Exit Only</option>
+						<option value="SECRET">Exit Only with Secrets</option>
+						<option value="OFF">Choose Start/Exit</option>
+					</select>
+					<select id="mechanics" style="display:none;">
+						<option value="OFF" selected>Off</option>
+						<option value="H2">Hitman 2</option>
+						<option value="H1">Hitman</option>
+					</select>
+					<select id="difficulty" style="display:none;">
+						<option value="OFF" selected>OFF</option>
+						<option value="H2">Hitman 2</option>
+						<option value="H1">Hitman</option>
+					</select>
+				</div>
+				<div id="settings_descriptions">
+					<h1></h1>
+					<p></p>
+					<span class="h3theme whitetext noshadow defaultcase">
+						<b id="e">Eliminate: Target, using: Weapon (Melee), while disguised as: Innocent</b>
+						<b id="o">Objective: Collect the documents.</b>
+						<b id="x">Exit: Vehicle</b>
+						<b id="c">Complication: No Recordings</b>
+						<b id="t">Time Limit: 60 Minutes</b>
+					</span>
+				</div>
+				<div id="empty" class="side two"></div>
+			</div>
+			<div id="credits" class="off">
+				<div id="empty" class="side"></div>
+				<div id="credits_submenu" class="wide">
+					<h1>About</h1>
+					<p>Hitman Roulette generates a set of random guidelines to follow when playing the HITMAN "World of Assassination" trilogy. It randomizes things such as mission entry and exit points, elimination method and worn disguise, generic and mission specific variables, and even targets for Contracts Mode.</p>
+					<p><a href="https://thekotti.github.io/about.html" target="_blank">The original Hitman Roulette</a> (created by <a href="https://twitter.com/TheKotti" target="_blank">TheKotti</a>) is a more straight forward version that supports Hitman (2016), Hitman 2 (2018), and Hitman: Blood Money.</p>
+					<h1>How To Use</h1>
+					<p>To initiate a roll of the Roulette, click "Issue Roulette" on the <a id="link_roulette" href="#">main page</a>. Use the Undo or Redo arrow buttons that appear at the top to move between generated Roulettes. Save your Roulette as a Textfile using the "Export Roulette" button, also shown on the main page.</p>
+					<p>Most missions from the trilogy are pulled into the Roulette by default. Through the "<a id="link_missions" href="#">Select Missions</a>" option, you can untoggle any missions you're missing or just the ones you don't like.<br />
+					"<a id="link_settings" href="#">Roulette Settings</a>" allow you to change what the Roulette surfaces: You can get more than the regular targets by choosing "Contract Mode Roulette". Dial in the difficulty by toggling "Kill Requirements" like disguises or weapons you'll need to wear or use, "Extra Requirements" like one more objective or sets of complications, and "Gameplay Challenges" that force you to change how you play.</p>
+					<h1>Special Thanks & External Resources</h1>
+					<ul>
+						<li><a href="https://ioi.dk/" target="_blank">IO Interactive</a> for making a great trilogy of games that helped me through some bad days and kept me better occupied here.</li>
+						<li>Niels Bye Nielsen for composing the music in the World Of Assassination Trilogy. Great tracks to hit to.</li>
+						<li>TheKotti, for his <a href="https://thekotti.github.io/about.html" target="_blank">original Hitman Roulette</a> that was the code base and inspiration for this spin-off.</li>
+						<li><a href="http://hitmanmaps.com/" target="_blank">Hitman Interactive Maps</a> by Winterbirds & <a href="https://www.hitmaps.com/" target="_blank">Hitmaps</a> (formerly Hitman 2 Maps) by Mike Koch for being great tools that aided in my data collection.</li>
+						<li><a href="https://github.com/gromo/jquery.scrollbar" target="_target">jQuery CSS Customizable Scrollbar</a> by gromo & <a href="https://www.dte.web.id/2013/02/event-mouse-wheel.html" target="_blank">Event Mouse Wheel</a> by Taufik Nurrohman which I used for style and navigation.</li>
+						<li><a href="http://detectmobilebrowsers.com/" target="_target">Detect Mobile Browsers</a> by Chad Smith, which helped in allowing settings descriptions viewable for mobile via touch.</li>
+						<li><a href="http://keith-wood.name/countdown.html" target="_target">jQuery Countdown</a> by Keith Wood, which is being used in the Stream Overlay for any Time Limit Complications.</li>
+					</ul>
+					<h1>Compatibility & Issues</h1>
+					<p>Though you can deselect any location you do not own, by default the Roulette works best with the either:</p>
+					<ul>
+						<li>Any edition of <b>HITMAN III</b> plus the <b>Access Pass: HITMAN 1 GOTY Edition</b> and <b>Access Pass: HITMAN 2 Gold</b>.</li>
+						<li>OR The <b>HITMAN Trilogy</b> plus the <b>HITMAN Trilogy Premium Add-Ons Bundle</b>.</li>
+					</ul>
+					<p>There may be the odd conflicting trait that changed between releases in this trilogy, though I've done my best to account for these. It is also important to note that the later the game sequel, the more gear is available to unlock for use. Lastly, since Contract Mode Targets are regular NPCs and Elimination Methods are randomly assigned, not every Target can be killed with every Method easily/silently.</p>
+					<p>This was a hobby project I started in 2016/17 and have worked on during my free time as a way to brush up on my simple javascript, jQuery, and CSS knowledge as well as giving me more reason to play these new Hitman games well after unlocking everything. As such, I've only tested this using the browsers I frequent: Firefox and Chrome. If you find any issues or glaring conflicts with Roulette results, let me know <a href="https://github.com/BRYN4444/HitmanRoulette/issues" target="_blank">via GitHub</a> or <a href="https://hitmanforum.com/t/13107" target="_blank">on Hitman Forum</a> and I'll try and address it when I get the chance. <span id="sig">- <a href="http://bryn.info/" target="_blank">BRYN</a></span></p>
+				</div>
+				<div id="empty" class="sidescroll">
+					<div class="external-scroll_y">
+						<div class="scroll-element_outer">
+							<div class="scroll-element_size"></div>
+							<div class="scroll-element_track"></div>
+							<div class="scroll-bar"><!--∧<br />∨//--></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div id="scrollbar">
+				<div class="external-scroll_x1">
+					<div class="scroll-element_outer">
+						<div class="scroll-element_size"></div>
+						<div class="scroll-element_track"></div>
+						<div class="scroll-bar"></div>
+					</div>
+				</div>
+				<div class="external-scroll_x2">
+					<div class="scroll-element_outer">
+						<div class="scroll-element_size"></div>
+						<div class="scroll-element_track"></div>
+						<div class="scroll-bar"></div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<nav id="nav_mobile">
+			<div id="contract_mobilesubmenu" class="on">
+				<button id="subsubmenu_obj" type="button" disabled="true">Objectives</button>
+				<button id="subsubmenu_comp" type="button" disabled="true">Complications</button>
+				<button id="subsubmenu_chal" type="button" disabled="true">Challenges</button>
+				<button id="subsubmenu_issue" onclick="button_MakeItGo()" type="button">
+					<span>
+						<p id="subtitle">Reissue for<br />Mission/Setting Changes</p>
+						<p id="title">Issue Roulette</p>
+					</span>
+				</button>
+				<button id="subsaveroulette" onclick="button_MakeItGo()" type="button">Export Roulette</button>
+			</div>
+			<div id="maps_mobilesubmenu">
+				<button id="subsubmenu_random" class="on"></button>
+				<button id="subsubmenu_h1"></button>
+				<button id="subsubmenu_h2"></button>
+				<button id="subsubmenu_h3"></button>
+				<button id="subsubmenu_hside"></button>
+				<button id="subsubmenu_hpz"></button>
+				<button id="subsubmenu_hs6"></button>
+				<div id="subsubmenu_name">
+					<img id="subsubmenu_random" class="on" src="./img/general/blank.png" />
+					<span>Mission Groupings</span>
+				</div>
+			</div>
+		</nav>
+		<footer>
+			<img src="./img/general/blank.png" />
+			<p id="links">Official Websites: <a href="https://hitman.com/" target="_blank">Hitman.com</a> / <a href="https://ioi.dk/" target="_blank">ioi.dk</a></p>
+			<p id="ioi">Hitman™, Hitman™2, Hitman™III, the Hitman™ logo, music,<br />images, and text are the property of IO Interactive A/S.</p>
+			<p id="condensed">The <a href="https://hitman.com/" target="_blank">Hitman</a>™ games, logo, music, images, and text are the property of <a href="https://ioi.dk/" target="_blank">IO Interactive A/S</a>.</p>
+			<p id="ultracondensed"><a href="https://hitman.com/" target="_blank">Hitman</a>™ belongs to <a href="https://ioi.dk/" target="_blank">IO Interactive</a>.</p>
+		</footer>
+		<div id="floatbuttons">
+			<button id="overlaybutton" disabled="true">Overlay</button>
+			<button id="saveroulette" disabled="true">Export</button>
+		</div>
+		<div id="background"></div>	
+		<audio id="audiocontainer" loop>
+			<source id="audiosource" src="./audio/Death%20Awaits%20(Planning%20ver.).mp3" type="audio/mp3">
+		</audio> 
+		
+		<script src="./js/Code.js"></script>
+		<script src="./js/Data.js"></script>
+		<script src="./js/MyCode.js"></script>
+	</body>
+</html>
