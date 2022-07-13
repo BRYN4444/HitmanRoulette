@@ -18,112 +18,178 @@
 		<meta name="theme-color" content="#FB000F">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="icon" href="./hrfavicon.png" type="image/png" />
-		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@900&family=Roboto:wght@300;400;500;700;900" rel="stylesheet">
 		<link rel="stylesheet" href="./css/index.css" type="text/css" />
 		<link rel="stylesheet" href="./css/images.css" type="text/css" />
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/smoothness/jquery-ui.css">
 		<script type="text/javascript" src="./js/jquery-ui.min.js"></script>
 		<script type="text/javascript" src="./js/jquery.scrollbar.js"></script>
+		<script type="text/javascript" src="js/jquery.plugin.js"></script> 
+		<script type="text/javascript" src="js/jquery.countdown.js"></script>
 		<script type="text/javascript" src="./js/detectmobilebrowser.js"></script>
 	</head>
 
 	<body>
 		<noscript>Hitman Roulette requires Javascript to work. Please enable Javascript in your browser.</noscript>
 		
-		<!--<div id="overlay-mode" class="hidden">
-			<div id="overlay-adjust"></div>
-			<div id="overlay-list">
-				<div id="overlay-close"><span id="overlay-message" style="display:none;">Click to return to the Roulette Page.</span></div>
-				<div id="overlay-pin-target1" class="mini"></div>
-				<div id="overlay-target1" class="click"></div>
-				<div id="overlay-pin-target2" class="mini"></div>
-				<div id="overlay-target2" class="click"></div>
-				<div id="overlay-pin-target3" class="mini"></div>
-				<div id="overlay-target3" class="click"></div>
-				<div id="overlay-pin-target4" class="mini"></div>
-				<div id="overlay-target4" class="click"></div>
-				<div id="overlay-pin-target5" class="mini"></div>
-				<div id="overlay-target5" class="click"></div>
-				<div id="overlay-pin-objective" class="mini"></div>
-				<div id="overlay-objective" class="click"></div>
-				<div id="overlay-pin-objectivex" class="mini"></div>
-				<div id="overlay-objectivex" class="click"></div>
-				<div id="overlay-pin-camera" class="mini"></div>
-				<div id="overlay-camera" class="click"></div>
-				<div id="overlay-exit"></div>
-				<div id="overlay-complicationi"></div>
-				<div id="overlay-complication1"></div>
-				<div id="overlay-complication2"></div>
-				<div id="overlay-complication3"></div>
-				<div id="overlay-complication4"></div>
-				<div id="overlay-complication5"></div>
-				<div id="overlay-complication6"></div>
-				<div id="overlay-challenge_restriction"></div>
-				<div id="overlay-challenge_timelimit"></div>
-				<div id="overlay-challenge_rating"></div>
-			</div>
-			<div id="overlay-details">
-				<div id="overlay-image-target1" class="hidden"></div>
-				<div id="overlay-image-target2" class="hidden"></div>
-				<div id="overlay-image-target3" class="hidden"></div>				
-				<div id="overlay-image-target4" class="hidden"></div>				
-				<div id="overlay-image-target5" class="hidden"></div>
-				<div id="overlay-image-objective" class="hidden"></div>
-				<div id="overlay-image-objectivex" class="hidden"></div>				
-				<div id="overlay-image-camera" class="hidden"></div>
-			</div>
-		</div>
-		
-		<span id="overlay-toggle">WRAP EVERYTHING BELOW, BUT BEFORE THE SCRIPTS</span>
-		//-->
-		
-		
 		<div id="shadow" class="hidden">
-			<div id="popwrap">
+			<div id="popwrap" class="hidden">
 				<div id="popup">
-					<span id="popup-save">
-						<h1>Export Roulette</h1>
-						<p>Below is the generated Roulette. Copy it, or select SAVE AS TEXTFILE to save it for yourself.</p>
-						<textarea id="roulettetext">Eliminate TARGET NAME with WEAPON NAME (MELEE) while disguised as DISGUISE NAME.</textarea>
-						<p>You can modify the formatting above before selecting SAVE AS TEXTFILE.</p>
-					</span>
-					<!--<span id="popup-overlay" class="hidden">
-							<h1>Setup Stream Overlay</h1>
-							<p>Stream Overlay benefits viewers of your stream by giving them an aesthetically matching list of Roulette objectives over top of your gameplay.</p>
-							<br />
-							<p>Follow these steps to setting up the Roulette's Stream Overlay:</p>
-							<ul>
-								<li>Add HITMAN™, HITMAN™2, or HITMAN™III to your streaming program as normal.</li>
-								<li>Through the game's Gameplay Options, set Objectives to Always Off. The Roulette generated targets/objectives will sit in the upper left corner for your viewers.</li>
-								<li>Add HitmanRoulette.com as a Browser Source to your streaming platform and ensure that it covers the game footage exactly.</li>
-								<li>Navigate the Roulette as normal, choosing the missions and settings you perfer.</li>
-								<li>Issue Roulette till you're satisfied. Clicking the Enable Overlay button in the corner will display your generated Roulette over top of your gameplay footage where the usual Mission Objectives are listed.</li>
-							</ul>
-							<br />
-							<p>You can interact with the Stream Overlay to toggle things that will help you keep on track:</p>
-							<ul>
-								<li>Clicking a target/objective will mark it as completed with a checkmark.</li>
-								<li>Hovering over a target/objective and clicking the pin will show a relevent picture. If you've pinned a Contract Mode Target, Intel on their location will be listed here if you've enabled the option.</li>
-							</ul>
-							<br />
-							<p>Please test everything out before you go live to your viewers! If things don't work out for you, you can always use the regular Export Roulette option to generate a Textfile instead.</p>
-								<li>...</li>
-							<p>...</p>
-							<p>Note that the website isn't built for resolutions higher than 1080p, so adjust/zoom the Browser Source if needed.</p>
-						</span>//-->
+					<h1>Export Roulette</h1>
+					<p>Below is the generated Roulette. Copy it, or select SAVE AS TEXTFILE to save it for yourself.</p>
+					<textarea id="roulettetext">Eliminate TARGET NAME with WEAPON NAME (MELEE) while disguised as DISGUISE NAME.</textarea>
+					<p>You can modify the formatting above before selecting SAVE AS TEXTFILE.</p>
 				</div>
 				<button id="save">Save As Textfile</button>					
 				<button id="close">Close</button>
-				<!--<button id="continue" class="hidden">Continue with Stream Overlay Mode</button>
-				<button id="return" class="hidden">Return to Export Roulette Mode</button>//-->
+			</div>
+			<div id="overlaywrap" class="hidden">
+				<div id="popup">
+					<h1>Stream Overlay BETA</h1>
+					<p>Intended for PC Streamers to easily switch between generating Roulettes and playing the game with the generated objectives on screen for the viewers.
+					<br /><br /><b>Instructions for setting up are below</b>. These can also be found on the Overlay URL page.</p>
+					<ol>
+						<li>
+							In your streaming software, add a website/browser source of 1920px width by 1080px height with the URL:
+							<br /><input id="URLinput" type="text" value="https://HitmanRoulette.com/overlay" /> <button id="URLbutton" onclick="overlayCopy()">Copy URL</button>
+							<script type="text/javascript">
+								function overlayCopy() {
+									var copyText = document.getElementById("URLinput");
+									copyText.select();
+									navigator.clipboard.writeText(copyText.value);
+									document.getElementById("URLbutton").innerText = "COPIED!";
+									const timeDelay = setTimeout(buttonReturn, 3000); //3 seconds
+									function buttonReturn() {
+										document.getElementById("URLbutton").innerText = "Copy URL";
+									};
+								};								
+							</script>
+						</li>
+						<li>Adjust this so it fits over your gameplay source 1:1 exact. (This shouldn't disrupt your layout)</li>
+						<li>
+							Interact with the website/browser source, issue a Roulette, and click the Overlay button in the bottom-right corner to test things. (Gameplay should now be seen with all objectives overlayed)
+							<br /><b>To prevent confusion, set "Objectives" to "Always Off" in the game's Options menu under Gameplay.</b>
+						</li>
+						<li>
+							The overlay's header allows adjusting position & text size, and has a Return to Roulette button to swap back.
+							<br />When adjusting, remember that Picture In Picture alerts appears in the top-left corner.
+						</li>
+						<li>Cosmetic adjustments are available in the Roulette Settings on that website/browser source.</li>
+					</ol><br />
+					<p><b>Overlay Interaction Controls:</b></p>
+					<ul>
+						<li>Prerequisit Objectives (things to set before you start a mission), can be hidden to help reduce clutter. Just click the top prompt.</li>
+						<li>Target and mission/extra/photo Objectives can be marked as complete by clicking them. Clicking them again unmarks them.</li>
+						<li>Most Objectives have an intel icon when hovered over. Clicking it shows the objective as it looks on the Roulette; with images and extra text.</li>
+						<li>If a Time Limit is enforced, clicking that Objective begins a timer for the listed amount. Clicking it again restarts this timer.</li>
+						<li>Returning to the Roulette and back to the Overlay will restore the state of these listed interations.</li>
+					</ul>
+				</div>				
+				<button id="close">Close</button>
 			</div>
 		</div>
 		
+		<!--<div id="streamsafety">
+			<img id="streamsafetylogo" src="./img/general/logo.png">
+			<center>
+				Add the Website Source at the following size:<br />Width: 1920px<br />Height: 1080px<br />Also disable any Custom CSS.
+			</center>
+		</div>//-->
 		<div id="sizewarning">
 			<img id="notice" class="shrink" src="./img/general/blank.png">
 			Sorry, your browsing resolution or zoom level might be causing issues with Hitman Roulette.
 			<a id="closenotice" href="#">&#x2A09;&#xFE0E; Close</a>
+		</div>
+		
+		<div id="overlay" class="hidden regular h3theme whitetext noshadow defaultcase">
+			<div id="overlaybox">
+				<div id="overlayboxheader">Drag to Reposition Objectives</div>
+				<div id="overlaysize"><span id="overlaymin"></span><span id="overlaybetween">Size</span><span id="overlaymax"></span></div>
+				<div id="overlayfinish"><span>&nbsp;Return to Hitman Roulette&nbsp;</span></div>
+				<div id="overlayinfo-return" class="hidden">[Return To All Objectives]</div>
+				<div id="overlayboxprereq">
+					<div id="overlay-intel-prereq"></div><div id="overlay-prereq">Prerequisites: Set the following before you begin. [Click to remove]</div>
+					<div></div><div id="overlay-intel-restriction" class="detailsicon"></div><div id="overlay-restriction" class="details nocheck prereqcheck"></div>
+					<div></div><div id="overlay-intel-start" class="detailsicon"></div><div id="overlay-start" class="details nocheck prereqcheck"></div>
+					<div></div><div id="overlay-intel-pickup" class="detailsicon"></div><div id="overlay-pickup" class="details nocheck prereqcheck"></div>
+					<div></div><div id="overlay-intel-difficulty"></div><div id="overlay-difficulty" class="prereqcheck"></div>
+				</div>
+				<div id="overlay-intel-target1" class="detailsicon"></div><div id="overlay-target1" class="details"></div>
+				<div id="overlay-intel-target2" class="detailsicon"></div><div id="overlay-target2" class="details"></div>
+				<div id="overlay-intel-target3" class="detailsicon"></div><div id="overlay-target3" class="details"></div>
+				<div id="overlay-intel-target4" class="detailsicon"></div><div id="overlay-target4" class="details"></div>
+				<div id="overlay-intel-target5" class="detailsicon"></div><div id="overlay-target5" class="details"></div>
+				<div id="overlay-intel-objective" class="detailsicon"></div><div id="overlay-objective" class="details"></div>
+				<div id="overlay-intel-objectivex" class="detailsicon"></div><div id="overlay-objectivex" class="details"></div>
+				<div id="overlay-intel-camera" class="detailsicon"></div><div id="overlay-camera" class="details"></div>
+				<div id="overlay-intel-exit" class="detailsicon"></div><div id="overlay-exit" class="details nocheck"></div>
+				<div id="overlay-intel-complication1" class="detailsicon"></div><div id="overlay-complication1" class="details nocheck"></div>
+				<div id="overlay-intel-complication2" class="detailsicon"></div><div id="overlay-complication2" class="details nocheck"></div>
+				<div id="overlay-intel-complication3" class="detailsicon"></div><div id="overlay-complication3" class="details nocheck"></div>
+				<div id="overlay-intel-complication4" class="detailsicon"></div><div id="overlay-complication4" class="details nocheck"></div>
+				<div id="overlay-intel-complication5" class="detailsicon"></div><div id="overlay-complication5" class="details nocheck"></div>
+				<div id="overlay-intel-complication6" class="detailsicon"></div><div id="overlay-complication6" class="details nocheck"></div>
+				<div id="overlay-intel-challenge_rating"></div><div id="overlay-challenge_rating"></div>
+				<div id="overlay-intel-challenge_timelimit"></div><div id="overlay-challenge_timelimit">
+					<span id="timeprompt"></span>
+					<span id="timekeeper" class="hidden">
+						<span>Time Remaining</span>
+						<b id="timeexact">00:00</b>
+					</span>
+				</div>
+				<div id="overlayinfo" class="hidden">
+					<div id="overlayinfo-image" class="hidden">
+						<div id="overlayinfo-method" class="hidden">
+							<span class="">
+								<p id="title">Eliminate using:</p>
+								<p id="subtitle-method"></p>
+								<p id="subtitle-alt-method"></p>
+							</span>
+						</div>
+						<div id="overlayinfo-disguise" class="hidden">
+							<span class="">
+								<p id="title">Wear disguise:</p>
+								<p id="subtitle-disguise"></p>
+							</span>
+						</div>
+						<div id="overlayinfo-intel" class="hidden">
+							<span id="overlayinfo-inteltoggle">
+								<p id="title">Intel:</p>
+								<p id="wording"></p>
+							</span>
+						</div>
+						<div id="overlayinfo-instruction" class="hidden">
+							<img id="list" src="./img/general/blank.png">
+							<p id="wording"></p>
+						</div>
+						<div id="overlayinfo-nameplate">
+							<span>
+								<p id="title"></p>
+								<p id="subtitle"></p>
+							</span>
+						</div>
+					</div>
+					
+					<div id="overlayinfo-entry" class="hidden">
+						<div id="entry-nameplate">
+							<span>
+								<p id="title">Starting Location</p>
+								<p id="subtitle"></p>
+							</span>
+						</div>
+					</div>
+					<div id="overlayinfo-exit" class="hidden">
+						<div id="exit-nameplate">
+							<span>
+								<p id="title">Exit Location <span id="overlayinfo-exitreq"></span></p>
+								<p id="subtitle"></p>
+							</span>
+						</div>
+					</div>
+
+				</div>
+			</div>
 		</div>
 		
 		<header>
@@ -191,12 +257,10 @@
 				<div id="complication4" class="column" style="display:none;"></div>
 				<div id="complication5" class="column" style="display:none;"></div>
 				<div id="complication6" class="column" style="display:none;"></div>
-				<div id="complicationi" class="column" style="display:none;"></div>
 				<div id="restriction" class="column" style="display:none;"></div>
 				<div id="timelimit" class="column" style="display:none;"></div>
 				<div id="ratingget" class="column" style="display:none;"></div>
 				<div id="diffget" class="column" style="display:none;"></div>
-				<div id="challengesi" class="column" style="display:none;"></div>
 				<div id="intro" class="column">
 					<div id="logo" class="welcome">
 						<div id="nameplate">
@@ -215,7 +279,7 @@
 						</div>
 					</div>
 				</div>
-				
+
 				<div id="features" class="column">
 					<div id="wrapper">
 						<div id="notes">
@@ -242,64 +306,66 @@
 						</div>
 						<div id="nameplate">
 							<span>
-								<p id="title">Last Updated: June 20th, 2022</p>
+								<p id="title">Information</p>
 								<p id="subtitle">Roulette Features</p>
 							</span>
 						</div>
 					</div>
 				</div>
+				
+				<!--OVERLAY GUIDE WOULD GO HERE//-->
+				
 				<div id="empty" class="side"></div>
 				<form class="clearme">
+					<textarea id="input_mission" class="clearme"></textarea>
 					<textarea id="input_contract" class="clearme"></textarea>
+					<textarea id="contarget" class="clearme"></textarea>
 					
 					<textarea id="input_entry" class="clearme"></textarea>
 					<textarea id="input_exit" class="clearme"></textarea>
-					<textarea id="input_exitreq" class="clearme"></textarea>
 					
 					<textarea id="input_target1" class="clearme"></textarea>
-					<textarea id="input_weapon1" class="clearme"></textarea>
+					<textarea id="input_method1" class="clearme"></textarea>
 					<textarea id="input_disguise1" class="clearme"></textarea>
-					<textarea id="input_targetintel1" class="clearme"></textarea>
+					<textarea id="input_intel1" class="clearme"></textarea>
 					
 					<textarea id="input_target2" class="clearme"></textarea>
-					<textarea id="input_weapon2" class="clearme"></textarea>
+					<textarea id="input_method2" class="clearme"></textarea>
 					<textarea id="input_disguise2" class="clearme"></textarea>
-					<textarea id="input_targetintel2" class="clearme"></textarea>
+					<textarea id="input_intel2" class="clearme"></textarea>
 					
 					<textarea id="input_target3" class="clearme"></textarea>
-					<textarea id="input_weapon3" class="clearme"></textarea>
+					<textarea id="input_method3" class="clearme"></textarea>
 					<textarea id="input_disguise3" class="clearme"></textarea>
-					<textarea id="input_targetintel3" class="clearme"></textarea>
+					<textarea id="input_intel3" class="clearme"></textarea>
 					
 					<textarea id="input_target4" class="clearme"></textarea>
-					<textarea id="input_weapon4" class="clearme"></textarea>
+					<textarea id="input_method4" class="clearme"></textarea>
 					<textarea id="input_disguise4" class="clearme"></textarea>
-					<textarea id="input_targetintel4" class="clearme"></textarea>
+					<textarea id="input_intel4" class="clearme"></textarea>
 					
 					<textarea id="input_target5" class="clearme"></textarea>
-					<textarea id="input_weapon5" class="clearme"></textarea>
+					<textarea id="input_method5" class="clearme"></textarea>
 					<textarea id="input_disguise5" class="clearme"></textarea>
-					<textarea id="input_targetintel5" class="clearme"></textarea>
+					<textarea id="input_intel5" class="clearme"></textarea>
 					
 					<textarea id="input_objective" class="clearme"></textarea>
-					<textarea id="input_objective_overlay" class="clearme"></textarea>
 					<textarea id="input_extraobjective" class="clearme"></textarea>
-					<textarea id="input_extraobjective_overlay" class="clearme"></textarea>
-					
 					<textarea id="input_camera" class="clearme"></textarea>
 					
 					<textarea id="input_complicationt" class="clearme"></textarea>
-					<textarea id="input_complicationi" class="clearme"></textarea>
 					<textarea id="input_complication1" class="clearme"></textarea>
 					<textarea id="input_complication2" class="clearme"></textarea>
 					<textarea id="input_complication3" class="clearme"></textarea>
 					<textarea id="input_complication4" class="clearme"></textarea>
 					<textarea id="input_complication5" class="clearme"></textarea>
 					<textarea id="input_complication6" class="clearme"></textarea>
+					<textarea id="input_pickup" class="clearme"></textarea>
 					
 					<textarea id="input_challengest" class="clearme"></textarea>
 					<textarea id="input_restriction" class="clearme"></textarea>
 					<textarea id="input_timelimit" class="clearme"></textarea>
+					<textarea id="input_timelimitvalue" class="clearme"></textarea>
 					<textarea id="input_rating" class="clearme"></textarea>
 					<textarea id="input_difficulty" class="clearme"></textarea>
 				</form>
@@ -973,6 +1039,9 @@
 				<div id="settings_audio">
 					<span>Roulette Music</span>
 				</div>
+				<!--<div id="settings_overlay">
+					<span>Overlay Appearance</span>
+				</div>//-->
 				<div id="settings_roulette">
 					<span>Roulette Mode</span>
 				</div>
@@ -984,6 +1053,9 @@
 				</div>
 				<div id="settings_challenges">
 					<span>Gameplay Challenges</span>
+				</div>
+				<div id="settings_reset">
+					<span>Reset Or Return</span>
 				</div>
 				<div id="settings_subsubmenu">
 					<label id="theme_m"  class="mobile" style="display:none;" data-hover="The Roulette takes on the colors of HITMAN's original red menu.">[INFO]:</label>
@@ -1009,9 +1081,24 @@
 					<label id="theme_cookies" style="display:none;">
 						<p>This site uses a single <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies" target="_blank">Cookie</a> to remember your selected theme appearance above. By selecting any of those options, you consent to the use of this cookie, which expires in 30 days.</p>
 					</label>
+					<label id="overlay_style" class="H3" style="display:none;" data-hover="Select the game style the overlay will take.">
+						<b>Overlay Style</b><span>[HITMAN III]</span>
+					</label>
+					<label id="overlay_color" class="white" style="display:none;" data-hover="Override the color of the objectives.">
+						<b>Text Color</b><span>[White]</span>
+					</label>
+					<label id="overlay_shadow" for="overlayshadow" style="display:none;" data-hover="Apply a shadow under the objective text.">
+						<input type="checkbox" id="overlayshadow" value="true" />
+						<b>Text Shadow</b><span>[Off]</span>
+					</label>
+					<label id="overlay_capitals" class="default" style="display:none;" data-hover="Override the capitalization of objective text.">
+						<b>Text Capitalization</b><span>[Default]</span>
+					</label>
+					<label id="overlay_others" style="display:none;">
+						<p>Adjusting the Overlay's text size and screen position is available once the Roulette is generated and you enable the Overlay itself.</p>
+					</label>
 					<label id="audio_music" class="default" style="display:none;" data-hover="Select the optional background track that can play.<br />Composed by Niels Bye Nielsen.<br /><br /><b>[Music is not playing by default. To enable music, select the speaker icon on the bottom corner of the page.]</b><br /><br />Default: Music is paired to the matching selected theme appearance.<br />HITMAN: Plays “World Of Assassination” from HITMAN's Main Menu.<br />HITMAN 2: Plays “Agent and Handler” from HITMAN 2's Main Menu.<br />H3 MENU: Plays the beginning of “Death Awaits” from HITMAN III's Main Menu.<br />H3 PLAN: Plays the ending of “Death Awaits” from HITMAN III's Planning Screen after watching a briefing.">
-						<b>Music Track</b>
-						<span>[Default]</span>
+						<b>Music Track</b><span>[Default]</span>
 					</label>
 					<label id="audio_volume" style="display:none;" data-hover="Use the slider to adjust the volume of the music when playing.<br />Composed by Niels Bye Nielsen.<br /><br /><b>[Music is not playing by default. To enable music, select the speaker icon on the bottom corner of the page.]</b>">
 						<b>Music Volume</b>
@@ -1043,9 +1130,9 @@
 						<input type="checkbox" id="mask" value="true" />
 						<b>Conditions Masked</b><span>[Off]</span>
 					</label>
-					<!--<label id="mode_ol" style="display:none;" data-hover="Replaces the “Export Roulette” button in the corner with “Enable Overlay”. When the Stream Overlay is enabled, the webpage will go transparent except for mission objectives listed as they would be in game. This would allow you to stream the game with the Roulette's targets and objectives layered over top.<br /><br />Once enabled, read the shown instructions on how to use.">
-						<b>Stream Overlay Mode</b><span>[Off]</span>
-					</label>//-->
+					<label id="mode_ol" style="display:none;" data-hover="Intended for PC Streamers to easily switch between generating Roulettes and playing the game with the generated objectives on screen for the viewers.<br /><br />Click for setup instructions & interaction controls.">
+						<b>Stream Overlay BETA</b><span>[Info]</span>
+					</label>
 					<label id="kill_m" class="mobile" style="display:none;" data-hover="On: Adds a random mission specific disguise requirement for each elimination. These are not shared between targets.<br /><br />On+: In a few missions, some disguises have variants that are counted as different for Contracts Mode. These are added to the pool for elimination disguise requirements.<br /><br />Off: Any disguise can be worn during eliminations.">[INFO]:</label>
 					<label id="kill_disguise" class="on" style="display:none;" data-hover="On: Adds a random mission specific disguise requirement for each elimination. These are not shared between targets.<br /><br />On+: In a few missions, some disguises have variants that are counted as different for Contracts Mode. These are added to the pool for elimination disguise requirements.<br /><br />Off: Any disguise can be worn during eliminations.">
 						<b>Specific Disguises</b><span>[On]</span>
@@ -1089,14 +1176,14 @@
 						<input type="checkbox" id="cameraobj" value="true" />
 						<b>Photo Objective</b><span>[Off]</span>
 					</label>
-					<label id="extra_m" class="mobile" style="display:none;" data-hover="Adds playstyle constraints or requirements. Some of these are used in the game's Contracts Mode.<br /><br />Slider: Adjust to set the maximum amount that could appear. The amount is random every time.">[INFO]:</label>
-					<label id="extra_comp" style="display:none;" data-hover="Adds playstyle constraints or requirements. Some of these are used in the game's Contracts Mode.<br /><br />Slider: Adjust to set the maximum amount that could appear. The amount is random every time.">
+					<label id="extra_m" class="mobile" style="display:none;" data-hover="Adds playstyle constraints or requirements. Most of these are used in the game's Contracts Mode.<br /><br />Slider: Adjust to set the maximum amount that could appear.<br /><br /><b>[Note: More complications can appear when less requirements or challenges are selected.]</b>">[INFO]:</label>
+					<label id="extra_comp" style="display:none;" data-hover="Adds playstyle constraints or requirements. Most of these are used in the game's Contracts Mode.<br /><br />Slider: Adjust to set the maximum amount that could appear.<br /><br /><b>[Note: More complications can appear when less requirements or challenges are selected.]</b>">
 						<b>Allow Complications</b>
 						<span id="range"><input id="compslider" type="range" min="0" max="6" value="0" />
 						[Max: <span id="compamount">0</span>]</span>
 					</label>
-					<label id="game_m" class="mobile" style="display:none;" data-hover="Lists a game mechanic that must be avoided or one to disable though the game's Options menu.<br /><br />H2: Pulls from the available mechanics from HITMAN 2.<br />H1: Pulls from the available mechanics from HITMAN.<br />Off: Use any game mechanic freely.">[INFO]:</label>
-					<label id="game_mech" class="off" style="display:none;" data-hover="Lists a game mechanic that must be avoided or one to disable though the game's Options menu.<br /><br />H2/3: Pulls from the available mechanics from HITMAN 2 and III.<br />H1: Pulls from the available mechanics from HITMAN.<br />Off: Use any game mechanic freely.">
+					<label id="game_m" class="mobile" style="display:none;" data-hover="Lists a game mechanic that must be disabled though the game's Options menu.<br /><br />H2: Pulls from the available mechanics from HITMAN 2.<br />H1: Pulls from the available mechanics from HITMAN.<br />Off: Use any game mechanic freely.">[INFO]:</label>
+					<label id="game_mech" class="off" style="display:none;" data-hover="Lists a game mechanic that must be disabled though the game's Options menu.<br /><br />H2/3: Pulls from the available mechanics from HITMAN 2 and III.<br />H1: Pulls from the available mechanics from HITMAN.<br />Off: Use any game mechanic freely.">
 						<b>Restricted Mechanics</b><span>[Off]</span>
 					</label>
 					<label id="game_m" class="mobile" style="display:none;" data-hover="On: Complete the roulette within the time listed. For accuracy, enable the Mission Timer through the game's Options menu under Gameplay.<br /><br />Off: Complete the roulette at your own speed.">[INFO]:</label>
@@ -1112,7 +1199,30 @@
 					<label id="game_m" class="mobile" style="display:none;" data-hover="Before attempting the roulette, select the difficulty chosen by the roulette before starting the mission. Note that only campaign missions outside of Contracts Mode have alternate difficulties.<br /><br />H2/H3: Casual, Professional, and Master are the difficulties available.<br />H1: Normal and Professional are the difficulties available (HITMAN missions only).<br />Off: Complete the roulette on whatever difficulty to want.">[INFO]:</label>
 					<label id="game_diff" class="off" style="display:none;" data-hover="Before attempting the roulette, select the difficulty chosen by the roulette before starting the mission. Note that only campaign missions outside of Contracts Mode have alternate difficulties.<br /><br />H2/H3: Casual, Professional, and Master are the difficulties available.<br />H1: Normal and Professional are the difficulties available (HITMAN missions only).<br />Off: Complete the roulette on whatever difficulty to want.">
 						<b>Force Difficulty</b><span>[Off]</span>
-					</label>	
+					</label>
+					<label id="reset_m" class="mobile" style="display:none;" data-hover="Resets all Roulette Settings to their default state. This does not include Selected Missions or Roulette Appearance.">[INFO]:</label>
+					<label id="reset_settings" class="off" style="display:none;" data-hover="Resets all Roulette Settings to their default state. This does not include Selected Missions or Roulette Appearance.">
+						<b>Reset All Roulette Settings</b>
+					</label>
+					<label id="reset_m" class="mobile" style="display:none;" data-hover="Returns you to the main Hitman Roulette tab and clears out any Issued Roulettes. Settings changes will be retained.">[INFO]:</label>
+					<label id="reset_return" class="off" style="display:none;" data-hover="Returns you to the main Hitman Roulette tab and clears out any Issued Roulettes. Settings changes will be retained.">
+						<b>Return To Front Page</b>
+					</label>
+					<select id="overlayselect" style="display:none;">
+						<option value="H1">HITMAN</option>
+						<option value="H2">HITMAN 2</option>
+						<option value="H3" selected>HITMAN III</option>
+					</select>
+					<select id="overlaycolor" style="display:none;">
+						<option value="white" selected>White</option>
+						<option value="black">Black</option>
+						<option value="icon">Icon Dependant</option>
+					</select>
+					<select id="overlaycaps" style="display:none;">
+						<option value="default" selected>Default</option>
+						<option value="upper">Uppercase</option>
+						<option value="lower">Lowercase</option>
+					</select>
 					<select id="musicselect" style="display:none;">
 						<option value="DEFAULT" selected>Default To Theme</option>
 						<option value="WoA">HITMAN - World Of Assassination</option>
@@ -1153,6 +1263,13 @@
 				<div id="settings_descriptions">
 					<h1></h1>
 					<p></p>
+					<span class="h3theme whitetext noshadow defaultcase">
+						<b id="e">Eliminate: Target, using: Weapon (Melee), while disguised as: Innocent</b>
+						<b id="o">Objective: Collect the documents.</b>
+						<b id="x">Exit: Vehicle</b>
+						<b id="c">Complication: No Recordings</b>
+						<b id="t">Time Limit: 60 Minutes</b>
+					</span>
 				</div>
 				<div id="empty" class="side two"></div>
 			</div>
@@ -1166,7 +1283,6 @@
 					<p>To initiate a roll of the Roulette, click "Issue Roulette" on the <a id="link_roulette" href="#">main page</a>. Use the Undo or Redo arrow buttons that appear at the top to move between generated Roulettes. Save your Roulette as a Textfile using the "Export Roulette" button, also shown on the main page.</p>
 					<p>Most missions from the trilogy are pulled into the Roulette by default. Through the "<a id="link_missions" href="#">Select Missions</a>" option, you can untoggle any missions you're missing or just the ones you don't like.<br />
 					"<a id="link_settings" href="#">Roulette Settings</a>" allow you to change what the Roulette surfaces: You can get more than the regular targets by choosing "Contract Mode Roulette". Dial in the difficulty by toggling "Kill Requirements" like disguises or weapons you'll need to wear or use, "Extra Requirements" like one more objective or sets of complications, and "Gameplay Challenges" that force you to change how you play.</p>
-					<p>To quickly return the Roulette Settings back to default, preform a hard refresh of the page or <a href="#" onClick="window.location.href=window.location.href">click here</a>.</p>
 					<h1>Special Thanks & External Resources</h1>
 					<ul>
 						<li><a href="https://ioi.dk/" target="_blank">IO Interactive</a> for making a great trilogy of games that helped me through some bad days and kept me better occupied here.</li>
@@ -1175,6 +1291,7 @@
 						<li><a href="http://hitmanmaps.com/" target="_blank">Hitman Interactive Maps</a> by Winterbirds & <a href="https://www.hitmaps.com/" target="_blank">Hitmaps</a> (formerly Hitman 2 Maps) by Mike Koch for being great tools that aided in my data collection.</li>
 						<li><a href="https://github.com/gromo/jquery.scrollbar" target="_target">jQuery CSS Customizable Scrollbar</a> by gromo & <a href="https://www.dte.web.id/2013/02/event-mouse-wheel.html" target="_blank">Event Mouse Wheel</a> by Taufik Nurrohman which I used for style and navigation.</li>
 						<li><a href="http://detectmobilebrowsers.com/" target="_target">Detect Mobile Browsers</a> by Chad Smith, which helped in allowing settings descriptions viewable for mobile via touch.</li>
+						<li><a href="http://keith-wood.name/countdown.html" target="_target">jQuery Countdown</a> by Keith Wood, which is being used in the Stream Overlay for any Time Limit Complications.</li>
 					</ul>
 					<h1>Compatibility & Issues</h1>
 					<p>Though you can deselect any location you do not own, by default the Roulette works best with the either:</p>
@@ -1249,8 +1366,8 @@
 		</footer>
 		<div id="floatbuttons">
 			<button id="music" class="off"></button>
-			<button id="saveroulette" disabled="true">Export Roulette</button>
-			<!--<button id="enableoverlay" class="hidden" disabled="true">Enable Overlay</button>//-->
+			<!--<button id="overlaybutton" disabled="true">Overlay</button>//-->
+			<button id="saveroulette" disabled="true">Export Roulette</button><!--Hide "Roulette"//-->
 		</div>
 		<div id="background"></div>	
 		<audio id="audiocontainer" loop>
