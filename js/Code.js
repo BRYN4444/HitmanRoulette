@@ -34,9 +34,18 @@ function createContainerObject() {
 };
 
 //Randomizes extra variables for the result
-function createExtrasList(exit, eexit) {
-	if(document.getElementById("compslider").value == 0)
+function createExtrasList(exit, missionCode) {
+	if(document.getElementById("compslider").value == 0) {
+		document.getElementById("submenu_comp").disabled = true;
+		document.getElementById("subsubmenu_comp").disabled = true;
+		document.getElementById("input_complicationt").value = "";
 		return [];
+	}
+	else {
+		document.getElementById("submenu_comp").disabled = false;
+		document.getElementById("subsubmenu_comp").disabled = false;
+		document.getElementById("input_complicationt").value = "\n\nComplications:";
+	}
 		
 	var extras = [];
 	var modeIndex = document.getElementById("modeselect");
@@ -53,7 +62,7 @@ function createExtrasList(exit, eexit) {
 	if (Math.random() < 0.40)
 		extras.push("No Bodies Found|No dead or unconscious bodies may be found. This does not include victims of accidents or poisoning.");
 
-	if (Math.random() < 0.30 && disguise == "OFF" && !disguiseExits.includes(exit, eexit) ) {
+	if (Math.random() < 0.30 && disguise == "OFF" && !disguiseExits.includes(exit) ) {
 		if (Math.random() < 0.50)
 			extras.push("No Disguise Changes|Do not change from your starting disguise at any time during the mission.");
 		else
@@ -69,19 +78,27 @@ function createExtrasList(exit, eexit) {
 	if (Math.random() < 0.20 && document.getElementById("rating").checked == 0)
 		extras.push("Do Not Get Spotted|Avoid anyone seeing you performing any illegal action.");
 
-	if (Math.random() < 0.20 && !koExits.includes(exit, eexit) && document.getElementById("exobj").checked == 0)
+	if (Math.random() < 0.30 && !koExits.includes(exit) && document.getElementById("exobj").checked == 0)
 		extras.push("No Pacifications|Do not pacify or subdue anyone in any way. This includes using items via melee/throwing, sedating, or tranquilizing.");
+
+	if (Math.random() < 0.25)
+		extras.push("No Agility|Do not vault, hang, scale, or climb down.");
 
 	if (Math.random() < 0.20)
 		extras.push("Headshots Only|Any shots fired at NPCs must be headshots.");
 
-	if (Math.random() < 0.20 && mode == "MAIN" && document.getElementById("difficulty").selectedIndex == 0)
+	if (Math.random() < 0.20 && mode == "MAIN" && document.getElementById("difficulty").selectedIndex == 0 && !noSave.includes(missionCode) )
 		extras.push("One Save Only|You are allowed to save your mission progress only once.");
 	
 	if (Math.random() < 0.30)
 		extras.push("Perfect Shooter|Do not use firearms as distractions or to destroy objects. All shots must hit an NPC, even if they subsequently pass through the NPC and hit a wall.");
 	
-	return extras;
+	
+	
+	if(extras.length == 0) //failsafe
+		extras.push("No Recordings|Do not get recorded by a security camera. If you are recorded, you must destroy the evidence.");
+	
+	return extras.slice(0,document.getElementById("compslider").value); //max is value of slider
 };
 
 //Returns the list of weapons/accidents from which the kill methods are pulled
@@ -255,7 +272,6 @@ function createTargetList(container) {
 //Adds properties from the container object to the result object
 function containerToResult(container) {
 	var result = {};
-	//result.missionTitle = container.missionTitle;
 	result.missionLocation = container.missionLocation;
 	result.missionCode = container.missionCode;
 	result.photos = container.photos[Math.floor(Math.random()*container.photos.length)];
@@ -383,6 +399,7 @@ function writeEverything(result) {
 	//Location, Mission name, and background image
 	document.body.className = "hide"
 	document.getElementById("background").className = result.missionCode;
+	document.getElementById("input_mission").value = result.missionCode;
 	document.getElementById("map_place").innerHTML = result.missionLocation + result.cm;
 	document.getElementById("map").className = result.type;
 	document.getElementById("map_name").innerHTML = result.missionTitle;
@@ -396,150 +413,147 @@ function writeEverything(result) {
 		if (result.missionCode == "club" && result.entry == "Bus Stop" && mode == "MAIN") { // Bus Stop outside of Contracts forces cinimatic exit
 			document.getElementById("travel").innerHTML =
 				"<div id='entry' class='club-start-BusStop'><div id='nameplate'><span><p id='title'>Starting Location</p><p id='subtitle'>Bus Stop</p></span></div></div><div id='exit' class='club-exit-IntoTheForrest'><div id='nameplate'><span><p id='title'>Exit Location <span id='exitreq'></span></p><p id='subtitle'>Into The Forrest</p></span></div></div>";
-			document.getElementById("input_entry").value = "\nStart: Bus Stop";
-			document.getElementById("input_exit").value = "\nExit: Into The Forrest";
+			document.getElementById("input_entry").value = "Bus Stop";
+			document.getElementById("input_exit").value = "Into The Forrest|";
 			document.getElementById("exitreq").innerHTML = "";
-			document.getElementById("input_exitreq").value = "";
 		}
 		else if (result.missionCode == "club" && result.exit.split('|')[0] == "UFO" && mode != "MAIN") { // UFO Exit disabled in Contracts Mode
 			document.getElementById("travel").innerHTML =
 				"<div id='entry' class='club-start-" + result.entry.replace(/\s|'|\.|-|\(|\)/g, "") + "'><div id='nameplate'><span><p id='title'>Starting Location</p><p id='subtitle'>" + result.entry + "</p></span></div></div><div id='exit' class='club-exit-Bicycle'><div id='nameplate'><span><p id='title'>Exit Location <span id='exitreq'></span></p><p id='subtitle'>Bicycle</p></span></div></div>";
-			document.getElementById("input_entry").value = "\nStart: " + result.entry;
-			document.getElementById("input_exit").value = "\nExit: Bicycle";
+			document.getElementById("input_entry").value = result.entry;
+			document.getElementById("input_exit").value = "Bicycle|";
 			document.getElementById("exitreq").innerHTML = "";
-			document.getElementById("input_exitreq").value = "";
 		}
 		else if (result.missionCode == "vineyard" && result.exit == "Tango With Diana" && (mode == "CONEASY" || mode == "CONHARD" || mode == "CONANY")) { // Tango With Diana Exit disabled in Contracts Mode
 			document.getElementById("travel").innerHTML =
 				"<div id='entry' class='vineyard-start-" + result.entry.replace(/\s|'|\.|-|\(|\)/g, "") + "'><div id='nameplate'><span><p id='title'>Starting Location</p><p id='subtitle'>" + result.entry + "</p></span></div></div><div id='exit' class='vineyard-exit-ThroughTheGrapefields'><div id='nameplate'><span><p id='title'>Exit Location <span id='exitreq'></span></p><p id='subtitle'>Through The Grapefields</p></span></div></div>";
-			document.getElementById("input_entry").value = "\nStart: " + result.entry;
-			document.getElementById("input_exit").value = "\nExit: Through The Grapefields";
+			document.getElementById("input_entry").value = result.entry;
+			document.getElementById("input_exit").value = "Through The Grapefields|";
 			document.getElementById("exitreq").innerHTML = "";
-			document.getElementById("input_exitreq").value = "";
 		}
 		else if (result.missionCode == "vineyard" && result.exit.split('|')[0] == "Shrine" && (result.entry == "Winery Viewpoint" || result.entry == "Parking Lot" || result.entry == "Shrine")) { // When Shrine Exit enabled: Request Requiem Suit w/ Starting Location
 			document.getElementById("travel").innerHTML =
 				"<div id='entry' class='vineyard-start-" + result.entry.replace(/\s|'|\.|-|\(|\)/g, "") + "'><div id='nameplate'><span><p id='title'>Starting Location (Equip Requiem Suit)</p><p id='subtitle'>" + result.entry + "</p></span></div></div><div id='exit' class='vineyard-exit-Shrine'><div id='nameplate'><span><p id='title'>Exit Location <span id='exitreq'>(Requiem Suit Only)</span></p><p id='subtitle'>Shrine</p></span></div></div>";
-			document.getElementById("input_entry").value = "\nStart: " + result.entry + " (Equip Requiem Suit)";
-			document.getElementById("input_exit").value = "\nExit: Shrine";
+			document.getElementById("input_entry").value = result.entry + " (Equip Requiem Suit)";
+			document.getElementById("input_exit").value = "Shrine|(Requiem Suit Only)";
 			document.getElementById("exitreq").innerHTML = "(Requiem Suit Only)";
-			document.getElementById("input_exitreq").value = "(Requiem Suit Only)";
 		}
 		else if (result.missionCode == "vineyard" && result.exit.split('|')[0] == "Shrine" && !(result.entry == "Winery Viewpoint" || result.entry == "Parking Lot" || result.entry == "Shrine")) { // Shrine Exit disabled with Disguise Entrances
 			document.getElementById("travel").innerHTML =
 				"<div id='entry' class='vineyard-start-" + result.entry.replace(/\s|'|\.|-|\(|\)/g, "") + "'><div id='nameplate'><span><p id='title'>Starting Location</p><p id='subtitle'>" + result.entry + "</p></span></div></div><div id='exit' class='vineyard-exit-ThroughTheGrapefields'><div id='nameplate'><span><p id='title'>Exit Location <span id='exitreq'></span></p><p id='subtitle'>Through The Grapefields</p></span></div></div>";
-			document.getElementById("input_entry").value = "\nStart: " + result.entry;
-			document.getElementById("input_exit").value = "\nExit: Through The Grapefields";
+			document.getElementById("input_entry").value = result.entry;
+			document.getElementById("input_exit").value = "Through The Grapefields|";
 			document.getElementById("exitreq").innerHTML = "";
-			document.getElementById("input_exitreq").value = "";
 		}
 		else if (result.missionCode == "ark" && result.exit.split('|')[0] == "Swan Dive" && mode != "MAIN") { // Swan Dive Exit disabled in Contracts Mode
 			document.getElementById("travel").innerHTML =
 				"<div id='entry' class='ark-start-" + result.entry.replace(/\s|'|\.|-|\(|\)/g, "") + "'><div id='nameplate'><span><p id='title'>Starting Location</p><p id='subtitle'>" + result.entry + "</p></span></div></div><div id='exit' class='ark-exit-EastWall'><div id='nameplate'><span><p id='title'>Exit Location <span id='exitreq'></span></p><p id='subtitle'>East Wall</p></span></div></div>";
-			document.getElementById("input_entry").value = "\nStart: " + result.entry;
-			document.getElementById("input_exit").value = "\nExit: East Wall";
+			document.getElementById("input_entry").value = result.entry;
+			document.getElementById("input_exit").value = "East Wall|";
 			document.getElementById("exitreq").innerHTML = "";
-			document.getElementById("input_exitreq").value = "";
 		}
 		else if (result.missionCode == "speedway" && result.exit.split('|')[0] == "Pale Rider" && mode != "MAIN") { // Pale Rider Exit disabled in Contracts Mode
 			document.getElementById("travel").innerHTML =
 				"<div id='entry' class='speedway-start-" + result.entry.replace(/\s|'|\.|-|\(|\)/g, "") + "'><div id='nameplate'><span><p id='title'>Starting Location</p><p id='subtitle'>" + result.entry + "</p></span></div></div><div id='exit' class='speedway-exit-Ambulance'><div id='nameplate'><span><p id='title'>Exit Location <span id='exitreq'>(Medic Only)</span></p><p id='subtitle'>Ambulance</p></span></div></div>";
-			document.getElementById("input_entry").value = "\nStart: " + result.entry;
-			document.getElementById("input_exit").value = "\nExit: Ambulance";
+			document.getElementById("input_entry").value = result.entry;
+			document.getElementById("input_exit").value = "Ambulance|(Medic Only)";
 			document.getElementById("exitreq").innerHTML = "(Medic Only)";
-			document.getElementById("input_exitreq").value = "(Medic Only)";
 		}
 		else if (result.missionCode == "resort" && result.exit.split('|')[0] == "Dundee" && document.getElementById("firearm").checked == 1) { // Dundee Exit disabled with Specific Firearms checked
 			document.getElementById("travel").innerHTML =
 				"<div id='entry' class='resort-start-" + result.entry.replace(/\s|'|\.|-|\(|\)/g, "") + "'><div id='nameplate'><span><p id='title'>Starting Location</p><p id='subtitle'>" + result.entry + "</p></span></div></div><div id='exit' class='resort-exit-Dinghy'><div id='nameplate'><span><p id='title'>Exit Location <span id='exitreq'></span></p><p id='subtitle'>Dinghy</p></span></div></div>";
-			document.getElementById("input_entry").value = "\nStart: " + result.entry;
-			document.getElementById("input_exit").value = "\nExit: Dinghy";
+			document.getElementById("input_entry").value = result.entry;
+			document.getElementById("input_exit").value = "Dinghy|";
 			document.getElementById("exitreq").innerHTML = "";
-			document.getElementById("input_exitreq").value = "";
 		}
 		else if (result.missionCode == "birthday" && result.exit.split('|')[0] == "Speedboat" && difficultyMode == "H1") { // Speedboat Exit shows Key Needed on rofessional when Difficulty set to H1 
 			document.getElementById("travel").innerHTML =
 				"<div id='entry' class='birthday-start-" + result.entry.replace(/\s|'|\.|-|\(|\)/g, "") + "'><div id='nameplate'><span><p id='title'>Starting Location</p><p id='subtitle'>" + result.entry + "</p></span></div></div><div id='exit' class='birthday-exit-SpeedboatH1'><div id='nameplate'><span><p id='title'>Exit Location <span id='exitreq'>(Needs Key on Pro.)</span></p><p id='subtitle'>Speedboat</p></span></div></div>";
-			document.getElementById("input_entry").value = "\nStart: " + result.entry;
-			document.getElementById("input_exit").value = "\nExit: Speedboat";
+			document.getElementById("input_entry").value = result.entry;
+			document.getElementById("input_exit").value = "Speedboat|(Needs Key on Professional)";
 			document.getElementById("exitreq").innerHTML = "(Needs Key on Pro.)";
-			document.getElementById("input_exitreq").value = "(Needs Key on Professional)";
 		}		
 		else if (result.missionCode == "virus" && result.objectives.split('|')[0] == "Safe House Bugged" && document.getElementById("exobj").checked == 1) { // Entrance forced if Safehouse Bugged Extra Objective is active.
 			document.getElementById("travel").innerHTML =
 				"<div id='entry' class='virus-start-MainSquare'><div id='nameplate'><span><p id='title'>Starting Location</p><p id='subtitle'>Main Square</p></span></div></div><div id='exit' class='" + result.missionCode + "-exit-" + result.exit.split('|')[0].replace(/\s|'|\.|-|\||\(|\)/g, "") + "'><div id='nameplate'><span><p id='title'>Exit Location <span id='exitreq'></span></p><p id='subtitle'>" + result.exit.split('|')[0] + "</p></span></div></div>";
-			document.getElementById("input_entry").value = "\nStart: Main Square";
-			document.getElementById("input_exit").value = "\nExit: " + result.exit.split('|')[0];
+			document.getElementById("input_entry").value = "Main Square";
 			if(result.exit.split('|')[1] != null) {
-				document.getElementById("exitreq").innerHTML = result.exit.split('|')[1];
-				document.getElementById("input_exitreq").value = " " + result.exit.split('|')[1];			
+				document.getElementById("input_exit").value = result.exit.split('|')[0] + "|" + result.exit.split('|')[1];
+				document.getElementById("exitreq").innerHTML = result.exit.split('|')[1];		
 			}
 			else {
+				document.getElementById("input_exit").value = "|";	
 				document.getElementById("exitreq").innerHTML = "";
-				document.getElementById("input_exitreq").value = "";	
 			};
 		}
 		else {		
 			document.getElementById("travel").innerHTML =
 				"<div id='entry' class='" + result.missionCode + "-start-" + result.entry.replace(/\s|'|\.|-|\(|\)/g, "") + "'><div id='nameplate'><span><p id='title'>Starting Location</p><p id='subtitle'>" + result.entry + "</p></span></div></div><div id='exit' class='" + result.missionCode + "-exit-" + result.exit.split('|')[0].replace(/\s|'|\.|-|\||\(|\)/g, "") + "'><div id='nameplate'><span><p id='title'>Exit Location <span id='exitreq'></span></p><p id='subtitle'>" + result.exit.split('|')[0] + "</p></span></div></div>";
-			document.getElementById("input_entry").value = "\nStart: " + result.entry;
-			document.getElementById("input_exit").value = "\nExit: " + result.exit.split('|')[0];
+			document.getElementById("input_entry").value = result.entry;
 			if(result.exit.split('|')[1] != null) {
-				document.getElementById("exitreq").innerHTML = result.exit.split('|')[1];
-				document.getElementById("input_exitreq").value = " " + result.exit.split('|')[1];			
+				document.getElementById("input_exit").value = result.exit.split('|')[0] + "|" + result.exit.split('|')[1];
+				document.getElementById("exitreq").innerHTML = result.exit.split('|')[1];		
 			}
 			else {
+				document.getElementById("input_exit").value = result.exit.split('|')[0] + "|";
 				document.getElementById("exitreq").innerHTML = "";
-				document.getElementById("input_exitreq").value = "";	
 			};
 		};
 	}
 	else if (exitMode == "START") {
 		document.getElementById("travel").innerHTML =
 			"<div id='entry' class='" + result.missionCode + "-start-" + result.entry.replace(/\s|'|\.|-|\(|\)/g, "") + "'><div id='nameplate'><span><p id='title'>Starting Location</p><p id='subtitle'>" + result.entry + "</p></span></div></div><div id='exit' class='any-exit'><div id='nameplate'><span><p id='title'>Exit Location <span id='exitreq'></span></p><p id='subtitle'>Any Exit</p></span></div></div>";
-		document.getElementById("input_entry").value = "\nStart: " + result.entry;
-		document.getElementById("input_exit").value = "";
+		document.getElementById("input_entry").value = result.entry;
+		document.getElementById("input_exit").value = "|";
 		document.getElementById("exitreq").innerHTML = "";
-		document.getElementById("input_exitreq").value = "";			
 	}
 	else if (exitMode == "EXIT") {
 		if(container.missionTitle === "Dartmoor Garden Show" && mode == "MAIN") {
 			document.getElementById("travel").innerHTML =
 				"<div id='entry' class='gardenshow-start-DeterministicMode'><div id='nameplate'><span><p id='title'>Starting Location</p><p id='subtitle'>Deterministic Mode</p></span></div></div><div id='exit' class='" + result.missionCode + "-exit-" + result.exit.split('|')[0].replace(/\s|'|\.|-|\||\(|\)/g, "") + "'><div id='nameplate'><span><p id='title'>Exit Location <span id='exitreq'></span></p><p id='subtitle'>" + result.exit.split('|')[0] + "</p></span></div></div>";
+			document.getElementById("input_entry").value = "Deterministic Mode";
+			if(result.exit.split('|')[1] != null) {
+				document.getElementById("input_exit").value = result.exit.split('|')[0] + "|" + result.exit.split('|')[1];	
+				document.getElementById("exitreq").innerHTML = result.exit.split('|')[1];			
+			}
+			else {
+				document.getElementById("input_exit").value = result.exit.split('|')[0] + "|";
+				document.getElementById("exitreq").innerHTML = "";	
+			}
 		}
 		else {
 			document.getElementById("travel").innerHTML =
 				"<div id='entry' class='any-start'><div id='nameplate'><span><p id='title'>Starting Location</p><p id='subtitle'>Any Entrance</p></span></div></div><div id='exit' class='" + result.missionCode + "-exit-" + result.exit.split('|')[0].replace(/\s|'|\.|-|\||\(|\)/g, "") + "'><div id='nameplate'><span><p id='title'>Exit Location <span id='exitreq'></span></p><p id='subtitle'>" + result.exit.split('|')[0] + "</p></span></div></div>";
-		}
-		document.getElementById("input_entry").value = "";
-		document.getElementById("input_exit").value = "\nExit: " + result.exit.split('|')[0];
-		if(result.exit.split('|')[1] != null) {
-			document.getElementById("exitreq").innerHTML = result.exit.split('|')[1];
-			document.getElementById("input_exitreq").value = " " + result.exit.split('|')[1];			
-		}
-		else {
-			document.getElementById("exitreq").innerHTML = "";
-			document.getElementById("input_exitreq").value = "";	
-		};			
+			document.getElementById("input_entry").value = "";
+			if(result.exit.split('|')[1] != null) {
+				document.getElementById("input_exit").value = result.exit.split('|')[0] + "|" + result.exit.split('|')[1];	
+				document.getElementById("exitreq").innerHTML = result.exit.split('|')[1];			
+			}
+			else {
+				document.getElementById("input_exit").value = result.exit.split('|')[0] + "|";
+				document.getElementById("exitreq").innerHTML = "";	
+			}
+		}		
 	}
 	else {
 		document.getElementById("travel").innerHTML = "";
 		document.getElementById("input_entry").value = "";
-		document.getElementById("input_exit").value = "";
-		document.getElementById("input_exitreq").value = "";
+		document.getElementById("input_exit").value = "|";
 	};
 	
 	// Display Contracts Mode Target Images in Tall Format regardless of Theme
-	if (mode == "CONEASY" || mode == "CONHARD" || mode == "CONANY") { var contractmode = " contarget" }
-	else { var contractmode = "" }
+	if (mode == "CONEASY" || mode == "CONHARD" || mode == "CONANY") {
+		var contractmode = " contarget";
+		document.getElementById("contarget").value = " contarget";
+	} else { var contractmode = ""; document.getElementById("contarget").value = ""; }
 	
 	// Masked Conditions
 	if (document.getElementById("mask").checked == 1) { var maskedconditions = "mask" }
 	else { var maskedconditions = "" }
 	
 	// Write to the HTML elements from the results object
-	var MAX_TARGETS = 5, MAX_EXTRAS = document.getElementById("compslider").value;
-	for(var i = 0; i < MAX_TARGETS; ++i){ // target setup
+	//var MAX_TARGETS = 5;
+	for(var i = 0; i < 5; ++i){ // target setup
 		if(i < result.targets.length) {
 			document.getElementById("target" + (i+1)).innerHTML =
 				"<div id='photo' class='" + result.targets[i].split('|')[0].replace(/\s|,|'|“|”|-|\./g, "") + "-" + result.missionCode + contractmode +
@@ -547,109 +561,98 @@ function writeEverything(result) {
 				"'></p></span></div><div id='subplate' class='disguise'><span class='" + maskedconditions + "'><p id='title'>Wear disguise:</p><p class='subtitle-disguise' id='subtitle-disguise" + (i+1) +
 				"'></p></span></div><div id='subplate" + (i+1) + "' class='intel'><span id='inteltoggle" + (i+1) + "'><p id='title'>Intel:</p><p id='wording'>" + result.targets[i].split('|')[1] +
 				"</p></span></div><div id='nameplate'><span><p id='title'>Target</p><p id='subtitle'>" + result.targets[i].split('|')[0] + "</p></span></div></div>";
-			//document.getElementById("overlay-image-target" + (i+1)).innerHTML =
-			//	"<div id='overlay-image' class='hidden'><div id='photo' class='" + result.targets[i].split('|')[0].replace(/\s|,|'|“|”|-|\./g, "") + "-" + result.missionCode + contractmode +
-			//	"'><div id='overlay-intel" + (i+1) + "'>" + result.targets[i].split('|')[1] + "</div><div id='nameplate'><span><p id='title'>Target</p><p id='subtitle'>" + result.targets[i].split('|')[0] + "</p></span></div></div></div>";
-			document.getElementById("input_target" + (i+1)).value = "\nEliminate " + result.targets[i].split('|')[0];
-			document.getElementById("input_targetintel" + (i+1)).value = "\n └ Intel: " + result.targets[i].split('|')[1]; // Contracts Mode Target Intel
 			document.getElementById("input_contract").value = result.cm;
+			document.getElementById("input_target" + (i+1)).value = result.targets[i].split('|')[0];
 			if(result.missionCode == "training" && (mode == "MAIN" || mode == "ELUSIVE") && fftfailsafe.includes(result.weapons[i]) ) { // Specific Weapons on ICA Boat 
 				document.getElementById("subtitle-method" + (i+1)).innerHTML = "Any Method";
 				document.getElementById("subtitle-alt-method" + (i+1)).innerHTML = "";
-				document.getElementById("input_weapon" + (i+1)).value = ", using: Any Method";
+				document.getElementById("input_method" + (i+1)).value = "Any Method||";
 			}
 			else if(result.missionCode == "training" && (mode == "CONEASY" || mode == "CONHARD" || mode == "CONANY") && fftfailsafeContract.includes(result.weapons[i]) ) { // Specific Weapons on ICA Boat Contracts
 				document.getElementById("subtitle-method" + (i+1)).innerHTML = "Any Method";
 				document.getElementById("subtitle-alt-method" + (i+1)).innerHTML = "";
-				document.getElementById("input_weapon" + (i+1)).value = ", using: Any Method";
+				document.getElementById("input_method" + (i+1)).value = "Any Method||";
 			}
 			else if(result.missionCode == "test" && icafailsafe.includes(result.weapons[i]) ) { // Specific Weapons on ICA Hanger
 				document.getElementById("subtitle-method" + (i+1)).innerHTML = "Any Method";
 				document.getElementById("subtitle-alt-method" + (i+1)).innerHTML = "";
-				document.getElementById("input_weapon" + (i+1)).value = ", using: Any Method";
+				document.getElementById("input_method" + (i+1)).value = "Any Method||";
 			}
 			else if(result.missionCode == "train" && (result.weapons[i].split('|')[0] == "Accident" || result.weapons[i].split('|')[1] == "Accident") ) {  // Only Accident Kill on Train 
 				document.getElementById("subtitle-method" + (i+1)).innerHTML = "Dump Off Train";
 				document.getElementById("subtitle-alt-method" + (i+1)).innerHTML = "Accident";
-				document.getElementById("input_weapon" + (i+1)).value = ", using: Dump Off Train (Accident)";
+				document.getElementById("input_method" + (i+1)).value = "Dump Off Train|Accident|";
 			}
 			else if(result.missionCode == "train" && result.weapons[i] === "Explosion") { // Only Explosion Kill on Train
 				document.getElementById("subtitle-method" + (i+1)).innerHTML = "Fragmentation Grenade";
 				document.getElementById("subtitle-alt-method" + (i+1)).innerHTML = "";
-				document.getElementById("input_weapon" + (i+1)).value = ", using: Fragmentation Grenade";
+				document.getElementById("input_method" + (i+1)).value = "Fragmentation Grenade||";
 			}
 			else if(result.missionCode == "train" && result.weapons[i] === "Lethal Poison") { // Only Poison Elimination on Train
 				document.getElementById("subtitle-method" + (i+1)).innerHTML = "Serum";
 				document.getElementById("subtitle-alt-method" + (i+1)).innerHTML = "";
-				document.getElementById("input_weapon" + (i+1)).value = ", using: Serum";
+				document.getElementById("input_method" + (i+1)).value = "Serum||";
 			}
 			else if(result.missionCode == "train" && (result.weapons[i] === "Any Sniper Rifle" || result.weapons[i] === "Any Assault Rifle") ) { // No Sniper/Assault on Train
 				document.getElementById("subtitle-method" + (i+1)).innerHTML = "Any Pistol";
 				document.getElementById("subtitle-alt-method" + (i+1)).innerHTML = "";
-				document.getElementById("input_weapon" + (i+1)).value = ", using: Any Pistol";
+				document.getElementById("input_method" + (i+1)).value = "Any Pistol||";
 			}
 			else if(document.getElementById("mtype").checked == 0 && result.weapons[i].split('|')[0] == "Xmas Star"){ // Holiday Hoarders Xmas Star Disable Forced Melee Elimination Methods
-				document.getElementById("subtitle-method" + (i+1)).innerHTML = result.weapons[i].split('|')[0];
+				document.getElementById("subtitle-method" + (i+1)).innerHTML = "Xmas Star";
 				document.getElementById("subtitle-alt-method" + (i+1)).innerHTML = "[Any Weapon in Hitman 1]";
-				document.getElementById("input_weapon" + (i+1)).value = ", using: " + result.weapons[i].split('|')[0] + " [Any Weapon in Hitman 1]";
+				document.getElementById("input_method" + (i+1)).value = "Xmas Star||Any Weapon in Hitman 1";
 			}
-			else if(result.weapons[i].split('|')[2] != null && document.getElementById("mtype").checked == 0 ){ // Hint Disable Forced Melee Elimination Methods
+			else if(result.weapons[i].split('|')[2] != null && document.getElementById("mtype").checked == 0 ){ // No Hints & Forced Melee Elimination Methods
 				document.getElementById("subtitle-method" + (i+1)).innerHTML = result.weapons[i].split('|')[0];
 				document.getElementById("subtitle-alt-method" + (i+1)).innerHTML = "(<a target='_blank' href='./img/general/" + result.weapons[i].split('|')[2] + "'>Hint</a>)";
-				document.getElementById("input_weapon" + (i+1)).value = ", using: " + result.weapons[i].split('|')[0];
+				document.getElementById("input_method" + (i+1)).value = result.weapons[i].split('|')[0] + "||Secret To Acquire";
 			}
 			else if(document.getElementById("mtype").checked == 0 && !submethodbypass.includes(result.weapons[i]) ){ // Disable Forced Melee Elimination Methods
 				document.getElementById("subtitle-method" + (i+1)).innerHTML = result.weapons[i].split('|')[0];
 				document.getElementById("subtitle-alt-method" + (i+1)).innerHTML = "";
-				document.getElementById("input_weapon" + (i+1)).value = ", using: " + result.weapons[i].split('|')[0];
+				document.getElementById("input_method" + (i+1)).value = result.weapons[i].split('|')[0] + "||";
 			}
 			else if(result.weapons[i].split('|')[2] != null) { // method subtype hint
 				document.getElementById("subtitle-method" + (i+1)).innerHTML = result.weapons[i].split('|')[0];
 				document.getElementById("subtitle-alt-method" + (i+1)).innerHTML = result.weapons[i].split('|')[1] + " (<a target='_blank' href='./img/general/" + result.weapons[i].split('|')[2] + "'>Hint</a>)";
-				document.getElementById("input_weapon" + (i+1)).value = ", using: " + result.weapons[i].split('|')[0] + " (" + result.weapons[i].split('|')[1] + ")";
+				document.getElementById("input_method" + (i+1)).value = result.weapons[i].split('|')[0] + "|" + result.weapons[i].split('|')[1] + "|Secret to Aquire";
 			}	
 			else if(result.weapons[i].split('|')[1] != null) { // method subtype
 				document.getElementById("subtitle-method" + (i+1)).innerHTML = result.weapons[i].split('|')[0];
 				document.getElementById("subtitle-alt-method" + (i+1)).innerHTML = result.weapons[i].split('|')[1];
-				document.getElementById("input_weapon" + (i+1)).value = ", using: " + result.weapons[i].split('|')[0] + " (" + result.weapons[i].split('|')[1] + ")";			
+				document.getElementById("input_method" + (i+1)).value = result.weapons[i].split('|')[0] + "|" + result.weapons[i].split('|')[1] + "|";	
 			}
 			else { // no method subtype
 				document.getElementById("subtitle-method" + (i+1)).innerHTML = result.weapons[i].split('|')[0];
 				document.getElementById("subtitle-alt-method" + (i+1)).innerHTML = "";
-				document.getElementById("input_weapon" + (i+1)).value = ", using: " + result.weapons[i].split('|')[0];
+				document.getElementById("input_method" + (i+1)).value = result.weapons[i].split('|')[0] + "||";
 			};
 			
 			if(result.missionCode == "speedway" && mode == "MAIN" && result.exit.split('|')[0] == "Pale Rider" ) { // pale rider easter egg exit
 				document.getElementById("subtitle-disguise" + (i+1)).innerHTML = "Pale Rider";
-				document.getElementById("input_disguise" + (i+1)).value = ", while disguised as: Pale Rider";
+				document.getElementById("input_disguise" + (i+1)).value = "Pale Rider";
 			}
 			else { // disguises
 				document.getElementById("subtitle-disguise" + (i+1)).innerHTML = result.disguises[i];
-				document.getElementById("input_disguise" + (i+1)).value = ", while disguised as: " + result.disguises[i];
+				document.getElementById("input_disguise" + (i+1)).value = result.disguises[i];
 			};
 			
-			if(result.targets[i].split('|')[1] == null || mode == "CONHARD") { // target intel off
+			if(result.targets[i].split('|')[1] != null || mode == "CONHARD") { // Contracts Mode Target Intel Input
+				document.getElementById("input_intel" + (i+1)).value = result.targets[i].split('|')[1];
+			}
+			else {
 				document.getElementById("subplate" + (i+1)).style.setProperty("background-image", "none", "important");//hides intel icon when not needed
 				document.getElementById("inteltoggle" + (i+1)).style.setProperty("display", "none", "important");//also remove inteltoggle in target generation
-				document.getElementById("input_targetintel" + (i+1)).value = "";
-				//document.getElementById("overlay-intel" + (i+1)).style.setProperty("display", "none", "important");
-			}
-			
-			/*
-			else {
-				if (result.missionCode == "gardenshow")
-					document.getElementById("input_contract").value = "";
-				else
-					document.getElementById("input_contract").value = " (Contracts Modet)";
-			};*/
+				document.getElementById("input_intel" + (i+1)).value = "";
+			};
 		}
 		else { // no more targets
 			document.getElementById("target" + (i+1)).innerHTML = "";
 			document.getElementById("input_target" + (i+1)).value = "";
+			document.getElementById("input_method" + (i+1)).value = "";
 			document.getElementById("input_disguise" + (i+1)).value = "";
-			document.getElementById("input_weapon" + (i+1)).value = "";
-			document.getElementById("input_targetintel" + (i+1)).value = "";
-			//document.getElementById("overlay-image-target" + (i+1)).innerHTML = "";
+			document.getElementById("input_intel" + (i+1)).value = "";
 		};
 	};
 	
@@ -658,13 +661,11 @@ function writeEverything(result) {
 			"<div id='obj-image' class='" + result.missionobjective.split('|')[0].replace(/\s|,|'|“|”|-|\?|\!|\(|\)|\[|\]|\./g, '') +
 			"'><div id='instruction'><img id='list' src='./img/general/blank.png'><p id='wording'>" + result.missionobjective.split('|')[1] +
 			"</p></div><div id='nameplate'><span><p id='title'>Objective</p><p id='subtitle'>" + result.missionobjective.split('|')[0] + "</p></span></div></div>";
-		document.getElementById("input_objective").value = "\nObjective: " + result.missionobjective.split('|')[0] + " - " + result.missionobjective.split('|')[1];
-		//document.getElementById("input_objective_overlay").value = result.missionobjective.split('|')[2];
+		document.getElementById("input_objective").value = result.missionobjective;
 	}
 	else {
 		document.getElementById("objective").innerHTML = "";
 		document.getElementById("input_objective").value = "";
-		//document.getElementById("input_objective_overlay").value = "";
 	};
 	
 	if(document.getElementById("exobj").checked == 1) { // extra mission objective
@@ -673,12 +674,10 @@ function writeEverything(result) {
 			"'><div id='instruction'><img id='list' src='./img/general/blank.png'><p id='wording'>"  + result.objectives.split('|')[1] +
 			"</p></div><div id='nameplate'><span><p id='title'>Extra Objective <span id='hint'></span></p><p id='subtitle'>"  + result.objectives.split('|')[0] + "</p></span></div></div>";
 		if(mode == "MAIN" && result.missionTitle == "Apex Predator" && result.objectives.split('|')[0] == "Order of Operations") { // Apex Predator missionWild Extra Objective	
-			document.getElementById("input_extraobjective").value = "\nExtra Objective: Order of Operations - Take out " + result.targets[4].split('|')[0] + " before any other ICA Agent.";
+			document.getElementById("input_extraobjective").value = "Order of Operations|Take out " + result.targets[4].split('|')[0] + " before any other ICA Agent.";
 			document.getElementById("apexwild").innerHTML = result.targets[4].split('|')[0];
-			//document.getElementById("input_extraobjective_overlay").value = result.objectives.split('|')[0];
 		} else {
-			document.getElementById("input_extraobjective").value = "\nExtra Objective: " + result.objectives.split('|')[0] + " - " + result.objectives.split('|')[1];
-			//document.getElementById("input_extraobjective_overlay").value = result.objectives.split('|')[0];
+			document.getElementById("input_extraobjective").value = result.objectives.split('|')[0] + "|" + result.objectives.split('|')[1];
 		}
 		if(result.objectives.split('|')[3] != null) { // extra objective hint
 			document.getElementById("hint").innerHTML = "(<a target='_blank' href='./img/general/" + result.objectives.split('|')[3] + "'>Hint</a>)";
@@ -687,7 +686,6 @@ function writeEverything(result) {
 	else {
 		document.getElementById("objectivex").innerHTML = "";
 		document.getElementById("input_extraobjective").value = "";
-		//document.getElementById("input_extraobjective_overlay").value = "";
 	};
 	
 	if(document.getElementById("cameraobj").checked == 1 && !(result.missionCode == "training" || result.missionCode == "test") ) { // photo objectives unavailable in ica facility
@@ -695,87 +693,26 @@ function writeEverything(result) {
 			"<div id='cam-image' class='" + result.photos.split('|')[0].replace(/\s|,|'|“|”|-|\?|\!|\:|\(|\)|\./g, "") +
 			"'><div id='instruction'><img id='list' src='./img/general/blank.png'><p id='wording'>"  + result.photos.split('|')[1] +
 			"</p></div><div id='nameplate'><span><p id='title'>Photo Objective</p><p id='subtitle'>"  + result.photos.split('|')[0] + "</p></span></div></div>";
-		document.getElementById("input_camera").value = "\nPhoto Objective: " + result.photos.split('|')[0] + " - " + result.photos.split('|')[1].replace(/<br\s*[\/]?><br\s*[\/]?>/g, " ");
+		document.getElementById("input_camera").value = result.photos;
 	}
 	else {
 		document.getElementById("camera").innerHTML = "";
 		document.getElementById("input_camera").value = "";
 	};
 	
-	for(var i = 0; i < MAX_EXTRAS; ++i){ // complications
+	//var MAX_EXTRAS = document.getElementById("compslider").value;
+	for(var i = 0; i < 6; ++i){ // complications
 		if(i < result.extras.length) {
-			if(result.extras[i].split('|')[0] == "One Save Only" && mode == "MAIN" && (container.missionTitle == "Holiday Hoarders" || container.missionTitle == "Hokkaido Snow Festival" || container.missionTitle == "Dartmoor Garden Show" || container.missionTitle == "The Director" || container.missionTitle == "The Enforcer" || container.missionTitle == "The Extractor" || container.missionTitle == "The Veteran" || container.missionTitle == "The Mercenary" || container.missionTitle == "The Controller")) {
-				document.getElementById("complication" + (i+1)).innerHTML = ""; // No saving on HH, HSF, DGS, or the Sarajevo Six
-				document.getElementById("input_complication" + (i+1)).value = "";
-				//document.getElementById("overlay-complication" + (i+1)).innerHTML = "";
-			}
-			else {
-				document.getElementById("complication" + (i+1)).innerHTML = 
-					"<div id='comp-image' class='" + result.extras[i].split('|')[0].replace(/\s/g, "") +
-					"'><div id='instruction'><img id='list' src='./img/general/blank.png'><p id='wording'>" + result.extras[i].split('|')[1] +
-					"</p></div><div id='nameplate'><span><p id='title'>Complication</p><p id='subtitle'>" + result.extras[i].split('|')[0] + "</p></span></div></div>";
-				document.getElementById("input_complicationt").value = "\n\nComplications:";
-				document.getElementById("input_complication" + (i+1)).value = "\n● " + result.extras[i].split('|')[0] + " - " + result.extras[i].split('|')[1];
-				//document.getElementById("overlay-complication" + (i+1)).innerHTML = result.extras[i].split('|')[0];
-			};
+			document.getElementById("complication" + (i+1)).innerHTML = 
+				"<div id='comp-image' class='" + result.extras[i].split('|')[0].replace(/\s/g, "") +
+				"'><div id='instruction'><img id='list' src='./img/general/blank.png'><p id='wording'>" + result.extras[i].split('|')[1] +
+				"</p></div><div id='nameplate'><span><p id='title'>Complication</p><p id='subtitle'>" + result.extras[i].split('|')[0] + "</p></span></div></div>";
+			document.getElementById("input_complication" + (i+1)).value = result.extras[i];
 		}
 		else {
 			document.getElementById("complication" + (i+1)).innerHTML = "";
 			document.getElementById("input_complication" + (i+1)).value = "";
-			//document.getElementById("overlay-complication" + (i+1)).innerHTML = "";
 		};
-	};
-	var compcheck = document.getElementById("complication1").innerHTML;
-	if(compcheck.length == 0 && document.getElementById("compslider").value > 0) { // failsafe if no complications generated
-		document.getElementById("submenu_comp").disabled = false;
-		document.getElementById("subsubmenu_comp").disabled = false;
-		document.getElementById("complicationi").innerHTML =
-			"<div id='comp-image' class='NoRecordings'><div id='instruction'><img id='list' src='./img/general/blank.png'><p id='wording'>Do not get recorded by a security camera. If you are recorded, you must destroy the evidence.</p></div><div id='nameplate'><span><p id='title'>Complication</p><p id='subtitle'>No Recordings</p></span></div></div>";
-		document.getElementById("input_complicationt").value = "\n\nComplications:";
-		document.getElementById("input_complicationi").value = "\n● No Recordings - Do not get recorded by a security camera. If you are recorded, you must destroy the evidence.";
-		//document.getElementById("overlay-complicationi").innerHTML = "No Recordings";
-	}
-	else if(compcheck.length != 0 && document.getElementById("compslider").value == 0) { // clears pre-generated complications
-		document.getElementById("submenu_comp").disabled = true;
-		document.getElementById("subsubmenu_comp").disabled = true;
-		document.getElementById("complicationi").innerHTML = "";
-		document.getElementById("complication1").innerHTML = "";
-		document.getElementById("complication2").innerHTML = "";
-		document.getElementById("complication3").innerHTML = "";
-		document.getElementById("complication4").innerHTML = "";
-		document.getElementById("complication5").innerHTML = "";
-		document.getElementById("complication6").innerHTML = "";
-		document.getElementById("input_complicationt").value = "";
-		document.getElementById("input_complicationi").value = "";
-		document.getElementById("input_complication1").value = "";
-		document.getElementById("input_complication2").value = "";
-		document.getElementById("input_complication3").value = "";
-		document.getElementById("input_complication4").value = "";
-		document.getElementById("input_complication5").value = "";
-		document.getElementById("input_complication6").value = "";
-		//document.getElementById("overlay-complicationi").innerHTML = "";
-		//document.getElementById("overlay-complication1").innerHTML = "";
-		//document.getElementById("overlay-complication2").innerHTML = "";
-		//document.getElementById("overlay-complication3").innerHTML = "";
-		//document.getElementById("overlay-complication4").innerHTML = "";
-		//document.getElementById("overlay-complication5").innerHTML = "";
-		//document.getElementById("overlay-complication6").innerHTML = "";
-	}
-	else if(compcheck.length == 0){ // no complications
-		document.getElementById("submenu_comp").disabled = true;
-		document.getElementById("subsubmenu_comp").disabled = true;
-		document.getElementById("complicationi").innerHTML = "";
-		document.getElementById("input_complicationt").value = "";
-		document.getElementById("input_complicationi").value = "";
-		//document.getElementById("overlay-complicationi").innerHTML = "";
-	}
-	else { // complications are generated
-		document.getElementById("submenu_comp").disabled = false;
-		document.getElementById("subsubmenu_comp").disabled = false;
-		document.getElementById("complicationi").innerHTML = "";
-		document.getElementById("input_complicationt").value = "";
-		document.getElementById("input_complicationi").value = "";
-		//document.getElementById("overlay-complicationi").innerHTML = "";
 	};
 	
 	var mechanicsModeIndex = document.getElementById("mechanics");
@@ -785,14 +722,14 @@ function writeEverything(result) {
 			"<div id='res-image' class='h2-" + result.mechanicsH2.split('|')[0].replace(/\s|\&/g, "") +
 			"'><div id='instruction'><img id='list' src='./img/general/blank.png'><p id='wording'>" + result.mechanicsH2.split('|')[1] +
 			"</p></div><div id='nameplate'><span><p id='title'>Restriction</p><p id='subtitle'>" + result.mechanicsH2.split('|')[0] + "</p></span></div></div>";
-		document.getElementById("input_restriction").value = "\n● " + result.mechanicsH2.split('|')[1];
+		document.getElementById("input_restriction").value = result.mechanicsH2 + "|h2";
 	}
 	else if(mechanicsMode == "H1") {
 		document.getElementById("restriction").innerHTML =
 			"<div id='res-image' class='h1-" + result.mechanicsH1.split('|')[0].replace(/\s|\&/g, "") +
 			"'><div id='instruction'><img id='list' src='./img/general/blank.png'><p id='wording'>" + result.mechanicsH1.split('|')[1] +
 			"</p></div><div id='nameplate'><span><p id='title'>Restriction</p><p id='subtitle'>" + result.mechanicsH1.split('|')[0] + "</p></span></div></div>";
-		document.getElementById("input_restriction").value = "\n● " + result.mechanicsH1.split('|')[1];
+		document.getElementById("input_restriction").value = result.mechanicsH1 + "|h1";		
 	}
 	else {
 		document.getElementById("restriction").innerHTML = "";
@@ -802,19 +739,21 @@ function writeEverything(result) {
 	if(document.getElementById("time").checked == 1) { // time limit
 		document.getElementById("timelimit").innerHTML = 
 			"<div id='time-image' class=''><div id='instruction'><img id='list' src='./img/general/blank.png'><p id='wording'>Complete the roulette in under " + result.time +
-			" minutes. For accuracy, enable the Mission Timer through the game's Options menu under Gameplay.</p></div><div id='nameplate'><span><p id='title'>Time Limit</p><p id='subtitle'>" + result.time + " Minutes</p></span></div></div>";
-		document.getElementById("input_timelimit").value = "\n● Complete the roulette in under " + result.time + " minutes. For accuracy, enable the Mission Timer through the game's Options menu under Gameplay.";
+			" minutes. To track your unpaused time: enable the Mission Timer through the game's Options menu under Gameplay.</p></div><div id='nameplate'><span><p id='title'>Time Limit</p><p id='subtitle'>" + result.time + " Minutes</p></span></div></div>";
+		document.getElementById("input_timelimit").value = result.time;
+		document.getElementById("input_timelimitvalue").value = 60 * result.time;
 	}
 	else {
 		document.getElementById("timelimit").innerHTML = "";
 		document.getElementById("input_timelimit").value = "";
+		document.getElementById("input_timelimitvalue").value = 0;
 	};
 	
 	if(document.getElementById("rating").checked == 1) { // rating requirement
 		document.getElementById("ratingget").innerHTML = 
 			"<div id='rating-image' class='" + result.rating.split('|')[0].replace(/\s/g, "") + "'><div id='instruction'><img id='list' src='./img/general/blank.png'><p id='wording'>" + result.rating.split('|')[1] +
 			"</p></div><div id='nameplate'><span><p id='title'>Rating</p><p id='subtitle'>" + result.rating.split('|')[0] + "</p></span></div></div>";
-		document.getElementById("input_rating").value = "\n● " + result.rating.split('|')[1];
+		document.getElementById("input_rating").value = result.rating;
 	}
 	else {
 		document.getElementById("ratingget").innerHTML = "";
@@ -831,7 +770,7 @@ function writeEverything(result) {
 		document.getElementById("diffget").innerHTML = 
 			"<div id='diff-image-" + result.difficulty + "' class=''><div id='instruction'><img id='list' src='./img/general/blank.png'><p id='wording'>Complete the roulette with the mission's difficulty set to " + result.difficulty +
 			".</p></div><div id='nameplate'><span><p id='title'>Difficulty</p><p id='subtitle'>" + result.difficulty + "</p></span></div></div>";
-		document.getElementById("input_difficulty").value = "\n● Complete the roulette with the mission's difficulty set to " + result.difficulty + ".";
+		document.getElementById("input_difficulty").value = result.difficulty;
 	}
 	else if(difficultyMode == "H1" && !proOnly.includes(result.missionCode)) { // H1 difficulty
 		if (!h1.includes(result.missionCode)){ // Unavailable on H2/3 Maps
@@ -842,13 +781,13 @@ function writeEverything(result) {
 		else if (result.difficulty == "Professional"){ // H1 Professional
 			document.getElementById("diffget").innerHTML = 
 				"<div id='diff-image-ProfessionalH1' class=''><div id='instruction'><img id='list' src='./img/general/blank.png'><p id='wording'>Complete the roulette with the mission's difficulty set to Professional.</p></div><div id='nameplate'><span><p id='title'>Difficulty</p><p id='subtitle'>Professional</p></span></div></div>";
-			document.getElementById("input_difficulty").value = "\n● Complete the roulette with the mission's difficulty set to Professional.";
+			document.getElementById("input_difficulty").value = "Professional";
 		}
 		else {
 			document.getElementById("diffget").innerHTML = //H1 Normal
 				"<div id='diff-image-" + result.difficulty + "' class=''><div id='instruction'><img id='list' src='./img/general/blank.png'><p id='wording'>Complete the roulette with the mission's difficulty set to " + result.difficulty +
 				".</p></div><div id='nameplate'><span><p id='title'>Difficulty</p><p id='subtitle'>" + result.difficulty + "</p></span></div></div>";
-			document.getElementById("input_difficulty").value = "\n● Complete the roulette with the mission's difficulty set to " + result.difficulty + ".";
+			document.getElementById("input_difficulty").value = result.difficulty;
 		}
 	}
 	else { // force difficulty off / map difficulty cannot be changed
@@ -863,89 +802,340 @@ function writeEverything(result) {
 	if(mechcheck.length == 0 && timecheck.length == 0 && ratingcheck.length == 0 && diffcheck.length == 0) { // enable/disable challenge menu
 		document.getElementById("submenu_chal").disabled = true;
 		document.getElementById("subsubmenu_chal").disabled = true;
-		/*document.getElementById("challengesi").innerHTML = // prompt to try challenges
-			"<div id='chall-image' class='challinfo'><div id='instruction'><img id='list' src='./img/general/blank.png'><p id='wording'>Test your skills by enabling Gameplay Challenges through the Roulette Settings top menu.</p></div><div id='nameplate'><span><p id='title'>Challenges</p><p id='subtitle'>None Enabled</p></span></div></div>";*/
 		document.getElementById("input_challengest").value = "";
 	}
 	else {	
 		document.getElementById("submenu_chal").disabled = false;
 		document.getElementById("subsubmenu_chal").disabled = false;
-		//document.getElementById("challengesi").innerHTML = "";
 		document.getElementById("input_challengest").value = "\n\nChallenges:";
 	};
 	
-	/*Variabble Wall used to fill in textarea used to save a roulette*/
+	/*Variable Wall used to fill in textarea used to save a roulette*/
 	var contracttext = document.getElementById("input_contract").value;
 	
-	var entrytext = document.getElementById("input_entry").value;
-	var exittext = document.getElementById("input_exit").value;
-	var exitreqtext = document.getElementById("input_exitreq").value;
+	if(document.getElementById("input_entry").value) {
+		var entrytext = "\nStart: " + document.getElementById("input_entry").value;
+		document.getElementById('overlay-start').innerHTML = "Start: " + document.getElementById("input_entry").value;
+	} else { var entrytext = ""; document.getElementById('overlay-start').innerHTML = ""; }
+	if(document.getElementById("input_exit").value.split('|')[1]) { //Exit with Req
+		var exittext = "\nExit: " + document.getElementById("input_exit").value.split('|')[0] + " " + document.getElementById("input_exit").value.split('|')[1];
+		document.getElementById('overlay-exit').innerHTML = "Exit: " + document.getElementById("input_exit").value.split('|')[0] + " " + document.getElementById("input_exit").value.split('|')[1];
+	} else if(document.getElementById("input_exit").value.split('|')[0]) { //Exit no req
+		var exittext = "\nExit: " + document.getElementById("input_exit").value.split('|')[0];
+		document.getElementById('overlay-exit').innerHTML = "Exit: " + document.getElementById("input_exit").value.split('|')[0];
+	} else { var exittext = ""; document.getElementById('overlay-exit').innerHTML = ""; }
+
+	if(document.getElementById("input_target1").value) {
+		if(document.getElementById("input_method1").value.split('|')[0] == "Any Method") {
+			if(document.getElementById("input_disguise1").value == "Any Disguise") { //Any Method; Any Disguise
+				var target1result = "\nEliminate: " + document.getElementById("input_target1").value;
+				document.getElementById('overlay-target1').innerHTML = "Eliminate: " + document.getElementById("input_target1").value;
+			} else { // Any Method; Specific Desguise
+				var target1result = "\nEliminate: " + document.getElementById("input_target1").value + ", while disguised as: " + document.getElementById("input_disguise1").value;
+				document.getElementById('overlay-target1').innerHTML = "Eliminate: " + document.getElementById("input_target1").value + ", while disguised as: " + document.getElementById("input_disguise1").value;
+			}
+		} else {
+			if(document.getElementById("input_method1").value.split('|')[1]) {
+				if(document.getElementById("input_method1").value.split('|')[2]) {
+					if(document.getElementById("input_disguise1").value == "Any Disguise") { //Specific Method, Use, and Hint; Any Disguise
+						var target1result = "\nEliminate: " + document.getElementById("input_target1").value + ", using: " + document.getElementById("input_method1").value.split('|')[0] + " (" + document.getElementById("input_method1").value.split('|')[1] + ") [" + document.getElementById("input_method1").value.split('|')[2] + "]";
+						document.getElementById('overlay-target1').innerHTML = "Eliminate: " + document.getElementById("input_target1").value + ", using: " + document.getElementById("input_method1").value.split('|')[0] + " (" + document.getElementById("input_method1").value.split('|')[1] + ") [" + document.getElementById("input_method1").value.split('|')[2] + "]";
+					} else { //Specific Method, Use, and Hint; Specific Disguise
+						var target1result = "\nEliminate: " + document.getElementById("input_target1").value + ", using: " + document.getElementById("input_method1").value.split('|')[0] + " (" + document.getElementById("input_method1").value.split('|')[1] + ") [" + document.getElementById("input_method1").value.split('|')[2] + "], while disguised as: " + document.getElementById("input_disguise1").value;
+						document.getElementById('overlay-target1').innerHTML = "Eliminate: " + document.getElementById("input_target1").value + ", using: " + document.getElementById("input_method1").value.split('|')[0] + " (" + document.getElementById("input_method1").value.split('|')[1] + ") [" + document.getElementById("input_method1").value.split('|')[2] + "], while disguised as: " + document.getElementById("input_disguise1").value;
+					}
+				} else {
+					if(document.getElementById("input_disguise1").value == "Any Disguise") { //Specific Method, Use; Any Disguise
+						var target1result = "\nEliminate: " + document.getElementById("input_target1").value + ", using: " + document.getElementById("input_method1").value.split('|')[0] + " (" + document.getElementById("input_method1").value.split('|')[1] + ")";
+						document.getElementById('overlay-target1').innerHTML = "Eliminate: " + document.getElementById("input_target1").value + ", using: " + document.getElementById("input_method1").value.split('|')[0] + " (" + document.getElementById("input_method1").value.split('|')[1] + ")";
+					} else { //Specific Method, Use; Specific Disguise
+						var target1result = "\nEliminate: " + document.getElementById("input_target1").value + ", using: " + document.getElementById("input_method1").value.split('|')[0] + " (" + document.getElementById("input_method1").value.split('|')[1] + "), while disguised as: " + document.getElementById("input_disguise1").value;
+						document.getElementById('overlay-target1').innerHTML = "Eliminate: " + document.getElementById("input_target1").value + ", using: " + document.getElementById("input_method1").value.split('|')[0] + " (" + document.getElementById("input_method1").value.split('|')[1] + "), while disguised as: " + document.getElementById("input_disguise1").value;
+					}
+				}
+			} else {
+				if(document.getElementById("input_disguise1").value == "Any Disguise") { //Specific Method, Any Use; Any Disguise
+					var target1result = "\nEliminate: " + document.getElementById("input_target1").value + ", using: " + document.getElementById("input_method1").value.split('|')[0];
+					document.getElementById('overlay-target1').innerHTML = "Eliminate: " + document.getElementById("input_target1").value + ", using: " + document.getElementById("input_method1").value.split('|')[0];
+				} else { //Specific Method, Any Use; Specific Disguise
+					var target1result = "\nEliminate: " + document.getElementById("input_target1").value + ", using: " + document.getElementById("input_method1").value.split('|')[0] + ", while disguised as: " + document.getElementById("input_disguise1").value;
+					document.getElementById('overlay-target1').innerHTML = "Eliminate: " + document.getElementById("input_target1").value + ", using: " + document.getElementById("input_method1").value.split('|')[0] + ", while disguised as: " + document.getElementById("input_disguise1").value;
+				}
+			}
+		}
+	} else { var target1result = ""; document.getElementById('overlay-target1').innerHTML = ""; }
+	if(document.getElementById("input_intel1").value) {
+		var intel1text = "\n └ Intel: " + document.getElementById("input_intel1").value;
+	} else { var intel1text = ""; }
+
+	if(document.getElementById("input_target2").value) {
+		if(document.getElementById("input_method2").value.split('|')[0] == "Any Method") {
+			if(document.getElementById("input_disguise2").value == "Any Disguise") { //Any Method; Any Disguise
+				var target2result = "\nEliminate: " + document.getElementById("input_target2").value;
+				document.getElementById('overlay-target2').innerHTML = "Eliminate: " + document.getElementById("input_target2").value;
+			} else { // Any Method; Specific Desguise
+				var target2result = "\nEliminate: " + document.getElementById("input_target2").value + ", while disguised as: " + document.getElementById("input_disguise2").value;
+				document.getElementById('overlay-target2').innerHTML = "Eliminate: " + document.getElementById("input_target2").value + ", while disguised as: " + document.getElementById("input_disguise2").value;
+			}
+		} else {
+			if(document.getElementById("input_method2").value.split('|')[1]) {
+				if(document.getElementById("input_method2").value.split('|')[2]) {
+					if(document.getElementById("input_disguise2").value == "Any Disguise") { //Specific Method, Use, and Hint; Any Disguise
+						var target2result = "\nEliminate: " + document.getElementById("input_target2").value + ", using: " + document.getElementById("input_method2").value.split('|')[0] + " (" + document.getElementById("input_method2").value.split('|')[1] + ") [" + document.getElementById("input_method2").value.split('|')[2] + "]";
+						document.getElementById('overlay-target2').innerHTML = "Eliminate: " + document.getElementById("input_target2").value + ", using: " + document.getElementById("input_method2").value.split('|')[0] + " (" + document.getElementById("input_method2").value.split('|')[1] + ") [" + document.getElementById("input_method2").value.split('|')[2] + "]";
+					} else { //Specific Method, Use, and Hint; Specific Disguise
+						var target2result = "\nEliminate: " + document.getElementById("input_target2").value + ", using: " + document.getElementById("input_method2").value.split('|')[0] + " (" + document.getElementById("input_method2").value.split('|')[1] + ") [" + document.getElementById("input_method2").value.split('|')[2] + "], while disguised as: " + document.getElementById("input_disguise2").value;
+						document.getElementById('overlay-target2').innerHTML = "Eliminate: " + document.getElementById("input_target2").value + ", using: " + document.getElementById("input_method2").value.split('|')[0] + " (" + document.getElementById("input_method2").value.split('|')[1] + ") [" + document.getElementById("input_method2").value.split('|')[2] + "], while disguised as: " + document.getElementById("input_disguise2").value;
+					}
+				} else {
+					if(document.getElementById("input_disguise2").value == "Any Disguise") { //Specific Method, Use; Any Disguise
+						var target2result = "\nEliminate: " + document.getElementById("input_target2").value + ", using: " + document.getElementById("input_method2").value.split('|')[0] + " (" + document.getElementById("input_method2").value.split('|')[1] + ")";
+						document.getElementById('overlay-target2').innerHTML = "Eliminate: " + document.getElementById("input_target2").value + ", using: " + document.getElementById("input_method2").value.split('|')[0] + " (" + document.getElementById("input_method2").value.split('|')[1] + ")";
+					} else { //Specific Method, Use; Specific Disguise
+						var target2result = "\nEliminate: " + document.getElementById("input_target2").value + ", using: " + document.getElementById("input_method2").value.split('|')[0] + " (" + document.getElementById("input_method2").value.split('|')[1] + "), while disguised as: " + document.getElementById("input_disguise2").value;
+						document.getElementById('overlay-target2').innerHTML = "Eliminate: " + document.getElementById("input_target2").value + ", using: " + document.getElementById("input_method2").value.split('|')[0] + " (" + document.getElementById("input_method2").value.split('|')[1] + "), while disguised as: " + document.getElementById("input_disguise2").value;
+					}
+				}
+			} else {
+				if(document.getElementById("input_disguise2").value == "Any Disguise") { //Specific Method, Any Use; Any Disguise
+					var target2result = "\nEliminate: " + document.getElementById("input_target2").value + ", using: " + document.getElementById("input_method2").value.split('|')[0];
+					document.getElementById('overlay-target2').innerHTML = "Eliminate: " + document.getElementById("input_target2").value + ", using: " + document.getElementById("input_method2").value.split('|')[0];
+				} else { //Specific Method, Any Use; Specific Disguise
+					var target2result = "\nEliminate: " + document.getElementById("input_target2").value + ", using: " + document.getElementById("input_method2").value.split('|')[0] + ", while disguised as: " + document.getElementById("input_disguise2").value;
+					document.getElementById('overlay-target2').innerHTML = "Eliminate: " + document.getElementById("input_target2").value + ", using: " + document.getElementById("input_method2").value.split('|')[0] + ", while disguised as: " + document.getElementById("input_disguise2").value;
+				}
+			}
+		}
+	} else { var target2result = ""; document.getElementById('overlay-target2').innerHTML = ""; }
+	if(document.getElementById("input_intel2").value) {
+		var intel2text = "\n └ Intel: " + document.getElementById("input_intel2").value;
+	} else { var intel2text = ""; }
+
+	if(document.getElementById("input_target3").value) {
+		if(document.getElementById("input_method3").value.split('|')[0] == "Any Method") {
+			if(document.getElementById("input_disguise3").value == "Any Disguise") { //Any Method; Any Disguise
+				var target3result = "\nEliminate: " + document.getElementById("input_target3").value;
+				document.getElementById('overlay-target3').innerHTML = "Eliminate: " + document.getElementById("input_target3").value;
+			} else { // Any Method; Specific Desguise
+				var target3result = "\nEliminate: " + document.getElementById("input_target3").value + ", while disguised as: " + document.getElementById("input_disguise3").value;
+				document.getElementById('overlay-target3').innerHTML = "Eliminate: " + document.getElementById("input_target3").value + ", while disguised as: " + document.getElementById("input_disguise3").value;
+			}
+		} else {
+			if(document.getElementById("input_method3").value.split('|')[1]) {
+				if(document.getElementById("input_method3").value.split('|')[2]) {
+					if(document.getElementById("input_disguise3").value == "Any Disguise") { //Specific Method, Use, and Hint; Any Disguise
+						var target3result = "\nEliminate: " + document.getElementById("input_target3").value + ", using: " + document.getElementById("input_method3").value.split('|')[0] + " (" + document.getElementById("input_method3").value.split('|')[1] + ") [" + document.getElementById("input_method3").value.split('|')[2] + "]";
+						document.getElementById('overlay-target3').innerHTML = "Eliminate: " + document.getElementById("input_target3").value + ", using: " + document.getElementById("input_method3").value.split('|')[0] + " (" + document.getElementById("input_method3").value.split('|')[1] + ") [" + document.getElementById("input_method3").value.split('|')[2] + "]";
+					} else { //Specific Method, Use, and Hint; Specific Disguise
+						var target3result = "\nEliminate: " + document.getElementById("input_target3").value + ", using: " + document.getElementById("input_method3").value.split('|')[0] + " (" + document.getElementById("input_method3").value.split('|')[1] + ") [" + document.getElementById("input_method3").value.split('|')[2] + "], while disguised as: " + document.getElementById("input_disguise3").value;
+						document.getElementById('overlay-target3').innerHTML = "Eliminate: " + document.getElementById("input_target3").value + ", using: " + document.getElementById("input_method3").value.split('|')[0] + " (" + document.getElementById("input_method3").value.split('|')[1] + ") [" + document.getElementById("input_method3").value.split('|')[2] + "], while disguised as: " + document.getElementById("input_disguise3").value;
+					}
+				} else {
+					if(document.getElementById("input_disguise3").value == "Any Disguise") { //Specific Method, Use; Any Disguise
+						var target3result = "\nEliminate: " + document.getElementById("input_target3").value + ", using: " + document.getElementById("input_method3").value.split('|')[0] + " (" + document.getElementById("input_method3").value.split('|')[1] + ")";
+						document.getElementById('overlay-target3').innerHTML = "Eliminate: " + document.getElementById("input_target3").value + ", using: " + document.getElementById("input_method3").value.split('|')[0] + " (" + document.getElementById("input_method3").value.split('|')[1] + ")";
+					} else { //Specific Method, Use; Specific Disguise
+						var target3result = "\nEliminate: " + document.getElementById("input_target3").value + ", using: " + document.getElementById("input_method3").value.split('|')[0] + " (" + document.getElementById("input_method3").value.split('|')[1] + "), while disguised as: " + document.getElementById("input_disguise3").value;
+						document.getElementById('overlay-target3').innerHTML = "Eliminate: " + document.getElementById("input_target3").value + ", using: " + document.getElementById("input_method3").value.split('|')[0] + " (" + document.getElementById("input_method3").value.split('|')[1] + "), while disguised as: " + document.getElementById("input_disguise3").value;
+					}
+				}
+			} else {
+				if(document.getElementById("input_disguise3").value == "Any Disguise") { //Specific Method, Any Use; Any Disguise
+					var target3result = "\nEliminate: " + document.getElementById("input_target3").value + ", using: " + document.getElementById("input_method3").value.split('|')[0];
+					document.getElementById('overlay-target3').innerHTML = "Eliminate: " + document.getElementById("input_target3").value + ", using: " + document.getElementById("input_method3").value.split('|')[0];
+				} else { //Specific Method, Any Use; Specific Disguise
+					var target3result = "\nEliminate: " + document.getElementById("input_target3").value + ", using: " + document.getElementById("input_method3").value.split('|')[0] + ", while disguised as: " + document.getElementById("input_disguise3").value;
+					document.getElementById('overlay-target3').innerHTML = "Eliminate: " + document.getElementById("input_target3").value + ", using: " + document.getElementById("input_method3").value.split('|')[0] + ", while disguised as: " + document.getElementById("input_disguise3").value;
+				}
+			}
+		}
+	} else { var target3result = ""; document.getElementById('overlay-target3').innerHTML = ""; }
+	if(document.getElementById("input_intel3").value) {
+		var intel3text = "\n └ Intel: " + document.getElementById("input_intel3").value;
+	} else { var intel3text = ""; }
 	
-	var target1text = document.getElementById("input_target1").value;
-	var weapon1text = document.getElementById("input_weapon1").value;
-	var disguise1text = document.getElementById("input_disguise1").value;
-	var targetintel1text = document.getElementById("input_targetintel1").value;
+	if(document.getElementById("input_target4").value) {
+		if(document.getElementById("input_method4").value.split('|')[0] == "Any Method") {
+			if(document.getElementById("input_disguise4").value == "Any Disguise") { //Any Method; Any Disguise
+				var target4result = "\nEliminate: " + document.getElementById("input_target4").value;
+				document.getElementById('overlay-target4').innerHTML = "Eliminate: " + document.getElementById("input_target4").value;
+			} else { // Any Method; Specific Desguise
+				var target4result = "\nEliminate: " + document.getElementById("input_target4").value + ", while disguised as: " + document.getElementById("input_disguise4").value;
+				document.getElementById('overlay-target4').innerHTML = "Eliminate: " + document.getElementById("input_target4").value + ", while disguised as: " + document.getElementById("input_disguise4").value;
+			}
+		} else {
+			if(document.getElementById("input_method4").value.split('|')[1]) {
+				if(document.getElementById("input_method4").value.split('|')[2]) {
+					if(document.getElementById("input_disguise4").value == "Any Disguise") { //Specific Method, Use, and Hint; Any Disguise
+						var target4result = "\nEliminate: " + document.getElementById("input_target4").value + ", using: " + document.getElementById("input_method4").value.split('|')[0] + " (" + document.getElementById("input_method4").value.split('|')[1] + ") [" + document.getElementById("input_method4").value.split('|')[2] + "]";
+						document.getElementById('overlay-target4').innerHTML = "Eliminate: " + document.getElementById("input_target4").value + ", using: " + document.getElementById("input_method4").value.split('|')[0] + " (" + document.getElementById("input_method4").value.split('|')[1] + ") [" + document.getElementById("input_method4").value.split('|')[2] + "]";
+					} else { //Specific Method, Use, and Hint; Specific Disguise
+						var target4result = "\nEliminate: " + document.getElementById("input_target4").value + ", using: " + document.getElementById("input_method4").value.split('|')[0] + " (" + document.getElementById("input_method4").value.split('|')[1] + ") [" + document.getElementById("input_method4").value.split('|')[2] + "], while disguised as: " + document.getElementById("input_disguise4").value;
+						document.getElementById('overlay-target4').innerHTML = "Eliminate: " + document.getElementById("input_target4").value + ", using: " + document.getElementById("input_method4").value.split('|')[0] + " (" + document.getElementById("input_method4").value.split('|')[1] + ") [" + document.getElementById("input_method4").value.split('|')[2] + "], while disguised as: " + document.getElementById("input_disguise4").value;
+					}
+				} else {
+					if(document.getElementById("input_disguise4").value == "Any Disguise") { //Specific Method, Use; Any Disguise
+						var target4result = "\nEliminate: " + document.getElementById("input_target4").value + ", using: " + document.getElementById("input_method4").value.split('|')[0] + " (" + document.getElementById("input_method4").value.split('|')[1] + ")";
+						document.getElementById('overlay-target4').innerHTML = "Eliminate: " + document.getElementById("input_target4").value + ", using: " + document.getElementById("input_method4").value.split('|')[0] + " (" + document.getElementById("input_method4").value.split('|')[1] + ")";
+					} else { //Specific Method, Use; Specific Disguise
+						var target4result = "\nEliminate: " + document.getElementById("input_target4").value + ", using: " + document.getElementById("input_method4").value.split('|')[0] + " (" + document.getElementById("input_method4").value.split('|')[1] + "), while disguised as: " + document.getElementById("input_disguise4").value;
+						document.getElementById('overlay-target4').innerHTML = "Eliminate: " + document.getElementById("input_target4").value + ", using: " + document.getElementById("input_method4").value.split('|')[0] + " (" + document.getElementById("input_method4").value.split('|')[1] + "), while disguised as: " + document.getElementById("input_disguise4").value;
+					}
+				}
+			} else {
+				if(document.getElementById("input_disguise4").value == "Any Disguise") { //Specific Method, Any Use; Any Disguise
+					var target4result = "\nEliminate: " + document.getElementById("input_target4").value + ", using: " + document.getElementById("input_method4").value.split('|')[0];
+					document.getElementById('overlay-target4').innerHTML = "Eliminate: " + document.getElementById("input_target4").value + ", using: " + document.getElementById("input_method4").value.split('|')[0];
+				} else { //Specific Method, Any Use; Specific Disguise
+					var target4result = "\nEliminate: " + document.getElementById("input_target4").value + ", using: " + document.getElementById("input_method4").value.split('|')[0] + ", while disguised as: " + document.getElementById("input_disguise4").value;
+					document.getElementById('overlay-target4').innerHTML = "Eliminate: " + document.getElementById("input_target4").value + ", using: " + document.getElementById("input_method4").value.split('|')[0] + ", while disguised as: " + document.getElementById("input_disguise4").value;
+				}
+			}
+		}
+	} else { var target4result = ""; document.getElementById('overlay-target4').innerHTML = ""; }
+	if(document.getElementById("input_intel4").value) {
+		var intel4text = "\n └ Intel: " + document.getElementById("input_intel4").value;
+	} else { var intel4text = ""; }
 	
-	var target2text = document.getElementById("input_target2").value;
-	var weapon2text = document.getElementById("input_weapon2").value;
-	var disguise2text = document.getElementById("input_disguise2").value;
-	var targetintel2text = document.getElementById("input_targetintel2").value;
+	if(document.getElementById("input_target5").value) {
+		if(document.getElementById("input_method5").value.split('|')[0] == "Any Method") {
+			if(document.getElementById("input_disguise5").value == "Any Disguise") { //Any Method; Any Disguise
+				var target5result = "\nEliminate: " + document.getElementById("input_target5").value;
+				document.getElementById('overlay-target5').innerHTML = "Eliminate: " + document.getElementById("input_target5").value;
+			} else { // Any Method; Specific Desguise
+				var target5result = "\nEliminate: " + document.getElementById("input_target5").value + ", while disguised as: " + document.getElementById("input_disguise5").value;
+				document.getElementById('overlay-target5').innerHTML = "Eliminate: " + document.getElementById("input_target5").value + ", while disguised as: " + document.getElementById("input_disguise5").value;
+			}
+		} else {
+			if(document.getElementById("input_method5").value.split('|')[1]) {
+				if(document.getElementById("input_method5").value.split('|')[2]) {
+					if(document.getElementById("input_disguise5").value == "Any Disguise") { //Specific Method, Use, and Hint; Any Disguise
+						var target5result = "\nEliminate: " + document.getElementById("input_target5").value + ", using: " + document.getElementById("input_method5").value.split('|')[0] + " (" + document.getElementById("input_method5").value.split('|')[1] + ") [" + document.getElementById("input_method5").value.split('|')[2] + "]";
+						document.getElementById('overlay-target5').innerHTML = "Eliminate: " + document.getElementById("input_target5").value + ", using: " + document.getElementById("input_method5").value.split('|')[0] + " (" + document.getElementById("input_method5").value.split('|')[1] + ") [" + document.getElementById("input_method5").value.split('|')[2] + "]";
+					} else { //Specific Method, Use, and Hint; Specific Disguise
+						var target5result = "\nEliminate: " + document.getElementById("input_target5").value + ", using: " + document.getElementById("input_method5").value.split('|')[0] + " (" + document.getElementById("input_method5").value.split('|')[1] + ") [" + document.getElementById("input_method5").value.split('|')[2] + "], while disguised as: " + document.getElementById("input_disguise5").value;
+						document.getElementById('overlay-target5').innerHTML = "Eliminate: " + document.getElementById("input_target5").value + ", using: " + document.getElementById("input_method5").value.split('|')[0] + " (" + document.getElementById("input_method5").value.split('|')[1] + ") [" + document.getElementById("input_method5").value.split('|')[2] + "], while disguised as: " + document.getElementById("input_disguise5").value;
+					}
+				} else {
+					if(document.getElementById("input_disguise5").value == "Any Disguise") { //Specific Method, Use; Any Disguise
+						var target5result = "\nEliminate: " + document.getElementById("input_target5").value + ", using: " + document.getElementById("input_method5").value.split('|')[0] + " (" + document.getElementById("input_method5").value.split('|')[1] + ")";
+						document.getElementById('overlay-target5').innerHTML = "Eliminate: " + document.getElementById("input_target5").value + ", using: " + document.getElementById("input_method5").value.split('|')[0] + " (" + document.getElementById("input_method5").value.split('|')[1] + ")";
+					} else { //Specific Method, Use; Specific Disguise
+						var target5result = "\nEliminate: " + document.getElementById("input_target5").value + ", using: " + document.getElementById("input_method5").value.split('|')[0] + " (" + document.getElementById("input_method5").value.split('|')[1] + "), while disguised as: " + document.getElementById("input_disguise5").value;
+						document.getElementById('overlay-target5').innerHTML = "Eliminate: " + document.getElementById("input_target5").value + ", using: " + document.getElementById("input_method5").value.split('|')[0] + " (" + document.getElementById("input_method5").value.split('|')[1] + "), while disguised as: " + document.getElementById("input_disguise5").value;
+					}
+				}
+			} else {
+				if(document.getElementById("input_disguise5").value == "Any Disguise") { //Specific Method, Any Use; Any Disguise
+					var target5result = "\nEliminate: " + document.getElementById("input_target5").value + ", using: " + document.getElementById("input_method5").value.split('|')[0];
+					document.getElementById('overlay-target5').innerHTML = "Eliminate: " + document.getElementById("input_target5").value + ", using: " + document.getElementById("input_method5").value.split('|')[0];
+				} else { //Specific Method, Any Use; Specific Disguise
+					var target5result = "\nEliminate: " + document.getElementById("input_target5").value + ", using: " + document.getElementById("input_method5").value.split('|')[0] + ", while disguised as: " + document.getElementById("input_disguise5").value;
+					document.getElementById('overlay-target5').innerHTML = "Eliminate: " + document.getElementById("input_target5").value + ", using: " + document.getElementById("input_method5").value.split('|')[0] + ", while disguised as: " + document.getElementById("input_disguise5").value;
+				}
+			}
+		}
+	} else { var target5result = ""; document.getElementById('overlay-target5').innerHTML = ""; }
+	if(document.getElementById("input_intel5").value) {
+		var intel5text = "\n └ Intel: " + document.getElementById("input_intel5").value;
+	} else { var intel5text = ""; }
 	
-	var target3text = document.getElementById("input_target3").value;
-	var weapon3text = document.getElementById("input_weapon3").value;
-	var disguise3text = document.getElementById("input_disguise3").value;
-	var targetintel3text = document.getElementById("input_targetintel3").value;
+	if(document.getElementById("input_objective").value) {
+		var objectivetext = "\nObjective: " + document.getElementById("input_objective").value.split('|')[1];
+		document.getElementById('overlay-objective').innerHTML = "Objective: " + document.getElementById("input_objective").value.split('|')[1];
+	} else { var objectivetext = ""; document.getElementById('overlay-objective').innerHTML = ""; }
+	if(document.getElementById("input_extraobjective").value) {
+		var exobjtext = "\nExtra Objective: " + document.getElementById("input_extraobjective").value.split('|')[1];
+		document.getElementById('overlay-objectivex').innerHTML = "Extra Objective: " + document.getElementById("input_extraobjective").value.split('|')[1];
+	} else { var exobjtext = ""; document.getElementById('overlay-objectivex').innerHTML = ""; }
+	if(document.getElementById("input_camera").value) {
+		var cameratext = "\nPhoto Objective: " + document.getElementById("input_camera").value.split('|')[1];
+		document.getElementById('overlay-camera').innerHTML = "Photo Objective: " + document.getElementById("input_camera").value.split('|')[1];
+	} else { var cameratext = ""; document.getElementById('overlay-camera').innerHTML = ""; }
 	
-	var target4text = document.getElementById("input_target4").value;
-	var weapon4text = document.getElementById("input_weapon4").value;
-	var disguise4text = document.getElementById("input_disguise4").value;
-	var targetintel4text = document.getElementById("input_targetintel4").value;
-	
-	var target5text = document.getElementById("input_target5").value;
-	var weapon5text = document.getElementById("input_weapon5").value;
-	var disguise5text = document.getElementById("input_disguise5").value;
-	var targetintel5text = document.getElementById("input_targetintel5").value;
-	
-	var objectivetext = document.getElementById("input_objective").value;
-	//var objectiveoverlaytext = document.getElementById("input_objective_overlay").value;
-	var extraobjectivetext = document.getElementById("input_extraobjective").value;
-	//var extraobjectiveoverlaytext = document.getElementById("input_extraobjective_overlay").value;
-	
-	var cameratext = document.getElementById("input_camera").value;
-	
-	var complicationttext = document.getElementById("input_complicationt").value;			
-	var complicationitext = document.getElementById("input_complicationi").value;
-	var complication1text = document.getElementById("input_complication1").value;
-	var complication2text = document.getElementById("input_complication2").value;
-	var complication3text = document.getElementById("input_complication3").value;
-	var complication4text = document.getElementById("input_complication4").value;
-	var complication5text = document.getElementById("input_complication5").value;
-	var complication6text = document.getElementById("input_complication6").value;
+	var complicationttext = document.getElementById("input_complicationt").value;
+	if(document.getElementById("input_complication1").value.includes("No Agency Pickup")) {
+		var complication1text = "\n● " + document.getElementById("input_complication1").value.split('|')[1];
+		document.getElementById("overlay-complication1").innerHTML = "";
+	} else if(document.getElementById("input_complication1").value) {
+		var complication1text = "\n● " + document.getElementById("input_complication1").value.split('|')[1];
+		document.getElementById("overlay-complication1").innerHTML = "Complication: " + document.getElementById("input_complication1").value.split('|')[0];
+	} else { var complication1text = ""; document.getElementById("overlay-complication1").innerHTML = ""; }
+	if(document.getElementById("input_complication2").value.includes("No Agency Pickup")) {
+		var complication2text = "\n● " + document.getElementById("input_complication2").value.split('|')[1];
+		document.getElementById("overlay-complication2").innerHTML = "";
+	} else if(document.getElementById("input_complication2").value) {
+		var complication2text = "\n● " + document.getElementById("input_complication2").value.split('|')[1];
+		document.getElementById("overlay-complication2").innerHTML = "Complication: " + document.getElementById("input_complication2").value.split('|')[0];
+	} else { var complication2text = ""; document.getElementById("overlay-complication2").innerHTML = ""; }
+	if(document.getElementById("input_complication3").value.includes("No Agency Pickup")) {
+		var complication3text = "\n● " + document.getElementById("input_complication3").value.split('|')[1];
+		document.getElementById("overlay-complication3").innerHTML = "";
+	} else if(document.getElementById("input_complication3").value) {
+		var complication3text = "\n● " + document.getElementById("input_complication3").value.split('|')[1];
+		document.getElementById("overlay-complication3").innerHTML = "Complication: " + document.getElementById("input_complication3").value.split('|')[0];
+	} else { var complication3text = ""; document.getElementById("overlay-complication3").innerHTML = ""; }
+	if(document.getElementById("input_complication4").value.includes("No Agency Pickup")) {
+		var complication4text = "\n● " + document.getElementById("input_complication4").value.split('|')[1];
+		document.getElementById("overlay-complication4").innerHTML = "";
+	} else if(document.getElementById("input_complication4").value) {
+		var complication4text = "\n● " + document.getElementById("input_complication4").value.split('|')[1];
+		document.getElementById("overlay-complication4").innerHTML = "Complication: " + document.getElementById("input_complication4").value.split('|')[0];
+	} else { var complication4text = ""; document.getElementById("overlay-complication4").innerHTML = ""; }
+	if(document.getElementById("input_complication5").value.includes("No Agency Pickup")) {
+		var complication5text = "\n● " + document.getElementById("input_complication5").value.split('|')[1];
+		document.getElementById("overlay-complication5").innerHTML = "";
+	} else if(document.getElementById("input_complication5").value) {
+		var complication5text = "\n● " + document.getElementById("input_complication5").value.split('|')[1];
+		document.getElementById("overlay-complication5").innerHTML = "Complication: " + document.getElementById("input_complication5").value.split('|')[0];
+	} else { var complication5text = ""; document.getElementById("overlay-complication5").innerHTML = ""; }
+	if(document.getElementById("input_complication6").value.includes("No Agency Pickup")) {
+		var complication6text = "\n● " + document.getElementById("input_complication6").value.split('|')[1];
+		document.getElementById("overlay-complication6").innerHTML = "";
+	} else if(document.getElementById("input_complication6").value) {
+		var complication6text = "\n● " + document.getElementById("input_complication6").value.split('|')[1];
+		document.getElementById("overlay-complication6").innerHTML = "Complication: " + document.getElementById("input_complication6").value.split('|')[0];
+	} else { var complication6text = ""; document.getElementById("overlay-complication6").innerHTML = ""; }	
+	if (complication1text.concat(complication2text, complication3text, complication4text, complication5text, complication6text).includes("agency")) {
+		document.getElementById("overlay-pickup").innerHTML = "Complication: No smuggling via hidden stash or agency pickup.";
+		document.getElementById("input_pickup").value = "Complication: No smuggling via hidden stash or agency pickup.";
+	} else { document.getElementById("overlay-pickup").innerHTML = ""; document.getElementById("input_pickup").value = ""; }
 	
 	var challengesttext = document.getElementById("input_challengest").value;
-	var restrictiontext = document.getElementById("input_restriction").value;
-	var timelimittext = document.getElementById("input_timelimit").value;
-	var ratingtext = document.getElementById("input_rating").value;
-	var difficultytext = document.getElementById("input_difficulty").value;
-
+	if(document.getElementById("input_restriction").value) {
+		var restrictiontext = "\n● Restriction: " + document.getElementById("input_restriction").value.split('|')[1];
+		document.getElementById('overlay-restriction').innerHTML = "Restriction: " + document.getElementById("input_restriction").value.split('|')[1];
+	} else { var restrictiontext = ""; document.getElementById('overlay-restriction').innerHTML = ""; }
+	if(document.getElementById("input_timelimit").value) {
+		var timelimittext = "\n● Time Limit: " + document.getElementById("input_timelimit").value + " minutes.";
+		document.getElementById('timeprompt').innerHTML = "Time Limit: " + document.getElementById("input_timelimit").value + " minutes.";
+	} else { var timelimittext = ""; document.getElementById('timeprompt').innerHTML = ""; }
+	if(document.getElementById("input_rating").value) {
+		var ratingtext = "\n● Rating: " + document.getElementById("input_rating").value.split('|')[2];
+		document.getElementById('overlay-challenge_rating').innerHTML = "Rating: " + document.getElementById("input_rating").value.split('|')[2];
+	} else { var ratingtext = ""; document.getElementById('overlay-challenge_rating').innerHTML = ""; }
+	if(document.getElementById("input_difficulty").value) {
+		var difficultytext = "\n● Difficulty: Start the mission on " + document.getElementById("input_difficulty").value;
+		document.getElementById('overlay-difficulty').innerHTML = "Difficulty: " + document.getElementById("input_difficulty").value;
+	} else { var difficultytext = ""; document.getElementById('overlay-difficulty').innerHTML = ""; }
+	
 	document.getElementById('roulettetext').value = "Mission: " + result.missionTitle + contracttext + "\n"
 		+ entrytext
-		+ target1text + weapon1text + disguise1text
-		+ targetintel1text
-		+ target2text + weapon2text + disguise2text
-		+ targetintel2text
-		+ target3text + weapon3text + disguise3text
-		+ targetintel3text
-		+ target4text + weapon4text + disguise4text
-		+ targetintel4text
-		+ target5text + weapon5text + disguise5text
-		+ targetintel5text
+		+ target1result
+		+ intel1text
+		+ target2result
+		+ intel2text
+		+ target3result
+		+ intel3text
+		+ target4result
+		+ intel4text
+		+ target5result
+		+ intel5text
 		+ objectivetext
-		+ extraobjectivetext
+		+ exobjtext
 		+ cameratext
-		+ exittext + exitreqtext
+		+ exittext
 		+ complicationttext
-		+ complicationitext
 		+ complication1text
 		+ complication2text
 		+ complication3text
@@ -957,41 +1147,13 @@ function writeEverything(result) {
 		+ timelimittext
 		+ ratingtext
 		+ difficultytext;
-		
-	/*
-	document.getElementById('overlay-pin-target1').innerHTML = target1text;
-	document.getElementById('overlay-target1').innerHTML = target1text + weapon1text + disguise1text;
-	document.getElementById('overlay-pin-target2').innerHTML = target2text;
-	document.getElementById('overlay-target2').innerHTML = target2text + weapon2text + disguise2text;
-	document.getElementById('overlay-pin-target3').innerHTML = target3text;
-	document.getElementById('overlay-target3').innerHTML = target3text + weapon3text + disguise3text;
-	document.getElementById('overlay-pin-target4').innerHTML = target4text;
-	document.getElementById('overlay-target4').innerHTML = target4text + weapon4text + disguise4text;
-	document.getElementById('overlay-pin-target5').innerHTML = target5text;
-	document.getElementById('overlay-target5').innerHTML = target5text + weapon5text + disguise5text;
-	document.getElementById('overlay-pin-objective').innerHTML = objectivetext;
-	document.getElementById('overlay-objective').innerHTML = objectiveoverlaytext;
-	document.getElementById('overlay-pin-objectivex').innerHTML = extraobjectiveoverlaytext;
-	document.getElementById('overlay-objectivex').innerHTML = extraobjectiveoverlaytext;
-	document.getElementById('overlay-exit').innerHTML = exittext + exitreqtext;
-	//document.getElementById('overlay-complicationi').innerHTML = complicationitext;
-	//document.getElementById('overlay-complication1').innerHTML = complication1text;
-	//document.getElementById('overlay-complication2').innerHTML = complication2text;
-	//document.getElementById('overlay-complication3').innerHTML = complication3text;
-	//document.getElementById('overlay-complication4').innerHTML = complication4text;
-	//document.getElementById('overlay-complication5').innerHTML = complication5text;
-	//document.getElementById('overlay-complication6').innerHTML = complication6text;
-	document.getElementById('overlay-challenge_restriction').innerHTML = restrictiontext;
-	document.getElementById('overlay-challenge_timelimit').innerHTML = timelimittext;
-	document.getElementById('overlay-challenge_rating').innerHTML = ratingtext;
-	*/
 };
 
 function generate_result() {
 	const current_mission = createContainerObject();
 	
 	var roulette = containerToResult(current_mission);
-	roulette.extras = createExtrasList(roulette.exit, roulette.eexit);
+	roulette.extras = createExtrasList(roulette.exit, roulette.missionCode);
 	roulette.targets = createTargetList(current_mission);
 	roulette.weapons = createWeaponList(current_mission);
 	roulette.disguises = createDisguiseList(current_mission, roulette);
@@ -1008,6 +1170,9 @@ function button_MakeItGo(){
 	//Hide the intro screen
 	document.getElementById("intro").style.setProperty("display", "none", "important");
 	document.getElementById("features").style.setProperty("display", "none", "important");
+	if(document.getElementById("overlayguide") != null) {
+		document.getElementById("overlayguide").style.setProperty("display", "none", "important");
+	}
 	
 	//Hover to scroll long nameplate names
 	$(function() {
@@ -1031,7 +1196,10 @@ function button_MakeItGo(){
 		document.getElementById("saveroulette").disabled = true;
 		document.getElementById("subsaveroulette").disabled = true;
 	}
-	//document.getElementById("enableoverlay").disabled = false;
+	
+	if(document.getElementById("overlaybutton") != null) {
+		document.getElementById("overlaybutton").disabled = false;
+	}
 }
 
 //adds x to the history stack for a maximum of 20 most recent runs
