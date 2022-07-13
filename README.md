@@ -27,6 +27,7 @@ To quickly return the Roulette Settings back to default, preform a hard refresh 
 * [Hitman Interactive Maps](http://hitmanmaps.com/) by Winterbird & [Hitmaps](https://www.hitmaps.com/) (formerly Hitman 2 Maps) by Mike Koch for being great tools that aided in my data collection.
 * The tools [jQuery CSS Customizable Scrollbar](https://github.com/gromo/jquery.scrollbar) by gromo & [Event Mouse Wheel](https://www.dte.web.id/2013/02/event-mouse-wheel.html) by Taufik Nurrohman which I used for style and navigation.
 * [Detect Mobile Browsers](http://detectmobilebrowsers.com/) by Chad Smith, which helped in allowing settings descriptions viewable for mobile via touch.
+* [jQuery Countdown](http://keith-wood.name/countdown.html) by Keith Wood, which is being used in the Stream Overlay for any Time Limit Complications.
 
 ## Compatibility & Issues
 
@@ -40,16 +41,38 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 
 ### Latest Updates:
 
-**June 20th, 2022**
+**July 13th, 2022**
+* **Roulette:**
+  * **Roulette Settings - Extra Requirements:**
+    * **Allow Complications**: Had a major code overhaul, fixing some legacy bugs. Also some minor updates.
+	  *	Generating complications, followed by generating a value less of the previous (like: 6 then 2), would result in some previously generated complications not being removed.
+	  * Sometimes it was be possible to generate no Complications in certain situations where Restrictions would force some Complications to be omitted. Now, at least one Complication should always generate if the Max value slider isn't set to zero. 
+      * Reclassified the Restriction "No Agility" into a Complication as it was the only one that didn't involve disabling something through the in-game options menu. (Also, it was an H1 Complication to begin with anyway)
+      * Complication "Do Not Get Spotted" now uses the matching in-game Contracts Mode image. (Originally this was done to avoid confusion with a "No Crouching" Complication, but that was removed due to H3 forcing auto-crouching in spots)
+	  * Fixed a formatting error related to Complications in the Export Roulette .txt/textarea.
+  * **Roulette Settings - Reset Or Return:** (New)
+    * **Reset All Roulette Settings**: Returns them to default without hard-refreshing the Roulette page.
+	* **Return To Front Page**: Takes you to the main Hitman Roulette tab and clears out any Issued Roulettes. Settings changes will be retained.
+  * **Roulette Settings - Roulette Mode:** (New)
+    * **Stream Overlay Beta**: Intended for PC Steamers to easily switch between generating Roulettes and playing the game. Follow the instructions listed to learn how to try it.
+      * Currently in testing, so if you have any issues or suggestions please make a post [via GitHub](https://github.com/BRYN4444/HitmanRoulette/issues) or [on Hitman Forum](https://hitmanforum.com/t/13107)!
 * **Other Fixes:**
-  * Contracts Mode Targets were not appearing in Intel and Hunt modes. (A single word omitted and overlooked from code can really cause issues, huh. My apologies.)
-  * The Extra Objective "Order of Operations" on Apex Predator wasn't properly listed in the Export Roulette .txt/textarea.
-  * Camera Objectives were not properly being added in Export Roulette .txt/textarea.
+  * An Extra Objective on Nightcall wasn't properly displaying an image.
+  * Updated some images for Restriction challenges.
 * **Current Plans:**
   * Preparing for Ambrose Island, Hitman III's upcoming new location. Will be added in steps with Main Target(s) first, and Contracts Mode Targets last.
 > **Bug Hunting:** Please make a post [via GitHub](https://github.com/BRYN4444/HitmanRoulette/issues) or [on Hitman Forum](https://hitmanforum.com/t/13107) if you:
 >* Experience any graphical issues while using the Roulette in 4K, or on phones/tablets.
 >* Notice inconsistencies or impossibilities generated if using the Roulette while playing HITMAN or HITMAN 2.
+>* Have troubles or inqueries with the new Stream Overlay.
+
+---
+
+**June 20th, 2022**
+* **Other Fixes:**
+  * Contracts Mode Targets were not appearing in Intel and Hunt modes. (A single word omitted and overlooked from code can really cause issues, huh. My apologies.)
+  * An Extra Objective on Apex Predator wasn't properly listing in the Export Roulette .txt/textarea.
+  * Camera Objectives were not properly being added in Export Roulette .txt/textarea.
 
 ---
 
@@ -104,10 +127,3 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 * **Other Fixes:**
   * When Mobile browsing, added a sentence mentioning to touch the [INFO] text to display descriptions for settings.
   * Minor style improvement for mobile browsing.
-
----
-
-**March 19th, 2022**
-* **HITMAN:**
-  * **The Author & Patient Zero:**
-    * **Contracts Mode Targets:** NPC "Jeff" added. Note: He only appears if you've 'saved' him linearly through the Patient Zero Campaign (look up a guide). In the Patient Zero Mission he drops three random weapons, two of which aren't in the mission normally. I would have added these to the Roulette's data, but since they're random each time you start the mission that would be a randomizer on top of a randomizer and could lead to real frustration (if you roll a elimination method that works with the weapons he drops, then congrats).
