@@ -1,0 +1,7 @@
+#floatbuttons {	grid-template-columns: 294px 294px !important; }
+	@media only screen and (max-height: 1570px) {
+		#floatbuttons {	grid-template-columns: 219px 219px !important; }
+	}
+	@media only screen and (max-width: 1920px), (max-height: 1180px) {
+		#floatbuttons {	grid-template-columns: 144px 144px !important; }
+	}
