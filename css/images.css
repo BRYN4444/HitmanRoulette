@@ -33,6 +33,7 @@ html.h1theme {
 	--chongqing:url('../img/missions/h1theme/chongqing.jpg');
 	--mendoza:url('../img/missions/h1theme/mendoza.jpg');
 	--romania:url('../img/missions/h1theme/romania.jpg');
+	--ambrose:url('../img/missions/h1theme/ambrose.jpg');
 }
 html.h1gotytheme {
 	--icafacility:url('../img/missions/h1gotytheme/ica-facility.jpg');
@@ -69,6 +70,7 @@ html.h1gotytheme {
 	--chongqing:url('../img/missions/h1gotytheme/chongqing.jpg');
 	--mendoza:url('../img/missions/h1gotytheme/mendoza.jpg');
 	--romania:url('../img/missions/h1gotytheme/romania.jpg');
+	--ambrose:url('../img/missions/h1gotytheme/ambrose.jpg');
 }
 html.h2theme, html.h3theme {
 	--icafacility:url('../img/missions/h2h3theme/ica-facility.jpg');
@@ -105,6 +107,7 @@ html.h2theme, html.h3theme {
 	--chongqing:url('../img/missions/h2h3theme/chongqing.jpg');
 	--mendoza:url('../img/missions/h2h3theme/mendoza.jpg');
 	--romania:url('../img/missions/h2h3theme/romania.jpg');
+	--ambrose:url('../img/missions/h2h3theme/ambrose.jpg');
 }
 html.httheme {
 	--icafacility:url('../img/missions/httheme/ica-facility.jpg');
@@ -141,6 +144,7 @@ html.httheme {
 	--chongqing:url('../img/missions/httheme/chongqing.jpg');
 	--mendoza:url('../img/missions/httheme/mendoza.jpg');
 	--romania:url('../img/missions/httheme/romania.jpg');
+	--ambrose:url('../img/missions/httheme/ambrose.jpg');
 }
 
 #rand-all { background-image:url("../img/general/hx.jpg"); }
@@ -194,6 +198,7 @@ html.httheme {
 .m18-1 { background:#292929 url("../img/missions/18-1.png") no-repeat center top / 350px; }
 .m19-1 { background:#292929 url("../img/missions/19-1.png") no-repeat center top / 350px; }
 .m20-1 { background:#292929 url("../img/missions/20-1.png") no-repeat center top / 350px; }
+.m21-1 { background:#292929 url("../img/missions/21-1.png") no-repeat center top / 350px; }
 
 /*** Backgrounds ***/
 .training, .test { background-image:var(--missionbggradient), var(--icafacility); }
@@ -229,10 +234,11 @@ html.httheme {
 .club { background-image:var(--missionbggradient), var(--berlin); }
 .archive { background-image:var(--missionbggradient), var(--chongqing); }
 .vineyard { background-image:var(--missionbggradient), var(--mendoza); }
-.train{ background-image:var(--missionbggradient), var(--romania); }
+.train { background-image:var(--missionbggradient), var(--romania); }
+.pirates { background-image:var(--missionbggradient), var(--ambrose); }
 
 /***** Starting Locations *****/
-.any-start { background-image: url('../img/entry/Any.png'); }
+div[class$="start-AnyStartingLocation"], .any-start { background-image: url('../img/entry/Any.png'); }
 .training-start-WeaponsBuilding { background-image: url('../img/entry/Weapons%20Building.png'); }
 .test-start-CrouchedbehindaTruck { background-image: url('../img/entry/Crouched%20behind%20a%20Truck.png'); }
 .fashion-start-RedCarpet, .director-start-RedCarpet { background-image: url('../img/entry/Red%20Carpet.png'); }
@@ -397,14 +403,20 @@ html.httheme {
 .vineyard-start-Vineyard { background-image: url('../img/entry/Vineyard.png'); }
 .vineyard-start-TastingRoom { background-image: url('../img/entry/TastingRoom.png'); }
 .vineyard-start-SniperSpot { background-image: url('../img/entry/SniperSpot.png'); }
-.vineyard-start-Shrine { background-image: url('../img/entry/Shrine.png'); }
+.vineyard-start-Shrine { background-image: url('../img/entry/Shrine-TF.png'); }
 .vineyard-start-DiningArea { background-image: url('../img/entry/DiningArea.png'); }
 .train-start-Reflection { background-image: url('../img/entry/Reflection.png'); }
 .train-start-Laboratory { background-image: url('../img/entry/Laboratory.png'); }
 .train-start-Outdoors { background-image: url('../img/entry/Outdoors.png'); }
+.pirates-start-WesternBeach { background-image: url('../img/entry/WesternBeach.png'); }
+.pirates-start-SiltVillage { background-image: url('../img/entry/SiltVillage.png'); }
+.pirates-start-CentralSocialHub { background-image: url('../img/entry/CentralSocialHub.png'); }
+.pirates-start-Shrine { background-image: url('../img/entry/Shrine-SITW.png'); }
+.pirates-start-PirateCamp { background-image: url('../img/entry/PirateCamp.png'); }
+.pirates-start-MilitiaCamp { background-image: url('../img/entry/MilitiaCamp.png'); }
 
 /***** Exit Locations *****/
-.any-exit { background-image: url('../img/exit/Any.png'); }
+div[class$="exit-AnyExitLocation"], .any-exit { background-image: url('../img/exit/Any.png'); }
 .training-exit-ButtonbytheRedCar { background-image: url('../img/exit/Button%20by%20the%20Red%20Car.png'); }
 .training-exit-ButtonbytheSpeedboat { background-image: url('../img/exit/Button%20by%20the%20Speedboat.png'); }
 .training-exit-ButtonbytheHelicopter { background-image: url('../img/exit/Button%20by%20the%20Helicopter.png'); }
@@ -561,6 +573,13 @@ html.httheme {
 .vineyard-exit-Shrine { background-image: url('../img/exit/Shrine.png'); }
 .train-exit-StopTrain { background-image: url('../img/exit/StopTrain.png'); }
 .train-exit-TakeSerum { background-image: url('../img/exit/TakeSerum.png'); }
+.pirates-exit-WesternBeachBoat { background-image: url('../img/exit/WesternBeachBoat.png'); }
+.pirates-exit-WorkshopBoat { background-image: url('../img/exit/WorkshopBoat.png'); }
+.pirates-exit-LongtailCoveBoat { background-image: url('../img/exit/LongtailCoveBoat.png'); }
+.pirates-exit-MilitiasTacticalSpeedboat { background-image: url('../img/exit/MilitiasTacticalSpeedboat.png'); }
+.pirates-exit-Submarine { background-image: url('../img/exit/Submarine.png'); }
+.pirates-exit-HelicopterBeach { background-image: url('../img/exit/HelicopterBeach.png'); }
+.pirates-exit-HelicopterBridge { background-image: url('../img/exit/HelicopterBridge.png'); }
 
 /*** Mission & Contract Targets ***/
 div[class^="ElusiveTarget"], div[class^="UnassignedTarget"] { background-image: url('../img/targetcon/NPC.jpg'); }
@@ -2405,6 +2424,13 @@ div[class^="ElusiveTarget"], div[class^="UnassignedTarget"] { background-image: 
 .ArthurEdwards-train { background-image: url('../img/target/ArthurEdwards.jpg'); }
 .ArthurEdwards-train.contarget { background-size: auto 100% !important; }
 
+/** Ambrose Island **/
+/* Shadows in the Water */
+.NoelCrest-pirates { background-image: url('../img/target/NoelCrest.jpg'); }
+.NoelCrest-pirates.contarget { background-size: auto 100% !important; }
+.SinhiAkkaVenthan-pirates { background-image: url('../img/target/SinhiAkkaVenthan.jpg'); }
+.SinhiAkkaVenthan-pirates.contarget { background-size: auto 100% !important; }
+
 /***** Objectives *****/
 /*** Mission Objectives ***/
 .DNASpecificVirus { background-image: url('../img/obj/DNA%20Specific%20Virus.png'); }
@@ -2418,6 +2444,7 @@ div[class^="ElusiveTarget"], div[class^="UnassignedTarget"] { background-image: 
 .HackDataCore, .HackDataCoreOptional { background-image: url('../img/obj/HackDataCore.png'); }
 .DoNotEliminateDianaBurnwood { background-image: url('../img/obj/ObjDiana.png'); }
 .ProvidenceMembersMayBeEliminated { background-image: url('../img/obj/ObjProvidence.png'); }
+.NeutralizetheSatelliteControlUnit { background-image: url('../img/obj/NeutralizetheSatelliteControlUnit.png'); }
 
 /*** Extra Objectives & Camera Mode***/
 #diff-image-NotAvailable, .NotAvailable { background-image: url('../img/general/NotAvailable.jpg'); }
@@ -3232,6 +3259,52 @@ div[class^="ElusiveTarget"], div[class^="UnassignedTarget"] { background-image: 
 .SnowAngel { background-image: url('../img/obj/SnowAngel.png'); }
 .SodaSlinger { background-image: url('../img/obj/SodaSlinger.png'); }
 .HeresYourStop { background-image: url('../img/obj/HeresYourStop.png'); }
+.RustyTrilogy { background-image: url('../img/obj/RustyTrilogy.png'); }
+
+.WhyDoIHaveMyCamera { background-image: url('../img/camera/WhyDoIHaveMyCamera.png'); }
+.NewManagementGrandAmbitions { background-image: url('../img/camera/NewManagementGrandAmbitions.png'); }
+.NiceWeatherWereHaving { background-image: url('../img/camera/NiceWeatherWereHaving.png'); }
+.OnStandby { background-image: url('../img/camera/OnStandby.png'); }
+.RailroadResting { background-image: url('../img/camera/RailroadResting.png'); }
+.PropagandaPosters { background-image: url('../img/camera/PropagandaPosters.png'); }
+.PoolPicture { background-image: url('../img/camera/PoolPicture.png'); }
+.Reminisce { background-image: url('../img/camera/Reminisce.png'); }
+.DeathFromAbove { background-image: url('../img/camera/DeathFromAbove.png'); }
+.QuickIntegration { background-image: url('../img/camera/QuickIntegration.png'); }
+.JustLookUp { background-image: url('../img/camera/JustLookUp.png'); }
+.TheFinalSelfie { background-image: url('../img/camera/TheFinalSelfie.png'); }
+
+/** Ambrose Island **/
+/* Shadows in the Water */
+.PennedPal { background-image: url('../img/obj/PennedPal.png'); }
+.LePew { background-image: url('../img/obj/LePew.png'); }
+.ABoneToPick { background-image: url('../img/obj/ABoneToPick.png'); }
+.Locksmith { background-image: url('../img/obj/Locksmith.png'); }
+.MasterOfTheElements { background-image: url('../img/obj/MasterOfTheElements.png'); }
+.Ethereum { background-image: url('../img/obj/Ethereum.png'); }
+.CastleCrasher { background-image: url('../img/obj/CastleCrasher.png'); }
+.LefttheStoveRunning { background-image: url('../img/obj/LefttheStoveRunning.png'); }
+.BetterTimes { background-image: url('../img/obj/BetterTimes.png'); }
+.NaturesBounty { background-image: url('../img/obj/NaturesBounty.png'); }
+.ChessAnyone { background-image: url('../img/obj/ChessAnyone.png'); }
+.TalktotheHand { background-image: url('../img/obj/TalktotheHand.png'); }
+.GoneFishin { background-image: url('../img/obj/GoneFishin.png'); }
+.HandyMan { background-image: url('../img/obj/HandyMan.png'); }
+.FishermansFriend { background-image: url('../img/obj/FishermansFriend.png'); }
+.Firestarter { background-image: url('../img/obj/Firestarter.png'); }
+.GetItYourself { background-image: url('../img/obj/GetItYourself.png'); }
+.BreakInBreakOut { background-image: url('../img/obj/BreakInBreakOut.png'); }
+
+.Picturesque { background-image: url('../img/camera/Picturesque.png'); }
+.Hitception { background-image: url('../img/camera/Hitception.png'); }
+.PartyHard { background-image: url('../img/camera/PartyHard.png'); }
+.NiceNotes { background-image: url('../img/camera/NiceNotes.png'); }
+.MomentofImpact { background-image: url('../img/camera/MomentofImpact.png'); }
+.ScenicSeaside { background-image: url('../img/camera/ScenicSeaside.png'); }
+.OfficeFitForaPirateQueen { background-image: url('../img/camera/OfficeFitForaPirateQueen.png'); }
+.TankerMeLater { background-image: url('../img/camera/TankerMeLater.png'); }
+.FortySevenFeetUp { background-image: url('../img/camera/FortySevenFeetUp.png'); }
+.MightyPirate { background-image: url('../img/camera/MightyPirate.png'); }
 
 /***** Complications *****/
 .NoRecordings { background-image: url('../img/comp/NoRecordings.png'); }
