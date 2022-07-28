@@ -41,6 +41,30 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 
 ### Latest Updates:
 
+**July 28th, 2022**
+* **HITMAN III:**
+  * **"Shadows in the Water" Mission Added. (Location: Ambrose Island)
+    * **Targets:** 2. (Contract Mode Targets coming soon)
+	* **Starting Points:** 6 added. Only 2 are undercover locations.
+    * **Exit Points:** 7 added. Two of these are disabled in Contracts Mode due to the lack of the GPS Tracker from the mission proper.
+    * **Objectives:** 1 added. Mandatory in the actual mission, but it isn't too much of a hastle after a few tries. 
+    * **Extra Objectives:** 18 added.
+    * **Photo Objectives:** 11 added.
+  * **Untouchable:**
+    * **Extra Objectives:** 1 added, because I had an idea when making the photo objectives.
+    * **Photo Objectives:** 13 added. Completely overlooked adding them here, but now there are some!  
+* **Roulette:**
+  * **Roulette Settings - Extra Requirements:**	
+    * **Include Secret Exits**: The "Secret" option from "Force Start/Exit" is now its own setting. This way you can have Exit Only and Secret Exits at the same time.
+* **Current Plans:**
+  * Contracts Mode Support for "Shadows in the Water".
+>**Bug Hunting:** Please make a post [via GitHub](https://github.com/BRYN4444/HitmanRoulette/issues) or [on Hitman Forum](https://hitmanforum.com/t/13107) if you:
+>* Experience any graphical issues while using the Roulette in 4K, or on phones/tablets.
+>* Notice inconsistencies or impossibilities generated if using the Roulette while playing HITMAN or HITMAN 2.
+>* Have troubles or inqueries with the new Stream Overlay.
+
+---
+
 **July 13th, 2022**
 * **Roulette:**
   * **Roulette Settings - Extra Requirements:**
@@ -59,12 +83,6 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 * **Other Fixes:**
   * An Extra Objective on Nightcall wasn't properly displaying an image.
   * Updated some images for Restriction challenges.
-* **Current Plans:**
-  * Preparing for Ambrose Island, Hitman III's upcoming new location. Will be added in steps with Main Target(s) first, and Contracts Mode Targets last.
-> **Bug Hunting:** Please make a post [via GitHub](https://github.com/BRYN4444/HitmanRoulette/issues) or [on Hitman Forum](https://hitmanforum.com/t/13107) if you:
->* Experience any graphical issues while using the Roulette in 4K, or on phones/tablets.
->* Notice inconsistencies or impossibilities generated if using the Roulette while playing HITMAN or HITMAN 2.
->* Have troubles or inqueries with the new Stream Overlay.
 
 ---
 
@@ -112,18 +130,3 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 * **HITMAN:**
   * **The Showstopper:**
     * **Contract Mode Targets:** 1 removed due to differences between HITMAN III and prior releases.
-
----
-
-**April 12th, 2022**
-* **Roulette:**
-  * Roulette Settings:
-    * **Kill Requirements > Specific Disguises:** Added a "On+" selection. In a few missions, some disguises have variants that are counted as different for Contracts Mode. When "On+" is selected, these are added to the pool for elimination disguise requirements. Currently, the outfits are: VIP Patient (Unmasked Portman) in non-PZ Hokkaido missions, Garbage Man (Undercover) & Gardener (Undercover) in Whittleton Creek missions, and any ICA Agent disguise in Berlin.
-* **HITMAN:**
-  * **World of Tomorrow:**
-    * **Contract Mode Targets:** 2 removed due to differences between HITMAN III and prior releases.
-  * **Situs Inversus:**
-    * **Contract Mode Targets:** 2 removed due to differences between HITMAN III and prior releases.
-* **Other Fixes:**
-  * When Mobile browsing, added a sentence mentioning to touch the [INFO] text to display descriptions for settings.
-  * Minor style improvement for mobile browsing.
