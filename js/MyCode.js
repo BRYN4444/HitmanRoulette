@@ -1,8 +1,11 @@
 //Enjoy looking at the ametuer code work I've done.
 $(document).ready(function() {
 	/******Latest Updates******/
-	$("#features p#title").text("Last Updated: July 13th, 2022"); /*Roulette Features*/
+	$("#features p#title").text("Last Updated: July 28th, 2022"); /*Roulette Features*/
+	$("#features .updatenotes").html('<b><a href="https://github.com/BRYN4444/HitmanRoulette#latest-updates" target="_blank">Update:</a></b> Ambrose Island Added! Soon: Contracts Mode Support.');
 	$("#overlayguide p#title").text("Last Updated: July 13th, 2022 (BETA)"); /*Stream Overlay*/
+	//$("#overlayguide .updatenotes").html('???'); /*Needs to be added to Overlay.html*/
+
 	
 	/******Theme Cookie******/
 	if(document.cookie == "theme=H1") {
@@ -1160,11 +1163,7 @@ $(document).ready(function() {
 			$("#startexit").val("EXIT");
 		}
 		else if( $(this).hasClass("exit") ) {
-			$(this).removeClass("exit").addClass("secret").find("span").text("[Secret]");
-			$("#startexit").val("SECRET");
-		}
-		else if( $(this).hasClass("secret") ) {
-			$(this).removeClass("secret").addClass("off").find("span").text("[Off]");
+			$(this).removeClass("exit").addClass("off").find("span").text("[Off]");
 			$("#startexit").val("OFF");
 		}
 		else if( $(this).hasClass("off") ) {
@@ -1176,8 +1175,6 @@ $(document).ready(function() {
 	/*Refresh*/
 	if($("#startexit").val() == "OFF") {
 		$("#extra_starex").removeClass("both").addClass("off").find("span").text("[Off]");
-	} else if ($("#startexit").val() == "SECRET") {
-		$("#extra_starex").removeClass("both").addClass("secret").find("span").text("[Secret]");
 	} else if ($("#startexit").val() == "EXIT") {
 		$("#extra_starex").removeClass("both").addClass("exit").find("span").text("[Exit Only]");
 	} else if ($("#startexit").val() == "START") {
@@ -1456,7 +1453,6 @@ $(document).ready(function() {
 		$('#overlayboxheader, #overlaysize, #overlayfinish').addClass("hidden");
 		$('#overlayinfo-return, #overlayinfo').removeClass("hidden");
 		
-		//starting and exit location???
 		if($(this).is("#overlay-intel-target1")) {
 			$("#overlayinfo-image").attr("class","target " + $("#input_target1").val().replace(/\s|,|'|“|”|-|\?|\!|\(|\)|\./g, "") + "-" + $("#input_mission").val() + $("#contarget").val());
 			$("#overlayinfo-method, #overlayinfo-disguise, #overlayinfo-intel").removeClass("hidden");
@@ -1766,7 +1762,7 @@ $(document).ready(function() {
 		
 		/*Force Start/Exit*/
 		if( !$("#extra_starex").hasClass("both") ) {
-			$("#extra_starex").removeClass("start exit secret off").addClass("both").find("span").text("[Both]");
+			$("#extra_starex").removeClass("start exit off").addClass("both").find("span").text("[Both]");
 			$("#startexit").val("BOTH");
 		};
 		
