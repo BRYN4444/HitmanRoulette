@@ -298,10 +298,8 @@
 								<li>Enable Complications for playstyle constraints or requirements.</li>
 							</ul>
 							<img id="list" class="shrink" src="./img/general/blank.png">
-							<p id="wording" style="padding-right:5px">
-								New Theme, New Settings, and 4K testing. Check <a href="https://github.com/BRYN4444/HitmanRoulette#latest-updates" target="_blank">GitHub</a> for details. 
-								<!--<b><a href="https://github.com/BRYN4444/HitmanRoulette#latest-updates" target="_blank">Update:</a></b> Ambrose Island Added! Soon: Contracts Mode Support.//-->
-								<!--Check on <a href="https://github.com/BRYN4444/HitmanRoulette#latest-updates" target="_blank">GitHub</a> for details on the latest Roulette updates.//-->
+							<p id="wording" class="updatenotes" style="padding-right:5px"> 
+								Check on <a href="https://github.com/BRYN4444/HitmanRoulette#latest-updates" target="_blank">GitHub</a> for details on the latest Roulette updates.
 							</p>
 						</div>
 						<div id="nameplate">
@@ -798,7 +796,21 @@
 							</div>
 						</div>
 					</label>
-				</div>	
+				</div>
+				<div id="h3" class="column" style="display:none;">
+					<label for="SITW">
+						<div id="top" class="m21-1">
+							<div id="nameplate">
+								<span>
+									<input id="SITW" class="lvl h3 h3con" type="checkbox" value="true" checked />
+									<p id="title">Toggle / Mission</p>
+									<p id="subtitle">Shadows in the Water</p>
+								</span>
+							</div>
+						</div>
+					</label>
+					<label id="blank"></label>
+				</div>
 				<div id="hside" class="column" style="display:none;">
 					<label for="ICON">
 						<div id="top" class="m2-2">
@@ -1162,9 +1174,14 @@
 						<input type="checkbox" id="generic" value="true" checked />
 						<b>Generic Kills</b><span>[On]</span>
 					</label>
-					<label id="extra_m" class="mobile" style="display:none;" data-hover="The roulette will choose start/exit points you must use.<br /><br /><b>[Some Missions gain additional exits after their first playthrough.]</b><br />Both: Starting and exit points are both listed. (Default)<br />Start Only: Starting pont is listed. Find your own exit location.<br />Exit Only: Exit point is listed. Select your own starting location.<br />Secret: Start and exit are both listed, but exit may require secret actions to enable.<br />Off: Nothing is listed. You choose your own start and exit points.">[INFO]:</label>
-					<label id="extra_starex" class="both" style="display:none;" data-hover="The roulette will choose start/exit points you must use.<br /><br /><b>[Some Missions gain additional exits after their first playthrough.]</b><br />Both: Starting and exit points are both listed. (Default)<br />Start Only: Starting pont is listed. Find your own exit location.<br />Exit Only: Exit point is listed. Select your own starting location.<br />Secret: Start and exit are both listed, but exit may require secret actions to enable.<br />Off: Nothing is listed. You choose your own start and exit points.">
+					<label id="extra_m" class="mobile" style="display:none;" data-hover="The roulette will choose start/exit points you must use.<br /><br /><b>[Some Missions gain additional exits after their first playthrough.]</b><br />Both: Starting and exit points are both listed. (Default)<br />Start Only: Starting pont is listed. Find your own exit location.<br />Exit Only: Exit point is listed. Select your own starting location.<br />Off: Nothing is listed. You choose your own start and exit points.">[INFO]:</label>
+					<label id="extra_starex" class="both" style="display:none;" data-hover="The roulette will choose start/exit points you must use.<br /><br /><b>[Some Missions gain additional exits after their first playthrough.]</b><br />Both: Starting and exit points are both listed. (Default)<br />Start Only: Starting pont is listed. Find your own exit location.<br />Exit Only: Exit point is listed. Select your own starting location.<br />Off: Nothing is listed. You choose your own start and exit points.">
 						<b>Force Start/Exit</b><span>[Both]</span>
+					</label>
+					<label id="extra_m" class="mobile" style="display:none;" data-hover="This setting only works if “Force Start/Exit” is set to “Both” or “Exit Only”.<br /><br />On: Cryptic or hidden exit locations can appear<br /><br />Off: Only the regular exit locations appear.">[INFO]:</label>
+					<label id="extra_secret" for="exsecret" style="display:none;" data-hover="This setting only works if “Force Start/Exit” is set to “Both” or “Exit Only”.<br /><br />On: Cryptic or hidden exit locations can appear<br /><br />Off: Only the regular exit locations appear.">
+						<input type="checkbox" id="exsecret" value="true" />
+						<b>Include Secret Exits</b><span>[Off]</span>
 					</label>
 					<label id="extra_m" class="mobile" style="display:none;" data-hover="On: Adds one extra mission specific task to complete. For example, most of these tasks are in-game Challenges. The types available narrow based on enabling Contracts Mode, Complications, or Achieve Rating.<br /><br />Off: Only lists mandatory objectives to complete if there are any needed for the mission.">[INFO]:</label>
 					<label id="extra_obj" for="exobj" style="display:none;" data-hover="On: Adds one extra mission specific task to complete. For example, most of these tasks are in-game Challenges. The types available narrow based on enabling Contracts Mode, Complications, or Achieve Rating.<br /><br />Off: Only lists mandatory objectives to complete if there are any needed for the mission.">
@@ -1246,7 +1263,6 @@
 						<option value="BOTH" selected>Both Start/Exit</option>
 						<option value="START">Start Only</option>
 						<option value="EXIT">Exit Only</option>
-						<option value="SECRET">Exit Only with Secrets</option>
 						<option value="OFF">Choose Start/Exit</option>
 					</select>
 					<select id="mechanics" style="display:none;">
