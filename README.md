@@ -39,7 +39,7 @@ There may be the odd conflicting trait that changed between releases in this tri
 
 This was a hobby project I started in 2016/17 and have worked on during my free time as a way to brush up on my simple javascript, jQuery, and CSS knowledge as well as giving me more reason to play these new Hitman games well after unlocking everything. As such, I've only tested this using the browsers I frequent: Firefox and Chrome. If you find any issues or glaring conflicts with Roulette results, let me know [via GitHub](https://github.com/BRYN4444/HitmanRoulette/issues) or [on Hitman Forum](https://hitmanforum.com/t/13107) and I'll try and address it when I get the chance. - [BRYN](http://bryn.info/)
 
-### Latest Updates:126
+### Latest Updates:
 
 **August 6th, 2022**
 * **HITMAN III:**
@@ -140,12 +140,3 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
   * When tabbing back to the Roulette main page after generating a roulette, the location background image would be missing.
   * Updated a number of icons to better match their in-game glyphs, as well as adding icons for the new choices under Select Missions.
   * Minor theme adjustments.
-
----
-
-**April 29th, 2022**
-* **Roulette:**
-  * **About & Help:** Added a link to the [Hitman Roulette post on Hitman Forum](https://www.hitmanforum.com/t/13107), in case you have a question or issue and would rather not register here to post.
-* **HITMAN:**
-  * **The Showstopper:**
-    * **Contract Mode Targets:** 1 removed due to differences between HITMAN III and prior releases.
