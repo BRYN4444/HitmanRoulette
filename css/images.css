@@ -1808,6 +1808,7 @@ div[class^="ElusiveTarget"], div[class^="UnassignedTarget"] { background-image: 
 .MateoLunaCovarrubias-cartel { background-image: url('../img/targetcon/MateoLunaCovarrubias.jpg'); }
 .ArgeoRodriguez-cartel { background-image: url('../img/targetcon/ArgeoRodriguez.jpg'); }
 .PaolaBravoMagana-cartel { background-image: url('../img/targetcon/PaolaBravoMagana.jpg'); }
+.GregoryMYeager-cartel { background-image: url('../img/targetcon/GregoryMYeager.jpg'); }
 
 /* Embrace of the Serpant*/
 .BlairReddington-biggame { background-image: url('../img/target/BlairReddington.jpg'); }
@@ -2431,6 +2432,72 @@ div[class^="ElusiveTarget"], div[class^="UnassignedTarget"] { background-image: 
 .SinhiAkkaVenthan-pirates { background-image: url('../img/target/SinhiAkkaVenthan.jpg'); }
 .SinhiAkkaVenthan-pirates.contarget { background-size: auto 100% !important; }
 
+.RavinderPall-pirates, .ChetanBali-pirates { background-image: url('../img/targetcon/RavinderPall.jpg'); }
+.SomnathGara-pirates { background-image: url('../img/targetcon/SomnathGara.jpg'); }
+.ManindraSubramanian-pirates, .AbhaijeetOak-pirates { background-image: url('../img/targetcon/ManindraSubramanian.jpg'); }
+.CherlaRaj-pirates { background-image: url('../img/targetcon/CherlaRaj.jpg'); }
+.NianzuChen-pirates, .BoqinLin-pirates { background-image: url('../img/targetcon/NianzuChen.jpg'); }
+.AnandRattan-pirates { background-image: url('../img/targetcon/AnandRattan.jpg'); }
+.QiangJia-pirates { background-image: url('../img/targetcon/QiangJia.jpg'); }
+.DurgaShan-pirates { background-image: url('../img/targetcon/DurgaShan.jpg'); }
+.MadhukantaSaran-pirates { background-image: url('../img/targetcon/MadhukantaSaran.jpg'); }
+.RohitRay-pirates, .GulzarChand-pirates, .ChandrashekharVenkatesh-pirates { background-image: url('../img/targetcon/RohitRay.jpg'); }
+.GandharvaMagar-pirates { background-image: url('../img/targetcon/GandharvaMagar.jpg'); }
+.SatishPathak-pirates { background-image: url('../img/targetcon/SatishPathak.jpg'); }
+.BhuvanJhaveri-pirates { background-image: url('../img/targetcon/BhuvanJhaveri.jpg'); }
+.ChintanikaVenkataraman-pirates { background-image: url('../img/targetcon/ChintanikaVenkataraman.jpg'); }
+.SriNarasimhan-pirates, .SwetaSitompul-pirates { background-image: url('../img/targetcon/SriNarasimhan.jpg'); }
+.HuizhongDing-pirates, .MarcinTsabai-pirates, .QingshengZhao-pirates { background-image: url('../img/targetcon/HuizhongDing.jpg'); }
+.HaripreetSaha-pirates { background-image: url('../img/targetcon/HaripreetSaha.jpg'); }
+.UtsavNigam-pirates { background-image: url('../img/targetcon/UtsavNigam.jpg'); }
+.RaviKunda-pirates, .BhaskarKarpe-pirates, .AmarPanchal-pirates { background-image: url('../img/targetcon/RaviKunda.jpg'); }
+.DurgeswarDhingra-pirates, .GhanasyaamDesai-pirates, .SatyenBarad-pirates, .VinayPalla-pirates, .AdarshChar-pirates { background-image: url('../img/targetcon/DurgeswarDhingra.jpg'); }
+.ManmohanNadig-pirates { background-image: url('../img/targetcon/ManmohanNadig.jpg'); }
+.DharmaraajHari-pirates { background-image: url('../img/targetcon/DharmaraajHari.jpg'); }
+.JayashreeNatt-pirates { background-image: url('../img/targetcon/JayashreeNatt.jpg'); }
+.ShuchunTan-pirates { background-image: url('../img/targetcon/ShuchunTan.jpg'); }
+.MarcosMorningstar-pirates, .NeroPamperin-pirates, .PatrickHerold-pirates, .ErasmoKays-pirates, .EdwardoCarbone-pirates, .EdwinWhitaker-pirates, .DamianAsencio-pirates, .OscarMoorhead-pirates { background-image: url('../img/targetcon/MarcosMorningstar.jpg'); }
+.DikshaKothari-pirates, .EswariRavi-pirates { background-image: url('../img/targetcon/DikshaKothari.jpg'); }
+.BandasakSrisai-pirates, .ReksaSamosir-pirates { background-image: url('../img/targetcon/BandasakSrisai.jpg'); }
+.MahidolSongprawati-pirates { background-image: url('../img/targetcon/MahidolSongprawati.jpg'); }
+.NirmalLad-pirates { background-image: url('../img/targetcon/NirmalLad.jpg'); }
+.IndukalaDani-pirates, .AradhnaJha-pirates { background-image: url('../img/targetcon/IndukalaDani.jpg'); }
+.MadhumatiDeshmukh-pirates { background-image: url('../img/targetcon/MadhumatiDeshmukh.jpg'); }
+.LataRaval-pirates { background-image: url('../img/targetcon/LataRaval.jpg'); }
+.LakshminathHalder-pirates { background-image: url('../img/targetcon/LakshminathHalder.jpg'); }
+.BaidehiVarty-pirates { background-image: url('../img/targetcon/BaidehiVarty.jpg'); }
+.MaheshVarty-pirates { background-image: url('../img/targetcon/MaheshVarty.jpg'); }
+.AradhnaChaudhari-pirates { background-image: url('../img/targetcon/AradhnaChaudhari.jpg'); }
+.MumtazMeda-pirates { background-image: url('../img/targetcon/MumtazMeda.jpg'); }
+.Farah-pirates { background-image: url('../img/targetcon/Farah.jpg'); }
+.LyleColbert-pirates, .JamelRemick-pirates, .DylonSwanson-pirates, .CarrolFulgham-pirates, .LaverneGuillot-pirates { background-image: url('../img/targetcon/LyleColbert.jpg'); }
+.GopalKant-pirates, .SatyendraJohal-pirates { background-image: url('../img/targetcon/GopalKant.jpg'); }
+.ArvalanMand-pirates, .TrambakBal-pirates, .DevinderChhabra-pirates { background-image: url('../img/targetcon/ArvalanMand.jpg'); }
+.MortieORegan-pirates, .PhilipMilner-pirates, .LongSheahan-pirates, .JedMatsumoto-pirates, .FairlieSalvato-pirates { background-image: url('../img/targetcon/MortieORegan.jpg'); }
+.HemantBalan-pirates, .ChandrayanBora-pirates, .SiddarthMogul-pirates, .MahmoodSampath-pirates { background-image: url('../img/targetcon/HemantBalan.jpg'); }
+.JayBrahmbhatt-pirates, .BhushanRatti-pirates, .TrilokBalan-pirates, .KashiRadhakrishnan-pirates { background-image: url('../img/targetcon/JayBrahmbhatt.jpg'); }
+.JereDaw-pirates, .GregorioMarkovich-pirates, .StephanMiddlebrooks-pirates { background-image: url('../img/targetcon/JereDaw.jpg'); }
+.EverettBernabe-pirates, .DanialNathaniel-pirates, .RufusEhrhart-pirates, .EthanPlaster-pirates, .BrandenDupuis-pirates { background-image: url('../img/targetcon/EverettBernabe.jpg'); }
+.JerameyZiemba-pirates, .FaustinoGoad-pirates, .ChristoperDefazio-pirates, .CyrilMonn-pirates { background-image: url('../img/targetcon/JerameyZiemba.jpg'); }
+.DeweyMacfarlane-pirates, .KirbyFaulkner-pirates, .ShonAbrahams-pirates, .ZackaryPullman-pirates { background-image: url('../img/targetcon/DeweyMacfarlane.jpg'); }
+.KalyanKapur-pirates, .MilanMukherjee-pirates, .BadrinathSami-pirates, .GulzarKade-pirates { background-image: url('../img/targetcon/KalyanKapur.jpg'); }
+.SatyajeetSengupta-pirates, .GajendraMahajan-pirates { background-image: url('../img/targetcon/SatyajeetSengupta.jpg'); }
+.SadashivKohli-pirates, .GirilalDugar-pirates, .ChandrashekharKannan-pirates { background-image: url('../img/targetcon/SadashivKohli.jpg'); }
+.AjimatKusumo-pirates { background-image: url('../img/targetcon/AjimatKusumo.jpg'); }
+.VaishviMore-pirates { background-image: url('../img/targetcon/VaishviMore.jpg'); }
+.JaladhijaMore-pirates { background-image: url('../img/targetcon/JaladhijaMore.jpg'); }
+.RahulPatil-pirates { background-image: url('../img/targetcon/RahulPatil.jpg'); }
+.KirtiMathew-pirates { background-image: url('../img/targetcon/KirtiMathew.jpg'); }
+.DevLivan-pirates, .AmitabhChia-pirates, .MadhvanPant-pirates { background-image: url('../img/targetcon/DevLivan.jpg'); }
+.BalkishanNarine-pirates { background-image: url('../img/targetcon/BalkishanNarine.jpg'); }
+.CarltonSmith-pirates { background-image: url('../img/targetcon/CarltonSmith-Ambrose.jpg'); }
+.JoyoYani-pirates { background-image: url('../img/targetcon/JoyoYani.jpg'); }
+.TorresPiombo-pirates { background-image: url('../img/targetcon/TorresPiombo-Ambrose.jpg'); }
+.GregoryMYeager-pirates { background-image: url('../img/targetcon/GregoryMYeager-Ambrose.jpg'); }
+.OrsonMills-pirates { background-image: url('../img/targetcon/OrsonMills-Ambrose.jpg'); }
+.SonuBhakta-pirates { background-image: url('../img/targetcon/SonuBhakta.jpg'); }
+.LihuaHe-pirates { background-image: url('../img/targetcon/LihuaHe.jpg'); }
+
 /***** Objectives *****/
 /*** Mission Objectives ***/
 .DNASpecificVirus { background-image: url('../img/obj/DNA%20Specific%20Virus.png'); }
@@ -2574,6 +2641,7 @@ div[class^="ElusiveTarget"], div[class^="UnassignedTarget"] { background-image: 
 .EthersPrize { background-image: url('../img/camera/EthersPrize.png'); }
 .FinalRestingPlace { background-image: url('../img/camera/FinalRestingPlace.png'); }
 .SniperStudies { background-image: url('../img/camera/SniperStudies.png'); }
+.ThreepwoodDay { background-image: url('../img/camera/ThreepwoodDay.png'); }
 
 /* The Icon */
 .TimetoMeettheFans { background-image: url('../img/obj/Time%20to%20Meet%20the%20Fans.png'); }
@@ -2609,6 +2677,7 @@ div[class^="ElusiveTarget"], div[class^="UnassignedTarget"] { background-image: 
 .MarketplaceofIdeas { background-image: url('../img/camera/MarketplaceofIdeas.png'); }
 .AnEyeontheEye { background-image: url('../img/camera/AnEyeontheEye.png'); }
 .PhotoOpAbiati { background-image: url('../img/camera/PhotoOpAbiati.png'); }
+.ThreepwoodDusk { background-image: url('../img/camera/ThreepwoodDusk.png'); }
 
 /* The Author */
 .TwoforthePriceofNone { background-image: url('../img/obj/Two%20for%20the%20Price%20of%20None.png'); }
@@ -2627,6 +2696,7 @@ div[class^="ElusiveTarget"], div[class^="UnassignedTarget"] { background-image: 
 .PaintNotBlood { background-image: url('../img/camera/PaintNotBlood.png'); }
 .CassandraSnow { background-image: url('../img/camera/CassandraSnow.png'); }
 .BatOmen { background-image: url('../img/camera/BatOmen.png'); }
+.ThreepwoodDark { background-image: url('../img/camera/ThreepwoodDark.png'); }
 
 /** Marrakesh **/
 /* A Gilded Cage */
@@ -3288,6 +3358,10 @@ div[class^="ElusiveTarget"], div[class^="UnassignedTarget"] { background-image: 
 .NaturesBounty { background-image: url('../img/obj/NaturesBounty.png'); }
 .ChessAnyone { background-image: url('../img/obj/ChessAnyone.png'); }
 .TalktotheHand { background-image: url('../img/obj/TalktotheHand.png'); }
+.RogueNone { background-image: url('../img/obj/RogueNone.png'); }
+.HowTheMightyWillFall { background-image: url('../img/obj/HowTheMightyWillFall.png'); }
+.OutOfControl { background-image: url('../img/obj/OutOfControl.png'); }
+.SafetyDance { background-image: url('../img/obj/SafetyDance.png'); }
 .GoneFishin { background-image: url('../img/obj/GoneFishin.png'); }
 .HandyMan { background-image: url('../img/obj/HandyMan.png'); }
 .FishermansFriend { background-image: url('../img/obj/FishermansFriend.png'); }
@@ -3305,6 +3379,8 @@ div[class^="ElusiveTarget"], div[class^="UnassignedTarget"] { background-image: 
 .TankerMeLater { background-image: url('../img/camera/TankerMeLater.png'); }
 .FortySevenFeetUp { background-image: url('../img/camera/FortySevenFeetUp.png'); }
 .MightyPirate { background-image: url('../img/camera/MightyPirate.png'); }
+.WhoLivesInaBarrel { background-image: url('../img/camera/WhoLivesInaBarrel.png'); }
+.WhoLivesInaBathtub { background-image: url('../img/camera/WhoLivesInaBathtub.png'); }
 
 /***** Complications *****/
 .NoRecordings { background-image: url('../img/comp/NoRecordings.png'); }
