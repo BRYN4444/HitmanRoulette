@@ -39,7 +39,32 @@ There may be the odd conflicting trait that changed between releases in this tri
 
 This was a hobby project I started in 2016/17 and have worked on during my free time as a way to brush up on my simple javascript, jQuery, and CSS knowledge as well as giving me more reason to play these new Hitman games well after unlocking everything. As such, I've only tested this using the browsers I frequent: Firefox and Chrome. If you find any issues or glaring conflicts with Roulette results, let me know [via GitHub](https://github.com/BRYN4444/HitmanRoulette/issues) or [on Hitman Forum](https://hitmanforum.com/t/13107) and I'll try and address it when I get the chance. - [BRYN](http://bryn.info/)
 
-### Latest Updates:
+### Latest Updates:126
+
+**August 6th, 2022**
+* **HITMAN III:**
+  * **Shadows in the Water:**
+    * **Contract Mode Targets:** 126 Added.
+    * **Extra Objectives:** 4 more added.
+	* **Photo Objectives:** 2 more added.
+* **HITMAN 2:**
+  * **Three-headed Serpent:**
+    * **Contract Mode Targets:** 1 more added. Character crossover with "Shadows in the Water".
+* **HITMAN:**
+  * **World Of Tomorrow:**
+    * **Photo Objectives:** 1 more added.
+  * **Landslide:**
+    * **Photo Objectives:** 1 more added.
+  * **The Author:**
+    * **Photo Objectives:** 1 more added.
+* **Current Plans:**
+  * Going through some of the missions that have a low count of Contract Mode NPCs and adding more.
+>**Bug Hunting:** Please make a post [via GitHub](https://github.com/BRYN4444/HitmanRoulette/issues) or [on Hitman Forum](https://hitmanforum.com/t/13107) if you:
+>* Experience any graphical issues while using the Roulette in 4K, or on phones/tablets.
+>* Notice inconsistencies or impossibilities generated if using the Roulette while playing HITMAN or HITMAN 2.
+>* Have troubles or inqueries with the new Stream Overlay.
+
+---
 
 **July 28th, 2022**
 * **HITMAN III:**
@@ -56,12 +81,6 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 * **Roulette:**
   * **Roulette Settings - Extra Requirements:**	
     * **Include Secret Exits**: The "Secret" option from "Force Start/Exit" is now its own setting. This way you can have Exit Only and Secret Exits at the same time.
-* **Current Plans:**
-  * Contracts Mode Support for "Shadows in the Water".
->**Bug Hunting:** Please make a post [via GitHub](https://github.com/BRYN4444/HitmanRoulette/issues) or [on Hitman Forum](https://hitmanforum.com/t/13107) if you:
->* Experience any graphical issues while using the Roulette in 4K, or on phones/tablets.
->* Notice inconsistencies or impossibilities generated if using the Roulette while playing HITMAN or HITMAN 2.
->* Have troubles or inqueries with the new Stream Overlay.
 
 ---
 

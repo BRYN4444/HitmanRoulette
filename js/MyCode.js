@@ -1,8 +1,8 @@
 //Enjoy looking at the ametuer code work I've done.
 $(document).ready(function() {
 	/******Latest Updates******/
-	$("#features p#title").text("Last Updated: July 28th, 2022"); /*Roulette Features*/
-	$("#features .updatenotes").html('<b><a href="https://github.com/BRYN4444/HitmanRoulette#latest-updates" target="_blank">Update:</a></b> Ambrose Island Added! Soon: Contracts Mode Support.');
+	$("#features p#title").text("Last Updated: August 6th, 2022"); /*Roulette Features*/
+	$("#features .updatenotes").html('<b><a href="https://github.com/BRYN4444/HitmanRoulette#latest-updates" target="_blank">Update:</a></b> Ambrose Island Contracts Mode Targets Added!');
 	$("#overlayguide p#title").text("Last Updated: July 13th, 2022 (BETA)"); /*Stream Overlay*/
 	//$("#overlayguide .updatenotes").html('???'); /*Needs to be added to Overlay.html*/
 
