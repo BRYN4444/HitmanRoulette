@@ -41,6 +41,23 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 
 ### Latest Updates:
 
+**August 7th, 2022**
+* **Roulette:**
+  * **Roulette Settings - Roulette Mode:**
+    * **Contract Mode Roulette:** Selecting "Hunt" wasn't properly removing the Intel listing of targets.
+* **HITMAN 2:**
+  * **Hokkaido Snow Festival:**
+    * **Starting Points:** "Tobias Rieper's Suite" can now be selectable. However, it is only possible through HITMAN III. As such, "H2: Restaurant" is also listed so HITMAN 2 players don't need to re-roll. 
+* **Current Plans:**
+  * Changing how the Roulette's "modes" are selected and allowing subsections of Contracts Mode NPCs to be chosen instead of always everyone.
+  * Might soon go through some of the missions that have a low count of Contract Mode NPCs and adding more.
+>**Bug Hunting:** Please make a post [via GitHub](https://github.com/BRYN4444/HitmanRoulette/issues) or [on Hitman Forum](https://hitmanforum.com/t/13107) if you:
+>* Experience any graphical issues while using the Roulette in 4K, or on phones/tablets.
+>* Notice inconsistencies or impossibilities generated if using the Roulette while playing HITMAN or HITMAN 2.
+>* Have troubles or inqueries with the new Stream Overlay.
+
+---
+
 **August 6th, 2022**
 * **HITMAN III:**
   * **Shadows in the Water:**
@@ -57,12 +74,6 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
     * **Photo Objectives:** 1 more added.
   * **The Author:**
     * **Photo Objectives:** 1 more added.
-* **Current Plans:**
-  * Going through some of the missions that have a low count of Contract Mode NPCs and adding more.
->**Bug Hunting:** Please make a post [via GitHub](https://github.com/BRYN4444/HitmanRoulette/issues) or [on Hitman Forum](https://hitmanforum.com/t/13107) if you:
->* Experience any graphical issues while using the Roulette in 4K, or on phones/tablets.
->* Notice inconsistencies or impossibilities generated if using the Roulette while playing HITMAN or HITMAN 2.
->* Have troubles or inqueries with the new Stream Overlay.
 
 ---
 
@@ -129,14 +140,3 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 * **Other Fixes:**
   * An NPC previously removed due to compatibility between games was still in the data for a secondary mission. They are now properly removed.
   * Reworded a part of the Compatibility & Issues section to include the HITMAN Trilogy & Add-Ons Bundle, as well as other minor additions/changes to About & Help.
-
----
-
-**May 10th, 2022**
-* **Roulette:**
-  * **Select Missions:** Reorganized the submenus closer to the campaign selection menu in HITMAN III. This thins out the denser menus, and groups together the sparser ones.
-  * **Roulette Appearance:** For the "Launch Red" and "GOTY White" Theme, the location image background were using CSS filters that were causing lag. The filters have been removed, stopping this lag, and background images were added that are theme stylized instead.
-* **Other Fixes:**
-  * When tabbing back to the Roulette main page after generating a roulette, the location background image would be missing.
-  * Updated a number of icons to better match their in-game glyphs, as well as adding icons for the new choices under Select Missions.
-  * Minor theme adjustments.

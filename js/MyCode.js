@@ -1,7 +1,7 @@
 //Enjoy looking at the ametuer code work I've done.
 $(document).ready(function() {
 	/******Latest Updates******/
-	$("#features p#title").text("Last Updated: August 6th, 2022"); /*Roulette Features*/
+	$("#features p#title").text("Last Updated: August 7th, 2022"); /*Roulette Features*/
 	$("#features .updatenotes").html('<b><a href="https://github.com/BRYN4444/HitmanRoulette#latest-updates" target="_blank">Update:</a></b> Ambrose Island Contracts Mode Targets Added!');
 	$("#overlayguide p#title").text("Last Updated: July 13th, 2022 (BETA)"); /*Stream Overlay*/
 	//$("#overlayguide .updatenotes").html('???'); /*Needs to be added to Overlay.html*/
@@ -1556,7 +1556,7 @@ $(document).ready(function() {
 				$("#entry-nameplate p#subtitle").text($("#input_entry").val());
 				$("#exit-nameplate p#subtitle").text("Any Exit");
 				$("#overlayinfo-exitreq").text("");
-				$("#overlayinfo-entry").attr("class",$("#input_mission").val() + "-start-" + $("#input_entry").val().replace(/\s|,|'|“|”|-|\?|\!|\(|\)|\./g, ""));
+				$("#overlayinfo-entry").attr("class",$("#input_mission").val() + "-start-" + $("#input_entry").val().replace(/\s|,|'|“|”|-|:|\?|\!|\(|\)|\./g, ""));
 				$("#overlayinfo-exit").attr("class","any-exit");
 			} else if($("#input_entry").val() == "" && $("#input_exit").val().split('|')[0]) { //Any Entrance
 				$("#entry-nameplate p#subtitle").text("Any Entrance");
@@ -1568,7 +1568,7 @@ $(document).ready(function() {
 				$("#entry-nameplate p#subtitle").text($("#input_entry").val());
 				$("#exit-nameplate p#subtitle").text($("#input_exit").val().split("|")[0]);
 				$("#overlayinfo-exitreq").text($("#input_exit").val().split("|")[1]);
-				$("#overlayinfo-entry").attr("class",$("#input_mission").val() + "-start-" + $("#input_entry").val().replace(/\s|,|'|“|”|-|\?|\!|\(|\)|\./g, ""));
+				$("#overlayinfo-entry").attr("class",$("#input_mission").val() + "-start-" + $("#input_entry").val().replace(/\s|,|'|“|”|-|:|\?|\!|\(|\)|\./g, ""));
 				$("#overlayinfo-exit").attr("class",$("#input_mission").val() + "-exit-" + $("#input_exit").val().split('|')[0].replace(/\s|,|'|“|”|-|\?|\!|\(|\)|\./g, ""));
 			}
 		}
