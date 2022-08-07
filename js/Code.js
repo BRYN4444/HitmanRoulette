@@ -478,6 +478,23 @@ function writeEverything(result) {
 		document.getElementById("input_entry").value = result.entry;
 		document.getElementById("input_exit").value = "Bicycle|";
 		document.getElementById("exitreq").innerHTML = "";
+	} else if (result.missionCode == "festival" && result.entry == "Tobias Rieper's Suite") { // Hokkaido Snow Festival - Tobias Rieper's Suite works in H3 only
+		document.getElementById("travel").innerHTML =
+			"<div id='entry' class='festival-start-TobiasRiepersSuite'><div id='nameplate'><span><p id='title'>Starting Location (H2: Restaurant)</p><p id='subtitle'>Tobias Rieper's Suite</p></span></div></div><div id='exit' class='" + result.missionCode + "-exit-" + result.exit.split('|')[0].replace(/\s|'|\.|-|\||\(|\)/g, "") + "'><div id='nameplate'><span><p id='title'>Exit Location <span id='exitreq'></span></p><p id='subtitle'>" + result.exit.split('|')[0] + "</p></span></div></div>";
+		document.getElementById("input_entry").value = "Tobias Rieper's Suite (H2: Restaurant)";
+		if (result.exit == "Any Exit Location") {
+			document.getElementById("input_exit").value = "";
+			document.getElementById("exitreq").innerHTML = "";	
+		} else {
+			if(result.exit.split('|')[1] != null) {
+				document.getElementById("input_exit").value = result.exit.split('|')[0] + "|" + result.exit.split('|')[1];
+				document.getElementById("exitreq").innerHTML = result.exit.split('|')[1];		
+			}
+			else {
+				document.getElementById("input_exit").value = result.exit.split('|')[0] + "|";
+				document.getElementById("exitreq").innerHTML = "";
+			};
+		};
 	} else if (result.missionCode == "vineyard" && result.exit == "Tango With Diana" && mode != "MAIN") { // Mendoza - Tango Exit Disabled outside Mission Mode
 		document.getElementById("travel").innerHTML =
 			"<div id='entry' class='vineyard-start-" + result.entry.replace(/\s|'|\.|-|\(|\)/g, "") + "'><div id='nameplate'><span><p id='title'>Starting Location</p><p id='subtitle'>" + result.entry + "</p></span></div></div><div id='exit' class='vineyard-exit-ThroughTheGrapefields'><div id='nameplate'><span><p id='title'>Exit Location <span id='exitreq'></span></p><p id='subtitle'>Through The Grapefields</p></span></div></div>";
@@ -622,13 +639,13 @@ function writeEverything(result) {
 				document.getElementById("input_disguise" + (i+1)).value = result.disguises[i];
 			};
 			
-			if(result.targets[i].split('|')[1] != null || mode == "CONHARD") { // Contracts Mode Target Intel Input
-				document.getElementById("input_intel" + (i+1)).value = result.targets[i].split('|')[1];
-			}
-			else {
+			if(result.targets[i].split('|')[1] == null || mode == "CONHARD") { // Contracts Mode Target Intel Input
 				document.getElementById("subplate" + (i+1)).style.setProperty("background-image", "none", "important");//hides intel icon when not needed
 				document.getElementById("inteltoggle" + (i+1)).style.setProperty("display", "none", "important");//also remove inteltoggle in target generation
 				document.getElementById("input_intel" + (i+1)).value = "";
+			}
+			else {
+				document.getElementById("input_intel" + (i+1)).value = result.targets[i].split('|')[1];
 			};
 		}
 		else { // no more targets
