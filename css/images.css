@@ -295,7 +295,7 @@ div[class$="start-AnyStartingLocation"], .any-start { background-image: url('../
 .terrorists-start-SouthernFarmPerimeter, .mercenary-start-SouthernFarmPerimeter { background-image: url('../img/entry/Southern%20Farm%20Perimeter.png'); }
 .terrorists-start-UndercoverintheFarmhouse, .mercenary-start-UndercoverintheFarmhouse { background-image: url('../img/entry/Undercover%20in%20the%20Farmhouse.png'); }
 .terrorists-start-WaterTower, .mercenary-start-WaterTower { background-image: url('../img/entry/Water%20Tower.png'); }
-.heart-start-TobiasRiepersSuite, .festival-start-TobiasRiepersSuite, .controller-start-TobiasRiepersSuite { background-image: url('../img/entry/Tobias%20Rieper%27s%20Suite.png'); }
+.heart-start-TobiasRiepersSuite, .festival-start-TobiasRiepersSuite, .festival-start-TobiasRiepersSuiteH2Restaurant, .controller-start-TobiasRiepersSuite { background-image: url('../img/entry/Tobias%20Rieper%27s%20Suite.png'); }
 .heart-start-Spa, .festival-start-Spa, .controller-start-Spa { background-image: url('../img/entry/Spa.png'); }
 .heart-start-InfiltratingAlongtheMountainPath, .festival-start-InfiltratingAlongtheMountainPath, .controller-start-InfiltratingAlongtheMountainPath { background-image: url('../img/entry/Infiltrating%20Along%20the%20Mountain%20Path.png'); }
 .heart-start-Restaurant, .festival-start-Restaurant, .controller-start-Restaurant { background-image: url('../img/entry/Restaurant.png'); }
