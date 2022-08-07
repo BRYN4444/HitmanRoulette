@@ -2544,7 +2544,7 @@ var sf = {
 	targetList: ["Dmitri Fedorov"],
 	contractTargets: ["Dmitri Fedorov|Former arms dealer turned skummy business owner. Wandering GAMA's public areas.",
 	"Yuki Yamazaki|Cutthroat Yakuza lawyer. Roaming between GAMA’s luxury areas and her room."],
-	entry: ["Spa","Infiltrating Along the Mountain Path","Restaurant","Undercover in the Staff Quarters","Undercover in the Kitchen","Undercover in the Garden","Morgue","Undercover in the Operating Theater"],
+	entry: ["Spa","Infiltrating Along the Mountain Path","Restaurant","Undercover in the Staff Quarters","Undercover in the Kitchen","Undercover in the Garden","Morgue","Undercover in the Operating Theater","Tobias Rieper's Suite"],
 	exit: ["Helicopter","Snowmobile","Mountain Path","Cable Car"],
 	eexit: [],
 	disguises: ["Any Suit / Ninja","Baseball Player","Hospital Director","Chief Surgeon","Yoga Instructor","Helicopter Pilot","Motorcyclist",
