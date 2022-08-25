@@ -47,6 +47,13 @@
 				<button id="save">Save As Textfile</button>					
 				<button id="close">Close</button>
 			</div>
+			<div id="descwrap" class="hidden">
+				<div id="popup">
+					<h1 id="desc-h">Settings Description Title</h1>
+					<p id="desc-p">Settings Description Text</p>
+				</div>				
+				<button id="close">Close</button>
+			</div>
 			<div id="overlaywrap" class="hidden">
 				<div id="popup">
 					<h1>Stream Overlay BETA</h1>
@@ -75,18 +82,18 @@
 							<br /><b>To prevent confusion, set "Objectives" to "Always Off" in the game's Options menu under Gameplay.</b>
 						</li>
 						<li>
-							The overlay's header allows adjusting position & text size, and has a Return to Roulette button to swap back.
+							The Overlay's header allows adjusting position & text size, and has a Return to Roulette button to swap back.
 							<br />When adjusting, remember that Picture In Picture alerts appears in the top-left corner.
 						</li>
 						<li>Cosmetic adjustments are available in the Roulette Settings on that website/browser source.</li>
 					</ol><br />
 					<p><b>Overlay Interaction Controls:</b></p>
 					<ul>
-						<li>Prerequisit Objectives (things to set before you start a mission), can be hidden to help reduce clutter. Just click the top prompt.</li>
+						<li>Prerequisite Objectives (things to set before you start a mission), can be hidden to help reduce clutter. Just click the top prompt.</li>
 						<li>Target and mission/extra/photo Objectives can be marked as complete by clicking them. Clicking them again unmarks them.</li>
 						<li>Most Objectives have an intel icon when hovered over. Clicking it shows the objective as it looks on the Roulette; with images and extra text.</li>
 						<li>If a Time Limit is enforced, clicking that Objective begins a timer for the listed amount. Clicking it again restarts this timer.</li>
-						<li>Returning to the Roulette and back to the Overlay will restore the state of these listed interations.</li>
+						<li>Returning to the Roulette and back to the Overlay will restore the state of these listed interactions.</li>
 					</ul>
 				</div>				
 				<button id="close">Close</button>
@@ -1078,10 +1085,10 @@
 					<span>Overlay Appearance</span>
 				</div>
 				<div id="settings_roulette">
-					<span>Roulette Mode</span>
+					<span>Roulette Modes</span>
 				</div>
 				<div id="settings_kills">
-					<span>Kill Requirements</span>
+					<span>Kill <br />Requirements</span>
 				</div>
 				<div id="settings_extras">
 					<span>Extra Requirements</span>
@@ -1140,25 +1147,44 @@
 						<span id="range"><input id="volumeslider" type="range" min="0" max="100" value="50" />
 						[<span id="volumeamount">50</span>]</span>
 					</label>
-					<label id="mode_m" class="mobile" style="display:none;" data-hover="Targets and any main objectives are pulled from the standard mission.<br />This is the default option.<br /><br /><b>[If you were previously using Contracts Mode Roulette, you may need to reselect missions when enabling Mission Mode Roulette.]</b>">[INFO]:</label>
-					<label id="mode_mission" class="on" style="display:none;" data-hover="Targets and any main objectives are pulled from the standard mission.<br />This is the default option.<br /><br /><b>[If you were previously using Contracts Mode Roulette, you may need to reselect missions when enabling Mission Mode Roulette.]</b>">
-						<b>Mission Mode Roulette</b><span>[On]</span>
+					<label id="mode_m" class="mobile" style="display:none;" data-hover="Mission Mode: Targets and any main objectives are those from the standard mission.<br /><br />Contracts Mode: Targets are pulled from a selection of NPCs within the contracts mode version of a mission. Thus, you could immediately publish any successful run upon completion.<br /><br /><b>[Missions unavailable for contracts mode in H3 will be toggled off and locked while Contracts Mode Roulette is enabled. Reselect missions when switching between modes.]</b>">[INFO]:</label>
+					<label id="mode_type" class="mission" style="display:none;" data-hover="Mission Mode: Targets and any main objectives are those from the standard mission.<br /><br />Contracts Mode: Targets are pulled from a selection of NPCs within the contracts mode version of a mission. Thus, you could immediately publish any successful run upon completion.<br /><br /><b>[Missions unavailable for contracts mode in H3 will be toggled off and locked while Contracts Mode Roulette is enabled. Reselect missions when switching between modes.]</b>">
+						<b>Roulette Type</b><span>[Mission&nbsp;Mode]</span>
 					</label>
-					<label id="mode_m" class="mobile" style="display:none;" data-hover="Targets are pulled from a selection of NPCs within the contracts mode version of a mission. Thus, you could immediatly publish any successful run upon completion.<br /><br /><b>[Missions unavailable for contracts mode in H3 will be toggled off and locked while Contracts Mode Roulette is enabled. Reselect missions when enabling Mission Mode Roulette.]</b>Intel: A brief description of the target's last known whereabouts are listed. This may include in-game cardinal directions or area text listed on the Map screen.<br />Hunt: No target location information is given. You must confirm target identities before eliminating them.<br />Any: Target are unassigned. Pick any NPC, but use the generated elimination conditions.">[INFO]:</label>
-					<label id="mode_con" style="display:none;" data-hover="Targets are pulled from a selection of NPCs within the contracts mode version of a mission. Thus, you could immediatly publish any successful run upon completion.<br /><br /><b>[Missions unavailable for contracts mode in H3 will be toggled off and locked while Contracts Mode Roulette is enabled. Reselect missions when enabling Mission Mode Roulette.]</b>Intel: A brief description of the target's last known whereabouts are listed. This may include in-game cardinal directions or area text listed on the Map screen.<br />Hunt: No target location information is given. You must confirm target identities before eliminating them.<br />Any: Target are unassigned. Pick any NPC, but use the generated elimination conditions.">
-						<b>Contracts Mode Roulette</b><span>[Off]</span>
+					<label id="mode_m" class="mobile" style="display:none;" data-hover="Determine what the Roulette assigns you in Contracts Mode Roulette.<br /><br />All Types: Any NPC can appear as a Target. (Default)<br /><br />Custom: Use the checkboxes below to select the types of NPCs that can appear as Targets.<br /><br />Unassigned: NPC names aren't listed; only elimination conditions will be shown. Determine the NPC Target(s) yourself. Select this and set the Target Amount appropriately if you're playing Elusive Targets.">[INFO]:</label>
+					<label id="mode_targselect" class="disabled all" style="display:none;" data-hover="Determine what the Roulette assigns you in Contracts Mode Roulette.<br /><br />All Types: Any NPC can appear as a Target. (Default)<br /><br />Custom: Use the checkboxes below to select the types of NPCs that can appear as Targets.<br /><br />Unassigned: NPC names aren't listed; only elimination conditions will be shown. Determine the NPC Target(s) yourself. Select this and set the Target Amount appropriately if you're playing Elusive Targets.">
+						<b>Target Selection</b><span>[All&nbsp;Types]</span>
+					</label>
+					<label id="mode_m" class="mobile" style="display:none;" data-hover="Unique: NPCs that stand out from the rest. Like VIPs or those with distinct outfits, roles, or actions.<br /><br />Civilian: NPCs local to the location,or guests to the event. Non-hostile loiterers.<br /><br />Staff: NPCs tending to others or working in the area. Like cooks, landscapers, or servants.<br /><br />Guard: NPCs protecting a person or area. Armed and potentially hostile.<br /><br /><b>[Substitutions will be made should a chosen Mission be missing or have a low amount of NPCs of the checked type. Example: Nightcall NPCs are mostly Guards.]</b>">[INFO]:</label>
+					<label id="mode_targets" class="disabled" style="display:none;" data-hover="Unique: NPCs that stand out from the rest. Like VIPs or those with distinct outfits, roles, or actions.<br /><br />Civilian: NPCs local to the location,or guests to the event. Non-hostile loiterers.<br /><br />Staff: NPCs tending to others or working in the area. Like cooks, landscapers, or servants.<br /><br />Guard: NPCs protecting a person or area. Armed and potentially hostile.<br /><br /><b>[Substitutions will be made should a chosen Mission be missing or have a low amount of NPCs of the checked type. Example: Nightcall NPCs are mostly Guards.]</b>">
+						<b style="display:none;">Target Types</b>
+						<label id="mode_chequnique" class="on" for="chequnique" style="display:none;">
+							<input type="checkbox" id="chequnique" value="true" checked disabled />
+							<b>Unique</b>
+						</label>
+						<label id="mode_cheqcivil" class="on" for="cheqcivil" style="display:none;">
+							<input type="checkbox" id="cheqcivil" value="true" checked disabled />
+							<b>Civilian</b>
+						</label>
+						<label id="mode_cheqstaff" class="on" for="cheqstaff" style="display:none;">
+							<input type="checkbox" id="cheqstaff" value="true" checked disabled />
+							<b>Staff</b>
+						</label>
+						<label id="mode_cheqguard" class="on" for="cheqguard" style="display:none;">
+							<input type="checkbox" id="cheqguard" value="true" checked disabled />
+							<b>Guard</b>
+						</label>						
 					</label>
 					<label id="mode_m" class="mobile" style="display:none;" data-hover="Force the amount of targets in Contracts Mode Roulette. First enable the mode, and then use this slider to set how many targets could appear.<br /><br />#: By default, any amount of targets upto 5 can be generated.">[INFO]:</label>
-					<label id="mode_conamount" style="display:none;" data-hover="Force the amount of targets in Contracts Mode Roulette. First enable the mode, and then use this slider to set how many targets could appear.<br /><br />#: By default, any amount of targets upto 5 can be generated.">
-						<b>Contracts Target Amount</b>
-						<span id="range"><input id="conslider" type="range" min="0" max="5" value="0" />
+					<label id="mode_conamount" class="disabled" style="display:none;" data-hover="Force the amount of targets in Contracts Mode Roulette. First enable the mode, and then use this slider to set how many targets could appear.<br /><br />#: By default, any amount of targets upto 5 can be generated.">
+						<b>Target Amount</b>
+						<span id="range"><input id="conslider" type="range" min="0" max="5" value="0" disabled />
 						[<span id="conamount">#</span>]</span>
 					</label>
-					<label id="mode_m" class="mobile" style="display:none;" data-hover="Make the difficult task of eliminating elusive targets even harder. Set the number of targets there are (making sure to select the appropriate mission) and issue the roulette.<br /><br />Target names are not listed here, so assigning what conditions to whom is player choice. Just don't cross your kill conditions amongst multiple targets.<br /><br />The roulette also doesn't account for unique starting/exit points or objectives.">[INFO]:</label>
-					<label id="mode_et" style="display:none;" data-hover="Make the difficult task of eliminating elusive targets even harder. Set the number of targets there are (making sure to select the appropriate mission) and issue the roulette.<br /><br />Target names are not listed here, so assigning what conditions to whom is player choice. Just don't cross your kill conditions amongst multiple targets.<br /><br />The roulette also doesn't account for unique starting/exit points or objectives.">
-						<b>Elusive Targets Roulette</b>
-						<span id="range"><input id="etslider" type="range" min="0" max="3" value="0" />
-						[<span id="etamount">0</span>]</span>
+					<label id="mode_m" class="mobile" style="display:none;" data-hover="Only available for Contracts Mode Roulette.<br /><br />On: A brief description of the target's last known whereabouts are listed. This may include in-game cardinal directions or area text listed on the Map screen.<br /><br />Off: No target location information is given. You must confirm target identities before eliminating them.">[INFO]:</label>
+					<label id="mode_intel" class="disabled" for="intel" style="display:none;" data-hover="Only available for Contracts Mode Roulette.<br /><br />On: A brief description of the target's last known whereabouts are listed. This may include in-game cardinal directions or area text listed on the Map screen.<br /><br />Off: No target location information is given. You must confirm target identities before eliminating them.">
+						<input type="checkbox" id="intel" value="true" checked disabled />
+						<b>Contracts Intel</b><span>[On]</span>
 					</label>
 					<label id="mode_m" class="mobile" style="display:none;" data-hover="On: Generated Disguise and Elimination Methods are hidden until clicked at your discretion. This allows meta play when using the Roulette. Example: Reveal subsequent target conditions after the previous ones are eliminated. Note: The Export Roulette option is disabled until all conditions are revealed to avoid cheating.<br /><br />Off: All generated conditions are displayed.">[INFO]:</label>
 					<label id="mode_mask" for="mask" style="display:none;" data-hover="On: Generated Disguise and Elimination Methods are hidden until clicked at your discretion. This allows meta play when using the Roulette. Example: Reveal subsequent target conditions after the previous ones are eliminated. Note: The Export Roulette option is disabled until all conditions are revealed to avoid cheating.<br /><br />Off: All generated conditions are displayed.">
@@ -1189,13 +1215,13 @@
 						<input type="checkbox" id="accident" value="true" checked />
 						<b>Specific Accidents</b><span>[On]</span>
 					</label>
-					<label id="kill_m" class="mobile" style="display:none;" data-hover="On: Non-specific kills can appear as elimination methods. There are the broadest choices, perfect to roulette newcomers.<br /><br />Off: Non-specific kills do not appear as elimination methods.">[INFO]:</label>
-					<label id="kill_generic" for="generic" style="display:none;" data-hover="On: Non-specific kills can appear as elimination methods. There are the broadest choices, perfect to roulette newcomers.<br /><br />Off: Non-specific kills do not appear as elimination methods.">
+					<label id="kill_m" class="mobile" style="display:none;" data-hover="On: Non-specific kills can appear as elimination methods. These are the broadest choices, perfect to roulette newcomers.<br /><br />Off: Non-specific kills do not appear as elimination methods.">[INFO]:</label>
+					<label id="kill_generic" for="generic" style="display:none;" data-hover="On: Non-specific kills can appear as elimination methods. These are the broadest choices, perfect to roulette newcomers.<br /><br />Off: Non-specific kills do not appear as elimination methods.">
 						<input type="checkbox" id="generic" value="true" checked />
 						<b>Generic Kills</b><span>[On]</span>
 					</label>
-					<label id="extra_m" class="mobile" style="display:none;" data-hover="The roulette will choose start/exit points you must use.<br /><br /><b>[Some Missions gain additional exits after their first playthrough.]</b><br />Both: Starting and exit points are both listed. (Default)<br />Start Only: Starting pont is listed. Find your own exit location.<br />Exit Only: Exit point is listed. Select your own starting location.<br />Off: Nothing is listed. You choose your own start and exit points.">[INFO]:</label>
-					<label id="extra_starex" class="both" style="display:none;" data-hover="The roulette will choose start/exit points you must use.<br /><br /><b>[Some Missions gain additional exits after their first playthrough.]</b><br />Both: Starting and exit points are both listed. (Default)<br />Start Only: Starting pont is listed. Find your own exit location.<br />Exit Only: Exit point is listed. Select your own starting location.<br />Off: Nothing is listed. You choose your own start and exit points.">
+					<label id="extra_m" class="mobile" style="display:none;" data-hover="The roulette will choose start/exit points you must use.<br /><br /><b>[Some Missions gain additional exits after their first playthrough.]</b><br />Both: Starting and exit points are both listed. (Default)<br />Start Only: Starting point is listed. Find your own exit location.<br />Exit Only: Exit point is listed. Select your own starting location.<br />Off: Nothing is listed. You choose your own start and exit points.">[INFO]:</label>
+					<label id="extra_starex" class="both" style="display:none;" data-hover="The roulette will choose start/exit points you must use.<br /><br /><b>[Some Missions gain additional exits after their first playthrough.]</b><br />Both: Starting and exit points are both listed. (Default)<br />Start Only: Starting point is listed. Find your own exit location.<br />Exit Only: Exit point is listed. Select your own starting location.<br />Off: Nothing is listed. You choose your own start and exit points.">
 						<b>Force Start/Exit</b><span>[Both]</span>
 					</label>
 					<label id="extra_m" class="mobile" style="display:none;" data-hover="This setting only works if “Force Start/Exit” is set to “Both” or “Exit Only”.<br /><br />On: Cryptic or hidden exit locations can appear<br /><br />Off: Only the regular exit locations appear.">[INFO]:</label>
@@ -1233,8 +1259,8 @@
 						<input type="checkbox" id="rating" value="true" />
 						<b>Achieve Rating</b><span>[Off]</span>
 					</label>
-					<label id="game_m" class="mobile" style="display:none;" data-hover="Before attempting the roulette, select the difficulty chosen by the roulette before starting the mission. Note that only campaign missions outside of Contracts Mode have alternate difficulties.<br /><br />H2/H3: Casual, Professional, and Master are the difficulties available.<br />H1: Normal and Professional are the difficulties available (HITMAN missions only).<br />Off: Complete the roulette on whatever difficulty to want.">[INFO]:</label>
-					<label id="game_diff" class="off" style="display:none;" data-hover="Before attempting the roulette, select the difficulty chosen by the roulette before starting the mission. Note that only campaign missions outside of Contracts Mode have alternate difficulties.<br /><br />H2/H3: Casual, Professional, and Master are the difficulties available.<br />H1: Normal and Professional are the difficulties available (HITMAN missions only).<br />Off: Complete the roulette on whatever difficulty to want.">
+					<label id="game_m" class="mobile" style="display:none;" data-hover="Lists the difficulty you must set the mission to before you start. Note that only Special Assignments & story missions outside of Contracts Mode have alternate difficulties.<br /><br />H2/H3: Casual, Professional, and Master are the difficulties available.<br />H1: Normal and Professional are the difficulties available (HITMAN missions only).<br />Off: Complete the roulette on whatever difficulty to want.">[INFO]:</label>
+					<label id="game_diff" class="off" style="display:none;" data-hover="Lists the difficulty you must set the mission to before you start. Note that only Special Assignments & story missions outside of Contracts Mode have alternate difficulties.<br /><br />H2/H3: Casual, Professional, and Master are the difficulties available.<br />H1: Normal and Professional are the difficulties available (HITMAN missions only).<br />Off: Complete the roulette on whatever difficulty to want.">
 						<b>Force Difficulty</b><span>[Off]</span>
 					</label>
 					<label id="reset_m" class="mobile" style="display:none;" data-hover="Resets all Roulette Settings to their default state. This does not include Selected Missions or Roulette Appearance.">[INFO]:</label>
@@ -1271,8 +1297,18 @@
 						<option value="MAIN" selected>Main Mission</option>
 						<option value="CONEASY">Contracts Mode: Intel</option>
 						<option value="CONHARD">Contracts Mode: Hunt</option>
-						<option value="CONANY">Contracts Mode: Unassigned Targets</option>
-						<option value="ELUSIVE">Elusive Target</option>
+						<option value="CONANY">Unassigned Targets</option>
+					</select>
+					<select id="targetselect" style="display:none;">
+						<option value="All" selected>All Types</option>
+						<option value="CUSTOM">Custom</option>
+						<option value="UNASSIGNED">Unassigned</option>
+					</select>
+					<select id="targettypes" multiple style="display:none;">
+						<option value="UNIQUE" selected>Unique</option>
+						<option value="CIVILIAN" selected>Civilian</option>
+						<option value="STAFF" selected>Staff</option>
+						<option value="GUARD" selected>Guard</option>
 					</select>
 					<select id="disguise" style="display:none;">
 						<option value="ON" selected>Specific Disguises</option>
@@ -1316,19 +1352,10 @@
 					<p>Hitman Roulette generates a set of random guidelines to follow when playing the HITMAN "World of Assassination" trilogy. It randomizes things such as mission entry and exit points, elimination method and worn disguise, generic and mission specific variables, and even targets for Contracts Mode.</p>
 					<p><a href="https://thekotti.github.io/about.html" target="_blank">The original Hitman Roulette</a> (created by <a href="https://twitter.com/TheKotti" target="_blank">TheKotti</a>) is a more straight forward version that supports Hitman (2016), Hitman 2 (2018), and Hitman: Blood Money.</p>
 					<h1>How To Use</h1>
+					<p><a href="#" id="openoverlayinstructions">Click here to read setup instructions & interaction controls for the Stream Overlay.</a></p>
 					<p>To initiate a roll of the Roulette, click "Issue Roulette" on the <a id="link_roulette" href="#">main page</a>. Use the Undo or Redo arrow buttons that appear at the top to move between generated Roulettes. Save your Roulette as a Textfile using the "Export Roulette" button, also shown on the main page.</p>
 					<p>Most missions from the trilogy are pulled into the Roulette by default. Through the "<a id="link_missions" href="#">Select Missions</a>" option, you can untoggle any missions you're missing or just the ones you don't like.<br />
-					"<a id="link_settings" href="#">Roulette Settings</a>" allow you to change what the Roulette surfaces: You can get more than the regular targets by choosing "Contract Mode Roulette". Dial in the difficulty by toggling "Kill Requirements" like disguises or weapons you'll need to wear or use, "Extra Requirements" like one more objective or sets of complications, and "Gameplay Challenges" that force you to change how you play.</p>
-					<h1>Special Thanks & External Resources</h1>
-					<ul>
-						<li><a href="https://ioi.dk/" target="_blank">IO Interactive</a> for making a great trilogy of games that helped me through some bad days and kept me better occupied here.</li>
-						<li>Niels Bye Nielsen for composing the music in the World Of Assassination Trilogy. Great tracks to hit to.</li>
-						<li>TheKotti, for his <a href="https://thekotti.github.io/about.html" target="_blank">original Hitman Roulette</a> that was the code base and inspiration for this spin-off.</li>
-						<li><a href="http://hitmanmaps.com/" target="_blank">Hitman Interactive Maps</a> by Winterbirds & <a href="https://www.hitmaps.com/" target="_blank">Hitmaps</a> (formerly Hitman 2 Maps) by Mike Koch for being great tools that aided in my data collection.</li>
-						<li><a href="https://github.com/gromo/jquery.scrollbar" target="_target">jQuery CSS Customizable Scrollbar</a> by gromo & <a href="https://www.dte.web.id/2013/02/event-mouse-wheel.html" target="_blank">Event Mouse Wheel</a> by Taufik Nurrohman which I used for style and navigation.</li>
-						<li><a href="http://detectmobilebrowsers.com/" target="_target">Detect Mobile Browsers</a> by Chad Smith, which helped in allowing settings descriptions viewable for mobile via touch.</li>
-						<li><a href="http://keith-wood.name/countdown.html" target="_target">jQuery Countdown</a> by Keith Wood, which is being used in the Stream Overlay for any Time Limit Complications.</li>
-					</ul>
+					"<a id="link_settings" href="#">Roulette Settings</a>" allow you to change what the Roulette surfaces: You can get more than the regular targets by choosing "Contract Mode" as the "Roulette Type". Dial in the difficulty by toggling "Kill Requirements" like disguises or weapons you'll need to wear or use, "Extra Requirements" like one more objective or sets of complications, and "Gameplay Challenges" that force you to change how you play.</p>
 					<h1>Compatibility & Issues</h1>
 					<p>Though you can deselect any location you do not own, by default the Roulette works best with the either:</p>
 					<ul>
@@ -1337,6 +1364,16 @@
 					</ul>
 					<p>There may be the odd conflicting trait that changed between releases in this trilogy, though I've done my best to account for these. It is also important to note that the later the game sequel, the more gear is available to unlock for use. Lastly, since Contract Mode Targets are regular NPCs and Elimination Methods are randomly assigned, not every Target can be killed with every Method easily/silently.</p>
 					<p>This was a hobby project I started in 2016/17 and have worked on during my free time as a way to brush up on my simple javascript, jQuery, and CSS knowledge as well as giving me more reason to play these new Hitman games well after unlocking everything. As such, I've only tested this using the browsers I frequent: Firefox and Chrome. If you find any issues or glaring conflicts with Roulette results, let me know <a href="https://github.com/BRYN4444/HitmanRoulette/issues" target="_blank">via GitHub</a> or <a href="https://hitmanforum.com/t/13107" target="_blank">on Hitman Forum</a> and I'll try and address it when I get the chance. <span id="sig">- <a href="http://bryn.info/" target="_blank">BRYN</a></span></p>
+					<h1>Special Thanks & External Resources</h1>
+					<ul>
+						<li><a href="https://ioi.dk/" target="_blank">IO Interactive</a> for making a great trilogy of games that helped me through some bad days and kept me better occupied here.</li>
+						<li>Niels Bye Nielsen for composing the music in the World Of Assassination Trilogy. Great tracks to hit to.</li>
+						<li>TheKotti, for his <a href="https://thekotti.github.io/about.html" target="_blank">original Hitman Roulette</a> that was the code base and inspiration for this spin-off.</li>
+						<li><a href="https://www.hitmaps.com/" target="_blank">Hitmaps</a> by Mike Koch for being great tools that aided in my data collection. Also the former Hitman Interactive Maps by Winterbird.</li>
+						<li><a href="https://github.com/gromo/jquery.scrollbar" target="_target">jQuery CSS Customizable Scrollbar</a> by gromo & <a href="https://www.dte.web.id/2013/02/event-mouse-wheel.html" target="_blank">Event Mouse Wheel</a> by Taufik Nurrohman which I used for style and navigation.</li>
+						<li><a href="http://detectmobilebrowsers.com/" target="_target">Detect Mobile Browsers</a> by Chad Smith, which helped in allowing settings descriptions viewable for mobile via touch.</li>
+						<li><a href="http://keith-wood.name/countdown.html" target="_target">jQuery Countdown</a> by Keith Wood, which is being used in the Stream Overlay for any Time Limit Complications.</li>
+					</ul>
 				</div>
 				<div id="empty" class="sidescroll">
 					<div class="external-scroll_y">
