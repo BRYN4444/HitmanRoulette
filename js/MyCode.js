@@ -1,8 +1,8 @@
 //Enjoy looking at the ametuer code work I've done.
 $(document).ready(function() {
 	/******Latest Updates******/
-	$("#features p#title").text("Last Updated: August 7th, 2022"); /*Roulette Features*/
-	$("#features .updatenotes").html('<b><a href="https://github.com/BRYN4444/HitmanRoulette#latest-updates" target="_blank">Update:</a></b> Ambrose Island Contracts Mode Targets Added!');
+	$("#features p#title").text("Last Updated: August 25th, 2022"); /*Roulette Features*/
+	$("#features .updatenotes").html('Roulette Modes update. Added Contract Mode Targets. <b><a href="https://github.com/BRYN4444/HitmanRoulette#latest-updates" target="_blank">Details</a></b>.');
 	$("#overlayguide p#title").text("Last Updated: July 13th, 2022 (BETA)"); /*Stream Overlay*/
 	//$("#overlayguide .updatenotes").html('???'); /*Needs to be added to Overlay.html*/
 
@@ -779,20 +779,26 @@ $(document).ready(function() {
 	});
 	
 	/******Options Select Submenu Descriptions******/
-	if(jQuery.browser.mobile) {
+	if($(window).width() <= 808 || $(window).height() <= 800 || jQuery.browser.mobile) {
 	   	$( "#settings_subsubmenu" ).css("grid-template-columns","min-content 1fr");
-		$( "#settings_subsubmenu label:not(.mobile)" ).css("padding-left","5px");
-		$( "#settings_subsubmenu label.mobile" ).css("padding-right","5px");
+		$( "#settings_subsubmenu > label:not(.mobile)" ).css("padding-left","5px");
+		$( "#settings_subsubmenu > label.mobile" ).css("padding-right","5px");
 		$( "#theme_cookies" ).css("grid-column","1 / span 2");
 		$( "#mode_ol" ).remove();
-		$( "#settings_subsubmenu label.mobile" ).click(function() {
+		$( "#settings_subsubmenu > label.mobile" ).click(function() {
+			var head =  $(this).next().find("b:first").text();
 			var desc =  $(this).attr("data-hover");
-			$( "#settings_descriptions p" ).html(desc);
+			$( "#desc-h" ).html(head);
+			$( "#desc-p" ).html(desc);
+			
+			$("#shadow").removeClass("hidden");
+			$("#popwrap").addClass("hidden");
+			$("#descwrap").removeClass("hidden");
 		});
 	}
 	else {
 		$( "label.mobile" ).remove();
-	   	$( "#settings_subsubmenu label:not(.mobile)" ).hover(function() {
+	   	$( "#settings_subsubmenu > label:not(.mobile)" ).hover(function() {
 			var title = $(this).children("b").text();
 			var desc =  $(this).attr("data-hover");
 			$( "#settings_descriptions h1" ).text(title);
@@ -982,21 +988,7 @@ $(document).ready(function() {
 		//Default
 	};
 	
-	/***Mode Functions***/
-	function makeItMain() {
-		$("#mode_mission").addClass("on").find("span").text("[On]");
-		$("#modeselect").val("MAIN");
-	};
-	function stopItMain() {
-		$("#mode_mission").removeClass("on").find("span").text("[Off]");
-	};
-	function stopItContracts() {
-		$("#mode_con").removeClass("intel hunt").find("span").text("[Off]");
-	};
-	function stopItElusive() {
-		$("#etslider").val(0);
-		$("#etamount").html("0");		
-	};
+	/***Roulette Type***/
 	function lockMaps() {
 		$("input.noncon").prop('checked', false).prop('disabled', true).parent().parent().removeClass("on").parent().addClass("lock");
 		$("span.noncon").hide();
@@ -1011,63 +1003,135 @@ $(document).ready(function() {
 		$("input#RANDOMH3").prop('checked', false).parent().parent().removeClass("on");
 	};
 	
-	/***Page Refresh Check***/
-	if($("#modeselect").val() == "CONEASY") {
-		$("#mode_con").addClass("intel").find("span").text("[Intel]");
-		stopItMain();
-		stopItElusive();
-		lockMaps();
-	} else if ($("#modeselect").val() == "CONHARD") {
-		$("#mode_con").removeClass("intel").addClass("hunt").find("span").text("[Hunt]");
-		stopItMain();
-		stopItElusive();
-		lockMaps();
-	} else if ($("#modeselect").val() == "CONANY") {
-		$("#mode_con").removeClass("intel").addClass("any").find("span").text("[Any]");
-		stopItMain();
-		stopItElusive();
-		lockMaps();
-	} else if ($("#modeselect").val() == "ELUSIVE") {
-		stopItMain();
-		stopItContracts();
-	};
-	
-	/***Mode Change***/
-	/*Middion Mode Button*/
-	$("#mode_mission").click(function() {
-		if( !$(this).hasClass("on") ) {
-			makeItMain();
-			unlockMaps();
-			stopItContracts();
-			stopItElusive();
-		}
-	});
-	
-	/*Contracts Mode Button*/
-	$("#mode_con").click(function() {
-		if( $(this).hasClass("intel") ) {
-			$(this).removeClass("intel").addClass("hunt").find("span").text("[Hunt]");
-			$("#modeselect").val("CONHARD");
-		}
-		else if( $(this).hasClass("hunt") ) {
-			$(this).removeClass("hunt").addClass("any").find("span").text("[Any]");
-			$("#modeselect").val("CONANY");
-		}
-		else if( $(this).hasClass("any") ) {
-			$(this).removeClass("any").find("span").text("[Off]");
-			makeItMain();
-			unlockMaps();
-		}
-		else {
-			$(this).addClass("intel").find("span").text("[Intel]");
-			$("#modeselect").val("CONEASY");
-			stopItMain();
-			stopItElusive();
-			lockMaps();
+	$(document).on('click', '#mode_type', function() {
+		if( $(this).hasClass("mission") ) {
+			$(this).removeClass("mission").addClass("contracts").find("span").html("[Contracts&nbsp;Mode]");
+			if( $("mode_targselect").hasClass("unassigned") ) {
+				$("#modeselect").val("CONANY");
+			} else if( document.getElementById("intel").checked == 0 ) {
+				$("#modeselect").val("CONHARD");
+			} else if( document.getElementById("intel").checked == 1 ) {
+				$("#modeselect").val("CONEASY");
+			};
+			$("#mode_targselect, #mode_conamount, #mode_intel").removeClass("disabled");
+			if($("#targetselect").val() == "CUSTOM"){
+				$("#mode_targets").removeClass("disabled");
+				$("#mode_targets input").prop('disabled', false);
+			}
+			$("#conslider, #intel").prop('disabled', false);
+			/*Lock Maps*/
+			$("input.noncon").prop('checked', false).prop('disabled', true).parent().parent().removeClass("on").parent().addClass("lock");
+			$("span.noncon").hide();
+			$("b.noncon").attr( "style", "display: inline !important;" );
+			$("b.nonconsp").css('display','inline-block');
+		} else if( $(this).hasClass("contracts") ) {
+			$(this).removeClass("contracts").addClass("mission").find("span").html("[Mission&nbsp;Mode]");
+			$("#modeselect").val("MAIN");
+			$("#mode_targselect, #mode_targets, #mode_conamount, #mode_intel").addClass("disabled");
+			$("#conslider, #intel").prop('disabled', true);
+			$("#mode_targets input").prop('disabled', true);
+			/*Unlock Maps*/
+			$("input.noncon").prop('disabled', false).parent().parent().parent().removeClass("lock");
+			$("span.noncon").show();
+			$("b.noncon").hide();
+			$("b.nonconsp").css('display','none');
+			$("input#RANDOMH3").prop('checked', false).parent().parent().removeClass("on");
 		};
 	});
 	
-	/*Contracts Mode Slider*/
+	/*Refresh*/
+	if($("#modeselect").val() != "MAIN") {
+		$("#mode_type").removeClass("mission").addClass("contracts").find("span").html("[Contracts&nbsp;Mode]");
+		$("#mode_targselect, #mode_conamount, #mode_intel").removeClass("disabled");
+		$("#conslider, #intel").prop('disabled', false);
+		/*Lock Maps*/
+		$("input.noncon").prop('checked', false).prop('disabled', true).parent().parent().removeClass("on").parent().addClass("lock");
+		$("span.noncon").hide();
+		$("b.noncon").attr( "style", "display: inline !important;" );
+		$("b.nonconsp").css('display','inline-block');
+	};
+	
+	/***Target Selection***/
+	$(document).on('click', '#mode_targselect:not(.disabled)', function() {
+		if( $(this).hasClass("all") ) {
+			$(this).removeClass("all").addClass("custom").find("span").html("[Custom]");
+			$("#targetselect").val("CUSTOM");
+			$("#mode_targets").removeClass("disabled");
+			$("#mode_targets input").prop('disabled', false);
+			if( document.getElementById("intel").checked == 0 ) {
+				$("#modeselect").val("CONHARD");
+			} else if( document.getElementById("intel").checked == 1 ) {
+				$("#modeselect").val("CONEASY");
+			};
+		} else if( $(this).hasClass("custom") ) {
+			$(this).removeClass("custom").addClass("unassigned").find("span").text("[Unassigned]");
+			$("#targetselect").val("UNASSIGNED");
+			$("#modeselect").val("CONANY");
+			$("#mode_targets").addClass("disabled");
+			$("#mode_targets input").prop('disabled', true);
+		} else if( $(this).hasClass("unassigned") ) {
+			$(this).removeClass("unassigned").addClass("all").find("span").html("[All&nbsp;Types]");
+			$("#targetselect").val("ALL");
+			$("#mode_targets").addClass("disabled");
+			$("#mode_targets input").prop('disabled', true);
+			if( document.getElementById("intel").checked == 0 ) {
+				$("#modeselect").val("CONHARD");
+			} else if( document.getElementById("intel").checked == 1 ) {
+				$("#modeselect").val("CONEASY");
+			};
+		};
+	});	
+	
+	$("#mode_targets input:checkbox").change(function(){
+		if($(this).is(":checked")) {
+			$(this).parent().removeClass("off").addClass("on");
+			if($(this).is("#chequnique")) {
+				$("#targettypes option[value='UNIQUE']").prop("selected", true);
+			} else if($(this).is("#cheqcivil")) {
+				$("#targettypes option[value='CIVILIAN']").prop("selected", true);
+			} else if($(this).is("#cheqstaff")) {
+				$("#targettypes option[value='STAFF']").prop("selected", true);
+			} else if($(this).is("#cheqguard")) {
+				$("#targettypes option[value='GUARD']").prop("selected", true);
+			};
+		} else {
+			$(this).parent().removeClass("on").addClass("off");
+			if($(this).is("#chequnique")) {
+				$("#targettypes option[value='UNIQUE']").prop("selected", false);
+			} else if($(this).is("#cheqcivil")) {
+				$("#targettypes option[value='CIVILIAN']").prop("selected", false);
+			} else if($(this).is("#cheqstaff")) {
+				$("#targettypes option[value='STAFF']").prop("selected", false);
+			} else if($(this).is("#cheqguard")) {
+				$("#targettypes option[value='GUARD']").prop("selected", false);
+			};
+		};
+		
+		if($("#mode_targets input:checked").length == 0) {
+			$("#cheqguard").prop( "checked", true );
+			$("#cheqguard").parent().removeClass("off").addClass("on");
+			$("#targettypes option[value='GUARD']").prop("selected", true);
+		};
+	});
+	
+	/*Refresh*/
+	if($("#targetselect").val() == "CUSTOM"){
+		$("#mode_targselect").removeClass("all").addClass("custom").find("span").html("[Custom]");
+		if($("#modeselect").val() != "MAIN") {
+			$("#mode_targets").removeClass("disabled");
+			$("#mode_targets input").prop('disabled', false);
+		} else {
+			$("#mode_targets").addClass("disabled");
+			$("#mode_targets input").prop('disabled', true);
+		}
+	} else if($("#targetselect").val() == "UNASSIGNED"){
+		$("#mode_targselect").removeClass("all").addClass("unassigned").find("span").text("[Unassigned]");
+	};
+	
+	$("#mode_targets input:checkbox:not(:checked)").parent().removeClass("on").addClass("off");
+
+	
+	/***Target Amount Slider***/
 	if( $('#conslider').val() == 0 ) {
 		$('#conamount').html('#');
 	}
@@ -1083,17 +1147,12 @@ $(document).ready(function() {
 		};
 	});
 	
-	/*Elusive Target Button*/
-	$('#etamount').html( $('#etslider').val() );
-	$('#etslider').on('input', function () {
-		$('#etamount').html( $(this).val() );
-		if( $(this).val() > 0 ) {
-			$("#modeselect").val("ELUSIVE");
-			stopItMain();
-			stopItContracts();
-		}
-		else {
-			makeItMain();
+	/***Contracts Intel***/
+	$(document).on('click', '#mode_intel:not(.disabled)', function() {
+		if( document.getElementById("intel").checked == 0 ) {
+			$("#modeselect").val("CONHARD");
+		} else if( document.getElementById("intel").checked == 1 ) {
+			$("#modeselect").val("CONEASY");
 		};
 	});
 	
@@ -1111,6 +1170,7 @@ $(document).ready(function() {
 	$("label#mode_ol, #openoverlayinstructions").click(function(){
 		$("#shadow").removeClass("hidden");
 		$("#popwrap").addClass("hidden");
+		$("#descwrap").addClass("hidden");
 		$("#overlaywrap").removeClass("hidden");
 	});
 	
@@ -1151,24 +1211,43 @@ $(document).ready(function() {
 		//Default
 	};	
 	
+	/***Forced Melee Methods***/
+	$(document).on('click', '#kill_melee', function() {
+		if( document.getElementById("melee").checked == 0 ) {
+			$("#kill_mtype").addClass("disabled");
+			$("#mtype").prop('disabled', true);
+		} else if( document.getElementById("melee").checked == 1 ) {
+			$("#kill_mtype").removeClass("disabled");
+			$("#mtype").prop('disabled', false);
+		};
+	});
+	
 	/***Force Start/Exit***/
 	/*Button*/
 	$("#extra_starex").click(function() {
 		if( $(this).hasClass("both") ) {
 			$(this).removeClass("both").addClass("start").find("span").text("[Start Only]");
 			$("#startexit").val("START");
+			$("#extra_secret").addClass("disabled");
+			$("#exsecret").prop('disabled', true);
 		}
 		else if( $(this).hasClass("start") ) {
 			$(this).removeClass("start").addClass("exit").find("span").text("[Exit Only]");
 			$("#startexit").val("EXIT");
+			$("#extra_secret").removeClass("disabled");
+			$("#exsecret").prop('disabled', false);
 		}
 		else if( $(this).hasClass("exit") ) {
 			$(this).removeClass("exit").addClass("off").find("span").text("[Off]");
 			$("#startexit").val("OFF");
+			$("#extra_secret").addClass("disabled");
+			$("#exsecret").prop('disabled', true);
 		}
 		else if( $(this).hasClass("off") ) {
 			$(this).removeClass("off").addClass("both").find("span").text("[Both]");
 			$("#startexit").val("BOTH");
+			$("#extra_secret").removeClass("disabled");
+			$("#exsecret").prop('disabled', false);
 		};
 	});
 	
@@ -1255,10 +1334,10 @@ $(document).ready(function() {
 	};
 	
 	/******Save contract as TXT from a textarea******/	
-	
 	$("#saveroulette, #subsaveroulette").click(function(){
 		$("#shadow").removeClass("hidden");
 		$("#popwrap").removeClass("hidden");
+		$("#descwrap").addClass("hidden");
 		$("#overlaywrap").addClass("hidden");
 	});
 	
@@ -1739,17 +1818,36 @@ $(document).ready(function() {
 		$("#volumeslider").val(50);
 		$("#volumeamount").html("50");
 		
-		/*Roulette Mode*/
-		makeItMain();
-		unlockMaps();
-		stopItContracts();
-		stopItElusive();
+		/*Roulette Modes*/
+		//Type
+		$("#mode_type").removeClass("contracts").addClass("mission").find("span").html("[Mission&nbsp;Mode]");
+		$("#modeselect").val("MAIN");
+		//Target Select
+		$("#mode_targselect").removeClass("custom unassigned").addClass("all").find("span").html("[All&nbsp;Types]");
+		$("#targetselect").val("ALL");
+		//Target Types
+		$("#mode_targets").addClass("disabled");
+		$("#mode_targets label").removeClass("off").addClass("on");
+		$("#mode_targets input").prop('checked', true).prop('disabled', true);
+		//Target Amount
 		$("#conslider").val(0);
-		$("#conamount").html("0");
-		
-		/*Condition Mask*/
+		$("#conamount").html("#");
+		//Contracts Intel		
+		$("#intel").prop( "checked", true );
+		$("#mode_intel span").html("[On]");
+		//Default Disabled Settings
+		$("#conslider, #intel").prop('disabled', true);
+		$("#mode_targselect, #mode_conamount, #mode_intel").addClass("disabled");
+		//Condition Mask
 		$("#mode_mask #mask").prop( "checked", false );
 		$("#mode_mask span").html("[Off]");
+		
+		/*Unlock Maps*/
+		$("input.noncon").prop('disabled', false).parent().parent().parent().removeClass("lock");
+		$("span.noncon").show();
+		$("b.noncon").hide();
+		$("b.nonconsp").css('display','none');
+		$("input#RANDOMH3").prop('checked', false).parent().parent().removeClass("on");
 		
 		/*Specific Disguise*/
 		if( !$("#kill_disguise").hasClass("on") ) {
@@ -1759,11 +1857,15 @@ $(document).ready(function() {
 	
 		/*Kill Requirements*/
 		$("input#melee, input#mtype, input#firearm, input#accident, input#generic").prop( "checked", true ).parent().find("span").text("[On]");	
+		$("#kill_mtype").removeClass("disabled");
+		$("#mtype").prop('disabled', false);
 		
 		/*Force Start/Exit*/
 		if( !$("#extra_starex").hasClass("both") ) {
 			$("#extra_starex").removeClass("start exit off").addClass("both").find("span").text("[Both]");
 			$("#startexit").val("BOTH");
+			$("#extra_secret").removeClass("disabled");
+			$("#exsecret").prop('disabled', false);
 		};
 		
 		/*Extra/Photo Objective*/
