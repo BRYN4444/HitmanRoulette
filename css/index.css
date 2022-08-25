@@ -833,6 +833,7 @@ input[type=range] {
 	cursor: pointer;
 	width: 200px;
 }
+input[type=range]:disabled { cursor: not-allowed !important; }
 	@media only screen and (max-height: 1570px) {
 		input[type=range] { width: 150px; }
 	}
@@ -2182,7 +2183,7 @@ label:hover #nameplate.on { background-image:var(--checkedhover); }
     padding:46px 0 0 130px;
     text-shadow:var(--settingshadow);
 }
-#settings_theme:hover, #settings_overlay:hover, #settings_audio:hover, #settings_roulette:hover, #settings_kills:hover, #settings_extras:hover, #settings_challenges:hover, #settings_reset:hover, #settings_subsubmenu label:hover {
+#settings_theme:hover, #settings_overlay:hover, #settings_audio:hover, #settings_roulette:hover, #settings_kills:hover, #settings_extras:hover, #settings_challenges:hover, #settings_reset:hover, #settings_subsubmenu label:not(.disabled):hover {
     background-color:var(--settingbghover);
     color:var(--settingcolorhover);
     text-shadow:var(--settingshadowhover);
@@ -2197,6 +2198,7 @@ label:hover #nameplate.on { background-image:var(--checkedhover); }
 #settings_audio, #settings_overlay { grid-area: 2 / 2 / 3 / 3; }
 #settings_roulette { grid-area: 3 / 2 / 4 / 3; }
 #settings_kills { grid-area: 4 / 2 / 5 / 3; }
+#settings_kills br { display:none; }
 #settings_extras { grid-area: 5 / 2 / 6 / 3; }
 #settings_challenges { grid-area: 6 / 2 / 7 / 3; }
 #settings_reset { grid-area: 7 / 2 / 8 / 3; }
@@ -2353,6 +2355,11 @@ label:hover #nameplate.on { background-image:var(--checkedhover); }
 	align-items: center;
 	line-height: 0.9;
 }
+#settings_subsubmenu label.disabled {
+	opacity:0.5;
+	cursor: not-allowed !important;
+}
+#settings_subsubmenu label.disabled label {	cursor: not-allowed !important; }
 #settings_subsubmenu b { font-weight: 500; }
 #settings_subsubmenu i { font-style: normal; }
 #volumeamount {
@@ -2382,6 +2389,29 @@ label#theme_cookies p, label#overlay_others p {
 			padding-bottom: 3px;
 		}
 	}
+label#mode_targets {
+	display: grid;
+	grid-template-columns: repeat(2, 50%);
+	grid-template-rows: repeat(2, 50%); 
+}
+#settings_subsubmenu label label {
+	background-repeat:no-repeat;
+	background-position:left center;
+	background-size:24px;
+	text-shadow:var(--settingshadow);
+	height:100%;
+	padding:0 0 0 28px;
+}
+#settings_subsubmenu label.disabled:hover label { text-shadow:var(--settingshadow) !important; }
+#settings_subsubmenu label:hover label { text-shadow:var(--settingshadowhover) !important; }
+#settings_subsubmenu label label b { font-size: 80%; }
+#settings_subsubmenu label label:hover { background-color:var(--settingbg) !important; }
+#settings_subsubmenu label label.on { background-image:var(--checked); }
+#settings_subsubmenu label label.on:hover { background-image:var(--checkedhover); }
+#settings_subsubmenu label.disabled label.on { background-image:var(--checked); }
+#settings_subsubmenu label label.off { background-image:var(--xed); }
+#settings_subsubmenu label label.off:hover { background-image:var(--xedhover); }
+#settings_subsubmenu label.disabled label.off { background-image:var(--xed); }
 #settings_descriptions {
 	color:var(--settingdesccolor);
 	text-shadow:var(--settingdescshadow);
@@ -2425,6 +2455,7 @@ span#range input { margin-right:20px; }
 	}
 	@media only screen and (max-width: 2000px) {
 		#settings_subsubmenu label { font-size: 32px; }
+		#settings_subsubmenu label#mode_targets { height:60px; }
 	}
 	@media only screen and (max-height: 1570px) {
 		#settings {
@@ -2491,6 +2522,7 @@ span#range input { margin-right:20px; }
 	@media only screen and (max-width: 1170px) {
 		#settings { grid-template-columns: 0 265px 1fr 1fr 0; }
 		#settings_theme, #settings_overlay, #settings_kills, #settings_extras, #settings_challenges { padding:3px 0 0 65px; }
+		#settings_kills br { display:block; }
 	}
 	@media only screen and (max-width: 1000px) {
 		#settings_subsubmenu label { font-size: 16px; }
@@ -2512,6 +2544,7 @@ span#range input { margin-right:20px; }
 		#settings_audio { display: none !important; }
 		#settings_roulette { grid-area: 2 / 2 / 3 / 3; }
 		#settings_kills { grid-area: 3 / 2 / 4 / 3; }
+		#settings_kills br { display:none; }
 		#settings_extras { grid-area: 4 / 2 / 5 / 3; }
 		#settings_challenges { grid-area: 5 / 2 / 6 / 3; }
 		#settings_reset { grid-area: 6 / 2 / 7 / 3; }
@@ -3009,35 +3042,35 @@ p#condensed, p#ultracondensed {
 	justify-content:center;
 	align-items:center;
 }
-#shadow.hidden, #popwrap.hidden, #overlaywrap.hidden { display:none; }
-#popwrap, #overlaywrap {
+#shadow.hidden, #popwrap.hidden, #descwrap.hidden, #overlaywrap.hidden { display:none; }
+#popwrap, #descwrap, #overlaywrap {
 	width:50%;
 	display: grid;
 	grid-template-rows: auto 120px 120px;
 	grid-row-gap:20px;
 }
 	@media only screen and (max-height: 1570px) {
-		#popwrap, #overlaywrap {
+		#popwrap, #descwrap, #overlaywrap {
 			grid-template-rows: auto 90px 90px;
 			grid-row-gap:15px;
 		}
 	}
 	@media only screen and (max-width: 1920px), (max-height: 1180px) {
-		#popwrap, #overlaywrap {
+		#popwrap, #descwrap, #overlaywrap {
 			grid-template-rows: auto 60px 60px;
 			grid-row-gap:10px;
 		}
 	}
 	@media only screen and (max-width: 1470px) {
-		#popwrap, #overlaywrap { width:75%; }
+		#popwrap, #descwrap, #overlaywrap { width:75%; }
 	}
 	@media only screen and (max-width: 1000px) {
-		#popwrap, #overlaywrap { width:85%; }
+		#popwrap, #descwrap, #overlaywrap { width:85%; }
 	}
 	@media only screen and (max-width: 808px), (max-height: 800px) {
-		#popwrap, #overlaywrap { width:95%; }
+		#popwrap, #descwrap, #overlaywrap { width:95%; }
 	}
-#popwrap button, #overlaywrap button {
+#popwrap button, #descwrap button, #overlaywrap button {
 	padding:0 20px 0 140px;
 	text-align: left;
 	font-size:50px;
@@ -3051,7 +3084,7 @@ p#condensed, p#ultracondensed {
 	background-position:left 30px center;
 }
 	@media only screen and (max-height: 1570px) {
-		#popwrap button, #overlaywrap button {
+		#popwrap button, #descwrap button, #overlaywrap button {
 			padding:0 15px 0 105px;
 			font-size:37px;
 			background-size:67px;
@@ -3059,14 +3092,14 @@ p#condensed, p#ultracondensed {
 		}
 	}
 	@media only screen and (max-width: 1920px), (max-height: 1180px) {
-		#popwrap button, #overlaywrap button {
+		#popwrap button, #descwrap button, #overlaywrap button {
 			padding:0 10px 0 70px;
 			font-size:25px;
 			background-size:45px;
 			background-position:left 15px center;
 		}
 	}
-#popwrap button:hover, #overlaywrap button:hover {
+#popwrap button:hover, #descwrap button:hover, #overlaywrap button:hover {
 	color:var(--popupbuttoncolorhover);
 	background-color:var(--popupbuttonbghover);
 }
@@ -3140,6 +3173,9 @@ button#close:hover { background-image:var(--buttoncloseon); }
 			font-size:47px;
 			padding:20px 10px 10px;
 			margin:0 0 10px;
+		}
+		#popup h1#desc-h {
+			font-size:30px;
 		}
 		#popup p {
 			font-size:16px;
