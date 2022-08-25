@@ -16,18 +16,9 @@ To initiate a roll of the Roulette, click "Issue Roulette" on the main page. Use
 
 Most missions from the trilogy are pulled into the Roulette by default. Through the "Select Missions" option, you can untoggle any missions you're missing or just the ones you don't like.
 
-"Roulette Settings" allow you to change what the Roulette surfaces: You can get more than the regular targets by choosing "Contract Mode Roulette". Dial in the difficulty by toggling "Kill Requirements" like disguises or weapons you'll need to wear or use, "Extra Requirements" like one more objective or sets of complications, and "Gameplay Challenges" that force you to change how you play.
+"Roulette Settings" allow you to change what the Roulette surfaces: You can get more than the regular targets by choosing "Contract Mode" as the "Roulette Type". Dial in the difficulty by toggling "Kill Requirements" like disguises or weapons you'll need to wear or use, "Extra Requirements" like one more objective or sets of complications, and "Gameplay Challenges" that force you to change how you play.
 
 To quickly return the Roulette Settings back to default, preform a hard refresh of the page.
-
-## Special Thanks & External Resources
-* [IO Interactive](https://www.ioi.dk/) for making a great trilogy of games that helped me through some bad days and kept me better occupied here.
-* Niels Bye Nielsen for composing the music in the World Of Assassination Trilogy. Great tracks to hit to.
-* TheKotti, for his [original Hitman Roulette](https://thekotti.github.io/about.html) that was the code base and inspiration for this spin-off.
-* [Hitman Interactive Maps](http://hitmanmaps.com/) by Winterbird & [Hitmaps](https://www.hitmaps.com/) (formerly Hitman 2 Maps) by Mike Koch for being great tools that aided in my data collection.
-* The tools [jQuery CSS Customizable Scrollbar](https://github.com/gromo/jquery.scrollbar) by gromo & [Event Mouse Wheel](https://www.dte.web.id/2013/02/event-mouse-wheel.html) by Taufik Nurrohman which I used for style and navigation.
-* [Detect Mobile Browsers](http://detectmobilebrowsers.com/) by Chad Smith, which helped in allowing settings descriptions viewable for mobile via touch.
-* [jQuery Countdown](http://keith-wood.name/countdown.html) by Keith Wood, which is being used in the Stream Overlay for any Time Limit Complications.
 
 ## Compatibility & Issues
 
@@ -39,22 +30,64 @@ There may be the odd conflicting trait that changed between releases in this tri
 
 This was a hobby project I started in 2016/17 and have worked on during my free time as a way to brush up on my simple javascript, jQuery, and CSS knowledge as well as giving me more reason to play these new Hitman games well after unlocking everything. As such, I've only tested this using the browsers I frequent: Firefox and Chrome. If you find any issues or glaring conflicts with Roulette results, let me know [via GitHub](https://github.com/BRYN4444/HitmanRoulette/issues) or [on Hitman Forum](https://hitmanforum.com/t/13107) and I'll try and address it when I get the chance. - [BRYN](http://bryn.info/)
 
+## Special Thanks & External Resources
+* [IO Interactive](https://www.ioi.dk/) for making a great trilogy of games that helped me through some bad days and kept me better occupied here.
+* Niels Bye Nielsen for composing the music in the World Of Assassination Trilogy. Great tracks to hit to.
+* TheKotti, for his [original Hitman Roulette](https://thekotti.github.io/about.html) that was the code base and inspiration for this spin-off.
+* [Hitmaps](https://www.hitmaps.com/) by Mike Koch for being great tools that aided in my data collection. Also the former Hitman Interactive Maps by Winterbird.
+* The tools [jQuery CSS Customizable Scrollbar](https://github.com/gromo/jquery.scrollbar) by gromo & [Event Mouse Wheel](https://www.dte.web.id/2013/02/event-mouse-wheel.html) by Taufik Nurrohman which I used for style and navigation.
+* [Detect Mobile Browsers](http://detectmobilebrowsers.com/) by Chad Smith, which helped in allowing settings descriptions viewable for mobile via touch.
+* [jQuery Countdown](http://keith-wood.name/countdown.html) by Keith Wood, which is being used in the Stream Overlay for any Time Limit Complications.
+
 ### Latest Updates:
+
+**August 25th, 2022**
+* **Roulette:**
+  * **Roulette Settings:** Options dependent on the state of other options are now disabled to avoid unnecessary changes and clearly indicate the options you can adjust.
+    * **Roulette Modes:** Updated many of the options here for clarity & Contracts Mode NPC granularity.
+      * **Roulette Type:** Choosing between Mission Mode and Contracts Mode Roulette is done in this one singular option now. The following options only work for Contracts Mode Roulette:
+	    * **Target Selection:** Determine what the Roulette assigns you in Contracts Mode Roulette. **Any Type:** any NPC type can be chosen by the Roulette. **Custom:** using the newly added checkboxes, hand-select the types of NPCs that can be chosen from *Guards*, *Staff*, *Civilians*, or the *Unique* types like VIPs. **Unassigned:** NPC names aren't listed; only elimination conditions will be shown. Determine the NPC Target(s) yourself. If you select this, and set the Target Amount appropriately, you can use the Roulette with Elusive Targets.
+	    * **Target Amount:** Sets the number of Contract Mode Targets. Same as before, just renamed.
+	    * **Contracts Intel:** Location based intel is listed with targets, on by default. Existing functionality, now a separate option better showcase it.
+    * **Mobile Browsing:** The descriptions for settings are now a pop-up menu. This way the full text can be displayed at a larger font size.
+* **HITMAN:**
+  * **Freeform Training:**
+    * **Contract Mode Targets:** 1 more added.
+  * **The Icon:**
+    * **Contract Mode Targets:** 1 more added.
+* **HITMAN 2:**
+  * **Three-headed Serpent:**
+    * **Contract Mode Targets:** 125 more added.
+  * **Chasing a Ghost:**
+    * **Contract Mode Targets:** 107 more added.
+  * **Another Life:**
+    * **Contract Mode Targets:** 25 more added.
+  * **Golden Handshake:**
+    * **Contract Mode Targets:** 5 more added.
+* **HITMAN III:**
+  * **On Top Of The World:**
+    * **Contract Mode Targets:** 6 more added.
+* **Other Fixes:**
+  * Disabled the Force Difficulty requirement from appearing on the Dartmoor Garden Show.
+  * Fixed an error where an exit in Dubai wasn't showing an image.
+  * Updated the Target Images for the Sarajevo Six to a higher quality.
+  * Fixed a number of spelling mistakes throughout.
+* **Current Plans:**
+  * A bit of a break, but eventually going through and adding some more Contracts Mode Targets to missions that need some more.
+>**Bug Hunting:** Please make a post [via GitHub](https://github.com/BRYN4444/HitmanRoulette/issues) or [on Hitman Forum](https://hitmanforum.com/t/13107) if you:
+>* Experience any graphical issues while using the Roulette in 4K, or on phones/tablets.
+>* Notice inconsistencies or impossibilities generated if using the Roulette while playing HITMAN or HITMAN 2.
+>* Have troubles or questions about the new Stream Overlay.
+
+---
 
 **August 7th, 2022**
 * **Roulette:**
   * **Roulette Settings - Roulette Mode:**
-    * **Contract Mode Roulette:** Selecting "Hunt" wasn't properly removing the Intel listing of targets.
+    * **Contract Mode Roulette:** Selecting "Hunt" wasn't properly removing the Intel listing of targets. (*This setting has changed in a more recent update*)
 * **HITMAN 2:**
   * **Hokkaido Snow Festival:**
     * **Starting Points:** "Tobias Rieper's Suite" can now be selectable. However, it is only possible through HITMAN III. As such, "H2: Restaurant" is also listed so HITMAN 2 players don't need to re-roll. 
-* **Current Plans:**
-  * Changing how the Roulette's "modes" are selected and allowing subsections of Contracts Mode NPCs to be chosen instead of always everyone.
-  * Might soon go through some of the missions that have a low count of Contract Mode NPCs and adding more.
->**Bug Hunting:** Please make a post [via GitHub](https://github.com/BRYN4444/HitmanRoulette/issues) or [on Hitman Forum](https://hitmanforum.com/t/13107) if you:
->* Experience any graphical issues while using the Roulette in 4K, or on phones/tablets.
->* Notice inconsistencies or impossibilities generated if using the Roulette while playing HITMAN or HITMAN 2.
->* Have troubles or inqueries with the new Stream Overlay.
 
 ---
 
@@ -83,7 +116,7 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
     * **Targets:** 2. (Contract Mode Targets coming soon)
 	* **Starting Points:** 6 added. Only 2 are undercover locations.
     * **Exit Points:** 7 added. Two of these are disabled in Contracts Mode due to the lack of the GPS Tracker from the mission proper.
-    * **Objectives:** 1 added. Mandatory in the actual mission, but it isn't too much of a hastle after a few tries. 
+    * **Objectives:** 1 added. Mandatory in the actual mission, but it isn't too much of a hassle after a few tries. 
     * **Extra Objectives:** 18 added.
     * **Photo Objectives:** 11 added.
   * **Untouchable:**
@@ -118,25 +151,6 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 
 **June 20th, 2022**
 * **Other Fixes:**
-  * Contracts Mode Targets were not appearing in Intel and Hunt modes. (A single word omitted and overlooked from code can really cause issues, huh. My apologies.)
+  * Contracts Mode Targets were not appearing in Intel and Hunt modes. (A single word omitted and overlooked from code can really cause issues, huh. My apologies.) (*This setting has changed in a more recent update*)
   * An Extra Objective on Apex Predator wasn't properly listing in the Export Roulette .txt/textarea.
   * Camera Objectives were not properly being added in Export Roulette .txt/textarea.
-
----
-
-**May 30th, 2022**
-* **Roulette:**
-  * **Roulette Settings - New Options:**
-      * **Roulette Appearance:** Added a new default Theme, based on the HITMAN Trilogy promo/storefront art (reds and blues). I wanted a Theme unique to the Roulette, and going off this was inspiring me more than choosing my own colors. Of course, the existing HITMAN menu styled Themes are still there if you prefer.
-	  * **Roulette Music**: Added optional music that plays in the background. Play/Pause can be found in the bottom right corner, next to the Export Roulette button. Changing songs & volume is done in Roulette Settings. By default, the music is paired with whatever Roulette Appearance is set. But you can instead override that with any Menu Theme from the World Of Assassination Trilogy. This is disabled on mobile.
-	  * **Roulette Mode:**
-		* **Contracts Mode Roulette:** Selecting "Any" will unassign targets, allowing you to pair any generated elimination conditions with any NPC in a mission. Almost like a reverse-roulette. 
-		* **Conditions Masked:** When enabled, generated Disguise and Elimination Conditions are hidden until clicked at your discretion. This allows meta play like revealing subsequent target conditions only after the previous ones are eliminated. The Export Roulette option is disabled until all conditions are revealed to avoid peeking.
-  * **"Responsive Design":** Testing 4K Resolution support. If you experience any graphical issues while browsing in 4K, please report them! Note: While a few images were remade to be larger, the Contract Mode Target images are yet to be adjusted, as that is a big undertaking. For now they will be scaled to fit, so they might look a little blurry.
-  * **Export Roulette:**  Added the current Date and Time to the TXT filename that generates when you Save an Exported Roulette.
-* **HITMAN III:**
-  * **The Farewell:**
-    * **Contract Mode Targets:** 1 removed. They were originally added due to simply having a single letter name. But with a patch fixing this, the NPC is now boring with little variety in elimination methods. So I removed them.
-* **Other Fixes:**
-  * An NPC previously removed due to compatibility between games was still in the data for a secondary mission. They are now properly removed.
-  * Reworded a part of the Compatibility & Issues section to include the HITMAN Trilogy & Add-Ons Bundle, as well as other minor additions/changes to About & Help.
