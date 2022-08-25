@@ -170,53 +170,26 @@ function createTargetList(container) {
 	
 	var modeIndex = document.getElementById("modeselect");
 	var mode = modeIndex.options[modeIndex.selectedIndex].value;
-	if (mode == "CONEASY" || mode == "CONHARD") { // Contracts Mode
-		if (document.getElementById("conslider").value == 5) {
-			shuffle(container.contractTargets);
-			targets = container.contractTargets.slice(0,5);
-		}
-		else if (document.getElementById("conslider").value == 4) {
-			shuffle(container.contractTargets);
-			targets = container.contractTargets.slice(0,4);
-		}
-		else if (document.getElementById("conslider").value == 3) {
-			shuffle(container.contractTargets);
-			targets = container.contractTargets.slice(0,3);
-		}
-		else if (document.getElementById("conslider").value == 2) {
-			shuffle(container.contractTargets);
-			targets = container.contractTargets.slice(0,2);
-		}
-		else if (document.getElementById("conslider").value == 1) {
-			shuffle(container.contractTargets);
-			targets = container.contractTargets.slice(0,1);
-		}
-		else {
-			var targetAmountCheck = Math.random();
-			var num_targets = 5;
-			if (targetAmountCheck < 0.84) num_targets--;
-			if (targetAmountCheck < 0.69) num_targets--;
-			if (targetAmountCheck < 0.39) num_targets--;
-			if (targetAmountCheck < 0.04) num_targets--;
-			
-			shuffle(container.contractTargets);
-			targets = container.contractTargets.slice(0, num_targets);
-		};
-	}
-	else if (mode == "CONANY") { // Unassigned Targets
-		if (document.getElementById("conslider").value == 5) {
+	var targselectIndex = document.getElementById("targetselect");
+	var targselect = targselectIndex.options[targselectIndex.selectedIndex].value;
+	var targtypesIndex = document.getElementById("targettypes");
+	
+	var conSlice = document.getElementById("conslider").value;
+	
+	if(mode == "CONANY" && targselect == "UNASSIGNED") { // Unassigned Targets
+		if (conSlice == 5) {
 			targets = ["Unassigned Target A","Unassigned Target B","Unassigned Target C","Unassigned Target D","Unassigned Target E"];
 		}
-		else if (document.getElementById("conslider").value == 4) {
+		else if (conSlice == 4) {
 			targets = ["Unassigned Target A","Unassigned Target B","Unassigned Target C","Unassigned Target D"];
 		}
-		else if (document.getElementById("conslider").value == 3) {
+		else if (conSlice == 3) {
 			targets = ["Unassigned Target A","Unassigned Target B","Unassigned Target C"];
 		}
-		else if (document.getElementById("conslider").value == 2) {
+		else if (conSlice == 2) {
 			targets = ["Unassigned Target A","Unassigned Target B"];
 		}
-		else if (document.getElementById("conslider").value == 1) {
+		else if (conSlice == 1) {
 			targets = ["Unassigned Target"];
 		}
 		else {
@@ -243,16 +216,56 @@ function createTargetList(container) {
 				targets = ["Unassigned Target"];
 			}
 		};
-	}
-	else if (mode == "ELUSIVE" && document.getElementById("etslider").value == 1) //One Elusive Target
-		targets = ["Elusive Target"];
-	else if (mode == "ELUSIVE" && document.getElementById("etslider").value == 2) //Two Elusive Targets
-		targets = ["Elusive Target A","Elusive Target B"];
-	else if (mode == "ELUSIVE" && document.getElementById("etslider").value == 3) //Three Elusive Targets
-		targets = ["Elusive Target A","Elusive Target B","Elusive Target C"];
-	else if (mode == "MAIN" && container.missionTitle === "Apex Predator") //Shuffle Targets for Apex Predator
+	} else if(mode == "CONEASY" || mode == "CONHARD") { // Contracts Mode
+		if(targselect == "CUSTOM"){ //Custom Target Pool
+			var options = targtypesIndex.options, count = 0;
+			for (var i=0; i < options.length; i++) {
+			  if (options[i].selected) count++; //Tracks the number of Target Pool Types checked
+			}
+			var chequnique = []; var cheqcivil = []; var cheqstaff = []; var cheqguard = [];
+			if(targtypesIndex.options[0].selected) { chequnique = container.contractUnique; }; //UNIQUE
+			if(targtypesIndex.options[1].selected && container.contractCivilian.length != 0) {
+				cheqcivil = container.contractCivilian; //CIVILIAN
+			} else if(count == 1 && targtypesIndex.options[1].selected && container.contractCivilian.length == 0){
+				cheqguard = container.contractGuard; //GUARD should CIVILIAN be empty and the only Type checked.
+			};
+			if(targtypesIndex.options[2].selected && container.contractStaff.length != 0) {
+				cheqstaff = container.contractStaff; //STAFF
+			} else if(count == 1 && targtypesIndex.options[2].selected && container.contractStaff.length == 0) {
+				cheqguard = container.contractGuard; //GUARD should STAFF be empty and the only Type checked.
+			};
+			if(targtypesIndex.options[3].selected) { cheqguard = container.contractGuard; }; //GUARD
+			
+			allTargets = chequnique.concat(cheqcivil, cheqstaff, cheqguard);
+			
+		} else { //Random Target Pool
+			var allTargets = container.contractUnique.concat(container.contractCivilian, container.contractStaff, container.contractGuard);
+		};
+		
+		shuffle(allTargets);
+		
+		if(conSlice == 0) { // Random Target Amount
+			var targetAmountCheck = Math.random();
+			var num_targets = 5;
+			if (targetAmountCheck < 0.84) num_targets--;
+			if (targetAmountCheck < 0.69) num_targets--;
+			if (targetAmountCheck < 0.39) num_targets--;
+			if (targetAmountCheck < 0.04) num_targets--;
+			
+			targets = allTargets.slice(0, num_targets);
+		} else if(conSlice >=1 && allTargets.length < conSlice) { // If Pooled Target Amount is low, Append Any Target at the Amount Needed
+			targSubstitutes = container.contractCivilian.concat(container.contractStaff, container.contractGuard);
+			targShuff = shuffle(targSubstitutes);
+			targNumbo = conSlice - allTargets.length;
+			targSafety = targShuff.slice(0, targNumbo);
+			
+			targets = allTargets.slice(0, conSlice).concat(targSafety);
+		} else { // Fixed Target Amount
+			targets = allTargets.slice(0, conSlice);
+		};
+	} else if (mode == "MAIN" && container.missionTitle === "Apex Predator") { //Shuffle Targets for Apex Predator
 		targets = shuffle(container.targetList);
-	else if (mode == "MAIN" && container.missionTitle === "Dartmoor Garden Show") {//Shuffle Targets for Dartmoor Garden Show Determination Mode
+	} else if (mode == "MAIN" && container.missionTitle === "Dartmoor Garden Show") {//Shuffle Targets for Dartmoor Garden Show Determination Mode
 		contestants = shuffle(container.targetContestants).slice(0,3);
 		cont1 = contestants.slice(0,1) + "|Level 1 Escalation Target";
 		cont2 = contestants.slice(1,2) + "|Level 2 Escalation Target";
@@ -265,7 +278,7 @@ function createTargetList(container) {
 	else {
 		targets = container.targetList.slice(); //Default (Unshuffled) Targets 
 	};
-
+	
 	return targets;
 };
 
@@ -281,15 +294,10 @@ function containerToResult(container) {
 	var exitModeIndex = document.getElementById("startexit");
 	var exitMode = exitModeIndex.options[exitModeIndex.selectedIndex].value;
 	
-	//Changes Iconography For Mission/Contract/Escalation/Elusive/Sarajevo
+	//Changes Iconography For Mission/Contract/Escalation/Sarajevo
 	if (container.missionTitle == "The Director" || container.missionTitle == "The Enforcer" || container.missionTitle == "The Extractor" || container.missionTitle == "The Veteran" || container.missionTitle == "The Mercenary" || container.missionTitle == "The Controller") {
 		result.type = "on-sj6";
 		result.cm = "";
-		result.missionTitle = container.missionTitle;
-	}
-	else if (mode == "ELUSIVE") {
-		result.type = "on-elu";
-		result.cm = " (Elusive Target)";
 		result.missionTitle = container.missionTitle;
 	}
 	else if((mode == "CONEASY" || mode == "CONHARD" || mode == "CONANY") && container.missionTitle == "Freeform Training") {
@@ -309,7 +317,7 @@ function containerToResult(container) {
 	}
 	else if (container.missionTitle == "Dartmoor Garden Show") {
 		result.type = "on-esc";
-		result.cm = "";
+		result.cm = " (Escalation)";
 		result.missionTitle = container.missionTitle;
 	}
 	else {
@@ -356,7 +364,7 @@ function containerToResult(container) {
 		result.missionobjective = "Infected|Eliminate all infected. The virus spreads through proximity contact. If you become contaminated, find and inject the vaccine within 5 minutes.|Eliminate All Infected";
 	else if (mode == "MAIN" && result.missionCode == "controller")
 		result.missionobjective = "Sigma Operations Files|Retrieve Sigma operations files without getting spotted.|Retrieve Sigma operations files without getting spotted";
-	else if (mode != "ELUSIVE" && result.missionCode == "biggame")
+	else if (mode == "MAIN" && result.missionCode == "biggame")
 		result.missionobjective = "The Black Book|Retrieve Reddington's Black Book.|Retrieve Reddington's Black Book";
 	else if (mode == "MAIN" && result.missionCode == "suburbs")
 		result.missionobjective = "Find Clues|Find clues in and around Whittleton Creek to uncover the connection between Janus and Providence.|Find Clues";
@@ -564,7 +572,7 @@ function writeEverything(result) {
 				"</p></span></div><div id='nameplate'><span><p id='title'>Target</p><p id='subtitle'>" + result.targets[i].split('|')[0] + "</p></span></div></div>";
 			document.getElementById("input_contract").value = result.cm;
 			document.getElementById("input_target" + (i+1)).value = result.targets[i].split('|')[0];
-			if(result.missionCode == "training" && (mode == "MAIN" || mode == "ELUSIVE") && fftfailsafe.includes(result.weapons[i]) ) { // Specific Weapons on ICA Boat 
+			if(result.missionCode == "training" && mode == "MAIN" && fftfailsafe.includes(result.weapons[i]) ) { // Specific Weapons on ICA Boat 
 				document.getElementById("subtitle-method" + (i+1)).innerHTML = "Any Method";
 				document.getElementById("subtitle-alt-method" + (i+1)).innerHTML = "";
 				document.getElementById("input_method" + (i+1)).value = "Any Method||";
@@ -763,7 +771,7 @@ function writeEverything(result) {
 	
 	//var difficultyModeIndex = document.getElementById("difficulty"); (variables determined earlier in exits)
 	//var difficultyMode = difficultyModeIndex.options[difficultyModeIndex.selectedIndex].value;
-	if(mode != "MAIN") { // no alternate difficulty in contracts mode or elusive targets
+	if(mode != "MAIN" || result.missionCode == "gardenshow") { // no alternate difficulty in contracts mode or the Dartmoor Garden Show
 		document.getElementById("diffget").innerHTML = "";
 		document.getElementById("input_difficulty").value = "";
 	}
