@@ -4652,7 +4652,7 @@ var tf = {
 	"Jerico Derose|Gaucho patrolling the Boatdock.",
 	"Raulo Dominguez|Gaucho stationed at the Boatdock."],
 	entry: ["Winery Viewpoint","Parking Lot","Vineyard","Tasting Room","Sniper Spot","Shrine","Dining Area"],
-	exit: ["Through The Grapefields","Boat|(Needs Key)","Underground Cave System|(Tactical Wetsuit Only)","Don Yate's Car|(Needs Key)","Tango With Diana"],
+	exit: ["Winery Viewpoint Car","Through The Grapefields","Boat|(Needs Key)","Underground Cave System|(Wetsuits Only)","Don Yate's Car|(Needs Key)","Tango With Diana"],
 	eexit: ["Shrine|(Requiem Suit Only)"],
 	disguises: ["Any Suit","Tactical Wetsuit","Lawyer","Sommelier","Chief Winemaker","Corvo Black",
 	"Winery Worker","Waiter","Asado Chef",
