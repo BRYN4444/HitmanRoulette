@@ -42,6 +42,20 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 ### Latest Updates:
 
 **August 25th, 2022**
+* **HITMAN 2:**
+  * **The Last Resort:**
+    * **Entrance:** The image for "Restaurant's Kitchen" has been updated to match the newly corrected one.
+* **HITMAN III:**
+  * **The Farewell:**
+    * **Exit:** Added the newly patched in "Winery Viewpoint Car" exit. Updated the image and listing for the "Underground Cave System" exit to detail that any Wetsuits can be used now.
+* **Current Plans:**
+  * Eventually I'll continue going through and adding some more Contracts Mode Targets to missions that need some more, but for now I'll continue with my break.
+>**Bug Hunting:** Please make a post [via GitHub](https://github.com/BRYN4444/HitmanRoulette/issues) or [on Hitman Forum](https://hitmanforum.com/t/13107) if you:
+>* Experience any graphical issues while using the Roulette in 4K, or on phones/tablets.
+>* Notice inconsistencies or impossibilities generated if using the Roulette while playing HITMAN or HITMAN 2.
+>* Have troubles or questions about the new Stream Overlay.
+
+**August 25th, 2022**
 * **Roulette:**
   * **Roulette Settings:** Options dependent on the state of other options are now disabled to avoid unnecessary changes and clearly indicate the options you can adjust.
     * **Roulette Modes:** Updated many of the options here for clarity & Contracts Mode NPC granularity.
@@ -72,12 +86,6 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
   * Fixed an error where an exit in Dubai wasn't showing an image.
   * Updated the Target Images for the Sarajevo Six to a higher quality.
   * Fixed a number of spelling mistakes throughout.
-* **Current Plans:**
-  * A bit of a break, but eventually going through and adding some more Contracts Mode Targets to missions that need some more.
->**Bug Hunting:** Please make a post [via GitHub](https://github.com/BRYN4444/HitmanRoulette/issues) or [on Hitman Forum](https://hitmanforum.com/t/13107) if you:
->* Experience any graphical issues while using the Roulette in 4K, or on phones/tablets.
->* Notice inconsistencies or impossibilities generated if using the Roulette while playing HITMAN or HITMAN 2.
->* Have troubles or questions about the new Stream Overlay.
 
 ---
 
@@ -146,11 +154,3 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 * **Other Fixes:**
   * An Extra Objective on Nightcall wasn't properly displaying an image.
   * Updated some images for Restriction challenges.
-
----
-
-**June 20th, 2022**
-* **Other Fixes:**
-  * Contracts Mode Targets were not appearing in Intel and Hunt modes. (A single word omitted and overlooked from code can really cause issues, huh. My apologies.) (*This setting has changed in a more recent update*)
-  * An Extra Objective on Apex Predator wasn't properly listing in the Export Roulette .txt/textarea.
-  * Camera Objectives were not properly being added in Export Roulette .txt/textarea.
