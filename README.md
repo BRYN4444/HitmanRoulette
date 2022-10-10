@@ -41,7 +41,7 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 
 ### Latest Updates:
 
-**August 25th, 2022**
+**October 7th, 2022**
 * **HITMAN 2:**
   * **The Last Resort:**
     * **Entrance:** The image for "Restaurant's Kitchen" has been updated to match the newly corrected one.
