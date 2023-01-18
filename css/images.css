@@ -157,6 +157,7 @@ html.httheme {
 .rand-h1s6 { background-image:url("../img/general/h1s6.jpg");background-repeat:no-repeat;background-position:top center; }
 .rand-h2ex { background-image:url("../img/general/h2ex.jpg");background-repeat:no-repeat;background-position:top center; }
 .rand-h2sa { background-image:url("../img/general/h2sa.jpg");background-repeat:no-repeat;background-position:top center; }
+.rand-het { background-image:url("../img/general/eta.jpg");background-repeat:no-repeat;background-position:top center; background-size:auto 100% !important; }
 .m0-3 { background:#292929 url("../img/missions/0-3.png") no-repeat center top / 350px; }
 .m0-4 { background:#292929 url("../img/missions/0-4.png") no-repeat center top / 350px; }
 .m1-1 { background:#292929 url("../img/missions/1-1.png") no-repeat center top / 350px; }
@@ -199,41 +200,82 @@ html.httheme {
 .m19-1 { background:#292929 url("../img/missions/19-1.png") no-repeat center top / 350px; }
 .m20-1 { background:#292929 url("../img/missions/20-1.png") no-repeat center top / 350px; }
 .m21-1 { background:#292929 url("../img/missions/21-1.png") no-repeat center top / 350px; }
+.et00 { background:#292929 url("../img/missions/et00.png") no-repeat center top / 350px; }
+.et01 { background:#292929 url("../img/missions/et01.png") no-repeat center top / 350px; }
+.et02 { background:#292929 url("../img/missions/et02.png") no-repeat center top / 350px; }
+.et03 { background:#292929 url("../img/missions/et03.png") no-repeat center top / 350px; }
+.et04 { background:#292929 url("../img/missions/et04.png") no-repeat center top / 350px; }
+.et05 { background:#292929 url("../img/missions/et05.png") no-repeat center top / 350px; }
+.et06 { background:#292929 url("../img/missions/et06.png") no-repeat center top / 350px; }
+.et07 { background:#292929 url("../img/missions/et07.png") no-repeat center top / 350px; }
+.et08 { background:#292929 url("../img/missions/et08.png") no-repeat center top / 350px; }
+.et09 { background:#292929 url("../img/missions/et09.png") no-repeat center top / 350px; }
+.et10 { background:#292929 url("../img/missions/et10.png") no-repeat center top / 350px; }
+.et11 { background:#292929 url("../img/missions/et11.png") no-repeat center top / 350px; }
+.et12 { background:#292929 url("../img/missions/et12.png") no-repeat center top / 350px; }
+.et13 { background:#292929 url("../img/missions/et13.png") no-repeat center top / 350px; }
+.et14 { background:#292929 url("../img/missions/et14.png") no-repeat center top / 350px; }
+.et15 { background:#292929 url("../img/missions/et15.png") no-repeat center top / 350px; }
+.et16 { background:#292929 url("../img/missions/et16.png") no-repeat center top / 350px; }
+.et17 { background:#292929 url("../img/missions/et17.png") no-repeat center top / 350px; }
+.et18 { background:#292929 url("../img/missions/et18.png") no-repeat center top / 350px; }
+.et19 { background:#292929 url("../img/missions/et19.png") no-repeat center top / 350px; }
+.et20 { background:#292929 url("../img/missions/et20.png") no-repeat center top / 350px; }
+.et21 { background:#292929 url("../img/missions/et21.png") no-repeat center top / 350px; }
+.et22 { background:#292929 url("../img/missions/et22.png") no-repeat center top / 350px; }
+.et23 { background:#292929 url("../img/missions/et23.png") no-repeat center top / 350px; }
+.et24 { background:#292929 url("../img/missions/et24.png") no-repeat center top / 350px; }
+.et25 { background:#292929 url("../img/missions/et25.png") no-repeat center top / 350px; }
+.et26 { background:#292929 url("../img/missions/et26.png") no-repeat center top / 350px; }
+.et27 { background:#292929 url("../img/missions/et27.png") no-repeat center top / 350px; }
+.et28 { background:#292929 url("../img/missions/et28.png") no-repeat center top / 350px; }
+.et29 { background:#292929 url("../img/missions/et29.png") no-repeat center top / 350px; }
+.et30 { background:#292929 url("../img/missions/et30.png") no-repeat center top / 350px; }
+.et31 { background:#292929 url("../img/missions/et31.png") no-repeat center top / 350px; }
+.et32 { background:#292929 url("../img/missions/et32.png") no-repeat center top / 350px; }
+.et33 { background:#292929 url("../img/missions/et33.png") no-repeat center top / 350px; }
+.et34 { background:#292929 url("../img/missions/et34.png") no-repeat center top / 350px; }
+.et35 { background:#292929 url("../img/missions/et35.png") no-repeat center top / 350px; }
+.et36 { background:#292929 url("../img/missions/et36.png") no-repeat center top / 350px; }
+.et37 { background:#292929 url("../img/missions/et37.png") no-repeat center top / 350px; }
+.et38 { background:#292929 url("../img/missions/et38.png") no-repeat center top / 350px; }
+.et39 { background:#292929 url("../img/missions/et39.png") no-repeat center top / 350px; }
+.et40 { background:#292929 url("../img/missions/et40.png") no-repeat center top / 350px; }
 
 /*** Backgrounds ***/
 .training, .test { background-image:var(--missionbggradient), var(--icafacility); }
-.fashion, .director { background-image:var(--missionbggradient), var(--paris); }
+div[class^="fashion"], .director { background-image:var(--missionbggradient), var(--paris); }
 .xmas { background-image:var(--missionbggradient), var(--parishh); }
-.virus, .enforcer { background-image:var(--missionbggradient), var(--sapienza); }
-.movie { background-image:var(--missionbggradient), var(--sapienzaicon); }
+div[class^="virus"], .enforcer { background-image:var(--missionbggradient), var(--sapienza); }
+div[class^="movie"] { background-image:var(--missionbggradient), var(--sapienzaicon); }
 .election { background-image:var(--missionbggradient), var(--sapienzalandslide); }
 .handoff { background-image:var(--missionbggradient), var(--sapienzaauthor); }
-.tension, .extractor { background-image:var(--missionbggradient), var(--marrakesh); }
-.construction { background-image:var(--missionbggradient), var(--marrakeshahbos); }
-.birthday, .veteran { background-image:var(--missionbggradient), var(--bangkok); }
+div[class^="tension"], .extractor { background-image:var(--missionbggradient), var(--marrakesh); }
+div[class^="construction"] { background-image:var(--missionbggradient), var(--marrakeshahbos); }
+div[class^="birthday"], .veteran { background-image:var(--missionbggradient), var(--bangkok); }
 .cult { background-image:var(--missionbggradient), var(--bangkoksource); }
-.terrorists, .mercenary { background-image:var(--missionbggradient), var(--colorado); }
-.heart, .controller { background-image:var(--missionbggradient), var(--hokkaido); }
+div[class^="terrorists"], .mercenary { background-image:var(--missionbggradient), var(--colorado); }
+div[class^="heart"], .controller { background-image:var(--missionbggradient), var(--hokkaido); }
 .spread { background-image:var(--missionbggradient), var(--hokkaidopz); }
 .festival { background-image:var(--missionbggradient), var(--hokkaidosf); }
-.beach { background-image:var(--missionbggradient), var(--hawkesbay); }
-.speedway { background-image:var(--missionbggradient), var(--miami); }
+div[class^="beach"] { background-image:var(--missionbggradient), var(--hawkesbay); }
+div[class^="speedway"] { background-image:var(--missionbggradient), var(--miami); }
 .water { background-image:var(--missionbggradient), var(--miamisa); }
-.cartel { background-image:var(--missionbggradient), var(--santafortuna); }
+div[class^="cartel"] { background-image:var(--missionbggradient), var(--santafortuna); }
 .biggame { background-image:var(--missionbggradient), var(--santafortunasa); }
 .ghost { background-image:var(--missionbggradient), var(--mumbai); }
 .magic { background-image:var(--missionbggradient), var(--mumbaisa); }
-.suburbs { background-image:var(--missionbggradient), var(--whittletoncreek); }
+div[class^="suburbs"] { background-image:var(--missionbggradient), var(--whittletoncreek); }
 .pill { background-image:var(--missionbggradient), var(--whittletoncreeksa); }
-.ark { background-image:var(--missionbggradient), var(--isleofsgail); }
+div[class^="ark"] { background-image:var(--missionbggradient), var(--isleofsgail); }
 .bank { background-image:var(--missionbggradient), var(--newyork); }
 .resort { background-image:var(--missionbggradient), var(--havenisland); }
-.tower { background-image:var(--missionbggradient), var(--dubai); }
-.clue { background-image:var(--missionbggradient), var(--dartmoor); }
+div[class^="tower"] { background-image:var(--missionbggradient), var(--dubai); }
+div[class^="clue"] { background-image:var(--missionbggradient), var(--dartmoor); }
 .gardenshow { background-image:var(--missionbggradient), var(--dartmoorgs); }
-.club { background-image:var(--missionbggradient), var(--berlin); }
-.archive { background-image:var(--missionbggradient), var(--chongqing); }
-.vineyard { background-image:var(--missionbggradient), var(--mendoza); }
+div[class^="club"] { background-image:var(--missionbggradient), var(--berlin); }
+div[class^="archive"] { background-image:var(--missionbggradient), var(--chongqing); }
+div[class^="vineyard"] { background-image:var(--missionbggradient), var(--mendoza); }
 .train { background-image:var(--missionbggradient), var(--romania); }
 .pirates { background-image:var(--missionbggradient), var(--ambrose); }
 
@@ -241,92 +283,93 @@ html.httheme {
 div[class$="start-AnyStartingLocation"], .any-start { background-image: url('../img/entry/Any.png'); }
 .training-start-WeaponsBuilding { background-image: url('../img/entry/Weapons%20Building.png'); }
 .test-start-CrouchedbehindaTruck { background-image: url('../img/entry/Crouched%20behind%20a%20Truck.png'); }
-.fashion-start-RedCarpet, .director-start-RedCarpet { background-image: url('../img/entry/Red%20Carpet.png'); }
-.fashion-start-PalaceGarden, .director-start-PalaceGarden { background-image: url('../img/entry/Palace%20Garden.png'); }
-.fashion-start-PileDriverBarge, .director-start-PileDriverBarge { background-image: url('../img/entry/Pile-Driver%20Barge.png'); }
-.fashion-start-Attic, .xmas-start-Attic, .director-start-Attic { background-image: url('../img/entry/Attic.png'); }
-.fashion-start-UndercoverinKitchen, .xmas-start-UndercoverinKitchen, .director-start-UndercoverinKitchen { background-image: url('../img/entry/Undercover%20in%20Kitchen.png'); }
-.fashion-start-UndercoverinLockerRoom, .director-start-UndercoverinLockerRoom { background-image: url('../img/entry/Undercover%20in%20Locker%20Room.png'); }
-.fashion-start-UndercoveratIAGOAuction, .director-start-UndercoveratIAGOAuction { background-image: url('../img/entry/Undercover%20at%20IAGO%20Auction.png'); }
-.fashion-start-UndercoverinAVCenter, .xmas-start-UndercoverinAVCenter, .director-start-UndercoverinAVCenter { background-image: url('../img/entry/Undercover%20in%20AV%20Center.png'); }
-.fashion-start-UndercoverinDressingArea, .xmas-start-UndercoverinDressingArea, .director-start-UndercoverinDressingArea { background-image: url('../img/entry/Undercover%20in%20Dressing%20Area.png'); }
+div[class^="fashion"][class$="-start-RedCarpet"], .fashion-start-RedCarpet, .director-start-RedCarpet { background-image: url('../img/entry/Red%20Carpet.png'); }
+div[class^="fashion"][class$="-start-PalaceGarden"], .fashion-start-PalaceGarden, .director-start-PalaceGarden { background-image: url('../img/entry/Palace%20Garden.png'); }
+div[class^="fashion"][class$="-start-PileDriverBarge"], .fashion-start-PileDriverBarge, .director-start-PileDriverBarge { background-image: url('../img/entry/Pile-Driver%20Barge.png'); }
+div[class^="fashion"][class$="-start-Attic"], .fashion-start-Attic, .xmas-start-Attic, .director-start-Attic { background-image: url('../img/entry/Attic.png'); }
+div[class^="fashion"][class$="-start-UndercoverinKitchen"], .fashion-start-UndercoverinKitchen, .xmas-start-UndercoverinKitchen, .director-start-UndercoverinKitchen { background-image: url('../img/entry/Undercover%20in%20Kitchen.png'); }
+div[class^="fashion"][class$="-start-UndercoverinLockerRoom"], .fashion-start-UndercoverinLockerRoom, .director-start-UndercoverinLockerRoom { background-image: url('../img/entry/Undercover%20in%20Locker%20Room.png'); }
+div[class^="fashion"][class$="-start-UndercoveratIAGOAuction"], .fashion-start-UndercoveratIAGOAuction, .director-start-UndercoveratIAGOAuction { background-image: url('../img/entry/Undercover%20at%20IAGO%20Auction.png'); }
+div[class^="fashion"][class$="-start-UndercoverinAVCenter"], .fashion-start-UndercoverinAVCenter, .xmas-start-UndercoverinAVCenter, .director-start-UndercoverinAVCenter { background-image: url('../img/entry/Undercover%20in%20AV%20Center.png'); }
+div[class^="fashion"][class$="-start-UndercoverinDressingArea"], .fashion-start-UndercoverinDressingArea, .xmas-start-UndercoverinDressingArea, .director-start-UndercoverinDressingArea { background-image: url('../img/entry/Undercover%20in%20Dressing%20Area.png'); }
 .xmas-start-RedCarpet { background-image: url('../img/entry/Red%20Carpet-HH.png'); }
 .xmas-start-PalaceGarden { background-image: url('../img/entry/Palace%20Garden-HH.png'); }
 .xmas-start-PileDriverBarge { background-image: url('../img/entry/Pile-Driver%20Barge-HH.png'); }
 .xmas-start-UndercoverinLockerRoom { background-image: url('../img/entry/Undercover%20in%20Locker%20Room-HH.png'); }
 .xmas-start-UndercoveratIAGOAuction { background-image: url('../img/entry/Undercover%20at%20IAGO%20Auction-HH.png'); }
-.virus-start-MainSquare, .enforcer-start-MainSquare { background-image: url('../img/entry/Main%20Square.png'); }
-.virus-start-ICASafeHouse, .enforcer-start-ICASafeHouse { background-image: url('../img/entry/ICA%20Safe%20House.png'); }
-.virus-start-Harbor, .enforcer-start-Harbor { background-image: url('../img/entry/Harbor.png'); }
-.virus-start-SapienzaRuins, .enforcer-start-SapienzaRuins { background-image: url('../img/entry/Sapienza%20Ruins.png'); }
-.virus-start-MainSquareTower, .enforcer-start-MainSquareTower { background-image: url('../img/entry/Main%20Square%20Tower.png'); }
-.virus-start-ChurchMorgue, .enforcer-start-ChurchMorgue { background-image: url('../img/entry/Church%20Morgue.png'); }
-.virus-start-UndercoverinMansionKitchen, .enforcer-start-UndercoverinMansionKitchen { background-image: url('../img/entry/Undercover%20in%20Mansion%20Kitchen.png'); }
-.virus-start-UndercoverinFieldLab, .enforcer-start-UndercoverinFieldLab { background-image: url('../img/entry/Undercover%20in%20Field%20Lab.png'); }
-.virus-start-UndercoverinMansionGarden, .enforcer-start-UndercoverinMansionGarden { background-image: url('../img/entry/Undercover%20in%20Mansion%20Garden.png'); }
-.virus-start-UndercoverasSecurityStaff, .enforcer-start-UndercoverasSecurityStaff { background-image: url('../img/entry/Undercover%20as%20Security%20Staff.png'); }
-.movie-start-CityGates { background-image: url('../img/entry/City%20Gates.png'); }
+div[class^="virus"][class$="-start-MainSquare"], .virus-start-MainSquare, .enforcer-start-MainSquare { background-image: url('../img/entry/Main%20Square.png'); }
+div[class^="virus"][class$="-start-ICASafeHouse"], .virus-start-ICASafeHouse, .enforcer-start-ICASafeHouse { background-image: url('../img/entry/ICA%20Safe%20House.png'); }
+div[class^="virus"][class$="-start-Harbor"], .virus-start-Harbor, .enforcer-start-Harbor { background-image: url('../img/entry/Harbor.png'); }
+div[class^="virus"][class$="-start-SapienzaRuins"], .virus-start-SapienzaRuins, .enforcer-start-SapienzaRuins { background-image: url('../img/entry/Sapienza%20Ruins.png'); }
+div[class^="virus"][class$="-start-MainSquareTower"], .virus-start-MainSquareTower, .enforcer-start-MainSquareTower { background-image: url('../img/entry/Main%20Square%20Tower.png'); }
+div[class^="virus"][class$="-start-ChurchMorgue"], .virus-start-ChurchMorgue, .enforcer-start-ChurchMorgue { background-image: url('../img/entry/Church%20Morgue.png'); }
+div[class^="virus"][class$="-start-UndercoverinMansionKitchen"], .virus-start-UndercoverinMansionKitchen, .enforcer-start-UndercoverinMansionKitchen { background-image: url('../img/entry/Undercover%20in%20Mansion%20Kitchen.png'); }
+div[class^="virus"][class$="-start-UndercoverinFieldLab"], .virus-start-UndercoverinFieldLab, .enforcer-start-UndercoverinFieldLab { background-image: url('../img/entry/Undercover%20in%20Field%20Lab.png'); }
+div[class^="virus"][class$="-start-UndercoverinMansionGarden"], .virus-start-UndercoverinMansionGarden, .enforcer-start-UndercoverinMansionGarden { background-image: url('../img/entry/Undercover%20in%20Mansion%20Garden.png'); }
+div[class^="virus"][class$="-start-UndercoverasSecurityStaff"], .virus-start-UndercoverasSecurityStaff, .enforcer-start-UndercoverasSecurityStaff { background-image: url('../img/entry/Undercover%20as%20Security%20Staff.png'); }
+div[class^="movie"][class$="-start-CityGates"], .movie-start-CityGates { background-image: url('../img/entry/City%20Gates.png'); }
 .election-start-Promenade { background-image: url('../img/entry/Promenade.png'); }
 .handoff-start-Portico { background-image: url('../img/entry/Portico.png'); }
-.tension-start-BazaarEntrance, .extractor-start-BazaarEntrance { background-image: url('../img/entry/Bazaar%20Entrance.png'); }
-.tension-start-UndercoverattheSnailStand, .extractor-start-UndercoverattheSnailStand { background-image: url('../img/entry/Undercover%20at%20the%20Snail%20Stand.png'); }
-.tension-start-UndercoverontheWestBazaarRooftop, .extractor-start-UndercoverontheWestBazaarRooftop { background-image: url('../img/entry/Undercover%20on%20the%20West%20Bazaar%20Rooftop.png'); }
-.tension-start-UndercoverintheCourtyardClub, .extractor-start-UndercoverintheCourtyardClub { background-image: url('../img/entry/Undercover%20in%20the%20Courtyard%20Club.png'); }
-.tension-start-UndercoverinZaydansCompound, .extractor-start-UndercoverinZaydansCompound { background-image: url('../img/entry/Undercover%20in%20Zaydan%27s%20Compound.png'); }
-.tension-start-LampStoreRooftop, .extractor-start-LampStoreRooftop { background-image: url('../img/entry/Lamp%20Store%20Rooftop.png'); }
-.tension-start-UndercoverintheConsulate, .extractor-start-UndercoverintheConsulate { background-image: url('../img/entry/Undercover%20in%20the%20Consulate.png'); }
-.tension-start-SchoolAlley, .extractor-start-SchoolAlley { background-image: url('../img/entry/School%20Alley.png'); }
-.tension-start-ConsulateParkingGarage, .extractor-start-ConsulateParkingGarage { background-image: url('../img/entry/Consulate%20Parking%20Garage.png'); }
-.construction-start-ConsulatePlaza { background-image: url('../img/entry/Consulate%20Plaza.png'); }
-.birthday-start-RiversideLanding, .veteran-start-RiversideLanding { background-image: url('../img/entry/Riverside%20Landing.png'); }
-.birthday-start-Agent47sSuite, .veteran-start-Agent47sSuite { background-image: url('../img/entry/47%27s%20Suite.png'); }
-.birthday-start-UndercoverintheRestaurantKitchen, .veteran-start-UndercoverintheRestaurantKitchen { background-image: url('../img/entry/Undercover%20in%20the%20Restaurant%20Kitchen.png'); }
-.birthday-start-UndercoverintheLinenRoom, .veteran-start-UndercoverintheLinenRoom { background-image: url('../img/entry/Undercover%20in%20the%20Linen%20Room.png'); }
-.birthday-start-UndercoverbytheSecurityShed, .veteran-start-UndercoverbytheSecurityShed { background-image: url('../img/entry/Undercover%20by%20the%20Security%20Shed.png'); }
-.birthday-start-UndercoverattheHimmapanBar, .veteran-start-UndercoverattheHimmapanBar { background-image: url('../img/entry/Undercover%20at%20the%20Himmapan%20Bar.png'); }
-.birthday-start-UndercoverintheSideGarden, .veteran-start-UndercoverintheSideGarden { background-image: url('../img/entry/Undercover%20in%20the%20Side%20Garden.png'); }
-.birthday-start-Undercoverinthe2ndFloorHallway, .veteran-start-Undercoverinthe2ndFloorHallway { background-image: url('../img/entry/Undercover%20in%20the%202nd%20Floor%20Hallway.png'); }
+div[class^="tension"][class$="-start-BazaarEntrance"], .tension-start-BazaarEntrance, .extractor-start-BazaarEntrance { background-image: url('../img/entry/Bazaar%20Entrance.png'); }
+div[class^="tension"][class$="-start-UndercoverattheSnailStand"], .tension-start-UndercoverattheSnailStand, .extractor-start-UndercoverattheSnailStand { background-image: url('../img/entry/Undercover%20at%20the%20Snail%20Stand.png'); }
+div[class^="tension"][class$="-start-UndercoverontheWestBazaarRooftop"], .tension-start-UndercoverontheWestBazaarRooftop, .extractor-start-UndercoverontheWestBazaarRooftop { background-image: url('../img/entry/Undercover%20on%20the%20West%20Bazaar%20Rooftop.png'); }
+div[class^="tension"][class$="-start-UndercoverintheCourtyardClub"], .tension-start-UndercoverintheCourtyardClub, .extractor-start-UndercoverintheCourtyardClub { background-image: url('../img/entry/Undercover%20in%20the%20Courtyard%20Club.png'); }
+div[class^="tension"][class$="-start-UndercoverinZaydansCompound"], .tension-start-UndercoverinZaydansCompound, .extractor-start-UndercoverinZaydansCompound { background-image: url('../img/entry/Undercover%20in%20Zaydan%27s%20Compound.png'); }
+div[class^="tension"][class$="-start-LampStoreRooftop"], .tension-start-LampStoreRooftop, .extractor-start-LampStoreRooftop { background-image: url('../img/entry/Lamp%20Store%20Rooftop.png'); }
+div[class^="tension"][class$="-start-UndercoverintheConsulate"], .tension-start-UndercoverintheConsulate, .extractor-start-UndercoverintheConsulate { background-image: url('../img/entry/Undercover%20in%20the%20Consulate.png'); }
+div[class^="tension"][class$="-start-SchoolAlley"], .tension-start-SchoolAlley, .extractor-start-SchoolAlley { background-image: url('../img/entry/School%20Alley.png'); }
+div[class^="tension"][class$="-start-ConsulateParkingGarage"], .tension-start-ConsulateParkingGarage, .extractor-start-ConsulateParkingGarage { background-image: url('../img/entry/Consulate%20Parking%20Garage.png'); }
+div[class^="birthday"][class$="-start-ConsulatePlaza"], .construction-start-ConsulatePlaza { background-image: url('../img/entry/Consulate%20Plaza.png'); }
+div[class^="birthday"][class$="-start-RiversideLanding"], .birthday-start-RiversideLanding, .veteran-start-RiversideLanding { background-image: url('../img/entry/Riverside%20Landing.png'); }
+div[class^="birthday"][class$="-start-Agent47sSuite"], .birthday-start-Agent47sSuite, .veteran-start-Agent47sSuite { background-image: url('../img/entry/47%27s%20Suite.png'); }
+div[class^="birthday"][class$="-start-UndercoverintheRestaurantKitchen"], .birthday-start-UndercoverintheRestaurantKitchen, .veteran-start-UndercoverintheRestaurantKitchen { background-image: url('../img/entry/Undercover%20in%20the%20Restaurant%20Kitchen.png'); }
+div[class^="birthday"][class$="-start-UndercoverintheLinenRoom"], .birthday-start-UndercoverintheLinenRoom, .veteran-start-UndercoverintheLinenRoom { background-image: url('../img/entry/Undercover%20in%20the%20Linen%20Room.png'); }
+div[class^="birthday"][class$="-start-UndercoverbytheSecurityShed"], .birthday-start-UndercoverbytheSecurityShed, .veteran-start-UndercoverbytheSecurityShed { background-image: url('../img/entry/Undercover%20by%20the%20Security%20Shed.png'); }
+div[class^="birthday"][class$="-start-UndercoverattheHimmapanBar"], .birthday-start-UndercoverattheHimmapanBar, .veteran-start-UndercoverattheHimmapanBar { background-image: url('../img/entry/Undercover%20at%20the%20Himmapan%20Bar.png'); }
+div[class^="birthday"][class$="-start-UndercoverintheSideGarden"], .birthday-start-UndercoverintheSideGarden, .veteran-start-UndercoverintheSideGarden { background-image: url('../img/entry/Undercover%20in%20the%20Side%20Garden.png'); }
+div[class^="birthday"][class$="-start-Undercoverinthe2ndFloorHallway"], .birthday-start-Undercoverinthe2ndFloorHallway, .veteran-start-Undercoverinthe2ndFloorHallway { background-image: url('../img/entry/Undercover%20in%20the%202nd%20Floor%20Hallway.png'); }
 .cult-start-HotelFrontTerrace { background-image: url('../img/entry/Hotel%20Front%20Terrace.png'); }
-.terrorists-start-UndercoverintheGarage, .mercenary-start-UndercoverintheGarage { background-image: url('../img/entry/Undercover%20in%20the%20Garage.png'); }
-.terrorists-start-WestBridge, .mercenary-start-WestBridge { background-image: url('../img/entry/West%20Bridge.png'); }
-.terrorists-start-UndercoverbytheGreenhouse, .mercenary-start-UndercoverbytheGreenhouse { background-image: url('../img/entry/Undercover%20by%20the%20Greenhouse.png'); }
-.terrorists-start-UndercoverontheDemolitionRange, .mercenary-start-UndercoverontheDemolitionRange { background-image: url('../img/entry/Undercover%20on%20the%20Demolition%20Range.png'); }
-.terrorists-start-OldOrchard, .mercenary-start-OldOrchard { background-image: url('../img/entry/Old%20Orchard.png'); }
-.terrorists-start-SouthernFarmPerimeter, .mercenary-start-SouthernFarmPerimeter { background-image: url('../img/entry/Southern%20Farm%20Perimeter.png'); }
-.terrorists-start-UndercoverintheFarmhouse, .mercenary-start-UndercoverintheFarmhouse { background-image: url('../img/entry/Undercover%20in%20the%20Farmhouse.png'); }
-.terrorists-start-WaterTower, .mercenary-start-WaterTower { background-image: url('../img/entry/Water%20Tower.png'); }
-.heart-start-TobiasRiepersSuite, .festival-start-TobiasRiepersSuite, .festival-start-TobiasRiepersSuiteH2Restaurant, .controller-start-TobiasRiepersSuite { background-image: url('../img/entry/Tobias%20Rieper%27s%20Suite.png'); }
-.heart-start-Spa, .festival-start-Spa, .controller-start-Spa { background-image: url('../img/entry/Spa.png'); }
-.heart-start-InfiltratingAlongtheMountainPath, .festival-start-InfiltratingAlongtheMountainPath, .controller-start-InfiltratingAlongtheMountainPath { background-image: url('../img/entry/Infiltrating%20Along%20the%20Mountain%20Path.png'); }
-.heart-start-Restaurant, .festival-start-Restaurant, .controller-start-Restaurant { background-image: url('../img/entry/Restaurant.png'); }
-.heart-start-UndercoverintheStaffQuarters, .festival-start-UndercoverintheStaffQuarters, .controller-start-UndercoverintheStaffQuarters { background-image: url('../img/entry/Undercover%20in%20the%20Staff%20Quarters.png'); }
-.heart-start-UndercoverintheKitchen, .festival-start-UndercoverintheKitchen, .controller-start-UndercoverintheKitchen { background-image: url('../img/entry/Undercover%20in%20the%20Kitchen.png'); }
-.heart-start-UndercoverintheGarden, .festival-start-UndercoverintheGarden, .controller-start-UndercoverintheGarden { background-image: url('../img/entry/Undercover%20in%20the%20Garden.png'); }
-.heart-start-Morgue, .festival-start-Morgue, .controller-start-Morgue { background-image: url('../img/entry/Morgue.png'); }
-.heart-start-UndercoverintheOperatingTheater, .festival-start-UndercoverintheOperatingTheater, .controller-start-UndercoverintheOperatingTheater { background-image: url('../img/entry/Undercover%20in%20the%20Operating%20Theater.png'); }
+div[class^="terrorists"][class$="-start-UndercoverintheGarage"], .terrorists-start-UndercoverintheGarage, .mercenary-start-UndercoverintheGarage { background-image: url('../img/entry/Undercover%20in%20the%20Garage.png'); }
+div[class^="terrorists"][class$="-start-WestBridge"], .terrorists-start-WestBridge, .mercenary-start-WestBridge { background-image: url('../img/entry/West%20Bridge.png'); }
+div[class^="terrorists"][class$="-start-UndercoverbytheGreenhouse"], .terrorists-start-UndercoverbytheGreenhouse, .mercenary-start-UndercoverbytheGreenhouse { background-image: url('../img/entry/Undercover%20by%20the%20Greenhouse.png'); }
+div[class^="terrorists"][class$="-start-UndercoverontheDemolitionRange"], .terrorists-start-UndercoverontheDemolitionRange, .mercenary-start-UndercoverontheDemolitionRange { background-image: url('../img/entry/Undercover%20on%20the%20Demolition%20Range.png'); }
+div[class^="terrorists"][class$="-start-OldOrchard"], .terrorists-start-OldOrchard, .mercenary-start-OldOrchard { background-image: url('../img/entry/Old%20Orchard.png'); }
+div[class^="terrorists"][class$="-start-SouthernFarmPerimeter"], .terrorists-start-SouthernFarmPerimeter, .mercenary-start-SouthernFarmPerimeter { background-image: url('../img/entry/Southern%20Farm%20Perimeter.png'); }
+div[class^="terrorists"][class$="-start-UndercoverintheFarmhouse"], .terrorists-start-UndercoverintheFarmhouse, .mercenary-start-UndercoverintheFarmhouse { background-image: url('../img/entry/Undercover%20in%20the%20Farmhouse.png'); }
+div[class^="terrorists"][class$="-start-WaterTower"], .terrorists-start-WaterTower, .mercenary-start-WaterTower { background-image: url('../img/entry/Water%20Tower.png'); }
+div[class^="heart"][class$="-start-TobiasRiepersSuite"], .heart-start-TobiasRiepersSuite, .festival-start-TobiasRiepersSuite, .festival-start-TobiasRiepersSuiteH2Restaurant, .controller-start-TobiasRiepersSuite { background-image: url('../img/entry/Tobias%20Rieper%27s%20Suite.png'); }
+div[class^="heart"][class$="-start-Spa"], .heart-start-Spa, .festival-start-Spa, .controller-start-Spa { background-image: url('../img/entry/Spa.png'); }
+div[class^="heart"][class$="-start-InfiltratingAlongtheMountainPath"], .heart-start-InfiltratingAlongtheMountainPath, .festival-start-InfiltratingAlongtheMountainPath, .controller-start-InfiltratingAlongtheMountainPath { background-image: url('../img/entry/Infiltrating%20Along%20the%20Mountain%20Path.png'); }
+div[class^="heart"][class$="-start-Restaurant"], .heart-start-Restaurant, .festival-start-Restaurant, .controller-start-Restaurant { background-image: url('../img/entry/Restaurant.png'); }
+div[class^="heart"][class$="-start-UndercoverintheStaffQuarters"], .heart-start-UndercoverintheStaffQuarters, .festival-start-UndercoverintheStaffQuarters, .controller-start-UndercoverintheStaffQuarters { background-image: url('../img/entry/Undercover%20in%20the%20Staff%20Quarters.png'); }
+div[class^="heart"][class$="-start-UndercoverintheKitchen"], .heart-start-UndercoverintheKitchen, .festival-start-UndercoverintheKitchen, .controller-start-UndercoverintheKitchen { background-image: url('../img/entry/Undercover%20in%20the%20Kitchen.png'); }
+div[class^="heart"][class$="-start-UndercoverintheGarden"], .heart-start-UndercoverintheGarden, .festival-start-UndercoverintheGarden, .controller-start-UndercoverintheGarden { background-image: url('../img/entry/Undercover%20in%20the%20Garden.png'); }
+div[class^="heart"][class$="-start-Morgue"], .heart-start-Morgue, .festival-start-Morgue, .controller-start-Morgue { background-image: url('../img/entry/Morgue.png'); }
+div[class^="heart"][class$="-start-UndercoverintheOperatingTheater"], .heart-start-UndercoverintheOperatingTheater, .festival-start-UndercoverintheOperatingTheater, .controller-start-UndercoverintheOperatingTheater { background-image: url('../img/entry/Undercover%20in%20the%20Operating%20Theater.png'); }
 .spread-start-InfiltratingbelowtheHelipad { background-image: url('../img/entry/Infiltrating%20below%20the%20Helipad.png'); }
 .beach-start-Boat { background-image: url('../img/entry/Boat-Nightcall.png'); }
 .beach-start-Beach { background-image: url('../img/entry/Beach.png'); }
 .beach-start-Office { background-image: url('../img/entry/Office.png'); }
-.speedway-start-EventEntrance, .water-start-EventEntrance { background-image: url('../img/entry/EventEntrance.png'); }
-.speedway-start-DolphinFountain, .water-start-DolphinFountain { background-image: url('../img/entry/DolphinFountain.png'); }
-.speedway-start-Marina, .water-start-Marina { background-image: url('../img/entry/Marina.png'); }
-.speedway-start-Stands, .water-start-Stands { background-image: url('../img/entry/Stands.png'); }
-.speedway-start-FoodStand, .water-start-FoodStand { background-image: url('../img/entry/FoodStand.png'); }
-.speedway-start-Overpass, .water-start-Overpass { background-image: url('../img/entry/Overpass.png'); }
-.speedway-start-DriversLounge, .water-start-DriversLounge { background-image: url('../img/entry/DriversLounge.png'); }
-.speedway-start-Podium, .water-start-Podium { background-image: url('../img/entry/Podium.png'); }
-.speedway-start-MedicalArea, .water-start-MedicalArea { background-image: url('../img/entry/MedicalArea.png'); }
-.speedway-start-KronstadtBaysideCenter, .water-start-KronstadtBaysideCenter { background-image: url('../img/entry/KronstadtBaysideCenter.png'); }
-.speedway-start-KowoonPit, .water-start-KowoonPit { background-image: url('../img/entry/KowoonPit.png'); }
-.cartel-start-VillageBusStop { background-image: url('../img/entry/VillageBusStop.png'); }
-.cartel-start-VillageHostel, .biggame-start-VillageHostel { background-image: url('../img/entry/VillageHostel.png'); }
-.cartel-start-ShamansHut, .biggame-start-ShamansHut { background-image: url('../img/entry/ShamansHut.png'); }
-.cartel-start-VillageBar, .biggame-start-VillageBar { background-image: url('../img/entry/VillageBar.png'); }
-.cartel-start-ConstructionSite, .biggame-start-ConstructionSite { background-image: url('../img/entry/ConstructionSite.png'); }
-.cartel-start-CocaFields, .biggame-start-CocaFields { background-image: url('../img/entry/CocaFields.png'); }
-.cartel-start-SubmarineCave, .biggame-start-SubmarineCave { background-image: url('../img/entry/SubmarineCave.png'); }
-.cartel-start-MansionsBasement, .biggame-start-MansionsBasement { background-image: url('../img/entry/MansionsBasement.png'); }
+div[class^="beach"][class$="-start-Hut"] { background-image: url('../img/entry/Hut.png'); }
+div[class^="speedway"][class$="-start-EventEntrance"], .speedway-start-EventEntrance, .water-start-EventEntrance { background-image: url('../img/entry/EventEntrance.png'); }
+div[class^="speedway"][class$="-start-DolphinFountain"], .speedway-start-DolphinFountain, .water-start-DolphinFountain { background-image: url('../img/entry/DolphinFountain.png'); }
+div[class^="speedway"][class$="-start-Marina"], .speedway-start-Marina, .water-start-Marina { background-image: url('../img/entry/Marina.png'); }
+div[class^="speedway"][class$="-start-Stands"], .speedway-start-Stands, .water-start-Stands { background-image: url('../img/entry/Stands.png'); }
+div[class^="speedway"][class$="-start-FoodStand"], .speedway-start-FoodStand, .water-start-FoodStand { background-image: url('../img/entry/FoodStand.png'); }
+div[class^="speedway"][class$="-start-Overpass"], .speedway-start-Overpass, .water-start-Overpass { background-image: url('../img/entry/Overpass.png'); }
+div[class^="speedway"][class$="-start-DriversLounge"], .speedway-start-DriversLounge, .water-start-DriversLounge { background-image: url('../img/entry/DriversLounge.png'); }
+div[class^="speedway"][class$="-start-Podium"], .speedway-start-Podium, .water-start-Podium { background-image: url('../img/entry/Podium.png'); }
+div[class^="speedway"][class$="-start-MedicalArea"], .speedway-start-MedicalArea, .water-start-MedicalArea { background-image: url('../img/entry/MedicalArea.png'); }
+div[class^="speedway"][class$="-start-KronstadtBaysideCenter"], .speedway-start-KronstadtBaysideCenter, .water-start-KronstadtBaysideCenter { background-image: url('../img/entry/KronstadtBaysideCenter.png'); }
+div[class^="speedway"][class$="-start-KowoonPit"], .speedway-start-KowoonPit, .water-start-KowoonPit { background-image: url('../img/entry/KowoonPit.png'); }
+div[class^="cartel"][class$="-start-VillageBusStop"], .cartel-start-VillageBusStop { background-image: url('../img/entry/VillageBusStop.png'); }
+div[class^="cartel"][class$="-start-VillageHostel"], .cartel-start-VillageHostel, .biggame-start-VillageHostel { background-image: url('../img/entry/VillageHostel.png'); }
+div[class^="cartel"][class$="-start-ShamansHut"], .cartel-start-ShamansHut, .biggame-start-ShamansHut { background-image: url('../img/entry/ShamansHut.png'); }
+div[class^="cartel"][class$="-start-VillageBar"], .cartel-start-VillageBar, .biggame-start-VillageBar { background-image: url('../img/entry/VillageBar.png'); }
+div[class^="cartel"][class$="-start-ConstructionSite"], .cartel-start-ConstructionSite, .biggame-start-ConstructionSite { background-image: url('../img/entry/ConstructionSite.png'); }
+div[class^="cartel"][class$="-start-CocaFields"], .cartel-start-CocaFields, .biggame-start-CocaFields { background-image: url('../img/entry/CocaFields.png'); }
+div[class^="cartel"][class$="-start-SubmarineCave"], .cartel-start-SubmarineCave, .biggame-start-SubmarineCave { background-image: url('../img/entry/SubmarineCave.png'); }
+div[class^="cartel"][class$="-start-MansionsBasement"], .cartel-start-MansionsBasement, .biggame-start-MansionsBasement { background-image: url('../img/entry/MansionsBasement.png'); }
 .biggame-start-SteelBridge { background-image: url('../img/entry/Steel%20Bridge.png'); }
 .ghost-start-MainStreet { background-image: url('../img/entry/MainStreet.png'); }
 .ghost-start-Train, .magic-start-Train { background-image: url('../img/entry/Train.png'); }
@@ -342,20 +385,20 @@ div[class$="start-AnyStartingLocation"], .any-start { background-image: url('../
 .ghost-start-Hill, .magic-start-Hill { background-image: url('../img/entry/Hill.png'); }
 .ghost-start-TrainYard, .magic-start-TrainYard { background-image: url('../img/entry/TrainYard.png'); }
 .magic-start-OutsideChawl { background-image: url('../img/entry/Outside%20Chawl.png'); }
-.suburbs-start-WhittletonCreek, .pill-start-WhittletonCreek { background-image: url('../img/entry/WhittletonCreek.png'); }
-.suburbs-start-ConstructionArea, .pill-start-ConstructionArea { background-image: url('../img/entry/ConstructionArea.png'); }
-.suburbs-start-Fumigation, .pill-start-Fumigation { background-image: url('../img/entry/Fumigation.png'); }
-.suburbs-start-GarbageRemoval, .pill-start-GarbageRemoval { background-image: url('../img/entry/GarbageRemoval.png'); }
-.suburbs-start-SuburbSign, .pill-start-SuburbSign { background-image: url('../img/entry/SuburbSign.png'); }
-.suburbs-start-BBQParty, .pill-start-BBQParty { background-image: url('../img/entry/BBQParty.png'); }
-.ark-start-Harbor { background-image: url('../img/entry/Harbor-TheArkSociety.png'); }
-.ark-start-Chapel { background-image: url('../img/entry/Chapel.png'); }
-.ark-start-Keep { background-image: url('../img/entry/Keep.png'); }
-.ark-start-ReceptionArea { background-image: url('../img/entry/ReceptionArea.png'); }
-.ark-start-Kitchens { background-image: url('../img/entry/Kitchens.png'); }
-.ark-start-Warehouse { background-image: url('../img/entry/Warehouse.png'); }
-.ark-start-Gallery { background-image: url('../img/entry/Gallery.png'); }
-.ark-start-ArchitectsLounge { background-image: url('../img/entry/ArchitectsLounge.png'); }
+div[class^="suburbs"][class$="-start-WhittletonCreek"], .suburbs-start-WhittletonCreek, .pill-start-WhittletonCreek { background-image: url('../img/entry/WhittletonCreek.png'); }
+div[class^="suburbs"][class$="-start-ConstructionArea"], .suburbs-start-ConstructionArea, .pill-start-ConstructionArea { background-image: url('../img/entry/ConstructionArea.png'); }
+div[class^="suburbs"][class$="-start-Fumigation"], .suburbs-start-Fumigation, .pill-start-Fumigation { background-image: url('../img/entry/Fumigation.png'); }
+div[class^="suburbs"][class$="-start-GarbageRemoval"], .suburbs-start-GarbageRemoval, .pill-start-GarbageRemoval { background-image: url('../img/entry/GarbageRemoval.png'); }
+div[class^="suburbs"][class$="-start-SuburbSign"], .suburbs-start-SuburbSign, .pill-start-SuburbSign { background-image: url('../img/entry/SuburbSign.png'); }
+div[class^="suburbs"][class$="-start-BBQParty"], .suburbs-start-BBQParty, .pill-start-BBQParty { background-image: url('../img/entry/BBQParty.png'); }
+div[class^="ark"][class$="-start-Harbor"], .ark-start-Harbor { background-image: url('../img/entry/Harbor-TheArkSociety.png'); }
+div[class^="ark"][class$="-start-Chapel"], .ark-start-Chapel { background-image: url('../img/entry/Chapel.png'); }
+div[class^="ark"][class$="-start-Keep"], .ark-start-Keep { background-image: url('../img/entry/Keep.png'); }
+div[class^="ark"][class$="-start-ReceptionArea"], .ark-start-ReceptionArea { background-image: url('../img/entry/ReceptionArea.png'); }
+div[class^="ark"][class$="-start-Kitchens"], .ark-start-Kitchens { background-image: url('../img/entry/Kitchens.png'); }
+div[class^="ark"][class$="-start-Warehouse"], .ark-start-Warehouse { background-image: url('../img/entry/Warehouse.png'); }
+div[class^="ark"][class$="-start-Gallery"], .ark-start-Gallery { background-image: url('../img/entry/Gallery.png'); }
+div[class^="ark"][class$="-start-ArchitectsLounge"], .ark-start-ArchitectsLounge { background-image: url('../img/entry/ArchitectsLounge.png'); }
 .bank-start-BankEntrance { background-image: url('../img/entry/Bank%20Entrance.png'); }
 .bank-start-AuditHall { background-image: url('../img/entry/Audit%20Hall.png'); }
 .bank-start-InvestmentFloor { background-image: url('../img/entry/Investment%20Floor.png'); }
@@ -368,43 +411,44 @@ div[class$="start-AnyStartingLocation"], .any-start { background-image: url('../
 .resort-start-SharkHut { background-image: url('../img/entry/Shark%20Hut.png'); }
 .resort-start-ResortGym { background-image: url('../img/entry/Resort%20Gym.png'); }
 .resort-start-PrivateVillaPier { background-image: url('../img/entry/Private%20Villa%20Pier.png'); }
-.tower-start-BurjalGhazaliExterior { background-image: url('../img/entry/BurjalGhazaliExterior.png'); }
-.tower-start-AtriumLobby { background-image: url('../img/entry/AtriumLobby.png'); }
-.tower-start-MeetingRoom { background-image: url('../img/entry/MeetingRoom.png'); }
-.tower-start-ArtInstallation { background-image: url('../img/entry/ArtInstallation.png'); }
-.tower-start-GuardRoom { background-image: url('../img/entry/GuardRoom.png'); }
-.tower-start-Penthouse { background-image: url('../img/entry/Penthouse.png'); }
-.clue-start-MainRoad { background-image: url('../img/entry/MainRoad.png'); }
-.clue-start-MainRoadGathering { background-image: url('../img/entry/MainRoadGathering.png'); }
-.clue-start-Garden { background-image: url('../img/entry/Garden.png'); }
-.clue-start-StaffRoom { background-image: url('../img/entry/StaffRoom.png'); }
-.clue-start-BehindMansion { background-image: url('../img/entry/BehindMansion.png'); }
-.clue-start-BehindMansionGathering { background-image: url('../img/entry/BehindMansionGathering.png'); }
-.clue-start-Library { background-image: url('../img/entry/Library.png'); }
-.clue-start-ZacharysBedroom { background-image: url('../img/entry/ZacharysBedroom.png'); }
+div[class^="tower"][class$="-start-BurjalGhazaliExterior"], .tower-start-BurjalGhazaliExterior { background-image: url('../img/entry/BurjalGhazaliExterior.png'); }
+div[class^="tower"][class$="-start-AtriumLobby"], .tower-start-AtriumLobby { background-image: url('../img/entry/AtriumLobby.png'); }
+div[class^="tower"][class$="-start-MeetingRoom"], .tower-start-MeetingRoom { background-image: url('../img/entry/MeetingRoom.png'); }
+div[class^="tower"][class$="-start-ArtInstallation"], .tower-start-ArtInstallation { background-image: url('../img/entry/ArtInstallation.png'); }
+div[class^="tower"][class$="-start-GuardRoom"], .tower-start-GuardRoom { background-image: url('../img/entry/GuardRoom.png'); }
+div[class^="tower"][class$="-start-Penthouse"], .tower-start-Penthouse { background-image: url('../img/entry/Penthouse.png'); }
+div[class^="clue"][class$="-start-MainRoad"], .clue-start-MainRoad { background-image: url('../img/entry/MainRoad.png'); }
+div[class^="clue"][class$="-start-MainRoadGathering"], .clue-start-MainRoadGathering { background-image: url('../img/entry/MainRoadGathering.png'); }
+div[class^="clue"][class$="-start-Garden"], .clue-start-Garden { background-image: url('../img/entry/Garden.png'); }
+div[class^="clue"][class$="-start-StaffRoom"], .clue-start-StaffRoom { background-image: url('../img/entry/StaffRoom.png'); }
+div[class^="clue"][class$="-start-BehindMansion"], .clue-start-BehindMansion { background-image: url('../img/entry/BehindMansion.png'); }
+div[class^="clue"][class$="-start-BehindMansionGathering"], .clue-start-BehindMansionGathering { background-image: url('../img/entry/BehindMansionGathering.png'); }
+div[class^="clue"][class$="-start-Library"], .clue-start-Library { background-image: url('../img/entry/Library.png'); }
+div[class^="clue"][class$="-start-ZacharysBedroom"], .clue-start-ZacharysBedroom { background-image: url('../img/entry/ZacharysBedroom.png'); }
 .gardenshow-start-GardenShowEntrance { background-image: url('../img/entry/GardenShowEntrance.png'); }
 .gardenshow-start-DeterministicMode { background-image: url('../img/entry/DeterministicMode-DGS.png'); }
-.club-start-BusStop { background-image: url('../img/entry/BusStop.png'); }
-.club-start-ClubEntrance { background-image: url('../img/entry/ClubEntrance.png'); }
-.club-start-ProjectionBar { background-image: url('../img/entry/ProjectionBar.png'); }
-.club-start-RadioTower { background-image: url('../img/entry/RadioTower.png'); }
-.club-start-ChillOut { background-image: url('../img/entry/ChillOut.png'); }
-.club-start-DJBooth { background-image: url('../img/entry/DJBooth.png'); }
-.club-start-BikerHangout { background-image: url('../img/entry/BikerHangout.png'); }
-.archive-start-TrainStation { background-image: url('../img/entry/TrainStation.png'); }
-.archive-start-FacilityRooftop { background-image: url('../img/entry/FacilityRooftop.png'); }
-.archive-start-Balcony { background-image: url('../img/entry/Balcony.png'); }
-.archive-start-TheBlock { background-image: url('../img/entry/TheBlock.png'); }
-.archive-start-RestaurantKitchen { background-image: url('../img/entry/RestaurantKitchen.png'); }
-.archive-start-RiverSideWalkway { background-image: url('../img/entry/RiverSideWalkway.png'); }
-.archive-start-FacilityLockerRoom { background-image: url('../img/entry/FacilityLockerRoom.png'); }
-.vineyard-start-WineryViewpoint { background-image: url('../img/entry/WineryViewpoint.png'); }
-.vineyard-start-ParkingLot { background-image: url('../img/entry/ParkingLot.png'); }
-.vineyard-start-Vineyard { background-image: url('../img/entry/Vineyard.png'); }
-.vineyard-start-TastingRoom { background-image: url('../img/entry/TastingRoom.png'); }
-.vineyard-start-SniperSpot { background-image: url('../img/entry/SniperSpot.png'); }
-.vineyard-start-Shrine { background-image: url('../img/entry/Shrine-TF.png'); }
-.vineyard-start-DiningArea { background-image: url('../img/entry/DiningArea.png'); }
+div[class^="club"][class$="-start-BusStop"], .club-start-BusStop { background-image: url('../img/entry/BusStop.png'); }
+div[class^="club"][class$="-start-ClubEntrance"], .club-start-ClubEntrance { background-image: url('../img/entry/ClubEntrance.png'); }
+div[class^="club"][class$="-start-ProjectionBar"], .club-start-ProjectionBar { background-image: url('../img/entry/ProjectionBar.png'); }
+div[class^="club"][class$="-start-RadioTower"], .club-start-RadioTower { background-image: url('../img/entry/RadioTower.png'); }
+div[class^="club"][class$="-start-ChillOut"], .club-start-ChillOut { background-image: url('../img/entry/ChillOut.png'); }
+div[class^="club"][class$="-start-DJBooth"], .club-start-DJBooth { background-image: url('../img/entry/DJBooth.png'); }
+div[class^="club"][class$="-start-BikerHangout"], .club-start-BikerHangout { background-image: url('../img/entry/BikerHangout.png'); }
+div[class^="archive"][class$="-start-TrainStation"], .archive-start-TrainStation { background-image: url('../img/entry/TrainStation.png'); }
+div[class^="archive"][class$="-start-FacilityRooftop"], .archive-start-FacilityRooftop { background-image: url('../img/entry/FacilityRooftop.png'); }
+div[class^="archive"][class$="-start-Balcony"], .archive-start-Balcony { background-image: url('../img/entry/Balcony.png'); }
+div[class^="archive"][class$="-start-TheBlock"], .archive-start-TheBlock { background-image: url('../img/entry/TheBlock.png'); }
+div[class^="archive"][class$="-start-RestaurantKitchen"], .archive-start-RestaurantKitchen { background-image: url('../img/entry/RestaurantKitchen.png'); }
+div[class^="archive"][class$="-start-RiverSideWalkway"], .archive-start-RiverSideWalkway { background-image: url('../img/entry/RiverSideWalkway.png'); }
+div[class^="archive"][class$="-start-FacilityLockerRoom"], .archive-start-FacilityLockerRoom { background-image: url('../img/entry/FacilityLockerRoom.png'); }
+.vineyard-start-WineryViewpoint { background-image: url('../img/entry/WineryViewpoint.png') !important; }
+div[class^="vineyard"][class$="-start-WineryViewpoint"] { background-image: url('../img/entry/WineryViewpointNoDiana.png'); }
+div[class^="vineyard"][class$="-start-ParkingLot"], .vineyard-start-ParkingLot { background-image: url('../img/entry/ParkingLot.png'); }
+div[class^="vineyard"][class$="-start-Vineyard"], .vineyard-start-Vineyard { background-image: url('../img/entry/Vineyard.png'); }
+div[class^="vineyard"][class$="-start-TastingRoom"], .vineyard-start-TastingRoom { background-image: url('../img/entry/TastingRoom.png'); }
+div[class^="vineyard"][class$="-start-SniperSpot"], .vineyard-start-SniperSpot { background-image: url('../img/entry/SniperSpot.png'); }
+div[class^="vineyard"][class$="-start-Shrine"], .vineyard-start-Shrine { background-image: url('../img/entry/Shrine-TF.png'); }
+div[class^="vineyard"][class$="-start-DiningArea"], .vineyard-start-DiningArea { background-image: url('../img/entry/DiningArea.png'); }
 .train-start-Reflection { background-image: url('../img/entry/Reflection.png'); }
 .train-start-Laboratory { background-image: url('../img/entry/Laboratory.png'); }
 .train-start-Outdoors { background-image: url('../img/entry/Outdoors.png'); }
@@ -421,74 +465,75 @@ div[class$="exit-AnyExitLocation"], .any-exit { background-image: url('../img/ex
 .training-exit-ButtonbytheSpeedboat { background-image: url('../img/exit/Button%20by%20the%20Speedboat.png'); }
 .training-exit-ButtonbytheHelicopter { background-image: url('../img/exit/Button%20by%20the%20Helicopter.png'); }
 .test-exit-ButtonbytheCar { background-image: url('../img/exit/Button%20by%20the%20Car.png'); }
-.fashion-exit-FrontGatesRedCarpet, .director-exit-FrontGatesRedCarpet { background-image: url('../img/exit/Front%20Gates%20%28Red%20Carpet%29.png'); }
-.fashion-exit-FrontGatesVIP, .director-exit-FrontGatesVIP { background-image: url('../img/exit/Front%20Gates%20%28VIP%29.png'); }
-.fashion-exit-FrontGatesParkingArea, .director-exit-FrontGatesParkingArea { background-image: url('../img/exit/Front%20Gates%20%28Paking%20Area%29.png'); }
-.fashion-exit-BasementCatacombs, .xmas-exit-BasementCatacombs, .director-exit-BasementCatacombs { background-image: url('../img/exit/Basement%20Catacombs.png'); }
-.fashion-exit-Helicopter, .director-exit-Helicopter { background-image: url('../img/exit/Helicopter-Showstopper.png'); }
-.fashion-exit-BaronLarinsSpeedboat, .director-exit-BaronLarinsSpeedboat { background-image: url('../img/exit/Baron%20Larin%27s%20Speedboat.png'); }
+div[class^="fashion"][class$="-exit-FrontGatesRedCarpet"], .fashion-exit-FrontGatesRedCarpet, .director-exit-FrontGatesRedCarpet { background-image: url('../img/exit/Front%20Gates%20%28Red%20Carpet%29.png'); }
+div[class^="fashion"][class$="-exit-FrontGatesVIP"], .fashion-exit-FrontGatesVIP, .director-exit-FrontGatesVIP { background-image: url('../img/exit/Front%20Gates%20%28VIP%29.png'); }
+div[class^="fashion"][class$="-exit-FrontGatesParkingArea"], .fashion-exit-FrontGatesParkingArea, .director-exit-FrontGatesParkingArea { background-image: url('../img/exit/Front%20Gates%20%28Paking%20Area%29.png'); }
+div[class^="fashion"][class$="-exit-BasementCatacombs"], .fashion-exit-BasementCatacombs, .xmas-exit-BasementCatacombs, .director-exit-BasementCatacombs { background-image: url('../img/exit/Basement%20Catacombs.png'); }
+div[class^="fashion"][class$="-exit-Helicopter"], .fashion-exit-Helicopter, .director-exit-Helicopter { background-image: url('../img/exit/Helicopter-Showstopper.png'); }
+div[class^="fashion"][class$="-exit-BaronLarinsSpeedboat"], .fashion-exit-BaronLarinsSpeedboat, .director-exit-BaronLarinsSpeedboat { background-image: url('../img/exit/Baron%20Larin%27s%20Speedboat.png'); }
 .xmas-exit-FrontGatesRedCarpet { background-image: url('../img/exit/Front%20Gates%20%28Red%20Carpet%29-HH.png'); }
 .xmas-exit-FrontGatesVIP { background-image: url('../img/exit/Front%20Gates%20%28VIP%29-HH.png'); }
 .xmas-exit-FrontGatesParkingArea { background-image: url('../img/exit/Front%20Gates%20%28Paking%20Area%29-HH.png'); }
 .xmas-exit-Helicopter { background-image: url('../img/exit/Helicopter-HH.png'); }
 .xmas-exit-BaronLarinsSpeedboat { background-image: url('../img/exit/Baron%20Larin%27s%20Speedboat-HH.png'); }
 .xmas-exit-Chimney { background-image: url('../img/exit/Chimney.png'); }
-.virus-exit-Car, .enforcer-exit-Car { background-image: url('../img/exit/Car-WorldofTomorrow.png'); }
-.virus-exit-SpeedboatHarbor, .enforcer-exit-SpeedboatHarbor { background-image: url('../img/exit/Speedboat%20%28Harbor%29.png'); }
-.virus-exit-Seaplane, .enforcer-exit-Seaplane { background-image: url('../img/exit/Seaplane.png'); }
-.virus-exit-SpeedboatRuins, .enforcer-exit-SpeedboatRuins { background-image: url('../img/exit/Speedboat%20%28Ruins%29.png'); }
-.movie-exit-OldTownGate { background-image: url('../img/exit/Old%20Town%20Gate-TheIcon.png'); }
-.movie-exit-BoscosCar { background-image: url('../img/exit/Bosco%27s%20Car.png'); }
+div[class^="virus"][class$="-exit-Car"], .virus-exit-Car, .enforcer-exit-Car { background-image: url('../img/exit/Car-WorldofTomorrow.png'); }
+div[class^="virus"][class$="-exit-SpeedboatHarbor"], .virus-exit-SpeedboatHarbor, .enforcer-exit-SpeedboatHarbor { background-image: url('../img/exit/Speedboat%20%28Harbor%29.png'); }
+div[class^="virus"][class$="-exit-Seaplane"], .virus-exit-Seaplane, .enforcer-exit-Seaplane { background-image: url('../img/exit/Seaplane.png'); }
+div[class^="virus"][class$="-exit-SpeedboatRuins"], .virus-exit-SpeedboatRuins, .enforcer-exit-SpeedboatRuins { background-image: url('../img/exit/Speedboat%20%28Ruins%29.png'); }
+div[class^="movie"][class$="-exit-OldTownGate"], .movie-exit-OldTownGate { background-image: url('../img/exit/Old%20Town%20Gate-TheIcon.png'); }
+div[class^="movie"][class$="-exit-BoscosCar"], .movie-exit-BoscosCar { background-image: url('../img/exit/Bosco%27s%20Car.png'); }
 .election-exit-OldTownGate { background-image: url('../img/exit/Old%20Town%20Gate-Landslide.png'); }
 .election-exit-PinkCar { background-image: url('../img/exit/Pink%20Car.png'); }
 .election-exit-Speedboat { background-image: url('../img/exit/Speedboat-Landslide.png'); }
 .handoff-exit-Car { background-image: url('../img/exit/Car-TheAuthor.png'); }
 .handoff-exit-OldTownGate { background-image: url('../img/exit/Old%20Town%20Gate-TheAuthor.png'); }
 .handoff-exit-Speedboat { background-image: url('../img/exit/Speedboat-TheAuthor.png'); }
-.tension-exit-WestMarketGates, .extractor-exit-WestMarketGates { background-image: url('../img/exit/West%20Market%20Gates.png'); }
-.tension-exit-BazaarGates, .extractor-exit-BazaarGates { background-image: url('../img/exit/Bazaar%20Gates.png'); }
-.tension-exit-ArmoredVehicle, .extractor-exit-ArmoredVehicle { background-image: url('../img/exit/Armored%20Vehicle.png'); }
-.tension-exit-ConsulateCar, .extractor-exit-ConsulateCar { background-image: url('../img/exit/Consulate%20Car.png'); }
-.construction-exit-WestMarketGates { background-image: url('../img/exit/West%20Market%20Gates%20AHBOS.png'); }
-.construction-exit-BazaarGates { background-image: url('../img/exit/Bazaar%20Gates%20AHBOS.png'); }
-.construction-exit-Truck { background-image: url('../img/exit/Truck.png'); }
-.construction-exit-DoorneartheWell { background-image: url('../img/exit/Door%20near%20the%20Well.png'); }
-.construction-exit-DoorbytheStreet { background-image: url('../img/exit/Door%20by%20the%20Street.png'); }
-.birthday-exit-Speedboat, .veteran-exit-Speedboat { background-image: url('../img/exit/Speedboat-Club27.png'); }
+div[class^="tension"][class$="-exit-WestMarketGates"], .tension-exit-WestMarketGates, .extractor-exit-WestMarketGates { background-image: url('../img/exit/West%20Market%20Gates.png'); }
+div[class^="tension"][class$="-exit-BazaarGates"], .tension-exit-BazaarGates, .extractor-exit-BazaarGates { background-image: url('../img/exit/Bazaar%20Gates.png'); }
+div[class^="tension"][class$="-exit-ArmoredVehicle"], .tension-exit-ArmoredVehicle, .extractor-exit-ArmoredVehicle { background-image: url('../img/exit/Armored%20Vehicle.png'); }
+div[class^="tension"][class$="-exit-ConsulateCar"], .tension-exit-ConsulateCar, .extractor-exit-ConsulateCar { background-image: url('../img/exit/Consulate%20Car.png'); }
+div[class^="construction"][class$="-exit-WestMarketGates"], .construction-exit-WestMarketGates { background-image: url('../img/exit/West%20Market%20Gates%20AHBOS.png'); }
+div[class^="construction"][class$="-exit-BazaarGates"], .construction-exit-BazaarGates { background-image: url('../img/exit/Bazaar%20Gates%20AHBOS.png'); }
+div[class^="construction"][class$="-exit-Truck"], .construction-exit-Truck { background-image: url('../img/exit/Truck.png'); }
+div[class^="construction"][class$="-exit-DoorneartheWell"], .construction-exit-DoorneartheWell { background-image: url('../img/exit/Door%20near%20the%20Well.png'); }
+div[class^="construction"][class$="-exit-DoorbytheStreet"], .construction-exit-DoorbytheStreet { background-image: url('../img/exit/Door%20by%20the%20Street.png'); }
+div[class^="birthday"][class$="-exit-Speedboat"], .birthday-exit-Speedboat, .veteran-exit-Speedboat { background-image: url('../img/exit/Speedboat-Club27.png'); }
 .birthday-exit-SpeedboatH1 { background-image: url('../img/exit/Speedboat-Club27-H1.png'); }
-.birthday-exit-Tuktuk, .veteran-exit-Tuktuk { background-image: url('../img/exit/Tuk-tuk.png'); }
-.birthday-exit-Tunnel, .cult-exit-Tunnel, .veteran-exit-Tunnel { background-image: url('../img/exit/Tunnel.png'); }
+div[class^="birthday"][class$="-exit-Tuktuk"], .birthday-exit-Tuktuk, .veteran-exit-Tuktuk { background-image: url('../img/exit/Tuk-tuk.png'); }
+div[class^="birthday"][class$="-exit-Tunnel"], .birthday-exit-Tunnel, .cult-exit-Tunnel, .veteran-exit-Tunnel { background-image: url('../img/exit/Tunnel.png'); }
 .cult-exit-Speedboat { background-image: url('../img/exit/Speedboat-TheSource.png'); }
 .cult-exit-Tuktuk { background-image: url('../img/exit/Tuk-tuk-TheSource.png'); }
-.terrorists-exit-Bridge { background-image: url('../img/exit/Bridge-FreedomFighters.png'); }
-.terrorists-exit-QuadBike { background-image: url('../img/exit/Quad%20Bike.png'); }
-.terrorists-exit-River { background-image: url('../img/exit/River.png'); }
-.terrorists-exit-FrontGate { background-image: url('../img/exit/Front%20Gate.png'); }
-.terrorists-exit-TornadoShelter, .mercenary-exit-TornadoShelter { background-image: url('../img/exit/Tornado%20Shelter.png'); }
-.terrorists-exit-MrRaptor { background-image: url('../img/exit/MrRaptor.png'); }
-.heart-exit-Helicopter, .festival-exit-Helicopter, .controller-exit-Helicopter { background-image: url('../img/exit/Helicopter-SitusInversus.png'); }
-.heart-exit-Snowmobile, .festival-exit-Snowmobile, .controller-exit-Snowmobile { background-image: url('../img/exit/Snowmobile-SitusInversus.png'); }
-.heart-exit-MountainPath, .festival-exit-MountainPath, .controller-exit-MountainPath { background-image: url('../img/exit/Mountain%20Path-SitusInversus.png'); }
-.heart-exit-CableCar, .festival-exit-CableCar, .controller-exit-CableCar { background-image: url('../img/exit/Cable%20Car-SitusInversus.png'); }
+div[class^="terrorists"][class$="-exit-Bridge"], .terrorists-exit-Bridge { background-image: url('../img/exit/Bridge-FreedomFighters.png'); }
+div[class^="terrorists"][class$="-exit-QuadBike"], .terrorists-exit-QuadBike { background-image: url('../img/exit/Quad%20Bike.png'); }
+div[class^="terrorists"][class$="-exit-River"], .terrorists-exit-River { background-image: url('../img/exit/River.png'); }
+div[class^="terrorists"][class$="-exit-FrontGate"], .terrorists-exit-FrontGate { background-image: url('../img/exit/Front%20Gate.png'); }
+div[class^="terrorists"][class$="-exit-TornadoShelter"], .terrorists-exit-TornadoShelter, .mercenary-exit-TornadoShelter { background-image: url('../img/exit/Tornado%20Shelter.png'); }
+div[class^="terrorists"][class$="-exit-MrRaptor"], .terrorists-exit-MrRaptor { background-image: url('../img/exit/MrRaptor.png'); }
+div[class^="heart"][class$="-exit-Helicopter"], .heart-exit-Helicopter, .festival-exit-Helicopter, .controller-exit-Helicopter { background-image: url('../img/exit/Helicopter-SitusInversus.png'); }
+div[class^="heart"][class$="-exit-Snowmobile"], .heart-exit-Snowmobile, .festival-exit-Snowmobile, .controller-exit-Snowmobile { background-image: url('../img/exit/Snowmobile-SitusInversus.png'); }
+div[class^="heart"][class$="-exit-MountainPath"], .heart-exit-MountainPath, .festival-exit-MountainPath, .controller-exit-MountainPath { background-image: url('../img/exit/Mountain%20Path-SitusInversus.png'); }
+div[class^="heart"][class$="-exit-CableCar"], .heart-exit-CableCar, .festival-exit-CableCar, .controller-exit-CableCar { background-image: url('../img/exit/Cable%20Car-SitusInversus.png'); }
 .spread-exit-Snowmobile { background-image: url('../img/exit/Snowmobile-PatientZero.png'); }
 .spread-exit-MountainPath { background-image: url('../img/exit/Mountain%20Path-PatientZero.png'); }
 .spread-exit-CableCar { background-image: url('../img/exit/Cable%20Car-PatientZero.png'); }
-.beach-exit-Boat { background-image: url('../img/exit/Boat-Nightcall.png'); }
-.speedway-exit-Helicopter, .water-exit-Helicopter { background-image: url('../img/exit/Helicopter-TheFinishLine.png'); }
-.speedway-exit-MainEntrance, .water-exit-MainEntrance { background-image: url('../img/exit/MainEntrance.png'); }
-.speedway-exit-Sewer, .water-exit-Sewer { background-image: url('../img/exit/Sewer.png'); }
-.speedway-exit-Speedboat, .water-exit-Speedboat { background-image: url('../img/exit/Speedboat-TheFinishLine.png'); }
-.speedway-exit-Ambulance, .water-exit-Ambulance { background-image: url('../img/exit/Ambulance.png'); }
-.speedway-exit-Nest, .water-exit-Nest { background-image: url('../img/exit/Nest.png'); }
-.speedway-exit-DolphinStatue, .water-exit-DolphinStatue { background-image: url('../img/exit/DolphinStatue.png'); }
-.speedway-exit-PaleRider, .water-exit-PaleRider { background-image: url('../img/exit/PaleRider.png'); }
-.cartel-exit-RicosSupercar, .biggame-exit-RicosSupercar { background-image: url('../img/exit/RicosSupercar.png'); }
-.cartel-exit-Helicopter, .biggame-exit-Helicopter { background-image: url('../img/exit/Helicopter-ThreeheadedSerpent.png'); }
-.cartel-exit-Speedboat, .biggame-exit-Speedboat { background-image: url('../img/exit/Speedboat-ThreeheadedSerpent.png'); }
-.cartel-exit-LocalsCar, .biggame-exit-LocalsCar { background-image: url('../img/exit/LocalsCar.png'); }
-.cartel-exit-Scooter, .biggame-exit-Scooter { background-image: url('../img/exit/Scooter-ThreeheadedSerpent.png'); }
-.cartel-exit-Boat, .biggame-exit-Boat { background-image: url('../img/exit/Boat-ThreeheadedSerpent.png'); }
-.cartel-exit-VillageBusStop, .biggame-exit-VillageBusStop { background-image: url('../img/exit/VillageBusStop.png'); }
+div[class^="beach"][class$="-exit-Boat"], .beach-exit-Boat { background-image: url('../img/exit/Boat-Nightcall.png'); }
+div[class^="beach"][class$="-exit-Car"] { background-image: url('../img/exit/Car-ThePolitician.png'); }
+div[class^="speedway"][class$="-exit-Helicopter"], .speedway-exit-Helicopter, .water-exit-Helicopter { background-image: url('../img/exit/Helicopter-TheFinishLine.png'); }
+div[class^="speedway"][class$="-exit-MainEntrance"], .speedway-exit-MainEntrance, .water-exit-MainEntrance { background-image: url('../img/exit/MainEntrance.png'); }
+div[class^="speedway"][class$="-exit-Sewer"], .speedway-exit-Sewer, .water-exit-Sewer { background-image: url('../img/exit/Sewer.png'); }
+div[class^="speedway"][class$="-exit-Speedboat"], .speedway-exit-Speedboat, .water-exit-Speedboat { background-image: url('../img/exit/Speedboat-TheFinishLine.png'); }
+div[class^="speedway"][class$="-exit-Ambulance"], .speedway-exit-Ambulance, .water-exit-Ambulance { background-image: url('../img/exit/Ambulance.png'); }
+.speedway-exit-Nest { background-image: url('../img/exit/Nest.png'); }
+.speedway-exit-DolphinStatue { background-image: url('../img/exit/DolphinStatue.png'); }
+.speedway-exit-PaleRider { background-image: url('../img/exit/PaleRider.png'); }
+div[class^="cartel"][class$="-exit-RicosSupercar"], .cartel-exit-RicosSupercar, .biggame-exit-RicosSupercar { background-image: url('../img/exit/RicosSupercar.png'); }
+div[class^="cartel"][class$="-exit-Helicopter"], .cartel-exit-Helicopter, .biggame-exit-Helicopter { background-image: url('../img/exit/Helicopter-ThreeheadedSerpent.png'); }
+div[class^="cartel"][class$="-exit-Speedboat"], .cartel-exit-Speedboat, .biggame-exit-Speedboat { background-image: url('../img/exit/Speedboat-ThreeheadedSerpent.png'); }
+div[class^="cartel"][class$="-exit-LocalsCar"], .cartel-exit-LocalsCar, .biggame-exit-LocalsCar { background-image: url('../img/exit/LocalsCar.png'); }
+div[class^="cartel"][class$="-exit-Scooter"], .cartel-exit-Scooter, .biggame-exit-Scooter { background-image: url('../img/exit/Scooter-ThreeheadedSerpent.png'); }
+div[class^="cartel"][class$="-exit-Boat"], .cartel-exit-Boat, .biggame-exit-Boat { background-image: url('../img/exit/Boat-ThreeheadedSerpent.png'); }
+div[class^="cartel"][class$="-exit-VillageBusStop"], .cartel-exit-VillageBusStop, .biggame-exit-VillageBusStop { background-image: url('../img/exit/VillageBusStop.png'); }
 .ghost-exit-Boat { background-image: url('../img/exit/Boat-ChasingAGhost.png'); }
 .ghost-exit-MainStreet { background-image: url('../img/exit/MainStreet.png'); }
 .ghost-exit-RanganTowerRoad { background-image: url('../img/exit/RanganTowerRoad.png'); }
@@ -506,26 +551,26 @@ div[class$="exit-AnyExitLocation"], .any-exit { background-image: url('../img/ex
 .magic-exit-TaxiJunkyard { background-image: url('../img/exit/TaxiJunkyard-Illusions.png'); }
 .magic-exit-TaxiNearBarge { background-image: url('../img/exit/TaxiNearBarge-Illusions.png'); }
 .magic-exit-TaxiSlumSquare { background-image: url('../img/exit/TaxiSlumSquare-Illusions.png'); }
-.suburbs-exit-BusStop, .pill-exit-BusStop { background-image: url('../img/exit/BusStop.png'); }
-.suburbs-exit-Bridge, .pill-exit-Bridge { background-image: url('../img/exit/Bridge-AnotherLife.png'); }
-.suburbs-exit-Raft, .pill-exit-Raft { background-image: url('../img/exit/Raft.png'); }
-.suburbs-exit-ManholeMuffinStand, .pill-exit-ManholeMuffinStand { background-image: url('../img/exit/ManholeMuffinStand.png'); }
-.suburbs-exit-ManholeMapletreeLn, .pill-exit-ManholeMapletreeLn { background-image: url('../img/exit/ManholeMapletreeLn.png'); }
-.suburbs-exit-ManholeWestProperty, .pill-exit-ManholeWestProperty { background-image: url('../img/exit/ManholeWestProperty.png'); }
-.suburbs-exit-ManholeNearStatue, .pill-exit-ManholeNearStatue { background-image: url('../img/exit/ManholeNearStatue.png'); }
-.suburbs-exit-ManholeNearRoadwork, .pill-exit-ManholeNearRoadwork { background-image: url('../img/exit/ManholeNearRoadwork.png'); }
-.suburbs-exit-ManholeConstructionSite, .pill-exit-ManholeConstructionSite { background-image: url('../img/exit/ManholeConstructionSite.png'); }
-.suburbs-exit-ManholePublicPark, .pill-exit-ManholePublicPark { background-image: url('../img/exit/ManholePublicPark.png'); }
-.suburbs-exit-ManholeNearBusStop, .pill-exit-ManholeNearBusStop { background-image: url('../img/exit/ManholeNearBusStop.png'); }
-.suburbs-exit-ConstructionVan, .pill-exit-ConstructionVan { background-image: url('../img/exit/ConstructionVan.png'); }
-.suburbs-exit-TrashTruck, .pill-exit-TrashTruck { background-image: url('../img/exit/TrashTruck.png'); }
-.suburbs-exit-RoadworkGate, .pill-exit-RoadworkGate { background-image: url('../img/exit/RoadworkGate.png'); }
-.ark-exit-Speedboat { background-image: url('../img/exit/Speedboat-TheArkSociety.png'); }
-.ark-exit-Helipad { background-image: url('../img/exit/Helipad.png'); }
-.ark-exit-EastWall { background-image: url('../img/exit/EastWall.png'); }
-.ark-exit-Rooftop { background-image: url('../img/exit/Rooftop.png'); }
-.ark-exit-WarehouseLadder { background-image: url('../img/exit/WarehouseLadder.png'); }
-.ark-exit-SwanDive { background-image: url('../img/exit/SwanDive.png'); }
+div[class^="suburbs"][class$="-exit-BusStop"], .suburbs-exit-BusStop, .pill-exit-BusStop { background-image: url('../img/exit/BusStop.png'); }
+div[class^="suburbs"][class$="-exit-Bridge"], .suburbs-exit-Bridge, .pill-exit-Bridge { background-image: url('../img/exit/Bridge-AnotherLife.png'); }
+div[class^="suburbs"][class$="-exit-Raft"], .suburbs-exit-Raft, .pill-exit-Raft { background-image: url('../img/exit/Raft.png'); }
+div[class^="suburbs"][class$="-exit-ManholeMuffinStand"], .suburbs-exit-ManholeMuffinStand, .pill-exit-ManholeMuffinStand { background-image: url('../img/exit/ManholeMuffinStand.png'); }
+div[class^="suburbs"][class$="-exit-ManholeMapletreeLn"], .suburbs-exit-ManholeMapletreeLn, .pill-exit-ManholeMapletreeLn { background-image: url('../img/exit/ManholeMapletreeLn.png'); }
+div[class^="suburbs"][class$="-exit-ManholeWestProperty"], .suburbs-exit-ManholeWestProperty, .pill-exit-ManholeWestProperty { background-image: url('../img/exit/ManholeWestProperty.png'); }
+div[class^="suburbs"][class$="-exit-ManholeNearStatue"], .suburbs-exit-ManholeNearStatue, .pill-exit-ManholeNearStatue { background-image: url('../img/exit/ManholeNearStatue.png'); }
+div[class^="suburbs"][class$="-exit-ManholeNearRoadwork"], .suburbs-exit-ManholeNearRoadwork, .pill-exit-ManholeNearRoadwork { background-image: url('../img/exit/ManholeNearRoadwork.png'); }
+div[class^="suburbs"][class$="-exit-ManholeConstructionSite"], .suburbs-exit-ManholeConstructionSite, .pill-exit-ManholeConstructionSite { background-image: url('../img/exit/ManholeConstructionSite.png'); }
+div[class^="suburbs"][class$="-exit-ManholePublicPark"], .suburbs-exit-ManholePublicPark, .pill-exit-ManholePublicPark { background-image: url('../img/exit/ManholePublicPark.png'); }
+div[class^="suburbs"][class$="-exit-ManholeNearBusStop"], .suburbs-exit-ManholeNearBusStop, .pill-exit-ManholeNearBusStop { background-image: url('../img/exit/ManholeNearBusStop.png'); }
+div[class^="suburbs"][class$="-exit-ConstructionVan"], .suburbs-exit-ConstructionVan, .pill-exit-ConstructionVan { background-image: url('../img/exit/ConstructionVan.png'); }
+div[class^="suburbs"][class$="-exit-TrashTruck"], .suburbs-exit-TrashTruck, .pill-exit-TrashTruck { background-image: url('../img/exit/TrashTruck.png'); }
+div[class^="suburbs"][class$="-exit-RoadworkGate"], .suburbs-exit-RoadworkGate, .pill-exit-RoadworkGate { background-image: url('../img/exit/RoadworkGate.png'); }
+div[class^="ark"][class$="-exit-Speedboat"], .ark-exit-Speedboat { background-image: url('../img/exit/Speedboat-TheArkSociety.png'); }
+div[class^="ark"][class$="-exit-Helipad"], .ark-exit-Helipad { background-image: url('../img/exit/Helipad.png'); }
+div[class^="ark"][class$="-exit-EastWall"], .ark-exit-EastWall { background-image: url('../img/exit/EastWall.png'); }
+div[class^="ark"][class$="-exit-Rooftop"], .ark-exit-Rooftop { background-image: url('../img/exit/Rooftop.png'); }
+div[class^="ark"][class$="-exit-WarehouseLadder"], .ark-exit-WarehouseLadder { background-image: url('../img/exit/WarehouseLadder.png'); }
+div[class^="ark"][class$="-exit-SwanDive"], .ark-exit-SwanDive { background-image: url('../img/exit/SwanDive.png'); }
 .bank-exit-BankEntrance { background-image: url('../img/exit/Bank%20Entrance.png'); }
 .bank-exit-ArmoredCar { background-image: url('../img/exit/Armored%20Car.png'); }
 .bank-exit-MaintenanceExit { background-image: url('../img/exit/Maintenance%20Exit.png'); }
@@ -538,40 +583,40 @@ div[class$="exit-AnyExitLocation"], .any-exit { background-image: url('../img/ex
 .resort-exit-WaterScooter { background-image: url('../img/exit/Water%20Scooter.png'); }
 .resort-exit-PrivateVillaSpeedboat { background-image: url('../img/exit/Private%20Villa%20Speedboat.png'); }
 .resort-exit-Dundee { background-image: url('../img/exit/Dundee.png'); }
-.tower-exit-ParachuteLevel2 { background-image: url('../img/exit/ParachuteLevel2.png'); }
-.tower-exit-ParachuteLevel4 { background-image: url('../img/exit/ParachuteLevel4.png'); }
-.tower-exit-AtriumElevator { background-image: url('../img/exit/AtriumElevator.png'); }
-.tower-exit-PenthouseElevator { background-image: url('../img/exit/PenthouseElevator.png'); }
-.tower-exit-StaffElevator { background-image: url('../img/exit/StaffElevator.png'); }
-.tower-exit-Helicopter { background-image: url('../img/exit/Helicopter-TopOfWorld.png'); }
-.clue-exit-Motorcycle { background-image: url('../img/exit/Motorcycle-DeathInTheFamily.png'); }
-.clue-exit-Hearse { background-image: url('../img/exit/Hearse.png'); }
-.clue-exit-RiverBridge { background-image: url('../img/exit/RiverBridge-DeathInTheFamily.png'); }
-.clue-exit-Boat { background-image: url('../img/exit/Boat-DeathInTheFamily.png'); }
+div[class^="tower"][class$="-exit-ParachuteLevel2"], .tower-exit-ParachuteLevel2 { background-image: url('../img/exit/ParachuteLevel2.png'); }
+div[class^="tower"][class$="-exit-ParachuteLevel4"], .tower-exit-ParachuteLevel4 { background-image: url('../img/exit/ParachuteLevel4.png'); }
+div[class^="tower"][class$="-exit-AtriumElevator"], .tower-exit-AtriumElevator { background-image: url('../img/exit/AtriumElevator.png'); }
+div[class^="tower"][class$="-exit-PenthouseElevator"], .tower-exit-PenthouseElevator { background-image: url('../img/exit/PenthouseElevator.png'); }
+div[class^="tower"][class$="-exit-StaffElevator"], .tower-exit-StaffElevator { background-image: url('../img/exit/StaffElevator.png'); }
+div[class^="tower"][class$="-exit-Helicopter"], .tower-exit-Helicopter { background-image: url('../img/exit/Helicopter-TopOfWorld.png'); }
+div[class^="clue"][class$="-exit-Motorcycle"], .clue-exit-Motorcycle { background-image: url('../img/exit/Motorcycle-DeathInTheFamily.png'); }
+div[class^="clue"][class$="-exit-Hearse"], .clue-exit-Hearse { background-image: url('../img/exit/Hearse.png'); }
+div[class^="clue"][class$="-exit-RiverBridge"], .clue-exit-RiverBridge { background-image: url('../img/exit/RiverBridge-DeathInTheFamily.png'); }
+div[class^="clue"][class$="-exit-Boat"], .clue-exit-Boat { background-image: url('../img/exit/Boat-DeathInTheFamily.png'); }
 .gardenshow-exit-Motorcycle { background-image: url('../img/exit/Motorcycle-GardenShow.png'); }
 .gardenshow-exit-RiverBridge { background-image: url('../img/exit/RiverBridge-GardenShow.png'); }
 .gardenshow-exit-Boat { background-image: url('../img/exit/Boat-GardenShow.png'); }
-.club-exit-IntoTheForrest { background-image: url('../img/exit/IntoTheForrest.png'); }
-.club-exit-Bicycle { background-image: url('../img/exit/Bicycle.png'); }
-.club-exit-EmergencyExit { background-image: url('../img/exit/EmergencyExit.png'); }
-.club-exit-Manhole { background-image: url('../img/exit/Manhole-ApexPredator.png'); }
-.club-exit-DeliveryScooter { background-image: url('../img/exit/DeliveryScooter.png'); }
-.club-exit-Motorcycle { background-image: url('../img/exit/Motorcycle-ApexPredator.png'); }
+div[class^="club"][class$="-exit-IntoTheForrest"], .club-exit-IntoTheForrest { background-image: url('../img/exit/IntoTheForrest.png'); }
+div[class^="club"][class$="-exit-Bicycle"], .club-exit-Bicycle { background-image: url('../img/exit/Bicycle.png'); }
+div[class^="club"][class$="-exit-EmergencyExit"], .club-exit-EmergencyExit { background-image: url('../img/exit/EmergencyExit.png'); }
+div[class^="club"][class$="-exit-Manhole"], .club-exit-Manhole { background-image: url('../img/exit/Manhole-ApexPredator.png'); }
+div[class^="club"][class$="-exit-DeliveryScooter"], .club-exit-DeliveryScooter { background-image: url('../img/exit/DeliveryScooter.png'); }
+div[class^="club"][class$="-exit-Motorcycle"], .club-exit-Motorcycle { background-image: url('../img/exit/Motorcycle-ApexPredator.png'); }
 .club-exit-UFO { background-image: url('../img/exit/UFO.png'); }
 .club-exit-ET { background-image: url('../img/exit/ET.png'); }
-.archive-exit-ApartmentSafeHouse { background-image: url('../img/exit/ApartmentSafeHouse.png'); }
-.archive-exit-Scooter { background-image: url('../img/exit/Scooter-EndOfAnEra.png'); }
-.archive-exit-ManholeRestaurantAlley { background-image: url('../img/exit/ManholeRestaurantAlley.png'); }
-.archive-exit-ManholeTheBlock { background-image: url('../img/exit/ManholeTheBlock.png'); }
-.archive-exit-TrainStation { background-image: url('../img/exit/TrainStation.png'); }
-.archive-exit-FacilityEmergencyExit { background-image: url('../img/exit/FacilityEmergencyExit.png'); }
-.vineyard-exit-WineryViewpointCar { background-image: url('../img/exit/WineryViewpointCar.png'); }
-.vineyard-exit-TangoWithDiana { background-image: url('../img/exit/TangoWithDiana.png'); }
-.vineyard-exit-ThroughTheGrapefields { background-image: url('../img/exit/ThroughTheGrapefields.png'); }
-.vineyard-exit-Boat { background-image: url('../img/exit/Boat-TheFarewell.png'); }
-.vineyard-exit-UndergroundCaveSystem { background-image: url('../img/exit/UndergroundCaveSystem.png'); }
-.vineyard-exit-DonYatesCar { background-image: url('../img/exit/DonYatesCar.png'); }
-.vineyard-exit-Shrine { background-image: url('../img/exit/Shrine.png'); }
+div[class^="archive"][class$="-exit-ApartmentSafeHouse"], .archive-exit-ApartmentSafeHouse { background-image: url('../img/exit/ApartmentSafeHouse.png'); }
+div[class^="archive"][class$="-exit-Scooter"], .archive-exit-Scooter { background-image: url('../img/exit/Scooter-EndOfAnEra.png'); }
+div[class^="archive"][class$="-exit-ManholeRestaurantAlley"], .archive-exit-ManholeRestaurantAlley { background-image: url('../img/exit/ManholeRestaurantAlley.png'); }
+div[class^="archive"][class$="-exit-ManholeTheBlock"], .archive-exit-ManholeTheBlock { background-image: url('../img/exit/ManholeTheBlock.png'); }
+div[class^="archive"][class$="-exit-TrainStation"], .archive-exit-TrainStation { background-image: url('../img/exit/TrainStation.png'); }
+div[class^="archive"][class$="-exit-FacilityEmergencyExit"], .archive-exit-FacilityEmergencyExit { background-image: url('../img/exit/FacilityEmergencyExit.png'); }
+div[class^="vineyard"][class$="-exit-WineryViewpointCar"], .vineyard-exit-WineryViewpointCar { background-image: url('../img/exit/WineryViewpointCar.png'); }
+div[class^="vineyard"][class$="-exit-TangoWithDiana"], .vineyard-exit-TangoWithDiana { background-image: url('../img/exit/TangoWithDiana.png'); }
+div[class^="vineyard"][class$="-exit-ThroughTheGrapefields"], .vineyard-exit-ThroughTheGrapefields { background-image: url('../img/exit/ThroughTheGrapefields.png'); }
+div[class^="vineyard"][class$="-exit-Boat"], .vineyard-exit-Boat { background-image: url('../img/exit/Boat-TheFarewell.png'); }
+div[class^="vineyard"][class$="-exit-UndergroundCaveSystem"], .vineyard-exit-UndergroundCaveSystem { background-image: url('../img/exit/UndergroundCaveSystem.png'); }
+div[class^="vineyard"][class$="-exit-DonYatesCar"], .vineyard-exit-DonYatesCar { background-image: url('../img/exit/DonYatesCar.png'); }
+div[class^="vineyard"][class$="-exit-Shrine"], .vineyard-exit-Shrine { background-image: url('../img/exit/Shrine.png'); }
 .train-exit-StopTrain { background-image: url('../img/exit/StopTrain.png'); }
 .train-exit-TakeSerum { background-image: url('../img/exit/TakeSerum.png'); }
 .pirates-exit-WesternBeachBoat { background-image: url('../img/exit/WesternBeachBoat.png'); }
@@ -638,6 +683,16 @@ div[class^="ElusiveTarget"], div[class^="UnassignedTarget"] { background-image: 
 .ViktorNovikov-fashion.contarget { background-size: auto 100% !important; }
 .DaliaMargolis-fashion { background-image: url('../img/target/DaliaMargolis.jpg'); }
 .DaliaMargolis-fashion.contarget { background-size: auto 100% !important; }
+
+.SergeiLarin-fashion-forger { background-image: url('../img/target/SergeiLarin.jpg'); }
+.JonathanSmythe-fashion-sensation { background-image: url('../img/target/JonathanSmythe.jpg'); }
+.HowardMoxon-fashion-broker { background-image: url('../img/target/HowardMoxon.jpg'); }
+.OwenProtagonistWagner-fashion-black-hat { background-image: url('../img/target/OwenProtagonistWagner.jpg'); }
+.NilaTorvik-fashion-pharmacist { background-image: url('../img/target/NilaTorvik.jpg'); }
+.BrendanConner-fashion-identity-thief { background-image: url('../img/target/BrendanConner.jpg'); }
+.GabrielSantos-fashion-chef { background-image: url('../img/target/GabrielSantos.jpg'); }
+.WalterWilliams-fashion-blackmailer { background-image: url('../img/target/WalterWilliams.jpg'); }
+.KieranHudson-fashion-paparazzo { background-image: url('../img/target/KieranHudson.jpg'); }
 
 .SebastianSato-fashion { background-image: url('../img/targetcon/SebastianSato.jpg'); }
 .HelmutKruger-fashion { background-image: url('../img/targetcon/HelmutKruger.jpg'); }
@@ -727,6 +782,12 @@ div[class^="ElusiveTarget"], div[class^="UnassignedTarget"] { background-image: 
 .SilvioCaruso-virus.contarget { background-size: auto 100% !important; }
 .FrancescaDeSantis-virus { background-image: url('../img/target/FrancescaDeSantis.jpg'); }
 .FrancescaDeSantis-virus.contarget { background-size: auto 100% !important; }
+
+.AnthonyLTroutt-virus-congressman, .AnthonyLTroutt-virus-deceivers { background-image: url('../img/target/AnthonyLTroutt.jpg'); }
+.AdalricoCandelaria-virus-prince { background-image: url('../img/target/AdalricoCandelaria.jpg'); }
+.DylanNarváez-virus-twin { background-image: url('../img/target/DylanNarváez.jpg'); }
+.GaryBusey-virus-wildcard { background-image: url('../img/target/GaryBusey.jpg'); }
+.RichardJMagee-virus-guru, .RichardJMagee-virus-deceivers { background-image: url('../img/target/RichardJMagee.jpg'); }
 
 .TerenzioEndrizzi-virus { background-image: url('../img/targetcon/TerenzioEndrizzi.jpg'); }
 .RobertoVargas-virus { background-image: url('../img/targetcon/RobertoVargas.jpg'); }
@@ -859,6 +920,8 @@ div[class^="ElusiveTarget"], div[class^="UnassignedTarget"] { background-image: 
 /* The Icon */
 .DinoBosco-movie { background-image: url('../img/target/DinoBosco.jpg'); }
 .DinoBosco-movie.contarget { background-size: auto 100% !important; }
+
+.BartholomewArgus-movie-badboy { background-image: url('../img/target/BartholomewArgus.jpg'); }
 
 .PalmiroRusso-movie { background-image: url('../img/targetcon/PalmiroRusso.jpg'); }
 .EnricoNucci-movie { background-image: url('../img/targetcon/GianmarioLorenzetti.jpg'); }
@@ -1049,6 +1112,10 @@ div[class^="ElusiveTarget"], div[class^="UnassignedTarget"] { background-image: 
 .ClausHugoStrandberg-tension { background-image: url('../img/target/ClausHugoStrandberg.jpg'); }
 .ClausHugoStrandberg-tension.contarget { background-size: auto 100% !important; }
 
+.VitoĐurić-tension-gunrunner { background-image: url('../img/target/VitoĐurić.jpg'); }
+.XanderHaverfoek-tension-fixer { background-image: url('../img/target/XanderHaverfoek.jpg'); }
+.EttaDavis-tension-angel-of-death { background-image: url('../img/target/EttaDavis.jpg'); }
+
 .AshrafRaghibMustafa-tension { background-image: url('../img/targetcon/AshrafRaghibMustafa.jpg'); }
 .PamelaKingsley-tension { background-image: url('../img/targetcon/PamelaKingsley.jpg'); }
 .JeffBaker-tension { background-image: url('../img/targetcon/JeffBaker.jpg'); }
@@ -1181,6 +1248,8 @@ div[class^="ElusiveTarget"], div[class^="UnassignedTarget"] { background-image: 
 .MatthieuMendola-construction { background-image: url('../img/target/MatthieuMendola.jpg'); }
 .MatthieuMendola-construction.contarget { background-size: auto 100% !important; }
 
+.PhilipGiggles-construction-entertainer { background-image: url('../img/target/PhilipGiggles.jpg'); }
+
 .YousefShitrit-construction, .AbdulSaburMasrurAsker-construction { background-image: url('../img/targetcon/NooriHumamHarb.jpg'); }
 .ZakiDiab-construction { background-image: url('../img/targetcon/ZakiDiab.jpg'); }
 .SebastianKrogh-construction { background-image: url('../img/targetcon/SebastianKrogh.jpg'); }
@@ -1248,6 +1317,11 @@ div[class^="ElusiveTarget"], div[class^="UnassignedTarget"] { background-image: 
 .JordanCross-birthday.contarget { background-size: auto 100% !important; }
 .KenMorgan-birthday { background-image: url('../img/target/KenMorgan.jpg'); }
 .KenMorgan-birthday.contarget { background-size: auto 100% !important; }
+
+.RichardEkwensi-birthday-ex-dictator { background-image: url('../img/target/RichardEkwensi.jpg'); }
+.InezEkwensi-birthday-ex-dictator { background-image: url('../img/target/InezEkwensi.jpg'); }
+.WenTsai-birthday-food-critic { background-image: url('../img/target/WenTsai.jpg'); }
+.AdezeOijofor-birthday-warlord { background-image: url('../img/target/AdezeOijofor.jpg'); }
 
 .DexyBarat-birthday { background-image: url('../img/targetcon/DexyBarat.jpg'); }
 .WesListon-birthday { background-image: url('../img/targetcon/WesListon.jpg'); }
@@ -1395,7 +1469,6 @@ div[class^="ElusiveTarget"], div[class^="UnassignedTarget"] { background-image: 
 .KontheeSamak-cult { background-image: url('../img/targetcon/SiddhiMongkoltham.jpg'); }
 .StanTaggart-cult { background-image: url('../img/targetcon/StanTaggart.jpg'); }
 .SteveBacon-cult { background-image: url('../img/targetcon/SteveBacon.jpg'); }
-
 .TomButtler-cult, .ChristopherKimberly-cult { background-image: url('../img/targetcon/TomButtler.jpg'); }
 .SusanneAyeran-cult, .MarianneBartez-cult { background-image: url('../img/targetcon/SusanneAyeran.jpg'); }
 .Shane-cult { background-image: url('../img/targetcon/Magnu.jpg'); }
@@ -1449,6 +1522,9 @@ div[class^="ElusiveTarget"], div[class^="UnassignedTarget"] { background-image: 
 .EzraBerg-terrorists.contarget { background-size: auto 100% !important; }
 .MayaParvati-terrorists { background-image: url('../img/target/MayaParvati.jpg'); }
 .MayaParvati-terrorists.contarget { background-size: auto 100% !important; }
+
+.RichardMForeman-terrorists-chameleon { background-image: url('../img/target/RichardMForeman.jpg'); }
+.PerttiJãrnefelt-terrorists-bookkeeper { background-image: url('../img/target/PerttiJãrnefelt.jpg'); }
 
 .QuinceElliott-terrorists { background-image: url('../img/targetcon/QuinceElliott.jpg'); }
 .RobertPowell-terrorists { background-image: url('../img/targetcon/RobertPowell.jpg'); }
@@ -1527,6 +1603,10 @@ div[class^="ElusiveTarget"], div[class^="UnassignedTarget"] { background-image: 
 .ErichSoders-heart.contarget { background-size: auto 100% !important; }
 .YukiYamazaki-heart { background-image: url('../img/target/YukiYamazaki.jpg'); }
 .YukiYamazaki-heart.contarget { background-size: auto 100% !important; }
+
+.PavelFrydel-heart-surgeons { background-image: url('../img/target/PavelFrydel.jpg'); }
+.AkaneAkenawa-heart-surgeons { background-image: url('../img/target/AkaneAkenawa.jpg'); }
+.IdentifyAndEliminateJiHu-heart-fugitive { background-image: url('../img/target/Ji-Hu.jpg'); }
 
 .LowellAucoin-heart, .LowellAucoin-spread { background-image: url('../img/targetcon/Julian.jpg'); }
 .EricSandānoashiSjövold-heart, .EricSandānoashiSjövold-spread { background-image: url("../img/targetcon/Eric'Sandānoashi'Sjövold.jpg"); }
@@ -1685,6 +1765,8 @@ div[class^="ElusiveTarget"], div[class^="UnassignedTarget"] { background-image: 
 .AlmaReynard-beach { background-image: url('../img/target/AlmaReynard.jpg'); }
 .AlmaReynard-beach.contarget { background-size: auto 100% !important; }
 
+.BarbaraEKeating-beach-politician { background-image: url('../img/target/BarbaraEKeating.jpg'); }
+
 .OrsonMills-beach { background-image: url('../img/targetcon/OrsonMills.jpg'); }
 .GerardMann-beach { background-image: url('../img/targetcon/GerardMann.jpg'); }
 .ShaneMinette-beach, .PerryFirmin-beach { background-image: url('../img/targetcon/ShaneMinette.jpg'); }
@@ -1701,6 +1783,9 @@ div[class^="ElusiveTarget"], div[class^="UnassignedTarget"] { background-image: 
 .SierraKnox-speedway.contarget { background-size: auto 100% !important; }
 .RobertKnox-speedway { background-image: url('../img/target/RobertKnox.jpg'); }
 .RobertKnox-speedway.contarget { background-size: auto 100% !important; }
+
+.MarkFaba-speedway-undying { background-image: url('../img/target/MarkFaba.jpg'); }
+.MarkFaba-speedway-undying-returns { background-image: url('../img/target/MarkFabaInjured.jpg'); }
 
 .JohnattanKindane-speedway { background-image: url('../img/targetcon/JohnattanKindane.jpg'); }
 .EdwardTedMendez-speedway { background-image: url('../img/targetcon/EdwardTedMendez.jpg'); }
@@ -1780,6 +1865,8 @@ div[class^="ElusiveTarget"], div[class^="UnassignedTarget"] { background-image: 
 .JorgeFranco-cartel.contarget { background-size: auto 100% !important; }
 .AndreaMartinez-cartel { background-image: url('../img/target/AndreaMartinez.jpg'); }
 .AndreaMartinez-cartel.contarget { background-size: auto 100% !important; }
+
+.VicenteMurillo-cartel-revolutionary { background-image: url('../img/target/VicenteMurillo.jpg'); }
 
 .CatalinaDelgado-cartel { background-image: url('../img/targetcon/CatalinaDelgado.jpg'); }
 .HèctorDelgado-cartel { background-image: url('../img/targetcon/HèctorDelgado.jpg'); }
@@ -1989,6 +2076,8 @@ div[class^="ElusiveTarget"], div[class^="UnassignedTarget"] { background-image: 
 .NolanCassidy-suburbs { background-image: url('../img/target/NolanCassidy.jpg'); }
 .NolanCassidy-suburbs.contarget { background-size: auto 100% !important; }
 
+.JosephGorski-suburbs-serial-killer { background-image: url('../img/target/JosephGorski.jpg'); }
+
 .CharlesBlakeIII-suburbs { background-image: url('../img/targetcon/CharlesBlakeIII.jpg'); }
 .AidenKelly-suburbs { background-image: url('../img/targetcon/AidenKelly.jpg'); }
 .FrankBateson-suburbs, .AlfonsoHernandez-suburbs { background-image: url('../img/targetcon/FrankBateson.jpg'); }
@@ -2055,6 +2144,9 @@ div[class^="ElusiveTarget"], div[class^="UnassignedTarget"] { background-image: 
 .ZoeWashington-ark.contarget { background-size: auto 100% !important; }
 .SophiaWashington-ark { background-image: url('../img/target/SophiaWashington.jpg'); }
 .SophiaWashington-ark.contarget { background-size: auto 100% !important; }
+
+.MirandaJamison-ark-appraiser { background-image: url('../img/target/MirandaJamison.jpg'); }
+.JimmyChen-ark-stowaway { background-image: url('../img/target/JimmyChen.jpg'); }
 
 .TheConstant-ark { background-image: url('../img/targetcon/TheConstant.jpg'); }
 .ThaddeusHartwell-ark, .DeclanBarton-ark { background-image: url('../img/targetcon/ThaddeusHartwell.jpg'); }
@@ -2212,6 +2304,8 @@ div[class^="ElusiveTarget"], div[class^="UnassignedTarget"] { background-image: 
 .MarcusStuyvesant-tower { background-image: url('../img/target/MarcusStuyvesant.jpg'); }
 .MarcusStuyvesant-tower.contarget { background-size: auto 100% !important; }
 
+.AllisonMoretta-tower-ascensionist { background-image: url('../img/target/AllisonMoretta.jpg'); }
+
 .YaseeraMuhammad-tower { background-image: url('../img/targetcon/YaseeraMuhammad.jpg'); }
 .HansLucht-tower { background-image: url('../img/targetcon/HansLucht.jpg'); }
 .OmarAlGhazali-tower { background-image: url('../img/targetcon/OmarAlGhazali.jpg'); }
@@ -2266,6 +2360,10 @@ div[class^="ElusiveTarget"], div[class^="UnassignedTarget"] { background-image: 
 /* Death In The Family */
 .AlexaCarlisle-clue { background-image: url('../img/target/AlexaCarlisle.jpg'); }
 .AlexaCarlisle-clue.contarget { background-size: auto 100% !important; }
+
+.KodyHaynes-clue-collector { background-image: url('../img/target/KodyHaynes.jpg'); }
+.JackRoe-clue-procurers { background-image: url('../img/target/JackRoe.jpg'); }
+.RobertBurk-clue-procurers { background-image: url('../img/target/RobertBurk.jpg'); }
 
 .RebeccaCarlisle-clue { background-image: url('../img/targetcon/RebeccaCarlisle.jpg'); }
 .GregoryCarlisle-clue { background-image: url('../img/targetcon/GregoryCarlisle.jpg'); }
@@ -2372,6 +2470,8 @@ div[class^="ElusiveTarget"], div[class^="UnassignedTarget"] { background-image: 
 .AgentLowenthal-club { background-image: url('../img/target/AgentLowenthal.jpg'); }
 .AgentDavenport-club { background-image: url('../img/target/AgentDavenport.jpg'); }
 
+.TerrenceChesterfield-club-liability { background-image: url('../img/target/TerrenceChesterfield.jpg'); }
+
 .AgentRhodes-club.contarget { background-image: url('../img/targetcon/AgentRhodes.jpg'); }
 .AgentSwan-club.contarget { background-image: url('../img/targetcon/AgentSwan.jpg'); }
 .AgentBanner-club.contarget { background-image: url('../img/targetcon/AgentBanner.jpg'); }
@@ -2437,6 +2537,8 @@ div[class^="ElusiveTarget"], div[class^="UnassignedTarget"] { background-image: 
 .Hush-archive.contarget { background-size: auto 100% !important; }
 .ImogenRoyce-archive { background-image: url('../img/target/ImogenRoyce.jpg'); }
 .ImogenRoyce-archive.contarget { background-size: auto 100% !important; }
+
+.SullyBowden-archive-rage { background-image: url('../img/target/SullyBowden.jpg'); }
 
 .XiaofanDai-archive { background-image: url('../img/targetcon/XiaofanDai.jpg'); }
 .ShunyuanGuo-archive, .BoqinYan-archive { background-image: url('../img/targetcon/ShunyuanGuo.jpg'); }
@@ -2506,6 +2608,9 @@ div[class^="ElusiveTarget"], div[class^="UnassignedTarget"] { background-image: 
 .DonArchibaldYates-vineyard.contarget { background-size: auto 100% !important; }
 .TamaraVidal-vineyard { background-image: url('../img/target/TamaraVidal.jpg'); }
 .TamaraVidal-vineyard.contarget { background-size: auto 100% !important; }
+
+.JoanneBayswater-vineyard-iconoclast { background-image: url('../img/target/JoanneBayswater.jpg'); }
+.PhiloNewcombe-vineyard-heartbreaker { background-image: url('../img/target/PhiloNewcombe.jpg'); }
 
 .ValentinaYates-vineyard { background-image: url('../img/targetcon/ValentinaYates.jpg'); }
 .AronFordJr-vineyard { background-image: url('../img/targetcon/AronFordJr-Mendoza.jpg'); }
@@ -2672,6 +2777,19 @@ div[class^="ElusiveTarget"], div[class^="UnassignedTarget"] { background-image: 
 .DoNotEliminateDianaBurnwood { background-image: url('../img/obj/ObjDiana.png'); }
 .ProvidenceMembersMayBeEliminated { background-image: url('../img/obj/ObjProvidence.png'); }
 .NeutralizetheSatelliteControlUnit { background-image: url('../img/obj/NeutralizetheSatelliteControlUnit.png'); }
+
+.RetrievetheIvoryWhite { background-image: url('../img/obj/RetrievetheIvoryWhite.png'); }
+.TracktheCourier, .TracktheCourierRetrieveTheDiamonds { background-image: url('../img/obj/TracktheCourier.png'); }
+.RetrievetheDiamonds { background-image: url('../img/obj/RetrievetheDiamonds.png'); }
+.Uncoverthemilitiaoperation { background-image: url('../img/obj/Uncoverthemilitiaoperation.png'); }
+.RetrievetheMemoryStick { background-image: url('../img/obj/RetrievetheMemoryStick.png'); }
+.RetrieveFiles { background-image: url('../img/obj/RetrieveFiles.png'); }
+.StealtheLedger { background-image: url('../img/obj/StealtheLedger.png'); }
+.RetrieveSoiréeHorribleGuestlist { background-image: url('../img/obj/RetrieveSoiréeHorribleGuestlist.png'); }
+.RetrievetheNotebook { background-image: url('../img/obj/RetrievetheNotebook.png'); }
+.RetrievetheDictaphone { background-image: url('../img/obj/RetrievetheDictaphone.png'); }
+.RetrievethePaintingOptional { background-image: url('../img/obj/RetrievethePaintingOptional.png'); }
+.OptionalDoNotEliminateTheGuide { background-image: url('../img/obj/OptionalDoNotEliminateTheGuide.png'); }
 
 /*** Extra Objectives & Camera Mode***/
 #diff-image-NotAvailable, .NotAvailable { background-image: url('../img/general/NotAvailable.jpg'); }
@@ -2992,6 +3110,7 @@ div[class^="ElusiveTarget"], div[class^="UnassignedTarget"] { background-image: 
 .MoodAlteration { background-image: url('../img/obj/Mood%20Alteration.png'); }
 .SmellSomethingFishy { background-image: url('../img/obj/Smell%20Something%20Fishy.png'); }
 .Techman { background-image: url('../img/obj/Techman.png'); }
+.WeMeetAgain { background-image: url('../img/obj/WeMeetAgain.png'); }
 .GuardianAngel { background-image: url('../img/obj/Guardian%20Angel.png'); }
 .ICARecords { background-image: url('../img/obj/ICA%20Records.png'); }
 .AllAccessPass { background-image: url('../img/obj/All%20Access%20Pass.png'); }
