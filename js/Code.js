@@ -134,6 +134,10 @@ function createWeaponList(container) {
 	else if (mode == "MAIN" && container.missionTitle === "Situs Inversus" && document.getElementById("firearm").checked == 0 && disguise == "OFF" && !(no_methods_selected)) {
 		kills[0] = container.sodersKills[Math.floor(Math.random()*container.sodersKills.length)];
 	}
+	else if (mode == "MAIN" && container.missionTitle === "The Surgeons") {
+		kills[0] = container.surgeonsKills[0];
+		kills[1] = container.surgeonsKills[1];
+	}
 	
 	return kills;
 };
@@ -300,6 +304,11 @@ function containerToResult(container) {
 		result.cm = "";
 		result.missionTitle = container.missionTitle;
 	}
+	if (container.missionTitle == "The Forger" || container.missionTitle == "The Congressman" || container.missionTitle == "The Prince" || container.missionTitle == "The Sensation" || container.missionTitle == "The Gunrunner" || container.missionTitle == "The Twin" || container.missionTitle == "The Wildcard" || container.missionTitle == "The Broker" || container.missionTitle == "The Black Hat" || container.missionTitle == "The Pharmacist" || container.missionTitle == "The Fixer" || container.missionTitle == "The Identity Thief" || container.missionTitle == "The Ex-Dictator" || container.missionTitle == "The Chef" || container.missionTitle == "The Angel of Death" || container.missionTitle == "The Guru" || container.missionTitle == "The Food Critic" || container.missionTitle == "The Chameleon" || container.missionTitle == "The Blackmailer" || container.missionTitle == "The Warlord" || container.missionTitle == "The Surgeons" || container.missionTitle == "The Bookkeeper" || container.missionTitle == "The Paparazzo" || container.missionTitle == "The Badboy" || container.missionTitle == "The Fugitive" || container.missionTitle == "The Entertainer" || container.missionTitle == "The Undying" || container.missionTitle == "The Revolutionary" || container.missionTitle == "The Appraiser" || container.missionTitle == "The Politician" || container.missionTitle == "The Undying Returns" || container.missionTitle == "The Deceivers" || container.missionTitle == "The Serial Killer" || container.missionTitle == "The Stowaway" || container.missionTitle == "The Collector" || container.missionTitle == "The Iconoclast" || container.missionTitle == "The Liability" || container.missionTitle == "The Heartbreaker" || container.missionTitle == "The Procurers" || container.missionTitle == "The Ascensionist" || container.missionTitle == "The Rage") {
+		result.type = "on-elu";
+		result.cm = " (Elusive Target)";
+		result.missionTitle = container.missionTitle;
+	}
 	else if((mode == "CONEASY" || mode == "CONHARD" || mode == "CONANY") && container.missionTitle == "Freeform Training") {
 		result.type = "on-con";
 		result.cm = " (Contracts Mode)";
@@ -383,7 +392,29 @@ function containerToResult(container) {
 	else if (mode == "MAIN" && result.missionCode == "train")
 		result.missionobjective = "Providence Members May Be Eliminated|Providence Members May Be Eliminated.|Providence Members May Be Eliminated";
 	else if (mode == "MAIN" && result.missionCode == "pirates")
-		result.missionobjective = "Neutralize the Satellite Control Unit|Destroy control unit or obtain the two uplink access keys.|Destroy control unit or obtain 2 uplink access keys.";	
+		result.missionobjective = "Neutralize the Satellite Control Unit|Destroy control unit or obtain the two uplink access keys.|Destroy control unit or obtain 2 uplink access keys";	
+	else if (mode == "MAIN" && result.missionCode == "fashion-broker")
+		result.missionobjective = "Retrieve the Ivory White|Retrieve the Ivory White.|Retrieve the Ivory White";	
+	else if (mode == "MAIN" && result.missionCode == "tension-fixer")
+		result.missionobjective = "Track the Courier & Retrieve The Diamonds|Track the courier to retrieve the diamonds.|Track the Courier & Retrieve The Diamonds";	
+	else if (mode == "MAIN" && result.missionCode == "terrorists-chameleon")
+		result.missionobjective = "Uncover the militia operation|In addition to eliminating the Target, the client requests that you locate any information detailing the militia operation in which the Target will be participating.|Uncover the militia operation";	
+	else if (mode == "MAIN" && result.missionCode == "fashion-blackmailer")
+		result.missionobjective = "Retrieve the Memory Stick|The target keeps the originals of all his blackmail material with him at all times, on a memory stick. The Client requests that you retrieve it once you have eliminated the Target.|Retrieve the memory stick";	
+	else if (mode == "MAIN" && result.missionCode == "birthday-warlord")
+		result.missionobjective = "Retrieve Files|The client requests that you retrieve any files and data pertaining to the target's activities and network in West and Southern Africa.|Retrieve the files";	
+	else if (mode == "MAIN" && result.missionCode == "terrorists-bookkeeper")
+		result.missionobjective = "Steal the Ledger|Steal the ledger.|Steal the ledger";	
+	else if (mode == "MAIN" && result.missionCode == "construction-entertainer")
+		result.missionobjective = "Retrieve Soirée Horrible Guestlist|Retrieve Soirée Horrible guestlist.|Retrieve Soirée Horrible guestlist";	
+	else if (mode == "MAIN" && result.missionCode == "ark-appraiser")
+		result.missionobjective = "Retrieve the Notebook|Retrieve Miranda Jamison's Notebook that contains information on Ark Society members' art purchases and preferences.|Retrieve the Notebook";
+	else if (mode == "MAIN" && result.missionCode == "ark-stowaway")
+		result.missionobjective = "Retrieve the Dictaphone|Retrieve Jimmy Chen's dictaphone.|Retrieve Jimmy Chen's dictaphone";
+	else if (mode == "MAIN" && result.missionCode == "clue-collector")
+		result.missionobjective = "Retrieve the Painting [Optional]|The client offers a bonus if you manage to find and retrieve the painting by Sisal Bardu.|Retrieve the painting [Optional]";
+	else if (mode == "MAIN" && result.missionCode == "club-liability")
+		result.missionobjective = "[Optional] Do Not Eliminate The Guide|The clients would prefer that Chesterfield's guide does not become collateral damage.|[Optional] Do Not Eliminate the Guide";
 	else
 		result.missionobjective = "";
 
@@ -667,7 +698,7 @@ function writeEverything(result) {
 	
 	if(result.missionobjective.length) { // campaign mission objective
 		document.getElementById("objective").innerHTML = 
-			"<div id='obj-image' class='" + result.missionobjective.split('|')[0].replace(/\s|,|'|“|”|-|\?|\!|\(|\)|\[|\]|\./g, '') +
+			"<div id='obj-image' class='" + result.missionobjective.split('|')[0].replace(/\s|,|'|“|”|-|\&|\?|\!|\(|\)|\[|\]|\./g, '') +
 			"'><div id='instruction'><img id='list' src='./img/general/blank.png'><p id='wording'>" + result.missionobjective.split('|')[1] +
 			"</p></div><div id='nameplate'><span><p id='title'>Objective</p><p id='subtitle'>" + result.missionobjective.split('|')[0] + "</p></span></div></div>";
 		document.getElementById("input_objective").value = result.missionobjective;
