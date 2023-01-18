@@ -33,7 +33,7 @@ html.h1theme { /* Variables for Hitman 1 Styled Theme & Images */
 	--mission:url("../img/general/h1theme/mission-frame.png");
 	--contract:url("../img/general/h1theme/contract-frame.png");
 	--escalation:url("../img/general/h1theme/escalation-frame.png");
-	--elusive:url("../img/general/h1theme/elusive-frame.png");
+	--elusive:url("../img/general/h1theme/elusive-zframe.png");
 	--sarajevo:url("../img/general/h1theme/sarajevo-zframe.png");
 	--arrowleft:url("../img/general/h1theme/arrow-left.png");
 	--arrowright:url("../img/general/h1theme/arrow-right.png");
@@ -114,6 +114,9 @@ html.h1theme { /* Variables for Hitman 1 Styled Theme & Images */
 	--hs6:url("../img/general/h1theme/sarajevo-frame.png");
 	--hs6hover:url("../img/general/h1theme/sarajevo-full.png");
 	--hs6on:url("../img/general/h1theme/sarajevo-full.png");
+	--ets:url("../img/general/h1theme/elusive-frame.png");
+	--etshover:url("../img/general/h1theme/elusive-full.png");
+	--etson:url("../img/general/h1theme/elusive-full.png");	
 	--lock:url("../img/general/h1theme/lock-frame.png");
 	--lockstripes:url("../img/general/h1theme/stripes.png");
 	--settingtheme:url("../img/general/h1theme/disguise-frame.png");
@@ -266,6 +269,9 @@ html.h1gotytheme { /* Variables for Hitman 1 GOTY Styled Theme & Images */
 	--hs6:url("../img/general/h1gotytheme/sarajevo-lfull.png");
 	--hs6hover:url("../img/general/h1gotytheme/sarajevo-dframe.png");
 	--hs6on:url("../img/general/h1gotytheme/sarajevo-dframe.png");
+	--ets:url("../img/general/h1gotytheme/elusive-lfull.png");
+	--etshover:url("../img/general/h1gotytheme/elusive-dframe.png");
+	--etson:url("../img/general/h1gotytheme/elusive-dframe.png");
 	--lock:url("../img/general/h1gotytheme/lock-lframe.png");
 	--lockstripes:url("../img/general/h1gotytheme/stripes.png");
 	--settingtheme:url("../img/general/h1gotytheme/disguise-dframe.png");
@@ -416,6 +422,9 @@ html.h2theme { /* Variables for Hitman 2 Styled Theme & Images */
 	--hs6:url("../img/general/h2theme/sarajevo-dframe.png");
 	--hs6hover:url("../img/general/h2theme/sarajevo-full.png");
 	--hs6on:url("../img/general/h2theme/sarajevo-dfull.png");
+	--ets:url("../img/general/h2theme/elusive-dframe.png");
+	--etshover:url("../img/general/h2theme/elusive-full.png");
+	--etson:url("../img/general/h2theme/elusive-dfull.png");	
 	--lock:url("../img/general/h2theme/lock-lframe.png");
 	--lockstripes:url("../img/general/h2theme/stripes.png");
 	--settingtheme:url("../img/general/h2theme/disguise-frame.png");
@@ -566,6 +575,9 @@ html.h3theme { /* Variables for Hitman 2 Styled Theme & Images */
 	--hs6:url("../img/general/h3theme/sarajevo-full.png");
 	--hs6hover:url("../img/general/h3theme/sarajevo-full.png");
 	--hs6on:url("../img/general/h3theme/sarajevo-lfull.png");
+	--ets:url("../img/general/h3theme/elusive-full.png");
+	--etshover:url("../img/general/h3theme/elusive-full.png");
+	--etson:url("../img/general/h3theme/elusive-lfull.png");	
 	--lock:url("../img/general/h3theme/lock-lframe.png");
 	--lockstripes:url("../img/general/h3theme/stripes.png");
 	--settingtheme:url("../img/general/h3theme/disguise-full.png");
@@ -716,6 +728,9 @@ html.httheme, html { /* Variables for Hitman Roulette Unique Styled Theme & Imag
 	--hs6:url("../img/general/h3theme/sarajevo-full.png");
 	--hs6hover:url("../img/general/h3theme/sarajevo-full.png");
 	--hs6on:url("../img/general/h3theme/sarajevo-lfull.png");
+	--ets:url("../img/general/h3theme/elusive-full.png");
+	--etshover:url("../img/general/h3theme/elusive-full.png");
+	--etson:url("../img/general/h3theme/elusive-lfull.png");
 	--lock:url("../img/general/h3theme/lock-lframe.png");
 	--lockstripes:url("../img/general/h3theme/stripes.png");
 	--settingtheme:url("../img/general/h3theme/disguise-full.png");
@@ -1537,7 +1552,7 @@ section#content {
 #contract_submenu button, #contract_submenu #submenu_issue:active, #maps_submenu div {
 	background-color:var(--buttonbg);
 	background-repeat:no-repeat, repeat-y;
-	background-position:left 30px bottom 26px, left 120px center;
+	background-position:left 30px bottom 24px, left 120px center;
 	background-size:80px, 4px;
 	display:flex;
 	flex-direction:column;
@@ -1551,14 +1566,14 @@ section#content {
 }
 	@media only screen and (max-height: 1570px) {
 		#contract_submenu button, #contract_submenu #submenu_issue:active, #maps_submenu div {
-			background-position:left 22px bottom 19px, left 90px center;
+			background-position:left 22px bottom 17px, left 90px center;
 			background-size:60px, 3px;
 			font-size:30px;
 		}
 	}
 	@media only screen and (max-width: 1920px), (max-height: 1180px) {
 		#contract_submenu button, #contract_submenu #submenu_issue:active, #maps_submenu div {
-			background-position:left 15px bottom 13px, left 60px center;
+			background-position:left 15px bottom 11px, left 60px center;
 			background-size:40px, 2px;
 			font-size:20px;
 		}
@@ -1603,7 +1618,7 @@ section#content {
     background-color:var(--imagebasebg);
     background-repeat:no-repeat;
     background-position:top center;
-    background-size:102%;
+    background-size:auto 52%;
 	height:100%;
 	display:flex;
 	flex-direction:column;
@@ -1612,10 +1627,8 @@ section#content {
 }
 #rand-all { background-position:top right 61%; }
 #photo { background-size:var(--targetbasebgsize); }
-#photo.contarget { background-size:101% auto; }
-	@media only screen and (max-width: 1920px), (max-height: 1180px) {
-		#logo, #logothin, #wrapper, #entry, #exit, #rand-all, #top, #bottom  { background-size:102%; }
-	}
+#photo.contarget { background-size:auto 88%; }
+#entry, #exit, #top, #bottom  { background-size:auto 101%; }
 html.h1theme #photo[class^="ElusiveTarget"], html.h1gotytheme #photo[class^="ElusiveTarget"] { background-size:102% auto !important; }
 #photo[class^="UnassignedTarget"] { background-size:var(--targetbasebgsize); }
 /*#photo[class^="UnassignedTarget"] #subplate.method, #photo[class^="UnassignedTarget"] #subplate.disguise, #photo[class^="UnassignedTarget"] div[id^="subplate"].intel { background-color: var(--targetreqsbg) !important; }*/
@@ -2081,14 +2094,14 @@ div[id^="subplate"].intel { background-image:var(--intel); }
 #chall-image #nameplate { background-image:var(--challenge); }
 
 #maps_submenu {
-	grid-template-rows:repeat(7, 1fr);
+	grid-template-rows:repeat(8, 1fr);
 }
-#maps_submenu div span { margin:0 0 26px 130px; }
+#maps_submenu div span { margin:0 0 24px 130px; }
 	@media only screen and (max-height: 1570px) {
-		#maps_submenu div span { margin:0 0 19px 97px; }
+		#maps_submenu div span { margin:0 0 17px 97px; }
 	}
 	@media only screen and (max-width: 1920px), (max-height: 1180px) {
-		#maps_submenu div span { margin:0 0 13px 65px; }
+		#maps_submenu div span { margin:0 0 11px 65px; }
 	}
 	@media only screen and (max-height: 700px) {
 		div[id^='submenu_'] span  { margin:6px 0 3px 65px !important; }
@@ -2130,6 +2143,9 @@ label:hover #nameplate.on { background-image:var(--checkedhover); }
 #submenu_hs6, #subsubmenu_hs6 { background-image:var(--hs6); }
 #submenu_hs6:hover, #subsubmenu_hs6:hover { background-image:var(--hs6hover); }
 #submenu_hs6.on, #subsubmenu_hs6.on { background-image:var(--hs6on); }
+#submenu_ets, #subsubmenu_ets { background-image:var(--ets); }
+#submenu_ets:hover, #subsubmenu_ets:hover { background-image:var(--etshover); }
+#submenu_ets.on, #subsubmenu_ets.on { background-image:var(--etson); }
 
 .lock { 
 	background-color:var(--lockbg) !important;
@@ -2796,7 +2812,7 @@ button#subsaveroulette { grid-area: 2 / 3 / 3 / 5; }
 
 #maps_mobilesubmenu {
 	display: none;
-	grid-template-columns: repeat(7, auto);
+	grid-template-columns: repeat(8, auto);
 	grid-template-rows: 43px 40px;
 	grid-column-gap: 3px;
 	grid-row-gap: 0px;
@@ -2830,7 +2846,7 @@ button#subsaveroulette { grid-area: 2 / 3 / 3 / 5; }
 	font-size:20px;
 	font-weight:700;
 	text-transform:var(--uppercase);
-	grid-area: 2 / 1 / 3 / 8;
+	grid-area: 2 / 1 / 3 / 9;
 }
 #maps_mobilesubmenu div img {
 	width:30px;
