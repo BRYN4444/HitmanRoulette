@@ -1,8 +1,8 @@
 //Enjoy looking at the ametuer code work I've done.
 $(document).ready(function() {
 	/******Latest Updates******/
-	$("#features p#title").text("Last Updated: October 7th, 2022"); /*Roulette Features*/
-	$("#features .updatenotes").html('Updated Haven entrance and old/new Mendoza exits. <b><a href="https://github.com/BRYN4444/HitmanRoulette#latest-updates" target="_blank">Details</a></b>.');
+	$("#features p#title").text("Last Updated: January 18th, 2022"); /*Roulette Features*/
+	$("#features .updatenotes").html('Added Elusive Targets as selectable missions. <b><a href="https://github.com/BRYN4444/HitmanRoulette#latest-updates" target="_blank">Details</a></b>.');
 	$("#overlayguide p#title").text("Last Updated: July 13th, 2022 (BETA)"); /*Stream Overlay*/
 	//$("#overlayguide .updatenotes").html('???'); /*Needs to be added to Overlay.html*/
 
@@ -442,7 +442,7 @@ $(document).ready(function() {
 	$( "#submenu_random, #subsubmenu_random" ).click(function() {
 		$( "#submenu_random, #subsubmenu_random" ).addClass( "on" );
 		$( "label[id^='rand'], div[id^='rand']" ).show();
-		$( "div#h1, div#h2, div#h3, div#hside, div#hpz, div#hs6" ).hide();
+		$( "div#h1, div#h2, div#h3, div#hside, div#hpz, div#hs6, div#ets" ).hide();
 		$( "#submenu_random, #subsubmenu_random" ).siblings().removeClass( "on" );
 		$( "#subsubmenu_name img" ).prop("id", "subsubmenu_random");
 		$( "#subsubmenu_name span" ).text("Mission Groupings");
@@ -450,7 +450,7 @@ $(document).ready(function() {
 	$( "#submenu_h1, #subsubmenu_h1" ).click(function() {
 		$( "#submenu_h1, #subsubmenu_h1" ).addClass( "on" );
 		$( "div#h1" ).show();
-		$( "label[id^='rand'], div[id^='rand'], div#h2, div#h3, div#hside, div#hpz, div#hs6" ).hide();
+		$( "label[id^='rand'], div[id^='rand'], div#h2, div#h3, div#hside, div#hpz, div#hs6, div#ets" ).hide();
 		$( "#submenu_h1, #subsubmenu_h1" ).siblings().removeClass( "on" );
 		$( "#subsubmenu_name img" ).prop("id", "subsubmenu_h1");
 		$( "#subsubmenu_name span" ).text("Hitman™ & Prologue");
@@ -458,7 +458,7 @@ $(document).ready(function() {
 	$( "#submenu_h2, #subsubmenu_h2" ).click(function() {
 		$( "#submenu_h2, #subsubmenu_h2" ).addClass( "on" );
 		$( "div#h2" ).show();
-		$( "label[id^='rand'], div[id^='rand'], div#h1, div#h3, div#hside, div#hpz, div#hs6" ).hide();
+		$( "label[id^='rand'], div[id^='rand'], div#h1, div#h3, div#hside, div#hpz, div#hs6, div#ets" ).hide();
 		$( "#submenu_h2, #subsubmenu_h2" ).siblings().removeClass( "on" );
 		$( "#subsubmenu_name img" ).prop("id", "subsubmenu_h2");
 		$( "#subsubmenu_name span" ).text("Hitman™2 & Expansions");
@@ -466,7 +466,7 @@ $(document).ready(function() {
 	$( "#submenu_h3, #subsubmenu_h3" ).click(function() {
 		$( "#submenu_h3, #subsubmenu_h3" ).addClass( "on" );
 		$( "div#h3" ).show();
-		$( "label[id^='rand'], div[id^='rand'], div#h1, div#h2, div#hside, div#hpz, div#hs6" ).hide();
+		$( "label[id^='rand'], div[id^='rand'], div#h1, div#h2, div#hside, div#hpz, div#hs6, div#ets" ).hide();
 		$( "#submenu_h3, #subsubmenu_h3" ).siblings().removeClass( "on" );
 		$( "#subsubmenu_name img" ).prop("id", "subsubmenu_h3");
 		$( "#subsubmenu_name span" ).text("Hitman™III");
@@ -474,7 +474,7 @@ $(document).ready(function() {
 	$( "#submenu_hside, #subsubmenu_hside" ).click(function() {
 		$( "#submenu_hside, #subsubmenu_hside" ).addClass( "on" );
 		$( "div#hside" ).show();
-		$( "label[id^='rand'], div[id^='rand'], div#h1, div#h2, div#h3, div#hpz, div#hs6" ).hide();
+		$( "label[id^='rand'], div[id^='rand'], div#h1, div#h2, div#h3, div#hpz, div#hs6, div#ets" ).hide();
 		$( "#submenu_hside, #subsubmenu_hside" ).siblings().removeClass( "on" );
 		$( "#subsubmenu_name img" ).prop("id", "subsubmenu_hside");
 		$( "#subsubmenu_name span" ).text("Side Missions");
@@ -482,17 +482,26 @@ $(document).ready(function() {
 	$( "#submenu_hpz, #subsubmenu_hpz" ).click(function() {
 		$( "#submenu_hpz, #subsubmenu_hpz" ).addClass( "on" );
 		$( "div#hpz" ).show();
-		$( "label[id^='rand'], div[id^='rand'], div#h1, div#h2, div#h3, div#hside, div#hs6" ).hide();
+		$( "label[id^='rand'], div[id^='rand'], div#h1, div#h2, div#h3, div#hside, div#hs6, div#ets" ).hide();
 		$( "#submenu_hpz, #subsubmenu_hpz" ).siblings().removeClass( "on" );
 		$( "#subsubmenu_name img" ).prop("id", "subsubmenu_hpz");
 		$( "#subsubmenu_name span" ).text("Patient Zero");
 	});
+	$( "#submenu_ets, #subsubmenu_ets" ).click(function() {
+		$( "#submenu_ets, #subsubmenu_ets" ).addClass( "on" );
+		$( "div#ets" ).show();
+		$( "label[id^='rand'], div[id^='rand'], div#h1, div#h2, div#h3, div#hside, div#hpz, div#hs6" ).hide();
+		$( "#submenu_ets, #subsubmenu_ets" ).siblings().removeClass( "on" );
+		$( "#subsubmenu_name img" ).prop("id", "subsubmenu_ets");
+		$( "#subsubmenu_name span" ).text("Elusive Targets");
+	});
 	$( "#submenu_hs6, #subsubmenu_hs6" ).click(function() {
 		$( "#submenu_hs6, #subsubmenu_hs6" ).addClass( "on" );
 		$( "div#hs6" ).show();
-		$( "label[id^='rand'], div[id^='rand'], div#h1, div#h2, div#h3, div#hside, div#hpz" ).hide();
+		$( "label[id^='rand'], div[id^='rand'], div#h1, div#h2, div#h3, div#hside, div#hpz, div#ets" ).hide();
 		$( "#submenu_hs6, #subsubmenu_hs6" ).siblings().removeClass( "on" );
 		$( "#subsubmenu_name img" ).prop("id", "subsubmenu_hs6");
+		$( "#subsubmenu_name span" ).text("Sarajevo Six");
 	});
 	
 	/******Map Select Checkbox Logic******/
@@ -536,6 +545,12 @@ $(document).ready(function() {
 		}
 		else if($(this).is("#RANDOMH1S6:not(:checked)")) { //Sarajevo Six - Off
 			$( "input.h1s6" ).prop('checked', false).parent().parent().removeClass("on");
+		}
+		else if($(this).is("#RANDOMHET:checked")) { // Elusive Targets - On
+			$( "input.het" ).prop('checked', true).parent().parent().addClass("on");
+		}
+		else if($(this).is("#RANDOMHET:not(:checked)")) { //Elusive Target - Off
+			$( "input.het" ).prop('checked', false).parent().parent().removeClass("on");
 		}
 		else if($(this).is("#RANDOMH2:checked")) { // H2 - On
 			$( "input.h2" ).prop('checked', true).parent().parent().addClass("on");
@@ -631,6 +646,14 @@ $(document).ready(function() {
 		}
 		else {
 			$("input#RANDOMH1S6").prop('checked', false).parent().parent().removeClass("on");
+		};
+	
+		//Toggle Random Elusive Target Content if HET levels are selected or not
+		if($(".het:checked").length == $(".het").length) {
+			$("input#RANDOMHET").prop('checked', true).parent().parent().addClass("on");
+		}
+		else {
+			$("input#RANDOMHET").prop('checked', false).parent().parent().removeClass("on");
 		};
 	
 		//Toggle Random Hitman 2 if H2 levels are selected or not
