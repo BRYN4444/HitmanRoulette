@@ -41,6 +41,24 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 
 ### Latest Updates:
 
+**January 18th, 2023**
+* **Roulette:**
+  * **Select Missions:** Added Elusive Targets as possible missions. They are not enabled by default and have to be manually triggered (like the Sarajevo Six missions). I've also included all of them despite those unavailable in Elusive Target Arcade. Partially as optimism, partially for the benefit of modders.
+* **HITMAN 2:**
+  * **A Bitter Pill:**
+    * **Exit:** Raft exit removed since the Paddle isn't available in this Special Assignment. 
+* **Other Fixes:**
+  * Fixed objectives and the entry/exit images displaying smaller than they should be at certain resolutions.
+  * Fixed some objectives missing images.
+  * Ensured objective descriptions display properly in the Export Roulette textarea/txt.
+* **Current Plans:**
+  * There will be small clarification edits once HITMAN III becomes World Of Assassination. Just waiting to see the extent of that changeover.
+  * I don't see Freelancer as something that'll work with the Roulette seeing as it is random itself, but who knows. Have to play it first.
+>**Bug Hunting:** Please make a post [via GitHub](https://github.com/BRYN4444/HitmanRoulette/issues) or [on Hitman Forum](https://hitmanforum.com/t/13107) if you:
+>* Experience any graphical issues while using the Roulette in 4K, or on phones/tablets.
+>* Generate impossibilities when using the Roulette with Elusive Targets or past titles HITMAN / HITMAN 2.
+>* Have troubles or questions about the Stream Overlay.
+
 **October 7th, 2022**
 * **HITMAN 2:**
   * **The Last Resort:**
@@ -48,12 +66,6 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 * **HITMAN III:**
   * **The Farewell:**
     * **Exit:** Added the newly patched in "Winery Viewpoint Car" exit. Updated the image and listing for the "Underground Cave System" exit to detail that any Wetsuits can be used now.
-* **Current Plans:**
-  * Eventually I'll continue going through and adding some more Contracts Mode Targets to missions that need some more, but for now I'll continue with my break.
->**Bug Hunting:** Please make a post [via GitHub](https://github.com/BRYN4444/HitmanRoulette/issues) or [on Hitman Forum](https://hitmanforum.com/t/13107) if you:
->* Experience any graphical issues while using the Roulette in 4K, or on phones/tablets.
->* Notice inconsistencies or impossibilities generated if using the Roulette while playing HITMAN or HITMAN 2.
->* Have troubles or questions about the new Stream Overlay.
 
 **August 25th, 2022**
 * **Roulette:**
