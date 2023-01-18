@@ -1,7 +1,7 @@
 //Enjoy looking at the ametuer code work I've done.
 $(document).ready(function() {
 	/******Latest Updates******/
-	$("#features p#title").text("Last Updated: January 18th, 2022"); /*Roulette Features*/
+	$("#features p#title").text("Last Updated: January 18th, 2023"); /*Roulette Features*/
 	$("#features .updatenotes").html('Added Elusive Targets as selectable missions. <b><a href="https://github.com/BRYN4444/HitmanRoulette#latest-updates" target="_blank">Details</a></b>.');
 	$("#overlayguide p#title").text("Last Updated: July 13th, 2022 (BETA)"); /*Stream Overlay*/
 	//$("#overlayguide .updatenotes").html('???'); /*Needs to be added to Overlay.html*/
