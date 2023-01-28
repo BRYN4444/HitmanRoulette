@@ -41,6 +41,27 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 
 ### Latest Updates:
 
+**January 28th, 2023**
+* **Roulette:**
+  * **Select Missions:** Golden Handshake & The Last Resort are listed as (DLC), since in HITMAN 2, III, and World of Assassination, they are.
+  * **About & Help:** Listed World of Assassination (H3 disc) & its Deluxe Pack as the best compatible game & DLC for use with the Roulette. 
+* **HITMAN 2:**
+  * **Three-Headed Serpent:**
+    * **Contract Mode Targets:** 2 images updated. This is due to a visual bug with aprons being fixed in the game.
+  * **Chasing a Ghost:**
+    * **Contract Mode Targets:** 4 images updated. This is due to a visual bug with aprons being fixed in the game.
+* **HITMAN III:**
+  * **Shadows in the Water:**
+    * **Contract Mode Targets:** 4 images updated. This is due to a visual bug with aprons being fixed in the game.
+* **Other Fixes:**
+  * Minor intel updates for targets in Contract Mode.
+* **Current Plans:**
+  * Enjoying Freelancer. No way to incorporate it into the Roulette. If anything, I hope it had some influence on Freelancer.
+>**Bug Hunting:** Please make a post [via GitHub](https://github.com/BRYN4444/HitmanRoulette/issues) or [on Hitman Forum](https://hitmanforum.com/t/13107) if you:
+>* Experience any graphical issues while using the Roulette in 4K, or on phones/tablets.
+>* Generate impossibilities when using the Roulette with Elusive Targets or past titles HITMAN / HITMAN 2.
+>* Have troubles or questions about the Stream Overlay.
+
 **January 18th, 2023**
 * **Roulette:**
   * **Select Missions:** Added Elusive Targets as possible missions. They are not enabled by default and have to be manually triggered (like the Sarajevo Six missions). I've also included all of them despite those unavailable in Elusive Target Arcade. Partially as optimism, partially for the benefit of modders.
@@ -51,13 +72,6 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
   * Fixed objectives and the entry/exit images displaying smaller than they should be at certain resolutions.
   * Fixed some objectives missing images.
   * Ensured objective descriptions display properly in the Export Roulette textarea/txt.
-* **Current Plans:**
-  * There will be small clarification edits once HITMAN III becomes World Of Assassination. Just waiting to see the extent of that changeover.
-  * I don't see Freelancer as something that'll work with the Roulette seeing as it is random itself, but who knows. Have to play it first.
->**Bug Hunting:** Please make a post [via GitHub](https://github.com/BRYN4444/HitmanRoulette/issues) or [on Hitman Forum](https://hitmanforum.com/t/13107) if you:
->* Experience any graphical issues while using the Roulette in 4K, or on phones/tablets.
->* Generate impossibilities when using the Roulette with Elusive Targets or past titles HITMAN / HITMAN 2.
->* Have troubles or questions about the Stream Overlay.
 
 **October 7th, 2022**
 * **HITMAN 2:**
