@@ -22,9 +22,7 @@ To quickly return the Roulette Settings back to default, preform a hard refresh 
 
 ## Compatibility & Issues
 
-Though you can deselect any location you do not own, by default the Roulette works best with the either:
-* Any edition of **HITMAN III** plus the **Access Pass: HITMAN 1 GOTY Edition** and **Access Pass: HITMAN 2 Gold**.
-* OR The **HITMAN Trilogy** plus the **HITMAN Trilogy Premium Add-Ons Bundle**.
+Though you can deselect any location you do not own, by default the Roulette works best with **HITMAN: World of Assassination** (HITMAN III physical disc) plus the **HITMAN: World of Assassination Deluxe Pack**.
 
 There may be the odd conflicting trait that changed between releases in this trilogy, though I've done my best to account for these. It is also important to note that the later the game sequel, the more gear is available to unlock for use. Lastly, since Contract Mode Targets are regular NPCs and Elimination Methods are randomly assigned, not every Target can be killed with every Method easily/silently.
 
@@ -41,6 +39,19 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 
 ### Latest Updates:
 
+**February 5th, 2023**
+* **Roulette:**
+  * **Select Missions:** Renamed/rephrased the default all locations toggle.
+  * **About & Help:** The README version wasn't updated to reflect the new World Of Assassination compatibility.
+* **Other Fixes:**
+  * Minor CSS fix for locked mission selection.
+* **Current Plans:**
+  * Enjoying Freelancer. No way to incorporate it into the Roulette. If anything, I hope it had some influence on Freelancer.
+>**Bug Hunting:** Please make a post [via GitHub](https://github.com/BRYN4444/HitmanRoulette/issues) or [on Hitman Forum](https://hitmanforum.com/t/13107) if you:
+>* Experience any graphical issues while using the Roulette in 4K, or on phones/tablets.
+>* Generate impossibilities when using the Roulette with Elusive Targets or past titles HITMAN / HITMAN 2.
+>* Have troubles or questions about the Stream Overlay.
+
 **January 28th, 2023**
 * **Roulette:**
   * **Select Missions:** Golden Handshake & The Last Resort are listed as (DLC), since in HITMAN 2, III, and World of Assassination, they are.
@@ -55,12 +66,6 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
     * **Contract Mode Targets:** 4 images updated. This is due to a visual bug with aprons being fixed in the game.
 * **Other Fixes:**
   * Minor intel updates for targets in Contract Mode.
-* **Current Plans:**
-  * Enjoying Freelancer. No way to incorporate it into the Roulette. If anything, I hope it had some influence on Freelancer.
->**Bug Hunting:** Please make a post [via GitHub](https://github.com/BRYN4444/HitmanRoulette/issues) or [on Hitman Forum](https://hitmanforum.com/t/13107) if you:
->* Experience any graphical issues while using the Roulette in 4K, or on phones/tablets.
->* Generate impossibilities when using the Roulette with Elusive Targets or past titles HITMAN / HITMAN 2.
->* Have troubles or questions about the Stream Overlay.
 
 **January 18th, 2023**
 * **Roulette:**
