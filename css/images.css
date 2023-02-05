@@ -163,23 +163,29 @@ html.httheme {
 .m1-1 { background:#292929 url("../img/missions/1-1.png") no-repeat center top / 350px; }
 .m1-2 { background:#292929 url("../img/missions/1-2.png") no-repeat center top / 350px; }
 .m1-S { background:#292929 url("../img/missions/1-S.png") no-repeat center top / 350px; background-size:auto 112% !important; }
+.m1-S.lock { background-size: auto 100% !important; }
 .m2-1 { background:#292929 url("../img/missions/2-1.png") no-repeat center top / 350px; }
 .m2-2 { background:#292929 url("../img/missions/2-2.png") no-repeat center top / 350px; }
 .m2-3 { background:#292929 url("../img/missions/2-3.png") no-repeat center top / 350px; }
 .m2-4 { background:#292929 url("../img/missions/2-4.png") no-repeat center top / 350px; }
 .m2-S { background:#292929 url("../img/missions/2-S.png") no-repeat center top / 350px; background-size:auto 112% !important; }
+.m2-S.lock { background-size: auto 100% !important; }
 .m3-1 { background:#292929 url("../img/missions/3-1.png") no-repeat center top / 350px; }
 .m3-2 { background:#292929 url("../img/missions/3-2.png") no-repeat center top / 350px; }
 .m3-S { background:#292929 url("../img/missions/3-S.png") no-repeat center top / 350px; background-size:auto 112% !important; }
+.m3-S.lock { background-size: auto 100% !important; }
 .m4-1 { background:#292929 url("../img/missions/4-1.png") no-repeat center top / 350px; }
 .m4-2 { background:#292929 url("../img/missions/4-2.png") no-repeat center top / 350px; }
 .m4-S { background:#292929 url("../img/missions/4-S.png") no-repeat center top / 350px; background-size:auto 112% !important; }
+.m4-S.lock { background-size: auto 100% !important; }
 .m5-1 { background:#292929 url("../img/missions/5-1.png") no-repeat center top / 350px; }
 .m5-S { background:#292929 url("../img/missions/5-S.png") no-repeat center top / 350px; background-size:auto 112% !important; }
+.m5-S.lock { background-size: auto 100% !important; }
 .m6-1 { background:#292929 url("../img/missions/6-1.png") no-repeat center top / 350px; }
 .m6-2 { background:#292929 url("../img/missions/6-2.png") no-repeat center top / 350px; }
 .m6-3 { background:#292929 url("../img/missions/6-3.png") no-repeat center top / 350px; }
 .m6-S { background:#292929 url("../img/missions/6-S.png") no-repeat center top / 350px; background-size:auto 112% !important; }
+.m6-S.lock { background-size: auto 100% !important; }
 .m7-1 { background:#292929 url("../img/missions/7-1.png") no-repeat center top / 350px; }
 .m8-1 { background:#292929 url("../img/missions/8-1.png") no-repeat center top / 350px; }
 .m8-2 { background:#292929 url("../img/missions/8-2.png") no-repeat center top / 350px; }
