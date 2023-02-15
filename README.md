@@ -39,18 +39,26 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 
 ### Latest Updates:
 
+**February 15th, 2023**
+* **Roulette:**
+  * **Roulette Settings:**
+	  * **Roulette Music**: Added a new track combining the "Mild" & "Hot" versions of the loading screen music from Freelancer.
+* **Other Fixes:**
+  * Elusive Targets weren't setup properly to avoid difficulty/saving related Complications/Challenges.
+  * Some "Gameplay Challenges" images still used HITMAN 2's hot magenta HUD coloring. These very tiny instances were changed to III/WoA's red.
+* **Current Plans:**
+  * Still enjoying Freelancer. No way to incorporate it into the Roulette (Random of Random doesn't work). If anything, I hope the Roulette had some influence on Freelancer.
+>**Bug Hunting:** Please make a post [via GitHub](https://github.com/BRYN4444/HitmanRoulette/issues) or [on Hitman Forum](https://hitmanforum.com/t/13107) if you:
+>* Experience any graphical issues while using the Roulette in 4K, or on phones/tablets.
+>* Generate impossibilities when using the Roulette with Elusive Targets or past titles HITMAN / HITMAN 2.
+>* Have troubles or questions about the Stream Overlay.
+
 **February 5th, 2023**
 * **Roulette:**
   * **Select Missions:** Renamed/rephrased the default all locations toggle.
   * **About & Help:** The README version wasn't updated to reflect the new World Of Assassination compatibility.
 * **Other Fixes:**
   * Minor CSS fix for locked mission selection.
-* **Current Plans:**
-  * Enjoying Freelancer. No way to incorporate it into the Roulette. If anything, I hope it had some influence on Freelancer.
->**Bug Hunting:** Please make a post [via GitHub](https://github.com/BRYN4444/HitmanRoulette/issues) or [on Hitman Forum](https://hitmanforum.com/t/13107) if you:
->* Experience any graphical issues while using the Roulette in 4K, or on phones/tablets.
->* Generate impossibilities when using the Roulette with Elusive Targets or past titles HITMAN / HITMAN 2.
->* Have troubles or questions about the Stream Overlay.
 
 **January 28th, 2023**
 * **Roulette:**
@@ -146,42 +154,3 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
     * **Photo Objectives:** 1 more added.
   * **The Author:**
     * **Photo Objectives:** 1 more added.
-
----
-
-**July 28th, 2022**
-* **HITMAN III:**
-  * **"Shadows in the Water" Mission Added. (Location: Ambrose Island)
-    * **Targets:** 2. (Contract Mode Targets coming soon)
-	* **Starting Points:** 6 added. Only 2 are undercover locations.
-    * **Exit Points:** 7 added. Two of these are disabled in Contracts Mode due to the lack of the GPS Tracker from the mission proper.
-    * **Objectives:** 1 added. Mandatory in the actual mission, but it isn't too much of a hassle after a few tries. 
-    * **Extra Objectives:** 18 added.
-    * **Photo Objectives:** 11 added.
-  * **Untouchable:**
-    * **Extra Objectives:** 1 added, because I had an idea when making the photo objectives.
-    * **Photo Objectives:** 13 added. Completely overlooked adding them here, but now there are some!  
-* **Roulette:**
-  * **Roulette Settings - Extra Requirements:**	
-    * **Include Secret Exits**: The "Secret" option from "Force Start/Exit" is now its own setting. This way you can have Exit Only and Secret Exits at the same time.
-
----
-
-**July 13th, 2022**
-* **Roulette:**
-  * **Roulette Settings - Extra Requirements:**
-    * **Allow Complications**: Had a major code overhaul, fixing some legacy bugs. Also some minor updates.
-	  *	Generating complications, followed by generating a value less of the previous (like: 6 then 2), would result in some previously generated complications not being removed.
-	  * Sometimes it was be possible to generate no Complications in certain situations where Restrictions would force some Complications to be omitted. Now, at least one Complication should always generate if the Max value slider isn't set to zero. 
-      * Reclassified the Restriction "No Agility" into a Complication as it was the only one that didn't involve disabling something through the in-game options menu. (Also, it was an H1 Complication to begin with anyway)
-      * Complication "Do Not Get Spotted" now uses the matching in-game Contracts Mode image. (Originally this was done to avoid confusion with a "No Crouching" Complication, but that was removed due to H3 forcing auto-crouching in spots)
-	  * Fixed a formatting error related to Complications in the Export Roulette .txt/textarea.
-  * **Roulette Settings - Reset Or Return:** (New)
-    * **Reset All Roulette Settings**: Returns them to default without hard-refreshing the Roulette page.
-	* **Return To Front Page**: Takes you to the main Hitman Roulette tab and clears out any Issued Roulettes. Settings changes will be retained.
-  * **Roulette Settings - Roulette Mode:** (New)
-    * **Stream Overlay Beta**: Intended for PC Steamers to easily switch between generating Roulettes and playing the game. Follow the instructions listed to learn how to try it.
-      * Currently in testing, so if you have any issues or suggestions please make a post [via GitHub](https://github.com/BRYN4444/HitmanRoulette/issues) or [on Hitman Forum](https://hitmanforum.com/t/13107)!
-* **Other Fixes:**
-  * An Extra Objective on Nightcall wasn't properly displaying an image.
-  * Updated some images for Restriction challenges.
