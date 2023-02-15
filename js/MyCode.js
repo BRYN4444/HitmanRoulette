@@ -1,7 +1,7 @@
 //Enjoy looking at the ametuer code work I've done.
 $(document).ready(function() {
 	/******Latest Updates******/
-	$("#features p#title").text("Last Updated: February 5th, 2023"); /*Roulette Features*/
+	$("#features p#title").text("Last Updated: February 15th, 2023"); /*Roulette Features*/
 	$("#features .updatenotes").html('Visit <b><a href="https://github.com/BRYN4444/HitmanRoulette#latest-updates" target="_blank">Github</a></b> for details on the latest Roulette updates.');
 	$("#overlayguide p#title").text("Last Updated: July 13th, 2022"); /*Stream Overlay*/
 	//$("#overlayguide .updatenotes").html('???'); /*Needs to be added to Overlay.html*/
@@ -99,7 +99,7 @@ $(document).ready(function() {
 			$("#audiocontainer")[0].load();
 		}
 		else if( $(this).hasClass("AaH") ) {
-			$(this).removeClass("AaH").addClass("DA1").find("span").text("[H3 MENU]");
+			$(this).removeClass("AaH").addClass("DA1").find("span").text("[H3 Menu]");
 			$("#musicselect").val("DA1");
 			$("#audiocontainer")[0].pause();
 			$("#music").removeClass("on").addClass("off");
@@ -107,7 +107,7 @@ $(document).ready(function() {
 			$("#audiocontainer")[0].load();
 		}
 		else if( $(this).hasClass("DA1") ) {
-			$(this).removeClass("DA1").addClass("DA2").find("span").text("[H3 PLAN]");
+			$(this).removeClass("DA1").addClass("DA2").find("span").text("[H3 Plan]");
 			$("#musicselect").val("DA2");
 			$("#audiocontainer")[0].pause();
 			$("#music").removeClass("on").addClass("off");
@@ -115,14 +115,22 @@ $(document).ready(function() {
 			$("#audiocontainer")[0].load();
 		}
 		else if( $(this).hasClass("DA2") ) {
-			$(this).removeClass("DA2").addClass("default").find("span").text("[Default]");
+			$(this).removeClass("DA2").addClass("FMH").find("span").text("[FREELANCER]");
+			$("#musicselect").val("FMH");
+			$("#audiocontainer")[0].pause();
+			$("#music").removeClass("on").addClass("off");
+			$("#audiosource").attr("src","./audio/Freelancer%20(Mild%20&%20Hot).mp3");
+			$("#audiocontainer")[0].load();
+		}
+		else if( $(this).hasClass("FMH") ) {
+			$(this).removeClass("FMH").addClass("default").find("span").text("[Default]");
 			$("#musicselect").val("DEFAULT");
 			if(document.cookie == "theme=H1") {
 				$("#audiosource").attr("src","./audio/World%20of%20Assassination.mp3");
 				$("#audiocontainer")[0].load();
 			} else if(document.cookie == "theme=H1goty") {
-			$("#audiosource").attr("src","./audio/World%20of%20Assassination.mp3");
-			$("#audiocontainer")[0].load();
+				$("#audiosource").attr("src","./audio/World%20of%20Assassination.mp3");
+				$("#audiocontainer")[0].load();
 			} else if(document.cookie == "theme=H2") {
 				$("#audiosource").attr("src","./audio/Agent%20and%20Handler.mp3");
 				$("#audiocontainer")[0].load();
@@ -133,19 +141,23 @@ $(document).ready(function() {
 				$("#audiosource").attr("src","./audio/Death%20Awaits%20(Planning%20ver.).mp3");
 				$("#audiocontainer")[0].load();
 			} else {
-				$("#audiosource").attr("src","./audio/Death%20Awaits%20(Planning%20ver.).mp3");
+				$("#audiosource").attr("src","./audio/Freelancer%20(Mild%20&%20Hot).mp3");
 				$("#audiocontainer")[0].load();
 			}
 		}
 	});
 	
 	/*Refresh*/
-	if($("#musicselect").val() == "DA2") {
-		$("#audio_music").removeClass("DEFAULT").addClass("DA2").find("span").text("[H3 PLAN]");
+	if($("#musicselect").val() == "FMH") {
+		$("#audio_music").removeClass("DEFAULT").addClass("FMH").find("span").text("[Freelancer]");
+		$("#audiosource").attr("src","./audio/Freelancer%20(Mild%20&%20Hot).mp3");
+		$("#audiocontainer")[0].load();
+	} else if($("#musicselect").val() == "DA2") {
+		$("#audio_music").removeClass("DEFAULT").addClass("DA2").find("span").text("[H3 Plan]");
 		$("#audiosource").attr("src","./audio/Death%20Awaits%20(Planning%20ver.).mp3");
 		$("#audiocontainer")[0].load();
 	} else if ($("#musicselect").val() == "DA1") {
-		$("#audio_music").removeClass("DEFAULT").addClass("DA1").find("span").text("[H3 MENU]");
+		$("#audio_music").removeClass("DEFAULT").addClass("DA1").find("span").text("[H3 Menu]");
 		$("#audiosource").attr("src","./audio/Death%20Awaits%20(Menu%20ver.).mp3");
 		$("#audiocontainer")[0].load();
 	} else if ($("#musicselect").val() == "AaH") {
