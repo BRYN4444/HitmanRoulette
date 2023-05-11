@@ -39,6 +39,34 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 
 ### Latest Updates:
 
+**May 11th, 2023**
+* **Roulette:**
+  * Select Missions:
+    * **Contract Mode Roulette:** Freeform Training has always had this option on the Roulette (via the game's Tutorial), but now that it is officially supported the listing while selecting has been updated.
+* **HITMAN:**
+  * **Patient Zero:**
+    * **Starting Location:** "Infiltrating below the Helipad" image has been changed to reflect that it is no longer an "undercover" entrance, meaning you can select any suit.
+* **HITMAN III:**
+  * **Apex Predator:**
+    * **Starting Location:** "Club Entrance" image has been changed to reflect that it is no longer an "undercover" entrance, meaning you can select any suit.
+* **Elusive Target (Arcade):**
+  * **#37: The Heartbreaker**
+    * **Extra Objectives:** 2 added.
+    * **Photo Objectives:** 4 added.
+* **Other Fixes:**
+  * HITMAN: Would Of Assassination is getting a physical release, so wording was slightly changed in About & Help > Compatibility & Issues.
+  * An Extra Objective applicable to all Elusive Targets wasn't properly displaying an image.
+  * Slight rewording of Roulette Settings descriptions.
+* **Current Plans:**
+  * With HITMAN content at a slower cadence now, updates to the Roulette will be slower too. There may be the odd small things here and there, but outside the November Contracts Mode support for the seasonal missions, the Roulette won't be getting any new significant changes.
+  * I'd like to thank anyone who has used the Roulette for these past several years! While it wasn't my original concept, I was happy to iterate on it, making it more robust despite my hobbyist coding experience. Even through Freelancer uses similar concepts, I'm glad you who took the time to read this are still enjoying the Roulette. Thanks!
+>**Bug Hunting:** Please make a post [via GitHub](https://github.com/BRYN4444/HitmanRoulette/issues) or [on Hitman Forum](https://hitmanforum.com/t/13107) if you:
+>* Experience any graphical issues while using the Roulette in 4K, or on phones/tablets.
+>* Generate impossibilities when using the Roulette with Elusive Targets or past titles HITMAN / HITMAN 2.
+>* Have troubles or questions about the Stream Overlay.
+
+---
+
 **February 15th, 2023**
 * **Roulette:**
   * **Roulette Settings:**
@@ -46,12 +74,8 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 * **Other Fixes:**
   * Elusive Targets weren't setup properly to avoid difficulty/saving related Complications/Challenges.
   * Some "Gameplay Challenges" images still used HITMAN 2's hot magenta HUD coloring. These very tiny instances were changed to III/WoA's red.
-* **Current Plans:**
-  * Still enjoying Freelancer. No way to incorporate it into the Roulette (Random of Random doesn't work). If anything, I hope the Roulette had some influence on Freelancer.
->**Bug Hunting:** Please make a post [via GitHub](https://github.com/BRYN4444/HitmanRoulette/issues) or [on Hitman Forum](https://hitmanforum.com/t/13107) if you:
->* Experience any graphical issues while using the Roulette in 4K, or on phones/tablets.
->* Generate impossibilities when using the Roulette with Elusive Targets or past titles HITMAN / HITMAN 2.
->* Have troubles or questions about the Stream Overlay.
+
+---
 
 **February 5th, 2023**
 * **Roulette:**
@@ -59,6 +83,8 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
   * **About & Help:** The README version wasn't updated to reflect the new World Of Assassination compatibility.
 * **Other Fixes:**
   * Minor CSS fix for locked mission selection.
+
+---
 
 **January 28th, 2023**
 * **Roulette:**
@@ -74,6 +100,8 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
     * **Contract Mode Targets:** 4 images updated. This is due to a visual bug with aprons being fixed in the game.
 * **Other Fixes:**
   * Minor intel updates for targets in Contract Mode.
+
+---
 
 **January 18th, 2023**
 * **Roulette:**
@@ -93,6 +121,8 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 * **HITMAN III:**
   * **The Farewell:**
     * **Exit:** Added the newly patched in "Winery Viewpoint Car" exit. Updated the image and listing for the "Underground Cave System" exit to detail that any Wetsuits can be used now.
+
+---
 
 **August 25th, 2022**
 * **Roulette:**
@@ -125,32 +155,3 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
   * Fixed an error where an exit in Dubai wasn't showing an image.
   * Updated the Target Images for the Sarajevo Six to a higher quality.
   * Fixed a number of spelling mistakes throughout.
-
----
-
-**August 7th, 2022**
-* **Roulette:**
-  * **Roulette Settings - Roulette Mode:**
-    * **Contract Mode Roulette:** Selecting "Hunt" wasn't properly removing the Intel listing of targets. (*This setting has changed in a more recent update*)
-* **HITMAN 2:**
-  * **Hokkaido Snow Festival:**
-    * **Starting Points:** "Tobias Rieper's Suite" can now be selectable. However, it is only possible through HITMAN III. As such, "H2: Restaurant" is also listed so HITMAN 2 players don't need to re-roll. 
-
----
-
-**August 6th, 2022**
-* **HITMAN III:**
-  * **Shadows in the Water:**
-    * **Contract Mode Targets:** 126 Added.
-    * **Extra Objectives:** 4 more added.
-	* **Photo Objectives:** 2 more added.
-* **HITMAN 2:**
-  * **Three-headed Serpent:**
-    * **Contract Mode Targets:** 1 more added. Character crossover with "Shadows in the Water".
-* **HITMAN:**
-  * **World Of Tomorrow:**
-    * **Photo Objectives:** 1 more added.
-  * **Landslide:**
-    * **Photo Objectives:** 1 more added.
-  * **The Author:**
-    * **Photo Objectives:** 1 more added.
