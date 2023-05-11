@@ -3667,6 +3667,18 @@ div[class^="ElusiveTarget"], div[class^="UnassignedTarget"] { background-image: 
 .WhoLivesInaBarrel { background-image: url('../img/camera/WhoLivesInaBarrel.png'); }
 .WhoLivesInaBathtub { background-image: url('../img/camera/WhoLivesInaBathtub.png'); }
 
+/** Elusive Targets **/
+.ElusiveHonor { background-image: url('../img/obj/ElusiveHonor.png'); }
+
+/* The Heartbreaker */
+.PlanScrapped { background-image: url('../img/obj/PlanScrapped.png'); }
+.ColdFeet { background-image: url('../img/obj/ColdFeet.png'); }
+
+.TheHappyCouple { background-image: url('../img/camera/TheHappyCouple.png'); }
+.BusinessPractices { background-image: url('../img/camera/BusinessPractices.png'); }
+.Shell { background-image: url('../img/camera/Shell.png'); }
+.Pheebs { background-image: url('../img/camera/Pheebs.png'); }
+
 /***** Complications *****/
 .NoRecordings { background-image: url('../img/comp/NoRecordings.png'); }
 .NoAgencyPickup { background-image: url('../img/comp/NoAgencyPickup.png'); }
