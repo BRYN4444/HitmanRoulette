@@ -309,12 +309,7 @@ function containerToResult(container) {
 		result.cm = " (Elusive Target)";
 		result.missionTitle = container.missionTitle;
 	}
-	else if((mode == "CONEASY" || mode == "CONHARD" || mode == "CONANY") && container.missionTitle == "Freeform Training") {
-		result.type = "on-con";
-		result.cm = " (Contracts Mode)";
-		result.missionTitle = "Tutorial";
-	}
-	else if((mode == "CONEASY" || mode == "CONHARD" || mode == "CONANY") && (container.missionTitle == "The Author" || container.missionTitle == "Patient Zero") ) {
+	else if((mode == "CONEASY" || mode == "CONHARD" || mode == "CONANY") && (container.missionTitle == "Freeform Training" || container.missionTitle == "The Author" || container.missionTitle == "Patient Zero") ) {
 		result.type = "on-con";
 		result.cm = " (H3 Contracts Mode)";
 		result.missionTitle = container.missionTitle;
