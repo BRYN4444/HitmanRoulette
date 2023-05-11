@@ -2527,7 +2527,7 @@ var patientzero = {
 	entry: ["Infiltrating below the Helipad"],
 	exit: ["Snowmobile","Mountain Path","Cable Car"],
 	eexit: [],
-	disguises: ["Recon Gear","Head Researcher","Hospital Director","Yoga Instructor","Helicopter Pilot","Motorcyclist",
+	disguises: ["Recon Gear / Any Suit","Head Researcher","Hospital Director","Yoga Instructor","Helicopter Pilot","Motorcyclist",
 	"Patient","VIP Patient","VIP Patient (Dexter)",
 	"Chef","Handyman",
 	"Resort Staff","Resort Security","Bodyguard",
@@ -4336,7 +4336,7 @@ var ap = {
 	entry: ["Bus Stop","Club Entrance","Projection Bar","Radio Tower","Chill Out","DJ Booth","Biker Hangout"],
 	exit: ["Bicycle","Emergency Exit","Delivery Scooter|(Needs Key)","Motorcycle|(Needs Key)"],
 	eexit: ["UFO|(Secret)","E.T.|(Secret)"],
-	disguises: ["Rave On / Any Suit","Dealer","Florida Man","Delivery Guy","Rolf Hirschmüller",
+	disguises: ["Any Suit","Dealer","Florida Man","Delivery Guy","Rolf Hirschmüller",
 	"Bartender","Club Crew","Technician","DJ",
 	"Biker","Club Security"],
 	disguiseVariants: ["Biker (Agent Rhodes)","Biker (Agent Tremaine)","Biker (Agent Lowenthal)",
@@ -6782,11 +6782,17 @@ var theheartbreaker = {
 	"Pinot Person|Exfiltrate with at least 5 bottles of Pinot Noir Wine.",
 	"Cabernet Crazy|Exfiltrate with at least 10 bottles of Cabernet Sauvignon Wine.",
 	"Wineo|Exfiltrate with the following bottles of wine: 15 Malbec, 10 Cabernet Sauvignon, 5 Pinot Noir, and the 1914 Grand Paladin."],
-	missionWild: ["Elusive Honor|Do not restart under any circumstances. If you fail, you must honor the 12 hour limit until you can try again."],
+	missionWild: ["Elusive Honor|Do not restart under any circumstances. If you fail, you must honor the 12 hour limit until you can try again.",
+	"Plan Scrapped|Find and collect Philo's Scrapbook.",
+	"Cold Feet|Find, collect, and then hand over Philo's Scrapbook to either Michelle Pacheco or Phoebe Morris."],
 	compWild: ["Bushel of Bananas|Exfiltrate with 3 Bananas.",
 	"Saboteur|Break the Viñedo Yates Wine Pump.",
 	"Car-boom|Destroy a vehicle with a cannon."],
-	photos: ["Photographic Proof|Take a photo of your target(s) after you've eliminated them, unless their body is unavailable. They must not be in a body bag."]
+	photos: ["Photographic Proof|Take a photo of your target(s) after you've eliminated them, unless their body is unavailable. They must not be in a body bag.",
+	"The Happy Couple|Take a photo of both Phoebe Morris and Michelle Pacheco. Preferably, once they're out of danger.",
+	"Business Practices|Find Philo Newcombe's vehicle and take a photo of the incriminating evidence within.",
+	"Shell|Take a photo of Michelle Pacheco.",
+	"Pheebs|Take a photo of Phoebe Morris."]
 };
 
 
