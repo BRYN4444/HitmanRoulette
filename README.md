@@ -40,7 +40,7 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 * [Detect Mobile Browsers](http://detectmobilebrowsers.com/) by Chad Smith, which helped in allowing settings descriptions viewable for mobile via touch.
 * [jQuery Countdown](http://keith-wood.name/countdown.html) by Keith Wood, which is being used in the Stream Overlay for any Time Limit Complications.
 
-### Latest Updates:
+### Latest Update
 
 **August 17th, 2023**
 * **Roulette:**
@@ -59,7 +59,8 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
   * Better clarified what missions are DLC when selecting missions. Also, in continuing to cater to all versions of the games, "GOTY" is listed next to missions as a part of the HITMAN Game of the Year Edition, which just comes with H1 access outside of the launch game.
   * Reworded the "World of Assassination" primary toggle. Now that the Sarajevo Six are included, the only mission types that are excluded are Elusive Targets.
   * Fixed two exits in The Extractor not appearing because they were improperly named after a long previous name changes in the data listings.
-  * In The Mercenary, the only exit available was the tornado shelter. This was inaccurate as I was confusing the original H1 exit restrictions in Freedom Fighters as applying here too. This is now fixed. 
+  * In The Mercenary, the only exit available was the tornado shelter. This was inaccurate as I was confusing the original H1 exit restrictions in Freedom Fighters as applying here too. This is now fixed.
+  * Updated the image for the Mr. Raptor Easter Egg Exit in Freedom Fighters & The Mercenary to better convey all the items needed, as it was missing one.
   * Removed the "Car" exit from The Deceivers and The Guru Elusive Targets, as it is not available in those missions. Overlooked mistake.
 * **Current Plans:**
   * Support for the new fall Elusive Target "The Drop" shortly after release, as well as Contracts Mode support for "Holiday Hoarders" and the "Hokkaido Show Festival" in November.
@@ -67,6 +68,8 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 >* Experience any graphical issues while using the Roulette in 4K, or on phones/tablets.
 >* Generate impossibilities when using the Roulette with Elusive Targets or past titles HITMAN / HITMAN 2.
 >* Have troubles or questions about the Stream Overlay.
+
+---
 
 **May 11th, 2023**
 * **Roulette:**
@@ -123,7 +126,7 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 * **Other Fixes:**
   * Minor intel updates for targets in Contract Mode.
 
----
+----
 
 **January 18th, 2023**
 * **Roulette:**
@@ -136,6 +139,8 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
   * Fixed some objectives missing images.
   * Ensured objective descriptions display properly in the Export Roulette textarea/txt.
 
+----
+
 **October 7th, 2022**
 * **HITMAN 2:**
   * **The Last Resort:**
@@ -143,3 +148,4 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 * **HITMAN III:**
   * **The Farewell:**
     * **Exit:** Added the newly patched in "Winery Viewpoint Car" exit. Updated the image and listing for the "Underground Cave System" exit to detail that any Wetsuits can be used now.
+  * Minor intel updates for targets in Contract Mode.
