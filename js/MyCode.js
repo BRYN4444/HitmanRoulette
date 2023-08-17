@@ -1,8 +1,9 @@
 //Enjoy looking at the ametuer code work I've done.
 $(document).ready(function() {
 	/******Latest Updates******/
-	$("#features p#title").text("Last Updated: May 11th, 2023"); /*Roulette Features*/
-	$("#features .updatenotes").html('Visit <b><a href="https://github.com/BRYN4444/HitmanRoulette#latest-updates" target="_blank">Github</a></b> for details on the latest Roulette updates.');
+	$("#features p#title").text("Last Updated: August 17th, 2023"); /*Roulette Features*/
+	$("#features .updatenotes").html('The Sarajevo Six now enabled by default. Visit <b><a href="https://github.com/BRYN4444/HitmanRoulette#latest-updates" target="_blank">Github</a></b> for details.');
+    /* Unspecific Update $("#features .updatenotes").html('Visit <b><a href="https://github.com/BRYN4444/HitmanRoulette#latest-updates" target="_blank">Github</a></b> for details on the latest Roulette updates.');*/
 	$("#overlayguide p#title").text("Last Updated: July 13th, 2022"); /*Stream Overlay*/
 	//$("#overlayguide .updatenotes").html('???'); /*Needs to be added to Overlay.html*/
 
@@ -591,29 +592,23 @@ $(document).ready(function() {
 		else if($(this).is("#RANDOMH3:not(:checked)")) { // H3 - Off
 			$( "input.h3, input#RANDOM" ).prop('checked', false).parent().parent().removeClass("on");
 		}
-		/* else if($(this).is("#RANDOMH3DLC:checked")) { // H3 Extras - On
-			$( "input.h3dlc" ).prop('checked', true).parent().parent().addClass("on");
-		}
-		else if($(this).is("#RANDOMH3DLC:not(:checked)")) { // H3 Extras - Off
-			$( "input.h3dlc, input#RANDOM" ).prop('checked', false).parent().parent().removeClass("on");
-		} enable when non-seasonal DLC drops; add input.h3dlc to the three below */
 		else if($(this).is("#RANDOMALL") && ($("#mode_con").hasClass("intel") || $("#mode_con").hasClass("hunt")) ){
 			if ($(this).prop("checked")) { // All Contract Mode - On
-				$( "input#RANDOMH1, input#RANDOMH1BM, input#RANDOMH2, input#RANDOMH2EX, input#RANDOMH3, input#RANDOMH3DLC, input#RANDOMH1PZ, input.h1, input.h1bm, input.h1pz, input.h2, input.h2ex, input.h3, input#DGS" ).prop('checked', true).parent().parent().addClass("on");
+				$( "input#RANDOMH1, input#RANDOMH1BM, input#RANDOMH2, input#RANDOMH2EX, input#RANDOMH3, input#RANDOMH1PZ, input.h1, input.h1bm, input.h1pz, input.h2, input.h2ex, input.h3, input#DGS" ).prop('checked', true).parent().parent().addClass("on");
 				return;
 			} // All Contract Mode - Off \/
-			$( "input#RANDOMH1, input#RANDOMH1BM, input#RANDOMH2, input#RANDOMH2EX, input#RANDOMH3, input#RANDOMH3DLC, input#RANDOMH1PZ, input.h1, input.h1bm, input.h1pz, input.h2, input.h2ex, input.h3, input#DGS" ).prop('checked', false).parent().parent().removeClass("on");
+			$( "input#RANDOMH1, input#RANDOMH1BM, input#RANDOMH2, input#RANDOMH2EX, input#RANDOMH3, input#RANDOMH1PZ, input.h1, input.h1bm, input.h1pz, input.h2, input.h2ex, input.h3, input#DGS" ).prop('checked', false).parent().parent().removeClass("on");
 		}
 		else if($(this).is("#RANDOMALL") && !($("#mode_con").hasClass("intel") || $("#mode_con").hasClass("hunt")) ){
 			if ($(this).prop("checked")) { // All Mission Mode - On
-				$( "input#RANDOMH1, input#RANDOMH1BM, input#RANDOMH2, input#RANDOMH2EX, input#RANDOMH3, input#RANDOMH3DLC, input#RANDOMH1PZ, input#RANDOMH2SA, input#RANDOMHSC, input.h1, input.h1bm, input.h1pz, input.h2, input.h2ex, input.h2sa, input.h3, input.hsc" ).prop('checked', true).parent().parent().addClass("on");
+				$( "input#RANDOMH1, input#RANDOMH1BM, input#RANDOMH1S6, input#RANDOMH2, input#RANDOMH2EX, input#RANDOMH3, input#RANDOMH1PZ, input#RANDOMH2SA, input#RANDOMHSC, input.h1, input.h1bm, input.h1pz, input.h1s6, input.h2, input.h2ex, input.h2sa, input.h3, input.hsc" ).prop('checked', true).parent().parent().addClass("on");
 				return;
 			} // All Mission Mode - Off \/
-			$( "input#RANDOMH1, input#RANDOMH1BM, input#RANDOMH2, input#RANDOMH2EX, input#RANDOMH3, input#RANDOMH3DLC, input#RANDOMH1PZ, input#RANDOMH2SA, input#RANDOMHSC, input.h1, input.h1bm, input.h1pz, input.h2, input.h2ex, input.h2sa, input.h3, input.hsc" ).prop('checked', false).parent().parent().removeClass("on");
+			$( "input#RANDOMH1, input#RANDOMH1BM, input#RANDOMH1S6, input#RANDOMH2, input#RANDOMH2EX, input#RANDOMH3, input#RANDOMH1PZ, input#RANDOMH2SA, input#RANDOMHSC, input.h1, input.h1bm, input.h1pz, input.h1s6, input.h2, input.h2ex, input.h2sa, input.h3, input.hsc" ).prop('checked', false).parent().parent().removeClass("on");
 		};
 		
 		// Toggle All Available if all available H3 levels are selected or not
-		if($(".lvl:checked").not(".h1s6").length == $(".lvl").not(".h1s6").length) {
+		if($(".lvl:checked").not(".het").length == $(".lvl").not(".het").length) {
 			$("input#RANDOMALL").prop('checked', true).parent().parent().addClass("on");
 		}
 		else {
@@ -702,14 +697,6 @@ $(document).ready(function() {
 		else {
 			$("input#RANDOMH3").prop('checked', false).parent().parent().removeClass("on");
 		};
-		
-		//Toggle Hitman 3 Extras if H3DLC levels are selected or not
-		//if($(".h3dlc:checked").length == $(".h3dlc").length) {
-		//	$("input#RANDOMH3DLC").prop('checked', true).parent().parent().addClass("on");
-		//}
-		//else {
-		//	$("input#RANDOMH3DLC").prop('checked', false).parent().parent().removeClass("on");
-		//};
 		
 	});
 	/******Options Select Submenu Buttons******/
