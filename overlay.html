@@ -430,14 +430,20 @@
 					</div>
 					<div id="submenu_hside">
 						<span>
-							<p id="subtitle">Miscellaneous</p>
+							<p id="subtitle">Bonus, Seasonal, & DLC Assignments</p>
 							<p id="title">Side Missions</p>
 						</span>
 					</div>
 					<div id="submenu_hpz">
 						<span>
-							<p id="subtitle">Campaign</p>
+							<p id="subtitle">Campaign (GOTY)</p>
 							<p id="title">Patient Zero</p>
+						</span>
+					</div>
+					<div id="submenu_hs6">
+						<span>
+							<p id="subtitle">Campaign (H1 PS4 / H3 DLC)</p>
+							<p id="title">Sarajevo Six</p>
 						</span>
 					</div>
 					<div id="submenu_ets">
@@ -446,18 +452,12 @@
 							<p id="title">Elusive Targets</p>
 						</span>
 					</div>
-					<div id="submenu_hs6">
-						<span>
-							<p id="subtitle">Campaign (H1 PS4 Exclusive)</p>
-							<p id="title">Sarajevo Six</p>
-						</span>
-					</div>
 				</div>
 				<label id="rand-all" class="column" for="RANDOMALL">
 					<div id="nameplate">
 						<span>
 							<input id="RANDOMALL" type="checkbox" value="true" checked />
-							<p id="title">Toggle <span class="noncon">(Default; Most Locations)</span><b class="noncon">(Contract Mode Only Missions)</b></p>
+							<p id="title">Toggle <span class="noncon">(Default; No Elusive Targets)</span><b class="noncon">(Contract Mode Only Missions)</b></p>
 							<p id="subtitle">World of Assassination</p>
 						</span>
 					</div>
@@ -503,7 +503,7 @@
 							<div id="nameplate">
 								<span>
 									<input id="RANDOMH2EX" class="" type="checkbox" value="true" checked />
-									<p id="title">Toggle</p>
+									<p id="title">Toggle (DLC)</p>
 									<p id="subtitle">Hitman™2 Expansions</p>
 								</span>
 							</div>
@@ -516,7 +516,7 @@
 							<div id="nameplate">
 								<span>
 									<input id="RANDOMH1PZ" class="" type="checkbox" value="true" checked />
-									<p id="title">Toggle<b class="nonconsp">(H1/H2: "The Source" Only)</b></p>
+									<p id="title"><span class="noncon">Toggle (GOTY)</span><b class="noncon">Toggle (H1/H2: "The Source" Only)</b></p>
 									<p id="subtitle">Patient Zero Campaign</p>
 								</span>
 							</div>
@@ -551,7 +551,7 @@
 							<div id="nameplate">
 								<span>
 									<input id="RANDOMH2SA" class="noncon" type="checkbox" value="true" checked />
-									<p id="title"><span class="noncon">Toggle</span><b class="noncon">Unavailable for Contracts Mode</b></p>
+									<p id="title"><span class="noncon">Toggle (DLC)</span><b class="noncon">Unavailable for Contracts Mode</b></p>
 									<p id="subtitle">H2: Special Assignments</p>
 								</span>
 							</div>
@@ -563,9 +563,9 @@
 						<div id="top" class="rand-h1s6">
 							<div id="nameplate">
 								<span>
-									<input id="RANDOMH1S6" class="noncon" type="checkbox" value="true" />
-									<p id="title"><span class="noncon">Toggle / Manually (H1 PS4 Exclusive)</span><b class="noncon">Unavailable for Contracts Mode</b></p>
-									<p id="subtitle">H1: The Sarajevo Six</p>
+									<input id="RANDOMH1S6" class="noncon" type="checkbox" value="true" checked/>
+									<p id="title"><span class="noncon">Toggle (H1 PS4 / H3 DLC)</span><b class="noncon">Unavailable for Contracts Mode</b></p>
+									<p id="subtitle">The Sarajevo Six</p>
 								</span>
 							</div>
 						</div>
@@ -938,7 +938,7 @@
 							<div id="nameplate">
 								<span>
 									<input id="IOG" class="lvl h2sa noncon" type="checkbox" value="true" checked />
-									<p id="title"><span class="noncon">Toggle / Special Assignment</span><b class="noncon">Unavailable for Contracts Mode</b></p>
+									<p id="title"><span class="noncon">Toggle / Special Assignment (DLC)</span><b class="noncon">Unavailable for Contracts Mode</b></p>
 									<p id="subtitle">Illusions of Grandeur</p>
 								</span>
 							</div>
@@ -949,7 +949,7 @@
 							<div id="nameplate">
 								<span>
 									<input id="EOTS" class="lvl h2sa noncon" type="checkbox" value="true" checked />
-									<p id="title"><span class="noncon">Toggle / Special Assignment</span><b class="noncon">Unavailable for Contracts Mode</b></p>
+									<p id="title"><span class="noncon">Toggle / Special Assignment (DLC)</span><b class="noncon">Unavailable for Contracts Mode</b></p>
 									<p id="subtitle">Embrace of the Serpent</p>
 								</span>
 							</div>
@@ -962,7 +962,7 @@
 							<div id="nameplate">
 								<span>
 									<input id="AST" class="lvl h2sa noncon" type="checkbox" value="true" checked />
-									<p id="title"><span class="noncon">Toggle / Special Assignment</span><b class="noncon">Unavailable for Contracts Mode</b></p>
+									<p id="title"><span class="noncon">Toggle / Special Assignment (DLC)</span><b class="noncon">Unavailable for Contracts Mode</b></p>
 									<p id="subtitle">A Silver Tongue</p>
 								</span>
 							</div>
@@ -973,7 +973,7 @@
 							<div id="nameplate">
 								<span>
 									<input id="ABP" class="lvl h2sa noncon" type="checkbox" value="true" checked />
-									<p id="title"><span class="noncon">Toggle / Special Assignment</span><b class="noncon">Unavailable for Contracts Mode</b></p>
+									<p id="title"><span class="noncon">Toggle / Special Assignment (DLC)</span><b class="noncon">Unavailable for Contracts Mode</b></p>
 									<p id="subtitle">A Bitter Pill</p>
 								</span>
 							</div>
@@ -986,7 +986,7 @@
 							<div id="nameplate">
 								<span>
 									<input id="TS" class="lvl h1pz" type="checkbox" value="true" checked />
-									<p id="title">Toggle / Patient Zero</p>
+									<p id="title">Toggle / Patient Zero (GOTY)</p>
 									<p id="subtitle">The Source</p>
 								</span>
 							</div>
@@ -997,7 +997,7 @@
 							<div id="nameplate">
 								<span>
 									<input id="TA" class="lvl h1pz" type="checkbox" value="true" checked />
-									<p id="title">Toggle / Patient Zero<b class="nonconsp">(H3 Only)</b></p>
+									<p id="title"><span class="noncon">Toggle / Patient Zero (GOTY)</span><b class="noncon">Toggle / Patient Zero (H3 Only)</b></p>
 									<p id="subtitle">The Author</p>
 								</span>
 							</div>
@@ -1010,7 +1010,7 @@
 							<div id="nameplate">
 								<span>
 									<input id="PZ" class="lvl h1pz" type="checkbox" value="true" checked />
-									<p id="title">Toggle / Patient Zero<b class="nonconsp">(H3 Only)</b></p>
+									<p id="title"><span class="noncon">Toggle / Patient Zero (GOTY)</span><b class="noncon">Toggle / Patient Zero (H3 Only)</b></p>
 									<p id="subtitle">Patient Zero</p>
 								</span>
 							</div>
@@ -1511,14 +1511,25 @@
 						</div>
 					</label>
 					<label id="blank"></label>
+					<!--<label for="ET41">
+						<div id="top" class="et41">
+							<div id="nameplate">
+								<span>
+									<input id="ET41" class="lvl het noncon" type="checkbox" value="true" />
+									<p id="title"><span class="noncon">Toggle / Elusive Target (H3 Only)</span><b class="noncon">Unavailable for Contracts Mode</b></p>
+									<p id="subtitle">#41: The Drop</p>
+								</span>
+							</div>
+						</div>
+					</label>//-->
 				</div>
 				<div id="hs6" class="column" style="display:none;">
 					<label for="TD">
 						<div id="top" class="m1-S">
 							<div id="nameplate">
 								<span>
-									<input id="TD" class="lvl h1s6 noncon" type="checkbox" value="true" />
-									<p id="title"><span class="noncon">Toggle / The Sarajevo Six (H1 PS4)</span><b class="noncon">Unavailable for Contracts Mode</b></p>
+									<input id="TD" class="lvl h1s6 noncon" type="checkbox" value="true" checked/>
+									<p id="title"><span class="noncon">Toggle / Sarajevo Six (H1 PS4 / H3 DLC)</span><b class="noncon">Unavailable for Contracts Mode</b></p>
 									<p id="subtitle">The Director</p>
 								</span>
 							</div>
@@ -1528,8 +1539,8 @@
 						<div id="bottom" class="m2-S">
 							<div id="nameplate">
 								<span>
-									<input id="TE" class="lvl h1s6 noncon" type="checkbox" value="true" />
-									<p id="title"><span class="noncon">Toggle / The Sarajevo Six (H1 PS4)</span><b class="noncon">Unavailable for Contracts Mode</b></p>
+									<input id="TE" class="lvl h1s6 noncon" type="checkbox" value="true" checked/>
+									<p id="title"><span class="noncon">Toggle / Sarajevo Six (H1 PS4 / H3 DLC)</span><b class="noncon">Unavailable for Contracts Mode</b></p>
 									<p id="subtitle">The Enforcer</p>
 								</span>
 							</div>
@@ -1541,8 +1552,8 @@
 						<div id="top" class="m3-S">
 							<div id="nameplate">
 								<span>
-									<input id="TX" class="lvl h1s6 noncon" type="checkbox" value="true" />
-									<p id="title"><span class="noncon">Toggle / The Sarajevo Six (H1 PS4)</span><b class="noncon">Unavailable for Contracts Mode</b></p>
+									<input id="TX" class="lvl h1s6 noncon" type="checkbox" value="true" checked/>
+									<p id="title"><span class="noncon">Toggle / Sarajevo Six (H1 PS4 / H3 DLC)</span><b class="noncon">Unavailable for Contracts Mode</b></p>
 									<p id="subtitle">The Extractor</p>
 								</span>
 							</div>
@@ -1552,8 +1563,8 @@
 						<div id="bottom" class="m4-S">
 							<div id="nameplate">
 								<span>
-									<input id="TV" class="lvl h1s6 noncon" type="checkbox" value="true" />
-									<p id="title"><span class="noncon">Toggle / The Sarajevo Six (H1 PS4)</span><b class="noncon">Unavailable for Contracts Mode</b></p>
+									<input id="TV" class="lvl h1s6 noncon" type="checkbox" value="true" checked/>
+									<p id="title"><span class="noncon">Toggle / Sarajevo Six (H1 PS4 / H3 DLC)</span><b class="noncon">Unavailable for Contracts Mode</b></p>
 									<p id="subtitle">The Veteran</p>
 								</span>
 							</div>
@@ -1565,8 +1576,8 @@
 						<div id="top" class="m5-S">
 							<div id="nameplate">
 								<span>
-									<input id="TM" class="lvl h1s6 noncon" type="checkbox" value="true" />
-									<p id="title"><span class="noncon">Toggle / The Sarajevo Six (H1 PS4)</span><b class="noncon">Unavailable for Contracts Mode</b></p>
+									<input id="TM" class="lvl h1s6 noncon" type="checkbox" value="true" checked/>
+									<p id="title"><span class="noncon">Toggle / Sarajevo Six (H1 PS4 / H3 DLC)</span><b class="noncon">Unavailable for Contracts Mode</b></p>
 									<p id="subtitle">The Mercenary</p>
 								</span>
 							</div>
@@ -1576,8 +1587,8 @@
 						<div id="bottom" class="m6-S">
 							<div id="nameplate">
 								<span>
-									<input id="TC" class="lvl h1s6 noncon" type="checkbox" value="true" />
-									<p id="title"><span class="noncon">Toggle / The Sarajevo Six (H1 PS4)</span><b class="noncon">Unavailable for Contracts Mode</b></p>
+									<input id="TC" class="lvl h1s6 noncon" type="checkbox" value="true" checked/>
+									<p id="title"><span class="noncon">Toggle / Sarajevo Six (H1 PS4 / H3 DLC)</span><b class="noncon">Unavailable for Contracts Mode</b></p>
 									<p id="subtitle">The Controller</p>
 								</span>
 							</div>
@@ -1868,7 +1879,12 @@
 					<p>Most missions from the trilogy are pulled into the Roulette by default. Through the "<a id="link_missions" href="#">Select Missions</a>" option, you can untoggle any missions you're missing or just the ones you don't like.<br />
 					"<a id="link_settings" href="#">Roulette Settings</a>" allow you to change what the Roulette surfaces: You can get more than the regular targets by choosing "Contract Mode" as the "Roulette Type". Dial in the difficulty by toggling "Kill Requirements" like disguises or weapons you'll need to wear or use, "Extra Requirements" like one more objective or sets of complications, and "Gameplay Challenges" that force you to change how you play.</p>
 					<h1>Compatibility & Issues</h1>
-					<p>Though you can deselect any location you do not own, by default the Roulette works best with <b>HITMAN: World of Assassination</b> (HITMAN III on the latest patch) plus the <b>HITMAN: World of Assassination Deluxe Pack</b>.
+					<p>Though you can deselect any location you do not own, by default the Roulette selects mission from:</p>
+					<ul>
+						<li><b>HITMAN: World of Assassination</b> (Or any version of HITMAN III with the latest patch)</li>
+						<li><b>HITMAN: World of Assassination Deluxe Pack</b> (DLC)</li>
+						<li><b>Sarajevo Six Campaign Pack</b> (DLC)</li>
+					</ul>
 					<p>There may be the odd conflicting trait that changed between releases in this trilogy, though I've done my best to account for these. It is also important to note that the later the game sequel, the more gear is available to unlock for use. Lastly, since Contract Mode Targets are regular NPCs and Elimination Methods are randomly assigned, not every Target can be killed with every Method easily/silently.</p>
 					<p>This was a hobby project I started in 2016/17 and have worked on during my free time as a way to brush up on my simple javascript, jQuery, and CSS knowledge as well as giving me more reason to play these new Hitman games well after unlocking everything. As such, I've only tested this using the browsers I frequent: Firefox and Chrome. If you find any issues or glaring conflicts with Roulette results, let me know <a href="https://github.com/BRYN4444/HitmanRoulette/issues" target="_blank">via GitHub</a> or <a href="https://hitmanforum.com/t/13107" target="_blank">on Hitman Forum</a> and I'll try and address it when I get the chance. <span id="sig">- <a href="http://bryn.info/" target="_blank">BRYN</a></span></p>
 					<h1>Special Thanks & External Resources</h1>
@@ -1930,8 +1946,8 @@
 				<button id="subsubmenu_h3"></button>
 				<button id="subsubmenu_hside"></button>
 				<button id="subsubmenu_hpz"></button>
-				<button id="subsubmenu_ets"></button>
 				<button id="subsubmenu_hs6"></button>
+				<button id="subsubmenu_ets"></button>
 				<div id="subsubmenu_name">
 					<img id="subsubmenu_random" class="on" src="./img/general/blank.png" />
 					<span>Mission Groupings</span>
