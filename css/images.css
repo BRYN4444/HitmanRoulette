@@ -515,7 +515,7 @@ div[class^="terrorists"][class$="-exit-QuadBike"], .terrorists-exit-QuadBike, .m
 div[class^="terrorists"][class$="-exit-River"], .terrorists-exit-River, .mercenary-exit-River { background-image: url('../img/exit/River.png'); }
 div[class^="terrorists"][class$="-exit-FrontGate"], .terrorists-exit-FrontGate, .mercenary-exit-FrontGate { background-image: url('../img/exit/Front%20Gate.png'); }
 div[class^="terrorists"][class$="-exit-TornadoShelter"], .terrorists-exit-TornadoShelter, .mercenary-exit-TornadoShelter { background-image: url('../img/exit/Tornado%20Shelter.png'); }
-div[class^="terrorists"][class$="-exit-MrRaptor"], .terrorists-exit-MrRaptor { background-image: url('../img/exit/MrRaptor.png'); }
+div[class^="terrorists"][class$="-exit-MrRaptor"], .terrorists-exit-MrRaptor, .mercenary-exit-MrRaptor { background-image: url('../img/exit/MrRaptor.png'); }
 div[class^="heart"][class$="-exit-Helicopter"], .heart-exit-Helicopter, .festival-exit-Helicopter, .controller-exit-Helicopter { background-image: url('../img/exit/Helicopter-SitusInversus.png'); }
 div[class^="heart"][class$="-exit-Snowmobile"], .heart-exit-Snowmobile, .festival-exit-Snowmobile, .controller-exit-Snowmobile { background-image: url('../img/exit/Snowmobile-SitusInversus.png'); }
 div[class^="heart"][class$="-exit-MountainPath"], .heart-exit-MountainPath, .festival-exit-MountainPath, .controller-exit-MountainPath { background-image: url('../img/exit/Mountain%20Path-SitusInversus.png'); }
