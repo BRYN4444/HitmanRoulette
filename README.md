@@ -22,7 +22,10 @@ To quickly return the Roulette Settings back to default, preform a hard refresh 
 
 ## Compatibility & Issues
 
-Though you can deselect any location you do not own, by default the Roulette works best with **HITMAN: World of Assassination** (HITMAN III physical disc) plus the **HITMAN: World of Assassination Deluxe Pack**.
+Though you can deselect any location you do not own, by default the Roulette selects mission from:
+* **HITMAN: World of Assassination** (Or any version of HITMAN III with the latest patch)
+* **HITMAN: World of Assassination Deluxe Pack** (DLC)
+* **Sarajevo Six Campaign Pack** (DLC)
 
 There may be the odd conflicting trait that changed between releases in this trilogy, though I've done my best to account for these. It is also important to note that the later the game sequel, the more gear is available to unlock for use. Lastly, since Contract Mode Targets are regular NPCs and Elimination Methods are randomly assigned, not every Target can be killed with every Method easily/silently.
 
@@ -39,9 +42,35 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 
 ### Latest Updates:
 
+**August 17th, 2023**
+* **Roulette:**
+  * **Select Missions:**
+    * **Sarajevo Six:** Now in the Roulette rotation by default with their release as DLC for World of Assassination. Updated their images to match their new in-game ones and moved the category above Elusive Targets in the listing.
+  * **About & Help:** Updated the compatibility list to include the Sarajevo Six DLC, as well as rewording the listing to mention World of Assassination is just HITMAN III at the latest patch.
+* **HITMAN:**
+  * **The Director:** Updated target image to match new in-game one.
+  * **The Enforcer:** Updated target image to match new in-game one.
+  * **The Extractor:** Updated target image to match new in-game one.
+  * **The Veteran:** Updated target image to match new in-game one.
+  * **The Mercenary:** Updated target image to match new in-game one.
+  * **The Controller:** Updated target image and objective to match new in-game ones.
+* **Other Fixes:**
+  * Fixed a mostly cosmetic issue where the mission icon (top left of the page on Desktop) for Sarajevo Six missions was displaying the standard missions icon instead.
+  * Better clarified what missions are DLC when selecting missions. Also, in continuing to cater to all versions of the games, "GOTY" is listed next to missions as a part of the HITMAN Game of the Year Edition, which just comes with H1 access outside of the launch game.
+  * Reworded the "World of Assassination" primary toggle. Now that the Sarajevo Six are included, the only mission types that are excluded are Elusive Targets.
+  * Fixed two exits in The Extractor not appearing because they were improperly named after a long previous name changes in the data listings.
+  * In The Mercenary, the only exit available was the tornado shelter. This was inaccurate as I was confusing the original H1 exit restrictions in Freedom Fighters as applying here too. This is now fixed. 
+  * Removed the "Car" exit from The Deceivers and The Guru Elusive Targets, as it is not available in those missions. Overlooked mistake.
+* **Current Plans:**
+  * Support for the new fall Elusive Target "The Drop" shortly after release, as well as Contracts Mode support for "Holiday Hoarders" and the "Hokkaido Show Festival" in November.
+>**Bug Hunting:** Please make a post [via GitHub](https://github.com/BRYN4444/HitmanRoulette/issues) or [on Hitman Forum](https://hitmanforum.com/t/13107) if you:
+>* Experience any graphical issues while using the Roulette in 4K, or on phones/tablets.
+>* Generate impossibilities when using the Roulette with Elusive Targets or past titles HITMAN / HITMAN 2.
+>* Have troubles or questions about the Stream Overlay.
+
 **May 11th, 2023**
 * **Roulette:**
-  * Select Missions:
+  * **Select Missions:**
     * **Contract Mode Roulette:** Freeform Training has always had this option on the Roulette (via the game's Tutorial), but now that it is officially supported the listing while selecting has been updated.
 * **HITMAN:**
   * **Patient Zero:**
@@ -57,13 +86,6 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
   * HITMAN: Would Of Assassination is getting a physical release, so wording was slightly changed in About & Help > Compatibility & Issues.
   * An Extra Objective applicable to all Elusive Targets wasn't properly displaying an image.
   * Slight rewording of Roulette Settings descriptions.
-* **Current Plans:**
-  * With HITMAN content at a slower cadence now, updates to the Roulette will be slower too. There may be the odd small things here and there, but outside the November Contracts Mode support for the seasonal missions, the Roulette won't be getting any new significant changes.
-  * I'd like to thank anyone who has used the Roulette for these past several years! While it wasn't my original concept, I was happy to iterate on it, making it more robust despite my hobbyist coding experience. Even through Freelancer uses similar concepts, I'm glad you who took the time to read this are still enjoying the Roulette. Thanks!
->**Bug Hunting:** Please make a post [via GitHub](https://github.com/BRYN4444/HitmanRoulette/issues) or [on Hitman Forum](https://hitmanforum.com/t/13107) if you:
->* Experience any graphical issues while using the Roulette in 4K, or on phones/tablets.
->* Generate impossibilities when using the Roulette with Elusive Targets or past titles HITMAN / HITMAN 2.
->* Have troubles or questions about the Stream Overlay.
 
 ---
 
@@ -121,37 +143,3 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 * **HITMAN III:**
   * **The Farewell:**
     * **Exit:** Added the newly patched in "Winery Viewpoint Car" exit. Updated the image and listing for the "Underground Cave System" exit to detail that any Wetsuits can be used now.
-
----
-
-**August 25th, 2022**
-* **Roulette:**
-  * **Roulette Settings:** Options dependent on the state of other options are now disabled to avoid unnecessary changes and clearly indicate the options you can adjust.
-    * **Roulette Modes:** Updated many of the options here for clarity & Contracts Mode NPC granularity.
-      * **Roulette Type:** Choosing between Mission Mode and Contracts Mode Roulette is done in this one singular option now. The following options only work for Contracts Mode Roulette:
-	    * **Target Selection:** Determine what the Roulette assigns you in Contracts Mode Roulette. **Any Type:** any NPC type can be chosen by the Roulette. **Custom:** using the newly added checkboxes, hand-select the types of NPCs that can be chosen from *Guards*, *Staff*, *Civilians*, or the *Unique* types like VIPs. **Unassigned:** NPC names aren't listed; only elimination conditions will be shown. Determine the NPC Target(s) yourself. If you select this, and set the Target Amount appropriately, you can use the Roulette with Elusive Targets.
-	    * **Target Amount:** Sets the number of Contract Mode Targets. Same as before, just renamed.
-	    * **Contracts Intel:** Location based intel is listed with targets, on by default. Existing functionality, now a separate option better showcase it.
-    * **Mobile Browsing:** The descriptions for settings are now a pop-up menu. This way the full text can be displayed at a larger font size.
-* **HITMAN:**
-  * **Freeform Training:**
-    * **Contract Mode Targets:** 1 more added.
-  * **The Icon:**
-    * **Contract Mode Targets:** 1 more added.
-* **HITMAN 2:**
-  * **Three-headed Serpent:**
-    * **Contract Mode Targets:** 125 more added.
-  * **Chasing a Ghost:**
-    * **Contract Mode Targets:** 107 more added.
-  * **Another Life:**
-    * **Contract Mode Targets:** 25 more added.
-  * **Golden Handshake:**
-    * **Contract Mode Targets:** 5 more added.
-* **HITMAN III:**
-  * **On Top Of The World:**
-    * **Contract Mode Targets:** 6 more added.
-* **Other Fixes:**
-  * Disabled the Force Difficulty requirement from appearing on the Dartmoor Garden Show.
-  * Fixed an error where an exit in Dubai wasn't showing an image.
-  * Updated the Target Images for the Sarajevo Six to a higher quality.
-  * Fixed a number of spelling mistakes throughout.
