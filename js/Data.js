@@ -4,7 +4,7 @@ var redo_stack = []
 
 var h1 = ["training","test","fashion","xmas","director","virus","movie","election","handoff","enforcer","tension","construction","extractor","birthday","cult","veteran","terrorists","mercenary","heart","spread","controller"];
 var h2 = ["training","test","fashion","xmas","virus","movie","election","handoff","tension","construction","birthday","cult","terrorists","heart","spread","festival","beach","speedway","water","cartel","biggame","ghost","magic","suburbs","pill","ark","bank","resort"];
-var h3 = ["training","test","fashion","xmas","virus","movie","election","handoff","tension","construction","birthday","cult","terrorists","heart","spread","festival","beach","speedway","water","cartel","biggame","ghost","magic","suburbs","pill","ark","bank","resort","tower","clue","gardenshow","club","archive","vineyard","train","pirates"];
+var h3 = ["training","test","fashion","xmas","director","virus","movie","election","handoff","enforcer","tension","construction","extractor","birthday","cult","veteran","terrorists","mercenary","heart","spread","festival","controller","beach","speedway","water","cartel","biggame","ghost","magic","suburbs","pill","ark","bank","resort","tower","clue","gardenshow","club","archive","vineyard","train","pirates"];
 var et = ["fashion-forger","fashion-sensation","fashion-broker","fashion-black-hat","fashion-pharmacist","fashion-identity-thief","fashion-chef","fashion-blackmailer","fashion-paparazzo","virus-congressman","virus-prince","virus-twin","virus-wildcard","virus-guru","virus-deceivers","movie-badboy","tension-gunrunner","tension-fixer","tension-angel-of-death","construction-entertainer","birthday-ex-dictator","birthday-food-critic","birthday-warlord","terrorists-chameleon","terrorists-bookkeeper","heart-surgeons","heart-fugitive","beach-politician","speedway-undying","speedway-undying-returns","cartel-revolutionary","suburbs-serial-killer","ark-appraiser","ark-stowaway","tower-ascensionist","clue-collector","clue-procurers","club-liability","archive-rage","vineyard-iconoclast","vineyard-heartbreaker"];
 
 var suitStarts = ["Weapons Building","Crouched behind a Truck",
@@ -2188,7 +2188,7 @@ var themercenary = {
 	entry: ["Undercover in the Garage","West Bridge","Undercover by the Greenhouse","Undercover on the Demolition Range","Old Orchard","Southern Farm Perimeter","Undercover in the Farmhouse","Water Tower"],
 	exit: ["Tornado Shelter|(Needs Face Scan)"],
 	exit: ["Bridge","Quad Bike|(Needs Key)","River","Front Gate","Tornado Shelter|(Needs Face Scan)"],
-	eexit: [],
+	eexit: ["Mr. Raptor|(Secret)"],
 	disguises: ["Any Suit","Explosives Specialist","Hacker","Militia Cook","Militia Elite","Militia Soldier","Militia Spec Ops","Militia Technician","Point Man","Scarecrow"],
 	disguiseVariants: ["Any Suit"],
 	wild: ["Compound Keys|Find all 4 keys scattered around: Basement Key, Garage Key, Perimeter Gate Key, and Rose's Room Key.|Find all 4 keys scattered around the compound.",
