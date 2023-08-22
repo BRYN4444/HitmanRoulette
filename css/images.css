@@ -148,16 +148,16 @@ html.httheme {
 }
 
 #rand-all { background-image:url("../img/general/hx.jpg"); }
-.rand-h1 { background-image:url("../img/general/h1.jpg");background-repeat:no-repeat;background-position:top center; background-size:auto 100% !important; }
+.rand-h1, #h1-tall { background-image:url("../img/general/h1.jpg");background-repeat:no-repeat;background-position:top center; background-size:auto 100% !important; }
 .rand-h2 { background-image:url("../img/general/h2.jpg");background-repeat:no-repeat;background-position:top center; background-size:auto 100% !important; }
-.rand-h3 { background-image:url("../img/general/h3.jpg");background-repeat:no-repeat;background-position:top center; background-size:auto 100% !important; }
-.rand-h1bm { background-image:url("../img/general/h1bm.jpg");background-repeat:no-repeat;background-position:top center; }
-.rand-h1pz { background-image:url("../img/general/h1pz.jpg");background-repeat:no-repeat;background-position:top center; }
-.rand-hsc { background-image:url("../img/general/hsc.jpg");background-repeat:no-repeat;background-position:top center; }
-.rand-h1s6 { background-image:url("../img/general/h1s6.jpg");background-repeat:no-repeat;background-position:top center; }
-.rand-h2ex { background-image:url("../img/general/h2ex.jpg");background-repeat:no-repeat;background-position:top center; }
-.rand-h2sa { background-image:url("../img/general/h2sa.jpg");background-repeat:no-repeat;background-position:top center; }
-.rand-het { background-image:url("../img/general/eta.jpg");background-repeat:no-repeat;background-position:top center; background-size:auto 100% !important; }
+.rand-h3, #h3-tall { background-image:url("../img/general/h3.jpg");background-repeat:no-repeat;background-position:top center; background-size:auto 100% !important; }
+.rand-h1bm, #h1bm-tall { background-image:url("../img/general/h1bm.jpg");background-repeat:no-repeat;background-position:top center; background-size:auto 100% !important; }
+.rand-h1pz, #h1pz-tall { background-image:url("../img/general/h1pz.jpg");background-repeat:no-repeat;background-position:top center; background-size:auto 100% !important; }
+.rand-hsc { background-image:url("../img/general/hsc.jpg");background-repeat:no-repeat;background-position:top center; background-size:auto 100% !important; }
+.rand-h1s6, #h1s6-tall { background-image:url("../img/general/h1s6.jpg");background-repeat:no-repeat;background-position:top right 51.5%; background-size:auto 100% !important; }
+.rand-h2ex { background-image:url("../img/general/h2ex.jpg");background-repeat:no-repeat;background-position:top center; background-size:auto 100% !important; }
+.rand-h2sa { background-image:url("../img/general/h2sa.jpg");background-repeat:no-repeat;background-position:top center; background-size:auto 100% !important; }
+.rand-het, #het-tall { background-image:url("../img/general/eta.jpg");background-repeat:no-repeat;background-position:top center; background-size:auto 100% !important; }
 .m0-3 { background:#292929 url("../img/missions/0-3.png") no-repeat center top / 350px; }
 .m0-4 { background:#292929 url("../img/missions/0-4.png") no-repeat center top / 350px; }
 .m1-1 { background:#292929 url("../img/missions/1-1.png") no-repeat center top / 350px; }
