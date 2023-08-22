@@ -2727,6 +2727,7 @@ nav#nav_mobile {
 	overflow:hidden;
 }
 nav#nav_mobile.off { display:none; }
+.nomobile { display:none !important; }
 	@media only screen and (max-width: 808px), (max-height: 800px) {
 		nav#submenu { overflow: inline !important; }
 	}
