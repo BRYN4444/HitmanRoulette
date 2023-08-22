@@ -42,6 +42,22 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 
 ### Latest Update
 
+**August 21th, 2023**
+* **Roulette:**
+  * **Select Missions:** Grouping toggles will now appear along side their corresponding missions per category. This will make it easier to mass-deselect missions without needing to tab to the primary Mission Groupings section. Desktop only.
+* **Other Fixes:**
+  * Updated the Select Mission image for the Sarajevo Six to the newer version. Also reworded it as the "Sarajevo Six Campaign" as it is listed in storefronts.
+  * Fixed an issue where you on the Dartmoor Garden Show where 4 of the 5 targets would have a disguise requirement listed (when applicable). Now all targets will have one.
+  * There is now the possibility for a disguise requirement (when applicable) of the same outfit appearing more than once (one disguise across two targets). Before, due to how the data was parsed, each disguise could only be required once.
+* **Current Plans:**
+  * Support for the new October Elusive Target "The Drop" shortly after release, as well as Contracts Mode support for "Holiday Hoarders" and the "Hokkaido Show Festival" in November.
+>**Bug Hunting:** Please make a post [via GitHub](https://github.com/BRYN4444/HitmanRoulette/issues) or [on Hitman Forum](https://hitmanforum.com/t/13107) if you:
+>* Experience any graphical issues while using the Roulette in 4K, or on phones/tablets.
+>* Generate impossibilities when using the Roulette with Elusive Targets or past titles HITMAN / HITMAN 2.
+>* Have troubles or questions about the Stream Overlay.
+
+---
+
 **August 17th, 2023**
 * **Roulette:**
   * **Select Missions:**
@@ -62,12 +78,6 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
   * In The Mercenary, the only exit available was the tornado shelter. This was inaccurate as I was confusing the original H1 exit restrictions in Freedom Fighters as applying here too. This is now fixed.
   * Updated the image for the Mr. Raptor Easter Egg Exit in Freedom Fighters & The Mercenary to better convey all the items needed, as it was missing one.
   * Removed the "Car" exit from The Deceivers and The Guru Elusive Targets, as it is not available in those missions. Overlooked mistake.
-* **Current Plans:**
-  * Support for the new fall Elusive Target "The Drop" shortly after release, as well as Contracts Mode support for "Holiday Hoarders" and the "Hokkaido Show Festival" in November.
->**Bug Hunting:** Please make a post [via GitHub](https://github.com/BRYN4444/HitmanRoulette/issues) or [on Hitman Forum](https://hitmanforum.com/t/13107) if you:
->* Experience any graphical issues while using the Roulette in 4K, or on phones/tablets.
->* Generate impossibilities when using the Roulette with Elusive Targets or past titles HITMAN / HITMAN 2.
->* Have troubles or questions about the Stream Overlay.
 
 ---
 
@@ -138,14 +148,3 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
   * Fixed objectives and the entry/exit images displaying smaller than they should be at certain resolutions.
   * Fixed some objectives missing images.
   * Ensured objective descriptions display properly in the Export Roulette textarea/txt.
-
-----
-
-**October 7th, 2022**
-* **HITMAN 2:**
-  * **The Last Resort:**
-    * **Entrance:** The image for "Restaurant's Kitchen" has been updated to match the newly corrected one.
-* **HITMAN III:**
-  * **The Farewell:**
-    * **Exit:** Added the newly patched in "Winery Viewpoint Car" exit. Updated the image and listing for the "Underground Cave System" exit to detail that any Wetsuits can be used now.
-  * Minor intel updates for targets in Contract Mode.
