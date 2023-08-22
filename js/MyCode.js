@@ -1,7 +1,7 @@
 //Enjoy looking at the ametuer code work I've done.
 $(document).ready(function() {
 	/******Latest Updates******/
-	$("#features p#title").text("Last Updated: August 17th, 2023"); /*Roulette Features*/
+	$("#features p#title").text("Last Updated: August 21st, 2023"); /*Roulette Features*/
 	$("#features .updatenotes").html('The Sarajevo Six now enabled by default. Visit <b><a href="https://github.com/BRYN4444/HitmanRoulette#latest-updates" target="_blank">Github</a></b> for details.');
     /* Unspecific Update $("#features .updatenotes").html('Visit <b><a href="https://github.com/BRYN4444/HitmanRoulette#latest-updates" target="_blank">Github</a></b> for details on the latest Roulette updates.');*/
 	$("#overlayguide p#title").text("Last Updated: July 13th, 2022"); /*Stream Overlay*/
@@ -452,17 +452,21 @@ $(document).ready(function() {
 	});
 	
 	/******Map Select Submenu Buttons******/
+	if(!jQuery.browser.mobile) { 
+		$( "label#h1-tall, div#h2, label#h3-tall, div#hside, label#h1bm-tall, label#h1pz-tall, label#h1s6-tall, label#het-tall" ).removeClass( "nomobile" );
+	}
+	
 	$( "#submenu_random, #subsubmenu_random" ).click(function() {
 		$( "#submenu_random, #subsubmenu_random" ).addClass( "on" );
 		$( "label[id^='rand'], div[id^='rand']" ).show();
-		$( "div#h1, div#h2, div#h3, div#hside, div#hpz, div#hs6, div#ets" ).hide();
+		$( "div#h1, label#h1-tall, div#h2, div#h3, label#h3-tall, div#hside, label#h1bm-tall, div#hpz, label#h1pz-tall, div#hs6, label#h1s6-tall, div#ets, label#het-tall" ).hide();
 		$( "#submenu_random, #subsubmenu_random" ).siblings().removeClass( "on" );
 		$( "#subsubmenu_name img" ).prop("id", "subsubmenu_random");
 		$( "#subsubmenu_name span" ).text("Mission Groupings");
 	});
 	$( "#submenu_h1, #subsubmenu_h1" ).click(function() {
 		$( "#submenu_h1, #subsubmenu_h1" ).addClass( "on" );
-		$( "div#h1" ).show();
+		$( "div#h1, label#h1-tall" ).show();
 		$( "label[id^='rand'], div[id^='rand'], div#h2, div#h3, div#hside, div#hpz, div#hs6, div#ets" ).hide();
 		$( "#submenu_h1, #subsubmenu_h1" ).siblings().removeClass( "on" );
 		$( "#subsubmenu_name img" ).prop("id", "subsubmenu_h1");
@@ -471,47 +475,47 @@ $(document).ready(function() {
 	$( "#submenu_h2, #subsubmenu_h2" ).click(function() {
 		$( "#submenu_h2, #subsubmenu_h2" ).addClass( "on" );
 		$( "div#h2" ).show();
-		$( "label[id^='rand'], div[id^='rand'], div#h1, div#h3, div#hside, div#hpz, div#hs6, div#ets" ).hide();
+		$( "label[id^='rand'], div[id^='rand'], div#h1, label#h1-tall, div#h3, label#h3-tall, div#hside, label#h1bm-tall, div#hpz, label#h1pz-tall, div#hs6, label#h1s6-tall, div#ets, label#het-tall" ).hide();
 		$( "#submenu_h2, #subsubmenu_h2" ).siblings().removeClass( "on" );
 		$( "#subsubmenu_name img" ).prop("id", "subsubmenu_h2");
 		$( "#subsubmenu_name span" ).text("Hitman™2 & Expansions");
 	});
 	$( "#submenu_h3, #subsubmenu_h3" ).click(function() {
 		$( "#submenu_h3, #subsubmenu_h3" ).addClass( "on" );
-		$( "div#h3" ).show();
-		$( "label[id^='rand'], div[id^='rand'], div#h1, div#h2, div#hside, div#hpz, div#hs6, div#ets" ).hide();
+		$( "div#h3, label#h3-tall" ).show();
+		$( "label[id^='rand'], div[id^='rand'], div#h1, label#h1-tall, div#h2, div#hside, label#h1bm-tall, div#hpz, label#h1pz-tall, div#hs6, label#h1s6-tall, div#ets, label#het-tall" ).hide();
 		$( "#submenu_h3, #subsubmenu_h3" ).siblings().removeClass( "on" );
 		$( "#subsubmenu_name img" ).prop("id", "subsubmenu_h3");
 		$( "#subsubmenu_name span" ).text("Hitman™III");
 	});
 	$( "#submenu_hside, #subsubmenu_hside" ).click(function() {
 		$( "#submenu_hside, #subsubmenu_hside" ).addClass( "on" );
-		$( "div#hside" ).show();
-		$( "label[id^='rand'], div[id^='rand'], div#h1, div#h2, div#h3, div#hpz, div#hs6, div#ets" ).hide();
+		$( "div#hside, label#h1bm-tall" ).show();
+		$( "label[id^='rand'], div[id^='rand'], div#h1, label#h1-tall, div#h2, div#h3, label#h3-tall, div#hpz, label#h1pz-tall, div#hs6, label#h1s6-tall, div#ets, label#het-tall" ).hide();
 		$( "#submenu_hside, #subsubmenu_hside" ).siblings().removeClass( "on" );
 		$( "#subsubmenu_name img" ).prop("id", "subsubmenu_hside");
 		$( "#subsubmenu_name span" ).text("Side Missions");
 	});
 	$( "#submenu_hpz, #subsubmenu_hpz" ).click(function() {
 		$( "#submenu_hpz, #subsubmenu_hpz" ).addClass( "on" );
-		$( "div#hpz" ).show();
-		$( "label[id^='rand'], div[id^='rand'], div#h1, div#h2, div#h3, div#hside, div#hs6, div#ets" ).hide();
+		$( "div#hpz, label#h1pz-tall" ).show();
+		$( "label[id^='rand'], div[id^='rand'], div#h1, label#h1-tall, div#h2, div#h3, label#h3-tall, div#hside, label#h1bm-tall, div#hs6, label#h1s6-tall, div#ets, label#het-tall" ).hide();
 		$( "#submenu_hpz, #subsubmenu_hpz" ).siblings().removeClass( "on" );
 		$( "#subsubmenu_name img" ).prop("id", "subsubmenu_hpz");
 		$( "#subsubmenu_name span" ).text("Patient Zero");
 	});
 	$( "#submenu_ets, #subsubmenu_ets" ).click(function() {
 		$( "#submenu_ets, #subsubmenu_ets" ).addClass( "on" );
-		$( "div#ets" ).show();
-		$( "label[id^='rand'], div[id^='rand'], div#h1, div#h2, div#h3, div#hside, div#hpz, div#hs6" ).hide();
+		$( "div#ets, label#het-tall" ).show();
+		$( "label[id^='rand'], div[id^='rand'], div#h1, label#h1-tall, div#h2, div#h3, label#h3-tall, div#hside, label#h1bm-tall, div#hpz, label#h1pz-tall, div#hs6, label#h1s6-tall" ).hide();
 		$( "#submenu_ets, #subsubmenu_ets" ).siblings().removeClass( "on" );
 		$( "#subsubmenu_name img" ).prop("id", "subsubmenu_ets");
 		$( "#subsubmenu_name span" ).text("Elusive Targets");
 	});
 	$( "#submenu_hs6, #subsubmenu_hs6" ).click(function() {
 		$( "#submenu_hs6, #subsubmenu_hs6" ).addClass( "on" );
-		$( "div#hs6" ).show();
-		$( "label[id^='rand'], div[id^='rand'], div#h1, div#h2, div#h3, div#hside, div#hpz, div#ets" ).hide();
+		$( "div#hs6, label#h1s6-tall" ).show();
+		$( "label[id^='rand'], div[id^='rand'], div#h1, label#h1-tall, div#h2, div#h3, label#h3-tall, div#hside, label#h1bm-tall, div#hpz, label#h1pz-tall, div#ets, label#het-tall" ).hide();
 		$( "#submenu_hs6, #subsubmenu_hs6" ).siblings().removeClass( "on" );
 		$( "#subsubmenu_name img" ).prop("id", "subsubmenu_hs6");
 		$( "#subsubmenu_name span" ).text("Sarajevo Six");
