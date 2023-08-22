@@ -157,10 +157,10 @@ function createDisguiseList(container, mission_information) {
 	var disguise = disguiseIndex.options[disguiseIndex.selectedIndex].value;
 	if (disguise == "ON")
 		disguises =
-			container.disguises.slice().map(function(e){ return "" + e; });
+			container.disguises.concat(container.disguises).slice().map(function(e){ return "" + e; });
 	else if (disguise == "ONPLUS")
 		disguises =
-			container.disguises.concat(container.disguiseVariants).slice().map(function(e){ return "" + e; });
+			container.disguises.concat(container.disguises,container.disguiseVariants,container.disguiseVariants).slice().map(function(e){ return "" + e; });
 	else
 		disguises = ["Any Disguise", "Any Disguise", "Any Disguise", "Any Disguise", "Any Disguise"];
 	
