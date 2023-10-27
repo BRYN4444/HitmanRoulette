@@ -42,6 +42,25 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 
 ### Latest Update
 
+**October 27th, 2023**
+* **Elusive Target:**
+  * **#41: The Drop** added. One Target and one new Disguise. Any Extra/Photo Objectives I can think of will be added shorty, as I play through mission.
+* **Other Fixes:**
+  * Added a missing outfit to the Elusive Target (Arcade) missions "The Undying" and "The Undying Returns".
+  * With Saving new enabled for the Sarajevo Six Campaign Pack (DLC), the "One Save Only" Complication may now appear for these missions. (This will cause conflictions if you're playing the H1 versions, but you can bypass this by enabling the "Force Difficulty" Gameplay Challenge. Even though there is no difficulty options available for the Sarajevo Six, doing this will omit the "One Save Only" Complication completely.)
+  * Holiday Hoarders on Paris got a proper background image, so the one I made for the Roulette has been replaced.
+  * Ambrose Island "Shadows in the Water" was not displaying a background image when using the Hitman GOTY Theme. This was due to a filetype error.
+  * Disguise variants for the Assassins in Berlin had the potential to appear in The Liability ET when they don't appear during the mission. This is fixed.
+* **Current Plans:**
+  * Adding Extra/Photo Objectives for "The Drop" Elusive Target.
+  * Contracts Mode support for "Holiday Hoarders" and the "Hokkaido Show Festival" shortly after release in November.
+>**Bug Hunting:** Please make a post [via GitHub](https://github.com/BRYN4444/HitmanRoulette/issues) or [on Hitman Forum](https://hitmanforum.com/t/13107) if you:
+>* Experience any graphical issues while using the Roulette in 4K, or on phones/tablets.
+>* Generate impossibilities when using the Roulette with Elusive Targets or past titles HITMAN / HITMAN 2.
+>* Have troubles or questions about the Stream Overlay.
+
+---
+
 **August 21th, 2023**
 * **Roulette:**
   * **Select Missions:** Grouping toggles will now appear along side their corresponding missions per category. This will make it easier to mass-deselect missions without needing to tab to the primary Mission Groupings section. Desktop only.
@@ -51,10 +70,6 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
   * There is now the possibility for a disguise requirement (when applicable) of the same outfit appearing more than once (one disguise across two targets). Before, due to how the data was parsed, each disguise could only be required once.
 * **Current Plans:**
   * Support for the new October Elusive Target "The Drop" shortly after release, as well as Contracts Mode support for "Holiday Hoarders" and the "Hokkaido Show Festival" in November.
->**Bug Hunting:** Please make a post [via GitHub](https://github.com/BRYN4444/HitmanRoulette/issues) or [on Hitman Forum](https://hitmanforum.com/t/13107) if you:
->* Experience any graphical issues while using the Roulette in 4K, or on phones/tablets.
->* Generate impossibilities when using the Roulette with Elusive Targets or past titles HITMAN / HITMAN 2.
->* Have troubles or questions about the Stream Overlay.
 
 ---
 
@@ -135,16 +150,3 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
     * **Contract Mode Targets:** 4 images updated. This is due to a visual bug with aprons being fixed in the game.
 * **Other Fixes:**
   * Minor intel updates for targets in Contract Mode.
-
-----
-
-**January 18th, 2023**
-* **Roulette:**
-  * **Select Missions:** Added Elusive Targets as possible missions. They are not enabled by default and have to be manually triggered (like the Sarajevo Six missions). I've also included all of them despite those unavailable in Elusive Target Arcade. Partially as optimism, partially for the benefit of modders.
-* **HITMAN 2:**
-  * **A Bitter Pill:**
-    * **Exit:** Raft exit removed since the Paddle isn't available in this Special Assignment. 
-* **Other Fixes:**
-  * Fixed objectives and the entry/exit images displaying smaller than they should be at certain resolutions.
-  * Fixed some objectives missing images.
-  * Ensured objective descriptions display properly in the Export Roulette textarea/txt.
