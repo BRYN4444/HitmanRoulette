@@ -5,7 +5,7 @@ var redo_stack = []
 var h1 = ["training","test","fashion","xmas","director","virus","movie","election","handoff","enforcer","tension","construction","extractor","birthday","cult","veteran","terrorists","mercenary","heart","spread","controller"];
 var h2 = ["training","test","fashion","xmas","virus","movie","election","handoff","tension","construction","birthday","cult","terrorists","heart","spread","festival","beach","speedway","water","cartel","biggame","ghost","magic","suburbs","pill","ark","bank","resort"];
 var h3 = ["training","test","fashion","xmas","director","virus","movie","election","handoff","enforcer","tension","construction","extractor","birthday","cult","veteran","terrorists","mercenary","heart","spread","festival","controller","beach","speedway","water","cartel","biggame","ghost","magic","suburbs","pill","ark","bank","resort","tower","clue","gardenshow","club","archive","vineyard","train","pirates"];
-var et = ["fashion-forger","fashion-sensation","fashion-broker","fashion-black-hat","fashion-pharmacist","fashion-identity-thief","fashion-chef","fashion-blackmailer","fashion-paparazzo","virus-congressman","virus-prince","virus-twin","virus-wildcard","virus-guru","virus-deceivers","movie-badboy","tension-gunrunner","tension-fixer","tension-angel-of-death","construction-entertainer","birthday-ex-dictator","birthday-food-critic","birthday-warlord","terrorists-chameleon","terrorists-bookkeeper","heart-surgeons","heart-fugitive","beach-politician","speedway-undying","speedway-undying-returns","cartel-revolutionary","suburbs-serial-killer","ark-appraiser","ark-stowaway","tower-ascensionist","clue-collector","clue-procurers","club-liability","archive-rage","vineyard-iconoclast","vineyard-heartbreaker"];
+var et = ["fashion-forger","fashion-sensation","fashion-broker","fashion-black-hat","fashion-pharmacist","fashion-identity-thief","fashion-chef","fashion-blackmailer","fashion-paparazzo","virus-congressman","virus-prince","virus-twin","virus-wildcard","virus-guru","virus-deceivers","movie-badboy","tension-gunrunner","tension-fixer","tension-angel-of-death","construction-entertainer","birthday-ex-dictator","birthday-food-critic","birthday-warlord","terrorists-chameleon","terrorists-bookkeeper","heart-surgeons","heart-fugitive","beach-politician","speedway-undying","speedway-undying-returns","cartel-revolutionary","suburbs-serial-killer","ark-appraiser","ark-stowaway","tower-ascensionist","clue-collector","clue-procurers","club-liability","club-drop","archive-rage","vineyard-iconoclast","vineyard-heartbreaker"];
 
 var suitStarts = ["Weapons Building","Crouched behind a Truck",
 "Red Carpet","Palace Garden","Pile-Driver Barge","Attic","Undercover at IAGO Auction",
@@ -32,8 +32,8 @@ var suitStarts = ["Weapons Building","Crouched behind a Truck",
 "Western Beach","Silt Village","Central Social Hub","Shrine"];
 var disguiseExits = ["Chimney|(Santa 47 Only)","Ambulance|(Medic Only)","Nest|(Secret)","Pale Rider|(Secret)","Trash Truck|(Garbage Man Only)","Swan Dive|(Secret)","Window|(Secret)","Snorkel|(Instructor Only)","Underground Cave System|(Tactical Wetsuit Only)","Shrine|(Requiem Suit Only)"];
 var koExits = ["Chimney|(Santa 47 Only)","Pink Car|(Needs Key)","Nest|(Secret)","Rico's Supercar|(Needs Key)","Local's Car|(Needs Key)","Roadwork Gate|(Needs Key)","Window|(Secret)","Snorkel|(Instructor Only)","Delivery Scooter|(Needs Key)"];
-var proOnly = ["training","test","xmas","director","movie","election","handoff","enforcer","construction","extractor","cult","veteran","mercenary","spread","festival","controller","fashion-forger","fashion-sensation","fashion-broker","fashion-black-hat","fashion-pharmacist","fashion-identity-thief","fashion-chef","fashion-blackmailer","fashion-paparazzo","virus-congressman","virus-prince","virus-twin","virus-wildcard","virus-guru","virus-deceivers","movie-badboy","tension-gunrunner","tension-fixer","tension-angel-of-death","construction-entertainer","birthday-ex-dictator","birthday-food-critic","birthday-warlord","terrorists-chameleon","terrorists-bookkeeper","heart-surgeons","heart-fugitive","beach-politician","speedway-undying","speedway-undying-returns","cartel-revolutionary","suburbs-serial-killer","ark-appraiser","ark-stowaway","tower-ascensionist","clue-collector","clue-procurers","club-liability","archive-rage","vineyard-iconoclast","vineyard-heartbreaker"];
-var noSave = ["xmas","director","enforcer","extractor","veteran","mercenary","festival","controller","gardenshow","fashion-forger","fashion-sensation","fashion-broker","fashion-black-hat","fashion-pharmacist","fashion-identity-thief","fashion-chef","fashion-blackmailer","fashion-paparazzo","virus-congressman","virus-prince","virus-twin","virus-wildcard","virus-guru","virus-deceivers","movie-badboy","tension-gunrunner","tension-fixer","tension-angel-of-death","construction-entertainer","birthday-ex-dictator","birthday-food-critic","birthday-warlord","terrorists-chameleon","terrorists-bookkeeper","heart-surgeons","heart-fugitive","beach-politician","speedway-undying","speedway-undying-returns","cartel-revolutionary","suburbs-serial-killer","ark-appraiser","ark-stowaway","tower-ascensionist","clue-collector","clue-procurers","club-liability","archive-rage","vineyard-iconoclast","vineyard-heartbreaker"]
+var proOnly = ["training","test","xmas","director","movie","election","handoff","enforcer","construction","extractor","cult","veteran","mercenary","spread","festival","controller","fashion-forger","fashion-sensation","fashion-broker","fashion-black-hat","fashion-pharmacist","fashion-identity-thief","fashion-chef","fashion-blackmailer","fashion-paparazzo","virus-congressman","virus-prince","virus-twin","virus-wildcard","virus-guru","virus-deceivers","movie-badboy","tension-gunrunner","tension-fixer","tension-angel-of-death","construction-entertainer","birthday-ex-dictator","birthday-food-critic","birthday-warlord","terrorists-chameleon","terrorists-bookkeeper","heart-surgeons","heart-fugitive","beach-politician","speedway-undying","speedway-undying-returns","cartel-revolutionary","suburbs-serial-killer","ark-appraiser","ark-stowaway","tower-ascensionist","clue-collector","clue-procurers","club-liability","club-drop","archive-rage","vineyard-iconoclast","vineyard-heartbreaker"];
+var noSave = ["xmas","festival","gardenshow","fashion-forger","fashion-sensation","fashion-broker","fashion-black-hat","fashion-pharmacist","fashion-identity-thief","fashion-chef","fashion-blackmailer","fashion-paparazzo","virus-congressman","virus-prince","virus-twin","virus-wildcard","virus-guru","virus-deceivers","movie-badboy","tension-gunrunner","tension-fixer","tension-angel-of-death","construction-entertainer","birthday-ex-dictator","birthday-food-critic","birthday-warlord","terrorists-chameleon","terrorists-bookkeeper","heart-surgeons","heart-fugitive","beach-politician","speedway-undying","speedway-undying-returns","cartel-revolutionary","suburbs-serial-killer","ark-appraiser","ark-stowaway","tower-ascensionist","clue-collector","clue-procurers","club-liability","club-drop","archive-rage","vineyard-iconoclast","vineyard-heartbreaker"]
 
 var mechListH1 = ["Instinct|Turn off Instinct in the game's Options menu under Gameplay.",
 				"Mini Map|Turn off the Mini Map in the game's Options menu under Gameplay.",
@@ -6210,7 +6210,7 @@ var theundying = {
 	entry: ["Dolphin Fountain"],
 	exit: ["Helicopter", "Main Entrance","Sewer|(Needs Crowbar)","Speedboat|(Needs Key)","Ambulance|(Medic Only)"],
 	eexit: ["Nest|(Secret)","Dolphin Statue|(Secret)","Pale Rider|(Secret)"],
-	disguises: ["Any Suit","Ted Mendez","Moses Lee","Florida Man","Street Musician","Sheik","Crashed Driver Kronstadt","Blue Seed Driver","Pale Rider",
+	disguises: ["Any Suit","Timothy Yu","Ted Mendez","Moses Lee","Florida Man","Street Musician","Sheik","Crashed Driver Kronstadt","Blue Seed Driver","Pale Rider",
 	"Kronstadt Mechanic","Kowoon Driver","Kowoon Mechanic","Aeon Driver","Aeon Mechanic","Thwack Driver","Thwack Mechanic","Sotteraneo Mechanic",
 	"Kronstadt Engineer","Kronstadt Researcher","Kronstadt Security",
 	"Race Coordinator","Race Marshall",
@@ -6257,7 +6257,7 @@ var theundyingreturns = {
 	entry: ["Dolphin Fountain"],
 	exit: ["Helicopter", "Main Entrance","Sewer|(Needs Crowbar)","Speedboat|(Needs Key)","Ambulance|(Medic Only)"],
 	eexit: ["Nest|(Secret)","Dolphin Statue|(Secret)","Pale Rider|(Secret)"],
-	disguises: ["Any Suit","Ted Mendez","Moses Lee","Florida Man","Street Musician","Sheik","Crashed Driver Kronstadt","Blue Seed Driver","Pale Rider",
+	disguises: ["Any Suit","Timothy Yu","Ted Mendez","Moses Lee","Florida Man","Street Musician","Sheik","Crashed Driver Kronstadt","Blue Seed Driver","Pale Rider",
 	"Kronstadt Mechanic","Kowoon Driver","Kowoon Mechanic","Aeon Driver","Aeon Mechanic","Thwack Driver","Thwack Mechanic","Sotteraneo Mechanic",
 	"Kronstadt Engineer","Kronstadt Researcher","Kronstadt Security",
 	"Race Coordinator","Race Marshall",
@@ -6631,9 +6631,45 @@ var theliability = {
 	disguises: ["Rave On / Any Suit","Dealer","Florida Man","Delivery Guy","Rolf Hirschmüller",
 	"Bartender","Club Crew","Technician","DJ",
 	"Biker","Club Security"],
-	disguiseVariants: ["Biker (Agent Rhodes)","Biker (Agent Tremaine)","Biker (Agent Lowenthal)",
-	"Club Security (Agent Green)","Club Security (Agent Chamberlin)","Club Security (Agent Montgomery)",
-	"Technician (Agent Banner)","Club Crew (Agent Thames)"],
+	disguiseVariants: ["Rave On / Any Suit"],
+	wild: ["The Golden Ticket|Obtain a juice bar ticket.",
+	"Devil's Dandruff|Get a brick of cocaine.",
+	"I'd Like a Receipt|Collect the Food Delivery.",
+	"Not Quite A Canary|Collect a Bird's Egg.",
+	"Getting Up|Exfiltrate with at least three cans of Spray Paint.",
+	"Workplace Hazard|Cause the crane accident."],
+	missionWild: ["Elusive Honor|Do not restart under any circumstances. If you fail, you must honor the 12 hour limit until you can try again."],
+	compWild: ["Scavenger|Exfiltrate with the scrap sword.",
+	"Sweet Relief|Unlock all the stalls in the Red Toilet area."],
+	photos: ["Photographic Proof|Take a photo of your target(s) after you've eliminated them, unless their body is unavailable. They must not be in a body bag."]
+};
+var thedrop = {
+	missionTitle: "The Drop",
+	missionLocation: "Berlin",
+	missionCode: "club-drop",
+	melee: ["Fiber Wire",
+	"Battle Axe|Melee","Battle Axe|Thrown Weapon",
+	"Combat Knife|Melee","Combat Knife|Thrown Weapon",
+	"Concealable Knife|Melee","Concealable Knife|Thrown Weapon",
+	"Fire Axe|Melee","Fire Axe|Thrown Weapon",
+	"Garden Fork|Melee","Garden Fork|Thrown Weapon",
+	"Hobby Knife|Melee","Hobby Knife|Thrown Weapon",
+	"Kitchen Knife|Melee","Kitchen Knife|Thrown Weapon",
+	"Old Axe|Melee","Old Axe|Thrown Weapon",
+	"Scrap Sword|Melee","Scrap Sword|Thrown Weapon",
+	"Screwdriver|Melee","Screwdriver|Thrown Weapon"],
+	targetList: ["Alexios Laskaridis"],
+	contractUnique: ["Alexios Laskaridis|Elusive Target"],
+	contractCivilian: [],
+	contractStaff: [],
+	contractGuard: [],
+	entry: ["Club Entrance","Biker Hangout"],
+	exit: ["Bicycle","Emergency Exit","Delivery Scooter|(Needs Key)","Motorcycle|(Needs Key)"],
+	eexit: [],
+	disguises: ["Rave On / Any Suit","Dealer","Florida Man","Delivery Guy","Rolf Hirschmüller",
+	"Bartender","Club Crew","Technician","DJ",
+	"Biker","Club Security","Bodyguard"],
+	disguiseVariants: ["Rave On / Any Suit"],
 	wild: ["The Golden Ticket|Obtain a juice bar ticket.",
 	"Devil's Dandruff|Get a brick of cocaine.",
 	"I'd Like a Receipt|Collect the Food Delivery.",
@@ -6797,7 +6833,6 @@ var theheartbreaker = {
 	"Pheebs|Take a photo of Phoebe Morris."]
 };
 
-
 var mission_names_map = {
 	"FFT" : fft,
 	"TFT" : ica,
@@ -6881,7 +6916,8 @@ var mission_names_map = {
 	"ET37": theheartbreaker,
 	"ET38": theprocurers,
 	"ET39": theascensionist,
-	"ET40": therage
+	"ET40": therage,
+	"ET41": thedrop
 }
 
 var killTypesMap = {
