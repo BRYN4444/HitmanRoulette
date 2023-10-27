@@ -247,6 +247,7 @@ html.httheme {
 .et38 { background:#292929 url("../img/missions/et38.png") no-repeat center top / 350px; }
 .et39 { background:#292929 url("../img/missions/et39.png") no-repeat center top / 350px; }
 .et40 { background:#292929 url("../img/missions/et40.png") no-repeat center top / 350px; }
+.et41 { background:#292929 url("../img/missions/et41.png") no-repeat center top / 350px; }
 
 /*** Backgrounds ***/
 .training, .test { background-image:var(--missionbggradient), var(--icafacility); }
@@ -2477,6 +2478,7 @@ div[class^="ElusiveTarget"], div[class^="UnassignedTarget"] { background-image: 
 .AgentDavenport-club { background-image: url('../img/target/AgentDavenport.jpg'); }
 
 .TerrenceChesterfield-club-liability { background-image: url('../img/target/TerrenceChesterfield.jpg'); }
+.AlexiosLaskaridis-club-drop { background-image: url('../img/target/AlexiosLaskaridis.jpg'); }
 
 .AgentRhodes-club.contarget { background-image: url('../img/targetcon/AgentRhodes.jpg'); }
 .AgentSwan-club.contarget { background-image: url('../img/targetcon/AgentSwan.jpg'); }
