@@ -44,13 +44,13 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 
 **October 27th, 2023**
 * **Elusive Target:**
-  * **#41: The Drop** added. One Target and one new Disguise. Any Extra/Photo Objectives I can think of will be added shorty, as I play through mission.
+  * **#41: The Drop** added. One Target and one new disguise. Any Extra/Photo Objectives I can think of will be added shorty, as I play through mission.
 * **Other Fixes:**
-  * Added a missing outfit to the Elusive Target (Arcade) missions "The Undying" and "The Undying Returns".
+  * Added a missing disguise to the Elusive Target missions "The Undying" and "The Undying Returns".
   * With Saving new enabled for the Sarajevo Six Campaign Pack (DLC), the "One Save Only" Complication may now appear for these missions. (This will cause conflictions if you're playing the H1 versions, but you can bypass this by enabling the "Force Difficulty" Gameplay Challenge. Even though there is no difficulty options available for the Sarajevo Six, doing this will omit the "One Save Only" Complication completely.)
   * Holiday Hoarders on Paris got a proper background image, so the one I made for the Roulette has been replaced.
   * Ambrose Island "Shadows in the Water" was not displaying a background image when using the Hitman GOTY Theme. This was due to a filetype error.
-  * Disguise variants for the Assassins in Berlin had the potential to appear in The Liability ET when they don't appear during the mission. This is fixed.
+  * Disguise variants for the Assassins in Berlin had the potential to appear in "The Liability" Elusive Target when they don't appear during the mission. This is fixed.
 * **Current Plans:**
   * Adding Extra/Photo Objectives for "The Drop" Elusive Target.
   * Contracts Mode support for "Holiday Hoarders" and the "Hokkaido Show Festival" shortly after release in November.
