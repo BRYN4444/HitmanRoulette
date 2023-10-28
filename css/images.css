@@ -3549,12 +3549,23 @@ div[class^="ElusiveTarget"], div[class^="UnassignedTarget"] { background-image: 
 .NotQuiteACanary { background-image: url('../img/obj/NotQuiteACanary.png'); }
 .GettingUp { background-image: url('../img/obj/GettingUp.png'); }
 .WorkplaceHazard { background-image: url('../img/obj/WorkplaceHazard.png'); }
+.Interzone { background-image: url('../img/obj/Interzone.png'); }
+.FindersKeepers { background-image: url('../img/obj/FindersKeepers.png'); }
+.Bodyguardtender { background-image: url('../img/obj/Bodyguardtender.png'); }
+.KnowWhatYoureDoing { background-image: url('../img/obj/KnowWhatYoureDoing.png'); }
+.HostileTakeover { background-image: url('../img/obj/HostileTakeover.png'); }
+.SampleTheGoods { background-image: url('../img/obj/SampleTheGoods.png'); }
+.GrabaDrink { background-image: url('../img/obj/GrabaDrink.png'); }
 
 .ConcreteOrnithology { background-image: url('../img/camera/ConcreteOrnithology.png'); }
 .TrophyAuNaturel { background-image: url('../img/camera/TrophyAuNaturel.png'); }
 .MoshPitMemories { background-image: url('../img/camera/MoshPitMemories.png'); }
 .FailedRestoration { background-image: url('../img/camera/FailedRestoration.png'); }
 .ThisMustMeanSomething { background-image: url('../img/camera/ThisMustMeanSomething.png'); }
+.LightShow { background-image: url('../img/camera/LightShow.png'); }
+.Rebranding { background-image: url('../img/camera/Rebranding.png'); }
+.Pyrotechnics { background-image: url('../img/camera/Pyrotechnics.png'); }
+.IncreasedCapacity { background-image: url('../img/camera/IncreasedCapacity.png'); }
 
 /** Chongqing **/
 /* End Of An Era */
