@@ -1,7 +1,7 @@
 //Enjoy looking at the ametuer code work I've done.
 $(document).ready(function() {
 	/******Latest Updates******/
-	$("#features p#title").text("Last Updated: October 27th, 2023"); /*Roulette Features*/
+	$("#features p#title").text("Last Updated: October 28th, 2023"); /*Roulette Features*/
 	$("#features .updatenotes").html('Elusive Target "The Drop" added. Visit <b><a href="https://github.com/BRYN4444/HitmanRoulette#latest-updates" target="_blank">Github</a></b> for details.');
     /* Unspecific Update $("#features .updatenotes").html('Visit <b><a href="https://github.com/BRYN4444/HitmanRoulette#latest-updates" target="_blank">Github</a></b> for details on the latest Roulette updates.');*/
 	$("#overlayguide p#title").text("Last Updated: July 13th, 2022"); /*Stream Overlay*/

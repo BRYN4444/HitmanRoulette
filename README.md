@@ -42,22 +42,36 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 
 ### Latest Update
 
+**October 28th, 2023**
+* **Elusive Target:**
+  * **#41: The Drop**
+    * **Extra Objective:** 6 added.
+	* **Photo Objective:** 2 added.
+* **HITMAN III:**
+  * **Apex Predator:**
+    * **Extra Objective:** 1 added. Also applies to "The Liability" and "The Drop" Elusive Targets.
+    * **Photo Objective:** 1 added. Also applies to "The Liability" Elusive Target.
+* **Other Fixes:**
+  * Removed the Florida Man disguise from "The Drop" Elusive Target due to the NPC not being present. (Or he was moved and I haven't found him yet.)
+  * Using a better version of the "Holiday Hoarders" background image without vignetting. Also did another pass on these images when using other Themes.
+* **Current Plans:**
+  * Contracts Mode support for "Holiday Hoarders" and the "Hokkaido Show Festival" shortly after release in November.
+>**Bug Hunting:** Please make a post [via GitHub](https://github.com/BRYN4444/HitmanRoulette/issues) or [on Hitman Forum](https://hitmanforum.com/t/13107) if you:
+>* Experience any graphical issues while using the Roulette in 4K, or on phones/tablets.
+>* Generate impossibilities when using the Roulette with Elusive Targets or past titles HITMAN / HITMAN 2.
+>* Have troubles or questions about the Stream Overlay.
+
+---
+
 **October 27th, 2023**
 * **Elusive Target:**
   * **#41: The Drop** added. One Target and one new disguise. Any Extra/Photo Objectives I can think of will be added shorty, as I play through mission.
 * **Other Fixes:**
   * Added a missing disguise to the Elusive Target missions "The Undying" and "The Undying Returns".
   * With Saving new enabled for the Sarajevo Six Campaign Pack (DLC), the "One Save Only" Complication may now appear for these missions. (This will cause conflictions if you're playing the H1 versions, but you can bypass this by enabling the "Force Difficulty" Gameplay Challenge. Even though there is no difficulty options available for the Sarajevo Six, doing this will omit the "One Save Only" Complication completely.)
-  * Holiday Hoarders on Paris got a proper background image, so the one I made for the Roulette has been replaced.
+  * Paris "Holiday Hoarders" got a proper background image, so the one I made for the Roulette has been replaced.
   * Ambrose Island "Shadows in the Water" was not displaying a background image when using the Hitman GOTY Theme. This was due to a filetype error.
   * Disguise variants for the Assassins in Berlin had the potential to appear in "The Liability" Elusive Target when they don't appear during the mission. This is fixed.
-* **Current Plans:**
-  * Adding Extra/Photo Objectives for "The Drop" Elusive Target.
-  * Contracts Mode support for "Holiday Hoarders" and the "Hokkaido Show Festival" shortly after release in November.
->**Bug Hunting:** Please make a post [via GitHub](https://github.com/BRYN4444/HitmanRoulette/issues) or [on Hitman Forum](https://hitmanforum.com/t/13107) if you:
->* Experience any graphical issues while using the Roulette in 4K, or on phones/tablets.
->* Generate impossibilities when using the Roulette with Elusive Targets or past titles HITMAN / HITMAN 2.
->* Have troubles or questions about the Stream Overlay.
 
 ---
 
@@ -68,8 +82,6 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
   * Updated the Select Mission image for the Sarajevo Six to the newer version. Also reworded it as the "Sarajevo Six Campaign" as it is listed in storefronts.
   * Fixed an issue where you on the Dartmoor Garden Show where 4 of the 5 targets would have a disguise requirement listed (when applicable). Now all targets will have one.
   * There is now the possibility for a disguise requirement (when applicable) of the same outfit appearing more than once (one disguise across two targets). Before, due to how the data was parsed, each disguise could only be required once.
-* **Current Plans:**
-  * Support for the new October Elusive Target "The Drop" shortly after release, as well as Contracts Mode support for "Holiday Hoarders" and the "Hokkaido Show Festival" in November.
 
 ---
 
@@ -133,20 +145,3 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
   * **About & Help:** The README version wasn't updated to reflect the new World Of Assassination compatibility.
 * **Other Fixes:**
   * Minor CSS fix for locked mission selection.
-
----
-
-**January 28th, 2023**
-* **Roulette:**
-  * **Select Missions:** Golden Handshake & The Last Resort are listed as (DLC), since in HITMAN 2, III, and World of Assassination, they are.
-  * **About & Help:** Listed World of Assassination (H3 disc) & its Deluxe Pack as the best compatible game & DLC for use with the Roulette. 
-* **HITMAN 2:**
-  * **Three-Headed Serpent:**
-    * **Contract Mode Targets:** 2 images updated. This is due to a visual bug with aprons being fixed in the game.
-  * **Chasing a Ghost:**
-    * **Contract Mode Targets:** 4 images updated. This is due to a visual bug with aprons being fixed in the game.
-* **HITMAN III:**
-  * **Shadows in the Water:**
-    * **Contract Mode Targets:** 4 images updated. This is due to a visual bug with aprons being fixed in the game.
-* **Other Fixes:**
-  * Minor intel updates for targets in Contract Mode.
