@@ -4349,7 +4349,8 @@ var ap = {
 	"I'd Like a Receipt|Collect the Food Delivery.",
 	"Not Quite A Canary|Collect a Bird's Egg.",
 	"Getting Up|Exfiltrate with at least three cans of Spray Paint.",
-	"Workplace Hazard|Cause the crane accident."],
+	"Workplace Hazard|Cause the crane accident.",
+	"Interzone|Get the idol, place it down, have a seat."],
 	missionWild: ["Order of Operations|Take out <span id='apexwild'>the last listed Agent</span> before any other ICA Agent."],
 	compWild: ["Scavenger|Exfiltrate with the scrap sword.",
 	"Sweet Relief|Unlock all the stalls in the Red Toilet area."],
@@ -4358,7 +4359,8 @@ var ap = {
 	"Trophy Au Naturel|Take a photo of the dancing shirtless man overlooking the dance floor.",
 	"Mosh Pit Memories|Take a photo of the DJ playing their set.",
 	"Failed Restoration|Take a photo of the unfortunate paining.",
-	"This Must Mean Something|Take a photo of the supernatural graffiti."]
+	"This Must Mean Something|Take a photo of the supernatural graffiti.",
+	"Light Show|Take a photo of the Club Hölle Dance Floor light show."]
 };
 
 var eoae = {
@@ -6637,11 +6639,13 @@ var theliability = {
 	"I'd Like a Receipt|Collect the Food Delivery.",
 	"Not Quite A Canary|Collect a Bird's Egg.",
 	"Getting Up|Exfiltrate with at least three cans of Spray Paint.",
-	"Workplace Hazard|Cause the crane accident."],
+	"Workplace Hazard|Cause the crane accident.",
+	"Interzone|Get the idol, place it down, have a seat."],
 	missionWild: ["Elusive Honor|Do not restart under any circumstances. If you fail, you must honor the 12 hour limit until you can try again."],
 	compWild: ["Scavenger|Exfiltrate with the scrap sword.",
 	"Sweet Relief|Unlock all the stalls in the Red Toilet area."],
-	photos: ["Photographic Proof|Take a photo of your target(s) after you've eliminated them, unless their body is unavailable. They must not be in a body bag."]
+	photos: ["Photographic Proof|Take a photo of your target(s) after you've eliminated them, unless their body is unavailable. They must not be in a body bag.",
+	"Light Show|Take a photo of the Club Hölle Dance Floor light show."]
 };
 var thedrop = {
 	missionTitle: "The Drop",
@@ -6666,7 +6670,7 @@ var thedrop = {
 	entry: ["Club Entrance","Biker Hangout"],
 	exit: ["Bicycle","Emergency Exit","Delivery Scooter|(Needs Key)","Motorcycle|(Needs Key)"],
 	eexit: [],
-	disguises: ["Rave On / Any Suit","Dealer","Florida Man","Delivery Guy","Rolf Hirschmüller",
+	disguises: ["Rave On / Any Suit","Dealer","Delivery Guy","Rolf Hirschmüller",
 	"Bartender","Club Crew","Technician","DJ",
 	"Biker","Club Security","Bodyguard"],
 	disguiseVariants: ["Rave On / Any Suit"],
@@ -6675,11 +6679,21 @@ var thedrop = {
 	"I'd Like a Receipt|Collect the Food Delivery.",
 	"Not Quite A Canary|Collect a Bird's Egg.",
 	"Getting Up|Exfiltrate with at least three cans of Spray Paint.",
-	"Workplace Hazard|Cause the crane accident."],
-	missionWild: ["Elusive Honor|Do not restart under any circumstances. If you fail, you must honor the 12 hour limit until you can try again."],
+	"Workplace Hazard|Cause the crane accident.",
+	"Interzone|Get the idol, place it down, have a seat."],
+	missionWild: ["Elusive Honor|Do not restart under any circumstances. If you fail, you must honor the 12 hour limit until you can try again.",
+	"Finders Keepers|Find the bottle of vodka, and keep it for yourself."],
 	compWild: ["Scavenger|Exfiltrate with the scrap sword.",
-	"Sweet Relief|Unlock all the stalls in the Red Toilet area."],
-	photos: ["Photographic Proof|Take a photo of your target(s) after you've eliminated them, unless their body is unavailable. They must not be in a body bag."]
+	"Sweet Relief|Unlock all the stalls in the Red Toilet area.",
+	"Hostile Takeover|Have a meeting with Alexios Laskaridis while disguised as Rolf Hirschmüller.",
+	"Bodyguardtender|Serve a vodka martini to Laskaridis' Bodyguard.",
+	"Know What You're Doing|Serve a vodka martini to Alexios Laskaridis.",
+	"Sample The Goods|Offer Alexios Laskaridis a sample the Club's cocaine.",
+	"Grab a Drink|Offer Alexios Laskaridis a glass of whiskey from the bar."],
+	photos: ["Photographic Proof|Take a photo of your target(s) after you've eliminated them, unless their body is unavailable. They must not be in a body bag.",
+	"Rebranding|Take a photo of any Club Boom branding throughout the building.",
+	"Increased Capacity|Take a photo of the extended club area. (Level -1).",
+	"Pyrotechnics|Take a photo of the Club Boom Dance Floor pyrotechnics."]
 };
 
 var therage = {
