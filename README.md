@@ -52,7 +52,6 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
     * **Extra Objective:** 1 added. Also applies to "The Liability" and "The Drop" Elusive Targets.
     * **Photo Objective:** 1 added. Also applies to "The Liability" Elusive Target.
 * **Other Fixes:**
-  * Removed the Florida Man disguise from "The Drop" Elusive Target due to the NPC not being present. (Or he was moved and I haven't found him yet.)
   * Using a better version of the "Holiday Hoarders" background image without vignetting. Also did another pass on these images when using other Themes.
 * **Current Plans:**
   * Contracts Mode support for "Holiday Hoarders" and the "Hokkaido Show Festival" shortly after release in November.
