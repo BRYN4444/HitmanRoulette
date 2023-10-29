@@ -6670,7 +6670,7 @@ var thedrop = {
 	entry: ["Club Entrance","Biker Hangout"],
 	exit: ["Bicycle","Emergency Exit","Delivery Scooter|(Needs Key)","Motorcycle|(Needs Key)"],
 	eexit: [],
-	disguises: ["Rave On / Any Suit","Dealer","Delivery Guy","Rolf Hirschmüller",
+	disguises: ["Rave On / Any Suit","Dealer","Florida Man","Delivery Guy","Rolf Hirschmüller",
 	"Bartender","Club Crew","Technician","DJ",
 	"Biker","Club Security","Bodyguard"],
 	disguiseVariants: ["Rave On / Any Suit"],
