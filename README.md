@@ -42,6 +42,22 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 
 ### Latest Update
 
+**November 24th, 2023**
+* **HITMAN:**
+  * **Holiday Hoarders:** 159 Contracts Mode Targets added. Majority of these are from the normal "The Showstopper" mission.
+  * **Hokkaido Snow Festival:** 142 Contracts Mode Targets added. Majority of these are from the normal "Situs Inversus" mission.
+* **Other Fixes:**
+  * Fixed bad cropping on some Contracts Mode Target images in Hokkaido.
+  * Fixed a spelling mistake on a Contracts Mode Target used throughout Hokkaido.
+* **Current Plans:**
+  * We'll see if anything substantial happens with WoA in the new year, otherwise don't expect much. Maybe some more Contracts Mode targets but no promises. Otherwise, thanks for enjoying the Roulette!
+>**Bug Hunting:** Please make a post [via GitHub](https://github.com/BRYN4444/HitmanRoulette/issues) or in the thread [on Hitman Forum](https://hitmanforum.com/t/13107) if you:
+>* Experience any graphical issues while using the Roulette in 4K, or on phones/tablets.
+>* Generate impossibilities when using the Roulette with Elusive Targets or past titles HITMAN / HITMAN 2.
+>* Have troubles or questions about the Stream Overlay.
+
+---
+
 **October 28th, 2023**
 * **Elusive Target:**
   * **#41: The Drop**
@@ -53,12 +69,6 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
     * **Photo Objective:** 1 added. Also applies to "The Liability" Elusive Target.
 * **Other Fixes:**
   * Using a better version of the "Holiday Hoarders" background image without vignetting. Also did another pass on these images when using other Themes.
-* **Current Plans:**
-  * Contracts Mode support for "Holiday Hoarders" and the "Hokkaido Show Festival" shortly after release in November.
->**Bug Hunting:** Please make a post [via GitHub](https://github.com/BRYN4444/HitmanRoulette/issues) or [on Hitman Forum](https://hitmanforum.com/t/13107) if you:
->* Experience any graphical issues while using the Roulette in 4K, or on phones/tablets.
->* Generate impossibilities when using the Roulette with Elusive Targets or past titles HITMAN / HITMAN 2.
->* Have troubles or questions about the Stream Overlay.
 
 ---
 
@@ -135,12 +145,3 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 * **Other Fixes:**
   * Elusive Targets weren't setup properly to avoid difficulty/saving related Complications/Challenges.
   * Some "Gameplay Challenges" images still used HITMAN 2's hot magenta HUD coloring. These very tiny instances were changed to III/WoA's red.
-
----
-
-**February 5th, 2023**
-* **Roulette:**
-  * **Select Missions:** Renamed/rephrased the default all locations toggle.
-  * **About & Help:** The README version wasn't updated to reflect the new World Of Assassination compatibility.
-* **Other Fixes:**
-  * Minor CSS fix for locked mission selection.
