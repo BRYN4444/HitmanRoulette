@@ -686,10 +686,10 @@ div[class^="ElusiveTarget"], div[class^="UnassignedTarget"] { background-image: 
 
 /** Paris **/
 /* Showstopper */
-.ViktorNovikov-fashion { background-image: url('../img/target/ViktorNovikov.jpg'); }
-.ViktorNovikov-fashion.contarget { background-size: auto 100% !important; }
-.DaliaMargolis-fashion { background-image: url('../img/target/DaliaMargolis.jpg'); }
-.DaliaMargolis-fashion.contarget { background-size: auto 100% !important; }
+.ViktorNovikov-fashion, .ViktorNovikov-xmas { background-image: url('../img/target/ViktorNovikov.jpg'); }
+.ViktorNovikov-fashion.contarget, .ViktorNovikov-xmas.contarget { background-size: auto 100% !important; }
+.DaliaMargolis-fashion, .DaliaMargolis-xmas { background-image: url('../img/target/DaliaMargolis.jpg'); }
+.DaliaMargolis-fashion.contarget, .DaliaMargolis-xmas.contarget { background-size: auto 100% !important; }
 
 .SergeiLarin-fashion-forger { background-image: url('../img/target/SergeiLarin.jpg'); }
 .JonathanSmythe-fashion-sensation { background-image: url('../img/target/JonathanSmythe.jpg'); }
@@ -701,83 +701,85 @@ div[class^="ElusiveTarget"], div[class^="UnassignedTarget"] { background-image: 
 .WalterWilliams-fashion-blackmailer { background-image: url('../img/target/WalterWilliams.jpg'); }
 .KieranHudson-fashion-paparazzo { background-image: url('../img/target/KieranHudson.jpg'); }
 
-.SebastianSato-fashion { background-image: url('../img/targetcon/SebastianSato.jpg'); }
-.HelmutKruger-fashion { background-image: url('../img/targetcon/HelmutKruger.jpg'); }
-.MaxDecker-fashion { background-image: url('../img/targetcon/MaxDecker.jpg'); }
-.SheikhSalmanalGhazali-fashion { background-image: url('../img/targetcon/SheikhSalmanal-Ghazali.jpg'); }
-.LindseyLaCoeur-fashion { background-image: url('../img/targetcon/LindseyLaCoeur.jpg'); }
-.JaySmart-fashion { background-image: url('../img/targetcon/JaySmart.jpg'); }
-.LanaCaprice-fashion { background-image: url('../img/targetcon/LanaCaprice.jpg'); }
-.ValerieStClaire-fashion { background-image: url('../img/targetcon/ValerieStClaire.jpg'); }
-.LizaMcKenzie-fashion { background-image: url('../img/targetcon/LizaMcKenzie.jpg'); }
-.HaileyBrennan-fashion { background-image: url('../img/targetcon/HaileyBrennan.jpg'); }
-.KurtDonovan-fashion, .RomeoMarkus-fashion, .FrancisGuilmette-fashion, .JustinForest-fashion, .PierreRosso-fashion, .DreuxDescotreaux-fashion, .CédricGendron-fashion, .AlainGendron-fashion, .CharlesLeGars-fashion, .FredBeaujolie-fashion, .AxelduMont-fashion, .RichardMouet-fashion, .IgnaceRichard-fashion, .NicoGros-fashion, .FelicienMontminy-fashion, .JaquesRosso-fashion, .JeanMoreau-fashion { background-image: url('../img/targetcon/KurtDonovan.jpg'); }
-.SophusFatale-fashion { background-image: url('../img/targetcon/SophusFatale.jpg'); }
-.MarthaHerris-fashion { background-image: url('../img/targetcon/MarthaHerris.jpg'); }
-.TrenPo-fashion { background-image: url('../img/targetcon/TrenPo.jpg'); }
-.SirHumphreyTitusRutherford-fashion { background-image: url('../img/targetcon/SirHumphreyTitusRutherford.jpg'); }
-.MabayaMzabumi-fashion { background-image: url('../img/targetcon/MabayaMzabumi.jpg'); }
-.IrinaVladimir-fashion, .AlexVladimir-fashion { background-image: url('../img/targetcon/IrinaVladimir.jpg'); }
-.OlvanShillingford-fashion { background-image: url('../img/targetcon/OlvanShillingford.jpg'); }
-.AndreaMartinez-fashion { background-image: url('../img/targetcon/AndreaMartinez.jpg'); }
-.StéphaneLafrenière-fashion, .KermanLagacé-fashion { background-image: url('../img/targetcon/StéphaneLafrenière.jpg'); }
-.OcéaneBissom-fashion { background-image: url('../img/targetcon/OcéaneBissom.jpg'); }
-.RémyGuibord-fashion, .JeremyHuxley-fashion, .PatrickBisson-fashion, .MarmionMonty-fashion, .CloridanPanetier-fashion, .DésiréMaheu-fashion, .AubertSanschagrin-fashion, .OrsonSéguin-fashion, .RogerDupont-fashion, .MichelTrier-fashion, .AntonFlamand-fashion { background-image: url('../img/targetcon/RémyGuibord.jpg'); }
-.JulienBeausoleil-fashion, .RolandLandry-fashion, .MichelLaux-fashion, .ValiantRenaud-fashion, .DonatienMarleau-fashion, .FrancisLangelier-fashion, .EliotMontminy-fashion, .MichelCharest-fashion, .MarcEunuque-fashion, .AugusteDuTrieux-fashion, .BertrandPoussard-fashion, .HughProvencher-fashion { background-image: url('../img/targetcon/JulienBeausoleil.jpg'); }
-.DesireLapresse-fashion { background-image: url('../img/targetcon/DesireLapresse.jpg'); }
-.MikeBirkhead-fashion, .ErnestMousseau-fashion, .PaulLizotte-fashion, .BenjaminCharbonneau-fashion { background-image: url('../img/targetcon/MikeBirkhead.jpg'); }
-.LéopoldBeaudoin-fashion { background-image: url('../img/targetcon/LéopoldBeaudoin.jpg'); }
-.GasparDesforges-fashion, .LucMénard-fashion { background-image: url('../img/targetcon/GasparDesforges.jpg'); }
-.GeorgesCliche-fashion, .ChristopheMothé-fashion, .BobMoran-fashion, .CédricBostin-fashion { background-image: url('../img/targetcon/GeorgesCliche.jpg'); }
-.CongressmanWalsh-fashion { background-image: url('../img/targetcon/CongressmanWalsh.jpg'); }
-.DanielRosenberg-fashion { background-image: url('../img/targetcon/DanielRosenberg.jpg'); }
-.GloriaRosenberg-fashion { background-image: url('../img/targetcon/GloriaRosenberg.jpg'); }
-.CharlotteBolton-fashion { background-image: url('../img/targetcon/CharlotteBolton.jpg'); }
-.BruceProulx-fashion, .JérômeQuirion-fashion, .AdrienDesilets-fashion, .DidierDennis-fashion { background-image: url('../img/targetcon/BruceProulx.jpg'); }
-.EllionoraLapresse-fashion, .AnetteEngstrom-fashion, .JoseRouthier-fashion, .JacquelineDucloitre-fashion { background-image: url('../img/targetcon/EllionoraLapresse.jpg'); }
-.WilliamCorbin-fashion, .ArnouVincent-fashion { background-image: url('../img/targetcon/WilliamCorbin.jpg'); }
-.PatrickSaurel-fashion { background-image: url('../img/targetcon/PatrickSaurel.jpg'); }
-.OnurKaradamir-fashion { background-image: url('../img/targetcon/OnurKaradamir.jpg'); }
-.BayardVadnais-fashion, .MalloryBrunelle-fashion, .ArnouCamus-fashion { background-image: url('../img/targetcon/BayardVadnais.jpg'); }
-.GermainMarleau-fashion { background-image: url('../img/targetcon/GermainMarleau.jpg'); }
-.AkikoCrilley-fashion, .ClaireSwanson-fashion { background-image: url('../img/targetcon/AkikoCrilley.jpg'); }
-.PhilippeDutrieux-fashion, .GasparCaillot-fashion, .ChaplinLeroy-fashion, .MatthieuFrancoeur-fashion { background-image: url('../img/targetcon/PhilippeDutrieux.jpg'); }
-.AlexandreFavreau-fashion, .JacobArpin-fashion, .EugèneMarleau-fashion, .LéopoldGeorges-fashion { background-image: url('../img/targetcon/AlexandreFavreau.jpg'); }
-.ChristopheBienvenue-fashion { background-image: url('../img/targetcon/ChristopheBienvenue.jpg'); }
-.MarcelDimarco-fashion, .OrsonBler-fashion, .SatordiRoux-fashion, .JacquesSansouci-fashion, .LanceArtois-fashion, .JeanLucSalois-fashion, .FabriceSansouci-fashion { background-image: url('../img/targetcon/MarcelDimarco.jpg'); }
-.JosephDucharme-fashion { background-image: url('../img/targetcon/JosephDucharme.jpg'); }
-.DanielDuhamel-fashion { background-image: url('../img/targetcon/DanielDuhamel.jpg'); }
-.PierrettedeBrisay-fashion { background-image: url('../img/targetcon/PierrettedeBrisay.jpg'); }
-.GwenDawson-fashion { background-image: url('../img/targetcon/GwenDawson.jpg'); }
-.ChappellFrancoeur-fashion { background-image: url('../img/targetcon/ChappellFrancoeur.jpg'); }
-.LorthairDaoust-fashion { background-image: url('../img/targetcon/LorthairDaoust.jpg'); }
-.LeroyCouet-fashion { background-image: url('../img/targetcon/LeroyCouet.jpg'); }
-.NathalieBourque-fashion { background-image: url('../img/targetcon/NathalieBourque.jpg'); }
-.IreneObstacle-fashion { background-image: url('../img/targetcon/IreneObstacle.jpg'); }
-.AgathaÉquipage-fashion { background-image: url('../img/targetcon/AgathaÉquipage.jpg'); }
-.JessikaTruesdale-fashion { background-image: url('../img/targetcon/JessikaTruesdale.jpg'); }
-.JacquesBonbon-fashion, .BenjaminLacasse-fashion { background-image: url('../img/targetcon/JacquesBonbon.jpg'); }
-.PhilipVonZell-fashion { background-image: url('../img/targetcon/PhilipVonZell.jpg'); }
-.AugusteMarcheterre-fashion { background-image: url('../img/targetcon/AugusteMarcheterre.jpg'); }
-.OlivierLauzier-fashion, .JustinMills-fashion { background-image: url('../img/targetcon/OlivierLauzier.jpg'); }
-.PhilippeQuiron-fashion, .BenoitLagarde-fashion, .CourtlandAupry-fashion, .YvesBeauchemin-fashion, .BruceFaure-fashion, .AlainRocheleau-fashion { background-image: url('../img/targetcon/PhilippeQuiron.jpg'); }
-.FélicienBourque-fashion { background-image: url('../img/targetcon/FélicienBourque.jpg'); }
-.TristanDupuis-fashion { background-image: url('../img/targetcon/TristanDupuis.jpg'); }
-.MarkParker-fashion { background-image: url('../img/targetcon/MarkParker.jpg'); }
-.AdèleRousseau-fashion { background-image: url('../img/targetcon/AdèleRousseau.jpg'); }
-.LoïcCourcelle-fashion, .EricHébert-fashion { background-image: url('../img/targetcon/LoïcCourcelle.jpg'); }
-.MichaelArchambault-fashion, .ÉdouardLeblanc-fashion, .JaredDorst-fashion, .HughNeufville-fashion, .FaustinDAoust-fashion, .AndréCliche-fashion { background-image: url('../img/targetcon/MichaelArchambault.jpg'); }
-.RaoulBlanc-fashion, .RafaelDante-fashion { background-image: url('../img/targetcon/RaoulBlanc.jpg'); }
-.ChristopheNightlinglam-fashion, .GeorgeCaisse-fashion { background-image: url('../img/targetcon/ChristopheNightlinglam.jpg'); }
-.GuillaumeGarceau-fashion { background-image: url('../img/targetcon/GuillaumeGarceau.jpg'); }
-.NicolasFrank-fashion { background-image: url('../img/targetcon/NicolasFrank.jpg'); }
-.LoyalFluet-fashion { background-image: url('../img/targetcon/LoyalFluet.jpg'); }
+.SebastianSato-fashion, .SebastianSato-xmas { background-image: url('../img/targetcon/SebastianSato.jpg'); }
+.HelmutKruger-fashion, .HelmutKruger-xmas { background-image: url('../img/targetcon/HelmutKruger.jpg'); }
+.MaxDecker-fashion, .MaxDecker-xmas { background-image: url('../img/targetcon/MaxDecker.jpg'); }
+.SheikhSalmanalGhazali-fashion, .SheikhSalmanalGhazali-xmas { background-image: url('../img/targetcon/SheikhSalmanal-Ghazali.jpg'); }
+.LindseyLaCoeur-fashion, .LindseyLaCoeur-xmas { background-image: url('../img/targetcon/LindseyLaCoeur.jpg'); }
+.JaySmart-fashion, .JaySmart-xmas { background-image: url('../img/targetcon/JaySmart.jpg'); }
+.LanaCaprice-fashion, .LanaCaprice-xmas { background-image: url('../img/targetcon/LanaCaprice.jpg'); }
+.ValerieStClaire-fashion, .ValerieStClaire-xmas { background-image: url('../img/targetcon/ValerieStClaire.jpg'); }
+.LizaMcKenzie-fashion, .LizaMcKenzie-xmas { background-image: url('../img/targetcon/LizaMcKenzie.jpg'); }
+.HaileyBrennan-fashion, .HaileyBrennan-xmas { background-image: url('../img/targetcon/HaileyBrennan.jpg'); }
+.KurtDonovan-fashion, .RomeoMarkus-fashion, .FrancisGuilmette-fashion, .JustinForest-fashion, .PierreRosso-fashion, .DreuxDescotreaux-fashion, .CédricGendron-fashion, .AlainGendron-fashion, .CharlesLeGars-fashion, .FredBeaujolie-fashion, .AxelduMont-fashion, .RichardMouet-fashion, .IgnaceRichard-fashion, .NicoGros-fashion, .FelicienMontminy-fashion, .JaquesRosso-fashion, .JeanMoreau-fashion, .KurtDonovan-xmas, .RomeoMarkus-xmas, .FrancisGuilmette-xmas, .JustinForest-xmas, .PierreRosso-xmas, .DreuxDescotreaux-xmas, .CédricGendron-xmas, .AlainGendron-xmas, .CharlesLeGars-xmas, .FredBeaujolie-xmas, .AxelduMont-xmas, .RichardMouet-xmas, .IgnaceRichard-xmas, .NicoGros-xmas, .FelicienMontminy-xmas, .JaquesRosso-xmas, .JeanMoreau-xmas { background-image: url('../img/targetcon/KurtDonovan.jpg'); }
+.SophusFatale-fashion, .SophusFatale-xmas { background-image: url('../img/targetcon/SophusFatale.jpg'); }
+.MarthaHerris-fashion, .MarthaHerris-xmas { background-image: url('../img/targetcon/MarthaHerris.jpg'); }
+.TrenPo-fashion, .TrenPo-xmas { background-image: url('../img/targetcon/TrenPo.jpg'); }
+.SirHumphreyTitusRutherford-fashion, .SirHumphreyTitusRutherford-xmas { background-image: url('../img/targetcon/SirHumphreyTitusRutherford.jpg'); }
+.MabayaMzabumi-fashion, .MabayaMzabumi-xmas { background-image: url('../img/targetcon/MabayaMzabumi.jpg'); }
+.IrinaVladimir-fashion, .AlexVladimir-fashion, .IrinaVladimir-xmas, .AlexVladimir-xmas { background-image: url('../img/targetcon/IrinaVladimir.jpg'); }
+.OlvanShillingford-fashion, .OlvanShillingford-xmas { background-image: url('../img/targetcon/OlvanShillingford.jpg'); }
+.AndreaMartinez-fashion, .AndreaMartinez-xmas { background-image: url('../img/targetcon/AndreaMartinez.jpg'); }
+.StéphaneLafrenière-fashion, .KermanLagacé-fashion, .StéphaneLafrenière-xmas, .KermanLagacé-xmas { background-image: url('../img/targetcon/StéphaneLafrenière.jpg'); }
+.OcéaneBissom-fashion, .OcéaneBissom-xmas { background-image: url('../img/targetcon/OcéaneBissom.jpg'); }
+.RémyGuibord-fashion, .JeremyHuxley-fashion, .PatrickBisson-fashion, .MarmionMonty-fashion, .CloridanPanetier-fashion, .DésiréMaheu-fashion, .AubertSanschagrin-fashion, .OrsonSéguin-fashion, .RogerDupont-fashion, .MichelTrier-fashion, .AntonFlamand-fashion, .RémyGuibord-xmas, .JeremyHuxley-xmas, .PatrickBisson-xmas, .MarmionMonty-xmas, .CloridanPanetier-xmas, .DésiréMaheu-xmas, .AubertSanschagrin-xmas, .OrsonSéguin-xmas, .RogerDupont-xmas, .MichelTrier-xmas, .AntonFlamand-xmas { background-image: url('../img/targetcon/RémyGuibord.jpg'); }
+.JulienBeausoleil-fashion, .RolandLandry-fashion, .MichelLaux-fashion, .ValiantRenaud-fashion, .DonatienMarleau-fashion, .FrancisLangelier-fashion, .EliotMontminy-fashion, .MichelCharest-fashion, .MarcEunuque-fashion, .AugusteDuTrieux-fashion, .BertrandPoussard-fashion, .HughProvencher-fashion, .JulienBeausoleil-xmas, .RolandLandry-xmas, .MichelLaux-xmas, .ValiantRenaud-xmas, .DonatienMarleau-xmas, .FrancisLangelier-xmas, .EliotMontminy-xmas, .MichelCharest-xmas, .MarcEunuque-xmas, .AugusteDuTrieux-xmas, .BertrandPoussard-xmas, .HughProvencher-xmas { background-image: url('../img/targetcon/JulienBeausoleil.jpg'); }
+.DesireLapresse-fashion, .DesireLapresse-xmas { background-image: url('../img/targetcon/DesireLapresse.jpg'); }
+.MikeBirkhead-fashion, .ErnestMousseau-fashion, .PaulLizotte-fashion, .BenjaminCharbonneau-fashion, .MikeBirkhead-xmas, .ErnestMousseau-xmas, .PaulLizotte-xmas, .BenjaminCharbonneau-xmas { background-image: url('../img/targetcon/MikeBirkhead.jpg'); }
+.LéopoldBeaudoin-fashion, .LéopoldBeaudoin-xmas { background-image: url('../img/targetcon/LéopoldBeaudoin.jpg'); }
+.GasparDesforges-fashion, .LucMénard-fashion, .GasparDesforges-xmas, .LucMénard-xmas { background-image: url('../img/targetcon/GasparDesforges.jpg'); }
+.GeorgesCliche-fashion, .ChristopheMothé-fashion, .BobMoran-fashion, .CédricBostin-fashion, .GeorgesCliche-xmas, .ChristopheMothé-xmas, .BobMoran-xmas, .CédricBostin-xmas { background-image: url('../img/targetcon/GeorgesCliche.jpg'); }
+.CongressmanWalsh-fashion, .CongressmanWalsh-xmas { background-image: url('../img/targetcon/CongressmanWalsh.jpg'); }
+.DanielRosenberg-fashion, .DanielRosenberg-xmas { background-image: url('../img/targetcon/DanielRosenberg.jpg'); }
+.GloriaRosenberg-fashion, .GloriaRosenberg-xmas { background-image: url('../img/targetcon/GloriaRosenberg.jpg'); }
+.CharlotteBolton-fashion, .CharlotteBolton-xmas { background-image: url('../img/targetcon/CharlotteBolton.jpg'); }
+.BruceProulx-fashion, .JérômeQuirion-fashion, .AdrienDesilets-fashion, .DidierDennis-fashion, .BruceProulx-xmas, .JérômeQuirion-xmas, .AdrienDesilets-xmas, .DidierDennis-xmas { background-image: url('../img/targetcon/BruceProulx.jpg'); }
+.EllionoraLapresse-fashion, .AnetteEngstrom-fashion, .JoseRouthier-fashion, .JacquelineDucloitre-fashion, .EllionoraLapresse-xmas, .AnetteEngstrom-xmas, .JoseRouthier-xmas, .JacquelineDucloitre-xmas { background-image: url('../img/targetcon/EllionoraLapresse.jpg'); }
+.WilliamCorbin-fashion, .ArnouVincent-fashion, .WilliamCorbin-xmas, .ArnouVincent-xmas { background-image: url('../img/targetcon/WilliamCorbin.jpg'); }
+.PatrickSaurel-fashion, .PatrickSaurel-xmas { background-image: url('../img/targetcon/PatrickSaurel.jpg'); }
+.OnurKaradamir-fashion, .OnurKaradamir-xmas { background-image: url('../img/targetcon/OnurKaradamir.jpg'); }
+.BayardVadnais-fashion, .MalloryBrunelle-fashion, .ArnouCamus-fashion, .BayardVadnais-xmas, .MalloryBrunelle-xmas, .ArnouCamus-xmas { background-image: url('../img/targetcon/BayardVadnais.jpg'); }
+.GermainMarleau-fashion, .GermainMarleau-xmas { background-image: url('../img/targetcon/GermainMarleau.jpg'); }
+.AkikoCrilley-fashion, .ClaireSwanson-fashion, .AkikoCrilley-xmas, .ClaireSwanson-xmas { background-image: url('../img/targetcon/AkikoCrilley.jpg'); }
+.PhilippeDutrieux-fashion, .GasparCaillot-fashion, .ChaplinLeroy-fashion, .MatthieuFrancoeur-fashion, .PhilippeDutrieux-xmas, .GasparCaillot-xmas, .ChaplinLeroy-xmas, .MatthieuFrancoeur-xmas { background-image: url('../img/targetcon/PhilippeDutrieux.jpg'); }
+.AlexandreFavreau-fashion, .JacobArpin-fashion, .EugèneMarleau-fashion, .LéopoldGeorges-fashion, .AlexandreFavreau-xmas, .JacobArpin-xmas, .EugèneMarleau-xmas, .LéopoldGeorges-xmas { background-image: url('../img/targetcon/AlexandreFavreau.jpg'); }
+.ChristopheBienvenue-fashion, .ChristopheBienvenue-xmas { background-image: url('../img/targetcon/ChristopheBienvenue.jpg'); }
+.MarcelDimarco-fashion, .OrsonBler-fashion, .SatordiRoux-fashion, .JacquesSansouci-fashion, .LanceArtois-fashion, .JeanLucSalois-fashion, .FabriceSansouci-fashion, .MarcelDimarco-xmas, .OrsonBler-xmas, .SatordiRoux-xmas, .JacquesSansouci-xmas, .LanceArtois-xmas, .JeanLucSalois-xmas, .FabriceSansouci-xmas { background-image: url('../img/targetcon/MarcelDimarco.jpg'); }
+.JosephDucharme-fashion, .JosephDucharme-xmas { background-image: url('../img/targetcon/JosephDucharme.jpg'); }
+.DanielDuhamel-fashion, .DanielDuhamel-xmas { background-image: url('../img/targetcon/DanielDuhamel.jpg'); }
+.PierrettedeBrisay-fashion, .PierrettedeBrisay-xmas { background-image: url('../img/targetcon/PierrettedeBrisay.jpg'); }
+.GwenDawson-fashion, .GwenDawson-xmas { background-image: url('../img/targetcon/GwenDawson.jpg'); }
+.ChappellFrancoeur-fashion, .ChappellFrancoeur-xmas { background-image: url('../img/targetcon/ChappellFrancoeur.jpg'); }
+.LorthairDaoust-fashion, .LorthairDaoust-xmas { background-image: url('../img/targetcon/LorthairDaoust.jpg'); }
+.LeroyCouet-fashion, .LeroyCouet-xmas { background-image: url('../img/targetcon/LeroyCouet.jpg'); }
+.NathalieBourque-fashion, .NathalieBourque-xmas { background-image: url('../img/targetcon/NathalieBourque.jpg'); }
+.IreneObstacle-fashion, .IreneObstacle-xmas { background-image: url('../img/targetcon/IreneObstacle.jpg'); }
+.AgathaÉquipage-fashion, .AgathaÉquipage-xmas { background-image: url('../img/targetcon/AgathaÉquipage.jpg'); }
+.JessikaTruesdale-fashion, .JessikaTruesdale-xmas { background-image: url('../img/targetcon/JessikaTruesdale.jpg'); }
+.JacquesBonbon-fashion, .BenjaminLacasse-fashion, .JacquesBonbon-xmas, .BenjaminLacasse-xmas { background-image: url('../img/targetcon/JacquesBonbon.jpg'); }
+.PhilipVonZell-fashion, .PhilipVonZell-xmas { background-image: url('../img/targetcon/PhilipVonZell.jpg'); }
+.AugusteMarcheterre-fashion, .AugusteMarcheterre-xmas { background-image: url('../img/targetcon/AugusteMarcheterre.jpg'); }
+.OlivierLauzier-fashion, .JustinMills-fashion, .OlivierLauzier-xmas, .JustinMills-xmas { background-image: url('../img/targetcon/OlivierLauzier.jpg'); }
+.PhilippeQuiron-fashion, .BenoitLagarde-fashion, .CourtlandAupry-fashion, .YvesBeauchemin-fashion, .BruceFaure-fashion, .AlainRocheleau-fashion, .PhilippeQuiron-xmas, .BenoitLagarde-xmas, .CourtlandAupry-xmas, .YvesBeauchemin-xmas, .BruceFaure-xmas, .AlainRocheleau-xmas { background-image: url('../img/targetcon/PhilippeQuiron.jpg'); }
+.FélicienBourque-fashion, .FélicienBourque-xmas { background-image: url('../img/targetcon/FélicienBourque.jpg'); }
+.TristanDupuis-fashion, .TristanDupuis-xmas { background-image: url('../img/targetcon/TristanDupuis.jpg'); }
+.MarkParker-fashion, .MarkParker-xmas { background-image: url('../img/targetcon/MarkParker.jpg'); }
+.AdèleRousseau-fashion, .AdèleRousseau-xmas { background-image: url('../img/targetcon/AdèleRousseau.jpg'); }
+.LoïcCourcelle-fashion, .EricHébert-fashion, .LoïcCourcelle-xmas, .EricHébert-xmas { background-image: url('../img/targetcon/LoïcCourcelle.jpg'); }
+.MichaelArchambault-fashion, .ÉdouardLeblanc-fashion, .JaredDorst-fashion, .HughNeufville-fashion, .FaustinDAoust-fashion, .AndréCliche-fashion, .MichaelArchambault-xmas, .ÉdouardLeblanc-xmas, .JaredDorst-xmas, .HughNeufville-xmas, .FaustinDAoust-xmas, .AndréCliche-xmas { background-image: url('../img/targetcon/MichaelArchambault.jpg'); }
+.RaoulBlanc-fashion, .RafaelDante-fashion, .RaoulBlanc-xmas, .RafaelDante-xmas { background-image: url('../img/targetcon/RaoulBlanc.jpg'); }
+.ChristopheNightlinglam-fashion, .GeorgeCaisse-fashion, .ChristopheNightlinglam-xmas, .GeorgeCaisse-xmas { background-image: url('../img/targetcon/ChristopheNightlinglam.jpg'); }
+.GuillaumeGarceau-fashion, .GuillaumeGarceau-xmas { background-image: url('../img/targetcon/GuillaumeGarceau.jpg'); }
+.NicolasFrank-fashion, .NicolasFrank-xmas { background-image: url('../img/targetcon/NicolasFrank.jpg'); }
+.LoyalFluet-fashion, .LoyalFluet-xmas { background-image: url('../img/targetcon/LoyalFluet.jpg'); }
 
 /* Holiday Hoarders */
 .HarrySmokeyBagnato-xmas { background-image: url('../img/target/HarrySmokeyBagnato.jpg'); }
 .HarrySmokeyBagnato-xmas.contarget { background-size: auto 100% !important; }
 .MarvSlickGonif-xmas { background-image: url('../img/target/MarvSlickGonif.jpg'); }
 .MarvSlickGonif-xmas.contarget { background-size: auto 100% !important; }
+
+.SantaKlaus-xmas { background-image: url('../img/targetcon/SantaKlaus.jpg'); }
 
 /* The Director */
 .ScottSarno-director { background-image: url('../img/target/ScottSarno.jpg'); }
@@ -1608,139 +1610,139 @@ div[class^="ElusiveTarget"], div[class^="UnassignedTarget"] { background-image: 
 /* Situs Inversus */
 .ErichSoders-heart { background-image: url('../img/target/ErichSoders.jpg'); }
 .ErichSoders-heart.contarget { background-size: auto 100% !important; }
-.YukiYamazaki-heart { background-image: url('../img/target/YukiYamazaki.jpg'); }
-.YukiYamazaki-heart.contarget { background-size: auto 100% !important; }
+.YukiYamazaki-heart, .YukiYamazaki-festival { background-image: url('../img/target/YukiYamazaki.jpg'); }
+.YukiYamazaki-heart.contarget, .YukiYamazaki-festival.contarget { background-size: auto 100% !important; }
 
 .PavelFrydel-heart-surgeons { background-image: url('../img/target/PavelFrydel.jpg'); }
 .AkaneAkenawa-heart-surgeons { background-image: url('../img/target/AkaneAkenawa.jpg'); }
 .IdentifyAndEliminateJiHu-heart-fugitive { background-image: url('../img/target/Ji-Hu.jpg'); }
 
-.LowellAucoin-heart, .LowellAucoin-spread { background-image: url('../img/targetcon/Julian.jpg'); }
-.EricSandānoashiSjövold-heart, .EricSandānoashiSjövold-spread { background-image: url("../img/targetcon/Eric'Sandānoashi'Sjövold.jpg"); }
-.AmosDexter-heart, .AmosDexter-spread { background-image: url('../img/targetcon/AmosDexter.jpg'); }
-.AkiraNakamura-heart, .AkiraNakamura-spread { background-image: url('../img/targetcon/AkiraNakamura.jpg'); }
-.JasonPortman-heart { background-image: url('../img/targetcon/JasonPortman.jpg'); }
-.JBrooke-heart, .JBrooke-spread { background-image: url('../img/targetcon/JBrooke.jpg'); }
-.NicholasLaurent-heart { background-image: url('../img/targetcon/NicholasLaurent.jpg'); }
-.Nails-heart, .Nails-spread { background-image: url('../img/targetcon/Nails.jpg'); }
-.HannaOlsen-heart { background-image: url('../img/targetcon/HannaOlsen.jpg'); }
-.KatashiIto-heart, .KatashiIto-spread { background-image: url('../img/targetcon/KatashiIto.jpg'); }
-.TomiyukiFujihara-heart, .YoshifumiYagawa-heart, .TomiyukiFujihara-spread, .YoshifumiYagawa-spread { background-image: url('../img/targetcon/TomiyukiFujihara.jpg'); }
-.AzumaMurayama-heart, .AzumaMurayama-spread { background-image: url('../img/targetcon/AzumaMurayama.jpg'); }
-.CarltonSmith-heart { background-image: url('../img/targetcon/CarltonSmith.jpg'); }
-.TenriShinosaki-heart, .TenriShinosaki-spread { background-image: url('../img/targetcon/TenriShinosaki.jpg'); }
-.MakioYanagisawa-heart, .HomareKanai-heart, .MakioYanagisawa-spread { background-image: url('../img/targetcon/MakioYanagisawa.jpg'); }
-.KinjiYamazaki-heart, .SorahikoSatou-heart, .KinjiYamazaki-spread { background-image: url('../img/targetcon/KinjiYamazaki.jpg'); }
-.Nokadota-heart{ background-image: url('../img/targetcon/Nokadota.jpg'); }
-.ShoudaiKurosawa-heart, .ShoudaiKurosawa-spread { background-image: url('../img/targetcon/ShoudaiKurosawa.jpg'); }
-.YukioMatsushima-heart, .YukioMatsushima-spread { background-image: url('../img/targetcon/YukioMatsushima.jpg'); }
-.EllinorYasuda-heart { background-image: url('../img/targetcon/EllinorYasuda.jpg'); }
-.KoukiShimizu-heart { background-image: url('../img/targetcon/KoukiShimizu.jpg'); }
-.HayatoShinden-heart { background-image: url('../img/targetcon/HayatoShinden.jpg'); }
-.SatomuSugiyama-heart { background-image: url('../img/targetcon/SatomuSugiyama.jpg'); }
-.ShuuskueKitajima-heart { background-image: url('../img/targetcon/ShuuskueKitajima.jpg'); }
-.AndrewRoovers-heart { background-image: url('../img/targetcon/AndrewRoovers.jpg'); }
-.MichaelBrennan-heart { background-image: url('../img/targetcon/MichaelBrennan.jpg'); }
-.KiiIne-heart { background-image: url('../img/targetcon/KiiIne.jpg'); }
-.EmiriNimiya-heart { background-image: url('../img/targetcon/EmiriNimiya.jpg'); }
-.SaitaShinoda-heart, .HaruoNakamoto-heart, .HaruoNakamoto-spread { background-image: url('../img/targetcon/SaitaShinoda.jpg'); }
-.GakushiYamaoka-heart { background-image: url('../img/targetcon/GakushiYamaoka.jpg'); }
-.EdwardVeitch-heart { background-image: url('../img/targetcon/EdwardVeitch.jpg'); }
-.ShuusukeSeki-heart { background-image: url('../img/targetcon/ShuusukeSeki.jpg'); }
-.Shikuna-heart { background-image: url('../img/targetcon/Shikuna.jpg'); }
-.JunyaAndou-heart { background-image: url('../img/targetcon/JunyaAndou.jpg'); }
-.MitsukoKinjou-heart, .ChiyoeTawara-heart, .ChiyoeTawara-spread { background-image: url('../img/targetcon/MitsukoKinjou.jpg'); }
-.IkumaNakazawa-heart { background-image: url('../img/targetcon/IkumaNakazawa.jpg'); }
-.HifumiYoshii-heart { background-image: url('../img/targetcon/HifumiYoshii.jpg'); }
-.Mekashita-heart { background-image: url('../img/targetcon/Mekashita.jpg'); }
-.SadatoKatagiri-heart { background-image: url('../img/targetcon/SadatoKatagiri.jpg'); }
-.TakemiShiraishi-heart, .TakemiShiraishi-spread { background-image: url('../img/targetcon/TakemiShiraishi.jpg'); }
-.MasumiOkamoto-heart, .MasumiOkamoto-spread { background-image: url('../img/targetcon/MasumiOkamoto.jpg'); }
-.SoujiYamamura-heart, .SoujiYamamura-spread  { background-image: url('../img/targetcon/SoujiYamamura.jpg'); }
-.SeiichiAsada-heart, .SeiichiAsada-spread { background-image: url('../img/targetcon/SeiichiAsada.jpg'); }
-.RikiHirayama-heart, .RikiHirayama-spread { background-image: url('../img/targetcon/RikiHirayama.jpg'); }
-.Jikushikatate-heart { background-image: url('../img/targetcon/Jikushikatate.jpg'); }
-.IkkeiAndou-heart, .IkkeiAndou-spread { background-image: url('../img/targetcon/IkkeiAndou.jpg'); }
-.ErikBaumgartner-heart, .ErikBaumgartner-spread { background-image: url('../img/targetcon/ErikBaumgartner.jpg'); }
-.YukihisaNagaoka-heart, .YukihisaNagaoka-spread { background-image: url('../img/targetcon/YukihisaNagaoka.jpg'); }
-.AkihideNishihara-heart, .AkihideNishihara-spread { background-image: url('../img/targetcon/AkihideNishihara.jpg'); }
-.KouchiYuasa-heart, .KyoutaShinden-heart, .KouchiYuasa-spread { background-image: url('../img/targetcon/KouchiYuasa.jpg'); }
-.KazuyasuMaruyama-heart { background-image: url('../img/targetcon/KazuyasuMaruyama.jpg'); }
-.RafnHelguson-heart, .HidakaUno-heart, .HayakiFukasawa-heart, .RafnHelguson-spread, .HidakaUno-spread { background-image: url('../img/targetcon/RafnHelguson.jpg'); }
-.SamuelSantosLima-heart, .SamuelSantosLima-spread { background-image: url('../img/targetcon/SamuelSantosLima.jpg'); }
-.TenmaKanou-heart, .TenmaKanou-spread { background-image: url('../img/targetcon/TenmaKanou.jpg'); }
-.TsunetoOzaki-heart, .TsunetoOzaki-spread { background-image: url('../img/targetcon/TsunetoOzaki.jpg'); }
-.TommyJJGervais-heart, .TommyJJGervais-spread { background-image: url('../img/targetcon/TommyJJGervais.jpg'); }
-.BunkaShintani-heart, .BunkaShintani-spread { background-image: url('../img/targetcon/BunkaShintani.jpg'); }
-.MaxGerber-heart, .JohnMaverick-heart, .MaxGerber-spread, .JohnMaverick-spread { background-image: url('../img/targetcon/MaxGerber.jpg'); }
-.TomochikaHonma-heart, .TomochikaHonma-spread { background-image: url('../img/targetcon/TomochikaHonma.jpg'); }
-.TomochikaKoizumi-heart, .TomochikaKoizumi-spread { background-image: url('../img/targetcon/TomochikaKoizumi.jpg'); }
-.TsumugiIwai-heart, .TsumugiIwai-spread { background-image: url('../img/targetcon/TsumugiIwai.jpg'); }
-.MauryVeich-heart, .MauryVeich-spread { background-image: url('../img/targetcon/MauryVeich.jpg'); }
-.MasashiMorioka-heart, .MasashiMorioka-spread { background-image: url('../img/targetcon/MasashiMorioka.jpg'); }
-.JohanIshibashi-heart, .JohanIshibashi-spread { background-image: url('../img/targetcon/JohanIshibashi.jpg'); }
-.SpencerShort-heart, .SpencerShort-spread { background-image: url('../img/targetcon/SpencerShort.jpg'); }
-.IkkeiTsutsui-heart, .IkkeiTsutsui-spread { background-image: url('../img/targetcon/IkkeiTsutsui.jpg'); }
-.MinaoMorishita-heart, .MinaoMorishita-spread { background-image: url('../img/targetcon/MinaoMorishita.jpg'); }
-.TamamiKuroki-heart, .TamamiKuroki-spread { background-image: url('../img/targetcon/TamamiKuroki.jpg'); }
-.YamatoNarita-heart, .YamatoNarita-spread { background-image: url('../img/targetcon/YamatoNarita.jpg'); }
-.MasayoshiSakakihara-heart, .MasayoshiSakakihara-spread { background-image: url('../img/targetcon/MasayoshiSakakihara.jpg'); }
-.WakanaTsutsumi-heart, .WakanaTsutsumi-spread { background-image: url('../img/targetcon/WakanaTsutsumi.jpg'); }
-.TadaoMotsuzuki-heart, .TadaoMotsuzuki-spread { background-image: url('../img/targetcon/TadaoMotsuzuki.jpg'); }
-.KenichiArakawa-heart, .KenichiArakawa-spread { background-image: url('../img/targetcon/KenichiArakawa.jpg'); }
-.OliverDrabløs-heart, .NikicaPranjić-heart, .OliverDrabløs-spread, .NikicaPranjić-spread { background-image: url('../img/targetcon/OliverDrabløs.jpg'); }
-.ChiyuuMatsusaki-heart, .ChiyuuMatsusaki-spread { background-image: url('../img/targetcon/ChiyuuMatsusaki.jpg'); }
-.JunsukeOkamoto-heart, .JunsukeOkamoto-spread { background-image: url('../img/targetcon/JunsukeOkamoto.jpg'); }
-.YukiyaKubo-heart { background-image: url('../img/targetcon/YukiyaKubo.jpg'); }
-.YasuakiInagaki-heart, .ChikashiNakatani-heart, .YasuakiInagaki-spread, .ChikashiNakatani-spread { background-image: url('../img/targetcon/YasuakiInagaki.jpg'); }
-.FengCheng-heart, .FengCheng-spread { background-image: url('../img/targetcon/FengCheng.jpg'); }
-.PhilipaWallisFujioka-heart { background-image: url('../img/targetcon/PhilipaWallisFujioka.jpg'); }
-.MelissaMAdams-heart { background-image: url('../img/targetcon/MelissaMAdams.jpg'); }
-.NooriShadid-heart, .NooriShadid-spread { background-image: url('../img/targetcon/NooriShadid.jpg'); }
-.ShoichiKataoka-heart, .KouTokunaga-heart, .ShoichiKataoka-spread { background-image: url('../img/targetcon/ShoichiKataoka.jpg'); }
-.OliverDamon-heart, .OliverDamon-spread { background-image: url('../img/targetcon/OliverDamon.jpg'); }
-.JamesCarey-heart { background-image: url('../img/targetcon/JamesCarey.jpg'); }
-.ToshimiShinden-heart, .ToshimiShinden-spread { background-image: url('../img/targetcon/ToshimiShinden.jpg'); }
-.HokutoYamamoto-heart, .HokutoYamamoto-spread { background-image: url('../img/targetcon/HokutoYamamoto.jpg'); }
-.YuiUemura-heart, .YuiUemura-spread { background-image: url('../img/targetcon/YuiUemura.jpg'); }
-.SalvioParraRojo-heart { background-image: url('../img/targetcon/SalvioParraRojo.jpg'); }
-.YoshikazuSasaki-heart { background-image: url('../img/targetcon/YoshikazuSasaki.jpg'); }
-.KaimeiKuroki-heart { background-image: url('../img/targetcon/KaimeiKuroki.jpg'); }
-.KyuuyaSugiyama-heart, .KyuuyaSugiyama-spread { background-image: url('../img/targetcon/KyuuyaSugiyama.jpg'); }
-.HideyoShibata-heart, .HideyoShibata-spread { background-image: url('../img/targetcon/HideyoShibata.jpg'); }
-.ShikiFujino-heart, .ShikiFujino-spread { background-image: url('../img/targetcon/ShikiFujino.jpg'); }
-.HelenaOotsuka-heart, .HelenaOotsuka-spread { background-image: url('../img/targetcon/HelenaOotsuka.jpg'); }
-.KoukoYoshioka-heart, .KoukoYoshioka-spread { background-image: url('../img/targetcon/KoukoYoshioka.jpg'); }
-.RisaeOosawa-heart, .RisaeOosawa-spread { background-image: url('../img/targetcon/RisaeOosawa.jpg'); }
-.LaraCarvalhoLima-heart { background-image: url('../img/targetcon/LaraCarvalhoLima.jpg'); }
-.OscarHimura-heart, .OscarHimura-spread { background-image: url('../img/targetcon/OscarHimura.jpg'); }
-.KathrinKuster-heart, .KathrinKuster-spread { background-image: url('../img/targetcon/KathrinKuster.jpg'); }
-.LordHarveySilk-heart { background-image: url('../img/targetcon/LordHarveySilk.jpg'); }
-.DwyerGPitt-heart, .DwyerGPitt-spread { background-image: url('../img/targetcon/DwyerGPitt.jpg'); }
-.AkioKawashima-heart, .AkioKawashima-spread { background-image: url('../img/targetcon/AkioKawashima.jpg'); }
-.GentaKakuta-heart { background-image: url('../img/targetcon/GentaKakuta.jpg'); }
-.AxelGeorge-heart, .AxelGeorge-spread { background-image: url('../img/targetcon/AxelGeorge.jpg'); }
-.JustinSpeer-heart, .JustinSpeer-spread { background-image: url('../img/targetcon/JustinSpeer.jpg'); }
-.FuukiSuitani-heart, .FuukiSuitani-spread { background-image: url('../img/targetcon/FuukiSuitani.jpg'); }
-.WakuOchiai-heart, .WakuOchiai-spread { background-image: url('../img/targetcon/WakuOchiai.jpg'); }
-.YuutoSaiki-heart { background-image: url('../img/targetcon/YuutoSaiki.jpg'); }
-.PaulaUngar-heart, .PaulaUngar-spread { background-image: url('../img/targetcon/PaulaUngar.jpg'); }
-.SatoyoTakano-heart { background-image: url('../img/targetcon/SatoyoTakano.jpg'); }
-.RayMiller-heart, .RayMiller-spread { background-image: url('../img/targetcon/RayMiller.jpg'); }
-.AngelinaKleiner-heart, .AngelinaKleiner-spread { background-image: url('../img/targetcon/AngelinaKleiner.jpg'); }
-.SadatoMurai-heart { background-image: url('../img/targetcon/SadatoMurai.jpg'); }
-.SakutarouOyama-heart, .SakutarouOyama-spread { background-image: url('../img/targetcon/SakutarouOyama.jpg'); }
-.LyleGaulin-heart, .LyleGaulin-spread { background-image: url('../img/targetcon/LyleGaulin.jpg'); }
-.KouyuuOkuta-heart, .KanameKonishi-heart, .KouyuuOkuta-spread, .KanameKonishi-spread { background-image: url('../img/targetcon/KouyuuOkuta.jpg'); }
-.JeoffroiDurepos-heart, .JeoffroiDurepos-spread { background-image: url('../img/targetcon/JeoffroiDurepos.jpg'); }
-.DianeReddington-heart, .DianeReddington-spread { background-image: url('../img/targetcon/DianeReddington.jpg'); }
-.AlexanderKellerman-heart, .AlexanderKellerman-spread { background-image: url('../img/targetcon/AlexanderKellerman.jpg'); }
-.JamesStewart-heart, .JamesStewart-spread { background-image: url('../img/targetcon/JamesStewart.jpg'); }
-.FumihiroOchiai-heart { background-image: url('../img/targetcon/FumihiroOchiai.jpg'); }
-.LisaRickardson-heart, .LisaRickardson-spread { background-image: url('../img/targetcon/LisaRickardson.jpg'); }
-.HidetoshiHiga-heart, .HidetoshiHiga-spread { background-image: url('../img/targetcon/HidetoshiHiga.jpg'); }
-.HuanYueHao-heart, .HuanYueHao-spread { background-image: url('../img/targetcon/HuanYueHao.jpg'); }
-.YuusouIshikuno-heart, .YuusouIshikuno-spread { background-image: url('../img/targetcon/YuusouIshikuno.jpg'); }
+.LowellAucoin-heart, .LowellAucoin-spread, .LowellAucoin-festival { background-image: url('../img/targetcon/Julian.jpg'); }
+.EricSandānoashiSjövold-heart, .EricSandānoashiSjövold-spread, .EricSandānoashiSjövold-festival { background-image: url("../img/targetcon/Eric'Sandānoashi'Sjövold.jpg"); }
+.AmosDexter-heart, .AmosDexter-spread, .AmosDexter-festival { background-image: url('../img/targetcon/AmosDexter.jpg'); }
+.AkiraNakamura-heart, .AkiraNakamura-spread, .AkiraNakamura-festival { background-image: url('../img/targetcon/AkiraNakamura.jpg'); }
+.JasonPortman-heart, .JasonPortman-festival { background-image: url('../img/targetcon/JasonPortman.jpg'); }
+.JBrooke-heart, .JBrooke-spread, .JBrooke-festival { background-image: url('../img/targetcon/JBrooke.jpg'); }
+.NicholasLaurent-heart, .NicholasLaurent-festival { background-image: url('../img/targetcon/NicholasLaurent.jpg'); }
+.Nails-heart, .Nails-spread, .Nails-festival { background-image: url('../img/targetcon/Nails.jpg'); }
+.HannaOlsen-heart, .HannaOlsen-festival { background-image: url('../img/targetcon/HannaOlsen.jpg'); }
+.KatashiIto-heart, .KatashiIto-spread, .KatashiIto-festival { background-image: url('../img/targetcon/KatashiIto.jpg'); }
+.TomiyukiFujihara-heart, .YoshifumiYagawa-heart, .TomiyukiFujihara-spread, .YoshifumiYagawa-spread, .TomiyukiFujihara-festival, .YoshifumiYagawa-festival { background-image: url('../img/targetcon/TomiyukiFujihara.jpg'); }
+.AzumaMurayama-heart, .AzumaMurayama-spread, .AzumaMurayama-festival { background-image: url('../img/targetcon/AzumaMurayama.jpg'); }
+.CarltonSmith-heart, .CarltonSmith-festival { background-image: url('../img/targetcon/CarltonSmith.jpg'); }
+.TenriShinosaki-heart, .TenriShinosaki-spread, .TenriShinosaki-festival { background-image: url('../img/targetcon/TenriShinosaki.jpg'); }
+.MakioYanagisawa-heart, .HomareKanai-heart, .MakioYanagisawa-spread, .MakioYanagisawa-festival, .HomareKanai-festival { background-image: url('../img/targetcon/MakioYanagisawa.jpg'); }
+.KinjiYamazaki-heart, .SorahikoSatou-heart, .KinjiYamazaki-spread, .KinjiYamazaki-festival, .SorahikoSatou-festival { background-image: url('../img/targetcon/KinjiYamazaki.jpg'); }
+.Nokadota-heart, .Nokadota-festival { background-image: url('../img/targetcon/Nokadota.jpg'); }
+.ShoudaiKurosawa-heart, .ShoudaiKurosawa-spread, .ShoudaiKurosawa-festival { background-image: url('../img/targetcon/ShoudaiKurosawa.jpg'); }
+.YukioMatsushima-heart, .YukioMatsushima-spread, .YukioMatsushima-festival { background-image: url('../img/targetcon/YukioMatsushima.jpg'); }
+.EllinorYasuda-heart, .EllinorYasuda-festival { background-image: url('../img/targetcon/EllinorYasuda.jpg'); }
+.KoukiShimizu-heart, .KoukiShimizu-festival { background-image: url('../img/targetcon/KoukiShimizu.jpg'); }
+.HayatoShinden-heart, .HayatoShinden-festival { background-image: url('../img/targetcon/HayatoShinden.jpg'); }
+.SatomuSugiyama-heart, .SatomuSugiyama-festival { background-image: url('../img/targetcon/SatomuSugiyama.jpg'); }
+.ShuuskueKitajima-heart, .ShuuskueKitajima-festival { background-image: url('../img/targetcon/ShuuskueKitajima.jpg'); }
+.AndrewRoovers-heart, .AndrewRoovers-festival { background-image: url('../img/targetcon/AndrewRoovers.jpg'); }
+.MichaelBrennan-heart, .MichaelBrennan-festival { background-image: url('../img/targetcon/MichaelBrennan.jpg'); }
+.KiiIne-heart, .KiiIne-festival { background-image: url('../img/targetcon/KiiIne.jpg'); }
+.EmiriNimiya-heart, .EmiriNimiya-festival { background-image: url('../img/targetcon/EmiriNimiya.jpg'); }
+.SaitaShinoda-heart, .HaruoNakamoto-heart, .HaruoNakamoto-spread, .SaitaShinoda-festival, .HaruoNakamoto-festival { background-image: url('../img/targetcon/SaitaShinoda.jpg'); }
+.GakushiYamaoka-heart, .GakushiYamaoka-festival { background-image: url('../img/targetcon/GakushiYamaoka.jpg'); }
+.EdwardVeitch-heart, .EdwardVeitch-festival { background-image: url('../img/targetcon/EdwardVeitch.jpg'); }
+.ShuusukeSeki-heart, .ShuusukeSeki-festival { background-image: url('../img/targetcon/ShuusukeSeki.jpg'); }
+.Shikuna-heart, .Shikuna-festival { background-image: url('../img/targetcon/Shikuna.jpg'); }
+.JunyaAndou-heart, .JunyaAndou-festival { background-image: url('../img/targetcon/JunyaAndou.jpg'); }
+.MitsukoKinjou-heart, .ChiyoeTawara-heart, .ChiyoeTawara-spread, .MitsukoKinjou-festival, .ChiyoeTawara-festival { background-image: url('../img/targetcon/MitsukoKinjou.jpg'); }
+.IkumaNakazawa-heart, .IkumaNakazawa-festival { background-image: url('../img/targetcon/IkumaNakazawa.jpg'); }
+.HifumiYoshii-heart, .HifumiYoshii-festival { background-image: url('../img/targetcon/HifumiYoshii.jpg'); }
+.Mekashita-heart, .Mekashita-festival { background-image: url('../img/targetcon/Mekashita.jpg'); }
+.SadatoKatagiri-heart, .SadatoKatagiri-festival { background-image: url('../img/targetcon/SadatoKatagiri.jpg'); }
+.TakemiShiraishi-heart, .TakemiShiraishi-spread, .TakemiShiraishi-festival { background-image: url('../img/targetcon/TakemiShiraishi.jpg'); }
+.MasumiOkamoto-heart, .MasumiOkamoto-spread, .MasumiOkamoto-festival { background-image: url('../img/targetcon/MasumiOkamoto.jpg'); }
+.SoujiYamamura-heart, .SoujiYamamura-spread, .SoujiYamamura-festival  { background-image: url('../img/targetcon/SoujiYamamura.jpg'); }
+.SeiichiAsada-heart, .SeiichiAsada-spread, .SeiichiAsada-festival { background-image: url('../img/targetcon/SeiichiAsada.jpg'); }
+.RikiHirayama-heart, .RikiHirayama-spread, .RikiHirayama-festival { background-image: url('../img/targetcon/RikiHirayama.jpg'); }
+.Jikushikatate-heart, .Jikushikatate-festival { background-image: url('../img/targetcon/Jikushikatate.jpg'); }
+.IkkeiAndou-heart, .IkkeiAndou-spread, .IkkeiAndou-festival { background-image: url('../img/targetcon/IkkeiAndou.jpg'); }
+.ErikBaumgartner-heart, .ErikBaumgartner-spread, .ErikBaumgartner-festival { background-image: url('../img/targetcon/ErikBaumgartner.jpg'); }
+.YukihisaNagaoka-heart, .YukihisaNagaoka-spread, .YukihisaNagaoka-festival { background-image: url('../img/targetcon/YukihisaNagaoka.jpg'); }
+.AkihideNishihara-heart, .AkihideNishihara-spread, .AkihideNishihara-festival { background-image: url('../img/targetcon/AkihideNishihara.jpg'); }
+.KouchiYuasa-heart, .KyoutaShinden-heart, .KouchiYuasa-spread, .KouchiYuasa-festival, .KyoutaShinden-festival { background-image: url('../img/targetcon/KouchiYuasa.jpg'); }
+.KazuyasuMaruyama-heart, .KazuyasuMaruyama-festival { background-image: url('../img/targetcon/KazuyasuMaruyama.jpg'); }
+.RafnHelguson-heart, .HidakaUno-heart, .HayakiFukasawa-heart, .RafnHelguson-spread, .HidakaUno-spread, .RafnHelguson-festival, .HidakaUno-festival, .HayakiFukasawa-festival { background-image: url('../img/targetcon/RafnHelguson.jpg'); }
+.SamuelSantosLima-heart, .SamuelSantosLima-spread, .SamuelSantosLima-festival { background-image: url('../img/targetcon/SamuelSantosLima.jpg'); }
+.TenmaKanou-heart, .TenmaKanou-spread, .TenmaKanou-festival { background-image: url('../img/targetcon/TenmaKanou.jpg'); }
+.TsunetoOzaki-heart, .TsunetoOzaki-spread, .TsunetoOzaki-festival { background-image: url('../img/targetcon/TsunetoOzaki.jpg'); }
+.TommyJJGervais-heart, .TommyJJGervais-spread, .TommyJJGervais-festival { background-image: url('../img/targetcon/TommyJJGervais.jpg'); }
+.BunkaShintani-heart, .BunkaShintani-spread, .BunkaShintani-festival { background-image: url('../img/targetcon/BunkaShintani.jpg'); }
+.MaxGerber-heart, .JohnMaverick-heart, .MaxGerber-spread, .JohnMaverick-spread, .MaxGerber-festival, .JohnMaverick-festival { background-image: url('../img/targetcon/MaxGerber.jpg'); }
+.TomochikaHonma-heart, .TomochikaHonma-spread, .TomochikaHonma-festival { background-image: url('../img/targetcon/TomochikaHonma.jpg'); }
+.TomochikaKoizumi-heart, .TomochikaKoizumi-spread, .TomochikaKoizumi-festival { background-image: url('../img/targetcon/TomochikaKoizumi.jpg'); }
+.TsumugiIwai-heart, .TsumugiIwai-spread, .TsumugiIwai-festival { background-image: url('../img/targetcon/TsumugiIwai.jpg'); }
+.MauryVeich-heart, .MauryVeich-spread, .MauryVeich-festival { background-image: url('../img/targetcon/MauryVeich.jpg'); }
+.MasashiMorioka-heart, .MasashiMorioka-spread, .MasashiMorioka-festival { background-image: url('../img/targetcon/MasashiMorioka.jpg'); }
+.JohanIshibashi-heart, .JohanIshibashi-spread, .JohanIshibashi-festival { background-image: url('../img/targetcon/JohanIshibashi.jpg'); }
+.SpencerShort-heart, .SpencerShort-spread, .SpencerShort-festival { background-image: url('../img/targetcon/SpencerShort.jpg'); }
+.IkkeiTsutsui-heart, .IkkeiTsutsui-spread, .IkkeiTsutsui-festival { background-image: url('../img/targetcon/IkkeiTsutsui.jpg'); }
+.MinaoMorishita-heart, .MinaoMorishita-spread, .MinaoMorishita-festival { background-image: url('../img/targetcon/MinaoMorishita.jpg'); }
+.TamamiKuroki-heart, .TamamiKuroki-spread, .TamamiKuroki-festival { background-image: url('../img/targetcon/TamamiKuroki.jpg'); }
+.YamatoNarita-heart, .YamatoNarita-spread, .YamatoNarita-festival { background-image: url('../img/targetcon/YamatoNarita.jpg'); }
+.MasayoshiSakakihara-heart, .MasayoshiSakakihara-spread, .MasayoshiSakakihara-festival { background-image: url('../img/targetcon/MasayoshiSakakihara.jpg'); }
+.WakanaTsutsumi-heart, .WakanaTsutsumi-spread, .WakanaTsutsumi-festival { background-image: url('../img/targetcon/WakanaTsutsumi.jpg'); }
+.TadaoMotsuzuki-heart, .TadaoMotsuzuki-spread, .TadaoMotsuzuki-festival { background-image: url('../img/targetcon/TadaoMotsuzuki.jpg'); }
+.KenichiArakawa-heart, .KenichiArakawa-spread, .KenichiArakawa-festival { background-image: url('../img/targetcon/KenichiArakawa.jpg'); }
+.OliverDrabløs-heart, .NikicaPranjić-heart, .OliverDrabløs-spread, .NikicaPranjić-spread, .OliverDrabløs-festival, .NikicaPranjić-festival { background-image: url('../img/targetcon/OliverDrabløs.jpg'); }
+.ChiyuuMatsusaki-heart, .ChiyuuMatsusaki-spread, .ChiyuuMatsusaki-festival { background-image: url('../img/targetcon/ChiyuuMatsusaki.jpg'); }
+.JunsukeOkamoto-heart, .JunsukeOkamoto-spread, .JunsukeOkamoto-festival { background-image: url('../img/targetcon/JunsukeOkamoto.jpg'); }
+.YukiyaKubo-heart, .YukiyaKubo-festival { background-image: url('../img/targetcon/YukiyaKubo.jpg'); }
+.YasuakiInagaki-heart, .ChikashiNakatani-heart, .YasuakiInagaki-spread, .ChikashiNakatani-spread, .YasuakiInagaki-festival, .ChikashiNakatani-festival, .TakumaFukui-festival { background-image: url('../img/targetcon/YasuakiInagaki.jpg'); }
+.FengCheng-heart, .FengCheng-spread, .FengCheng-festival { background-image: url('../img/targetcon/FengCheng.jpg'); }
+.PhilipaWallisFujioka-heart, .PhilipaWallisFujioka-festival { background-image: url('../img/targetcon/PhilipaWallisFujioka.jpg'); }
+.MelissaMAdams-heart, .MelissaMAdams-festival { background-image: url('../img/targetcon/MelissaMAdams.jpg'); }
+.NooriShadid-heart, .NooriShadid-spread, .NooriShadid-festival { background-image: url('../img/targetcon/NooriShadid.jpg'); }
+.ShoichiKataoka-heart, .KouTokunaga-heart, .ShoichiKataoka-spread, .ShoichiKataoka-festival, .KouTokunaga-festival { background-image: url('../img/targetcon/ShoichiKataoka.jpg'); }
+.OliverDamon-heart, .OliverDamon-spread, .OliverDamon-festival { background-image: url('../img/targetcon/OliverDamon.jpg'); }
+.JamesCarey-heart, .JamesCarey-festival { background-image: url('../img/targetcon/JamesCarey.jpg'); }
+.ToshimiShinden-heart, .ToshimiShinden-spread, .ToshimiShinden-festival { background-image: url('../img/targetcon/ToshimiShinden.jpg'); }
+.HokutoYamamoto-heart, .HokutoYamamoto-spread, .HokutoYamamoto-festival { background-image: url('../img/targetcon/HokutoYamamoto.jpg'); }
+.YuiUemura-heart, .YuiUemura-spread, .YuiUemura-festival { background-image: url('../img/targetcon/YuiUemura.jpg'); }
+.SalvioParraRojo-heart, .SalvioParraRojo-festival { background-image: url('../img/targetcon/SalvioParraRojo.jpg'); }
+.YoshikazuSasaki-heart, .YoshikazuSasaki-festival { background-image: url('../img/targetcon/YoshikazuSasaki.jpg'); }
+.KaimeiKuroki-heart, .KaimeiKuroki-festival { background-image: url('../img/targetcon/KaimeiKuroki.jpg'); }
+.KyuuyaSugiyama-heart, .KyuuyaSugiyama-spread, .KyuuyaSugiyama-festival { background-image: url('../img/targetcon/KyuuyaSugiyama.jpg'); }
+.HideyoShibata-heart, .HideyoShibata-spread, .HideyoShibata-festival { background-image: url('../img/targetcon/HideyoShibata.jpg'); }
+.ShikiFujino-heart, .ShikiFujino-spread, .ShikiFujino-festival { background-image: url('../img/targetcon/ShikiFujino.jpg'); }
+.HelenaOotsuka-heart, .HelenaOotsuka-spread, .HelenaOotsuka-festival { background-image: url('../img/targetcon/HelenaOotsuka.jpg'); }
+.KoukoYoshioka-heart, .KoukoYoshioka-spread, .KoukoYoshioka-festival { background-image: url('../img/targetcon/KoukoYoshioka.jpg'); }
+.RisaeOosawa-heart, .RisaeOosawa-spread, .RisaeOosawa-festival { background-image: url('../img/targetcon/RisaeOosawa.jpg'); }
+.LaraCarvalhoLima-heart, .LaraCarvalhoLima-festival { background-image: url('../img/targetcon/LaraCarvalhoLima.jpg'); }
+.OscarHimura-heart, .OscarHimura-spread, .OscarHimura-festival { background-image: url('../img/targetcon/OscarHimura.jpg'); }
+.KathrinKuster-heart, .KathrinKuster-spread, .KathrinKuster-festival { background-image: url('../img/targetcon/KathrinKuster.jpg'); }
+.LordHarveySilk-heart, .LordHarveySilk-festival { background-image: url('../img/targetcon/LordHarveySilk.jpg'); }
+.DwyerGPitt-heart, .DwyerGPitt-spread, .DwyerGPitt-festival { background-image: url('../img/targetcon/DwyerGPitt.jpg'); }
+.AkioKawashima-heart, .AkioKawashima-spread, .AkioKawashima-festival { background-image: url('../img/targetcon/AkioKawashima.jpg'); }
+.GentaKakuta-heart, .GentaKakuta-festival { background-image: url('../img/targetcon/GentaKakuta.jpg'); }
+.AxelGeorge-heart, .AxelGeorge-spread, .AxelGeorge-festival { background-image: url('../img/targetcon/AxelGeorge.jpg'); }
+.JustinSpeer-heart, .JustinSpeer-spread, .JustinSpeer-festival { background-image: url('../img/targetcon/JustinSpeer.jpg'); }
+.FuukiSuitani-heart, .FuukiSuitani-spread, .FuukiSuitani-festival { background-image: url('../img/targetcon/FuukiSuitani.jpg'); }
+.WakuOchiai-heart, .WakuOchiai-spread, .WakuOchiai-festival { background-image: url('../img/targetcon/WakuOchiai.jpg'); }
+.YuutoSaiki-heart, .YuutoSaiki-festival { background-image: url('../img/targetcon/YuutoSaiki.jpg'); }
+.PaulaUngar-heart, .PaulaUngar-spread, .PaulaUngar-festival { background-image: url('../img/targetcon/PaulaUngar.jpg'); }
+.SatoyoTakano-heart, .SatoyoTakano-festival { background-image: url('../img/targetcon/SatoyoTakano.jpg'); }
+.RayMiller-heart, .RayMiller-spread, .RayMiller-festival { background-image: url('../img/targetcon/RayMiller.jpg'); }
+.AngelinaKleiner-heart, .AngelinaKleiner-spread, .AngelinaKleiner-festival { background-image: url('../img/targetcon/AngelinaKleiner.jpg'); }
+.SadatoMurai-heart, .SadatoMurai-festival { background-image: url('../img/targetcon/SadatoMurai.jpg'); }
+.SakutarouOyama-heart, .SakutarouOyama-spread, .SakutarouOyama-festival { background-image: url('../img/targetcon/SakutarouOyama.jpg'); }
+.LyleGaulin-heart, .LyleGaulin-spread, .LyleGaulin-festival { background-image: url('../img/targetcon/LyleGaulin.jpg'); }
+.KouyuuOkuta-heart, .KanameKonishi-heart, .KouyuuOkuta-spread, .KanameKonishi-spread, .KouyuuOkuta-festival, .KanameKonishi-festival { background-image: url('../img/targetcon/KouyuuOkuta.jpg'); }
+.JeoffroiDurepos-heart, .JeoffroiDurepos-spread, .JeoffroiDurepos-festival { background-image: url('../img/targetcon/JeoffroiDurepos.jpg'); }
+.DianeReddington-heart, .DianeReddington-spread, .DianeReddington-festival { background-image: url('../img/targetcon/DianeReddington.jpg'); }
+.AlexanderKellerman-heart, .AlexanderKellerman-spread, .AlexanderKellerman-festival { background-image: url('../img/targetcon/AlexanderKellerman.jpg'); }
+.JamesStewart-heart, .JamesStewart-spread, .JamesStewart-festival { background-image: url('../img/targetcon/JamesStewart.jpg'); }
+.FumihiroOchiai-heart, .FumihiroOchiai-festival { background-image: url('../img/targetcon/FumihiroOchiai.jpg'); }
+.LisaRickardson-heart, .LisaRickardson-spread, .LisaRickardson-festival { background-image: url('../img/targetcon/LisaRickardson.jpg'); }
+.HidetoshiHiga-heart, .HidetoshiHiga-spread, .HidetoshiHiga-festival { background-image: url('../img/targetcon/HidetoshiHiga.jpg'); }
+.HuanYueHao-heart, .HuanYueHao-spread, .HuanYueHao-festival { background-image: url('../img/targetcon/HuanYueHao.jpg'); }
+.YuusouIshikuno-heart, .YuusouIshikuno-spread, .YuusouIshikuno-festival { background-image: url('../img/targetcon/YuusouIshikuno.jpg'); }
 
 /* Patient Zero */
 .OwenCage-spread { background-image: url('../img/target/OwenCage.jpg'); }
