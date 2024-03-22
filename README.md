@@ -42,6 +42,19 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 
 ### Latest Update
 
+**March 22nd, 2023**
+* **Elusive Target:**
+  * **#42: The Undying Returns (2024)** - A new listing since the game presents it as such. The original versions of the ETs, despite how little difference there are between them, remain listed for use with "The Oroborous" Arcade DLC. 
+* **HITMAN:**
+  * **Situs Inversus / Hokkaido Snow Festival:**
+    * **Contracts Mode:** Updated the name listed for 3 NPCs. At some point they had been given last names.
+>**Bug Hunting:** Please make a post [via GitHub](https://github.com/BRYN4444/HitmanRoulette/issues) or in the thread [on Hitman Forum](https://hitmanforum.com/t/13107) if you:
+>* Experience any graphical issues while using the Roulette in 4K, or on phones/tablets.
+>* Generate impossibilities when using the Roulette with Elusive Targets or past titles HITMAN / HITMAN 2.
+>* Have troubles or questions about the Stream Overlay.
+
+---
+
 **November 24th, 2023**
 * **HITMAN:**
   * **Holiday Hoarders:** 159 Contracts Mode Targets added. Majority of these are from the normal "The Showstopper" mission.
@@ -49,12 +62,6 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 * **Other Fixes:**
   * Fixed bad cropping on some Contracts Mode Target images in Hokkaido.
   * Fixed a spelling mistake on a Contracts Mode Target used throughout Hokkaido.
-* **Current Plans:**
-  * We'll see if anything substantial happens with WoA in the new year, otherwise don't expect much. Maybe some more Contracts Mode targets but no promises. Otherwise, thanks for enjoying the Roulette!
->**Bug Hunting:** Please make a post [via GitHub](https://github.com/BRYN4444/HitmanRoulette/issues) or in the thread [on Hitman Forum](https://hitmanforum.com/t/13107) if you:
->* Experience any graphical issues while using the Roulette in 4K, or on phones/tablets.
->* Generate impossibilities when using the Roulette with Elusive Targets or past titles HITMAN / HITMAN 2.
->* Have troubles or questions about the Stream Overlay.
 
 ---
 
@@ -135,13 +142,3 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
   * HITMAN: Would Of Assassination is getting a physical release, so wording was slightly changed in About & Help > Compatibility & Issues.
   * An Extra Objective applicable to all Elusive Targets wasn't properly displaying an image.
   * Slight rewording of Roulette Settings descriptions.
-
----
-
-**February 15th, 2023**
-* **Roulette:**
-  * **Roulette Settings:**
-	  * **Roulette Music**: Added a new track combining the "Mild" & "Hot" versions of the loading screen music from Freelancer.
-* **Other Fixes:**
-  * Elusive Targets weren't setup properly to avoid difficulty/saving related Complications/Challenges.
-  * Some "Gameplay Challenges" images still used HITMAN 2's hot magenta HUD coloring. These very tiny instances were changed to III/WoA's red.
