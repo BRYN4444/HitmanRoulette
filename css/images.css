@@ -248,6 +248,7 @@ html.httheme {
 .et39 { background:#292929 url("../img/missions/et39.png") no-repeat center top / 350px; }
 .et40 { background:#292929 url("../img/missions/et40.png") no-repeat center top / 350px; }
 .et41 { background:#292929 url("../img/missions/et41.png") no-repeat center top / 350px; }
+.et42 { background:#292929 url("../img/missions/et42.png") no-repeat center top / 350px; }
 
 /*** Backgrounds ***/
 .training, .test { background-image:var(--missionbggradient), var(--icafacility); }
@@ -1633,7 +1634,7 @@ div[class^="ElusiveTarget"], div[class^="UnassignedTarget"] { background-image: 
 .TenriShinosaki-heart, .TenriShinosaki-spread, .TenriShinosaki-festival { background-image: url('../img/targetcon/TenriShinosaki.jpg'); }
 .MakioYanagisawa-heart, .HomareKanai-heart, .MakioYanagisawa-spread, .MakioYanagisawa-festival, .HomareKanai-festival { background-image: url('../img/targetcon/MakioYanagisawa.jpg'); }
 .KinjiYamazaki-heart, .SorahikoSatou-heart, .KinjiYamazaki-spread, .KinjiYamazaki-festival, .SorahikoSatou-festival { background-image: url('../img/targetcon/KinjiYamazaki.jpg'); }
-.Nokadota-heart, .Nokadota-festival { background-image: url('../img/targetcon/Nokadota.jpg'); }
+.NokadotaChiba-heart, .NokadotaChiba-festival { background-image: url('../img/targetcon/Nokadota.jpg'); }
 .ShoudaiKurosawa-heart, .ShoudaiKurosawa-spread, .ShoudaiKurosawa-festival { background-image: url('../img/targetcon/ShoudaiKurosawa.jpg'); }
 .YukioMatsushima-heart, .YukioMatsushima-spread, .YukioMatsushima-festival { background-image: url('../img/targetcon/YukioMatsushima.jpg'); }
 .EllinorYasuda-heart, .EllinorYasuda-festival { background-image: url('../img/targetcon/EllinorYasuda.jpg'); }
@@ -1654,14 +1655,14 @@ div[class^="ElusiveTarget"], div[class^="UnassignedTarget"] { background-image: 
 .MitsukoKinjou-heart, .ChiyoeTawara-heart, .ChiyoeTawara-spread, .MitsukoKinjou-festival, .ChiyoeTawara-festival { background-image: url('../img/targetcon/MitsukoKinjou.jpg'); }
 .IkumaNakazawa-heart, .IkumaNakazawa-festival { background-image: url('../img/targetcon/IkumaNakazawa.jpg'); }
 .HifumiYoshii-heart, .HifumiYoshii-festival { background-image: url('../img/targetcon/HifumiYoshii.jpg'); }
-.Mekashita-heart, .Mekashita-festival { background-image: url('../img/targetcon/Mekashita.jpg'); }
+.MekashitaIzumi-heart, .MekashitaIzumi-festival { background-image: url('../img/targetcon/Mekashita.jpg'); }
 .SadatoKatagiri-heart, .SadatoKatagiri-festival { background-image: url('../img/targetcon/SadatoKatagiri.jpg'); }
 .TakemiShiraishi-heart, .TakemiShiraishi-spread, .TakemiShiraishi-festival { background-image: url('../img/targetcon/TakemiShiraishi.jpg'); }
 .MasumiOkamoto-heart, .MasumiOkamoto-spread, .MasumiOkamoto-festival { background-image: url('../img/targetcon/MasumiOkamoto.jpg'); }
 .SoujiYamamura-heart, .SoujiYamamura-spread, .SoujiYamamura-festival  { background-image: url('../img/targetcon/SoujiYamamura.jpg'); }
 .SeiichiAsada-heart, .SeiichiAsada-spread, .SeiichiAsada-festival { background-image: url('../img/targetcon/SeiichiAsada.jpg'); }
 .RikiHirayama-heart, .RikiHirayama-spread, .RikiHirayama-festival { background-image: url('../img/targetcon/RikiHirayama.jpg'); }
-.Jikushikatate-heart, .Jikushikatate-festival { background-image: url('../img/targetcon/Jikushikatate.jpg'); }
+.JikushikatateFujimura-heart, .JikushikatateFujimura-festival { background-image: url('../img/targetcon/Jikushikatate.jpg'); }
 .IkkeiAndou-heart, .IkkeiAndou-spread, .IkkeiAndou-festival { background-image: url('../img/targetcon/IkkeiAndou.jpg'); }
 .ErikBaumgartner-heart, .ErikBaumgartner-spread, .ErikBaumgartner-festival { background-image: url('../img/targetcon/ErikBaumgartner.jpg'); }
 .YukihisaNagaoka-heart, .YukihisaNagaoka-spread, .YukihisaNagaoka-festival { background-image: url('../img/targetcon/YukihisaNagaoka.jpg'); }
@@ -1795,6 +1796,7 @@ div[class^="ElusiveTarget"], div[class^="UnassignedTarget"] { background-image: 
 
 .MarkFaba-speedway-undying { background-image: url('../img/target/MarkFaba.jpg'); }
 .MarkFaba-speedway-undying-returns { background-image: url('../img/target/MarkFabaInjured.jpg'); }
+.MarkFaba-speedway-undying-returns-2024 { background-image: url('../img/target/MarkFabaInjured.jpg'); }
 
 .JohnattanKindane-speedway { background-image: url('../img/targetcon/JohnattanKindane.jpg'); }
 .EdwardTedMendez-speedway { background-image: url('../img/targetcon/EdwardTedMendez.jpg'); }
