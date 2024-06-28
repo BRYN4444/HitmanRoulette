@@ -249,6 +249,7 @@ html.httheme {
 .et40 { background:#292929 url("../img/missions/et40.png") no-repeat center top / 350px; }
 .et41 { background:#292929 url("../img/missions/et41.png") no-repeat center top / 350px; }
 .et42 { background:#292929 url("../img/missions/et42.png") no-repeat center top / 350px; }
+.et43 { background:#292929 url("../img/missions/et43.png") no-repeat center top / 350px; }
 
 /*** Backgrounds ***/
 .training, .test { background-image:var(--missionbggradient), var(--icafacility); }
@@ -2158,6 +2159,7 @@ div[class^="ElusiveTarget"], div[class^="UnassignedTarget"] { background-image: 
 
 .MirandaJamison-ark-appraiser { background-image: url('../img/target/MirandaJamison.jpg'); }
 .JimmyChen-ark-stowaway { background-image: url('../img/target/JimmyChen.jpg'); }
+.TheDisruptor-ark-disruptor2024 { background-image: url('../img/target/TheDisruptor.jpg'); }
 
 .TheConstant-ark { background-image: url('../img/targetcon/TheConstant.jpg'); }
 .ThaddeusHartwell-ark, .DeclanBarton-ark { background-image: url('../img/targetcon/ThaddeusHartwell.jpg'); }
@@ -2800,6 +2802,7 @@ div[class^="ElusiveTarget"], div[class^="UnassignedTarget"] { background-image: 
 .RetrieveSoiréeHorribleGuestlist { background-image: url('../img/obj/RetrieveSoiréeHorribleGuestlist.png'); }
 .RetrievetheNotebook { background-image: url('../img/obj/RetrievetheNotebook.png'); }
 .RetrievetheDictaphone { background-image: url('../img/obj/RetrievetheDictaphone.png'); }
+.DoNotEliminateTimQuinnOptional { background-image: url('../img/obj/DoNotEliminateTimQuinnOptional.png'); }
 .RetrievethePaintingOptional { background-image: url('../img/obj/RetrievethePaintingOptional.png'); }
 .OptionalDoNotEliminateTheGuide { background-image: url('../img/obj/OptionalDoNotEliminateTheGuide.png'); }
 
