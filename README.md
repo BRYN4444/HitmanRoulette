@@ -23,9 +23,11 @@ To quickly return the Roulette Settings back to default, preform a hard refresh 
 ## Compatibility & Issues
 
 Though you can deselect any location you do not own, by default the Roulette selects mission from:
-* **HITMAN: World of Assassination** (Or any version of HITMAN III with the latest patch)
-* **HITMAN: World of Assassination Deluxe Pack** (DLC)
-* **Sarajevo Six Campaign Pack** (DLC)
+1. - **HITMAN: World of Assassination** (HITMAN III patched) and **HITMAN: World of Assassination Deluxe Pack** (DLC)
+   - OR just **HITMAN: World of Assassination Deluxe Edition** (GAME with DLC)
+2. **Sarajevo Six Campaign Pack** (DLC)
+3. **The Undying Pack** (DLC)
+4. **The Disruptor Pack** (DLC)
 
 There may be the odd conflicting trait that changed between releases in this trilogy, though I've done my best to account for these. It is also important to note that the later the game sequel, the more gear is available to unlock for use. Lastly, since Contract Mode Targets are regular NPCs and Elimination Methods are randomly assigned, not every Target can be killed with every Method easily/silently.
 
@@ -42,16 +44,25 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 
 ### Latest Update
 
+**June 27th, 2023**
+* **Elusive Target:**
+  * **#43: The Disruptor (2024)** - New ET added, including optional objective. Mission specific extra/photo objectives will be added once I have more time with this. Fun f
+  * Removed a duplicate extra objective listing in several Ark Society ETs (and the standard mission itelf). Didn't impact anything other than imbalancing the odds of rolling it.
+* **Other Fixes:**
+  * Better clarified what game & DLC combinations and purchases are used by the Roulette in the Compatibility & Issues section. Added the two Elusive Target DLC packs.
+>**Bug Hunting:** Please make a post [via GitHub](https://github.com/BRYN4444/HitmanRoulette/issues) or in the thread [on Hitman Forum](https://hitmanforum.com/t/13107) if you:
+>* Experience any graphical issues while using the Roulette in 4K, or on phones/tablets.
+>* Generate impossibilities when using the Roulette with Elusive Targets or past titles HITMAN / HITMAN 2.
+>* Have troubles or questions about the Stream Overlay.
+
+---
+
 **March 22nd, 2023**
 * **Elusive Target:**
   * **#42: The Undying Returns (2024)** - A new listing since the game presents it as such. The original versions of the ETs, despite how little difference there are between them, remain listed for use with "The Oroborous" Arcade DLC. 
 * **HITMAN:**
   * **Situs Inversus / Hokkaido Snow Festival:**
     * **Contracts Mode:** Updated the name listed for 3 NPCs. At some point they had been given last names.
->**Bug Hunting:** Please make a post [via GitHub](https://github.com/BRYN4444/HitmanRoulette/issues) or in the thread [on Hitman Forum](https://hitmanforum.com/t/13107) if you:
->* Experience any graphical issues while using the Roulette in 4K, or on phones/tablets.
->* Generate impossibilities when using the Roulette with Elusive Targets or past titles HITMAN / HITMAN 2.
->* Have troubles or questions about the Stream Overlay.
 
 ---
 
@@ -121,24 +132,3 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
   * In The Mercenary, the only exit available was the tornado shelter. This was inaccurate as I was confusing the original H1 exit restrictions in Freedom Fighters as applying here too. This is now fixed.
   * Updated the image for the Mr. Raptor Easter Egg Exit in Freedom Fighters & The Mercenary to better convey all the items needed, as it was missing one.
   * Removed the "Car" exit from The Deceivers and The Guru Elusive Targets, as it is not available in those missions. Overlooked mistake.
-
----
-
-**May 11th, 2023**
-* **Roulette:**
-  * **Select Missions:**
-    * **Contract Mode Roulette:** Freeform Training has always had this option on the Roulette (via the game's Tutorial), but now that it is officially supported the listing while selecting has been updated.
-* **HITMAN:**
-  * **Patient Zero:**
-    * **Starting Location:** "Infiltrating below the Helipad" image has been changed to reflect that it is no longer an "undercover" entrance, meaning you can select any suit.
-* **HITMAN III:**
-  * **Apex Predator:**
-    * **Starting Location:** "Club Entrance" image has been changed to reflect that it is no longer an "undercover" entrance, meaning you can select any suit.
-* **Elusive Target (Arcade):**
-  * **#37: The Heartbreaker**
-    * **Extra Objectives:** 2 added.
-    * **Photo Objectives:** 4 added.
-* **Other Fixes:**
-  * HITMAN: Would Of Assassination is getting a physical release, so wording was slightly changed in About & Help > Compatibility & Issues.
-  * An Extra Objective applicable to all Elusive Targets wasn't properly displaying an image.
-  * Slight rewording of Roulette Settings descriptions.
