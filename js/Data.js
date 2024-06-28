@@ -3983,7 +3983,6 @@ var tas = {
 	"Five Finger Discount|Steal the Astek necklace.",
 	"Raider Of The Lost Ark|Open all nine Ark shipping crates",
 	"Egg On Your Face|Knock out 6 NPCs with filigree eggs.",
-	"Great Balls Of Fire|Light the brazier in the penthouse with the torch.",
 	"Switcheroo|Swap the Astek necklace with an apricot without permanently disabling the security.",
 	"The Greatest Show|Complete the effigy ceremony as planned.",
 	"A Pain In The Neck|Acquire the poison chip blueprints.",
@@ -6766,7 +6765,6 @@ var theappraiser = {
 	"Five Finger Discount|Steal the Astek necklace.",
 	"Raider Of The Lost Ark|Open all nine Ark shipping crates",
 	"Egg On Your Face|Knock out 6 NPCs with filigree eggs.",
-	"Great Balls Of Fire|Light the brazier in the penthouse with the torch.",
 	"Switcheroo|Swap the Astek necklace with an apricot without permanently disabling the security.",
 	"The Greatest Show|Complete the effigy ceremony as planned.",
 	"A Pain In The Neck|Acquire the poison chip blueprints.",
@@ -6819,7 +6817,6 @@ var thestowaway = {
 	"Five Finger Discount|Steal the Astek necklace.",
 	"Raider Of The Lost Ark|Open all nine Ark shipping crates",
 	"Egg On Your Face|Knock out 6 NPCs with filigree eggs.",
-	"Great Balls Of Fire|Light the brazier in the penthouse with the torch.",
 	"Switcheroo|Swap the Astek necklace with an apricot without permanently disabling the security.",
 	"The Greatest Show|Complete the effigy ceremony as planned.",
 	"A Pain In The Neck|Acquire the poison chip blueprints.",
@@ -6828,6 +6825,57 @@ var thestowaway = {
 	"Worthy Sacrifice|Through process, exfiltrate with the Sacrificial Knife<a href='./img/general/burialknife.jpg' target='_blank'>.</a>"],
 	photos: ["Photographic Proof|Take a photo of your target(s) after you've eliminated them, unless their body is unavailable. They must not be in a body bag."]
 };
+var thedisruptor2024 = {
+	missionTitle: "The Disruptor (2024)",
+	missionLocation: "Isle of Sgàil",
+	missionCode: "ark-disruptor2024",
+	melee: ["Fiber Wire","Aztec Necklace",
+	"Battle Axe|Melee","Battle Axe|Thrown Weapon",
+	"Broadsword|Melee","Broadsword|Thrown Weapon",
+	"Burial Dagger|Melee","Burial Dagger|Thrown Weapon",
+	"Circumcision Knife|Melee","Circumcision Knife|Thrown Weapon",
+	"Cleaver|Melee","Cleaver|Thrown Weapon",
+	"Fire Axe|Melee","Fire Axe|Thrown Weapon",
+	"Hatchet|Melee","Hatchet|Thrown Weapon",
+	"Katana|Melee","Katana|Thrown Weapon",
+	"Letter Opener|Melee","Letter Opener|Thrown Weapon",
+	"Old Axe|Melee","Old Axe|Thrown Weapon",
+	"Saber|Melee","Saber|Thrown Weapon",
+	"Sapper's Axe|Melee","Sapper's Axe|Thrown Weapon",
+	"Scalpel|Melee","Scalpel|Thrown Weapon",
+	"Scissors|Melee","Scissors|Thrown Weapon",
+	"Screwdriver|Melee","Screwdriver|Thrown Weapon",
+	"Viking Axe|Melee","Viking Axe|Thrown Weapon",
+	"Starfish|Melee","Starfish|Thrown Weapon"],
+	targetList: ["The Disruptor"],
+	contractUnique: ["The Disruptor|Elusive Target"],
+	contractCivilian: [],
+	contractStaff: [],
+	contractGuard: [],
+	entry: ["Harbor","Chapel","Keep","Reception Area","Kitchens","Warehouse","Gallery","Architects' Lounge"],
+	exit: ["Speedboat","Helipad","East Wall","Rooftop|(Needs Flare)","Warehouse Ladder"],
+	eexit: ["Swan Dive|(Secret)"],
+	disguises: ["Any Suit","Blake Nathaniel","Jebediah Block","Master of Ceremonies","Butler","Burial Robes",
+	"Entertainer","Initiate","Knight's Armor",
+	"Chef","Custodian","Castle Staff","Event Staff",
+	"Guard","Elite Guard","Raider",
+	"Architect","Ark Member"],
+	disguiseVariants: ["Any Suit"],
+	wild: ["True Initiate|Collect 10 commemorative tokens.",
+	"Over Achiever|Collect 20 commemorative tokens.",
+	"Magpie|Collect 30 commemorative tokens."],
+	missionWild: ["Elusive Honor|Do not restart under any circumstances. If you fail, you must honor the 12 hour limit until you can try again."],
+	compWild: ["Five Finger Discount|Steal the Astek necklace.",
+	"Raider Of The Lost Ark|Open all nine Ark shipping crates",
+	"Egg On Your Face|Knock out 6 NPCs with filigree eggs.",
+	"Switcheroo|Swap the Astek necklace with an apricot without permanently disabling the security.",
+	"A Pain In The Neck|Acquire the poison chip blueprints.",
+	"A True Test Of Skillet|Pacify 10 people with the frying pan while disguised as a chef and remain unspotted.",
+	"I Challenge Thee To A Duel|Knock out 10 people with a fish.",
+	"Worthy Sacrifice|Through process, exfiltrate with the Sacrificial Knife<a href='./img/general/burialknife.jpg' target='_blank'>.</a>"],
+	photos: ["Photographic Proof|Take a photo of your target(s) after you've eliminated them, unless their body is unavailable. They must not be in a body bag."]
+};
+
 
 var theascensionist = {
 	missionTitle: "The Ascensionist",
@@ -7270,7 +7318,8 @@ var mission_names_map = {
 	"ET39": theascensionist,
 	"ET40": therage,
 	"ET41": thedrop,
-	"ET42": theundyingreturns2024
+	"ET42": theundyingreturns2024,
+	"ET43": thedisruptor2024
 }
 
 var killTypesMap = {
