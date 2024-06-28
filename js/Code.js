@@ -406,6 +406,8 @@ function containerToResult(container) {
 		result.missionobjective = "Retrieve the Notebook|Retrieve Miranda Jamison's Notebook that contains information on Ark Society members' art purchases and preferences.|Retrieve the Notebook";
 	else if (mode == "MAIN" && result.missionCode == "ark-stowaway")
 		result.missionobjective = "Retrieve the Dictaphone|Retrieve Jimmy Chen's dictaphone.|Retrieve Jimmy Chen's dictaphone";
+	else if (mode == "MAIN" && result.missionCode == "ark-disruptor2024")
+		result.missionobjective = "Do Not Eliminate Tim Quinn [Optional]|It is imperative for the client that Tim Quinn survives the fight.|Ensure Tim Quinn survives the fight";
 	else if (mode == "MAIN" && result.missionCode == "clue-collector")
 		result.missionobjective = "Retrieve the Painting [Optional]|The client offers a bonus if you manage to find and retrieve the painting by Sisal Bardu.|Retrieve the painting [Optional]";
 	else if (mode == "MAIN" && result.missionCode == "club-liability")
