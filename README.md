@@ -44,16 +44,22 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 
 ### Latest Update
 
-**June 27th, 2023**
+**July 20th, 2023**
 * **Elusive Target:**
-  * **#43: The Disruptor (2024)** - New ET added, including optional objective. Mission specific extra/photo objectives will be added once I have more time with this. Fun f
-  * Removed a duplicate extra objective listing in several Ark Society ETs (and the standard mission itelf). Didn't impact anything other than imbalancing the odds of rolling it.
-* **Other Fixes:**
-  * Better clarified what game & DLC combinations and purchases are used by the Roulette in the Compatibility & Issues section. Added the two Elusive Target DLC packs.
+  * **#43: The Disruptor (2024)** - Added 1 extra objective and 4 photo objectives.
 >**Bug Hunting:** Please make a post [via GitHub](https://github.com/BRYN4444/HitmanRoulette/issues) or in the thread [on Hitman Forum](https://hitmanforum.com/t/13107) if you:
 >* Experience any graphical issues while using the Roulette in 4K, or on phones/tablets.
 >* Generate impossibilities when using the Roulette with Elusive Targets or past titles HITMAN / HITMAN 2.
 >* Have troubles or questions about the Stream Overlay.
+
+---
+
+**June 27th, 2023**
+* **Elusive Target:**
+  * **#43: The Disruptor (2024)** - New ET added, including optional objective.
+  * Removed a duplicate extra objective listing in several Ark Society ETs (and the standard mission itelf). Didn't impact anything other than imbalancing the odds of rolling it.
+* **Other Fixes:**
+  * Better clarified what game & DLC combinations and purchases are used by the Roulette in the Compatibility & Issues section. Added the two Elusive Target DLC packs.
 
 ---
 
@@ -109,26 +115,3 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
   * Updated the Select Mission image for the Sarajevo Six to the newer version. Also reworded it as the "Sarajevo Six Campaign" as it is listed in storefronts.
   * Fixed an issue where you on the Dartmoor Garden Show where 4 of the 5 targets would have a disguise requirement listed (when applicable). Now all targets will have one.
   * There is now the possibility for a disguise requirement (when applicable) of the same outfit appearing more than once (one disguise across two targets). Before, due to how the data was parsed, each disguise could only be required once.
-
----
-
-**August 17th, 2023**
-* **Roulette:**
-  * **Select Missions:**
-    * **Sarajevo Six:** Now in the Roulette rotation by default with their release as DLC for World of Assassination. Updated their images to match their new in-game ones and moved the category above Elusive Targets in the listing.
-  * **About & Help:** Updated the compatibility list to include the Sarajevo Six DLC, as well as rewording the listing to mention World of Assassination is just HITMAN III at the latest patch.
-* **HITMAN:**
-  * **The Director:** Updated target image to match new in-game one.
-  * **The Enforcer:** Updated target image to match new in-game one.
-  * **The Extractor:** Updated target image to match new in-game one.
-  * **The Veteran:** Updated target image to match new in-game one.
-  * **The Mercenary:** Updated target image to match new in-game one.
-  * **The Controller:** Updated target image and objective to match new in-game ones.
-* **Other Fixes:**
-  * Fixed a mostly cosmetic issue where the mission icon (top left of the page on Desktop) for Sarajevo Six missions was displaying the standard missions icon instead.
-  * Better clarified what missions are DLC when selecting missions. Also, in continuing to cater to all versions of the games, "GOTY" is listed next to missions as a part of the HITMAN Game of the Year Edition, which just comes with H1 access outside of the launch game.
-  * Reworded the "World of Assassination" primary toggle. Now that the Sarajevo Six are included, the only mission types that are excluded are Elusive Targets.
-  * Fixed two exits in The Extractor not appearing because they were improperly named after a long previous name changes in the data listings.
-  * In The Mercenary, the only exit available was the tornado shelter. This was inaccurate as I was confusing the original H1 exit restrictions in Freedom Fighters as applying here too. This is now fixed.
-  * Updated the image for the Mr. Raptor Easter Egg Exit in Freedom Fighters & The Mercenary to better convey all the items needed, as it was missing one.
-  * Removed the "Car" exit from The Deceivers and The Guru Elusive Targets, as it is not available in those missions. Overlooked mistake.
