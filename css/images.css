@@ -3396,6 +3396,7 @@ div[class^="ElusiveTarget"], div[class^="UnassignedTarget"] { background-image: 
 .ATrueTestOfSkillet { background-image: url('../img/obj/ATrueTestOfSkillet.png'); }
 .IChallengeTheeToADuel { background-image: url('../img/obj/IChallengeTheeToADuel.png'); }
 .WorthySacrifice { background-image: url('../img/obj/WorthySacrifice.png'); }
+.BellEnd { background-image: url('../img/obj/BellEnd.png'); }
 
 .InitiateIntel { background-image: url('../img/camera/InitiateIntel.png'); }
 .ShowroomShowoff { background-image: url('../img/camera/ShowroomShowoff.png'); }
@@ -3410,6 +3411,10 @@ div[class^="ElusiveTarget"], div[class^="UnassignedTarget"] { background-image: 
 .TheScream { background-image: url('../img/camera/TheScream.png'); }
 .FarewellFounder { background-image: url('../img/camera/FarewellFounder.png'); }
 .TimeConsumingWork { background-image: url('../img/camera/TimeConsumingWork.png'); }
+.RingsideSeats { background-image: url('../img/camera/RingsideSeats.png'); }
+.ShadowBoxing { background-image: url('../img/camera/ShadowBoxing.png'); }
+.AcceptNoSubstitutes { background-image: url('../img/camera/AcceptNoSubstitutes.png'); }
+.TrainingRegimen { background-image: url('../img/camera/TrainingRegimen.png'); }
 
 /** New York **/
 /* Golden Handshake */

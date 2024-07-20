@@ -6864,7 +6864,8 @@ var thedisruptor2024 = {
 	wild: ["True Initiate|Collect 10 commemorative tokens.",
 	"Over Achiever|Collect 20 commemorative tokens.",
 	"Magpie|Collect 30 commemorative tokens."],
-	missionWild: ["Elusive Honor|Do not restart under any circumstances. If you fail, you must honor the 12 hour limit until you can try again."],
+	missionWild: ["Elusive Honor|Do not restart under any circumstances. If you fail, you must honor the 12 hour limit until you can try again.",
+	"Bell End|Use any method to sound the ring bell and innterupt the fight."],
 	compWild: ["Five Finger Discount|Steal the Astek necklace.",
 	"Raider Of The Lost Ark|Open all nine Ark shipping crates",
 	"Egg On Your Face|Knock out 6 NPCs with filigree eggs.",
@@ -6873,7 +6874,11 @@ var thedisruptor2024 = {
 	"A True Test Of Skillet|Pacify 10 people with the frying pan while disguised as a chef and remain unspotted.",
 	"I Challenge Thee To A Duel|Knock out 10 people with a fish.",
 	"Worthy Sacrifice|Through process, exfiltrate with the Sacrificial Knife<a href='./img/general/burialknife.jpg' target='_blank'>.</a>"],
-	photos: ["Photographic Proof|Take a photo of your target(s) after you've eliminated them, unless their body is unavailable. They must not be in a body bag."]
+	photos: ["Photographic Proof|Take a photo of your target(s) after you've eliminated them, unless their body is unavailable. They must not be in a body bag.",
+	"Ringside Seats|Take a photo of the fight while in the Upper Courtyard, beside the ring.",
+	"Shadow Boxing|Take a photo of The Disruptor during his break between rounds.",
+	"Accept No Substitutes|Take a photo of Tim Quinn's trainer, the so-called ICA Assassin “Agent 47”.",
+	"Training Regimen|Take a photo of Tim Quinn during his break between rounds."]
 };
 
 
