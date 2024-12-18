@@ -450,6 +450,7 @@ div[class^="archive"][class$="-start-TheBlock"], .archive-start-TheBlock { backg
 div[class^="archive"][class$="-start-RestaurantKitchen"], .archive-start-RestaurantKitchen { background-image: url('../img/entry/RestaurantKitchen.png'); }
 div[class^="archive"][class$="-start-RiverSideWalkway"], .archive-start-RiverSideWalkway { background-image: url('../img/entry/RiverSideWalkway.png'); }
 div[class^="archive"][class$="-start-FacilityLockerRoom"], .archive-start-FacilityLockerRoom { background-image: url('../img/entry/FacilityLockerRoom.png'); }
+.archive-splitter-start-ICADelegation { background-image: url('../img/entry/ICADelegation.png') !important; }
 .vineyard-start-WineryViewpoint { background-image: url('../img/entry/WineryViewpoint.png') !important; }
 div[class^="vineyard"][class$="-start-WineryViewpoint"] { background-image: url('../img/entry/WineryViewpointNoDiana.png'); }
 div[class^="vineyard"][class$="-start-ParkingLot"], .vineyard-start-ParkingLot { background-image: url('../img/entry/ParkingLot.png'); }
@@ -2159,7 +2160,7 @@ div[class^="ElusiveTarget"], div[class^="UnassignedTarget"] { background-image: 
 
 .MirandaJamison-ark-appraiser { background-image: url('../img/target/MirandaJamison.jpg'); }
 .JimmyChen-ark-stowaway { background-image: url('../img/target/JimmyChen.jpg'); }
-.TheDisruptor-ark-disruptor2024 { background-image: url('../img/target/TheDisruptor.jpg'); }
+.TheDisruptor-ark-disruptor { background-image: url('../img/target/TheDisruptor.jpg'); }
 
 .TheConstant-ark { background-image: url('../img/targetcon/TheConstant.jpg'); }
 .ThaddeusHartwell-ark, .DeclanBarton-ark { background-image: url('../img/targetcon/ThaddeusHartwell.jpg'); }
@@ -2553,6 +2554,7 @@ div[class^="ElusiveTarget"], div[class^="UnassignedTarget"] { background-image: 
 .ImogenRoyce-archive.contarget { background-size: auto 100% !important; }
 
 .SullyBowden-archive-rage { background-image: url('../img/target/SullyBowden.jpg'); }
+.MaxValliant-archive-splitter { background-image: url('../img/target/MaxValliant.jpg'); }
 
 .XiaofanDai-archive { background-image: url('../img/targetcon/XiaofanDai.jpg'); }
 .ShunyuanGuo-archive, .BoqinYan-archive { background-image: url('../img/targetcon/ShunyuanGuo.jpg'); }
@@ -2791,6 +2793,7 @@ div[class^="ElusiveTarget"], div[class^="UnassignedTarget"] { background-image: 
 .DoNotEliminateDianaBurnwood { background-image: url('../img/obj/ObjDiana.png'); }
 .ProvidenceMembersMayBeEliminated { background-image: url('../img/obj/ObjProvidence.png'); }
 .NeutralizetheSatelliteControlUnit { background-image: url('../img/obj/NeutralizetheSatelliteControlUnit.png'); }
+.EliminateClones  { background-image: url('../img/obj/EliminateClones.png'); }
 
 .RetrievetheIvoryWhite { background-image: url('../img/obj/RetrievetheIvoryWhite.png'); }
 .TracktheCourier, .TracktheCourierRetrieveTheDiamonds { background-image: url('../img/obj/TracktheCourier.png'); }
@@ -3593,12 +3596,20 @@ div[class^="ElusiveTarget"], div[class^="UnassignedTarget"] { background-image: 
 .JusttoSpiteThem { background-image: url('../img/obj/JusttoSpiteThem.png'); }
 .ServicePlease { background-image: url('../img/obj/ServicePlease.png'); }
 .HeadsUp { background-image: url('../img/obj/HeadsUp.png'); }
+.GolfClap { background-image: url('../img/obj/GolfClap.png'); }
+.Score470 { background-image: url('../img/obj/Score470.png'); }
+.ChallengeIssued { background-image: url('../img/obj/ChallengeIssued.png'); }
+.HardPressed { background-image: url('../img/obj/HardPressed.png'); }
+.FeelingHotHotHot { background-image: url('../img/obj/FeelingHotHotHot.png'); }
+.HotBox { background-image: url('../img/obj/HotBox.png'); }
 
 .DiscoIsntDead { background-image: url('../img/camera/DiscoIsntDead.png'); }
 .ParkingPermit { background-image: url('../img/camera/ParkingPermit.png'); }
 .GoodLuck47 { background-image: url('../img/camera/GoodLuck47.png'); }
 .AdmireTheView { background-image: url('../img/camera/AdmireTheView.png'); }
 .IsThatCouldntBe { background-image: url('../img/camera/IsThatCouldntBe.png'); }
+.AreWeCloneorAreWeDancer { background-image: url('../img/camera/AreWeCloneorAreWeDancer.png'); }
+.Déjàvu { background-image: url('../img/camera/Déjàvu.png'); }
 
 /** Mendoza **/
 /* The Farewell */
