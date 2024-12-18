@@ -823,6 +823,14 @@ body.hide { background-image:none !important; }
 	 background-image:none !important;
 }
 
+noscript {
+	color:white;
+	background-color:black;
+	font-size:30px;
+	height:100vh;
+	width:100vw;
+	z-index:1;
+}
 * {
 	font-family:'Roboto',helvetica,arial,sans-serif;
 	box-sizing: border-box;
