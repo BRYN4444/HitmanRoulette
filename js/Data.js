@@ -5,7 +5,7 @@ var redo_stack = []
 var h1 = ["training","test","fashion","xmas","director","virus","movie","election","handoff","enforcer","tension","construction","extractor","birthday","cult","veteran","terrorists","mercenary","heart","spread","controller"];
 var h2 = ["training","test","fashion","xmas","virus","movie","election","handoff","tension","construction","birthday","cult","terrorists","heart","spread","festival","beach","speedway","water","cartel","biggame","ghost","magic","suburbs","pill","ark","bank","resort"];
 var h3 = ["training","test","fashion","xmas","director","virus","movie","election","handoff","enforcer","tension","construction","extractor","birthday","cult","veteran","terrorists","mercenary","heart","spread","festival","controller","beach","speedway","water","cartel","biggame","ghost","magic","suburbs","pill","ark","bank","resort","tower","clue","gardenshow","club","archive","vineyard","train","pirates"];
-var et = ["fashion-forger","fashion-sensation","fashion-broker","fashion-black-hat","fashion-pharmacist","fashion-identity-thief","fashion-chef","fashion-blackmailer","fashion-paparazzo","virus-congressman","virus-prince","virus-twin","virus-wildcard","virus-guru","virus-deceivers","movie-badboy","tension-gunrunner","tension-fixer","tension-angel-of-death","construction-entertainer","birthday-ex-dictator","birthday-food-critic","birthday-warlord","terrorists-chameleon","terrorists-bookkeeper","heart-surgeons","heart-fugitive","beach-politician","speedway-undying","speedway-undying-returns","cartel-revolutionary","suburbs-serial-killer","ark-appraiser","ark-stowaway","tower-ascensionist","clue-collector","clue-procurers","club-liability","club-drop","archive-rage","vineyard-iconoclast","vineyard-heartbreaker"];
+var et = ["fashion-forger","fashion-sensation","fashion-broker","fashion-black-hat","fashion-pharmacist","fashion-identity-thief","fashion-chef","fashion-blackmailer","fashion-paparazzo","virus-congressman","virus-prince","virus-twin","virus-wildcard","virus-guru","virus-deceivers","movie-badboy","tension-gunrunner","tension-fixer","tension-angel-of-death","construction-entertainer","birthday-ex-dictator","birthday-food-critic","birthday-warlord","terrorists-chameleon","terrorists-bookkeeper","heart-surgeons","heart-fugitive","beach-politician","speedway-undying","speedway-undying-returns","cartel-revolutionary","suburbs-serial-killer","ark-appraiser","ark-stowaway","ark-disruptor","tower-ascensionist","clue-collector","clue-procurers","club-liability","club-drop","archive-rage","archive-splitter","vineyard-iconoclast","vineyard-heartbreaker"];
 
 var suitStarts = ["Weapons Building","Crouched behind a Truck",
 "Red Carpet","Palace Garden","Pile-Driver Barge","Attic","Undercover at IAGO Auction",
@@ -32,8 +32,8 @@ var suitStarts = ["Weapons Building","Crouched behind a Truck",
 "Western Beach","Silt Village","Central Social Hub","Shrine"];
 var disguiseExits = ["Chimney|(Santa 47 Only)","Ambulance|(Medic Only)","Nest|(Secret)","Pale Rider|(Secret)","Trash Truck|(Garbage Man Only)","Swan Dive|(Secret)","Window|(Secret)","Snorkel|(Instructor Only)","Underground Cave System|(Tactical Wetsuit Only)","Shrine|(Requiem Suit Only)"];
 var koExits = ["Chimney|(Santa 47 Only)","Pink Car|(Needs Key)","Nest|(Secret)","Rico's Supercar|(Needs Key)","Local's Car|(Needs Key)","Roadwork Gate|(Needs Key)","Window|(Secret)","Snorkel|(Instructor Only)","Delivery Scooter|(Needs Key)"];
-var proOnly = ["training","test","xmas","director","movie","election","handoff","enforcer","construction","extractor","cult","veteran","mercenary","spread","festival","controller","fashion-forger","fashion-sensation","fashion-broker","fashion-black-hat","fashion-pharmacist","fashion-identity-thief","fashion-chef","fashion-blackmailer","fashion-paparazzo","virus-congressman","virus-prince","virus-twin","virus-wildcard","virus-guru","virus-deceivers","movie-badboy","tension-gunrunner","tension-fixer","tension-angel-of-death","construction-entertainer","birthday-ex-dictator","birthday-food-critic","birthday-warlord","terrorists-chameleon","terrorists-bookkeeper","heart-surgeons","heart-fugitive","beach-politician","speedway-undying","speedway-undying-returns","cartel-revolutionary","suburbs-serial-killer","ark-appraiser","ark-stowaway","tower-ascensionist","clue-collector","clue-procurers","club-liability","club-drop","archive-rage","vineyard-iconoclast","vineyard-heartbreaker"];
-var noSave = ["xmas","festival","gardenshow","fashion-forger","fashion-sensation","fashion-broker","fashion-black-hat","fashion-pharmacist","fashion-identity-thief","fashion-chef","fashion-blackmailer","fashion-paparazzo","virus-congressman","virus-prince","virus-twin","virus-wildcard","virus-guru","virus-deceivers","movie-badboy","tension-gunrunner","tension-fixer","tension-angel-of-death","construction-entertainer","birthday-ex-dictator","birthday-food-critic","birthday-warlord","terrorists-chameleon","terrorists-bookkeeper","heart-surgeons","heart-fugitive","beach-politician","speedway-undying","speedway-undying-returns","cartel-revolutionary","suburbs-serial-killer","ark-appraiser","ark-stowaway","tower-ascensionist","clue-collector","clue-procurers","club-liability","club-drop","archive-rage","vineyard-iconoclast","vineyard-heartbreaker"]
+var proOnly = ["training","test","xmas","director","movie","election","handoff","enforcer","construction","extractor","cult","veteran","mercenary","spread","festival","controller","fashion-forger","fashion-sensation","fashion-broker","fashion-black-hat","fashion-pharmacist","fashion-identity-thief","fashion-chef","fashion-blackmailer","fashion-paparazzo","virus-congressman","virus-prince","virus-twin","virus-wildcard","virus-guru","virus-deceivers","movie-badboy","tension-gunrunner","tension-fixer","tension-angel-of-death","construction-entertainer","birthday-ex-dictator","birthday-food-critic","birthday-warlord","terrorists-chameleon","terrorists-bookkeeper","heart-surgeons","heart-fugitive","beach-politician","speedway-undying","speedway-undying-returns","cartel-revolutionary","suburbs-serial-killer","ark-appraiser","ark-stowaway","ark-disruptor","tower-ascensionist","clue-collector","clue-procurers","club-liability","club-drop","archive-rage","archive-splitter","vineyard-iconoclast","vineyard-heartbreaker"];
+var noSave = ["xmas","festival","gardenshow","fashion-forger","fashion-sensation","fashion-broker","fashion-black-hat","fashion-pharmacist","fashion-identity-thief","fashion-chef","fashion-blackmailer","fashion-paparazzo","virus-congressman","virus-prince","virus-twin","virus-wildcard","virus-guru","virus-deceivers","movie-badboy","tension-gunrunner","tension-fixer","tension-angel-of-death","construction-entertainer","birthday-ex-dictator","birthday-food-critic","birthday-warlord","terrorists-chameleon","terrorists-bookkeeper","heart-surgeons","heart-fugitive","beach-politician","speedway-undying","speedway-undying-returns","cartel-revolutionary","suburbs-serial-killer","ark-appraiser","ark-stowaway","ark-disruptor","tower-ascensionist","clue-collector","clue-procurers","club-liability","club-drop","archive-rage","archive-disruptor","vineyard-iconoclast","vineyard-heartbreaker"];
 
 var mechListH1 = ["Instinct|Turn off Instinct in the game's Options menu under Gameplay.",
 				"Mini Map|Turn off the Mini Map in the game's Options menu under Gameplay.",
@@ -4665,7 +4665,9 @@ var eoae = {
 	"Letter Opener|Melee","Letter Opener|Thrown Weapon",
 	"Scissors|Melee","Scissors|Thrown Weapon",
 	"Screwdriver|Melee","Screwdriver|Thrown Weapon",
-	"Tanto|Melee","Tanto|Thrown Weapon"],
+	"Tanto|Melee","Tanto|Thrown Weapon",
+	"Garden Fork|Melee","Garden Fork|Thrown Weapon",
+	"Scrap Sword|Melee","Scrap Sword|Thrown Weapon"],
 	targetList: ["Hush","Imogen Royce"],
 	contractUnique: ["Hush|Cyber security specialist for the ICA. Moves throughout his Private Lab and the Benchmark Lab.",
 	"Imogen Royce|Archivist for the ICA facility. Moves between the Analysis Area and The Data Core.",
@@ -6574,53 +6576,6 @@ var theundyingreturns = {
 	"Potty Training|Have the patient leave the Emergency Bay without eliminating him."],
 	photos: ["Photographic Proof|Take a photo of your target(s) after you've eliminated them, unless their body is unavailable. They must not be in a body bag."]
 };
-var theundyingreturns2024 = {
-	missionTitle: "The Undying Returns (2024)",
-	missionLocation: "Miami",
-	missionCode: "speedway-undying-returns-2024",
-	melee: ["Fiber Wire",
-	"Amputation Knife|Melee","Amputation Knife|Thrown Weapon",
-	"Battle Axe|Melee","Battle Axe|Thrown Weapon",
-	"Cleaver|Melee","Cleaver|Thrown Weapon",
-	"Fire Axe|Melee","Fire Axe|Thrown Weapon",
-	"Kitchen Knife|Melee","Kitchen Knife|Thrown Weapon",
-	"Old Axe|Melee","Old Axe|Thrown Weapon",
-	"Scissors|Melee","Scissors|Thrown Weapon",
-	"Screwdriver|Melee","Screwdriver|Thrown Weapon",
-	"Starfish|Melee","Starfish|Thrown Weapon"],
-	targetList: ["Mark Faba"],
-	contractUnique: ["Mark Faba|Elusive Target"],
-	contractCivilian: [],
-	contractStaff: [],
-	contractGuard: [],
-	entry: ["Dolphin Fountain"],
-	exit: ["Helicopter", "Main Entrance","Sewer|(Needs Crowbar)","Speedboat|(Needs Key)","Ambulance|(Medic Only)"],
-	eexit: ["Nest|(Secret)","Dolphin Statue|(Secret)","Pale Rider|(Secret)"],
-	disguises: ["Any Suit","Timothy Yu","Ted Mendez","Moses Lee","Florida Man","Street Musician","Sheik","Crashed Driver Kronstadt","Blue Seed Driver","Pale Rider",
-	"Kronstadt Mechanic","Kowoon Driver","Kowoon Mechanic","Aeon Driver","Aeon Mechanic","Thwack Driver","Thwack Mechanic","Sotteraneo Mechanic",
-	"Kronstadt Engineer","Kronstadt Researcher","Kronstadt Security",
-	"Race Coordinator","Race Marshall",
-	"Event Crew","Event Security",
-	"Food Vendor","Kitchen Staff","Waiter",
-	"Journalist","Mascot","Medic"],
-	disguiseVariants: ["Any Suit"],
-	wild: ["Very Important Person|Find and collect a Podium Club Pass.",
-	"Day at the Aquarium|Find and collect the Kronstadt Bayside Center Keycard",
-	"Frutti Di Mare|Collect both a Fish and a Starfish.",
-	"Tintamarresque|Blend in using the photo stand-in.",
-	"Free Fishie|Release a fish back into the ocean.",
-	"What's In This Thing|Open and collect the contents of the evidence locker.",
-	"Communications Breakdown|Sabotage Robert Knox's satellite dish.",
-	"Sweet Tooth|Find and collect 4 Bags of Sugar.",
-	"Blackmail|Find and collect the blackmail documents."],
-	missionWild: ["Elusive Honor|Do not restart under any circumstances. If you fail, you must honor the 12 hour limit until you can try again."],
-	compWild: ["One Kilo Brick|Find and collect a brick of cocaine.",
-	"Arms Dealer|Pacify a Kronstadt researcher using an android arm.",
-	"Forty-Seven on the Scoville Scale|Drink the chili shot as Moses Lee.",
-	"Tanked|Knock out both aquarium guards at the same time using the same aquarium.",
-	"Potty Training|Have the patient leave the Emergency Bay without eliminating him."],
-	photos: ["Photographic Proof|Take a photo of your target(s) after you've eliminated them, unless their body is unavailable. They must not be in a body bag."]
-};
 
 var therevolutionary = {
 	missionTitle: "The Revolutionary",
@@ -6825,10 +6780,10 @@ var thestowaway = {
 	"Worthy Sacrifice|Through process, exfiltrate with the Sacrificial Knife<a href='./img/general/burialknife.jpg' target='_blank'>.</a>"],
 	photos: ["Photographic Proof|Take a photo of your target(s) after you've eliminated them, unless their body is unavailable. They must not be in a body bag."]
 };
-var thedisruptor2024 = {
-	missionTitle: "The Disruptor (2024)",
+var thedisruptor = {
+	missionTitle: "The Disruptor",
 	missionLocation: "Isle of Sgàil",
-	missionCode: "ark-disruptor2024",
+	missionCode: "ark-disruptor",
 	melee: ["Fiber Wire","Aztec Necklace",
 	"Battle Axe|Melee","Battle Axe|Thrown Weapon",
 	"Broadsword|Melee","Broadsword|Thrown Weapon",
@@ -6880,7 +6835,6 @@ var thedisruptor2024 = {
 	"Accept No Substitutes|Take a photo of Tim Quinn's trainer, the so-called ICA Assassin “Agent 47”.",
 	"Training Regimen|Take a photo of Tim Quinn during his break between rounds."]
 };
-
 
 var theascensionist = {
 	missionTitle: "The Ascensionist",
@@ -7099,7 +7053,9 @@ var therage = {
 	"Letter Opener|Melee","Letter Opener|Thrown Weapon",
 	"Scissors|Melee","Scissors|Thrown Weapon",
 	"Screwdriver|Melee","Screwdriver|Thrown Weapon",
-	"Tanto|Melee","Tanto|Thrown Weapon"],
+	"Tanto|Melee","Tanto|Thrown Weapon",
+	"Garden Fork|Melee","Garden Fork|Thrown Weapon",
+	"Scrap Sword|Melee","Scrap Sword|Thrown Weapon"],
 	targetList: ["Sully Bowden"],
 	contractUnique: ["Sully Bowden|Elusive Target"],
 	contractCivilian: [],
@@ -7123,6 +7079,47 @@ var therage = {
 	"Human Error|Disable the safety mechanism of the Data Core.",
 	"An Eye for Arms|Exfiltrate with the Hackl Leviathan Sniper Rifle Covert."],
 	photos: ["Photographic Proof|Take a photo of your target(s) after you've eliminated them, unless their body is unavailable. They must not be in a body bag."]
+};
+var thesplitter = {
+	missionTitle: "The Splitter",
+	missionLocation: "Chongqing",
+	missionCode: "archive-splitter",
+	melee: ["Fiber Wire","Stethoscope",
+	"Cleaver|Melee","Cleaver|Thrown Weapon",
+	"Fire Axe|Melee","Fire Axe|Thrown Weapon",
+	"Hobby Knife|Melee","Hobby Knife|Thrown Weapon",
+	"Kitchen Knife|Melee","Kitchen Knife|Thrown Weapon",
+	"Letter Opener|Melee","Letter Opener|Thrown Weapon",
+	"Scissors|Melee","Scissors|Thrown Weapon",
+	"Screwdriver|Melee","Screwdriver|Thrown Weapon",
+	"Tanto|Melee","Tanto|Thrown Weapon",
+	"Garden Fork|Melee","Garden Fork|Thrown Weapon",
+	"Scrap Sword|Melee","Scrap Sword|Thrown Weapon",
+	"Katana|Melee","Katana|Thrown Weapon"],
+	targetList: ["Max Valliant"],
+	contractUnique: ["Max Valliant|Elusive Target"],
+	contractCivilian: [],
+	contractStaff: [],
+	contractGuard: [],
+	entry: ["ICA Delegation"],
+	exit: ["Apartment Safe House","Scooter","Manhole (Restaurant Alley)|(Needs Crowbar)","Manhole (The Block)|(Needs Crowbar)","Train Station","Facility Emergency Exit|(Needs Tier 3 Access)"],
+	eexit: [],
+	disguises: ["Street Guard","The Board Member","Perfect Test Subject",
+	"Dumpling Cook","Homeless Person",
+	"Block Guard","Researcher",
+	"Facility Analyst","Facility Engineer","Facility Guard (Masked)"],
+	disguiseVariants: ["Street Guard"],
+	wild: ["Hack the Planet|Obtain all tiers of the hacking access dongles.",
+	"Golf Clap|Collect 3 Explosive Gold Balls. They may be used during the mission after collection.",
+	"Score: 47 - 0|Get a medicine ball into the sauna."],
+	missionWild: ["Elusive Honor|Do not restart under any circumstances. If you fail, you must honor the 12 hour limit until you can try again.",
+	"Challenge Issued|Follow through the tour and challenge Clone #6 when given the opportunity."],
+	compWild: ["Hard Pressed|Eliminate Clone #3 via compaction.",
+	"Feeling Hot Hot Hot|Eliminate Clone #3 via incineration.",
+	"Hot Box|Eliminate at least one clone via overheating in the sauna."],
+	photos: ["Photographic Proof|Take a photo of your target(s) after you've eliminated them, unless their body is unavailable. They must not be in a body bag.",
+	"Are We Clone, or Are We Dancer?|Take a photo of Clone #7 while inside the padded room.",
+	"Déjà vu|Take a photo of the cloning tanks."]
 };
 
 var theiconoclast = {
@@ -7323,8 +7320,8 @@ var mission_names_map = {
 	"ET39": theascensionist,
 	"ET40": therage,
 	"ET41": thedrop,
-	"ET42": theundyingreturns2024,
-	"ET43": thedisruptor2024
+	"ET42": thedisruptor,
+	"ET43": thesplitter
 }
 
 var killTypesMap = {
