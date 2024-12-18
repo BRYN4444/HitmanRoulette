@@ -406,12 +406,14 @@ function containerToResult(container) {
 		result.missionobjective = "Retrieve the Notebook|Retrieve Miranda Jamison's Notebook that contains information on Ark Society members' art purchases and preferences.|Retrieve the Notebook";
 	else if (mode == "MAIN" && result.missionCode == "ark-stowaway")
 		result.missionobjective = "Retrieve the Dictaphone|Retrieve Jimmy Chen's dictaphone.|Retrieve Jimmy Chen's dictaphone";
-	else if (mode == "MAIN" && result.missionCode == "ark-disruptor2024")
+	else if (mode == "MAIN" && result.missionCode == "ark-disruptor")
 		result.missionobjective = "Do Not Eliminate Tim Quinn [Optional]|It is imperative for the client that Tim Quinn survives the fight.|Ensure Tim Quinn survives the fight";
 	else if (mode == "MAIN" && result.missionCode == "clue-collector")
 		result.missionobjective = "Retrieve the Painting [Optional]|The client offers a bonus if you manage to find and retrieve the painting by Sisal Bardu.|Retrieve the painting [Optional]";
 	else if (mode == "MAIN" && result.missionCode == "club-liability")
 		result.missionobjective = "[Optional] Do Not Eliminate The Guide|The clients would prefer that Chesterfield's guide does not become collateral damage.|[Optional] Do Not Eliminate the Guide";
+	else if (mode == "MAIN" && result.missionCode == "archive-splitter")
+		result.missionobjective = "Eliminate Clones|The ICA board has greenlit additional mission objectives. All of Max Valliant's clones must be eliminated.|Eliminate Clones";
 	else
 		result.missionobjective = "";
 
@@ -695,7 +697,7 @@ function writeEverything(result) {
 	
 	if(result.missionobjective.length) { // campaign mission objective
 		document.getElementById("objective").innerHTML = 
-			"<div id='obj-image' class='" + result.missionobjective.split('|')[0].replace(/\s|,|'|“|”|-|\&|\?|\!|\(|\)|\[|\]|\./g, '') +
+			"<div id='obj-image' class='" + result.missionobjective.split('|')[0].replace(/\s|:|,|'|“|”|-|\&|\?|\!|\(|\)|\[|\]|\./g, '') +
 			"'><div id='instruction'><img id='list' src='./img/general/blank.png'><p id='wording'>" + result.missionobjective.split('|')[1] +
 			"</p></div><div id='nameplate'><span><p id='title'>Objective</p><p id='subtitle'>" + result.missionobjective.split('|')[0] + "</p></span></div></div>";
 		document.getElementById("input_objective").value = result.missionobjective;
@@ -707,7 +709,7 @@ function writeEverything(result) {
 	
 	if(document.getElementById("exobj").checked == 1) { // extra mission objective
 		document.getElementById("objectivex").innerHTML = 
-			"<div id='obj-image' class='" + result.objectives.split('|')[0].replace(/\s|,|'|“|”|-|\?|\!|\(|\)|\./g, "") +
+			"<div id='obj-image' class='" + result.objectives.split('|')[0].replace(/\s|:|,|'|“|”|-|\?|\!|\(|\)|\./g, "") +
 			"'><div id='instruction'><img id='list' src='./img/general/blank.png'><p id='wording'>"  + result.objectives.split('|')[1] +
 			"</p></div><div id='nameplate'><span><p id='title'>Extra Objective <span id='hint'></span></p><p id='subtitle'>"  + result.objectives.split('|')[0] + "</p></span></div></div>";
 		if(mode == "MAIN" && result.missionTitle == "Apex Predator" && result.objectives.split('|')[0] == "Order of Operations") { // Apex Predator missionWild Extra Objective	
@@ -727,7 +729,7 @@ function writeEverything(result) {
 	
 	if(document.getElementById("cameraobj").checked == 1 && !(result.missionCode == "training" || result.missionCode == "test") ) { // photo objectives unavailable in ica facility
 		document.getElementById("camera").innerHTML = 
-			"<div id='cam-image' class='" + result.photos.split('|')[0].replace(/\s|,|'|“|”|-|\?|\!|\:|\(|\)|\./g, "") +
+			"<div id='cam-image' class='" + result.photos.split('|')[0].replace(/\s|:|,|'|“|”|-|\?|\!|\:|\(|\)|\./g, "") +
 			"'><div id='instruction'><img id='list' src='./img/general/blank.png'><p id='wording'>"  + result.photos.split('|')[1] +
 			"</p></div><div id='nameplate'><span><p id='title'>Photo Objective</p><p id='subtitle'>"  + result.photos.split('|')[0] + "</p></span></div></div>";
 		document.getElementById("input_camera").value = result.photos;
