@@ -22,12 +22,13 @@ To quickly return the Roulette Settings back to default, preform a hard refresh 
 
 ## Compatibility & Issues
 
-Though you can deselect any location you do not own, by default the Roulette selects mission from:
+Though you can deselect any location you do not own, by default the Roulette selects missions from:
 1. - **HITMAN: World of Assassination** (HITMAN III patched) and **HITMAN: World of Assassination Deluxe Pack** (DLC)
    - OR just **HITMAN: World of Assassination Deluxe Edition** (GAME with DLC)
 2. **Sarajevo Six Campaign Pack** (DLC)
 3. **The Undying Pack** (DLC)
-4. **The Disruptor Pack** (DLC)
+4. **The Disruptor Pack** (DLC currently unavailable)
+5. **The Splitter Pack** (DLC)
 
 There may be the odd conflicting trait that changed between releases in this trilogy, though I've done my best to account for these. It is also important to note that the later the game sequel, the more gear is available to unlock for use. Lastly, since Contract Mode Targets are regular NPCs and Elimination Methods are randomly assigned, not every Target can be killed with every Method easily/silently.
 
@@ -44,9 +45,18 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 
 ### Latest Update
 
-**July 20th, 2023**
+**December 17th, 2024**
 * **Elusive Target:**
-  * **#43: The Disruptor (2024)** - Added 1 extra objective and 4 photo objectives.
+  * **#43: The Splitter** - New ET added, including secondary objective, sole Entry point, 6 mission specific extra objectives, and 2 mission specific photo objectives.
+  * **#42: The Disruptor** - Removed the "2024" from the listing of "The Disruptor" Elusive Target (as year markings represent reissues) and renumbered this as the 42nd ET (taking the number used by "The Undying Returns" reissue). Ultimatly this Elusive Target will be changed due to the real world actions of the celebrity used, and will subsequently be updated here too.
+* **HITMAN 2:**
+  * **Isle of Sgàil:** - Added missing lethal melee weapons for "The Arc Society" and "The Rage".
+* **HITMAN III:**
+  * **Chongqing:** - Updated the image for the Facility Emergency Exit to remove the clipping in the required dongle key.
+* **Other Fixes:**
+  * Removed the 2024 listing of "The Undying Returns" Elusive Target, as it is exactly the same as the original listing. See the update for "The Disruptor" above.
+  * Restyled the text that appears should you visit the Roulette with javascript disabled, making it actually legible.
+  * Added the newest Elusive Target DLC to the list in the Compatibility & Issues section, along with listing "The Disruptor Pack" as unavailable.
 >**Bug Hunting:** Please make a post [via GitHub](https://github.com/BRYN4444/HitmanRoulette/issues) or in the thread [on Hitman Forum](https://hitmanforum.com/t/13107) if you:
 >* Experience any graphical issues while using the Roulette in 4K, or on phones/tablets.
 >* Generate impossibilities when using the Roulette with Elusive Targets or past titles HITMAN / HITMAN 2.
@@ -54,18 +64,24 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 
 ---
 
-**June 27th, 2023**
+**July 20th, 2024**
 * **Elusive Target:**
-  * **#43: The Disruptor (2024)** - New ET added, including optional objective.
+  * **#42: The Disruptor (2024)** - Added 1 extra objective and 4 photo objectives.
+  
+---
+
+**June 27th, 2024**
+* **Elusive Target:**
+  * **#42: The Disruptor (2024)** - New ET added, including optional objective.
   * Removed a duplicate extra objective listing in several Ark Society ETs (and the standard mission itelf). Didn't impact anything other than imbalancing the odds of rolling it.
 * **Other Fixes:**
   * Better clarified what game & DLC combinations and purchases are used by the Roulette in the Compatibility & Issues section. Added the two Elusive Target DLC packs.
 
 ---
 
-**March 22nd, 2023**
+**March 22nd, 2024**
 * **Elusive Target:**
-  * **#42: The Undying Returns (2024)** - A new listing since the game presents it as such. The original versions of the ETs, despite how little difference there are between them, remain listed for use with "The Oroborous" Arcade DLC. 
+  * **The Undying Returns (2024)** - A new listing since the game presents it as such. The original versions of the ETs, despite how little difference there are between them, remain listed for use with "The Oroborous" Arcade DLC. 
 * **HITMAN:**
   * **Situs Inversus / Hokkaido Snow Festival:**
     * **Contracts Mode:** Updated the name listed for 3 NPCs. At some point they had been given last names.
@@ -105,13 +121,3 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
   * Paris "Holiday Hoarders" got a proper background image, so the one I made for the Roulette has been replaced.
   * Ambrose Island "Shadows in the Water" was not displaying a background image when using the Hitman GOTY Theme. This was due to a filetype error.
   * Disguise variants for the Assassins in Berlin had the potential to appear in "The Liability" Elusive Target when they don't appear during the mission. This is fixed.
-
----
-
-**August 21th, 2023**
-* **Roulette:**
-  * **Select Missions:** Grouping toggles will now appear along side their corresponding missions per category. This will make it easier to mass-deselect missions without needing to tab to the primary Mission Groupings section. Desktop only.
-* **Other Fixes:**
-  * Updated the Select Mission image for the Sarajevo Six to the newer version. Also reworded it as the "Sarajevo Six Campaign" as it is listed in storefronts.
-  * Fixed an issue where you on the Dartmoor Garden Show where 4 of the 5 targets would have a disguise requirement listed (when applicable). Now all targets will have one.
-  * There is now the possibility for a disguise requirement (when applicable) of the same outfit appearing more than once (one disguise across two targets). Before, due to how the data was parsed, each disguise could only be required once.
