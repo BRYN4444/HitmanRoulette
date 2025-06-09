@@ -1,8 +1,8 @@
 //Enjoy looking at the ametuer code work I've done.
 $(document).ready(function() {
 	/******Latest Updates******/
-	$("#features p#title").text("Last Updated: December 17th, 2024"); /*Roulette Features*/
-	$("#features .updatenotes").html('Added an Elusive Target: The Splitter. See <b><a href="https://github.com/BRYN4444/HitmanRoulette#latest-update" target="_blank">Github</a></b> for info.');
+	$("#features p#title").text("Last Updated: June 9th, 2025"); /*Roulette Features*/
+	$("#features .updatenotes").html('Added an Elusive Target: The Banker. See <b><a href="https://github.com/BRYN4444/HitmanRoulette#latest-update" target="_blank">Github</a></b> for info.');
     /* Unspecific Update $("#features .updatenotes").html('Visit <b><a href="https://github.com/BRYN4444/HitmanRoulette#latest-update" target="_blank">Github</a></b> for details on the latest Roulette updates.');*/
 	$("#overlayguide p#title").text("Last Updated: July 13th, 2022"); /*Stream Overlay*/
 	//$("#overlayguide .updatenotes").html('???'); /*Needs to be added to Overlay.html*/
