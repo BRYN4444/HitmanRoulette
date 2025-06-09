@@ -29,6 +29,7 @@ Though you can deselect any location you do not own, by default the Roulette sel
 3. **The Undying Pack** (DLC)
 4. **The Disruptor Pack** (DLC currently unavailable)
 5. **The Splitter Pack** (DLC)
+6. **The Banker Pack** (DLC)
 
 There may be the odd conflicting trait that changed between releases in this trilogy, though I've done my best to account for these. It is also important to note that the later the game sequel, the more gear is available to unlock for use. Lastly, since Contract Mode Targets are regular NPCs and Elimination Methods are randomly assigned, not every Target can be killed with every Method easily/silently.
 
@@ -45,6 +46,18 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 
 ### Latest Update
 
+**June 9th, 2024**
+* **Elusive Target:**
+  * **#44: The Banker** - New ET added, including 2 (alternate image) Entry points, 5 mission specific extra objectives, and 5 mission specific photo objectives.
+* **Other Fixes:**
+  * Added the newest Elusive Target DLC to the list in the Compatibility & Issues section.
+>**Bug Hunting:** Please make a post [via GitHub](https://github.com/BRYN4444/HitmanRoulette/issues) or in the thread [on Hitman Forum](https://hitmanforum.com/t/13107) if you:
+>* Experience any graphical issues while using the Roulette in 4K, or on phones/tablets.
+>* Generate impossibilities when using the Roulette with Elusive Targets or past titles HITMAN / HITMAN 2.
+>* Have troubles or questions about the Stream Overlay.
+
+---
+
 **December 17th, 2024**
 * **Elusive Target:**
   * **#43: The Splitter** - New ET added, including secondary objective, sole Entry point, 6 mission specific extra objectives, and 2 mission specific photo objectives.
@@ -57,10 +70,6 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
   * Removed the 2024 listing of "The Undying Returns" Elusive Target, as it is exactly the same as the original listing. See the update for "The Disruptor" above.
   * Restyled the text that appears should you visit the Roulette with javascript disabled, making it actually legible.
   * Added the newest Elusive Target DLC to the list in the Compatibility & Issues section, along with listing "The Disruptor Pack" as unavailable.
->**Bug Hunting:** Please make a post [via GitHub](https://github.com/BRYN4444/HitmanRoulette/issues) or in the thread [on Hitman Forum](https://hitmanforum.com/t/13107) if you:
->* Experience any graphical issues while using the Roulette in 4K, or on phones/tablets.
->* Generate impossibilities when using the Roulette with Elusive Targets or past titles HITMAN / HITMAN 2.
->* Have troubles or questions about the Stream Overlay.
 
 ---
 
@@ -109,15 +118,3 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
     * **Photo Objective:** 1 added. Also applies to "The Liability" Elusive Target.
 * **Other Fixes:**
   * Using a better version of the "Holiday Hoarders" background image without vignetting. Also did another pass on these images when using other Themes.
-
----
-
-**October 27th, 2023**
-* **Elusive Target:**
-  * **#41: The Drop** added. One Target and one new disguise. Any Extra/Photo Objectives I can think of will be added shorty, as I play through mission.
-* **Other Fixes:**
-  * Added a missing disguise to the Elusive Target missions "The Undying" and "The Undying Returns".
-  * With Saving new enabled for the Sarajevo Six Campaign Pack (DLC), the "One Save Only" Complication may now appear for these missions. (This will cause conflictions if you're playing the H1 versions, but you can bypass this by enabling the "Force Difficulty" Gameplay Challenge. Even though there is no difficulty options available for the Sarajevo Six, doing this will omit the "One Save Only" Complication completely.)
-  * Paris "Holiday Hoarders" got a proper background image, so the one I made for the Roulette has been replaced.
-  * Ambrose Island "Shadows in the Water" was not displaying a background image when using the Hitman GOTY Theme. This was due to a filetype error.
-  * Disguise variants for the Assassins in Berlin had the potential to appear in "The Liability" Elusive Target when they don't appear during the mission. This is fixed.
