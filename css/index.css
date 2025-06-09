@@ -1494,7 +1494,7 @@ section#content {
 	overflow-x:hidden;
 	scrollbar-color:transparent transparent;
 	display: grid !important;
-	grid-template-columns: repeat(25, 1fr);
+	grid-template-columns: repeat(27, 1fr); /*Increase this every new ET column*/
 	grid-template-rows: 1fr;
 	grid-column-gap: 6px;
 	white-space:nowrap;
