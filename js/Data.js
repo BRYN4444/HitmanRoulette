@@ -5602,6 +5602,49 @@ var thepaparazzo = {
 	"A Private Meeting|Facilitate the meeting between Max Decker and Viktor Novikov."],
 	photos: ["Photographic Proof|Take a photo of your target(s) after you've eliminated them, unless their body is unavailable. They must not be in a body bag."]
 };
+var thebanker = {
+	missionTitle: "The Banker",
+	missionLocation: "Paris",
+	missionCode: "fashion-banker",
+	melee: ["Fiber Wire","The Banker Rope",
+	"Battle Axe|Melee","Battle Axe|Thrown Weapon",
+	"Cleaver|Melee","Cleaver|Thrown Weapon",
+	"Fire Axe|Melee","Fire Axe|Thrown Weapon",
+	"Hatchet|Melee","Hatchet|Thrown Weapon",
+	"Kitchen Knife|Melee","Kitchen Knife|Thrown Weapon",
+	"Letter Opener|Melee","Letter Opener|Thrown Weapon",
+	"Saber|Melee","Saber|Thrown Weapon",
+	"Scissors|Melee","Scissors|Thrown Weapon",
+	"Screwdriver|Melee","Screwdriver|Thrown Weapon",
+	"Scalpel|Melee","Scalpel|Thrown Weapon"],
+	targetList: ["Le Chiffre"],
+	contractUnique: ["Le Chiffre|Elusive Target"],
+	contractCivilian: [],
+	contractStaff: [],
+	contractGuard: [],
+	entry: ["Red Carpet","Palace Garden","Pile-Driver Barge","Attic"],
+	exit: ["Front Gates (Red Carpet)","Front Gates (VIP)","Front Gates (Parking Area)","Basement Catacombs","Helicopter","Baron Larin's Speedboat|(Needs Key)"],
+	eexit: [],
+	disguises: ["Any Suit","Agent Smith's Tuxedo","Vampire Magician",
+	"Croupier","Palace Staff","Auction Staff",
+	"Tech Crew",
+	"Security Guard","CICADA Bodyguard"],
+	disguiseVariants: ["Any Suit"],
+	wild: ["Mix Things Up|Optain the Cocktail Shaker from the bar next to the high stakes poker table.",
+	"Careful What You Wish For|Throw a coin into the fountain by the Main Entrance.",
+	"Rushing Through Your Veins|If possible, meet with Le Chiffre before the high stakes poker game. When you start succumbing to the poison, find the antidote before blacking out."],
+	missionWild: ["Chip In, Then Cash Out|Aquire the three stacks of Casino Monarchique Chips: 5,000,000 single and the 10,000,000 pair. Feel free to spend some if you wish. You've earned it!",
+	"Side Job|Aquire Oliver Winding as an optional target and eliminate them."],
+	compWild: ["Piano Forty Seven|Knock someone out with the piano.",
+	"More Recognizable|Obtain Agent Smith's Tuxedo, one way or another."],
+	photos: ["Photographic Proof|Take a photo of your target(s) after you've eliminated them, unless their body is unavailable. They must not be in a body bag.",
+	"Nice Bowtie|Take a photo of Carlton Smith.",
+	"Eating Alone|Take a photo of the lone tech crew worker in the basement lunch room.",
+	"We Will Meet Again|Take a photo of Vicente Murillo.",
+	"Admired By Timmy|Take a photo of Bai Siyu.",
+	"Roulette Is A Hit, Man|Take a photo of Abhijeet Rangan."
+	]
+};
 
 var thecongressman = {
 	missionTitle: "The Congressman",
@@ -7321,7 +7364,8 @@ var mission_names_map = {
 	"ET40": therage,
 	"ET41": thedrop,
 	"ET42": thedisruptor,
-	"ET43": thesplitter
+	"ET43": thesplitter,
+	"ET44": thebanker
 }
 
 var killTypesMap = {
