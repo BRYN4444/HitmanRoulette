@@ -250,6 +250,7 @@ html.httheme {
 .et41 { background:#292929 url("../img/missions/et41.png") no-repeat center top / 350px; }
 .et42 { background:#292929 url("../img/missions/et42.png") no-repeat center top / 350px; }
 .et43 { background:#292929 url("../img/missions/et43.png") no-repeat center top / 350px; }
+.et44 { background:#292929 url("../img/missions/et44.png") no-repeat center top / 350px; }
 
 /*** Backgrounds ***/
 .training, .test { background-image:var(--missionbggradient), var(--icafacility); }
@@ -306,6 +307,8 @@ div[class^="fashion"][class$="-start-UndercoverinDressingArea"], .fashion-start-
 .xmas-start-PileDriverBarge { background-image: url('../img/entry/Pile-Driver%20Barge-HH.png'); }
 .xmas-start-UndercoverinLockerRoom { background-image: url('../img/entry/Undercover%20in%20Locker%20Room-HH.png'); }
 .xmas-start-UndercoveratIAGOAuction { background-image: url('../img/entry/Undercover%20at%20IAGO%20Auction-HH.png'); }
+.fashion-banker-start-RedCarpet { background-image: url('../img/entry/Red%20Carpet-Banker.png') !important; }
+.fashion-banker-start-PalaceGarden { background-image: url('../img/entry/Palace%20Garden-Banker.png') !important; }
 div[class^="virus"][class$="-start-MainSquare"], .virus-start-MainSquare, .enforcer-start-MainSquare { background-image: url('../img/entry/Main%20Square.png'); }
 div[class^="virus"][class$="-start-ICASafeHouse"], .virus-start-ICASafeHouse, .enforcer-start-ICASafeHouse { background-image: url('../img/entry/ICA%20Safe%20House.png'); }
 div[class^="virus"][class$="-start-Harbor"], .virus-start-Harbor, .enforcer-start-Harbor { background-image: url('../img/entry/Harbor.png'); }
@@ -703,6 +706,7 @@ div[class^="ElusiveTarget"], div[class^="UnassignedTarget"] { background-image: 
 .GabrielSantos-fashion-chef { background-image: url('../img/target/GabrielSantos.jpg'); }
 .WalterWilliams-fashion-blackmailer { background-image: url('../img/target/WalterWilliams.jpg'); }
 .KieranHudson-fashion-paparazzo { background-image: url('../img/target/KieranHudson.jpg'); }
+.LeChiffre-fashion-banker { background-image: url('../img/target/LeChiffre.jpg'); }
 
 .SebastianSato-fashion, .SebastianSato-xmas { background-image: url('../img/targetcon/SebastianSato.jpg'); }
 .HelmutKruger-fashion, .HelmutKruger-xmas { background-image: url('../img/targetcon/HelmutKruger.jpg'); }
@@ -2859,6 +2863,11 @@ div[class^="ElusiveTarget"], div[class^="UnassignedTarget"] { background-image: 
 .FifteenSecondsofFame { background-image: url('../img/obj/Fifteen%20Seconds%20of%20Fame.png'); }
 .AQuickBreak { background-image: url('../img/obj/A%20Quick%20Break.png'); }
 .APrivateMeeting { background-image: url('../img/obj/APrivateMeeting.png'); }
+.MixThingsUp { background-image: url('../img/obj/MixThingsUp.png'); }
+.RushingThroughYourVeins { background-image: url('../img/obj/RushingThroughYourVeins.png'); }
+.ChipInThenCashOut { background-image: url('../img/obj/ChipInThenCashOut.png'); }
+.SideJob { background-image: url('../img/obj/SideJob.png'); }
+.MoreRecognizable { background-image: url('../img/obj/MoreRecognizable.png'); }
 
 .PhotogenicParis { background-image: url('../img/camera/PhotogenicParis.png'); }
 .MiniFoodie { background-image: url('../img/camera/MiniFoodie.png'); }
@@ -2871,6 +2880,11 @@ div[class^="ElusiveTarget"], div[class^="UnassignedTarget"] { background-image: 
 .Diorama { background-image: url('../img/camera/Diorama.png'); }
 .MuseumDisplay { background-image: url('../img/camera/MuseumDisplay.png'); }
 .SalutTheSky { background-image: url('../img/camera/SalutTheSky.png'); }
+.NiceBowtie { background-image: url('../img/camera/NiceBowtie.png'); }
+.EatingAlone { background-image: url('../img/camera/EatingAlone.png'); }
+.WeWillMeetAgain { background-image: url('../img/camera/WeWillMeetAgain.png'); }
+.AdmiredByTimmy { background-image: url('../img/camera/AdmiredByTimmy.png'); }
+.RouletteIsAHitMan { background-image: url('../img/camera/RouletteisaHitMan.png'); }
 
 /* Holiday Hoarders */
 .WetBanditsRecruit { background-image: url('../img/obj/Wet%20Bandits%20Recruit.png'); }
