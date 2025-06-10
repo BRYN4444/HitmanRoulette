@@ -267,6 +267,10 @@ function createTargetList(container) {
 		} else { // Fixed Target Amount
 			targets = allTargets.slice(0, conSlice);
 		};
+	} else if (mode == "MAIN" && container.missionTitle === "The Banker") { //Oliver as a target is random
+		var targetRollies = Math.random();
+		if (targetRollies < 0.5) targets = ["Le Chiffre","Oliver Winding|Aquire target from Agent Smith."];
+		else targets = ["Le Chiffre"];
 	} else if (mode == "MAIN" && container.missionTitle === "Apex Predator") { //Shuffle Targets for Apex Predator
 		targets = shuffle(container.targetList);
 	} else if (mode == "MAIN" && container.missionTitle === "Dartmoor Garden Show") {//Shuffle Targets for Dartmoor Garden Show Determination Mode
