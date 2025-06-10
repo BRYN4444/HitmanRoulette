@@ -707,6 +707,7 @@ div[class^="ElusiveTarget"], div[class^="UnassignedTarget"] { background-image: 
 .WalterWilliams-fashion-blackmailer { background-image: url('../img/target/WalterWilliams.jpg'); }
 .KieranHudson-fashion-paparazzo { background-image: url('../img/target/KieranHudson.jpg'); }
 .LeChiffre-fashion-banker { background-image: url('../img/target/LeChiffre.jpg'); }
+.OliverWinding-fashion-banker { background-image: url('../img/target/OliverWinding.jpg'); }
 
 .SebastianSato-fashion, .SebastianSato-xmas { background-image: url('../img/targetcon/SebastianSato.jpg'); }
 .HelmutKruger-fashion, .HelmutKruger-xmas { background-image: url('../img/targetcon/HelmutKruger.jpg'); }
@@ -2866,7 +2867,7 @@ div[class^="ElusiveTarget"], div[class^="UnassignedTarget"] { background-image: 
 .MixThingsUp { background-image: url('../img/obj/MixThingsUp.png'); }
 .RushingThroughYourVeins { background-image: url('../img/obj/RushingThroughYourVeins.png'); }
 .ChipInThenCashOut { background-image: url('../img/obj/ChipInThenCashOut.png'); }
-.SideJob { background-image: url('../img/obj/SideJob.png'); }
+.Baller { background-image: url('../img/obj/Baller.png'); }
 .MoreRecognizable { background-image: url('../img/obj/MoreRecognizable.png'); }
 
 .PhotogenicParis { background-image: url('../img/camera/PhotogenicParis.png'); }
