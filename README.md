@@ -48,7 +48,7 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 
 **June 9th, 2024**
 * **Elusive Target:**
-  * **#44: The Banker** - New ET added, including 2 (alternate image) Entry points, 5 mission specific extra objectives, and 5 mission specific photo objectives.
+  * **#44: The Banker** - New ET added, including 50/50 chance for secondary target, 2 alternate image Entry points, 5 mission specific extra objectives, and 5 mission specific photo objectives.
 * **Other Fixes:**
   * Added the newest Elusive Target DLC to the list in the Compatibility & Issues section.
 >**Bug Hunting:** Please make a post [via GitHub](https://github.com/BRYN4444/HitmanRoulette/issues) or in the thread [on Hitman Forum](https://hitmanforum.com/t/13107) if you:
