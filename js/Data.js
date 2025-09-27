@@ -6344,7 +6344,7 @@ var theinfiltrator = {
 	entry: ["47's Suite"],
 	exit: ["Beach","Speedboat","Tuk-tuk|(Needs Repair)","Tunnel"],
 	eexit: [],
-	disguises: ["Any Suit","Rory Cutmore","Tournament Judge",
+	disguises: ["Any Suit","Rory Cutmore","Tournament Judge","Captive",
 	"Groundskeeper","Kitchen Staff","Waiter",
 	"Hotel Staff","Hotel Security",
 	"Concord Union Guard"],
