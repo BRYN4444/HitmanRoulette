@@ -138,6 +138,16 @@ function createWeaponList(container) {
 		kills[0] = container.surgeonsKills[0];
 		kills[1] = container.surgeonsKills[1];
 	}
+	else if (mode == "MAIN" && container.missionTitle === "The Infiltrator") {
+		var leeRollies = Math.random();		
+		var torney1Rollies = Math.random();
+		var torney2Rollies = Math.random();
+		var torney3Rollies = Math.random();
+		if (leeRollies < 0.25) kills[0] = "Killed by Agent Lee|Target Specific";
+		if (torney1Rollies < 0.25) kills[1] = "Lose in the Tournament|Non-Lethal";
+		if (torney2Rollies < 0.25) kills[2] = "Lose in the Tournament|Non-Lethal";
+		if (torney3Rollies < 0.25) kills[3] = "Lose in the Tournament|Non-Lethal";
+	}
 	
 	return kills;
 };
@@ -418,6 +428,8 @@ function containerToResult(container) {
 		result.missionobjective = "[Optional] Do Not Eliminate The Guide|The clients would prefer that Chesterfield's guide does not become collateral damage.|[Optional] Do Not Eliminate the Guide";
 	else if (mode == "MAIN" && result.missionCode == "archive-splitter")
 		result.missionobjective = "Eliminate Clones|The ICA board has greenlit additional mission objectives. All of Max Valliant's clones must be eliminated.|Eliminate Clones";
+	else if (mode == "MAIN" && result.missionCode == "birthday-infiltrator")
+		result.missionobjective = "Ensure Agent Lee Wins The Tournament|Agent Lee must win the tournament to infiltrate Concord Union.|Lee Must Win The Tournament";	
 	else
 		result.missionobjective = "";
 
