@@ -30,6 +30,7 @@ Though you can deselect any location you do not own, by default the Roulette sel
 4. **The Disruptor Pack** (DLC currently unavailable)
 5. **The Splitter Pack** (DLC)
 6. **The Banker Pack** (DLC)
+7. **The Bruce Lee Pack** (Limited Time DLC)
 
 There may be the odd conflicting trait that changed between releases in this trilogy, though I've done my best to account for these. It is also important to note that the later the game sequel, the more gear is available to unlock for use. Lastly, since Contract Mode Targets are regular NPCs and Elimination Methods are randomly assigned, not every Target can be killed with every Method easily/silently.
 
@@ -46,15 +47,26 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 
 ### Latest Update
 
-**June 9th, 2024**
+**September 26th, 2025**
 * **Elusive Target:**
-  * **#44: The Banker** - New ET added, including 50/50 chance for secondary target, 2 alternate image Entry points, 5 mission specific extra objectives, and 5 mission specific photo objectives.
+  * **#45: The Infiltrator** - New ET added, including 4 overall targets with a 25% change of a unique non-lethal elimination method for each, 1 alternate image Entry point, 6 mission specific extra objectives, and 4 mission specific photo objectives. Note: the Bruce Lee objective is listed last because I don't want to restructure the whole Roulette for this one instance.
+  * **#44: The Banker** - Ensured the "Forced Difficulty" Challenge and the "One Save Only" complication no longer appear in this, since the don't work anyway.
+* **HITMAN:**
+  * **Club 27:** Renamed the "47's Suite" entrance to match in-game. Added a missing Extra Objective image.
 * **Other Fixes:**
   * Added the newest Elusive Target DLC to the list in the Compatibility & Issues section.
 >**Bug Hunting:** Please make a post [via GitHub](https://github.com/BRYN4444/HitmanRoulette/issues) or in the thread [on Hitman Forum](https://hitmanforum.com/t/13107) if you:
 >* Experience any graphical issues while using the Roulette in 4K, or on phones/tablets.
 >* Generate impossibilities when using the Roulette with Elusive Targets or past titles HITMAN / HITMAN 2.
 >* Have troubles or questions about the Stream Overlay.
+
+---
+
+**June 9th, 2025**
+* **Elusive Target:**
+  * **#44: The Banker** - New ET added, including 50/50 chance for secondary target, 2 alternate image Entry points, 5 mission specific extra objectives, and 5 mission specific photo objectives.
+* **Other Fixes:**
+  * Added the newest Elusive Target DLC to the list in the Compatibility & Issues section.
 
 ---
 
@@ -104,17 +116,3 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 * **Other Fixes:**
   * Fixed bad cropping on some Contracts Mode Target images in Hokkaido.
   * Fixed a spelling mistake on a Contracts Mode Target used throughout Hokkaido.
-
----
-
-**October 28th, 2023**
-* **Elusive Target:**
-  * **#41: The Drop**
-    * **Extra Objective:** 6 added.
-	* **Photo Objective:** 2 added.
-* **HITMAN III:**
-  * **Apex Predator:**
-    * **Extra Objective:** 1 added. Also applies to "The Liability" and "The Drop" Elusive Targets.
-    * **Photo Objective:** 1 added. Also applies to "The Liability" Elusive Target.
-* **Other Fixes:**
-  * Using a better version of the "Holiday Hoarders" background image without vignetting. Also did another pass on these images when using other Themes.
