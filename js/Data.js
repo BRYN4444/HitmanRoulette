@@ -5,13 +5,13 @@ var redo_stack = []
 var h1 = ["training","test","fashion","xmas","director","virus","movie","election","handoff","enforcer","tension","construction","extractor","birthday","cult","veteran","terrorists","mercenary","heart","spread","controller"];
 var h2 = ["training","test","fashion","xmas","virus","movie","election","handoff","tension","construction","birthday","cult","terrorists","heart","spread","festival","beach","speedway","water","cartel","biggame","ghost","magic","suburbs","pill","ark","bank","resort"];
 var h3 = ["training","test","fashion","xmas","director","virus","movie","election","handoff","enforcer","tension","construction","extractor","birthday","cult","veteran","terrorists","mercenary","heart","spread","festival","controller","beach","speedway","water","cartel","biggame","ghost","magic","suburbs","pill","ark","bank","resort","tower","clue","gardenshow","club","archive","vineyard","train","pirates"];
-var et = ["fashion-forger","fashion-sensation","fashion-broker","fashion-black-hat","fashion-pharmacist","fashion-identity-thief","fashion-chef","fashion-blackmailer","fashion-paparazzo","virus-congressman","virus-prince","virus-twin","virus-wildcard","virus-guru","virus-deceivers","movie-badboy","tension-gunrunner","tension-fixer","tension-angel-of-death","construction-entertainer","birthday-ex-dictator","birthday-food-critic","birthday-warlord","terrorists-chameleon","terrorists-bookkeeper","heart-surgeons","heart-fugitive","beach-politician","speedway-undying","speedway-undying-returns","cartel-revolutionary","suburbs-serial-killer","ark-appraiser","ark-stowaway","ark-disruptor","tower-ascensionist","clue-collector","clue-procurers","club-liability","club-drop","archive-rage","archive-splitter","vineyard-iconoclast","vineyard-heartbreaker"];
+var et = ["fashion-forger","fashion-sensation","fashion-broker","fashion-black-hat","fashion-pharmacist","fashion-identity-thief","fashion-chef","fashion-blackmailer","fashion-paparazzo","fashion-banker","virus-congressman","virus-prince","virus-twin","virus-wildcard","virus-guru","virus-deceivers","movie-badboy","tension-gunrunner","tension-fixer","tension-angel-of-death","construction-entertainer","birthday-ex-dictator","birthday-food-critic","birthday-warlord","birthday-infiltrator","terrorists-chameleon","terrorists-bookkeeper","heart-surgeons","heart-fugitive","beach-politician","speedway-undying","speedway-undying-returns","cartel-revolutionary","suburbs-serial-killer","ark-appraiser","ark-stowaway","ark-disruptor","tower-ascensionist","clue-collector","clue-procurers","club-liability","club-drop","archive-rage","archive-splitter","vineyard-iconoclast","vineyard-heartbreaker"];
 
 var suitStarts = ["Weapons Building","Crouched behind a Truck",
 "Red Carpet","Palace Garden","Pile-Driver Barge","Attic","Undercover at IAGO Auction",
 "Main Square","ICA Safe House","Harbor","Sapienza Ruins","Main Square Tower","Church Morgue","City Gates","Promenade","Portico",
 "Bazaar Entrance","Lamp Store Rooftop","School Alley","Consulate Parking Garage","Consulate Plaza",
-"Riverside Landing","Agent 47's Suite","Hotel Front Terrace",
+"Riverside Landing","47's Suite","Hotel Front Terrace",
 "West Bridge","Old Orchard","Southern Farm Perimeter","Water Tower",
 "Infiltrating Along the Mountain Path","Infiltrating below the Helipad",
 "Boat","Office","Beach","Hut",
@@ -32,8 +32,8 @@ var suitStarts = ["Weapons Building","Crouched behind a Truck",
 "Western Beach","Silt Village","Central Social Hub","Shrine"];
 var disguiseExits = ["Chimney|(Santa 47 Only)","Ambulance|(Medic Only)","Nest|(Secret)","Pale Rider|(Secret)","Trash Truck|(Garbage Man Only)","Swan Dive|(Secret)","Window|(Secret)","Snorkel|(Instructor Only)","Underground Cave System|(Tactical Wetsuit Only)","Shrine|(Requiem Suit Only)"];
 var koExits = ["Chimney|(Santa 47 Only)","Pink Car|(Needs Key)","Nest|(Secret)","Rico's Supercar|(Needs Key)","Local's Car|(Needs Key)","Roadwork Gate|(Needs Key)","Window|(Secret)","Snorkel|(Instructor Only)","Delivery Scooter|(Needs Key)"];
-var proOnly = ["training","test","xmas","director","movie","election","handoff","enforcer","construction","extractor","cult","veteran","mercenary","spread","festival","controller","fashion-forger","fashion-sensation","fashion-broker","fashion-black-hat","fashion-pharmacist","fashion-identity-thief","fashion-chef","fashion-blackmailer","fashion-paparazzo","virus-congressman","virus-prince","virus-twin","virus-wildcard","virus-guru","virus-deceivers","movie-badboy","tension-gunrunner","tension-fixer","tension-angel-of-death","construction-entertainer","birthday-ex-dictator","birthday-food-critic","birthday-warlord","terrorists-chameleon","terrorists-bookkeeper","heart-surgeons","heart-fugitive","beach-politician","speedway-undying","speedway-undying-returns","cartel-revolutionary","suburbs-serial-killer","ark-appraiser","ark-stowaway","ark-disruptor","tower-ascensionist","clue-collector","clue-procurers","club-liability","club-drop","archive-rage","archive-splitter","vineyard-iconoclast","vineyard-heartbreaker"];
-var noSave = ["xmas","festival","gardenshow","fashion-forger","fashion-sensation","fashion-broker","fashion-black-hat","fashion-pharmacist","fashion-identity-thief","fashion-chef","fashion-blackmailer","fashion-paparazzo","virus-congressman","virus-prince","virus-twin","virus-wildcard","virus-guru","virus-deceivers","movie-badboy","tension-gunrunner","tension-fixer","tension-angel-of-death","construction-entertainer","birthday-ex-dictator","birthday-food-critic","birthday-warlord","terrorists-chameleon","terrorists-bookkeeper","heart-surgeons","heart-fugitive","beach-politician","speedway-undying","speedway-undying-returns","cartel-revolutionary","suburbs-serial-killer","ark-appraiser","ark-stowaway","ark-disruptor","tower-ascensionist","clue-collector","clue-procurers","club-liability","club-drop","archive-rage","archive-disruptor","vineyard-iconoclast","vineyard-heartbreaker"];
+var proOnly = ["training","test","xmas","director","movie","election","handoff","enforcer","construction","extractor","cult","veteran","mercenary","spread","festival","controller","fashion-forger","fashion-sensation","fashion-broker","fashion-black-hat","fashion-pharmacist","fashion-identity-thief","fashion-chef","fashion-blackmailer","fashion-paparazzo","fashion-banker","virus-congressman","virus-prince","virus-twin","virus-wildcard","virus-guru","virus-deceivers","movie-badboy","tension-gunrunner","tension-fixer","tension-angel-of-death","construction-entertainer","birthday-ex-dictator","birthday-food-critic","birthday-warlord","birthday-infiltrator","terrorists-chameleon","terrorists-bookkeeper","heart-surgeons","heart-fugitive","beach-politician","speedway-undying","speedway-undying-returns","cartel-revolutionary","suburbs-serial-killer","ark-appraiser","ark-stowaway","ark-disruptor","tower-ascensionist","clue-collector","clue-procurers","club-liability","club-drop","archive-rage","archive-splitter","vineyard-iconoclast","vineyard-heartbreaker"];
+var noSave = ["xmas","festival","gardenshow","fashion-forger","fashion-sensation","fashion-broker","fashion-black-hat","fashion-pharmacist","fashion-identity-thief","fashion-chef","fashion-blackmailer","fashion-paparazzo","fashion-banker","virus-congressman","virus-prince","virus-twin","virus-wildcard","virus-guru","virus-deceivers","movie-badboy","tension-gunrunner","tension-fixer","tension-angel-of-death","construction-entertainer","birthday-ex-dictator","birthday-food-critic","birthday-warlord","birthday-infiltrator","terrorists-chameleon","terrorists-bookkeeper","heart-surgeons","heart-fugitive","beach-politician","speedway-undying","speedway-undying-returns","cartel-revolutionary","suburbs-serial-killer","ark-appraiser","ark-stowaway","ark-disruptor","tower-ascensionist","clue-collector","clue-procurers","club-liability","club-drop","archive-rage","archive-disruptor","vineyard-iconoclast","vineyard-heartbreaker"];
 
 var mechListH1 = ["Instinct|Turn off Instinct in the game's Options menu under Gameplay.",
 				"Mini Map|Turn off the Mini Map in the game's Options menu under Gameplay.",
@@ -1897,7 +1897,7 @@ var c27 = {
 	"Jack “Hellhound” Cerberus|One of Jordan Cross' Bodyguards sitting at the top of the stairs leading into the emperor suite makeshift Recording Studio.",
 	"“Rookie” Nelson|One of Jordan Cross' Bodyguards taking it easy and having a drink in Cross' Roof Garden within the emperor suite.",	
 	"Al 'Tootsie' Avery|One of the Jordan Cross' Bodyguards stationed in the north end of the emperor suite makeshift Recording Studio."],
-	entry: ["Riverside Landing","Agent 47's Suite","Undercover in the Restaurant Kitchen","Undercover in the Linen Room","Undercover by the Security Shed","Undercover at the Himmapan Bar","Undercover in the Side Garden","Undercover in the 2nd Floor Hallway"],
+	entry: ["Riverside Landing","47's Suite","Undercover in the Restaurant Kitchen","Undercover in the Linen Room","Undercover by the Security Shed","Undercover at the Himmapan Bar","Undercover in the Side Garden","Undercover in the 2nd Floor Hallway"],
 	exit: ["Speedboat|(Needs Key on Master)","Tuk-tuk|(Needs Repair)","Tunnel"],
 	eexit: [],
 	disguises: ["Any Suit","Abel de Silva","Morgan's Bodyguard","Stalker",
@@ -2148,7 +2148,7 @@ var theveteran = {
 	contractCivilian: [],
 	contractStaff: [],
 	contractGuard: [],
-	entry: ["Riverside Landing","Agent 47's Suite","Undercover in the Restaurant Kitchen","Undercover in the Linen Room","Undercover by the Security Shed","Undercover at the Himmapan Bar","Undercover in the Side Garden","Undercover in the 2nd Floor Hallway"],
+	entry: ["Riverside Landing","47's Suite","Undercover in the Restaurant Kitchen","Undercover in the Linen Room","Undercover by the Security Shed","Undercover at the Himmapan Bar","Undercover in the Side Garden","Undercover in the 2nd Floor Hallway"],
 	exit: ["Speedboat","Tuk-tuk|(Needs Repair)","Tunnel"],
 	eexit: [],
 	disguises: ["Any Suit","Abel de Silva","Morgan's Bodyguard","Stalker",
@@ -6204,7 +6204,7 @@ var theexdictator = {
 	contractCivilian: [],
 	contractStaff: [],
 	contractGuard: [],
-	entry: ["Riverside Landing","Agent 47's Suite","Undercover in the Restaurant Kitchen","Undercover in the Linen Room","Undercover by the Security Shed","Undercover at the Himmapan Bar","Undercover in the Side Garden","Undercover in the 2nd Floor Hallway"],
+	entry: ["Riverside Landing","47's Suite","Undercover in the Restaurant Kitchen","Undercover in the Linen Room","Undercover by the Security Shed","Undercover at the Himmapan Bar","Undercover in the Side Garden","Undercover in the 2nd Floor Hallway"],
 	exit: ["Speedboat|(Needs Key on Master)","Tuk-tuk|(Needs Repair)","Tunnel"],
 	eexit: [],
 	disguises: ["Any Suit","Abel de Silva","Morgan's Bodyguard","Stalker",
@@ -6249,7 +6249,7 @@ var thefoodcritic = {
 	contractCivilian: [],
 	contractStaff: [],
 	contractGuard: [],
-	entry: ["Riverside Landing","Agent 47's Suite","Undercover in the Restaurant Kitchen","Undercover in the Linen Room","Undercover by the Security Shed","Undercover at the Himmapan Bar","Undercover in the Side Garden","Undercover in the 2nd Floor Hallway"],
+	entry: ["Riverside Landing","47's Suite","Undercover in the Restaurant Kitchen","Undercover in the Linen Room","Undercover by the Security Shed","Undercover at the Himmapan Bar","Undercover in the Side Garden","Undercover in the 2nd Floor Hallway"],
 	exit: ["Speedboat|(Needs Key on Master)","Tuk-tuk|(Needs Repair)","Tunnel"],
 	eexit: [],
 	disguises: ["Any Suit","Abel de Silva","Morgan's Bodyguard","Stalker",
@@ -6294,7 +6294,7 @@ var thewarlord = {
 	contractCivilian: [],
 	contractStaff: [],
 	contractGuard: [],
-	entry: ["Riverside Landing","Agent 47's Suite","Undercover in the Restaurant Kitchen","Undercover in the Linen Room","Undercover by the Security Shed","Undercover at the Himmapan Bar","Undercover in the Side Garden","Undercover in the 2nd Floor Hallway"],
+	entry: ["Riverside Landing","47's Suite","Undercover in the Restaurant Kitchen","Undercover in the Linen Room","Undercover by the Security Shed","Undercover at the Himmapan Bar","Undercover in the Side Garden","Undercover in the 2nd Floor Hallway"],
 	exit: ["Speedboat|(Needs Key on Master)","Tuk-tuk|(Needs Repair)","Tunnel"],
 	eexit: [],
 	disguises: ["Any Suit","Abel de Silva","Morgan's Bodyguard","Stalker",
@@ -6321,6 +6321,50 @@ var thewarlord = {
 	"I Will Cry if I Want To|Destroy 18 total golden elephant statues in Ken Morgan's queen Suite on both floors. Then return to the Reception."],
 	photos: ["Photographic Proof|Take a photo of your target(s) after you've eliminated them, unless their body is unavailable. They must not be in a body bag."]
 };
+var theinfiltrator = {
+	missionTitle: "The Infiltrator",
+	missionLocation: "Bangkok",
+	missionCode: "birthday-infiltrator",
+	melee: ["Fiber Wire",
+	"Cleaver|Melee","Cleaver|Thrown Weapon",
+	"Fire Axe|Melee","Fire Axe|Thrown Weapon",
+	"Hatchet|Melee","Hatchet|Thrown Weapon",
+	"Katana|Melee","Katana|Thrown Weapon",
+	"Kitchen Knife|Melee","Kitchen Knife|Thrown Weapon",
+	"Letter Opener|Melee","Letter Opener|Thrown Weapon",
+	"Sapper's Axe|Melee","Sapper's Axe|Thrown Weapon",
+	"Screwdriver|Melee","Screwdriver|Thrown Weapon",
+	"Garden Fork|Melee","Garden Fork|Thrown Weapon",
+	"Barber Razor|Melee","Barber Razor|Thrown Weapon"],
+	targetList: ["Jiaolong Wu","Roland Chau","Xiao Hu","Xiang “Zen” Weisheng"],
+	contractUnique: ["Jiaolong Wu|Elusive Target","Roland Chau|Optional Target","Xiao Hu|Optional Target","Xiang “Zen” Weisheng|Optional Target"],
+	contractCivilian: [],
+	contractStaff: [],
+	contractGuard: [],
+	entry: ["47's Suite"],
+	exit: ["Beach","Speedboat","Tuk-tuk|(Needs Repair)","Tunnel"],
+	eexit: [],
+	disguises: ["Any Suit","Rory Cutmore","Tournament Judge",
+	"Groundskeeper","Kitchen Staff","Waiter",
+	"Hotel Staff","Hotel Security",
+	"Concord Union Guard"],
+	disguiseVariants: ["Any Suit"],
+	wild: ["Power Chord|Play Jordan Cross' remaining guitar.",
+	"Only 47 is Qualified|Have someone disqualified from the tournament. Either by taking too long to be summoned or as a judge yourself."],
+	missionWild: ["Benzo Bender|Acquire a bottle of Paralytic Antidote. Gift it if needed.",
+	"When Guards Close a Door, They Open a Window|Enter the tournament area without an invitation."],
+	compWild: ["Tik Tuk|Repair the Tuk-Tuk located behind the hotel.",
+	"Don't Breathe This|Pollute the ventilation system of the hotel lobby.",
+	"Tournament Tamper|Rearrange something on the tournament wall.",
+	"Safe Keeping|Open Jiaolong Wu's safe. How old is that guy? 80? Well whatever, you can crack that safe, 47!",
+	"Friendly Competition|Rearrange the tournament so that two Concord Union members fight each other."],
+	photos: ["Photographic Proof|Take a photo of your target(s) after you've eliminated them, unless their body is unavailable. They must not be in a body bag.",
+	"Immortality|Take a photo of Bruce Lee. Preferably kicking someone's ass.",
+	"Smuggler Run|Take a photo of Roland Chau running to, or at, his laptop.",
+	"Snow in Thailand|Take a photo of Zen doing drugs.",
+	"Body on the Mind|Take a photo of Xiao Hu working out."]
+};
+
 
 var thechameleon = {
 	missionTitle: "The Chameleon",
@@ -7365,7 +7409,8 @@ var mission_names_map = {
 	"ET41": thedrop,
 	"ET42": thedisruptor,
 	"ET43": thesplitter,
-	"ET44": thebanker
+	"ET44": thebanker,
+	"ET45": theinfiltrator
 }
 
 var killTypesMap = {
