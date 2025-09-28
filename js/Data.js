@@ -5622,7 +5622,7 @@ var thebanker = {
 	contractCivilian: ["Oliver Winding|Agent Smith's Target"],
 	contractStaff: [],
 	contractGuard: [],
-	entry: ["Red Carpet","Palace Garden","Pile-Driver Barge","Attic"],
+	entry: ["Red Carpet","Palace Garden","Pile-Driver Barge","Attic","Undercover in Kitchen","Undercover in Locker Room"],
 	exit: ["Front Gates (Red Carpet)","Front Gates (VIP)","Front Gates (Parking Area)","Basement Catacombs","Helicopter","Baron Larin's Speedboat|(Needs Key)"],
 	eexit: [],
 	disguises: ["Any Suit","Agent Smith's Tuxedo","Vampire Magician",
