@@ -47,6 +47,14 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 
 ### Latest Update
 
+>**Bug Reporting** can be done [via GitHub](https://github.com/BRYN4444/HitmanRoulette/issues) or in the thread [on Hitman Forum](https://hitmanforum.com/t/13107).
+
+**September 28h, 2025**
+* **Elusive Target:**
+  * **#44: The Banker** - Added 2 new Entry points, ported from The Showstopper, that have recently been added to this ET.
+
+---
+
 **September 26th, 2025**
 * **Elusive Target:**
   * **#45: The Infiltrator** - New ET added, including 4 overall targets with a 25% change of a unique non-lethal elimination method for each, 1 alternate image Entry point, 6 mission specific extra objectives, and 4 mission specific photo objectives. Note: the Bruce Lee objective is listed last because I don't want to restructure the whole Roulette for this one instance.
@@ -55,10 +63,6 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
   * **Club 27:** Renamed the "47's Suite" entrance to match in-game. Added a missing Extra Objective image.
 * **Other Fixes:**
   * Added the newest Elusive Target DLC to the list in the Compatibility & Issues section.
->**Bug Hunting:** Please make a post [via GitHub](https://github.com/BRYN4444/HitmanRoulette/issues) or in the thread [on Hitman Forum](https://hitmanforum.com/t/13107) if you:
->* Experience any graphical issues while using the Roulette in 4K, or on phones/tablets.
->* Generate impossibilities when using the Roulette with Elusive Targets or past titles HITMAN / HITMAN 2.
->* Have troubles or questions about the Stream Overlay.
 
 ---
 
