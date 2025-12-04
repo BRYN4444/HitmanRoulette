@@ -30,7 +30,8 @@ Though you can deselect any location you do not own, by default the Roulette sel
 4. **The Disruptor Pack** (DLC currently unavailable)
 5. **The Splitter Pack** (DLC)
 6. **The Banker Pack** (DLC)
-7. **The Bruce Lee Pack** (Limited Time DLC)
+7. **The Bruce Lee Pack** (Limited Time DLC; currently unavailable)
+8. **The Eminem vs. Slim Shady Pack** (Limited Time DLC)
 
 There may be the odd conflicting trait that changed between releases in this trilogy, though I've done my best to account for these. It is also important to note that the later the game sequel, the more gear is available to unlock for use. Lastly, since Contract Mode Targets are regular NPCs and Elimination Methods are randomly assigned, not every Target can be killed with every Method easily/silently.
 
@@ -48,6 +49,15 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 ### Latest Update
 
 >**Bug Reporting** can be done [via GitHub](https://github.com/BRYN4444/HitmanRoulette/issues) or in the thread [on Hitman Forum](https://hitmanforum.com/t/13107).
+
+**December 4th, 2025**
+* **Elusive Target:**
+  * **#46: The Reflection** - New ET added, including 1 target, sole Entry point, sole Exit point (technically), 7 mission specific extra objectives, and 5 mission specific photo objectives.
+* **Other Fixes:**
+  * Edited the text for the "Elusive Honor" Extra Objective since the Elusive Target Arcade retry time limit was changed. Also added this to the last few Celebrity ETs I forgot to add it to.
+  * Added the Elusive Target DLC list in the Compatibility & Issues section to include this new listing and the previous getting delisted.
+
+---
 
 **September 28h, 2025**
 * **Elusive Target:**
@@ -110,13 +120,3 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 * **HITMAN:**
   * **Situs Inversus / Hokkaido Snow Festival:**
     * **Contracts Mode:** Updated the name listed for 3 NPCs. At some point they had been given last names.
-
----
-
-**November 24th, 2023**
-* **HITMAN:**
-  * **Holiday Hoarders:** 159 Contracts Mode Targets added. Majority of these are from the normal "The Showstopper" mission.
-  * **Hokkaido Snow Festival:** 142 Contracts Mode Targets added. Majority of these are from the normal "Situs Inversus" mission.
-* **Other Fixes:**
-  * Fixed bad cropping on some Contracts Mode Target images in Hokkaido.
-  * Fixed a spelling mistake on a Contracts Mode Target used throughout Hokkaido.
