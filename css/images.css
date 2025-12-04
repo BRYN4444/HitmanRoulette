@@ -252,6 +252,7 @@ html.httheme {
 .et43 { background:#292929 url("../img/missions/et43.png") no-repeat center top / 350px; }
 .et44 { background:#292929 url("../img/missions/et44.png") no-repeat center top / 350px; }
 .et45 { background:#292929 url("../img/missions/et45.png") no-repeat center top / 350px; }
+.et46 { background:#292929 url("../img/missions/et46.png") no-repeat center top / 350px; }
 
 /*** Backgrounds ***/
 .training, .test { background-image:var(--missionbggradient), var(--icafacility); }
@@ -360,6 +361,7 @@ div[class^="heart"][class$="-start-UndercoverintheKitchen"], .heart-start-Underc
 div[class^="heart"][class$="-start-UndercoverintheGarden"], .heart-start-UndercoverintheGarden, .festival-start-UndercoverintheGarden, .controller-start-UndercoverintheGarden { background-image: url('../img/entry/Undercover%20in%20the%20Garden.png'); }
 div[class^="heart"][class$="-start-Morgue"], .heart-start-Morgue, .festival-start-Morgue, .controller-start-Morgue { background-image: url('../img/entry/Morgue.png'); }
 div[class^="heart"][class$="-start-UndercoverintheOperatingTheater"], .heart-start-UndercoverintheOperatingTheater, .festival-start-UndercoverintheOperatingTheater, .controller-start-UndercoverintheOperatingTheater { background-image: url('../img/entry/Undercover%20in%20the%20Operating%20Theater.png'); }
+.heart-reflection-start-Introspection { background-image: url('../img/entry/Introspection.png') !important; }
 .spread-start-InfiltratingbelowtheHelipad { background-image: url('../img/entry/Infiltrating%20below%20the%20Helipad.png'); }
 .beach-start-Boat { background-image: url('../img/entry/Boat-Nightcall.png'); }
 .beach-start-Beach { background-image: url('../img/entry/Beach.png'); }
@@ -533,6 +535,7 @@ div[class^="heart"][class$="-exit-CableCar"], .heart-exit-CableCar, .festival-ex
 .spread-exit-Snowmobile { background-image: url('../img/exit/Snowmobile-PatientZero.png'); }
 .spread-exit-MountainPath { background-image: url('../img/exit/Mountain%20Path-PatientZero.png'); }
 .spread-exit-CableCar { background-image: url('../img/exit/Cable%20Car-PatientZero.png'); }
+.heart-reflection-exit-MirrorHouse { background-image: url('../img/exit/MirrorHouse.png') !important; }
 div[class^="beach"][class$="-exit-Boat"], .beach-exit-Boat { background-image: url('../img/exit/Boat-Nightcall.png'); }
 div[class^="beach"][class$="-exit-Car"] { background-image: url('../img/exit/Car-ThePolitician.png'); }
 div[class^="speedway"][class$="-exit-Helicopter"], .speedway-exit-Helicopter, .water-exit-Helicopter { background-image: url('../img/exit/Helicopter-TheFinishLine.png'); }
@@ -1631,6 +1634,7 @@ div[class^="ElusiveTarget"], div[class^="UnassignedTarget"] { background-image: 
 .PavelFrydel-heart-surgeons { background-image: url('../img/target/PavelFrydel.jpg'); }
 .AkaneAkenawa-heart-surgeons { background-image: url('../img/target/AkaneAkenawa.jpg'); }
 .IdentifyAndEliminateJiHu-heart-fugitive { background-image: url('../img/target/Ji-Hu.jpg'); }
+.SlimShady-heart-reflection { background-image: url('../img/target/SlimShady.jpg'); }
 
 .LowellAucoin-heart, .LowellAucoin-spread, .LowellAucoin-festival { background-image: url('../img/targetcon/Julian.jpg'); }
 .EricSandānoashiSjövold-heart, .EricSandānoashiSjövold-spread, .EricSandānoashiSjövold-festival { background-image: url("../img/targetcon/Eric'Sandānoashi'Sjövold.jpg"); }
@@ -3173,6 +3177,13 @@ div[class^="ElusiveTarget"], div[class^="UnassignedTarget"] { background-image: 
 .BonAppétit { background-image: url('../img/obj/BonAppétit.png'); }
 .PushupProfessional { background-image: url('../img/obj/PushupProfessional.png'); }
 .Ayakashi { background-image: url('../img/obj/Ayakashi.png'); }
+.MindBlown { background-image: url('../img/obj/MindBlown.png'); }
+.ChemicallyUnstable { background-image: url('../img/obj/ChemicallyUnstable.png'); }
+.ItsAllInYourHead { background-image: url('../img/obj/ItsAllInYourHead.png'); }
+.GradeAGas { background-image: url('../img/obj/GradeAGas.png'); }
+.DisappointDiana { background-image: url('../img/obj/DisappointDiana.png'); }
+.LikeMomUsedToMake { background-image: url('../img/obj/LikeMomUsedToMake.png'); }
+.BigHandsomeBaby { background-image: url('../img/obj/BigHandsomeBaby.png'); }
 
 .HeartTimes { background-image: url('../img/camera/HeartTimes.png'); }
 .HokkaidoFowlplay { background-image: url('../img/camera/HokkaidoFowlplay.png'); }
@@ -3183,6 +3194,11 @@ div[class^="ElusiveTarget"], div[class^="UnassignedTarget"] { background-image: 
 .Torii { background-image: url('../img/camera/Torii.png'); }
 .GardenBridge { background-image: url('../img/camera/GardenBridge.png'); }
 .MountainView { background-image: url('../img/camera/MountainView.png'); }
+.LookMomImOnTV { background-image: url('../img/camera/LookMomImonTV.png'); }
+.MidnightChannel { background-image: url('../img/camera/MidnightChannel.png'); }
+.DreamDining { background-image: url('../img/camera/DreamDining.png'); }
+.MrChainsaw { background-image: url('../img/camera/MrChainsaw.png'); }
+.ProductPlacement { background-image: url('../img/camera/ProductPlacement.png'); }
 
 /* Patient Zero */
 .LuckyShot { background-image: url('../img/obj/Lucky%20Shot.png'); } 
