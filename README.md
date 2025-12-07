@@ -51,6 +51,11 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 >**Bug Reporting** can be done [via GitHub](https://github.com/BRYN4444/HitmanRoulette/issues) or in the thread [on Hitman Forum](https://hitmanforum.com/t/13107).
 
 **December 4th, 2025**
+* **Other Fixes:**
+  * The "No Pacifications" Complication will now only activate if the Specific Disguises Kill Requirement is set to "Off".
+
+---
+**December 4th, 2025**
 * **Elusive Target:**
   * **#46: The Reflection** - New ET added, including 1 target, sole Entry point, sole Exit point (technically), 7 mission specific extra objectives, and 5 mission specific photo objectives.
 * **Other Fixes:**
@@ -111,12 +116,3 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
   * Removed a duplicate extra objective listing in several Ark Society ETs (and the standard mission itelf). Didn't impact anything other than imbalancing the odds of rolling it.
 * **Other Fixes:**
   * Better clarified what game & DLC combinations and purchases are used by the Roulette in the Compatibility & Issues section. Added the two Elusive Target DLC packs.
-
----
-
-**March 22nd, 2024**
-* **Elusive Target:**
-  * **The Undying Returns (2024)** - A new listing since the game presents it as such. The original versions of the ETs, despite how little difference there are between them, remain listed for use with "The Oroborous" Arcade DLC. 
-* **HITMAN:**
-  * **Situs Inversus / Hokkaido Snow Festival:**
-    * **Contracts Mode:** Updated the name listed for 3 NPCs. At some point they had been given last names.
