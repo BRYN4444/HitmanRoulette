@@ -78,7 +78,7 @@ function createExtrasList(exit, missionCode) {
 	if (Math.random() < 0.20 && document.getElementById("rating").checked == 0)
 		extras.push("Do Not Get Spotted|Avoid anyone seeing you performing any illegal action.");
 
-	if (Math.random() < 0.30 && disguise == "OFF" && !koExits.includes(exit) && document.getElementById("exobj").checked == 0)
+	if (Math.random() < 0.30 && disguise == "OFF" && document.getElementById("difficulty").selectedIndex == 0 && !koExits.includes(exit) && document.getElementById("exobj").checked == 0)
 		extras.push("No Pacifications|Do not pacify or subdue anyone in any way. This includes using items via melee/throwing, sedating, or tranquilizing.");
 
 	if (Math.random() < 0.25)
