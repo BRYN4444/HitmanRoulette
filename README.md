@@ -52,7 +52,7 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 
 **December 4th, 2025**
 * **Other Fixes:**
-  * The "No Pacifications" Complication will now only activate if the Specific Disguises Kill Requirement is set to "Off" and Force Difficulty Gameplay Challenge is set to "Off".
+  * The "No Pacifications" Complication will now only activate if both the Specific Disguises Kill Requirement and Force Difficulty Gameplay Challenge are set to "Off".
 
 ---
 **December 4th, 2025**
