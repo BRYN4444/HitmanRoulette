@@ -310,13 +310,15 @@ function containerToResult(container) {
 	var exitModeIndex = document.getElementById("startexit");
 	var exitMode = exitModeIndex.options[exitModeIndex.selectedIndex].value;
 	
+	var elusivelist = et;
+	
 	//Changes Iconography For Mission/Contract/Escalation/Sarajevo
 	if (container.missionTitle == "The Director" || container.missionTitle == "The Enforcer" || container.missionTitle == "The Extractor" || container.missionTitle == "The Veteran" || container.missionTitle == "The Mercenary" || container.missionTitle == "The Controller") {
 		result.type = "on-sj6";
 		result.cm = " (Sarajevo Six)";
 		result.missionTitle = container.missionTitle;
 	}
-	else if (container.missionTitle == "The Forger" || container.missionTitle == "The Congressman" || container.missionTitle == "The Prince" || container.missionTitle == "The Sensation" || container.missionTitle == "The Gunrunner" || container.missionTitle == "The Twin" || container.missionTitle == "The Wildcard" || container.missionTitle == "The Broker" || container.missionTitle == "The Black Hat" || container.missionTitle == "The Pharmacist" || container.missionTitle == "The Fixer" || container.missionTitle == "The Identity Thief" || container.missionTitle == "The Ex-Dictator" || container.missionTitle == "The Chef" || container.missionTitle == "The Angel of Death" || container.missionTitle == "The Guru" || container.missionTitle == "The Food Critic" || container.missionTitle == "The Chameleon" || container.missionTitle == "The Blackmailer" || container.missionTitle == "The Warlord" || container.missionTitle == "The Surgeons" || container.missionTitle == "The Bookkeeper" || container.missionTitle == "The Paparazzo" || container.missionTitle == "The Badboy" || container.missionTitle == "The Fugitive" || container.missionTitle == "The Entertainer" || container.missionTitle == "The Undying" || container.missionTitle == "The Revolutionary" || container.missionTitle == "The Appraiser" || container.missionTitle == "The Politician" || container.missionTitle == "The Undying Returns" || container.missionTitle == "The Deceivers" || container.missionTitle == "The Serial Killer" || container.missionTitle == "The Stowaway" || container.missionTitle == "The Collector" || container.missionTitle == "The Iconoclast" || container.missionTitle == "The Liability" || container.missionTitle == "The Heartbreaker" || container.missionTitle == "The Procurers" || container.missionTitle == "The Ascensionist" || container.missionTitle == "The Rage") {
+	else if (new RegExp(elusivelist.join("|")).test(container.missionCode)) {
 		result.type = "on-elu";
 		result.cm = " (Elusive Target)";
 		result.missionTitle = container.missionTitle;
@@ -343,7 +345,6 @@ function containerToResult(container) {
 	};
 	
 	//Determine Start/Exit
-	//document.getElementById("exsecret").checked == 1
 	if (exitMode == "BOTH" || exitMode == "START") {
 		if (result.missionCode == "gardenshow" && mode != "MAIN") { //Force Entrance DGS on Contracts Mode
 			result.entry = "Garden Show Entrance";
@@ -369,7 +370,8 @@ function containerToResult(container) {
 	} else {
 		result.exit = "Any Exit Location";
 	};
-		
+	
+	//mission specific objective
 	if (mode == "MAIN" && result.missionCode == "virus")
 		result.missionobjective = "DNA Specific Virus|Destroy the virus.|Destroy the DNA Specific Virus";
 	else if (mode == "MAIN" && result.missionCode == "handoff")
@@ -427,7 +429,9 @@ function containerToResult(container) {
 	else if (mode == "MAIN" && result.missionCode == "archive-splitter")
 		result.missionobjective = "Eliminate Clones|The ICA board has greenlit additional mission objectives. All of Max Valliant's clones must be eliminated.|Eliminate Clones";
 	else if (mode == "MAIN" && result.missionCode == "birthday-infiltrator")
-		result.missionobjective = "Ensure Agent Lee Wins The Tournament|Agent Lee must win the tournament to infiltrate Concord Union.|Lee Must Win The Tournament";	
+		result.missionobjective = "Ensure Agent Lee Wins The Tournament|Agent Lee must win the tournament to infiltrate Concord Union.|Lee Must Win The Tournament";
+	else if (mode == "MAIN" && result.missionCode == "clue-virus")
+		result.missionobjective = "Quarantine|Neutralize the virus any means necessary - it cannot be allowed to leave the Manor grounds.|Neutralize The Virus";	
 	else
 		result.missionobjective = "";
 
@@ -1095,7 +1099,7 @@ function writeEverything(result) {
 	
 	if(document.getElementById("input_objective").value) {
 		var objectivetext = "\nObjective: " + document.getElementById("input_objective").value.split('|')[1];
-		document.getElementById('overlay-objective').innerHTML = "Objective: " + document.getElementById("input_objective").value.split('|')[1];
+		document.getElementById('overlay-objective').innerHTML = "Objective: " + document.getElementById("input_objective").value.split('|')[2];
 	} else { var objectivetext = ""; document.getElementById('overlay-objective').innerHTML = ""; }
 	if(document.getElementById("input_extraobjective").value) {
 		var exobjtext = "\nExtra Objective: " + document.getElementById("input_extraobjective").value.split('|')[1];
