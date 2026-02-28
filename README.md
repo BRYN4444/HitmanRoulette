@@ -24,15 +24,19 @@ To quickly return the Roulette Settings back to default, preform a hard refresh 
 
 Though you can deselect any location you do not own, by default the Roulette selects missions from:
 1. - **HITMAN: World of Assassination** (HITMAN III patched) and **HITMAN: World of Assassination Deluxe Pack** (DLC)
+   - OR **HITMAN: World of Assassination 25th Anniversary Box** (PS5 Limited Edition) and **HITMAN: World of Assassination Deluxe Pack** (DLC)
    - OR just **HITMAN: World of Assassination Deluxe Edition** (GAME with DLC)
+   - OR just  **HITMAN: World of Assassination Signature Edition** (GAME with DLC for Switch 2)
 2. **Sarajevo Six Campaign Pack** (DLC)
-3. **The Undying Pack** (DLC)
-4. **The Disruptor Pack** (DLC currently unavailable)
-5. **The Splitter Pack** (DLC)
-6. **The Banker Pack** (DLC)
-7. **The Bruce Lee Pack** (Limited Time DLC)
-8. **The Eminem vs. Slim Shady Pack** (Limited Time DLC)
-9. **Patient Zero Requiem Pack** (DLC)
+
+Optionally, the Roulette can also select missions from:
+* **The Undying Pack** (DLC)
+* **The Disruptor Pack** (DLC currently unavailable)
+* **The Splitter Pack** (DLC)
+* **The Banker Pack** (DLC)
+* **The Bruce Lee Pack** (Limited Time DLC)
+* **The Eminem vs. Slim Shady Pack** (Limited Time DLC)
+* **Patient Zero Requiem Pack** (DLC)
 
 There may be the odd conflicting trait that changed between releases in this trilogy, though I've done my best to account for these. It is also important to note that the later the game sequel, the more gear is available to unlock for use. Lastly, since Contract Mode Targets are regular NPCs and Elimination Methods are randomly assigned, not every Target can be killed with every Method easily/silently.
 
@@ -59,8 +63,11 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 * **Roulette Modes > Stream Overlay:**
   * More concise main objective text will now be displayed instead of the normal length text, which can still be read when clicking the green intel icon when hovering over.
 * **Other Fixes:**
-  * Added to the Elusive Target DLC list in the Compatibility & Issues section the new "Patient Zero Requiem" DLC.
-  * Retracted the "currently unavailable" text from the Limited Time DLCs as they seem to be re-releasing them during ET reactivations, and I don't want to push a minor update every time they do this.
+  * **Compatibility & Issues** section:
+    * Added the 25th Anniversary Box and Signature Edition to the default mission game list.
+    * Reworded and separated the DLC list to make it clear that the recent Celebrity Elusive Target DLC packs are not enabled by default.
+    * Added the Patient Zero Requiem Pack to the optional mission DLC list.
+    * Retracted the "currently unavailable" text from the Limited Time DLCs as they seem to be re-releasing them during ET reactivations, and I don't want to push a minor update every time they do this.
 
 ---
 
