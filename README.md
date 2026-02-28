@@ -30,8 +30,9 @@ Though you can deselect any location you do not own, by default the Roulette sel
 4. **The Disruptor Pack** (DLC currently unavailable)
 5. **The Splitter Pack** (DLC)
 6. **The Banker Pack** (DLC)
-7. **The Bruce Lee Pack** (Limited Time DLC; currently unavailable)
+7. **The Bruce Lee Pack** (Limited Time DLC)
 8. **The Eminem vs. Slim Shady Pack** (Limited Time DLC)
+9. **Patient Zero Requiem Pack** (DLC)
 
 There may be the odd conflicting trait that changed between releases in this trilogy, though I've done my best to account for these. It is also important to note that the later the game sequel, the more gear is available to unlock for use. Lastly, since Contract Mode Targets are regular NPCs and Elimination Methods are randomly assigned, not every Target can be killed with every Method easily/silently.
 
@@ -50,11 +51,25 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 
 >**Bug Reporting** can be done [via GitHub](https://github.com/BRYN4444/HitmanRoulette/issues) or in the thread [on Hitman Forum](https://hitmanforum.com/t/13107).
 
-**December 4th, 2025**
+**February 28th, 2025**
+* **Elusive Target:**
+  * **#47: The Harbinger** - New ET added, including: 1 target, 1 objective, 1 Arcade exclusive Entry point, sole Exit point, 9 mission specific extra objectives, and 5 mission specific photo objectives.
+    * Note: This ET in Elusive Target Arcade has an unlockable Entry Point exclusive to it. Considering more players (non-modded) are likely to replay the ETA than the regular ET, this Entry Point will be pooled with the others on randomization. If you get this Entry Point for your normal ET playthrough: simply disregard or re-roll.
+  * **#46: The Reflection** - Added 1 extra objective.
+* **Roulette Modes > Stream Overlay:**
+  * More concise main objective text will now be displayed instead of the normal length text, which can still be read when clicking the green intel icon when hovering over.
+* **Other Fixes:**
+  * Added to the Elusive Target DLC list in the Compatibility & Issues section the new "Patient Zero Requiem" DLC.
+  * Retracted the "currently unavailable" text from the Limited Time DLCs as they seem to be re-releasing them during ET reactivations, and I don't want to push a minor update every time they do this.
+
+---
+
+**December 7th, 2025**
 * **Other Fixes:**
   * The "No Pacifications" Complication will now only activate if both the Specific Disguises Kill Requirement and Force Difficulty Gameplay Challenge are set to "Off".
 
 ---
+
 **December 4th, 2025**
 * **Elusive Target:**
   * **#46: The Reflection** - New ET added, including 1 target, sole Entry point, sole Exit point (technically), 7 mission specific extra objectives, and 5 mission specific photo objectives.
@@ -101,18 +116,3 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
   * Removed the 2024 listing of "The Undying Returns" Elusive Target, as it is exactly the same as the original listing. See the update for "The Disruptor" above.
   * Restyled the text that appears should you visit the Roulette with javascript disabled, making it actually legible.
   * Added the newest Elusive Target DLC to the list in the Compatibility & Issues section, along with listing "The Disruptor Pack" as unavailable.
-
----
-
-**July 20th, 2024**
-* **Elusive Target:**
-  * **#42: The Disruptor (2024)** - Added 1 extra objective and 4 photo objectives.
-  
----
-
-**June 27th, 2024**
-* **Elusive Target:**
-  * **#42: The Disruptor (2024)** - New ET added, including optional objective.
-  * Removed a duplicate extra objective listing in several Ark Society ETs (and the standard mission itelf). Didn't impact anything other than imbalancing the odds of rolling it.
-* **Other Fixes:**
-  * Better clarified what game & DLC combinations and purchases are used by the Roulette in the Compatibility & Issues section. Added the two Elusive Target DLC packs.
