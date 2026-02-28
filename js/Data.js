@@ -5,7 +5,7 @@ var redo_stack = []
 var h1 = ["training","test","fashion","xmas","director","virus","movie","election","handoff","enforcer","tension","construction","extractor","birthday","cult","veteran","terrorists","mercenary","heart","spread","controller"];
 var h2 = ["training","test","fashion","xmas","virus","movie","election","handoff","tension","construction","birthday","cult","terrorists","heart","spread","festival","beach","speedway","water","cartel","biggame","ghost","magic","suburbs","pill","ark","bank","resort"];
 var h3 = ["training","test","fashion","xmas","director","virus","movie","election","handoff","enforcer","tension","construction","extractor","birthday","cult","veteran","terrorists","mercenary","heart","spread","festival","controller","beach","speedway","water","cartel","biggame","ghost","magic","suburbs","pill","ark","bank","resort","tower","clue","gardenshow","club","archive","vineyard","train","pirates"];
-var et = ["fashion-forger","fashion-sensation","fashion-broker","fashion-black-hat","fashion-pharmacist","fashion-identity-thief","fashion-chef","fashion-blackmailer","fashion-paparazzo","fashion-banker","virus-congressman","virus-prince","virus-twin","virus-wildcard","virus-guru","virus-deceivers","movie-badboy","tension-gunrunner","tension-fixer","tension-angel-of-death","construction-entertainer","birthday-ex-dictator","birthday-food-critic","birthday-warlord","birthday-infiltrator","terrorists-chameleon","terrorists-bookkeeper","heart-surgeons","heart-fugitive","heart-reflection","beach-politician","speedway-undying","speedway-undying-returns","cartel-revolutionary","suburbs-serial-killer","ark-appraiser","ark-stowaway","ark-disruptor","tower-ascensionist","clue-collector","clue-procurers","club-liability","club-drop","archive-rage","archive-splitter","vineyard-iconoclast","vineyard-heartbreaker"];
+var et = ["fashion-forger","fashion-sensation","fashion-broker","fashion-black-hat","fashion-pharmacist","fashion-identity-thief","fashion-chef","fashion-blackmailer","fashion-paparazzo","fashion-banker","virus-congressman","virus-prince","virus-twin","virus-wildcard","virus-guru","virus-deceivers","movie-badboy","tension-gunrunner","tension-fixer","tension-angel-of-death","construction-entertainer","birthday-ex-dictator","birthday-food-critic","birthday-warlord","birthday-infiltrator","terrorists-chameleon","terrorists-bookkeeper","heart-surgeons","heart-fugitive","heart-reflection","beach-politician","speedway-undying","speedway-undying-returns","cartel-revolutionary","suburbs-serial-killer","ark-appraiser","ark-stowaway","ark-disruptor","tower-ascensionist","clue-collector","clue-procurers","clue-virus","club-liability","club-drop","archive-rage","archive-splitter","vineyard-iconoclast","vineyard-heartbreaker"];
 
 var suitStarts = ["Weapons Building","Crouched behind a Truck",
 "Red Carpet","Palace Garden","Pile-Driver Barge","Attic","Undercover at IAGO Auction",
@@ -23,7 +23,7 @@ var suitStarts = ["Weapons Building","Crouched behind a Truck",
 "Bank Entrance",
 "Resort Pier","Resort Pool Area","Shark Hut",
 "Atrium Lobby",
-"Main Road","Behind Mansion","Main Road (Gathering)","Behind Mansion (Gathering)",
+"Main Road","Behind Mansion","Main Road (Gathering)","Behind Mansion (Gathering)","12 Minutes Later...",
 "Garden Show Entrance","Deterministic Mode",
 "Bus Stop","Radio Tower",
 "Train Station","Balcony","River-Side Walkway",
@@ -33,7 +33,7 @@ var suitStarts = ["Weapons Building","Crouched behind a Truck",
 var disguiseExits = ["Chimney|(Santa 47 Only)","Ambulance|(Medic Only)","Nest|(Secret)","Pale Rider|(Secret)","Trash Truck|(Garbage Man Only)","Swan Dive|(Secret)","Window|(Secret)","Snorkel|(Instructor Only)","Underground Cave System|(Tactical Wetsuit Only)","Shrine|(Requiem Suit Only)"];
 var koExits = ["Chimney|(Santa 47 Only)","Pink Car|(Needs Key)","Nest|(Secret)","Rico's Supercar|(Needs Key)","Local's Car|(Needs Key)","Roadwork Gate|(Needs Key)","Window|(Secret)","Snorkel|(Instructor Only)","Delivery Scooter|(Needs Key)"];
 var proOnly = ["training","test","xmas","director","movie","election","handoff","enforcer","construction","extractor","cult","veteran","mercenary","spread","festival","controller","fashion-forger","fashion-sensation","fashion-broker","fashion-black-hat","fashion-pharmacist","fashion-identity-thief","fashion-chef","fashion-blackmailer","fashion-paparazzo","fashion-banker","virus-congressman","virus-prince","virus-twin","virus-wildcard","virus-guru","virus-deceivers","movie-badboy","tension-gunrunner","tension-fixer","tension-angel-of-death","construction-entertainer","birthday-ex-dictator","birthday-food-critic","birthday-warlord","birthday-infiltrator","terrorists-chameleon","terrorists-bookkeeper","heart-surgeons","heart-fugitive","heart-reflection","beach-politician","speedway-undying","speedway-undying-returns","cartel-revolutionary","suburbs-serial-killer","ark-appraiser","ark-stowaway","ark-disruptor","tower-ascensionist","clue-collector","clue-procurers","club-liability","club-drop","archive-rage","archive-splitter","vineyard-iconoclast","vineyard-heartbreaker"];
-var noSave = ["xmas","festival","gardenshow","fashion-forger","fashion-sensation","fashion-broker","fashion-black-hat","fashion-pharmacist","fashion-identity-thief","fashion-chef","fashion-blackmailer","fashion-paparazzo","fashion-banker","virus-congressman","virus-prince","virus-twin","virus-wildcard","virus-guru","virus-deceivers","movie-badboy","tension-gunrunner","tension-fixer","tension-angel-of-death","construction-entertainer","birthday-ex-dictator","birthday-food-critic","birthday-warlord","birthday-infiltrator","terrorists-chameleon","terrorists-bookkeeper","heart-surgeons","heart-fugitive","heart-reflection","beach-politician","speedway-undying","speedway-undying-returns","cartel-revolutionary","suburbs-serial-killer","ark-appraiser","ark-stowaway","ark-disruptor","tower-ascensionist","clue-collector","clue-procurers","club-liability","club-drop","archive-rage","archive-disruptor","vineyard-iconoclast","vineyard-heartbreaker"];
+var noSave = ["xmas","festival","gardenshow","fashion-forger","fashion-sensation","fashion-broker","fashion-black-hat","fashion-pharmacist","fashion-identity-thief","fashion-chef","fashion-blackmailer","fashion-paparazzo","fashion-banker","virus-congressman","virus-prince","virus-twin","virus-wildcard","virus-guru","virus-deceivers","movie-badboy","tension-gunrunner","tension-fixer","tension-angel-of-death","construction-entertainer","birthday-ex-dictator","birthday-food-critic","birthday-warlord","birthday-infiltrator","terrorists-chameleon","terrorists-bookkeeper","heart-surgeons","heart-fugitive","heart-reflection","beach-politician","speedway-undying","speedway-undying-returns","cartel-revolutionary","suburbs-serial-killer","ark-appraiser","ark-stowaway","ark-disruptor","tower-ascensionist","clue-collector","clue-procurers","club-liability","clue-virus","club-drop","archive-rage","archive-disruptor","vineyard-iconoclast","vineyard-heartbreaker"];
 
 var mechListH1 = ["Instinct|Turn off Instinct in the game's Options menu under Gameplay.",
 				"Mini Map|Turn off the Mini Map in the game's Options menu under Gameplay.",
@@ -6564,7 +6564,8 @@ var thereflection = {
 	missionWild: ["Elusive Honor|Do not restart under any circumstances. If you fail, you must honor the time limit until you can try again."],
 	compWild: ["Disappoint Diana|Disrobe Carlton Smith.",
 	"Like Mom Used To Make|Aquire a Spaghetti Sandwich.",
-	"Big Handsome Baby|Aquire the Basement Key."],
+	"Big Handsome Baby|Aquire the Basement Key.",
+	"Operation|Aquire the Garage Key."],
 	photos: ["Photographic Proof|Take a photo of your target(s) after you've eliminated them, unless their body is unavailable. They must not be in a body bag.",
 	"Look, Mom! I'm On TV!|Take a photo of Slim Shady on the big screens in the Garden.",
 	"Midnight Channel|Take a photo of the TV pile in the mirror house.",
@@ -7078,6 +7079,48 @@ var theprocurers = {
 	"Ding Ding Ding|Make Alexa Carlisle upset about the Bell."],
 	photos: ["Photographic Proof|Take a photo of your target(s) after you've eliminated them, unless their body is unavailable. They must not be in a body bag."]
 };
+var theharbinger = {
+	missionTitle: "The Harbinger",
+	missionLocation: "Dartmoor",
+	missionCode: "clue-virus",
+	melee: ["Fiber Wire",
+	"Barber Razor|Melee","Barber Razor|Thrown Weapon",
+	"Folding Knife|Melee","Folding Knife|Thrown Weapon",
+	"Garden Fork|Melee","Garden Fork|Thrown Weapon",
+	"Hatchet|Melee","Hatchet|Thrown Weapon",
+	"Letter Opener|Melee","Letter Opener|Thrown Weapon",
+	"Scissors|Melee","Scissors|Thrown Weapon",
+	"Screwdriver|Melee","Screwdriver|Thrown Weapon",
+	"Shears|Melee","Shears|Thrown Weapon",
+	"Unicorn Horn|Melee","Unicorn Horn|Thrown Weapon"],
+	targetList: ["Lilith Devereux"],
+	contractUnique: ["Lilith Devereux|Elusive Target"],
+	contractCivilian: [],
+	contractStaff: [],
+	contractGuard: [],
+	entry: ["Main Road","Garden","Staff Room","Behind Mansion","12 Minutes Later..."],
+	exit: ["Motorcycle"],
+	eexit: [],
+	disguises: ["Any Suit",
+	"Ether Biohazard Response Team Leader","Ether Biohazard Response Team Member",
+	"Mansion Staff","Mansion Guard","Bodyguard"],
+	disguiseVariants: ["Any Suit"],
+	wild: ["Clean Bill of Health|Complete the mission without yourself becoming infected.",
+	"Efficient|Complete the mission without entering the underground laboratory.",
+	"The H Is Silent|Collect any color Herb. Use them if nessessary.",
+	"Grave Robber|Collect Alexa Carlisle's specific Family Ring. Do not use it for it's secret purpose.",
+	"Limited Exposure|Ensure no more than 10 guests total are exposed to the virus."],
+	missionWild: ["Elusive Honor|Do not restart under any circumstances. If you fail, you must honor the time limit until you can try again."],
+	compWild: ["Cleanup Crew|Ensure Ether's Biohazard Response Team neutralizes one of the infected guests.",
+	"You Still Know The Number|Kill at least 47 people infected with the Nightshade Virus besides Lilith Devereux. This could be a very time-consuming process.",
+	"Lucky Night|Collect Lilith Devereux's pistol, the Bartoli 75S “Lucky Knight”.",
+	"Sins of the Father|Collect a “Tooth of the Father” ceremonial glass bulb from one of the secret cult members."],
+	photos: ["Photographic Proof|Take a photo of your primary target after you've eliminated them, unless their body is unavailable. They must not be in a body bag.",
+	"Postmortem Photo|Take a photo of the late Alexa Carlisle.",
+	"Cure Collection|Take a photo of Zachary Carlisle's Nightshade cure developments.",
+	"Final Announcement|Take a photo of Lilith Devereux & Gregory Carlisle while on stage during the conference.",
+	"Not-So-Secret Affair|Take a photo of Lilith Devereux & Gregory Carlisle while close together in Gregory's Room."]
+};
 
 var theliability = {
 	missionTitle: "The Liability",
@@ -7451,7 +7494,8 @@ var mission_names_map = {
 	"ET43": thesplitter,
 	"ET44": thebanker,
 	"ET45": theinfiltrator,
-	"ET46": thereflection
+	"ET46": thereflection,
+	"ET47": theharbinger
 }
 
 var killTypesMap = {
