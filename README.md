@@ -31,12 +31,13 @@ Though you can deselect any location you do not own, by default the Roulette sel
 
 Optionally, the Roulette can also select missions from:
 * **The Undying Pack** (DLC)
-* **The Disruptor Pack** (DLC currently unavailable)
+* **The Disruptor Pack** (DLC Delisted)
 * **The Splitter Pack** (DLC)
 * **The Banker Pack** (DLC)
 * **The Bruce Lee Pack** (Limited Time DLC)
 * **The Eminem vs. Slim Shady Pack** (Limited Time DLC)
 * **Patient Zero Requiem Pack** (DLC)
+* **The Wizard Pack** (DLC)
 
 There may be the odd conflicting trait that changed between releases in this trilogy, though I've done my best to account for these. It is also important to note that the later the game sequel, the more gear is available to unlock for use. Lastly, since Contract Mode Targets are regular NPCs and Elimination Methods are randomly assigned, not every Target can be killed with every Method easily/silently.
 
@@ -54,6 +55,18 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 ### Latest Update
 
 >**Bug Reporting** can be done [via GitHub](https://github.com/BRYN4444/HitmanRoulette/issues) or in the thread [on Hitman Forum](https://hitmanforum.com/t/13107).
+
+**June 6th, 2025**
+* **Elusive Target:**
+  * **#48: The Wizard** - New ET added, including: 1 target, 1 objective, 2 unique disguises, 1 extra objectives, and 4 photo objectives. The direct image of Quinn will be fixed after they update his bugged blood textures.
+  * **#42: The Disruptor** - Since the original ET is still playable if you own the DLC or through PC modding, this ET will also stay accessible here.
+* **Hitman III:**
+  * **The Farewell** - In Contracts mode, Tim Quinn has been renamed to Tom Twinn. This is likely to change again once the updated Tim Quinn face used in The Wizard Elusive Target replaces them.
+* **Other Fixes:**
+  * **Compatibility & Issues** section:
+    * Added The Wizard Pack to the optional mission DLC list.
+
+---
 
 **February 28th, 2025**
 * **Elusive Target:**
@@ -108,18 +121,3 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
   * **#44: The Banker** - New ET added, including 50/50 chance for secondary target, 2 alternate image Entry points, 5 mission specific extra objectives, and 5 mission specific photo objectives.
 * **Other Fixes:**
   * Added the newest Elusive Target DLC to the list in the Compatibility & Issues section.
-
----
-
-**December 17th, 2024**
-* **Elusive Target:**
-  * **#43: The Splitter** - New ET added, including secondary objective, sole Entry point, 6 mission specific extra objectives, and 2 mission specific photo objectives.
-  * **#42: The Disruptor** - Removed the "2024" from the listing of "The Disruptor" Elusive Target (as year markings represent reissues) and renumbered this as the 42nd ET (taking the number used by "The Undying Returns" reissue). Ultimatly this Elusive Target will be changed due to the real world actions of the celebrity used, and will subsequently be updated here too.
-* **HITMAN 2:**
-  * **Isle of Sgàil:** - Added missing lethal melee weapons for "The Arc Society" and "The Rage".
-* **HITMAN III:**
-  * **Chongqing:** - Updated the image for the Facility Emergency Exit to remove the clipping in the required dongle key.
-* **Other Fixes:**
-  * Removed the 2024 listing of "The Undying Returns" Elusive Target, as it is exactly the same as the original listing. See the update for "The Disruptor" above.
-  * Restyled the text that appears should you visit the Roulette with javascript disabled, making it actually legible.
-  * Added the newest Elusive Target DLC to the list in the Compatibility & Issues section, along with listing "The Disruptor Pack" as unavailable.
