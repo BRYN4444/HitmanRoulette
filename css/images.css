@@ -254,6 +254,7 @@ html.httheme {
 .et45 { background:#292929 url("../img/missions/et45.png") no-repeat center top / 350px; }
 .et46 { background:#292929 url("../img/missions/et46.png") no-repeat center top / 350px; }
 .et47 { background:#292929 url("../img/missions/et47.png") no-repeat center top / 350px; }
+.et48 { background:#292929 url("../img/missions/et48.png") no-repeat center top / 350px; }
 
 /*** Backgrounds ***/
 .training, .test { background-image:var(--missionbggradient), var(--icafacility); }
@@ -2180,6 +2181,7 @@ div[class^="ElusiveTarget"], div[class^="UnassignedTarget"] { background-image: 
 .MirandaJamison-ark-appraiser { background-image: url('../img/target/MirandaJamison.jpg'); }
 .JimmyChen-ark-stowaway { background-image: url('../img/target/JimmyChen.jpg'); }
 .TheDisruptor-ark-disruptor { background-image: url('../img/target/TheDisruptor.jpg'); }
+.TaylorGraves-ark-wizard { background-image: url('../img/target/TaylorGraves.jpg'); }
 
 .TheConstant-ark { background-image: url('../img/targetcon/TheConstant.jpg'); }
 .ThaddeusHartwell-ark, .DeclanBarton-ark { background-image: url('../img/targetcon/ThaddeusHartwell.jpg'); }
@@ -3455,6 +3457,7 @@ div[class^="ElusiveTarget"], div[class^="UnassignedTarget"] { background-image: 
 .IChallengeTheeToADuel { background-image: url('../img/obj/IChallengeTheeToADuel.png'); }
 .WorthySacrifice { background-image: url('../img/obj/WorthySacrifice.png'); }
 .BellEnd { background-image: url('../img/obj/BellEnd.png'); }
+.ThatsMyJob { background-image: url('../img/obj/ThatsMyJob.png'); }
 
 .InitiateIntel { background-image: url('../img/camera/InitiateIntel.png'); }
 .ShowroomShowoff { background-image: url('../img/camera/ShowroomShowoff.png'); }
@@ -3471,8 +3474,12 @@ div[class^="ElusiveTarget"], div[class^="UnassignedTarget"] { background-image: 
 .TimeConsumingWork { background-image: url('../img/camera/TimeConsumingWork.png'); }
 .RingsideSeats { background-image: url('../img/camera/RingsideSeats.png'); }
 .ShadowBoxing { background-image: url('../img/camera/ShadowBoxing.png'); }
-.AcceptNoSubstitutes { background-image: url('../img/camera/AcceptNoSubstitutes.png'); }
+.AcceptNoSubstitute { background-image: url('../img/camera/AcceptNoSubstitute.png'); }
 .TrainingRegimen { background-image: url('../img/camera/TrainingRegimen.png'); }
+.RingsidePics { background-image: url('../img/camera/RingsidePics.png'); }
+.GottaFocus { background-image: url('../img/camera/GottaFocus.png'); }
+.AcceptNoSubstitutes { background-image: url('../img/camera/AcceptNoSubstitutes.png'); }
+.QuinntessentialTraining { background-image: url('../img/camera/QuinntessentialTraining.png'); }
 
 /** New York **/
 /* Golden Handshake */
