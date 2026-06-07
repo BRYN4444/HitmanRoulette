@@ -4820,7 +4820,7 @@ var tf = {
 	"Heidi Santoro|Guitarist, formerly of The Class. Currently near the Asado pit.",
 	"Dexy Barat|Heidi Santoro's Manager. Currently near the Asado pit.",
 	"Kenneth Flowers|The Sommelier for Viñedo Yates. Working in the Wine Fridge."],
-	contractCivilian: ["Tim Quinn|Providence operative and Former CEO of Quantum Leap. Talking near the Asado pit.",
+	contractCivilian: ["Tom Twinn|Providence operative posing as former CEO of Quantum Leap. Talking near the Asado pit.",
 	"Ash Deveraux|Works for Morgan, Yates & Kohn. Talking near the Asado pit.",
 	"Demi Deveraux|Related to Biosphere CEO Simon Deveraux. Talking near the Asado pit.",
 	"Miranda Rutherford|Real last name Kensington. New CEO for Dynasty Global. Talking near the Asado pit.",
@@ -6960,9 +6960,66 @@ var thedisruptor = {
 	photos: ["Photographic Proof|Take a photo of your target(s) after you've eliminated them, unless their body is unavailable. They must not be in a body bag.",
 	"Ringside Seats|Take a photo of the fight while in the Upper Courtyard, beside the ring.",
 	"Shadow Boxing|Take a photo of The Disruptor during his break between rounds.",
-	"Accept No Substitutes|Take a photo of Tim Quinn's trainer, the so-called ICA Assassin “Agent 47”.",
-	"Training Regimen|Take a photo of Tim Quinn during his break between rounds."]
+	"Accept No Substitute|Take a photo of “Tim Quinn's” trainer, the so-called ICA Assassin “Agent 47”.",
+	"Training Regimen|Take a photo of “Tim Quinn” during his break between rounds."]
 };
+var thewizard = {
+	missionTitle: "The Wizard",
+	missionLocation: "Isle of Sgàil",
+	missionCode: "ark-wizard",
+	melee: ["Fiber Wire","Aztec Necklace",
+	"Battle Axe|Melee","Battle Axe|Thrown Weapon",
+	"Broadsword|Melee","Broadsword|Thrown Weapon",
+	"Burial Dagger|Melee","Burial Dagger|Thrown Weapon",
+	"Circumcision Knife|Melee","Circumcision Knife|Thrown Weapon",
+	"Cleaver|Melee","Cleaver|Thrown Weapon",
+	"Fire Axe|Melee","Fire Axe|Thrown Weapon",
+	"Hatchet|Melee","Hatchet|Thrown Weapon",
+	"Katana|Melee","Katana|Thrown Weapon",
+	"Letter Opener|Melee","Letter Opener|Thrown Weapon",
+	"Old Axe|Melee","Old Axe|Thrown Weapon",
+	"Saber|Melee","Saber|Thrown Weapon",
+	"Sapper's Axe|Melee","Sapper's Axe|Thrown Weapon",
+	"Scalpel|Melee","Scalpel|Thrown Weapon",
+	"Scissors|Melee","Scissors|Thrown Weapon",
+	"Screwdriver|Melee","Screwdriver|Thrown Weapon",
+	"Viking Axe|Melee","Viking Axe|Thrown Weapon",
+	"Starfish|Melee","Starfish|Thrown Weapon"],
+	targetList: ["Taylor Graves"],
+	contractUnique: ["Taylor Graves|Elusive Target"],
+	contractCivilian: [],
+	contractStaff: [],
+	contractGuard: [],
+	entry: ["Harbor","Chapel","Keep","Reception Area","Kitchens","Warehouse","Gallery","Architects' Lounge"],
+	exit: ["Speedboat","Helipad","East Wall","Rooftop|(Needs Flare)","Warehouse Ladder"],
+	eexit: ["Swan Dive|(Secret)"],
+	disguises: ["Any Suit","Personal Trainer","DJ",
+	"Blake Nathaniel","Jebediah Block","Master of Ceremonies","Butler","Burial Robes",
+	"Entertainer","Initiate","Knight's Armor",
+	"Chef","Custodian","Castle Staff","Event Staff",
+	"Guard","Elite Guard","Raider",
+	"Architect","Ark Member"],
+	disguiseVariants: ["Any Suit"],
+	wild: ["True Initiate|Collect 10 commemorative tokens.",
+	"Over Achiever|Collect 20 commemorative tokens.",
+	"Magpie|Collect 30 commemorative tokens.",
+	"That's My Job|Use any method to sound the ring bell and innterupt the fight."],
+	missionWild: ["Elusive Honor|Do not restart under any circumstances. If you fail, you must honor the time limit until you can try again."],
+	compWild: ["Five Finger Discount|Steal the Astek necklace.",
+	"Raider Of The Lost Ark|Open all nine Ark shipping crates",
+	"Egg On Your Face|Knock out 6 NPCs with filigree eggs.",
+	"Switcheroo|Swap the Astek necklace with an apricot without permanently disabling the security.",
+	"A Pain In The Neck|Acquire the poison chip blueprints.",
+	"A True Test Of Skillet|Pacify 10 people with the frying pan while disguised as a chef and remain unspotted.",
+	"I Challenge Thee To A Duel|Knock out 10 people with a fish.",
+	"Worthy Sacrifice|Through process, exfiltrate with the Sacrificial Knife<a href='./img/general/burialknife.jpg' target='_blank'>.</a>"],
+	photos: ["Photographic Proof|Take a photo of your target(s) after you've eliminated them, unless their body is unavailable. They must not be in a body bag.",
+	"Ringside Pics|Take a photo of the fight while in the Upper Courtyard, beside the ring.",
+	"Gotta Focus|Take a photo of Taylor Graves during his break between rounds.",
+	"Accept No Substitutes|Take a photo of Tim Quinn's trainer, the so-called ICA Assassin “Agent 47”.",
+	"Quinntessential Training|Take a photo of Tim Quinn during his break between rounds."]
+};
+
 
 var theascensionist = {
 	missionTitle: "The Ascensionist",
@@ -7495,7 +7552,8 @@ var mission_names_map = {
 	"ET44": thebanker,
 	"ET45": theinfiltrator,
 	"ET46": thereflection,
-	"ET47": theharbinger
+	"ET47": theharbinger,
+	"ET48": thewizard
 }
 
 var killTypesMap = {
