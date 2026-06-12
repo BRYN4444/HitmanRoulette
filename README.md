@@ -56,6 +56,11 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 
 >**Bug Reporting** can be done [via GitHub](https://github.com/BRYN4444/HitmanRoulette/issues) or in the thread [on Hitman Forum](https://hitmanforum.com/t/13107).
 
+**June 12th, 2025**
+* **Elusive Target:**
+  * **#48: The Wizard** - Image of bloody Tim Quinn has been updated to reflect his fixed blood textures.
+
+
 **June 7th, 2025**
 * **Elusive Target:**
   * **#48: The Wizard** - There were more changes from The Disruptor than I thought, so a few disguises and extra objectives that existed in regular The Arc Society were removed from listings for The Wizard.
