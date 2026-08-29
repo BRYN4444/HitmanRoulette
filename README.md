@@ -28,9 +28,10 @@ Though you can deselect any location you do not own, by default the Roulette sel
    - OR just **HITMAN: World of Assassination Deluxe Edition** (GAME with DLC)
    - OR just  **HITMAN: World of Assassination Signature Edition** (GAME with DLC for Switch 2)
 2. **Sarajevo Six Campaign Pack** (DLC)
+3. **The Undying Pack** (DLC - includes Special Assignment)
+4. **The Herbalist Pack** (DLC - includes Special Assignment)
 
 Optionally, the Roulette can also select missions from:
-* **The Undying Pack** (DLC)
 * **The Disruptor Pack** (DLC Delisted)
 * **The Splitter Pack** (DLC)
 * **The Banker Pack** (DLC)
@@ -56,14 +57,34 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 
 >**Bug Reporting** can be done [via GitHub](https://github.com/BRYN4444/HitmanRoulette/issues) or in the thread [on Hitman Forum](https://hitmanforum.com/t/13107).
 
+**Auguat 29th, 2025**
+* **Hitman Roulette:**
+  * Added "H3: Special Assignments" toggle to the Side Missions section when Selecting Missions.
+  * Added the "Undying Assignment" and "Herbalist Assignment" Special Assignments to the Side Missions section when Selecting Missions.
+* **Elusive Target:**
+  * **#27: The Undying** - Added 4 extra objectives and 2 photo objectives. More attention was given now that it can be accessed as a Special Assignment.
+  * **#49: The Herbalist** - New ET added, including: 1 target, 1 objective, 1 Entry point, 6 disguises, 9 extra objectives, and 5 photo objectives.
+* **Special Assignments:**
+  * **Undying Assignment** - Includes unique background image as well as the earlier stated  4 extra objectives and 2 photo objectives.
+  * **Herbalist Assignment** - Includes unique background image, 5 additonal Entry Points, and 1 additional extra objective.
+* **Other Fixes:**
+  * Removed difficulty listings for ETs when Force Difficulty is selected in Roulette Settings.
+  * **Compatibility & Issues** section:
+    * By including/appending Special Assignments to celebrity Elusive Targets, I have move "The Undying Pack" and added "The Herbalist Pack" to the default mission selection list.
+
+---
+
 **June 12th, 2025**
 * **Elusive Target:**
   * **#48: The Wizard** - Image of bloody Tim Quinn has been updated to reflect his fixed blood textures.
 
+---
 
 **June 7th, 2025**
 * **Elusive Target:**
   * **#48: The Wizard** - There were more changes from The Disruptor than I thought, so a few disguises and extra objectives that existed in regular The Arc Society were removed from listings for The Wizard.
+
+---
 
 **June 6th, 2025**
 * **Elusive Target:**
@@ -120,13 +141,5 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
   * **#44: The Banker** - Ensured the "Forced Difficulty" Challenge and the "One Save Only" complication no longer appear in this, since the don't work anyway.
 * **HITMAN:**
   * **Club 27:** Renamed the "47's Suite" entrance to match in-game. Added a missing Extra Objective image.
-* **Other Fixes:**
-  * Added the newest Elusive Target DLC to the list in the Compatibility & Issues section.
-
----
-
-**June 9th, 2025**
-* **Elusive Target:**
-  * **#44: The Banker** - New ET added, including 50/50 chance for secondary target, 2 alternate image Entry points, 5 mission specific extra objectives, and 5 mission specific photo objectives.
 * **Other Fixes:**
   * Added the newest Elusive Target DLC to the list in the Compatibility & Issues section.
