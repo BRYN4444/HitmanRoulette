@@ -5,7 +5,8 @@ var redo_stack = []
 var h1 = ["training","test","fashion","xmas","director","virus","movie","election","handoff","enforcer","tension","construction","extractor","birthday","cult","veteran","terrorists","mercenary","heart","spread","controller"];
 var h2 = ["training","test","fashion","xmas","virus","movie","election","handoff","tension","construction","birthday","cult","terrorists","heart","spread","festival","beach","speedway","water","cartel","biggame","ghost","magic","suburbs","pill","ark","bank","resort"];
 var h3 = ["training","test","fashion","xmas","director","virus","movie","election","handoff","enforcer","tension","construction","extractor","birthday","cult","veteran","terrorists","mercenary","heart","spread","festival","controller","beach","speedway","water","cartel","biggame","ghost","magic","suburbs","pill","ark","bank","resort","tower","clue","gardenshow","club","archive","vineyard","train","pirates"];
-var et = ["fashion-forger","fashion-sensation","fashion-broker","fashion-black-hat","fashion-pharmacist","fashion-identity-thief","fashion-chef","fashion-blackmailer","fashion-paparazzo","fashion-banker","virus-congressman","virus-prince","virus-twin","virus-wildcard","virus-guru","virus-deceivers","movie-badboy","tension-gunrunner","tension-fixer","tension-angel-of-death","construction-entertainer","birthday-ex-dictator","birthday-food-critic","birthday-warlord","birthday-infiltrator","terrorists-chameleon","terrorists-bookkeeper","heart-surgeons","heart-fugitive","heart-reflection","beach-politician","speedway-undying","speedway-undying-returns","cartel-revolutionary","suburbs-serial-killer","ark-appraiser","ark-stowaway","ark-disruptor","tower-ascensionist","clue-collector","clue-procurers","clue-virus","club-liability","club-drop","archive-rage","archive-splitter","vineyard-iconoclast","vineyard-heartbreaker"];
+var et = ["fashion-forger","fashion-sensation","fashion-broker","fashion-black-hat","fashion-pharmacist","fashion-identity-thief","fashion-chef","fashion-blackmailer","fashion-paparazzo","fashion-banker","virus-congressman","virus-prince","virus-twin","virus-wildcard","virus-guru","virus-deceivers","movie-badboy","tension-gunrunner","tension-fixer","tension-angel-of-death","construction-entertainer","birthday-ex-dictator","birthday-food-critic","birthday-warlord","birthday-infiltrator","terrorists-chameleon","terrorists-bookkeeper","heart-surgeons","heart-fugitive","heart-reflection","beach-politician","speedway-undying","speedway-undying-returns","cartel-revolutionary","suburbs-serial-killer","ark-appraiser","ark-stowaway","ark-disruptor","ark-wizard","resort-weed","tower-ascensionist","clue-collector","clue-procurers","clue-virus","club-liability","club-drop","archive-rage","archive-splitter","vineyard-iconoclast","vineyard-heartbreaker"];
+var etsa = ["undying","herbalist"];
 
 var suitStarts = ["Weapons Building","Crouched behind a Truck",
 "Red Carpet","Palace Garden","Pile-Driver Barge","Attic","Undercover at IAGO Auction",
@@ -21,7 +22,7 @@ var suitStarts = ["Weapons Building","Crouched behind a Truck",
 "Whittleton Creek",
 "Chapel","Keep",
 "Bank Entrance",
-"Resort Pier","Resort Pool Area","Shark Hut",
+"Resort Pier","Resort Pool Area","Shark Hut","Beach Outside Villa","Private Island","Villa Terrace",
 "Atrium Lobby",
 "Main Road","Behind Mansion","Main Road (Gathering)","Behind Mansion (Gathering)","12 Minutes Later...",
 "Garden Show Entrance","Deterministic Mode",
@@ -32,8 +33,8 @@ var suitStarts = ["Weapons Building","Crouched behind a Truck",
 "Western Beach","Silt Village","Central Social Hub","Shrine"];
 var disguiseExits = ["Chimney|(Santa 47 Only)","Ambulance|(Medic Only)","Nest|(Secret)","Pale Rider|(Secret)","Trash Truck|(Garbage Man Only)","Swan Dive|(Secret)","Window|(Secret)","Snorkel|(Instructor Only)","Underground Cave System|(Tactical Wetsuit Only)","Shrine|(Requiem Suit Only)"];
 var koExits = ["Chimney|(Santa 47 Only)","Pink Car|(Needs Key)","Nest|(Secret)","Rico's Supercar|(Needs Key)","Local's Car|(Needs Key)","Roadwork Gate|(Needs Key)","Window|(Secret)","Snorkel|(Instructor Only)","Delivery Scooter|(Needs Key)"];
-var proOnly = ["training","test","xmas","director","movie","election","handoff","enforcer","construction","extractor","cult","veteran","mercenary","spread","festival","controller","fashion-forger","fashion-sensation","fashion-broker","fashion-black-hat","fashion-pharmacist","fashion-identity-thief","fashion-chef","fashion-blackmailer","fashion-paparazzo","fashion-banker","virus-congressman","virus-prince","virus-twin","virus-wildcard","virus-guru","virus-deceivers","movie-badboy","tension-gunrunner","tension-fixer","tension-angel-of-death","construction-entertainer","birthday-ex-dictator","birthday-food-critic","birthday-warlord","birthday-infiltrator","terrorists-chameleon","terrorists-bookkeeper","heart-surgeons","heart-fugitive","heart-reflection","beach-politician","speedway-undying","speedway-undying-returns","cartel-revolutionary","suburbs-serial-killer","ark-appraiser","ark-stowaway","ark-disruptor","tower-ascensionist","clue-collector","clue-procurers","club-liability","club-drop","archive-rage","archive-splitter","vineyard-iconoclast","vineyard-heartbreaker"];
-var noSave = ["xmas","festival","gardenshow","fashion-forger","fashion-sensation","fashion-broker","fashion-black-hat","fashion-pharmacist","fashion-identity-thief","fashion-chef","fashion-blackmailer","fashion-paparazzo","fashion-banker","virus-congressman","virus-prince","virus-twin","virus-wildcard","virus-guru","virus-deceivers","movie-badboy","tension-gunrunner","tension-fixer","tension-angel-of-death","construction-entertainer","birthday-ex-dictator","birthday-food-critic","birthday-warlord","birthday-infiltrator","terrorists-chameleon","terrorists-bookkeeper","heart-surgeons","heart-fugitive","heart-reflection","beach-politician","speedway-undying","speedway-undying-returns","cartel-revolutionary","suburbs-serial-killer","ark-appraiser","ark-stowaway","ark-disruptor","tower-ascensionist","clue-collector","clue-procurers","club-liability","clue-virus","club-drop","archive-rage","archive-disruptor","vineyard-iconoclast","vineyard-heartbreaker"];
+var proOnly = ["training","test","xmas","director","movie","election","handoff","enforcer","construction","extractor","cult","veteran","mercenary","spread","festival","controller"];
+var noSave = ["xmas","festival","gardenshow","fashion-forger","fashion-sensation","fashion-broker","fashion-black-hat","fashion-pharmacist","fashion-identity-thief","fashion-chef","fashion-blackmailer","fashion-paparazzo","fashion-banker","virus-congressman","virus-prince","virus-twin","virus-wildcard","virus-guru","virus-deceivers","movie-badboy","tension-gunrunner","tension-fixer","tension-angel-of-death","construction-entertainer","birthday-ex-dictator","birthday-food-critic","birthday-warlord","birthday-infiltrator","terrorists-chameleon","terrorists-bookkeeper","heart-surgeons","heart-fugitive","heart-reflection","beach-politician","speedway-undying","speedway-undying-returns","cartel-revolutionary","suburbs-serial-killer","ark-appraiser","ark-stowaway","ark-disruptor","ark-wizard","resort-weed","tower-ascensionist","clue-collector","clue-procurers","club-liability","clue-virus","club-drop","archive-rage","archive-disruptor","vineyard-iconoclast","vineyard-heartbreaker"];
 
 var mechListH1 = ["Instinct|Turn off Instinct in the game's Options menu under Gameplay.",
 				"Mini Map|Turn off the Mini Map in the game's Options menu under Gameplay.",
@@ -49,10 +50,10 @@ var mechListH2 = ["Instinct|Turn off Instinct in the game's Options menu under G
 				"Limited Vision Area|Turn off the Limited Vision Area in the game's Options menu under Gameplay.",
 				"Camera Grid|Turn off Camera Grid in the game's Options menu under Gameplay."];
 var timeList = [5,7,10,12,15,20,25,30,40,50,60];
-var ratingList = ["Hunted Slayer|Complete the roulette and achieve at least a one star rating.|Achieve at least a one star",
-				  "Wanted Murderer|Complete the roulette and achieve at least a two star rating.|Achieve at least a two stars",
-				  "Missing Killer|Complete the roulette and achieve at least a three star rating.|Achieve at least a three stars",
-				  "Quiet Hitman|Complete the roulette and achieve at least a four star rating.|Achieve at least a four stars",
+var ratingList = ["Hunted Slayer|Complete the roulette and achieve a one star rating or better.|Achieve at least a one star",
+				  "Wanted Murderer|Complete the roulette and achieve a two star rating or better.|Achieve at least a two stars",
+				  "Missing Killer|Complete the roulette and achieve a three star rating or better.|Achieve at least a three stars",
+				  "Quiet Hitman|Complete the roulette and achieve a four star rating or better.|Achieve at least a four stars",
 				  "Silent Assassin|Complete the roulette and achieve a five star rating.|Achieve Silent Assassin"];
 var difficultyH2 = ["Casual","Professional","Master"];
 var difficultyH1 = ["Normal","Professional"];
@@ -6640,22 +6641,53 @@ var theundying = {
 	"Food Vendor","Kitchen Staff","Waiter",
 	"Journalist","Mascot","Medic"],
 	disguiseVariants: ["Any Suit"],
-	wild: ["Very Important Person|Find and collect a Podium Club Pass.",
-	"Day at the Aquarium|Find and collect the Kronstadt Bayside Center Keycard",
-	"Frutti Di Mare|Collect both a Fish and a Starfish.",
-	"Tintamarresque|Blend in using the photo stand-in.",
-	"Free Fishie|Release a fish back into the ocean.",
-	"What's In This Thing|Open and collect the contents of the evidence locker.",
-	"Communications Breakdown|Sabotage Robert Knox's satellite dish.",
-	"Sweet Tooth|Find and collect 4 Bags of Sugar.",
-	"Blackmail|Find and collect the blackmail documents."],
+	wild: ["Stock Up|Collect 5 bottles of Kronstadt Octane Booster.",
+	"Quite the Headshot|Collect the photo from Robert Knox's files on Mark Faba."],
 	missionWild: ["Elusive Honor|Do not restart under any circumstances. If you fail, you must honor the time limit until you can try again."],
-	compWild: ["One Kilo Brick|Find and collect a brick of cocaine.",
-	"Arms Dealer|Pacify a Kronstadt researcher using an android arm.",
-	"Forty-Seven on the Scoville Scale|Drink the chili shot as Moses Lee.",
-	"Tanked|Knock out both aquarium guards at the same time using the same aquarium.",
-	"Potty Training|Have the patient leave the Emergency Bay without eliminating him."],
-	photos: ["Photographic Proof|Take a photo of your target(s) after you've eliminated them, unless their body is unavailable. They must not be in a body bag."]
+	compWild: ["Primed and Ready|Find and collect the Bomb Detonator. Using it is optional.",
+	"Arm Yourself|Exfiltrate with an Android Arm, a Concept 5 firearm, and any back holstered weapon from the Kronstadt Android Lab."],
+	photos: ["Photographic Proof|Take a photo of your target(s) after you've eliminated them, unless their body is unavailable. They must not be in a body bag.",
+	"Would-be Target|Take a photo of Dave Ready's slide projection about Pavel Zhukov.",
+	"Yu, not Q|Take a photo of Mark Faba's meeting with Timothy Yu."]
+};
+var saundying = {
+	missionTitle: "Undying Assignment",
+	missionLocation: "Miami",
+	missionCode: "undying",
+	melee: ["Fiber Wire",
+	"Amputation Knife|Melee","Amputation Knife|Thrown Weapon",
+	"Battle Axe|Melee","Battle Axe|Thrown Weapon",
+	"Cleaver|Melee","Cleaver|Thrown Weapon",
+	"Fire Axe|Melee","Fire Axe|Thrown Weapon",
+	"Kitchen Knife|Melee","Kitchen Knife|Thrown Weapon",
+	"Old Axe|Melee","Old Axe|Thrown Weapon",
+	"Scissors|Melee","Scissors|Thrown Weapon",
+	"Screwdriver|Melee","Screwdriver|Thrown Weapon",
+	"Starfish|Melee","Starfish|Thrown Weapon"],
+	targetList: ["Mark Faba"],
+	contractUnique: ["Mark Faba|Dangerous and disgraced former M15 agent. Currently waiting for a meeting in the Miami Bayside Center."],
+	contractCivilian: [],
+	contractStaff: [],
+	contractGuard: [],
+	entry: ["Dolphin Fountain"],
+	exit: ["Helicopter", "Main Entrance","Sewer|(Needs Crowbar)","Speedboat|(Needs Key)","Ambulance|(Medic Only)"],
+	eexit: ["Nest|(Secret)","Dolphin Statue|(Secret)","Pale Rider|(Secret)"],
+	disguises: ["Any Suit","Timothy Yu","Ted Mendez","Moses Lee","Florida Man","Street Musician","Sheik","Crashed Driver Kronstadt","Blue Seed Driver","Pale Rider",
+	"Kronstadt Mechanic","Kowoon Driver","Kowoon Mechanic","Aeon Driver","Aeon Mechanic","Thwack Driver","Thwack Mechanic","Sotteraneo Mechanic",
+	"Kronstadt Engineer","Kronstadt Researcher","Kronstadt Security",
+	"Race Coordinator","Race Marshall",
+	"Event Crew","Event Security",
+	"Food Vendor","Kitchen Staff","Waiter",
+	"Journalist","Mascot","Medic"],
+	disguiseVariants: ["Any Suit"],
+	wild: ["Stock Up|Collect 5 bottles of Kronstadt Octane Booster.",
+	"Quite the Headshot|Collect the photo from Robert Knox's files on Mark Faba."],
+	missionWild: ["Elusive Honor|Do not restart under any circumstances. If you fail, you must re-roll the Roulette before you try again."],
+	compWild: ["Primed and Ready|Find and collect the Bomb Detonator. Using it is optional.",
+	"Arm Yourself|Exfiltrate with an Android Arm, a Concept 5 firearm, and any back holstered weapon from the Kronstadt Android Lab."],
+	photos: ["Photographic Proof|Take a photo of your target(s) after you've eliminated them, unless their body is unavailable. They must not be in a body bag.",
+	"Would-be Target|Take a photo of Dave Ready's slide projection about Pavel Zhukov.",
+	"Yu, not Q|Take a photo of Mark Faba's meeting with Timothy Yu."]
 };
 var theundyingreturns = {
 	missionTitle: "The Undying Returns",
@@ -7018,6 +7050,109 @@ var thewizard = {
 	"Quinntessential Training|Take a photo of Tim Quinn during his break between rounds."]
 };
 
+var theherbalist = {
+	missionTitle: "The Herbalist",
+	missionLocation: "Haven Island",
+	missionCode: "resort-weed",
+	melee: ["Fiber Wire","Earphones","Stethoscope",
+	"Barber Razor|Melee","Barber Razor|Thrown Weapon",
+	"Cleaver|Melee","Cleaver|Thrown Weapon",
+	"Fire Axe|Melee","Fire Axe|Thrown Weapon",
+	"Jarl's Pirate Saber|Melee","Jarl's Pirate Saber|Thrown Weapon",
+	"Kitchen Knife|Melee","Kitchen Knife|Thrown Weapon",
+	"Letter Opener|Melee","Letter Opener|Thrown Weapon",
+	"Machete|Melee","Machete|Thrown Weapon",
+	"Scalpel|Melee","Scalpel|Thrown Weapon",
+	"Scissors|Melee","Scissors|Thrown Weapon",
+	"Garden Fork|Melee","Garden Fork|Thrown Weapon",
+	"Screwdriver|Melee","Screwdriver|Thrown Weapon",
+	"Shears|Melee","Shears|Thrown Weapon",
+	"Seashell|Melee","Seashell|Thrown Weapon",
+	"Starfish|Melee","Starfish|Thrown Weapon"],
+	targetList: ["Dr. Cyrus Cane"],
+	contractUnique: ["Dr. Cyrus Cane|Elusive Target"],
+	contractCivilian: [],
+	contractStaff: [],
+	contractGuard: [],
+	entry: ["Beach Outside Villa"],
+	exit: ["Resort Pier Speedboat","Dinghy","Seaplane","Snorkel|(Instructor Only)","Water Scooter|(Needs Key)","Private Villa Speedboat|(Needs Key)"],
+	eexit: ["Dundee|(Secret)"],
+	disguises: ["Any Suit","Swimwear","Elliot Gunk","Boat Captain","Personal Trainer","Snorkel Instructor",
+	"Chef","Waiter","Lifeguard","Masseur","DJ",
+	"Resort Staff","Resort Guard",
+	"Event Staff","Event Security",
+	"Villa Staff","Bodyguard",
+	"Farm Technician","Farm Security"],
+	disguiseVariants: ["Any Suit"],
+	wild: ["Pearl-Essence|Collect and extract with Dr. Cane's valuable pearl.",
+	"Shopping List|Collect the Morsizzles Ingredient List."],
+	missionWild: ["Elusive Honor|Do not restart under any circumstances. If you fail, you must honor the time limit until you can try again.",
+	"Nutrient Rich|Destroy the Cannabis Crops by poisoning the Nutrient Solution.",
+	"Smoke Underwater|Destroy the Cannabis Crops by using the Emergency Override Dongle.",
+	"Leaky Pipes|Destroy the Cannabis Crops by draining the six clusters within the farm."],
+	compWild: ["A Great Source Of Potassium and Comedy|Acquire a banana and have someone slip on it.",
+	"No Honor Among Thieves|Find and collect Captain Rutherford's Doubloons.",
+	"Tropical Juice|Find the required ingredients and concoct Dr. Cane's favorite drink.",
+	"Post-Truth|After a fruitless confrontation, witness Hans Lucht drunk at the Villa Beach Bar."],
+	photos: ["Photographic Proof|Take a photo of your target(s) after you've eliminated them, unless their body is unavailable. They must not be in a body bag.",
+	"Unfortunate Name|Take a Photo of food industrialist Elliot Gunk.",
+	"Party Sleuth|Take a Photo of investigative journalist Hans Lucht.",
+	"Bad Seed|Take a Photo of the punchable Tim Quinn.",
+	"Big H|Take a photo of LBC Industries' cook Helen West.",
+	"L'il Bakery Company|Take a photo of Dr. Cane's Cannabis Farm."]
+};
+var saherbalist = {
+	missionTitle: "Herbalist Assignment",
+	missionLocation: "Haven Island",
+	missionCode: "herbalist",
+	melee: ["Fiber Wire","Earphones","Stethoscope",
+	"Barber Razor|Melee","Barber Razor|Thrown Weapon",
+	"Cleaver|Melee","Cleaver|Thrown Weapon",
+	"Fire Axe|Melee","Fire Axe|Thrown Weapon",
+	"Jarl's Pirate Saber|Melee","Jarl's Pirate Saber|Thrown Weapon",
+	"Kitchen Knife|Melee","Kitchen Knife|Thrown Weapon",
+	"Letter Opener|Melee","Letter Opener|Thrown Weapon",
+	"Machete|Melee","Machete|Thrown Weapon",
+	"Scalpel|Melee","Scalpel|Thrown Weapon",
+	"Scissors|Melee","Scissors|Thrown Weapon",
+	"Garden Fork|Melee","Garden Fork|Thrown Weapon",
+	"Screwdriver|Melee","Screwdriver|Thrown Weapon",
+	"Shears|Melee","Shears|Thrown Weapon",
+	"Seashell|Melee","Seashell|Thrown Weapon",
+	"Starfish|Melee","Starfish|Thrown Weapon"],
+	targetList: ["Dr. Cyrus Cane"],
+	contractUnique: ["Dr. Cyrus Cane|Deadly and charasmatic food scientist. Found wandering the Villa and mingling at the party within."],
+	contractCivilian: [],
+	contractStaff: [],
+	contractGuard: [],
+	entry: ["Beach Outside Villa","Villa Bar","Private Island","Security Room Terrace","Shark Hut","Villa Terrace","Cannabis Farm"],
+	exit: ["Resort Pier Speedboat","Dinghy","Seaplane","Snorkel|(Instructor Only)","Water Scooter|(Needs Key)","Private Villa Speedboat|(Needs Key)"],
+	eexit: ["Dundee|(Secret)"],
+	disguises: ["Any Suit","Swimwear","Elliot Gunk","Boat Captain","Personal Trainer","Snorkel Instructor",
+	"Chef","Waiter","Lifeguard","Masseur","DJ",
+	"Resort Staff","Resort Guard",
+	"Event Staff","Event Security",
+	"Villa Staff","Bodyguard",
+	"Farm Technician","Farm Security"],
+	disguiseVariants: ["Any Suit"],
+	wild: ["Pearl-Essence|Collect and extract with Dr. Cane's valuable pearl.",
+	"Shopping List|Collect the Morsizzles Ingredient List."],
+	missionWild: ["Elusive Honor|Do not restart under any circumstances. If you fail, you must re-roll the Roulette before you try again.",
+	"Nutrient Rich|Destroy the Cannabis Crops by poisoning the Nutrient Solution.",
+	"Smoke Underwater|Destroy the Cannabis Crops by using the Emergency Override Dongle.",
+	"Power Down|Destroy the Cannabis Crops by dismantling the three power supplies around Haven Island.",
+	"Leaky Pipes|Destroy the Cannabis Crops by draining the six clusters within the farm."],
+	compWild: ["A Great Source Of Potassium and Comedy|Acquire a banana and have someone slip on it.",
+	"No Honor Among Thieves|Find and collect Captain Rutherford's Doubloons.",
+	"Tropical Juice|Find the required ingredients and concoct Dr. Cane's favorite drink.",
+	"Post-Truth|After a fruitless confrontation, witness Hans Lucht drunk at the Villa Beach Bar."],
+	photos: ["Photographic Proof|Take a photo of your target(s) after you've eliminated them, unless their body is unavailable. They must not be in a body bag.",
+	"Unfortunate Name|Take a Photo of food industrialist Elliot Gunk.",
+	"Party Sleuth|Take a Photo of investigative journalist Hans Lucht.",
+	"Bad Seed|Take a Photo of the punchable Tim Quinn.",
+	"Big H|Take a photo of LBC Industries' cook Helen West.",
+	"L'il Bakery Company|Take a photo of Dr. Cane's Cannabis Farm."]
+};
 
 var theascensionist = {
 	missionTitle: "The Ascensionist",
@@ -7531,6 +7666,7 @@ var mission_names_map = {
 	"ET25": thefugitive,
 	"ET26": theentertainer,
 	"ET27": theundying,
+	"ETSA01": saundying,
 	"ET28": therevolutionary,
 	"ET29": theappraiser,
 	"ET30": thepolitician,
@@ -7551,7 +7687,9 @@ var mission_names_map = {
 	"ET45": theinfiltrator,
 	"ET46": thereflection,
 	"ET47": theharbinger,
-	"ET48": thewizard
+	"ET48": thewizard,
+	"ET49": theherbalist,
+	"ETSA02": saherbalist
 }
 
 var killTypesMap = {
