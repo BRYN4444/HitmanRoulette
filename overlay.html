@@ -570,8 +570,21 @@
 							</div>
 						</div>
 					</label>
+					<label for="RANDOMH3SA">
+						<div id="bottom" class="rand-h3sa">
+							<div id="nameplate">
+								<span>
+									<input id="RANDOMH3SA" class="noncon" type="checkbox" value="true" checked />
+									<p id="title"><span class="noncon">Toggle (DLC)</span><b class="noncon">Unavailable for Contracts Mode</b></p>
+									<p id="subtitle">H3: Special Assignments</p>
+								</span>
+							</div>
+						</div>
+					</label>
+				</div>
+				<div id="rand-col" class="column">
 					<label for="RANDOMHET">
-						<div id="bottom" class="rand-het">
+						<div id="top" class="rand-het">
 							<div id="nameplate">
 								<span>
 									<input id="RANDOMHET" class="noncon" type="checkbox" value="true" />
@@ -581,6 +594,7 @@
 							</div>
 						</div>
 					</label>
+					<label id="blank"></label>
 				</div>
 				<label id="h1-tall" class="column nomobile" for="RANDOMH1" style="display:none;">
 					<div id="nameplate">
@@ -902,18 +916,20 @@
 					</label>
 					<label id="blank"></label>
 				</div>
-				<label id="h1bm-tall" class="column nomobile" for="RANDOMH1BM" style="display:none;">
-					<div id="nameplate">
-						<span>
-							<input id="RANDOMH1BM" class="" type="checkbox" value="true" checked />
-							<p id="title">Toggle</p>
-							<p id="subtitle">H1: Bonus Missions</p>
-						</span>
-					</div>
-				</label>
-				<div id="hside" class="column nomobile" style="display:none;">
+				<div id="hside" class="column nomobile" style="display:none;">				
+					<label for="RANDOMH1BM">
+						<div id="top" class="rand-h1bm">
+							<div id="nameplate">
+								<span>
+									<input id="RANDOMH1BM" class="" type="checkbox" value="true" checked />
+									<p id="title">Toggle</p>
+									<p id="subtitle">H1: Bonus Missions</p>
+								</span>
+							</div>
+						</div>
+					</label>
 					<label for="RANDOMHSC">
-						<div id="top" class="rand-hsc">
+						<div id="bottom" class="rand-hsc">
 							<div id="nameplate">
 								<span>
 									<input id="RANDOMHSC" class="" type="checkbox" value="true" checked />
@@ -923,13 +939,26 @@
 							</div>
 						</div>
 					</label>
+				</div>
+				<div id="hside" class="column nomobile" style="display:none;">
 					<label for="RANDOMH2SA">
-						<div id="bottom" class="rand-h2sa">
+						<div id="top" class="rand-h2sa">
 							<div id="nameplate">
 								<span>
 									<input id="RANDOMH2SA" class="noncon" type="checkbox" value="true" checked />
 									<p id="title"><span class="noncon">Toggle (DLC)</span><b class="noncon">Unavailable for Contracts Mode</b></p>
 									<p id="subtitle">H2: Special Assignments</p>
+								</span>
+							</div>
+						</div>
+					</label>
+					<label for="RANDOMH3SA">
+						<div id="bottom" class="rand-h3sa">
+							<div id="nameplate">
+								<span>
+									<input id="RANDOMH3SA" class="noncon" type="checkbox" value="true" checked />
+									<p id="title">Toggle (DLC)</p>
+									<p id="subtitle">H3: Special Assignments</p>
 								</span>
 							</div>
 						</div>
@@ -1050,6 +1079,30 @@
 									<input id="ABP" class="lvl h2sa noncon" type="checkbox" value="true" checked />
 									<p id="title"><span class="noncon">Toggle / Special Assignment (DLC)</span><b class="noncon">Unavailable for Contracts Mode</b></p>
 									<p id="subtitle">A Bitter Pill</p>
+								</span>
+							</div>
+						</div>
+					</label>
+				</div>
+				<div id="hside" class="column" style="display:none;">
+					<label for="ETSA01">
+						<div id="top" class="etsa01">
+							<div id="nameplate">
+								<span>
+									<input id="ETSA01" class="lvl h3sa noncon" type="checkbox" value="true" checked />
+									<p id="title"><span class="noncon">Toggle / Special Assignment (DLC)</span><b class="noncon">Unavailable for Contracts Mode</b></p>
+									<p id="subtitle">Undying Assignment</p>
+								</span>
+							</div>
+						</div>
+					</label>
+					<label for="ETSA02">
+						<div id="bottom" class="etsa02">
+							<div id="nameplate">
+								<span>
+									<input id="ETSA02" class="lvl h3sa noncon" type="checkbox" value="true" checked />
+									<p id="title"><span class="noncon">Toggle / Special Assignment (DLC)</span><b class="noncon">Unavailable for Contracts Mode</b></p>
+									<p id="subtitle">Herbalist Assignment</p>
 								</span>
 							</div>
 						</div>
@@ -1780,7 +1833,17 @@
 							</div>
 						</div>
 					</label>
-					<label id="blank"></label>
+					<label for="ET49">
+						<div id="bottom" class="et49">
+							<div id="nameplate">
+								<span>
+									<input id="ET49" class="lvl het noncon" type="checkbox" value="true" />
+									<p id="title"><span class="noncon">Toggle / Elusive Target (H3 Only)</span><b class="noncon">Unavailable for Contracts Mode</b></p>
+									<p id="subtitle">#49: The Herbalist</p>
+								</span>
+							</div>
+						</div>
+					</label>
 				</div>
 				<div id="empty" class="side"></div>
 			</div>
@@ -1863,7 +1926,7 @@
 					<label id="mode_targselect" class="disabled all" style="display:none;" data-hover="Determine what the Roulette assigns you in Contracts Mode Roulette.<br /><br />All Types: Any NPC can appear as a Target. (Default)<br /><br />Custom: Use the checkboxes below to select the types of NPCs that can appear as Targets.<br /><br />Unassigned: NPC names aren't listed; only elimination conditions will be shown. Determine the NPC Target(s) yourself.">
 						<b>Target Selection</b><span>[All&nbsp;Types]</span>
 					</label>
-					<label id="mode_m" class="mobile" style="display:none;" data-hover="Unique: NPCs that stand out from the rest. Like VIPs or those with distinct outfits, roles, or actions.<br /><br />Civilian: NPCs local to the location,or guests to the event. Non-hostile loiterers.<br /><br />Staff: NPCs tending to others or working in the area. Like cooks, landscapers, or servants.<br /><br />Guard: NPCs protecting a person or area. Armed and potentially hostile.<br /><br /><b>[Substitutions will be made should a chosen Mission be missing or have a low amount of NPCs of the checked type. Example: Nightcall NPCs are mostly Guards.]</b>">[INFO]:</label>
+					<label id="mode_m" class="mobile" style="display:none;" data-hover="Unique: NPCs that stand out from the rest. Like VIPs or those with distinct outfits, roles, or actions.<br /><br />Civilian: NPCs local to the location, or guests to the event. Non-hostile loiterers.<br /><br />Staff: NPCs tending to others or working in the area. Like cooks, landscapers, or servants.<br /><br />Guard: NPCs protecting a person or area. Armed and potentially hostile.<br /><br /><b>[Substitutions will be made should a chosen Mission be missing or have a low amount of NPCs of the checked type. Example: Nightcall NPCs are mostly Guards.]</b>">[INFO]:</label>
 					<label id="mode_targets" class="disabled" style="display:none;" data-hover="Unique: NPCs that stand out from the rest. Like VIPs or those with distinct outfits, roles, or actions.<br /><br />Civilian: NPCs local to the location,or guests to the event. Non-hostile loiterers.<br /><br />Staff: NPCs tending to others or working in the area. Like cooks, landscapers, or servants.<br /><br />Guard: NPCs protecting a person or area. Armed and potentially hostile.<br /><br /><b>[Substitutions will be made should a chosen Mission be missing or have a low amount of NPCs of the checked type. Example: Nightcall NPCs are mostly Guards.]</b>">
 						<b style="display:none;">Target Types</b>
 						<label id="mode_chequnique" class="on" for="chequnique" style="display:none;">
@@ -2077,10 +2140,11 @@
 							</ul>
 						</li>
 						<li><b>Sarajevo Six Campaign Pack</b> (DLC)</li>
+						<li><b>The Undying Pack</b> (DLC - includes Special Assignment)</li>
+						<li><b>The Herbalist Pack</b> (DLC - includes Special Assignment)</li>
 					</ol>
 					<p>Optionally, the Roulette can also select missions from:</p>
 					<ul>
-						<li><b>The Undying Pack</b> (DLC)</li>
 						<li><b>The Disruptor Pack</b> (DLC currently unavailable)</li>
 						<li><b>The Splitter Pack</b> (DLC)</li>
 						<li><b>The Banker Pack</b> (DLC)</li>
