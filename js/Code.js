@@ -422,6 +422,8 @@ function containerToResult(container) {
 		result.missionobjective = "Retrieve the Dictaphone|Retrieve Jimmy Chen's dictaphone.|Retrieve Jimmy Chen's dictaphone";
 	else if (mode == "MAIN" && (result.missionCode == "ark-disruptor" || result.missionCode == "ark-wizard"))
 		result.missionobjective = "Do Not Eliminate Tim Quinn [Optional]|It is imperative for the client that Tim Quinn survives the fight.|Ensure Tim Quinn survives the fight";
+	else if (mode == "MAIN" && (result.missionCode == "resort-weed" || result.missionCode == "herbalist"))
+		result.missionobjective = "Destroy The Crops|Locate Cane's cannabis farm and destroy the crops.|Destroy the cannabis crop";
 	else if (mode == "MAIN" && result.missionCode == "clue-collector")
 		result.missionobjective = "Retrieve the Painting [Optional]|The client offers a bonus if you manage to find and retrieve the painting by Sisal Bardu.|Retrieve the painting [Optional]";
 	else if (mode == "MAIN" && result.missionCode == "club-liability")
@@ -819,11 +821,11 @@ function writeEverything(result) {
 	
 	//var difficultyModeIndex = document.getElementById("difficulty"); (variables determined earlier in exits)
 	//var difficultyMode = difficultyModeIndex.options[difficultyModeIndex.selectedIndex].value;
-	if(mode != "MAIN" || result.missionCode == "gardenshow") { // no alternate difficulty in contracts mode or the Dartmoor Garden Show
+	if(mode != "MAIN" || result.missionCode == "gardenshow" || etsa.includes(result.missionCode) ) { // no alternate difficulty in contracts mode, the Dartmoor Garden Show, or H3 Special Assignments
 		document.getElementById("diffget").innerHTML = "";
 		document.getElementById("input_difficulty").value = "";
 	}
-	else if(difficultyMode == "H2" && !proOnly.includes(result.missionCode) ) { // H2/3 difficulty on maps where available
+	else if(difficultyMode == "H2" && !proOnly.includes(result.missionCode) && !et.includes(result.missionCode)) { // H2/3 difficulty on maps where available
 		document.getElementById("diffget").innerHTML = 
 			"<div id='diff-image-" + result.difficulty + "' class=''><div id='instruction'><img id='list' src='./img/general/blank.png'><p id='wording'>Complete the roulette with the mission's difficulty set to " + result.difficulty +
 			".</p></div><div id='nameplate'><span><p id='title'>Difficulty</p><p id='subtitle'>" + result.difficulty + "</p></span></div></div>";
