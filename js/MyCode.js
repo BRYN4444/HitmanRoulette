@@ -1,8 +1,8 @@
 //Enjoy looking at the ametuer code work I've done.
 $(document).ready(function() {
 	/******Latest Updates******/
-	$("#features p#title").text("Last Updated: June 12th, 2026"); /*Roulette Features*/
-	$("#features .updatenotes").html('Added an Elusive Target: The Wizard. See <b><a href="https://github.com/BRYN4444/HitmanRoulette#latest-update" target="_blank">Github</a></b> for info.');
+	$("#features p#title").text("Last Updated: August 29th, 2026"); /*Roulette Features*/
+	$("#features .updatenotes").html('Added an Elusive Target: The Herbalist & Special Assignments: Herbalist & Undying. See <b><a href="https://github.com/BRYN4444/HitmanRoulette#latest-update" target="_blank">Github</a></b> for info.');
     /* Unspecific Update $("#features .updatenotes").html('Visit <b><a href="https://github.com/BRYN4444/HitmanRoulette#latest-update" target="_blank">Github</a></b> for details on the latest Roulette updates.');*/
 	$("#overlayguide p#title").text("Last Updated: Feb. 28th, 2026"); /*Stream Overlay*/
 	//$("#overlayguide .updatenotes").html('???'); /*Needs to be added to Overlay.html*/
@@ -581,11 +581,17 @@ $(document).ready(function() {
 		else if($(this).is("#RANDOMH2EX:not(:checked)")) { // H2 Expansions - Off
 			$( "input.h2ex, input#RANDOM" ).prop('checked', false).parent().parent().removeClass("on");
 		}
-		else if($(this).is("#RANDOMH2SA:checked")) { // Special Assignments - On
+		else if($(this).is("#RANDOMH2SA:checked")) { // H2 Special Assignments - On
 			$( "input.h2sa" ).prop('checked', true).parent().parent().addClass("on");
 		}
-		else if($(this).is("#RANDOMH2SA:not(:checked)")) { // Special Assignments - Off
+		else if($(this).is("#RANDOMH2SA:not(:checked)")) { // H2 Special Assignments - Off
 			$( "input.h2sa, input#RANDOM" ).prop('checked', false).parent().parent().removeClass("on");
+		}
+		else if($(this).is("#RANDOMH3SA:checked")) { // H3 Special Assignments - On
+			$( "input.h3sa" ).prop('checked', true).parent().parent().addClass("on");
+		}
+		else if($(this).is("#RANDOMH3SA:not(:checked)")) { // H3 Special Assignments - Off
+			$( "input.h3sa, input#RANDOM" ).prop('checked', false).parent().parent().removeClass("on");
 		}
 		else if($(this).is("#RANDOMH3:checked") && ($("#mode_con").hasClass("intel") || $("#mode_con").hasClass("hunt")) ) { // H3 Contract Mode - On
 			$( "input#OTOTW, input#DITF, input#AP, input#EOAE, input#TF" ).prop('checked', true).parent().parent().addClass("on");
@@ -605,10 +611,10 @@ $(document).ready(function() {
 		}
 		else if($(this).is("#RANDOMALL") && !($("#mode_con").hasClass("intel") || $("#mode_con").hasClass("hunt")) ){
 			if ($(this).prop("checked")) { // All Mission Mode - On
-				$( "input#RANDOMH1, input#RANDOMH1BM, input#RANDOMH1S6, input#RANDOMH2, input#RANDOMH2EX, input#RANDOMH3, input#RANDOMH1PZ, input#RANDOMH2SA, input#RANDOMHSC, input.h1, input.h1bm, input.h1pz, input.h1s6, input.h2, input.h2ex, input.h2sa, input.h3, input.hsc" ).prop('checked', true).parent().parent().addClass("on");
+				$( "input#RANDOMH1, input#RANDOMH1BM, input#RANDOMH1S6, input#RANDOMH2, input#RANDOMH2EX, input#RANDOMH3, input#RANDOMH1PZ, input#RANDOMH2SA, input#RANDOMH3SA, input#RANDOMHSC, input.h1, input.h1bm, input.h1pz, input.h1s6, input.h2, input.h2ex, input.h2sa, input.h3sa, input.h3, input.hsc" ).prop('checked', true).parent().parent().addClass("on");
 				return;
 			} // All Mission Mode - Off \/
-			$( "input#RANDOMH1, input#RANDOMH1BM, input#RANDOMH1S6, input#RANDOMH2, input#RANDOMH2EX, input#RANDOMH3, input#RANDOMH1PZ, input#RANDOMH2SA, input#RANDOMHSC, input.h1, input.h1bm, input.h1pz, input.h1s6, input.h2, input.h2ex, input.h2sa, input.h3, input.hsc" ).prop('checked', false).parent().parent().removeClass("on");
+			$( "input#RANDOMH1, input#RANDOMH1BM, input#RANDOMH1S6, input#RANDOMH2, input#RANDOMH2EX, input#RANDOMH3, input#RANDOMH1PZ, input#RANDOMH2SA, input#RANDOMH3SA, input#RANDOMHSC, input.h1, input.h1bm, input.h1pz, input.h1s6, input.h2, input.h2ex, input.h2sa, input.h3sa, input.h3, input.hsc" ).prop('checked', false).parent().parent().removeClass("on");
 		};
 		
 		// Toggle All Available if all available H3 levels are selected or not
@@ -689,6 +695,14 @@ $(document).ready(function() {
 		}
 		else {
 			$("input#RANDOMH2SA").prop('checked', false).parent().parent().removeClass("on");
+		};
+		
+		//Toggle Hitman 3 Special Assignments if H3SA levels are selected or not
+		if($(".h3sa:checked").length == $(".h3sa").length) {
+			$("input#RANDOMH3SA").prop('checked', true).parent().parent().addClass("on");
+		}
+		else {
+			$("input#RANDOMH3SA").prop('checked', false).parent().parent().removeClass("on");
 		};
 		
 		//Toggle Random Hitman 3 if H3 levels are selected or not
