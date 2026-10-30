@@ -290,6 +290,12 @@ function createTargetList(container) {
 		jud1 = judges.slice(0,1) + "|Level 3 Escalation Target";
 		jud2 = judges.slice(1,2) + "|Level 3 Escalation Target";
 		targets = [cont1,cont2,cont3,jud1,jud2];
+	} else if (mode == "MAIN" && container.missionTitle === "Host Assignment") {//Shuffle Targets for the Host Special Assignment
+		finnfriends = container.contractUnique.slice(0,3);
+		
+		var targetAmountCheck = Math.random();
+		if (targetAmountCheck < 0.5) targets = finnfriends;
+		else targets = container.contractUnique;
 	}
 	else {
 		targets = container.targetList.slice(); //Default (Unshuffled) Targets 
@@ -424,6 +430,8 @@ function containerToResult(container) {
 		result.missionobjective = "Do Not Eliminate Tim Quinn [Optional]|It is imperative for the client that Tim Quinn survives the fight.|Ensure Tim Quinn survives the fight";
 	else if (mode == "MAIN" && (result.missionCode == "resort-weed" || result.missionCode == "herbalist"))
 		result.missionobjective = "Destroy The Crops|Locate Cane's cannabis farm and destroy the crops.|Destroy the cannabis crop";
+	else if (mode == "MAIN" && (result.missionCode == "beach-youtuber" || result.missionCode == "host"))
+		result.missionobjective = "Destroy Colton's Data Center|Prevent video evidence of Agent 47 from leaking on the internet. This is only needed should you be filmed on the premesis.|Destroy Coltons Data Center";
 	else if (mode == "MAIN" && result.missionCode == "clue-collector")
 		result.missionobjective = "Retrieve the Painting [Optional]|The client offers a bonus if you manage to find and retrieve the painting by Sisal Bardu.|Retrieve the painting [Optional]";
 	else if (mode == "MAIN" && result.missionCode == "club-liability")
