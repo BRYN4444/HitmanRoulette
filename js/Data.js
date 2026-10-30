@@ -5,8 +5,8 @@ var redo_stack = []
 var h1 = ["training","test","fashion","xmas","director","virus","movie","election","handoff","enforcer","tension","construction","extractor","birthday","cult","veteran","terrorists","mercenary","heart","spread","controller"];
 var h2 = ["training","test","fashion","xmas","virus","movie","election","handoff","tension","construction","birthday","cult","terrorists","heart","spread","festival","beach","speedway","water","cartel","biggame","ghost","magic","suburbs","pill","ark","bank","resort"];
 var h3 = ["training","test","fashion","xmas","director","virus","movie","election","handoff","enforcer","tension","construction","extractor","birthday","cult","veteran","terrorists","mercenary","heart","spread","festival","controller","beach","speedway","water","cartel","biggame","ghost","magic","suburbs","pill","ark","bank","resort","tower","clue","gardenshow","club","archive","vineyard","train","pirates"];
-var et = ["fashion-forger","fashion-sensation","fashion-broker","fashion-black-hat","fashion-pharmacist","fashion-identity-thief","fashion-chef","fashion-blackmailer","fashion-paparazzo","fashion-banker","virus-congressman","virus-prince","virus-twin","virus-wildcard","virus-guru","virus-deceivers","movie-badboy","tension-gunrunner","tension-fixer","tension-angel-of-death","construction-entertainer","birthday-ex-dictator","birthday-food-critic","birthday-warlord","birthday-infiltrator","terrorists-chameleon","terrorists-bookkeeper","heart-surgeons","heart-fugitive","heart-reflection","beach-politician","speedway-undying","speedway-undying-returns","cartel-revolutionary","suburbs-serial-killer","ark-appraiser","ark-stowaway","ark-disruptor","ark-wizard","resort-weed","tower-ascensionist","clue-collector","clue-procurers","clue-virus","club-liability","club-drop","archive-rage","archive-splitter","vineyard-iconoclast","vineyard-heartbreaker"];
-var etsa = ["undying","herbalist"];
+var et = ["fashion-forger","fashion-sensation","fashion-broker","fashion-black-hat","fashion-pharmacist","fashion-identity-thief","fashion-chef","fashion-blackmailer","fashion-paparazzo","fashion-banker","virus-congressman","virus-prince","virus-twin","virus-wildcard","virus-guru","virus-deceivers","movie-badboy","tension-gunrunner","tension-fixer","tension-angel-of-death","construction-entertainer","birthday-ex-dictator","birthday-food-critic","birthday-warlord","birthday-infiltrator","terrorists-chameleon","terrorists-bookkeeper","heart-surgeons","heart-fugitive","heart-reflection","beach-politician","beach-youtuber","speedway-undying","speedway-undying-returns","cartel-revolutionary","suburbs-serial-killer","ark-appraiser","ark-stowaway","ark-disruptor","ark-wizard","resort-weed","tower-ascensionist","clue-collector","clue-procurers","clue-virus","club-liability","club-drop","archive-rage","archive-splitter","vineyard-iconoclast","vineyard-heartbreaker"];
+var etsa = ["undying","herbalist","host"];
 
 var suitStarts = ["Weapons Building","Crouched behind a Truck",
 "Red Carpet","Palace Garden","Pile-Driver Barge","Attic","Undercover at IAGO Auction",
@@ -15,7 +15,7 @@ var suitStarts = ["Weapons Building","Crouched behind a Truck",
 "Riverside Landing","47's Suite","Hotel Front Terrace",
 "West Bridge","Old Orchard","Southern Farm Perimeter","Water Tower",
 "Infiltrating Along the Mountain Path","Infiltrating below the Helipad","Introspection",
-"Boat","Office","Beach","Hut",
+"Boat","Office","Beach","Hut","Driveway",
 "Event Entrance","Dolphin Fountain","Marina","Stands",
 "Village Bus Stop","Village Hostel","Shaman's Hut","Village Bar","Steel Bridge",
 "Main Street","Train","Skywalk","Taxi","Chawls","Outside Chawl",
@@ -34,7 +34,7 @@ var suitStarts = ["Weapons Building","Crouched behind a Truck",
 var disguiseExits = ["Chimney|(Santa 47 Only)","Ambulance|(Medic Only)","Nest|(Secret)","Pale Rider|(Secret)","Trash Truck|(Garbage Man Only)","Swan Dive|(Secret)","Window|(Secret)","Snorkel|(Instructor Only)","Underground Cave System|(Tactical Wetsuit Only)","Shrine|(Requiem Suit Only)"];
 var koExits = ["Chimney|(Santa 47 Only)","Pink Car|(Needs Key)","Nest|(Secret)","Rico's Supercar|(Needs Key)","Local's Car|(Needs Key)","Roadwork Gate|(Needs Key)","Window|(Secret)","Snorkel|(Instructor Only)","Delivery Scooter|(Needs Key)"];
 var proOnly = ["training","test","xmas","director","movie","election","handoff","enforcer","construction","extractor","cult","veteran","mercenary","spread","festival","controller"];
-var noSave = ["xmas","festival","gardenshow","fashion-forger","fashion-sensation","fashion-broker","fashion-black-hat","fashion-pharmacist","fashion-identity-thief","fashion-chef","fashion-blackmailer","fashion-paparazzo","fashion-banker","virus-congressman","virus-prince","virus-twin","virus-wildcard","virus-guru","virus-deceivers","movie-badboy","tension-gunrunner","tension-fixer","tension-angel-of-death","construction-entertainer","birthday-ex-dictator","birthday-food-critic","birthday-warlord","birthday-infiltrator","terrorists-chameleon","terrorists-bookkeeper","heart-surgeons","heart-fugitive","heart-reflection","beach-politician","speedway-undying","speedway-undying-returns","cartel-revolutionary","suburbs-serial-killer","ark-appraiser","ark-stowaway","ark-disruptor","ark-wizard","resort-weed","tower-ascensionist","clue-collector","clue-procurers","club-liability","clue-virus","club-drop","archive-rage","archive-disruptor","vineyard-iconoclast","vineyard-heartbreaker"];
+var noSave = ["xmas","festival","gardenshow","fashion-forger","fashion-sensation","fashion-broker","fashion-black-hat","fashion-pharmacist","fashion-identity-thief","fashion-chef","fashion-blackmailer","fashion-paparazzo","fashion-banker","virus-congressman","virus-prince","virus-twin","virus-wildcard","virus-guru","virus-deceivers","movie-badboy","tension-gunrunner","tension-fixer","tension-angel-of-death","construction-entertainer","birthday-ex-dictator","birthday-food-critic","birthday-warlord","birthday-infiltrator","terrorists-chameleon","terrorists-bookkeeper","heart-surgeons","heart-fugitive","heart-reflection","beach-politician","beach-youtuber","speedway-undying","speedway-undying-returns","cartel-revolutionary","suburbs-serial-killer","ark-appraiser","ark-stowaway","ark-disruptor","ark-wizard","resort-weed","tower-ascensionist","clue-collector","clue-procurers","club-liability","clue-virus","club-drop","archive-rage","archive-disruptor","vineyard-iconoclast","vineyard-heartbreaker"];
 
 var mechListH1 = ["Instinct|Turn off Instinct in the game's Options menu under Gameplay.",
 				"Mini Map|Turn off the Mini Map in the game's Options menu under Gameplay.",
@@ -6610,6 +6610,82 @@ var thepolitician = {
 	"Waterbender|Pacify someone with the aquarium."],
 	photos: ["Photographic Proof|Take a photo of your target(s) after you've eliminated them, unless their body is unavailable. They must not be in a body bag."]
 };
+var thehost = {
+	missionTitle: "The Host",
+	missionLocation: "Hawke's Bay",
+	missionCode: "beach-youtuber",
+	melee: ["Fiber Wire",
+	"Cleaver|Melee","Cleaver|Thrown Weapon",
+	"Folding Knife|Melee","Folding Knife|Thrown Weapon",
+	"Katana|Melee","Katana|Thrown Weapon",
+	"Kitchen Knife|Melee","Kitchen Knife|Thrown Weapon",
+	"Scissors|Melee","Scissors|Thrown Weapon",
+	"Screwdriver|Melee","Screwdriver|Thrown Weapon",
+	"Kitchen Knife|Melee","Kitchen Knife|Thrown Weapon",
+	"Fire Axe|Melee","Fire Axe|Thrown Weapon"],
+	targetList: ["Finn Colton"],
+	contractUnique: ["Finn Colton|Controversial internet personality."],
+	contractCivilian: [],
+	contractStaff: [],
+	contractGuard: [],
+	entry: ["Driveway"],
+	exit: ["Boat","Car"],
+	eexit: [],
+	disguises: ["Any Suit","Any Suit","Bodyguard","Content Creator","Camera Crew"],
+	disguiseVariants: ["Any Suit"],
+	wild: ["Avoid the Podcast|Do not participate in Colton's podcast.",
+	"Sign Your Life Away|Sign the NDA. Maybe it's time to retire this alias, 47?",
+	"Don't Tread On Me!|Find and collect two squeaky toys.",
+	"Smoke On The Water|Extract with the Cannabis Joint.",
+	"Grab a Spare|Extract with the lockpick."],
+	missionWild: ["Elusive Honor|Do not restart under any circumstances. If you fail, you must re-roll the Roulette before you try again."],
+	compWild: ["Waterbender|Pacify someone with the aquarium.",
+	"Free Content|Extract while dressed as a Content Creator.",
+	"Never Filmed|Avoid needing to destroy the data center by never being filmed by Colton's cameras."],
+	photos: ["Photographic Proof|Take a photo of your target(s) after you've eliminated them, unless their body is unavailable. They must not be in a body bag.",
+	"Just Trying To Fit In|Take a photo of the Drink or Dare game.",
+	"Milling About|Take a photo of Colton's underground content farm.",
+	"Energy Consumption|Take a photo of the destroyed generative AI data center."]
+};
+var sahost = {
+	missionTitle: "Host Assignment",
+	missionLocation: "Hawke's Bay",
+	missionCode: "host",
+	melee: ["Fiber Wire",
+	"Cleaver|Melee","Cleaver|Thrown Weapon",
+	"Folding Knife|Melee","Folding Knife|Thrown Weapon",
+	"Katana|Melee","Katana|Thrown Weapon",
+	"Kitchen Knife|Melee","Kitchen Knife|Thrown Weapon",
+	"Scissors|Melee","Scissors|Thrown Weapon",
+	"Screwdriver|Melee","Screwdriver|Thrown Weapon",
+	"Kitchen Knife|Melee","Kitchen Knife|Thrown Weapon",
+	"Fire Axe|Melee","Fire Axe|Thrown Weapon"],
+	targetList: ["Finn Colton"],
+	contractUnique: ["Finn Colton",
+	"Brayden Brody",
+	"Chase Gray",
+	"Jamie Freeman"],
+	contractCivilian: [],
+	contractStaff: [],
+	contractGuard: [],
+	entry: ["Driveway"],
+	exit: ["Boat","Car"],
+	eexit: [],
+	disguises: ["Any Suit","Any Suit","Bodyguard","Content Creator","Camera Crew"],
+	disguiseVariants: ["Any Suit"],
+	wild: ["Sign Your Life Away|Sign the NDA. Maybe it's time to retire this alias, 47?",
+	"Don't Tread On Me!|Find and collect two squeaky toys.",
+	"Smoke On The Water|Extract with the Cannabis Joint.",
+	"Grab a Spare|Extract with the lockpick."],
+	missionWild: ["Elusive Honor|Do not restart under any circumstances. If you fail, you must re-roll the Roulette before you try again."],
+	compWild: ["Waterbender|Pacify someone with the aquarium.",
+	"Free Content|Extract while dressed as a Content Creator.",
+	"Never Filmed|Avoid needing to destroy the data center by never being filmed by Colton's cameras."],
+	photos: ["Photographic Proof|Take a photo of your target(s) after you've eliminated them, unless their body is unavailable. They must not be in a body bag.",
+	"Just Trying To Fit In|Take a photo of the Drink or Dare game.",
+	"Milling About|Take a photo of Colton's underground content farm.",
+	"Energy Consumption|Take a photo of the destroyed generative AI data center."]
+};
 
 var theundying = {
 	missionTitle: "The Undying",
@@ -7689,7 +7765,9 @@ var mission_names_map = {
 	"ET47": theharbinger,
 	"ET48": thewizard,
 	"ET49": theherbalist,
-	"ETSA02": saherbalist
+	"ETSA02": saherbalist,
+	"ET50": thehost,
+	"ETSA03": sahost,
 }
 
 var killTypesMap = {
