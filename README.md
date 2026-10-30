@@ -30,6 +30,7 @@ Though you can deselect any location you do not own, by default the Roulette sel
 2. **Sarajevo Six Campaign Pack** (DLC)
 3. **The Undying Pack** (DLC - includes Special Assignment)
 4. **The Herbalist Pack** (DLC - includes Special Assignment)
+5. **The Host Pack** (DLC - includes Special Assignment)
 
 Optionally, the Roulette can also select missions from:
 * **The Disruptor Pack** (DLC Delisted)
@@ -56,6 +57,17 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 ### Latest Update
 
 >**Bug Reporting** can be done [via GitHub](https://github.com/BRYN4444/HitmanRoulette/issues) or in the thread [on Hitman Forum](https://hitmanforum.com/t/13107).
+
+**October 30th, 2025**
+* **Elusive Target:**
+  * **#50: The Host** - New ET added, including: 1 target, 1 objective, 1 Entry point, 3 disguises, 4 extra objectives, and 4 photo objectives.
+* **Special Assignments:**
+  * **Host Assignment** - Includes unique background image, an additional 2 targets, and a 50% chance (each roll) for yet another additional target. With saving available for Special Assignments, I wanted to feature this missions bonus target pool here instead of the normal ET.
+* **Other Fixes:**
+  * **Compatibility & Issues** section:
+    * Added "The Host Pack" to the default mission selection list.
+
+---
 
 **Auguat 29th, 2025**
 * **Hitman Roulette:**
@@ -132,14 +144,3 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 **September 28h, 2025**
 * **Elusive Target:**
   * **#44: The Banker** - Added 2 new Entry points, ported from The Showstopper, that have recently been added to this ET.
-
----
-
-**September 26th, 2025**
-* **Elusive Target:**
-  * **#45: The Infiltrator** - New ET added, including 4 overall targets with a 25% change of a unique non-lethal elimination method for each, 1 alternate image Entry point, 6 mission specific extra objectives, and 4 mission specific photo objectives. Note: the Bruce Lee objective is listed last because I don't want to restructure the whole Roulette for this one instance.
-  * **#44: The Banker** - Ensured the "Forced Difficulty" Challenge and the "One Save Only" complication no longer appear in this, since the don't work anyway.
-* **HITMAN:**
-  * **Club 27:** Renamed the "47's Suite" entrance to match in-game. Added a missing Extra Objective image.
-* **Other Fixes:**
-  * Added the newest Elusive Target DLC to the list in the Compatibility & Issues section.
