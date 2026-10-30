@@ -15,6 +15,7 @@ html.h1theme {
 	--hokkaidopz:url('../img/missions/h1theme/hokkaido-pz.jpg');
 	--hokkaidosf:url('../img/missions/h1theme/hokkaido-sf.jpg');
 	--hawkesbay:url('../img/missions/h1theme/hawkes-bay.jpg');
+	--hawkesbayhost:url('../img/missions/h1theme/hawkes-bay-host.jpg');
 	--miami:url('../img/missions/h1theme/miami.jpg');
 	--miamisa:url('../img/missions/h1theme/miami-sa.jpg');
 	--miamietundying:url('../img/missions/h1theme/miami-undying.jpg');
@@ -54,6 +55,7 @@ html.h1gotytheme {
 	--hokkaidopz:url('../img/missions/h1gotytheme/hokkaido-pz.jpg');
 	--hokkaidosf:url('../img/missions/h1gotytheme/hokkaido-sf.jpg');
 	--hawkesbay:url('../img/missions/h1gotytheme/hawkes-bay.jpg');
+	--hawkesbayhost:url('../img/missions/h1gotytheme/hawkes-bay-host.jpg');
 	--miami:url('../img/missions/h1gotytheme/miami.jpg');
 	--miamisa:url('../img/missions/h1gotytheme/miami-sa.jpg');
 	--miamiundying:url('../img/missions/h1gotytheme/miami-undying.jpg');
@@ -93,6 +95,7 @@ html.h2theme, html.h3theme {
 	--hokkaidopz:url('../img/missions/h2h3theme/hokkaido-pz.jpg');
 	--hokkaidosf:url('../img/missions/h2h3theme/hokkaido-sf.jpg');
 	--hawkesbay:url('../img/missions/h2h3theme/hawkes-bay.jpg');
+	--hawkesbayhost:url('../img/missions/h2h3theme/hawkes-bay-host.jpg');
 	--miami:url('../img/missions/h2h3theme/miami.jpg');
 	--miamisa:url('../img/missions/h2h3theme/miami-sa.jpg');
 	--miamiundying:url('../img/missions/h2h3theme/miami-undying.jpg');
@@ -132,6 +135,7 @@ html.httheme {
 	--hokkaidopz:url('../img/missions/httheme/hokkaido-pz.jpg');
 	--hokkaidosf:url('../img/missions/httheme/hokkaido-sf.jpg');
 	--hawkesbay:url('../img/missions/httheme/hawkes-bay.jpg');
+	--hawkesbayhost:url('../img/missions/httheme/hawkes-bay-host.jpg');
 	--miami:url('../img/missions/httheme/miami.jpg');
 	--miamisa:url('../img/missions/httheme/miami-sa.jpg');
 	--miamiundying:url('../img/missions/httheme/miami-undying.jpg');
@@ -268,6 +272,8 @@ html.httheme {
 .et48 { background:#292929 url("../img/missions/et48.png") no-repeat center top / 350px; }
 .et49 { background:#292929 url("../img/missions/et49.png") no-repeat center top / 350px; }
 .etsa02 { background:#292929 url("../img/missions/etsa02.png") no-repeat center top / 350px; }
+.et50 { background:#292929 url("../img/missions/et50.png") no-repeat center top / 350px; }
+.etsa03 { background:#292929 url("../img/missions/etsa03.png") no-repeat center top / 350px; }
 
 /*** Backgrounds ***/
 .training, .test { background-image:var(--missionbggradient), var(--icafacility); }
@@ -286,6 +292,7 @@ div[class^="heart"], .controller { background-image:var(--missionbggradient), va
 .spread { background-image:var(--missionbggradient), var(--hokkaidopz); }
 .festival { background-image:var(--missionbggradient), var(--hokkaidosf); }
 div[class^="beach"] { background-image:var(--missionbggradient), var(--hawkesbay); }
+.host { background-image:var(--missionbggradient), var(--hawkesbayhost); }
 div[class^="speedway"] { background-image:var(--missionbggradient), var(--miami); }
 .water { background-image:var(--missionbggradient), var(--miamisa); }
 .undying { background-image:var(--missionbggradient), var(--miamiundying); } 
@@ -383,6 +390,7 @@ div[class^="heart"][class$="-start-UndercoverintheOperatingTheater"], .heart-sta
 .beach-start-Boat { background-image: url('../img/entry/Boat-Nightcall.png'); }
 .beach-start-Beach { background-image: url('../img/entry/Beach.png'); }
 .beach-start-Office { background-image: url('../img/entry/Office.png'); }
+.beach-youtuber-start-Driveway, .host-start-Driveway { background-image: url('../img/entry/Driveway.png') !important; }
 div[class^="beach"][class$="-start-Hut"] { background-image: url('../img/entry/Hut.png'); }
 div[class^="speedway"][class$="-start-EventEntrance"], .speedway-start-EventEntrance, .water-start-EventEntrance { background-image: url('../img/entry/EventEntrance.png'); }
 div[class^="speedway"][class$="-start-DolphinFountain"], .speedway-start-DolphinFountain, .water-start-DolphinFountain, .undying-start-DolphinFountain { background-image: url('../img/entry/DolphinFountain.png'); }
@@ -561,7 +569,9 @@ div[class^="heart"][class$="-exit-CableCar"], .heart-exit-CableCar, .festival-ex
 .spread-exit-CableCar { background-image: url('../img/exit/Cable%20Car-PatientZero.png'); }
 .heart-reflection-exit-MirrorHouse { background-image: url('../img/exit/MirrorHouse.png') !important; }
 div[class^="beach"][class$="-exit-Boat"], .beach-exit-Boat { background-image: url('../img/exit/Boat-Nightcall.png'); }
+.beach-youtuber-exit-Boat, .host-exit-Boat { background-image: url('../img/exit/Boat-TheHost.png') !important; }
 div[class^="beach"][class$="-exit-Car"] { background-image: url('../img/exit/Car-ThePolitician.png'); }
+.beach-youtuber-exit-Car, .host-exit-Car { background-image: url('../img/exit/Car-TheHost.png') !important; }
 div[class^="speedway"][class$="-exit-Helicopter"], .speedway-exit-Helicopter, .water-exit-Helicopter, .undying-exit-Helicopter { background-image: url('../img/exit/Helicopter-TheFinishLine.png'); }
 div[class^="speedway"][class$="-exit-MainEntrance"], .speedway-exit-MainEntrance, .water-exit-MainEntrance, .undying-exit-MainEntrance { background-image: url('../img/exit/MainEntrance.png'); }
 div[class^="speedway"][class$="-exit-Sewer"], .speedway-exit-Sewer, .water-exit-Sewer, .undying-exit-Sewer { background-image: url('../img/exit/Sewer.png'); }
@@ -1819,6 +1829,10 @@ div[class^="ElusiveTarget"], div[class^="UnassignedTarget"] { background-image: 
 .AlmaReynard-beach.contarget { background-size: auto 100% !important; }
 
 .BarbaraEKeating-beach-politician { background-image: url('../img/target/BarbaraEKeating.jpg'); }
+.FinnColton-beach-youtuber, .FinnColton-host { background-image: url('../img/target/FinnColton.jpg'); }
+.BraydenBrody-beach-youtuber, .BraydenBrody-host { background-image: url('../img/target/BraydenBrody.jpg'); }
+.ChaseGray-beach-youtuber, .ChaseGray-host { background-image: url('../img/target/ChaseGray.jpg'); }
+.JamieFreeman-beach-youtuber, .JamieFreeman-host { background-image: url('../img/target/JamieFreeman.jpg'); }
 
 .OrsonMills-beach { background-image: url('../img/targetcon/OrsonMills.jpg'); }
 .GerardMann-beach { background-image: url('../img/targetcon/GerardMann.jpg'); }
@@ -2856,6 +2870,7 @@ div[class^="ElusiveTarget"], div[class^="UnassignedTarget"] { background-image: 
 .EnsureAgentLeeWinsTheTournament { background-image: url('../img/obj/EnsureAgentLeeWinsTheTournament.png'); }
 .Quarantine { background-image: url('../img/obj/Quarantine.png'); }
 .DestroyTheCrops  { background-image: url('../img/obj/DestroyTheCrops.png'); }
+.DestroyColtonsDataCenter  { background-image: url('../img/obj/DestroyColtonsDataCenter.png'); }
 
 /*** Extra Objectives & Camera Mode***/
 #diff-image-NotAvailable, .NotAvailable { background-image: url('../img/general/NotAvailable.jpg'); }
@@ -3270,6 +3285,10 @@ div[class^="ElusiveTarget"], div[class^="UnassignedTarget"] { background-image: 
 .NinjaPreparation { background-image: url('../img/obj/NinjaPreparation.png'); }
 .GrabaSpare { background-image: url('../img/obj/GrabaSpare.png'); }
 .ShadowTrail { background-image: url('../img/obj/ShadowTrail.png'); }
+.AvoidthePodcast { background-image: url('../img/obj/AvoidthePodcast.png'); }
+.SignYourLifeAway { background-image: url('../img/obj/SignYourLifeAway.png'); }
+.FreeContent { background-image: url('../img/obj/FreeContent.png'); }
+.NeverFilmed { background-image: url('../img/obj/NeverFilmed.png'); }
 
 .OceanByMoonlight { background-image: url('../img/camera/OceanByMoonlight.png'); }
 .Rebroadcast { background-image: url('../img/camera/Rebroadcast.png'); }
@@ -3277,7 +3296,10 @@ div[class^="ElusiveTarget"], div[class^="UnassignedTarget"] { background-image: 
 .FishFeature { background-image: url('../img/camera/FishFeature.png'); }
 .SharpDressedMan { background-image: url('../img/camera/SharpDressedMan.png'); }
 .NoAccountingForTaste { background-image: url('../img/camera/NoAccountingForTaste.png'); }
-
+.JustTryingToFitIn { background-image: url('../img/camera/JustTryingToFitIn.png'); }
+.MillingAbout { background-image: url('../img/camera/MillingAbout.png'); }
+.EnergyConsumption { background-image: url('../img/camera/EnergyConsumption.png'); }
+	
 /** Miami **/
 /* The Finish Line */
 .BurstTheBubble { background-image: url('../img/obj/BurstTheBubble.png'); }
