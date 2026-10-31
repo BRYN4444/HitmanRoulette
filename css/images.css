@@ -3289,6 +3289,7 @@ div[class^="ElusiveTarget"], div[class^="UnassignedTarget"] { background-image: 
 .SignYourLifeAway { background-image: url('../img/obj/SignYourLifeAway.png'); }
 .FreeContent { background-image: url('../img/obj/FreeContent.png'); }
 .NeverFilmed { background-image: url('../img/obj/NeverFilmed.png'); }
+.MicCheckPlease { background-image: url('../img/obj/MicCheckPlease.png'); }
 
 .OceanByMoonlight { background-image: url('../img/camera/OceanByMoonlight.png'); }
 .Rebroadcast { background-image: url('../img/camera/Rebroadcast.png'); }
