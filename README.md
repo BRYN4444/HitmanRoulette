@@ -8,7 +8,7 @@ Hitman Roulette uses a single cookie to remember your selected theme appearance.
 
 Hitman Roulette generates a set of random guidelines to follow when playing the HITMAN "World of Assassination" trilogy. It randomizes things such as mission entry and exit points, elimination method and worn disguise, generic and mission specific variables, and even targets for Contracts Mode.
 
-[The original Hitman Roulette](https://thekotti.github.io/about.html) (created by [TheKotti](https://twitter.com/TheKotti))  is a more straight forward version that supports Hitman (2016), Hitman 2 (2018), and Hitman: Blood Money.
+[The original Hitman Roulette](https://thekotti.github.io/about.html) (created by [TheKotti](https://twitter.com/TheKotti))  is a more straight forward version that supports the World of Assassination Trilogy and Hitman: Blood Money.
 
 ## How To Use
 
@@ -58,7 +58,19 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 
 >**Bug Reporting** can be done [via GitHub](https://github.com/BRYN4444/HitmanRoulette/issues) or in the thread [on Hitman Forum](https://hitmanforum.com/t/13107).
 
-**October 30th, 2025**
+**October 31st, 2026**
+* **Elusive Target:**
+  * **#50: The Host** - Added 1 extra objective.
+* **Special Assignments:**
+  * **Host Assignment** - Added 1 extra objective.
+* **Other Fixes:**
+  * The listed year for updates on this page was incorrect and has been fixed. I'm sure I'll make this mistake again...
+  * **About** section:
+    * Updated to mention that TheKotti's original Hitman Roulette now supports the whole Trilogy too. Not sure when this happened, sorry!
+
+---
+
+**October 30th, 2026**
 * **Elusive Target:**
   * **#50: The Host** - New ET added, including: 1 target, 1 objective, 1 Entry point, 3 disguises, 4 extra objectives, and 4 photo objectives.
 * **Special Assignments:**
@@ -69,7 +81,7 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 
 ---
 
-**Auguat 29th, 2025**
+**August 29th, 2026**
 * **Hitman Roulette:**
   * Added "H3: Special Assignments" toggle to the Side Missions section when Selecting Missions.
   * Added the "Undying Assignment" and "Herbalist Assignment" Special Assignments to the Side Missions section when Selecting Missions.
@@ -78,7 +90,7 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
   * **#49: The Herbalist** - New ET added, including: 1 target, 1 objective, 1 Entry point, 6 disguises, 9 extra objectives, and 5 photo objectives.
 * **Special Assignments:**
   * **Undying Assignment** - Includes unique background image as well as the earlier stated  4 extra objectives and 2 photo objectives.
-  * **Herbalist Assignment** - Includes unique background image, 5 additonal Entry Points, and 1 additional extra objective.
+  * **Herbalist Assignment** - Includes unique background image, 5 additional Entry Points, and 1 additional extra objective.
 * **Other Fixes:**
   * Removed difficulty listings for ETs when Force Difficulty is selected in Roulette Settings.
   * **Compatibility & Issues** section:
@@ -86,19 +98,19 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 
 ---
 
-**June 12th, 2025**
+**June 12th, 2026**
 * **Elusive Target:**
   * **#48: The Wizard** - Image of bloody Tim Quinn has been updated to reflect his fixed blood textures.
 
 ---
 
-**June 7th, 2025**
+**June 7th, 2026**
 * **Elusive Target:**
   * **#48: The Wizard** - There were more changes from The Disruptor than I thought, so a few disguises and extra objectives that existed in regular The Arc Society were removed from listings for The Wizard.
 
 ---
 
-**June 6th, 2025**
+**June 6th, 2026**
 * **Elusive Target:**
   * **#48: The Wizard** - New ET added, including: 1 target, 1 objective, 2 unique disguises, 1 extra objectives, and 4 photo objectives. The direct image of Quinn will be fixed after they update his bugged blood textures.
   * **#42: The Disruptor** - Since the original ET is still playable if you own the DLC or through PC modding, this ET will also stay accessible here.
@@ -110,7 +122,7 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 
 ---
 
-**February 28th, 2025**
+**February 28th, 2026**
 * **Elusive Target:**
   * **#47: The Harbinger** - New ET added, including: 1 target, 1 objective, 1 Arcade exclusive Entry point, sole Exit point, 9 mission specific extra objectives, and 5 mission specific photo objectives.
     * Note: This ET in Elusive Target Arcade has an unlockable Entry Point exclusive to it. Considering more players (non-modded) are likely to replay the ETA than the regular ET, this Entry Point will be pooled with the others on randomization. If you get this Entry Point for your normal ET playthrough: simply disregard or re-roll.
@@ -138,9 +150,3 @@ This was a hobby project I started in 2016/17 and have worked on during my free 
 * **Other Fixes:**
   * Edited the text for the "Elusive Honor" Extra Objective since the Elusive Target Arcade retry time limit was changed. Also added this to the last few Celebrity ETs I forgot to add it to.
   * Added the Elusive Target DLC list in the Compatibility & Issues section to include this new listing and the previous getting delisted.
-
----
-
-**September 28h, 2025**
-* **Elusive Target:**
-  * **#44: The Banker** - Added 2 new Entry points, ported from The Showstopper, that have recently been added to this ET.
